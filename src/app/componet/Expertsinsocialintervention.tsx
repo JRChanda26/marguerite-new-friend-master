@@ -2,33 +2,11 @@
 
 import React, { useEffect, useState } from 'react';
 import { client } from '../../../prismic-configuration';
-import { Box, Grid, Typography } from '@mui/material';
+import { Box, Button, Grid, Typography } from '@mui/material';
 
-interface Post {
-  id: string;
-  data: {
-    content: String;
-    title: string;
-    logo: {
-      url: string;
-      alt: string;
-    };
-    services: string;
-    tarifs: string;
-    icon: {
-      url: string;
-      alt: string;
-    };
-    contentleft: string;
-    leftcontent2: string;
-    contentright: {
-      url: string;
-    };
-  };
-}
 
 const Expertsinsocialintervention: React.FC = () => {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -40,67 +18,83 @@ const Expertsinsocialintervention: React.FC = () => {
   }, []);
 
   return (
-    <div>
-      <Box sx={{}}>
-        {posts.map((post: Post) => (
-          <Grid container spacing={0} key={post.id} style={{ position: 'fixed',
-           top: 40, zIndex: 1,
-            display: 'flex', 
-           flexDirection: 'row', 
-           boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',
-            background: '#FFF', 
-            padding: '20px 50px 20px 50px',
-            left: 20,
+    <Box>
+
+      <div>
+        {posts.map((post: any) => (
+          <Grid container spacing={0} key={post.id} style={{
+            position: 'fixed',
+            top: 52, zIndex: 1,
+            display: 'flex',
+            flexDirection: 'row',
+            boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',
+            background: '#FFF',
+            padding: '26.98px 0px 20px 69.25px',
+            left: 60,
             right: 0,
             // width:'100%',
-            width: 'calc(100% - 40px)',
-            borderRadius: '10px' }}>
-               <Grid item lg={8}>
-              <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{ height: '25px', width: '25px' }} />
-              </Grid>
-               {/* <Grid item lg={4} style={{ display: 'flex', flexDirection: 'row', gap: '50px' }}>
-                <Typography style={{ color: '#000', fontSize: '15px' }}>
-                  {post.data.title}
-                 </Typography>
-                <Typography style={{ color: '#000', fontSize: '15px' }}>
-                  {post.data.services}
-                </Typography>
-               <Typography style={{ color: '#000', fontSize: '15px' }}>
-                {post.data.tarifs}
+            width: 'calc(100% - 123px)',
+            borderRadius: '10px'
+          }}>
+            <Grid item lg={6}>
+              <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{}} />
+            </Grid>
+            <Grid item lg={6} style={{ display: 'flex', flexDirection: 'row', gap: '70px' }}>
+              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
+                {post.data.title1}
               </Typography>
-              <img src={post.data.icon.url || ''} alt={post.data.icon.alt || 'icon'} style={{ height: '25px', width: '25px' }} />
-              </Grid> */}
+              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
+                {post.data.title2}
+              </Typography>
+              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
+                {post.data.title3}
+              </Typography>
+              <img src={post.data.contact.url || ''} alt={post.data.contact.alt || 'icon'} style={{background: 'linear-gradient(to right, #236B79, #143F48)',borderRadius:"50%",height:'66.7px',width:'66.7px'}} />
+            </Grid>
           </Grid>
         ))}
-      </Box>
-      {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', }}>
-        {posts.map((post: Post) => (
+        </div>
+
+
+
+
+        <div>
+        {posts.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
-            <Grid item lg={6}>
-              <div style={{ paddingLeft: '30px', background: '#F6C09E',paddingTop:'135px' }}>
-                {posts.map((post: Post) => (
-                  <Typography style={{ fontSize: '25px', fontFamily: 'fantasy', paddingTop: '200px' }}>{post.data.content}</Typography>
+
+            <Grid item lg={6} style={{paddingLeft: '124.12px', background: '#F6C09E' }}>
+                {posts.map((post: any) => (
+                  <Typography style={{ fontFamily: 'Jenna Sue, cursive',fontWeight: 400, fontSize: '48px', paddingTop: '283.5px', lineHeight: '57.6px', color: '#24535C' }}>{post.data.leftcontent1}</Typography>
                 ))
                 }
-                {post.data.contentleft.split('\n').map((line, index) => (
-                  <Typography key={index} style={{ color: '#000', fontSize: '40px', fontFamily: '', width: '100%', }}>
+                {post.data.leftcontent2.split('\n').map((line: any, index: any) => (
+                  <Typography key={index} style={{ fontFamily: 'Mulish, sans-serif',color: '#24535C', fontWeight: 700, fontSize: '64px' ,lineHeight:'76.8px',paddingRight:'61.79px'}}>
                     {line}
                   </Typography>
                 ))}
+                <div style={{paddingTop:'68.14px',paddingBottom:'159.85px'}}>
+                {posts.map((post: any) => (
+                  <Button style={{display:'flex',flexDirection:'row',background:'#24535C',padding:'16px 24px 16px 24px',gap:'18px',borderRadius:'82px'}}>
+                    <Typography style={{ fontWeight: 400, fontSize: '15.2px', lineHeight: '18.24px', color: '#FFFFFF' }}>{post.data.buttontext}</Typography>
+                    <img src={post.data.buttonimage.url || ''} alt={post.data.buttonimage} style={{}} />
+                  </Button>
+                ))
+                }
               </div>
             </Grid>
+
+
             <Grid item lg={6} style={{}}>
-              <img src={post.data.contentright.url || ''} alt={post.data.title} style={{background:''}} />
+              <img src={post.data.contentright.url || ''} alt={post.data.contentright} style={{}} />
             </Grid>
+
+
           </Grid>
         ))}
+      </div>
 
 
-
-       
-
-      </div> */}
-    </div>
+    </Box>
   );
 };
 
