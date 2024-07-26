@@ -32,7 +32,7 @@ const Expertsinsocialintervention: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType('homepage');
+      const response: any = await client.getAllByType('header');
       setPosts(response);
     };
 
@@ -58,7 +58,7 @@ const Expertsinsocialintervention: React.FC = () => {
                <Grid item lg={8}>
               <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{ height: '25px', width: '25px' }} />
               </Grid>
-               <Grid item lg={4} style={{ display: 'flex', flexDirection: 'row', gap: '50px' }}>
+               {/* <Grid item lg={4} style={{ display: 'flex', flexDirection: 'row', gap: '50px' }}>
                 <Typography style={{ color: '#000', fontSize: '15px' }}>
                   {post.data.title}
                  </Typography>
@@ -69,11 +69,11 @@ const Expertsinsocialintervention: React.FC = () => {
                 {post.data.tarifs}
               </Typography>
               <img src={post.data.icon.url || ''} alt={post.data.icon.alt || 'icon'} style={{ height: '25px', width: '25px' }} />
-              </Grid>
+              </Grid> */}
           </Grid>
         ))}
       </Box>
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', }}>
+      {/* <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', }}>
         {posts.map((post: Post) => (
           <Grid container spacing={0} key={post.id}>
             <Grid item lg={6}>
@@ -99,7 +99,7 @@ const Expertsinsocialintervention: React.FC = () => {
 
        
 
-      </div>
+      </div> */}
     </div>
   );
 };

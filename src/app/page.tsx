@@ -3,8 +3,6 @@ import Expertsinsocialintervention from "./componet/Expertsinsocialintervention"
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <><Expertsinsocialintervention /></>
-    </main>
+    <div><Expertsinsocialintervention /></div>
   );
 }
