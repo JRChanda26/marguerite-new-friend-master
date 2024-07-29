@@ -84,7 +84,7 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            marginTop:'50px',
             gap: "150px",
           }}
         >
@@ -100,7 +100,6 @@ export default async function NotreProcessus() {
               height:'430px'
             }}
           >
-            <div></div>
             {settings.data.image1 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -150,7 +149,7 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            marginTop:'50px',
             gap: "150px",
           }}
         >
@@ -194,7 +193,6 @@ export default async function NotreProcessus() {
               height:'430px'
             }}
           >
-            <div></div>
             {settings.data.image2 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -216,7 +214,7 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "space-between",
+            marginTop:'70px',
             gap: "150px",
           }}
         >
@@ -232,7 +230,6 @@ export default async function NotreProcessus() {
               height:'430px'
             }}
           >
-            <div></div>
             {settings.data.image3 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
