@@ -79,7 +79,7 @@ export default async function Questions() {
                 alt={settings.data.image.alt || "Image"}
                 style={{
                   width: "50vw",
-                  height: "50vh",
+                  height: "60vh",
                   
                 }}
               />
