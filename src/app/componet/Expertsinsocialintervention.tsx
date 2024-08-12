@@ -64,6 +64,7 @@ const Expertsinsocialintervention: React.FC = () => {
 
             <Grid item lg={6} style={{paddingLeft: '124.12px', background: '#F6C09E' }}>
                 {posts.map((post: any) => (
+                  // eslint-disable-next-line react/jsx-key
                   <Typography style={{ fontFamily: 'Jenna Sue, cursive',fontWeight: 400, fontSize: '48px', paddingTop: '283.5px', lineHeight: '57.6px', color: '#24535C' }}>{post.data.leftcontent1}</Typography>
                 ))
                 }
@@ -74,6 +75,7 @@ const Expertsinsocialintervention: React.FC = () => {
                 ))}
                 <div style={{paddingTop:'68.14px',paddingBottom:'159.85px'}}>
                 {posts.map((post: any) => (
+                  // eslint-disable-next-line react/jsx-key
                   <Button style={{display:'flex',flexDirection:'row',background:'#24535C',padding:'16px 24px 16px 24px',gap:'18px',borderRadius:'82px'}}>
                     <Typography style={{ fontWeight: 400, fontSize: '15.2px', lineHeight: '18.24px', color: '#FFFFFF' }}>{post.data.buttontext}</Typography>
                     <img src={post.data.buttonimage.url || ''} alt={post.data.buttonimage} style={{}} />
