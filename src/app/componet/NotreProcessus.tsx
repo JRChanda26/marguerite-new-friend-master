@@ -97,7 +97,8 @@ export default async function NotreProcessus() {
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
               position: "relative",
               marginLeft: "70px",
-              height:'430px'
+              marginRight:'120px',
+              height:'430px',
             }}
           >
             {settings.data.image1 && (
@@ -189,8 +190,9 @@ export default async function NotreProcessus() {
               borderRadius: "0px 166.3px 0px 166.3px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
               position: "relative",
-              marginLeft: "70px",
-              height:'430px'
+              marginLeft: "190px",
+              marginRight:'10px',
+              height:'430px',
             }}
           >
             {settings.data.image2 && (
@@ -227,7 +229,8 @@ export default async function NotreProcessus() {
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
               position: "relative",
               marginLeft: "70px",
-              height:'430px'
+              marginRight:'120px',
+              height:'430px',
             }}
           >
             {settings.data.image3 && (
@@ -273,7 +276,7 @@ export default async function NotreProcessus() {
             </PrismicNextLink>
           </Grid>
         </Grid>
-      </Grid>
+      </Grid> 
     </div>
   );
 }
