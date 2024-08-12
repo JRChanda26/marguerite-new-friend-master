@@ -67,7 +67,7 @@ export default async function NotreProcessus() {
           >
             <PrismicRichText field={settings.data.title} />
           </h1>
-          <p
+          <div
             style={{
               fontSize: "24px",
               fontWeight: 400,
@@ -76,7 +76,7 @@ export default async function NotreProcessus() {
             }}
           >
             <PrismicRichText field={settings.data.description} />
-          </p>
+          </div>
         </Grid>
         <Grid
           item
@@ -128,11 +128,11 @@ export default async function NotreProcessus() {
             >
               <PrismicRichText field={settings.data.title1} />
             </h1>
-            <p
+            <div
               style={description}
             >
               <PrismicRichText field={settings.data.description1} />
-            </p>
+            </div>
 
             <PrismicNextLink
               field={settings.data.text_link1}
@@ -167,11 +167,11 @@ export default async function NotreProcessus() {
             >
               <PrismicRichText field={settings.data.title2} />
             </h1>
-            <p
+            <div
               style={description}
             >
               <PrismicRichText field={settings.data.description2} />
-            </p>
+            </div>
 
             <PrismicNextLink
               field={settings.data.text_link2}
@@ -258,11 +258,11 @@ export default async function NotreProcessus() {
             >
               <PrismicRichText field={settings.data.title3} />
             </h1>
-            <p
+            <div
               style={description}
             >
               <PrismicRichText field={settings.data.description3} />
-            </p>
+            </div>
 
             <PrismicNextLink
               field={settings.data.text_link3}

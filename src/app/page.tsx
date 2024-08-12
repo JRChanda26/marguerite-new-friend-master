@@ -6,9 +6,9 @@ import Questions from "./componet/Questions";
 export default function Home() {
   return (
     <div>
-      {/* <Expertsinsocialintervention /> */}
-      {/* <NotreProcessus/> */}
-      <Questions/>
-      </div>
+      <Expertsinsocialintervention />
+      <NotreProcessus />
+      <Questions />
+    </div>
   );
 }
