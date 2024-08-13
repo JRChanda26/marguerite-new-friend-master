@@ -7,6 +7,7 @@ import Footer from "./componet/Footer";
 import Choisir from "./componet/Choisir";
 
 import NosActes from "./componet/NosActes";
+import Liberez from "./componet/Liberez";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <NotreProcessus />
       <Questions />
       <NosActes/>
+      <Liberez/>
       <Footer/>
     </div>
   );
