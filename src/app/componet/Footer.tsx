@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { client } from '../../../prismic-configuration';
 import { Box, Button, Grid, Typography } from '@mui/material';
+import Link from 'next/link';
 
 
 const Footer: React.FC = () => {
@@ -44,16 +45,22 @@ const Footer: React.FC = () => {
                         </Typography>
                     ))}
                      <div style={{display:'flex',gap:'23.56px',paddingTop:'30.82px'}}>
+                        <Link href={'www.linkedin.com'}>
                      <img
                         src={post.data.linkedin?.url || ''}
                         alt={post.data.linkedin?.alt || 'icon'}
                         style={{ height: '44.65px', width: '44.65px' }}
+                        
                     />
+                    </Link>
+                    <Link href={'www.twitter.com'}>
                     <img
                         src={post.data.twitter?.url || ''}
                         alt={post.data.twitter?.alt || 'icon'}
                         style={{ height: '44.65px', width: '44.65px' }}
+                       
                     />
+                    </Link>
                 </div>
                 </div>
                

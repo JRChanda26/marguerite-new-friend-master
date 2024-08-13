@@ -1,0 +1,125 @@
+{
+  "format": "page",
+  "id": "choisir",
+  "label": "Choisir",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "heading",
+          "placeholder": ""
+        }
+      },
+      "content": {
+        "type": "Text",
+        "config": {
+          "label": "content",
+          "placeholder": ""
+        }
+      },
+      "homelogo": {
+        "type": "Image",
+        "config": {
+          "label": "homelogo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "editlogo": {
+        "type": "Image",
+        "config": {
+          "label": "editlogo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "calenderlogo": {
+        "type": "Image",
+        "config": {
+          "label": "calenderlogo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "homeheader": {
+        "type": "Text",
+        "config": {
+          "label": "homeheader",
+          "placeholder": ""
+        }
+      },
+      "homecontent": {
+        "type": "Text",
+        "config": {
+          "label": "homecontent",
+          "placeholder": ""
+        }
+      },
+      "editlogoheader": {
+        "type": "Text",
+        "config": {
+          "label": "editlogoheader",
+          "placeholder": ""
+        }
+      },
+      "editlogocontent": {
+        "type": "Text",
+        "config": {
+          "label": "editlogocontent",
+          "placeholder": ""
+        }
+      },
+      "calenderheader": {
+        "type": "Text",
+        "config": {
+          "label": "calenderheader",
+          "placeholder": ""
+        }
+      },
+      "calendercontent": {
+        "type": "Text",
+        "config": {
+          "label": "calendercontent",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

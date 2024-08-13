@@ -1,0 +1,186 @@
+{
+  "format": "page",
+  "id": "nos_actes",
+  "label": "Nos Actes",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "title1": {
+        "type": "Text",
+        "config": {
+          "label": "Title1",
+          "placeholder": ""
+        }
+      },
+      "description1": {
+        "type": "Text",
+        "config": {
+          "label": "Description1",
+          "placeholder": ""
+        }
+      },
+      "image1": {
+        "type": "Image",
+        "config": {
+          "label": "Image1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sub_title1": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title1",
+          "placeholder": ""
+        }
+      },
+      "sub_description1": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Description1",
+          "placeholder": ""
+        }
+      },
+      "sub_image1": {
+        "type": "Image",
+        "config": {
+          "label": "Sub Image1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title2": {
+        "type": "Text",
+        "config": {
+          "label": "Title2",
+          "placeholder": ""
+        }
+      },
+      "description2": {
+        "type": "Text",
+        "config": {
+          "label": "Description2",
+          "placeholder": ""
+        }
+      },
+      "image2": {
+        "type": "Image",
+        "config": {
+          "label": "Image2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sub_title2": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title2",
+          "placeholder": ""
+        }
+      },
+      "sub_description2": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Description2",
+          "placeholder": ""
+        }
+      },
+      "sub_image2": {
+        "type": "Image",
+        "config": {
+          "label": "Sub Image2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title3": {
+        "type": "Text",
+        "config": {
+          "label": "Title3",
+          "placeholder": ""
+        }
+      },
+      "description3": {
+        "type": "Text",
+        "config": {
+          "label": "Description3",
+          "placeholder": ""
+        }
+      },
+      "image3": {
+        "type": "Image",
+        "config": {
+          "label": "Image3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sub_title3": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title3",
+          "placeholder": ""
+        }
+      },
+      "sub_description3": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Description3",
+          "placeholder": ""
+        }
+      },
+      "sub_image3": {
+        "type": "Image",
+        "config": {
+          "label": "Sub Image3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
