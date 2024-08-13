@@ -37,7 +37,7 @@ const Expertsinsocialintervention: React.FC = () => {
             borderRadius: '10px'
           }}>
             <Grid item lg={6}>
-              <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{}} />
+              <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{height:'67.1px',width:'57.56px'}} />
             </Grid>
             <Grid item lg={6} style={{ display: 'flex', flexDirection: 'row', gap: '70px' }}>
               <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
@@ -49,7 +49,7 @@ const Expertsinsocialintervention: React.FC = () => {
               <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
                 {post.data.title3}
               </Typography>
-              <img src={post.data.contact.url || ''} alt={post.data.contact.alt || 'icon'} style={{background: 'linear-gradient(to right, #236B79, #143F48)',borderRadius:"50%",height:'66.7px',width:'66.7px'}} />
+              <img src={post.data.contact.url || ''} alt={post.data.contact.alt || 'icon'} style={{height:'66.7px',width:'66.7px'}} />
             </Grid>
           </Grid>
         ))}
@@ -62,7 +62,7 @@ const Expertsinsocialintervention: React.FC = () => {
         {posts.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
 
-            <Grid item lg={6} style={{paddingLeft: '124.12px', background: '#F6C09E' }}>
+            <Grid item lg={6} style={{paddingLeft: '30px', background: '#F6C09E' }}>
                 {posts.map((post: any) => (
                   // eslint-disable-next-line react/jsx-key
                   <Typography style={{ fontFamily: 'Jenna Sue, cursive',fontWeight: 400, fontSize: '48px', paddingTop: '283.5px', lineHeight: '57.6px', color: '#24535C' }}>{post.data.leftcontent1}</Typography>
@@ -86,8 +86,8 @@ const Expertsinsocialintervention: React.FC = () => {
             </Grid>
 
 
-            <Grid item lg={6} style={{}}>
-              <img src={post.data.contentright.url || ''} alt={post.data.contentright} style={{}} />
+            <Grid item lg={6}>
+              <img src={post.data.contentright.url || ''} alt={post.data.contentright} style={{height:'996px',width:'50vw'}} />
             </Grid>
 
 
