@@ -36,10 +36,10 @@ const Expertsinsocialintervention: React.FC = () => {
             width: 'calc(100% - 123px)',
             borderRadius: '10px'
           }}>
-            <Grid item lg={6}>
+            <Grid item lg={4}>
               <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{height:'67.1px',width:'57.56px'}} />
             </Grid>
-            <Grid item lg={6} style={{ display: 'flex', flexDirection: 'row', gap: '70px' }}>
+            <Grid item lg={8} style={{ display: 'flex', flexDirection: 'row', gap: '70px' ,paddingLeft:'150px'}}>
               <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400,paddingTop:'13px' }}>
                 {post.data.title1}
               </Typography>
@@ -87,7 +87,7 @@ const Expertsinsocialintervention: React.FC = () => {
 
 
             <Grid item lg={6}>
-              <img src={post.data.contentright.url || ''} alt={post.data.contentright} style={{height:'996px',width:'50vw'}} />
+              <img src={post.data.contentright.url || ''} alt={post.data.contentright} style={{height:'996px',width:'49vw'}} />
             </Grid>
 
 
