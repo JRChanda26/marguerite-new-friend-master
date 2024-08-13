@@ -40,13 +40,13 @@ const Expertsinsocialintervention: React.FC = () => {
               <img src={post.data.logo.url || ''} alt={post.data.logo.alt || 'logo'} style={{height:'67.1px',width:'57.56px'}} />
             </Grid>
             <Grid item lg={6} style={{ display: 'flex', flexDirection: 'row', gap: '70px' }}>
-              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
+              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400,paddingTop:'13px' }}>
                 {post.data.title1}
               </Typography>
-              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
+              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, paddingTop:'13px'}}>
                 {post.data.title2}
               </Typography>
-              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, }}>
+              <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, paddingTop:'13px'}}>
                 {post.data.title3}
               </Typography>
               <img src={post.data.contact.url || ''} alt={post.data.contact.alt || 'icon'} style={{height:'66.7px',width:'66.7px'}} />
