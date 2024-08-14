@@ -8,6 +8,7 @@ import Choisir from "./componet/Choisir";
 
 import NosActes from "./componet/NosActes";
 import Liberez from "./componet/Liberez";
+import Motsdenotreclient from "./componet/Motsdenotreclient";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <Expertsinsocialintervention />
       <Choisir/>
       <NotreProcessus />
+      <Motsdenotreclient/>
       <Questions />
       <NosActes/>
       <Liberez/>
