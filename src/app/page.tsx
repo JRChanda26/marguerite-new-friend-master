@@ -10,6 +10,7 @@ import NosActes from "./componet/NosActes";
 import Liberez from "./componet/Liberez";
 import Motsdenotreclient from "./componet/Motsdenotreclient";
 import SoinChez from "./componet/SoinChez";
+import Pricing from "./componet/Pricing";
 
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
       <Questions />
       <NosActes/>
       <Liberez/>
+      <Pricing/>
       <Footer/>
     </div>
   );
