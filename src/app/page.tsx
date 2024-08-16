@@ -11,12 +11,13 @@ import Liberez from "./componet/Liberez";
 import Motsdenotreclient from "./componet/Motsdenotreclient";
 import SoinChez from "./componet/SoinChez";
 import Pricing from "./componet/Pricing";
+import Contact from "./componet/Contact";
 
 
 export default function Home() {
   return (
     <div>
-      <Expertsinsocialintervention />
+      {/* <Expertsinsocialintervention />
       <SoinChez/>
       <Choisir/>
       <NotreProcessus />
@@ -25,7 +26,8 @@ export default function Home() {
       <NosActes/>
       <Liberez/>
       <Pricing/>
-      <Footer/>
+      <Footer/> */}
+      <Contact/>
     </div>
   );
 }
