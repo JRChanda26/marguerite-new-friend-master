@@ -1,5 +1,5 @@
 import { createClient } from "@/prismicio";
-import { Grid, TextField } from "@mui/material";
+import { Grid, TextField, Typography } from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
 import React from "react";
 
@@ -7,15 +7,16 @@ export default async function Contact() {
   const client = createClient();
   const settings = await client.getSingle("contact");
 
+  const backgroundImage = settings?.data?.banner?.url || "";
+
   const details: React.CSSProperties = {
     color: "#4D5053",
     fontSize: "20px",
     fontWeight: 400,
   };
 
-
   const mouseHover = {
-   "& .MuiInput-underline:before": {
+    "& .MuiInput-underline:before": {
       borderBottomColor: "gray", // Default underline color
     },
     "& .MuiInput-underline:hover:before": {
@@ -27,66 +28,77 @@ export default async function Contact() {
     // "& .MuiInput-input": {
     //   color: "blue", // Text color
     // },
-  }
-
+  };
 
   return (
     <div>
-      {settings.data.banner && (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={settings.data.banner.url || undefined}
-          alt={settings.data.banner.alt || "Image"}
-          style={{
-            width: "100%",
-            height: "100%",
-            position: "relative",
-          }}
-        />
-      )}
       <div
         style={{
-          background: "#FFFFFF",
-          borderRadius: "20px 20px 0px 0px",
-          textAlign: "center",
-          width: "30vw",
-          position: "absolute",
-          top: 200,
-          left: 200,
-          transform: "translate(80%, 30%)",
+          backgroundImage: `url(${backgroundImage})`,
+          backgroundSize: "cover",
+          width: "100%",
+          // height: "603.67px",
         }}
       >
-        <p
+        <div
           style={{
-            color: "#292F36",
-            fontSize: "50px",
-            fontWeight: 400,
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+            paddingTop: "425.67px",
           }}
         >
-          {settings.data.heading}
-        </p>
-        <p
-          style={{
-            color: "#4D5053",
-            fontSize: "22px",
-            fontWeight: 400,
-            //   lineHeight: "33px",
-          }}
-        >
-          {settings.data.sub_heading}
-        </p>
+          <div
+            style={{
+              background: "#fff",
+              display: "flex",
+              justifyContent: "center",
+              flexDirection: "column",
+              alignItems: "center",
+              borderRadius: "37px 37px 0px 0px",
+              padding: "41px 152px 41px 152px",
+            }}
+          >
+            <Typography
+              style={{
+                fontFamily: "Mulish, sans-serif",
+                color: "#0A1411",
+                fontWeight: 700,
+                fontSize: "64px",
+                lineHeight: "80.32px",
+              }}
+            >
+              {settings.data.heading}
+            </Typography>
+            <Typography
+              style={{
+                fontFamily: "Mulish, sans-serif",
+                color: "#565656",
+                fontWeight: 400,
+                fontSize: "24px",
+                lineHeight: "38.4px",
+              }}
+            >
+              {settings.data.sub_heading}
+            </Typography>
+          </div>
+        </div>
       </div>
       <Grid container>
-        <Grid item lg={12} 
-        style={{
-            display:'flex',
-            justifyContent:'center',
-            color:'#292F36',
-            fontSize:'50px',
-            fontWeight:700,
-            textAlign:'center',
-            padding:'50px 200px 50px 200px'
-        }}>
+        <Grid
+          item
+          lg={12}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            color: "#292F36",
+            fontSize: "50px",
+            fontWeight: 700,
+            textAlign: "center",
+            padding: "50px 200px 50px 200px",
+          }}
+        >
           {settings.data.title}
         </Grid>
         <Grid
@@ -221,7 +233,7 @@ export default async function Contact() {
               }}
             >
               <TextField
-                value={settings.data.nom_text_field || ''}
+                value={settings.data.nom_text_field || ""}
                 placeholder="Nom"
                 variant="standard"
                 type="text"
@@ -229,7 +241,7 @@ export default async function Contact() {
                 sx={mouseHover}
               />
               <TextField
-                value={settings.data.email_text_field || ''}
+                value={settings.data.email_text_field || ""}
                 placeholder="Email"
                 variant="standard"
                 type="text"
@@ -246,7 +258,7 @@ export default async function Contact() {
               }}
             >
               <TextField
-                value={settings.data.subject_text_field || ''}
+                value={settings.data.subject_text_field || ""}
                 placeholder="Subject"
                 variant="standard"
                 type="text"
@@ -254,7 +266,7 @@ export default async function Contact() {
                 sx={mouseHover}
               />
               <TextField
-                value={settings.data.telephone_text_field || ''}
+                value={settings.data.telephone_text_field || ""}
                 placeholder="Téléphone"
                 variant="standard"
                 type="text"
@@ -264,7 +276,7 @@ export default async function Contact() {
             </div>
             <div>
               <TextField
-                value={settings.data.bonjour_text_field || ''}
+                value={settings.data.bonjour_text_field || ""}
                 placeholder="Bonjour, je suis intéressé par.."
                 variant="standard"
                 type="text"
