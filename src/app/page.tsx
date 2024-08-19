@@ -12,6 +12,7 @@ import Motsdenotreclient from "./componet/Motsdenotreclient";
 import SoinChez from "./componet/SoinChez";
 import Pricing from "./componet/Pricing";
 import Contact from "./componet/Contact";
+import Soinschezmarguerite from "./componet/Soinschezmarguerite";
 
 
 export default function Home() {
@@ -26,6 +27,7 @@ export default function Home() {
       <NosActes/>
       <Liberez/>
       <Pricing/>
+      <Soinschezmarguerite/>
       <Footer/>
       <Contact/>
     </div>
