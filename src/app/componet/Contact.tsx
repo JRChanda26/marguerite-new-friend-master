@@ -2,6 +2,8 @@ import { createClient } from "@/prismicio";
 import { Grid, TextField, Typography } from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
 import React from "react";
+import EastIcon from "@mui/icons-material/East";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
 
 export default async function Contact() {
   const client = createClient();
@@ -287,15 +289,75 @@ export default async function Contact() {
           </Grid>
         </Grid>
         <Grid item lg={12}>
-          <p>
+          <PrismicNextLink
+            field={settings.data.button_link}
+            style={{
+              textDecoration: "none",
+              background: "#292F36",
+              color: "#FFFFFF",
+              padding: "16px 44px",
+              borderRadius: "10px",
+              display: "flex",
+              flexDirection: "row",
+              gap: "10px",
+              float: "right",
+              fontSize: "18px",
+              fontWeight: 600,
+            }}
+          >
+            {settings.data.button_text}
+            <EastIcon />
+          </PrismicNextLink>
+        </Grid>
+        <Grid item lg={12} style={{
+          display:'flex',
+          justifyContent:'center',
+          marginTop:'50px'
+        }}>
+          {/* {settings.data.map_image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={settings.data.map_image.url || undefined}
+              alt={settings.data.map_image.alt || "Image"}
+            />
+          )} */}
+          {/* <p>
             <a
               href={`https://www.google.com/maps?q=${settings.data.map.latitude},${settings.data.map.longitude}`}
               target="_blank"
               rel="noopener noreferrer"
             >
-              {settings.data.map.latitude}, {settings.data.map.longitude}
+              <LocationOnIcon />
             </a>
-          </p>
+          </p> */}
+          {settings.data.map_image && (
+            <div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={settings.data.map_image.url || undefined}
+                alt={settings.data.map_image.alt || "Image"}
+                style={{
+                  height:'60vh',
+                  width:'70vw',
+                  borderRadius:'35px',
+                  // position:'relative' 
+                }}
+              />
+              <p style={{
+                  position: "absolute",
+                  left: 470,
+                  transform: "translate(100%, -1100%)", // adjust positioning as needed
+                }}>
+                <a
+                  href={`https://www.google.com/maps?q=${settings.data.map.latitude},${settings.data.map.longitude}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <LocationOnIcon style={{color:'#BBDDD9'}}/>
+                </a>
+              </p>
+            </div>
+          )}
         </Grid>
       </Grid>
     </div>
