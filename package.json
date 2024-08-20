@@ -17,13 +17,16 @@
     "@prismicio/client": "^7.8.0",
     "@prismicio/next": "^1.6.0",
     "@prismicio/react": "^2.8.0",
+    "leaflet": "^1.9.4",
     "marguerite-master": "file:",
     "next": "14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-leaflet": "^4.2.1"
   },
   "devDependencies": {
     "@slicemachine/adapter-next": "^0.3.45",
+    "@types/leaflet": "^1.9.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
