@@ -1,15 +1,64 @@
-import { createClient } from "@/prismicio";
+"use client";
+
 import { Grid, TextField, Typography } from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import EastIcon from "@mui/icons-material/East";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
+import { client } from "../../../prismic-configuration";
 
-export default async function Contact() {
-  const client = createClient();
-  const settings = await client.getSingle("contact");
+export default function Contact() {
+  const [formValues, setFormValues] = useState({
+    email_text_field: "",
+    nom_text_field: "",
+    subject_text_field: "",
+    telephone_text_field: "",
+    bonjour_text_field: "",
+  });
 
-  const backgroundImage = settings?.data?.banner?.url || "";
+  const [posts, setPosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType("contact");
+      setPosts(response);
+      // Initialize form values from fetched data
+      if (response.length > 0) {
+        setFormValues({
+          email_text_field: response[0]?.data.email_text_field || "",
+          nom_text_field: response[0]?.data.nom_text_field || "",
+          subject_text_field: response[0]?.data.subject_text_field || "",
+          telephone_text_field: response[0]?.data.telephone_text_field || "",
+          bonjour_text_field: response[0]?.data.bonjour_text_field || "",
+        });
+      }
+    };
+    fetchPosts();
+  }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormValues({
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const [pinIcon, setPinIcon] = useState(null);
+
+  const latitude = posts[0]?.data.map.latitude;
+  const longitude = posts[0]?.data.map.longitude;
+
+  const position: [number, number] = [latitude, longitude];
+
+  useEffect(() => {
+    const L = require("leaflet");
+    const icon = new L.Icon({
+      iconUrl: "map-pin.png",
+      iconSize: [32, 32],
+    });
+    setPinIcon(icon);
+  }, []);
 
   const details: React.CSSProperties = {
     color: "#4D5053",
@@ -36,9 +85,10 @@ export default async function Contact() {
     <div>
       <div
         style={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
-          width: "100%",
+          backgroundImage: `url(${posts[0]?.data?.banner?.url || ""})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "100%",
+          // width: "100%",
           // height: "603.67px",
         }}
       >
@@ -48,7 +98,7 @@ export default async function Contact() {
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            paddingTop: "425.67px",
+            paddingTop: "250.67px",
           }}
         >
           <div
@@ -71,7 +121,7 @@ export default async function Contact() {
                 lineHeight: "80.32px",
               }}
             >
-              {settings.data.heading}
+              {posts[0]?.data.heading}
             </Typography>
             <Typography
               style={{
@@ -82,7 +132,7 @@ export default async function Contact() {
                 lineHeight: "38.4px",
               }}
             >
-              {settings.data.sub_heading}
+              {posts[0]?.data.sub_heading}
             </Typography>
           </div>
         </div>
@@ -101,7 +151,7 @@ export default async function Contact() {
             padding: "50px 200px 50px 200px",
           }}
         >
-          {settings.data.title}
+          {posts[0]?.data.title}
         </Grid>
         <Grid
           item
@@ -131,14 +181,14 @@ export default async function Contact() {
                 gap: "20px",
               }}
             >
-              {settings.data.email_icon && (
+              {posts[0]?.data.email_icon && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={settings.data.email_icon.url || undefined}
-                  alt={settings.data.email_icon.alt || "Image"}
+                  src={posts[0]?.data.email_icon.url || undefined}
+                  alt={posts[0]?.data.email_icon.alt || "Image"}
                 />
               )}
-              <p style={details}>{settings.data.email}</p>
+              <p style={details}>{posts[0]?.data.email}</p>
             </div>
             <div
               style={{
@@ -147,14 +197,14 @@ export default async function Contact() {
                 gap: "20px",
               }}
             >
-              {settings.data.phone_icon && (
+              {posts[0]?.data.phone_icon && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={settings.data.phone_icon.url || undefined}
-                  alt={settings.data.phone_icon.alt || "Image"}
+                  src={posts[0]?.data.phone_icon.url || undefined}
+                  alt={posts[0]?.data.phone_icon.alt || "Image"}
                 />
               )}
-              <p style={details}>{settings.data.phone}</p>
+              <p style={details}>{posts[0]?.data.phone}</p>
             </div>
             <div
               style={{
@@ -163,14 +213,14 @@ export default async function Contact() {
                 gap: "20px",
               }}
             >
-              {settings.data.web_icon && (
+              {posts[0]?.data.web_icon && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={settings.data.web_icon.url || undefined}
-                  alt={settings.data.web_icon.alt || "Image"}
+                  src={posts[0]?.data.web_icon.url || undefined}
+                  alt={posts[0]?.data.web_icon.alt || "Image"}
                 />
               )}
-              <p style={details}>{settings.data.web}</p>
+              <p style={details}>{posts[0]?.data.web}</p>
             </div>
             <div
               style={{
@@ -179,39 +229,39 @@ export default async function Contact() {
                 flexDirection: "row",
               }}
             >
-              <PrismicNextLink field={settings.data.facebook_link}>
-                {settings.data.facebook && (
+              <PrismicNextLink field={posts[0]?.data.facebook_link}>
+                {posts[0]?.data.facebook && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={settings.data.facebook.url || undefined}
-                    alt={settings.data.facebook.alt || "Image"}
+                    src={posts[0]?.data.facebook.url || undefined}
+                    alt={posts[0]?.data.facebook.alt || "Image"}
                   />
                 )}
               </PrismicNextLink>
-              <PrismicNextLink field={settings.data.twitter_link}>
-                {settings.data.twitter && (
+              <PrismicNextLink field={posts[0]?.data.twitter_link}>
+                {posts[0]?.data.twitter && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={settings.data.twitter.url || undefined}
-                    alt={settings.data.twitter.alt || "Image"}
+                    src={posts[0]?.data.twitter.url || undefined}
+                    alt={posts[0]?.data.twitter.alt || "Image"}
                   />
                 )}
               </PrismicNextLink>
-              <PrismicNextLink field={settings.data.linked_in_link}>
-                {settings.data.linked_in && (
+              <PrismicNextLink field={posts[0]?.data.linked_in_link}>
+                {posts[0]?.data.linked_in && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={settings.data.linked_in.url || undefined}
-                    alt={settings.data.linked_in.alt || "Image"}
+                    src={posts[0]?.data.linked_in.url || undefined}
+                    alt={posts[0]?.data.linked_in.alt || "Image"}
                   />
                 )}
               </PrismicNextLink>
-              <PrismicNextLink field={settings.data.instagram_link}>
-                {settings.data.instagram && (
+              <PrismicNextLink field={posts[0]?.data.instagram_link}>
+                {posts[0]?.data.instagram && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={settings.data.instagram.url || undefined}
-                    alt={settings.data.instagram.alt || "Image"}
+                    src={posts[0]?.data.instagram.url || undefined}
+                    alt={posts[0]?.data.instagram.alt || "Image"}
                   />
                 )}
               </PrismicNextLink>
@@ -235,7 +285,9 @@ export default async function Contact() {
               }}
             >
               <TextField
-                value={settings.data.nom_text_field || ""}
+                name="nom_text_field"
+                value={formValues.nom_text_field}
+                onChange={handleChange}
                 placeholder="Nom"
                 variant="standard"
                 type="text"
@@ -243,7 +295,9 @@ export default async function Contact() {
                 sx={mouseHover}
               />
               <TextField
-                value={settings.data.email_text_field || ""}
+                name="email_text_field"
+                value={formValues.email_text_field}
+                onChange={handleChange}
                 placeholder="Email"
                 variant="standard"
                 type="text"
@@ -260,7 +314,9 @@ export default async function Contact() {
               }}
             >
               <TextField
-                value={settings.data.subject_text_field || ""}
+                name="subject_text_field"
+                value={formValues.subject_text_field}
+                onChange={handleChange}
                 placeholder="Subject"
                 variant="standard"
                 type="text"
@@ -268,7 +324,9 @@ export default async function Contact() {
                 sx={mouseHover}
               />
               <TextField
-                value={settings.data.telephone_text_field || ""}
+                name="telephone_text_field"
+                value={formValues.telephone_text_field}
+                onChange={handleChange}
                 placeholder="Téléphone"
                 variant="standard"
                 type="text"
@@ -278,7 +336,9 @@ export default async function Contact() {
             </div>
             <div>
               <TextField
-                value={settings.data.bonjour_text_field || ""}
+                name="bonjour_text_field"
+                value={formValues.bonjour_text_field}
+                onChange={handleChange}
                 placeholder="Bonjour, je suis intéressé par.."
                 variant="standard"
                 type="text"
@@ -290,7 +350,7 @@ export default async function Contact() {
         </Grid>
         <Grid item lg={12}>
           <PrismicNextLink
-            field={settings.data.button_link}
+            field={posts[0]?.data.button_link}
             style={{
               textDecoration: "none",
               background: "#292F36",
@@ -305,58 +365,31 @@ export default async function Contact() {
               fontWeight: 600,
             }}
           >
-            {settings.data.button_text}
+            {posts[0]?.data.button_text}
             <EastIcon />
           </PrismicNextLink>
         </Grid>
-        <Grid item lg={12} style={{
-          display:'flex',
-          justifyContent:'center',
-          marginTop:'50px'
-        }}>
-          {/* {settings.data.map_image && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={settings.data.map_image.url || undefined}
-              alt={settings.data.map_image.alt || "Image"}
-            />
-          )} */}
-          {/* <p>
-            <a
-              href={`https://www.google.com/maps?q=${settings.data.map.latitude},${settings.data.map.longitude}`}
-              target="_blank"
-              rel="noopener noreferrer"
+        <Grid
+          item
+          lg={12}
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            padding: "100px",
+          }}
+        >
+          {latitude && longitude ? (
+            <MapContainer
+              center={position}
+              zoom={13}
+              scrollWheelZoom={false}
+              style={{ height: "350px", width: "100%" }}
             >
-              <LocationOnIcon />
-            </a>
-          </p> */}
-          {settings.data.map_image && (
-            <div>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={settings.data.map_image.url || undefined}
-                alt={settings.data.map_image.alt || "Image"}
-                style={{
-                  height:'60vh',
-                  width:'70vw',
-                  borderRadius:'35px',
-                  // position:'relative' 
-                }}
-              />
-              <p style={{
-                  position: "absolute",
-                  left: 470,
-                  transform: "translate(100%, -1100%)", // adjust positioning as needed
-                }}>
-                <a
-                  href={`https://www.google.com/maps?q=${settings.data.map.latitude},${settings.data.map.longitude}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <LocationOnIcon style={{color:'#BBDDD9'}}/>
-                </a>
-              </p>
-            </div>
+              <TileLayer url="https://mt1.google.com/vt/lyrs=y&x={x}&y={y}&z={z}" />
+              {pinIcon && <Marker position={position} icon={pinIcon} />}
+            </MapContainer>
+          ) : (
+            ""
           )}
         </Grid>
       </Grid>
