@@ -85,21 +85,13 @@ export default async function NotreProcessus() {
             display: "flex",
             flexDirection: "row",
             marginTop:'50px',
-            gap: "150px",
+            gap: "100px",
+            justifyContent:'space-evenly',
           }}
         >
           <Grid
             item
-            lg={6}
-            style={{
-              background: "#82C5BE",
-              borderRadius: "166.3px 0px 166.3px 0px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-              position: "relative",
-              marginLeft: "70px",
-              marginRight:'120px',
-              height:'430px',
-            }}
+            lg={5}
           >
             {settings.data.image1 && (
               // eslint-disable-next-line @next/next/no-img-element
@@ -107,17 +99,14 @@ export default async function NotreProcessus() {
                 src={settings.data.image1.url || undefined}
                 alt={settings.data.image1.alt || "Image"}
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  transform: "translate(-15%, -15%)", // adjust positioning as needed
+                  height:'80vh',
                 }}
               />
             )}
           </Grid>
           <Grid
             item
-            lg={6}
+            lg={5}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -150,13 +139,13 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
+            justifyContent:'space-evenly',
             marginTop:'50px',
-            gap: "150px",
           }}
         >
           <Grid
             item
-            lg={6}
+            lg={5}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -184,16 +173,7 @@ export default async function NotreProcessus() {
           </Grid>
           <Grid
             item
-            lg={6}
-            style={{
-              background: "#F6C09E",
-              borderRadius: "0px 166.3px 0px 166.3px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-              position: "relative",
-              marginLeft: "190px",
-              marginRight:'10px',
-              height:'430px',
-            }}
+            lg={5}
           >
             {settings.data.image2 && (
               // eslint-disable-next-line @next/next/no-img-element
@@ -201,10 +181,7 @@ export default async function NotreProcessus() {
                 src={settings.data.image2.url || undefined}
                 alt={settings.data.image2.alt || "Image"}
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  transform: "translate(-15%, 0%)", // adjust positioning as needed
+                  height:'80vh',
                 }}
               />
             )}
@@ -216,22 +193,14 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            marginTop:'70px',
-            gap: "150px",
+            marginTop:'50px',
+            gap: "100px",
+            justifyContent:'space-evenly',
           }}
         >
           <Grid
             item
-            lg={6}
-            style={{
-              background: "#82C5BE",
-              borderRadius: "166.3px 0px 166.3px 0px",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-              position: "relative",
-              marginLeft: "70px",
-              marginRight:'120px',
-              height:'430px',
-            }}
+            lg={5}
           >
             {settings.data.image3 && (
               // eslint-disable-next-line @next/next/no-img-element
@@ -239,17 +208,14 @@ export default async function NotreProcessus() {
                 src={settings.data.image3.url || undefined}
                 alt={settings.data.image3.alt || "Image"}
                 style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  transform: "translate(-15%, -15%)", // adjust positioning as needed
+                  height:'80vh',
                 }}
               />
             )}
           </Grid>
           <Grid
             item
-            lg={6}
+            lg={5}
             style={{
               display: "flex",
               flexDirection: "column",
