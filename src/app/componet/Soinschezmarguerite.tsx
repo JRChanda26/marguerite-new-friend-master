@@ -513,7 +513,7 @@ const Soinschezmarguerite: React.FC = () => {
                         }}>
                             <Grid container spacing={1}>
                                 <Grid item lg={12} style={{ display: 'flex', justifyContent: 'center' ,alignItems:'center',gap:'20px',padding:'80px'}}>
-                                    <Grid item lg={3} style={{background: '#fff', width: '373px', height: '452px', borderRadius: '24px',marginTop:'144px'}}>
+                                    <Grid item lg={3} style={{background: '#fff', width: '373px', height: '452px', borderRadius: '24px',marginTop:'144px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)',}}>
                                         <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',paddingTop:'61.41px'}}>
                                         <img
                                             src={post.data.lastlogo1?.url || ""}
@@ -521,9 +521,39 @@ const Soinschezmarguerite: React.FC = () => {
                                             style={{ width: "62.63px", height: "60.49px" }}
                                         />
                                         </div>
+                                        <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',flexDirection:'column'}} >
+                                            <Typography style={{
+                                                 fontFamily: 'Mulish',
+                                                 fontSize: '29.26px',
+                                                 fontWeight: 600,
+                                                 lineHeight: '36.72px',
+                                                 textAlign: 'center',
+                                                 color: '#1E1E1E',
+                                                 paddingTop:'41.5px',
+                                                 padding:'20px'
+                                            }}>
+                                                {post.data.box1header}
+                                            </Typography>
+                                            <Typography style={{
+                                                fontFamily: 'Mulish',
+                                                fontStyle:'italic',
+                                                fontSize: '19.5px',
+                                                fontWeight: 400,
+                                                lineHeight: '36.08px',
+                                                textAlign: 'center',
+                                                color: '#1E1E1E',
+                                                 paddingTop:'20.72px',
+                                                 paddingLeft:'60px',
+                                                 paddingRight:'47px'
+                                            }}
+                                            >
+                                                {post.data.box1content}
+                                            </Typography>
+                                        </div>
+                                       
 
                                     </Grid>
-                                    <Grid item lg={3} style={{background: '#FFFFFF', width: '373px', height: '452px', borderRadius: '24px'}}>
+                                    <Grid item lg={3} style={{background: '#FFFFFF', width: 'auto', height: '452px', borderRadius: '24px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)',}}>
                                     <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',paddingTop:'83.96px'}}>
                                         <img
                                             src={post.data.lastlogo2?.url || ""}
@@ -531,8 +561,36 @@ const Soinschezmarguerite: React.FC = () => {
                                             style={{ width: "63.33px", height: "60.26px" }}
                                         />
                                     </div>
+                                    <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',flexDirection:'column'}} >
+                                            <Typography style={{
+                                                 fontFamily: 'Mulish',
+                                                 fontSize: '29.26px',
+                                                 fontWeight: 600,
+                                                 lineHeight: '36.72px',
+                                                 textAlign: 'center',
+                                                 color: '#1E1E1E',
+                                                 paddingTop:'41.5px'
+                                            }}>
+                                                {post.data.box2header}
+                                            </Typography>
+                                            <Typography style={{
+                                                fontFamily: 'Mulish',
+                                                fontStyle:'italic',
+                                                fontSize: '19.5px',
+                                                fontWeight: 400,
+                                                lineHeight: '36.08px',
+                                                textAlign: 'center',
+                                                color: '#1E1E1E',
+                                                 paddingTop:'20.72px',
+                                                 paddingLeft:'60px',
+                                                 paddingRight:'47px'
+                                            }}
+                                            >
+                                                {post.data.box2content}
+                                            </Typography>
+                                        </div>
                                     </Grid>
-                                    <Grid item lg={3} style={{background: '#FFFFFF', width: '373px', height: '452px', borderRadius: '24px',marginTop:'144px'}}>
+                                    <Grid item lg={3} style={{background: '#FFFFFF', width: '373px', height: '452px', borderRadius: '24px',marginTop:'144px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)',}}>
                                     <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',paddingTop:'70.44px'}}>
                                         <img
                                             src={post.data.lastlogo3?.url || ""}
@@ -540,15 +598,71 @@ const Soinschezmarguerite: React.FC = () => {
                                             style={{ width: "56px", height: "60px" }}
                                         />
                                         </div>
+                                        <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',flexDirection:'column'}} >
+                                            <Typography style={{
+                                                 fontFamily: 'Mulish',
+                                                 fontSize: '29.26px',
+                                                 fontWeight: 600,
+                                                 lineHeight: '36.72px',
+                                                 textAlign: 'center',
+                                                 color: '#1E1E1E',
+                                                 paddingTop:'41.5px'
+                                            }}>
+                                                {post.data.box3header}
+                                            </Typography>
+                                            <Typography style={{
+                                                fontFamily: 'Mulish',
+                                                fontStyle:'italic',
+                                                fontSize: '19.5px',
+                                                fontWeight: 400,
+                                                lineHeight: '36.08px',
+                                                textAlign: 'center',
+                                                color: '#1E1E1E',
+                                                 paddingTop:'20.72px',
+                                                 paddingLeft:'60px',
+                                                 paddingRight:'47px'
+                                            }}
+                                            >
+                                                {post.data.box3content}
+                                            </Typography>
+                                        </div>
 
                                     </Grid>
-                                    <Grid item lg={3} style={{background: '#FFFFFF', width: '373px', height: '452px', borderRadius: '24px'}}>
+                                    <Grid item lg={3} style={{background: '#FFFFFF', width: '373px', height: '452px', borderRadius: '24px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)',}}>
                                     <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',paddingTop:'104.62px'}}>
                                         <img
                                             src={post.data.lastlogo4?.url || ""}
                                             alt={post.data.lastlogo4?.alt || "icon"}
                                             style={{ width: "54.4px", height: "60px" }}
                                         />
+                                        </div>
+                                        <div style={{display: 'flex', justifyContent: 'center' ,alignItems:'center',flexDirection:'column'}} >
+                                            <Typography style={{
+                                                 fontFamily: 'Mulish',
+                                                 fontSize: '29.26px',
+                                                 fontWeight: 600,
+                                                 lineHeight: '36.72px',
+                                                 textAlign: 'center',
+                                                 color: '#1E1E1E',
+                                                 paddingTop:'41.5px'
+                                            }}>
+                                                {post.data.box4header}
+                                            </Typography>
+                                            <Typography style={{
+                                                fontFamily: 'Mulish',
+                                                fontStyle:'italic',
+                                                fontSize: '19.5px',
+                                                fontWeight: 400,
+                                                lineHeight: '36.08px',
+                                                textAlign: 'center',
+                                                color: '#1E1E1E',
+                                                 paddingTop:'20.72px',
+                                                 paddingLeft:'60px',
+                                                 paddingRight:'50px'
+                                            }}
+                                            >
+                                                {post.data.box4content}
+                                            </Typography>
                                         </div>
 
 
