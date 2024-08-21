@@ -14,7 +14,6 @@ export default async function NotreProcessus() {
   const title: React.CSSProperties = {
     color: "#1E1E1E",
     fontSize: "42PX",
-    lineHeight: "49.22px",
   };
   
   const subTitle: React.CSSProperties = {
@@ -22,8 +21,6 @@ export default async function NotreProcessus() {
     textTransform: "uppercase",
     fontSize: "18px",
     fontWeight: 600,
-    lineHeight: "22.59px",
-    letterSpacing: "17.5%",
   };
 
   const description: React.CSSProperties = {
@@ -31,7 +28,6 @@ export default async function NotreProcessus() {
     fontSize: "18px",
     fontWeight: 400,
     fontStyle: "italic",
-    lineHeight: "33.3px",
   };
 
   const textLink: React.CSSProperties = {
@@ -39,7 +35,6 @@ export default async function NotreProcessus() {
     fontSize: "14px",
     fontWeight: 400,
     fontStyle: "italic",
-    lineHeight: "25.9px",
     textDecoration: "none",
     display:'flex',
     flexDirection:'row'
@@ -85,39 +80,32 @@ export default async function NotreProcessus() {
             display: "flex",
             flexDirection: "row",
             marginTop:'50px',
-            gap: "100px",
-            justifyContent:'space-evenly',
           }}
         >
-          <Grid
-            item
-            lg={5}
-          >
+          <div>
             {settings.data.image1 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={settings.data.image1.url || undefined}
                 alt={settings.data.image1.alt || "Image"}
                 style={{
-                  height:'80vh',
+                  height:'60vh',
                 }}
               />
             )}
-          </Grid>
-          <Grid
-            item
-            lg={5}
+          </div>
+          <div
             style={{
               display: "flex",
               flexDirection: "column",
             }}
           >
             <p style={subTitle}>{settings.data.sub_title1}</p>
-            <h1
+            <div
               style={title}
             >
               <PrismicRichText field={settings.data.title1} />
-            </h1>
+            </div>
             <div
               style={description}
             >
@@ -131,7 +119,7 @@ export default async function NotreProcessus() {
               {settings.data.button_text1}
               <ArrowRightAltIcon/>
             </PrismicNextLink>
-          </Grid>
+          </div>
         </Grid>
         <Grid
           item
@@ -139,24 +127,22 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent:'space-evenly',
             marginTop:'50px',
           }}
         >
-          <Grid
-            item
-            lg={5}
+          <div
             style={{
               display: "flex",
               flexDirection: "column",
+              paddingLeft:'30px'
             }}
           >
             <p style={subTitle}>{settings.data.sub_title2}</p>
-            <h1
+            <div
               style={title}
             >
               <PrismicRichText field={settings.data.title2} />
-            </h1>
+            </div>
             <div
               style={description}
             >
@@ -170,22 +156,19 @@ export default async function NotreProcessus() {
               {settings.data.button_text2}
               <ArrowRightAltIcon/>
             </PrismicNextLink>
-          </Grid>
-          <Grid
-            item
-            lg={5}
-          >
+          </div>
+          <div>
             {settings.data.image2 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={settings.data.image2.url || undefined}
                 alt={settings.data.image2.alt || "Image"}
                 style={{
-                  height:'80vh',
+                  height:'60vh',
                 }}
               />
             )}
-          </Grid>
+          </div>
         </Grid>
         <Grid
           item
@@ -194,13 +177,9 @@ export default async function NotreProcessus() {
             display: "flex",
             flexDirection: "row",
             marginTop:'50px',
-            gap: "100px",
-            justifyContent:'space-evenly',
           }}
         >
-          <Grid
-            item
-            lg={5}
+          <div
           >
             {settings.data.image3 && (
               // eslint-disable-next-line @next/next/no-img-element
@@ -208,25 +187,23 @@ export default async function NotreProcessus() {
                 src={settings.data.image3.url || undefined}
                 alt={settings.data.image3.alt || "Image"}
                 style={{
-                  height:'80vh',
+                  height:'60vh',
                 }}
               />
             )}
-          </Grid>
-          <Grid
-            item
-            lg={5}
+          </div>
+          <div
             style={{
               display: "flex",
               flexDirection: "column",
             }}
           >
             <p style={subTitle}>{settings.data.sub_title3}</p>
-            <h1
+            <div
               style={title}
             >
               <PrismicRichText field={settings.data.title3} />
-            </h1>
+            </div>
             <div
               style={description}
             >
@@ -240,7 +217,7 @@ export default async function NotreProcessus() {
               {settings.data.button_text3}
               <ArrowRightAltIcon/>
             </PrismicNextLink>
-          </Grid>
+          </div>
         </Grid>
       </Grid> 
     </div>
