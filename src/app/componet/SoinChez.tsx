@@ -1,84 +1,8 @@
-// import { createClient } from "@/prismicio";
-// import { Grid } from "@mui/material";
-// import { PrismicRichText } from "@prismicio/react";
-// import React, { useState } from "react";
-
-// export default async function SoinChez() {
-//   const client = createClient();
-//   const settings = await client.getSingle("soin_chez");
-
-//   const videoUrl = settings.data.video?.url;
-//   const subTitle = settings.data.sub_title;
-
-//   const items = Array.from({ length: 7 });
-
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         flexDirection: "column",
-//         alignItems: "center",
-//         textAlign: "center",
-//       }}
-//     >
-//       <h1>
-//         <PrismicRichText field={settings.data.title} />
-//       </h1>
-//       <Grid container>
-//         <Grid
-//           item
-//           lg={12}
-//           style={{
-//             display: "flex",
-//             flexDirection: "row",
-//             justifyContent: "space-evenly",
-//           }}
-//         >
-//           {items.map((_, index) => (
-//             <Grid
-//               item
-//               lg={3}
-//               key={index}
-//               style={{
-//                 background: "#FFFFFF",
-//                 boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-//                 padding: "20px",
-//                 borderRadius: "20px",
-//               }}
-//             >
-//               {videoUrl ? (
-//                 <video
-//                   width="300"
-//                   controls
-//                   style={{
-//                     borderRadius: "12px",
-//                   }}
-//                 >
-//                   <source src={videoUrl} type="video/mp4" />
-//                 </video>
-//               ) : (
-//                 <p>Video not available</p>
-//               )}
-//               <h3>{index+1}. {subTitle}</h3>
-//             </Grid>
-//           ))}
-//         </Grid>
-//         <p
-//           style={{
-//             padding: "50px",
-//           }}
-//         >
-//           {settings.data.description}
-//         </p>
-//       </Grid>
-//     </div>
-//   );
-// }
-"use client"; // Mark this file as a Client Component
+"use client";
 
 import { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
-import { Box, Button, Grid, IconButton, useTheme } from "@mui/material";
+import { Button, Grid } from "@mui/material";
 import { PrismicRichText } from "@prismicio/react";
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
@@ -224,7 +148,6 @@ export default function SoinChez() {
                     color: "#000000",
                     fontSize: "32.02px",
                     fontWeight: 700,
-                    // lineHeight: "52.74px",
                   }}
                 >
                   {page * fixedRowsPerPage + index + 1}. {subTitle}
