@@ -13,6 +13,7 @@ import SoinChez from "./componet/SoinChez";
 import Pricing from "./componet/Pricing";
 import Contact from "./componet/Contact";
 import Soinschezmarguerite from "./componet/Soinschezmarguerite";
+import Ourcaremanagementsolutions from "./componet/ourcaremanagementsolutions";
 
 
 export default function Home() {
@@ -30,6 +31,7 @@ export default function Home() {
       <Soinschezmarguerite/>
       <Footer/>
       <Contact/>
+      <Ourcaremanagementsolutions/>
     </div>
   );
 }
