@@ -1,0 +1,247 @@
+{
+  "format": "page",
+  "id": "contact",
+  "label": "Contact",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "Banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
+        }
+      },
+      "sub_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Heading",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "email_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Email Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "phone_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Phone Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "web_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Web Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "facebook": {
+        "type": "Image",
+        "config": {
+          "label": "Facebook",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "twitter": {
+        "type": "Image",
+        "config": {
+          "label": "Twitter",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "linked_in": {
+        "type": "Image",
+        "config": {
+          "label": "Linked In",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "instagram": {
+        "type": "Image",
+        "config": {
+          "label": "Instagram",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "email_text_field": {
+        "type": "Text",
+        "config": {
+          "label": "Email Text Field",
+          "placeholder": "Email"
+        }
+      },
+      "nom_text_field": {
+        "type": "Text",
+        "config": {
+          "label": "Nom Text Field",
+          "placeholder": "Nom"
+        }
+      },
+      "subject_text_field": {
+        "type": "Text",
+        "config": {
+          "label": "Subject Text Field",
+          "placeholder": "Subject"
+        }
+      },
+      "phone_text_field": {
+        "type": "Text",
+        "config": {
+          "label": "Phone Text Field",
+          "placeholder": "Téléphone"
+        }
+      },
+      "bonjour_text_field": {
+        "type": "Text",
+        "config": {
+          "label": "Bonjour Text Field",
+          "placeholder": "Bonjour, je suis intéressé par.."
+        }
+      },
+      "button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "button_link": {
+        "type": "Link",
+        "config": {
+          "label": "Button Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "map": {
+        "type": "GeoPoint",
+        "config": {
+          "label": "Map"
+        }
+      },
+      "email": {
+        "type": "Text",
+        "config": {
+          "label": "Email",
+          "placeholder": ""
+        }
+      },
+      "phone": {
+        "type": "Text",
+        "config": {
+          "label": "Phone",
+          "placeholder": ""
+        }
+      },
+      "web": {
+        "type": "Text",
+        "config": {
+          "label": "Web",
+          "placeholder": ""
+        }
+      },
+      "facebook_link": {
+        "type": "Link",
+        "config": {
+          "label": "Facebook Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "linked_in_link": {
+        "type": "Link",
+        "config": {
+          "label": "Linked In Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "twitter_link": {
+        "type": "Link",
+        "config": {
+          "label": "Twitter Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "instagram_link": {
+        "type": "Link",
+        "config": {
+          "label": "Instagram Link",
+          "placeholder": "",
+          "select": null
+        }
+      },
+      "map_image": {
+        "type": "Image",
+        "config": {
+          "label": "Map Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

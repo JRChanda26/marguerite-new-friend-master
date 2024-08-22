@@ -37,7 +37,9 @@ const Ourcaremanagementsolutions: React.FC = () => {
                     backgroundImage: `url(${backgroundImage})`,
                     backgroundSize: "cover",
                     width: "100%",
-                    height: "603.67px",
+                    height: "auto",
+
+
                 }}
             >
                 {posts.map((post: any, postIndex: number) => (
@@ -49,6 +51,7 @@ const Ourcaremanagementsolutions: React.FC = () => {
                                 flexDirection: "column",
                                 alignItems: "center",
                                 paddingTop: "425.67px",
+
                             }}
                         >
                             <div
@@ -87,7 +90,11 @@ const Ourcaremanagementsolutions: React.FC = () => {
                             </div>
                         </div>
 
-                        <div style={{ paddingTop: '173px' }}>
+                       
+                    </>
+                ))}
+            </div>
+            <div style={{ paddingTop: '173px' }}>
                             {posts.map((post: any) => (
                                 <Grid container spacing={0} key={post.id}>
                                     <Grid item lg={12} style={{ display: 'flex', justifyContent: 'center', flexDirection: 'row', gap: '20px' }}>
@@ -124,62 +131,62 @@ const Ourcaremanagementsolutions: React.FC = () => {
                         <div style={{ paddingTop: '173px' }}>
                             {posts.map((post: any) => (
                                 <>
-                                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                                 <Typography style={{
-                                     color:'#000000',
-                                     padding:'20px',
-                                     width:'200px'
-                                 }}>
-                                     {post.data.pielefttext}
-                                 </Typography>
-                                 <img src={post.data.pieimage.url || ''} alt={post.data.pieimage} style={{ background: '#FFFFFF', width: '66.52px', height: '66.51px' }} />
-                                 <Typography style={{ paddingTop: '20px', paddingLeft: '33.61px' }}>
-                                     {post.data.pietext}
-                                 </Typography>
-                             </div>
-                                <Grid container spacing={0} key={post.id}>
-                                    <Grid item lg={12} style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
-                                        <Grid item lg={4.5} style={{}}>
+                                    <div style={{ display: 'flex', flexDirection: 'row' }}>
+                                        <Typography style={{
+                                            color: '#000000',
+                                            padding: '20px',
+                                            width: '200px'
+                                        }}>
+                                            {post.data.pielefttext}
+                                        </Typography>
+                                        <img src={post.data.pieimage.url || ''} alt={post.data.pieimage} style={{ background: '#FFFFFF', width: '66.52px', height: '66.51px' }} />
+                                        <Typography style={{ paddingTop: '20px', paddingLeft: '33.61px' }}>
+                                            {post.data.pietext}
+                                        </Typography>
+                                    </div>
+                                    <Grid container spacing={0} key={post.id}>
+                                        <Grid item lg={12} style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
+                                            <Grid item lg={4.5} style={{}}>
 
-                                            <img src={post.data.leafimageleft.url || ''} alt={post.data.leafimageleft} style={{ background: '#FFFFFF', width: '623.91px', height: '719.98px', paddingTop: '112.45px' }} />
-
-
-
-                                        </Grid>
+                                                <img src={post.data.leafimageleft.url || ''} alt={post.data.leafimageleft} style={{ background: '#FFFFFF', width: '623.91px', height: '719.98px', paddingTop: '112.45px' }} />
 
 
-                                        <Grid item lg={3.5}>
-                                            <div>
 
-                                                <img src={post.data.leafimageright.url || ''} alt={post.data.leafimageright} style={{ height: '752.52px', width: '484.56px' }} />
-                                            </div>
+                                            </Grid>
 
-                                        </Grid>
-                                        <Grid item lg={2} style={{ paddingTop: '178.6px' }}>
-                                            <div style={{ height: '176px', width: '376.38px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)', borderRadius: '24px', }}>
-                                                <Typography style={{ fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 700, lineHeight: '36.08px', padding: '16px 64px 0px 64px' }}>
-                                                    {post.data.rightleaftextheader}
-                                                </Typography>
-                                                <Typography style={{ padding: '0px 64px 0px 64px', fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 400, lineHeight: '36.08px', fontStyle: 'initial' }}>
-                                                    {post.data.rightleaftextcontent}
-                                                </Typography>
-                                            </div>
-                                            <Box sx={{
-                                                paddingTop: '163.4px'
-                                            }}>
+
+                                            <Grid item lg={3.5}>
+                                                <div>
+
+                                                    <img src={post.data.leafimageright.url || ''} alt={post.data.leafimageright} style={{ height: '752.52px', width: '484.56px' }} />
+                                                </div>
+
+                                            </Grid>
+                                            <Grid item lg={2} style={{ paddingTop: '178.6px' }}>
                                                 <div style={{ height: '176px', width: '376.38px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)', borderRadius: '24px', }}>
-                                                    <Typography style={{ padding: '16px 64px 0px 64px', fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 700, lineHeight: '36.08px' }}>
-                                                        {post.data.rightleafdowntextheader}
+                                                    <Typography style={{ fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 700, lineHeight: '36.08px', padding: '16px 64px 0px 64px' }}>
+                                                        {post.data.rightleaftextheader}
                                                     </Typography>
                                                     <Typography style={{ padding: '0px 64px 0px 64px', fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 400, lineHeight: '36.08px', fontStyle: 'initial' }}>
-                                                        {post.data.rightleafdowntextcontent}
+                                                        {post.data.rightleaftextcontent}
                                                     </Typography>
                                                 </div>
-                                            </Box>
-                                        </Grid>
+                                                <Box sx={{
+                                                    paddingTop: '163.4px'
+                                                }}>
+                                                    <div style={{ height: '176px', width: '376.38px', boxShadow: '0px 16px 32px rgba(0, 0, 0, 0.1)', borderRadius: '24px', }}>
+                                                        <Typography style={{ padding: '16px 64px 0px 64px', fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 700, lineHeight: '36.08px' }}>
+                                                            {post.data.rightleafdowntextheader}
+                                                        </Typography>
+                                                        <Typography style={{ padding: '0px 64px 0px 64px', fontFamily: 'Mulish', fontSize: '19.5px', fontWeight: 400, lineHeight: '36.08px', fontStyle: 'initial' }}>
+                                                            {post.data.rightleafdowntextcontent}
+                                                        </Typography>
+                                                    </div>
+                                                </Box>
+                                            </Grid>
 
+                                        </Grid>
                                     </Grid>
-                                </Grid>
                                 </>
                             ))}
                         </div>
@@ -365,9 +372,6 @@ const Ourcaremanagementsolutions: React.FC = () => {
 
                             ))}
                         </div>
-                    </>
-                ))}
-            </div>
 
 
 

@@ -1,15 +1,23 @@
 {
   "format": "page",
-  "id": "choisir",
-  "label": "Choisir",
+  "id": "pricing",
+  "label": "Pricing",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "heading": {
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "headertext": {
         "type": "Text",
         "config": {
-          "label": "heading",
+          "label": "headertext",
           "placeholder": ""
         }
       },
@@ -20,76 +28,66 @@
           "placeholder": ""
         }
       },
-      "homelogo": {
-        "type": "Image",
-        "config": {
-          "label": "homelogo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "editlogo": {
-        "type": "Image",
-        "config": {
-          "label": "editlogo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "calenderlogo": {
-        "type": "Image",
-        "config": {
-          "label": "calenderlogo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "homeheader": {
+      "basic_care": {
         "type": "Text",
         "config": {
-          "label": "homeheader",
+          "label": "Basic Care",
           "placeholder": ""
         }
       },
-      "homecontent": {
+      "soins_complets": {
         "type": "Text",
         "config": {
-          "label": "homecontent",
+          "label": "Soins Complets",
           "placeholder": ""
         }
       },
-      "editlogoheader": {
+      "soins_premium": {
         "type": "Text",
         "config": {
-          "label": "editlogoheader",
+          "label": "Soins Premium",
           "placeholder": ""
         }
       },
-      "editlogocontent": {
+      "basicprice": {
         "type": "Text",
         "config": {
-          "label": "editlogocontent",
+          "label": "basicprice",
           "placeholder": ""
         }
       },
-      "calenderheader": {
+      "moderateprice": {
         "type": "Text",
         "config": {
-          "label": "calenderheader",
+          "label": "moderateprice",
           "placeholder": ""
         }
       },
-      "calendercontent": {
+      "premium": {
         "type": "Text",
         "config": {
-          "label": "calendercontent",
+          "label": "premium",
           "placeholder": ""
         }
       },
-      "buttontext": {
+      "basiccontent": {
         "type": "Text",
         "config": {
-          "label": "buttontext",
+          "label": "basiccontent",
+          "placeholder": ""
+        }
+      },
+      "moderatecontent": {
+        "type": "Text",
+        "config": {
+          "label": "moderatecontent",
+          "placeholder": ""
+        }
+      },
+      "premiumcontent": {
+        "type": "Text",
+        "config": {
+          "label": "premiumcontent",
           "placeholder": ""
         }
       },
@@ -99,6 +97,56 @@
           "label": "buttonicon",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "buttontext": {
+        "type": "Text",
+        "config": {
+          "label": "buttontext",
+          "placeholder": ""
+        }
+      },
+      "orangearrow": {
+        "type": "Image",
+        "config": {
+          "label": "orangearrow",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "insidetext": {
+        "type": "Text",
+        "config": {
+          "label": "insidetext",
+          "placeholder": ""
+        }
+      },
+      "pricelogo": {
+        "type": "Text",
+        "config": {
+          "label": "pricelogo",
+          "placeholder": ""
+        }
+      },
+      "month": {
+        "type": "Text",
+        "config": {
+          "label": "month",
+          "placeholder": ""
+        }
+      },
+      "price2": {
+        "type": "Text",
+        "config": {
+          "label": "price2",
+          "placeholder": ""
+        }
+      },
+      "price3": {
+        "type": "Text",
+        "config": {
+          "label": "price3",
+          "placeholder": ""
         }
       },
       "slices": {
