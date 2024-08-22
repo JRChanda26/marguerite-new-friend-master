@@ -131,6 +131,20 @@
           "placeholder": ""
         }
       },
+      "leafsectionheader": {
+        "type": "Text",
+        "config": {
+          "label": "leafsectionheader",
+          "placeholder": ""
+        }
+      },
+      "leafsectioncontent": {
+        "type": "Text",
+        "config": {
+          "label": "leafsectioncontent",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
