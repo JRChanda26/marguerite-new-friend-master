@@ -1,0 +1,242 @@
+{
+  "format": "page",
+  "id": "blogs",
+  "label": "Blogs",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
+        }
+      },
+      "sub_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Heading",
+          "placeholder": ""
+        }
+      },
+      "title1": {
+        "type": "Text",
+        "config": {
+          "label": "Title1",
+          "placeholder": ""
+        }
+      },
+      "sub_title1": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title1",
+          "placeholder": ""
+        }
+      },
+      "description1": {
+        "type": "Text",
+        "config": {
+          "label": "Description1",
+          "placeholder": ""
+        }
+      },
+      "date": {
+        "type": "Text",
+        "config": {
+          "label": "Date",
+          "placeholder": ""
+        }
+      },
+      "banner": {
+        "type": "Image",
+        "config": {
+          "label": "Banner",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "post_image": {
+        "type": "Image",
+        "config": {
+          "label": "Post Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "title2": {
+        "type": "Text",
+        "config": {
+          "label": "Title2",
+          "placeholder": ""
+        }
+      },
+      "sub_title2": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title2",
+          "placeholder": ""
+        }
+      },
+      "description2": {
+        "type": "Text",
+        "config": {
+          "label": "Description2",
+          "placeholder": ""
+        }
+      },
+      "name1": {
+        "type": "Text",
+        "config": {
+          "label": "Name1",
+          "placeholder": ""
+        }
+      },
+      "date1": {
+        "type": "Text",
+        "config": {
+          "label": "Date1",
+          "placeholder": ""
+        }
+      },
+      "profile1": {
+        "type": "Image",
+        "config": {
+          "label": "Profile1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sub_title3": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title3",
+          "placeholder": ""
+        }
+      },
+      "description3": {
+        "type": "Text",
+        "config": {
+          "label": "Description3",
+          "placeholder": ""
+        }
+      },
+      "name2": {
+        "type": "Text",
+        "config": {
+          "label": "Name2",
+          "placeholder": ""
+        }
+      },
+      "date2": {
+        "type": "Text",
+        "config": {
+          "label": "Date2",
+          "placeholder": ""
+        }
+      },
+      "profile2": {
+        "type": "Image",
+        "config": {
+          "label": "Profile2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "sub_title4": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Title4",
+          "placeholder": ""
+        }
+      },
+      "description4": {
+        "type": "Text",
+        "config": {
+          "label": "Description4",
+          "placeholder": ""
+        }
+      },
+      "name3": {
+        "type": "Text",
+        "config": {
+          "label": "Name3",
+          "placeholder": ""
+        }
+      },
+      "date3": {
+        "type": "Text",
+        "config": {
+          "label": "Date3",
+          "placeholder": ""
+        }
+      },
+      "profile3": {
+        "type": "Image",
+        "config": {
+          "label": "Profile3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image1": {
+        "type": "Image",
+        "config": {
+          "label": "Image1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image2": {
+        "type": "Image",
+        "config": {
+          "label": "Image2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "image3": {
+        "type": "Image",
+        "config": {
+          "label": "Image3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

@@ -1,0 +1,391 @@
+{
+  "format": "page",
+  "id": "soinschezmarguerite",
+  "label": "soinschezmarguerite",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "headerbackground": {
+        "type": "Image",
+        "config": {
+          "label": "headerbackground",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "headertext": {
+        "type": "Text",
+        "config": {
+          "label": "headertext",
+          "placeholder": ""
+        }
+      },
+      "content": {
+        "type": "Text",
+        "config": {
+          "label": "content",
+          "placeholder": ""
+        }
+      },
+      "contentbackground": {
+        "type": "Image",
+        "config": {
+          "label": "contentbackground",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "excellence": {
+        "type": "Text",
+        "config": {
+          "label": "excellence",
+          "placeholder": ""
+        }
+      },
+      "comma": {
+        "type": "Text",
+        "config": {
+          "label": "comma",
+          "placeholder": ""
+        }
+      },
+      "boxcontent": {
+        "type": "Text",
+        "config": {
+          "label": "boxcontent",
+          "placeholder": ""
+        }
+      },
+      "bodyrightimage": {
+        "type": "Image",
+        "config": {
+          "label": "bodyrightimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "leftheader": {
+        "type": "Text",
+        "config": {
+          "label": "leftheader",
+          "placeholder": ""
+        }
+      },
+      "leftcontent": {
+        "type": "Text",
+        "config": {
+          "label": "leftcontent",
+          "placeholder": ""
+        }
+      },
+      "missionheader": {
+        "type": "Text",
+        "config": {
+          "label": "missionheader",
+          "placeholder": ""
+        }
+      },
+      "missioncontent": {
+        "type": "Text",
+        "config": {
+          "label": "missioncontent",
+          "placeholder": ""
+        }
+      },
+      "buttontext": {
+        "type": "Text",
+        "config": {
+          "label": "buttontext",
+          "placeholder": ""
+        }
+      },
+      "buttonicon": {
+        "type": "Image",
+        "config": {
+          "label": "buttonicon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "vissionheader": {
+        "type": "Text",
+        "config": {
+          "label": "vissionheader",
+          "placeholder": ""
+        }
+      },
+      "vissioncontent": {
+        "type": "Text",
+        "config": {
+          "label": "vissioncontent",
+          "placeholder": ""
+        }
+      },
+      "valeursheader": {
+        "type": "Text",
+        "config": {
+          "label": "valeursheader",
+          "placeholder": ""
+        }
+      },
+      "valeurscontent": {
+        "type": "Text",
+        "config": {
+          "label": "valeurscontent",
+          "placeholder": ""
+        }
+      },
+      "peopleheading": {
+        "type": "Text",
+        "config": {
+          "label": "peopleheading",
+          "placeholder": ""
+        }
+      },
+      "peoplecontent": {
+        "type": "Text",
+        "config": {
+          "label": "peoplecontent",
+          "placeholder": ""
+        }
+      },
+      "person1": {
+        "type": "Image",
+        "config": {
+          "label": "person1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "person2": {
+        "type": "Image",
+        "config": {
+          "label": "person2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "person3": {
+        "type": "Image",
+        "config": {
+          "label": "person3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "facebook": {
+        "type": "Image",
+        "config": {
+          "label": "facebook",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "twitter": {
+        "type": "Image",
+        "config": {
+          "label": "twitter",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "linkedin": {
+        "type": "Image",
+        "config": {
+          "label": "linkedin",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "instagram": {
+        "type": "Image",
+        "config": {
+          "label": "instagram",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "backgroundpeople": {
+        "type": "Image",
+        "config": {
+          "label": "backgroundpeople",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "designername": {
+        "type": "Text",
+        "config": {
+          "label": "designername",
+          "placeholder": ""
+        }
+      },
+      "designercontent": {
+        "type": "Text",
+        "config": {
+          "label": "designercontent",
+          "placeholder": ""
+        }
+      },
+      "designercontact": {
+        "type": "Text",
+        "config": {
+          "label": "designercontact",
+          "placeholder": ""
+        }
+      },
+      "designeremail": {
+        "type": "Text",
+        "config": {
+          "label": "designeremail",
+          "placeholder": ""
+        }
+      },
+      "lastheader": {
+        "type": "Text",
+        "config": {
+          "label": "lastheader",
+          "placeholder": ""
+        }
+      },
+      "lastcontent": {
+        "type": "Text",
+        "config": {
+          "label": "lastcontent",
+          "placeholder": ""
+        }
+      },
+      "lastbackground": {
+        "type": "Image",
+        "config": {
+          "label": "lastbackground",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "lastlogo1": {
+        "type": "Image",
+        "config": {
+          "label": "lastlogo1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "lastlogo2": {
+        "type": "Image",
+        "config": {
+          "label": "lastlogo2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "lastlogo4": {
+        "type": "Image",
+        "config": {
+          "label": "lastlogo4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "lastlogo3": {
+        "type": "Image",
+        "config": {
+          "label": "lastlogo3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "box1header": {
+        "type": "Text",
+        "config": {
+          "label": "box1header",
+          "placeholder": ""
+        }
+      },
+      "box1content": {
+        "type": "Text",
+        "config": {
+          "label": "box1content",
+          "placeholder": ""
+        }
+      },
+      "box2header": {
+        "type": "Text",
+        "config": {
+          "label": "box2header",
+          "placeholder": ""
+        }
+      },
+      "box2content": {
+        "type": "Text",
+        "config": {
+          "label": "box2content",
+          "placeholder": ""
+        }
+      },
+      "box3header": {
+        "type": "Text",
+        "config": {
+          "label": "box3header",
+          "placeholder": ""
+        }
+      },
+      "box3content": {
+        "type": "Text",
+        "config": {
+          "label": "box3content",
+          "placeholder": ""
+        }
+      },
+      "box4header": {
+        "type": "Text",
+        "config": {
+          "label": "box4header",
+          "placeholder": ""
+        }
+      },
+      "box4content": {
+        "type": "Text",
+        "config": {
+          "label": "box4content",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

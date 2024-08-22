@@ -1,15 +1,23 @@
 {
   "format": "page",
-  "id": "choisir",
-  "label": "Choisir",
+  "id": "ourcaremanagementsolutions",
+  "label": "ourcaremanagementsolutions",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "heading": {
+      "headerbackground": {
+        "type": "Image",
+        "config": {
+          "label": "headerbackground",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "headertext": {
         "type": "Text",
         "config": {
-          "label": "heading",
+          "label": "headertext",
           "placeholder": ""
         }
       },
@@ -20,69 +28,17 @@
           "placeholder": ""
         }
       },
-      "homelogo": {
-        "type": "Image",
-        "config": {
-          "label": "homelogo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "editlogo": {
-        "type": "Image",
-        "config": {
-          "label": "editlogo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "calenderlogo": {
-        "type": "Image",
-        "config": {
-          "label": "calenderlogo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "homeheader": {
+      "leftheader": {
         "type": "Text",
         "config": {
-          "label": "homeheader",
+          "label": "leftheader",
           "placeholder": ""
         }
       },
-      "homecontent": {
+      "leftcontent": {
         "type": "Text",
         "config": {
-          "label": "homecontent",
-          "placeholder": ""
-        }
-      },
-      "editlogoheader": {
-        "type": "Text",
-        "config": {
-          "label": "editlogoheader",
-          "placeholder": ""
-        }
-      },
-      "editlogocontent": {
-        "type": "Text",
-        "config": {
-          "label": "editlogocontent",
-          "placeholder": ""
-        }
-      },
-      "calenderheader": {
-        "type": "Text",
-        "config": {
-          "label": "calenderheader",
-          "placeholder": ""
-        }
-      },
-      "calendercontent": {
-        "type": "Text",
-        "config": {
-          "label": "calendercontent",
+          "label": "leftcontent",
           "placeholder": ""
         }
       },
@@ -93,12 +49,86 @@
           "placeholder": ""
         }
       },
-      "buttonicon": {
+      "rightimage": {
         "type": "Image",
         "config": {
-          "label": "buttonicon",
+          "label": "rightimage",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "buttonimage": {
+        "type": "Image",
+        "config": {
+          "label": "buttonimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "leafimageleft": {
+        "type": "Image",
+        "config": {
+          "label": "leafimageleft",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "leafimageright": {
+        "type": "Image",
+        "config": {
+          "label": "leafimageright",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "pieimage": {
+        "type": "Image",
+        "config": {
+          "label": "pieimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "pietext": {
+        "type": "Text",
+        "config": {
+          "label": "pietext",
+          "placeholder": ""
+        }
+      },
+      "rightleaftextheader": {
+        "type": "Text",
+        "config": {
+          "label": "rightleaftextheader",
+          "placeholder": ""
+        }
+      },
+      "rightleaftextcontent": {
+        "type": "Text",
+        "config": {
+          "label": "rightleaftextcontent",
+          "placeholder": ""
+        }
+      },
+      "rightleafdowntextheader": {
+        "type": "Text",
+        "config": {
+          "label": "rightleafdowntextheader",
+          "placeholder": ""
+        }
+      },
+      "rightleafdowntextcontent": {
+        "type": "Text",
+        "config": {
+          "label": "rightleafdowntextcontent",
+          "placeholder": ""
+        }
+      },
+      "pielefttext": {
+        "type": "Text",
+        "config": {
+          "label": "pielefttext",
+          "placeholder": ""
         }
       },
       "slices": {
