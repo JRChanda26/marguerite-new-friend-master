@@ -206,8 +206,8 @@ const Managementbycare: React.FC = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                  width: "100vw",
-                  height: "100vh",
+                   width: "100%",
+                   height: "auto",
                   paddingTop:'111.74px'
                   
                 }}

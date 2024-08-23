@@ -225,8 +225,8 @@ export default function Blogs() {
                   {settings?.data.post_image && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={settings.data.post_image.url || undefined}
-                      alt={settings.data.post_image.alt || "Image"}
+                      src={settings?.data.post_image.url || undefined}
+                      alt={settings?.data.post_image.alt || "Image"}
                       style={{
                         height: "300px",
                         width: "400px",

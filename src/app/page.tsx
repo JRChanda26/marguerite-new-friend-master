@@ -16,6 +16,7 @@ import Soinschezmarguerite from "./componet/Soinschezmarguerite";
 import Ourcaremanagementsolutions from "./componet/ourcaremanagementsolutions";
 import Blogs from "./componet/Blogs";
 import Managementbycare from "./componet/Managementbycare";
+import BlogsNews from "./componet/BlogsNews";
 
 
 export default function Home() {
@@ -36,6 +37,7 @@ export default function Home() {
       <Ourcaremanagementsolutions/>
       <Blogs/>
       <Managementbycare/>
+      <BlogsNews/>
     </div>
   );
 }
