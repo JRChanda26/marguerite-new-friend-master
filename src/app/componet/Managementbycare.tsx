@@ -6,7 +6,6 @@ import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 
 const Managementbycare: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
-  const [posts1, setPosts1] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -19,23 +18,19 @@ const Managementbycare: React.FC = () => {
   const backgroundImage = posts[0]?.data?.headerbackground?.url || "";
   const boxbackground = posts[0]?.data?.boxbackground?.url || "";
 
+  const [posts1, setPosts1] = useState<any[]>([]);
+
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "ourcaremanagementsolutions"
-      );
+      const response: any = await client.getAllByType("soinschezmarguerite");
       setPosts1(response);
     };
 
     fetchPosts();
   }, []);
-
+  const contentbackground = posts1[0]?.data?.contentbackground?.url || "";
   return (
-    <Box
-      sx={{
-       
-      }}
-    >
+    <Box sx={{}}>
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -190,7 +185,6 @@ const Managementbycare: React.FC = () => {
                 fontSize: "40px",
                 lineHeight: "50.2px",
                 paddingTop: "281.26px",
-               
               }}
             >
               {post.data.boxtopheader}
@@ -206,10 +200,9 @@ const Managementbycare: React.FC = () => {
                   backgroundSize: "cover",
                   backgroundPosition: "center",
                   backgroundRepeat: "no-repeat",
-                   width: "100%",
-                   height: "auto",
-                  paddingTop:'111.74px'
-                  
+                  width: "100%",
+                  height: "auto",
+                  paddingTop: "111.74px",
                 }}
               >
                 <Grid item lg={4.5}>
@@ -305,7 +298,6 @@ const Managementbycare: React.FC = () => {
                       padding: "85.33px 40.23px 85.33px 40.23px",
                       borderRadius: "19.5px",
                       boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                     
                     }}
                   >
                     <Typography
@@ -381,6 +373,140 @@ const Managementbycare: React.FC = () => {
                       {post.data.box4content}
                     </Typography>
                   </div>
+                </Grid>
+              </Grid>
+            </Grid>
+          </>
+        ))}
+      </div>
+
+      <div
+        style={{
+          backgroundImage: `url(${contentbackground})`,
+          backgroundSize: "cover",
+          width: "875.5px",
+          height: "428px",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          marginLeft: "345px",
+          marginTop: "209.87px",
+          flexDirection: "column",
+        }}
+      >
+        {posts1.map((post: any, postIndex: number) => (
+          <>
+            <div>
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#0A1411",
+                  fontWeight: 400,
+                  fontSize: "85px",
+                  lineHeight: "106.25px",
+                  textAlign: "center",
+                  // padding:'67px 67px 0px 67px',
+                  fontStyle: "italic",
+                }}
+              >
+                {post.data.comma}
+              </Typography>
+            </div>
+            <div>
+              <Typography
+                style={{
+                  fontFamily: "Jenna Sue, sans-serif",
+                  color: "#0A1411",
+                  fontWeight: 400,
+                  fontSize: "48px",
+                  lineHeight: "60px",
+                  textAlign: "center",
+                  padding: "0px 80px 0px 80px",
+                }}
+              >
+                {post.data.excellence}
+              </Typography>
+            </div>
+            <div>
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#0A1411",
+                  fontWeight: 400,
+                  fontSize: "25px",
+                  lineHeight: "37.5px",
+                  textAlign: "center",
+                }}
+              >
+                {post.data.boxcontent}
+              </Typography>
+            </div>
+          </>
+        ))}
+      </div>
+
+      <div style={{}}>
+        {posts.map((post: any, postIndex: number) => (
+          <>
+            <div
+              style={{
+              paddingLeft:'350px',
+               paddingRight:'200px',
+               display:'flex',
+               justifyContent:'center',
+               alignItems:'center'
+               
+              }}
+            >
+              <Typography
+                style={{
+                  fontFamily: "Mulish",
+                  color: "rgba(10, 20, 17, 1)",
+                  fontWeight: 700,
+                  fontSize: "64px",
+                  lineHeight: "80.32px",
+                }}
+              >
+                {post.data.doctorheader}
+              </Typography>
+            </div>
+            <Grid container spacing={1}>
+              <Grid
+                item
+                lg={12}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "center",
+                  gap: "80px",
+                  paddingTop:'91.29px'
+                }}
+              >
+                <Grid item lg={5}>
+                  <img
+                    src={post.data.doctorimage?.url || ""}
+                    alt={post.data.homeldoctorimageogo?.alt || "icon"}
+                    style={{
+                      height: "623px",
+                      width: "835px",
+                    }}
+                  />
+                </Grid>
+                <Grid item lg={5}>
+                  <Typography
+                    style={{
+                      fontFamily: "Mulish",
+                      color: "rgba(36, 83, 92, 1)",
+                      fontWeight: 400,
+                      fontSize: "40px",
+                      lineHeight: "50.2px",
+                      paddingTop: "54.5px",
+                      paddingLeft: "92.11px",
+                      paddingRight: "",
+                    }}
+                  >
+                    {post.data.doctorcontent}
+                  </Typography>
                 </Grid>
               </Grid>
             </Grid>
