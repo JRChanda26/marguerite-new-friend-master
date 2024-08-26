@@ -80,7 +80,6 @@ export default async function Questions() {
                 style={{
                   width: "50vw",
                   height: "60vh",
-                  
                 }}
               />
             )}
@@ -93,14 +92,30 @@ export default async function Questions() {
                   marginTop: "30px",
                   borderRadius: "10px",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                  padding:'10px 20px',
+                  padding: "10px 20px",
                 }}
               >
                 <AccordionSummary expandIcon={<AddIcon />}>
-                  <Typography>{faq.question}</Typography>
+                  <Typography
+                    style={{
+                      color: "#161C2D",
+                      fontSize: "18px",
+                      fontWeight: 700,
+                    }}
+                  >
+                    {faq.question}
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>{faq.answer}</Typography>
+                  <Typography
+                    style={{
+                      color: "#161C2DB8",
+                      fontSize: "16px",
+                      fontWeight: 400,
+                    }}
+                  >
+                    {faq.answer}
+                  </Typography>
                 </AccordionDetails>
               </Accordion>
             ))}

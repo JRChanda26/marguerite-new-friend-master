@@ -2,7 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
+  Grid,
+  Typography,
+} from "@mui/material";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const Managementbycare: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -29,6 +38,28 @@ const Managementbycare: React.FC = () => {
     fetchPosts();
   }, []);
   const contentbackground = posts1[0]?.data?.contentbackground?.url || "";
+
+  const videoUrl = posts[0]?.data.video?.url;
+
+  const [clicked, setClicked] = useState<number | null>(null);
+  const handleColor = (index: number) => {
+    setClicked(index);
+  };
+
+  const [clicked1, setClicked1] = useState<number | null>(null);
+  const handleColor1 = (index: number) => {
+    setClicked1(index);
+  };
+
+  const faqs = [
+    { question: posts[0]?.data.question1, answer: posts[0]?.data.answer1 },
+    { question: posts[0]?.data.question2, answer: posts[0]?.data.answer2 },
+    { question: posts[0]?.data.question3, answer: posts[0]?.data.answer3 },
+    { question: posts[0]?.data.question4, answer: posts[0]?.data.answer4 },
+    { question: posts[0]?.data.question5, answer: posts[0]?.data.answer5 },
+    { question: posts[0]?.data.question6, answer: posts[0]?.data.answer6 },
+  ];
+
   return (
     <Box sx={{}}>
       <div
@@ -380,6 +411,213 @@ const Managementbycare: React.FC = () => {
         ))}
       </div>
 
+      <Grid container>
+        <Grid
+          item
+          lg={12}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            textAlign: "center",
+            marginTop:'100px'
+          }}
+        >
+          <div
+            style={{
+              color: "#0A1411",
+              fontSize: "64px",
+              fontWeight: 700,
+            }}
+          >
+            {posts[0]?.data.heading}
+          </div>
+          <div
+            style={{
+              color: "#4D5053",
+              fontSize: "22px",
+              fontWeight: 400,
+              padding: "20px 200px 0px 200px",
+            }}
+          >
+            {posts[0]?.data.description}
+          </div>
+        </Grid>
+        <Grid item lg={12} style={{marginTop:'100px'}}>
+          <div
+            style={{
+              textAlign: "center",
+              color: "#292F36",
+              fontSize: "50px",
+              fontWeight: 400,
+            }}
+          >
+            {posts[0]?.data.title1}
+          </div>
+          <Grid
+            item
+            lg={12}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              marginTop:'50px'
+            }}
+          >
+            <Grid
+              item
+              lg={5}
+              style={{
+                marginTop: "50px",
+                height: "430px",
+                overflowY: "auto",
+                scrollbarWidth: "thin",
+              }}
+            >
+              {faqs.slice(0, 3).map((faq, index) => (
+                <div key={index}>
+                  <Accordion
+                    style={{
+                      backgroundColor: "transparent",
+                      boxShadow: "none",
+                    }}
+                  >
+                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                      <Typography
+                        onClick={() => handleColor(index)}
+                        style={{
+                          color: clicked === index ? "#3D8C6E" : "#292F36",
+                          fontSize: "25px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {faq.question}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography
+                        style={{
+                          color: "#4D5053",
+                          fontSize: "22px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {faq.answer}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <hr style={{ border: "1px solid #3D8C6E" }} />
+                </div>
+              ))}
+            </Grid>
+            <Grid item lg={5}>
+              {posts[0]?.data.image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={posts[0]?.data.image.url || undefined}
+                  alt={posts[0]?.data.image.alt || "Image"}
+                  width={500}
+                  height={500}
+                />
+              )}
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid
+          item
+          lg={12}
+          style={{
+            marginTop: "100px",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              color: "#292F36",
+              fontSize: "50px",
+              fontWeight: 400,
+            }}
+          >
+            {posts[0]?.data.title2}
+          </div>
+          <Grid
+            item
+            lg={12}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              marginTop: "50px",
+            }}
+          >
+            <Grid
+              item
+              lg={5}
+            >
+              {videoUrl ? (
+                <video
+                  width="500"
+                  height="500"
+                  controls
+                  style={{
+                    borderRadius: "12px",
+                    objectFit: "cover",
+                  }}
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              ) : (
+                <p>Video not available</p>
+              )}
+            </Grid>
+            <Grid
+              item
+              lg={5}
+              style={{
+                marginTop: "100px",
+                height: "350px",
+                overflowY: "auto",
+                scrollbarWidth: "thin",
+              }}
+            >
+              {faqs.slice(3, 6).map((faq, index) => (
+                <div key={index}>
+                  <Accordion
+                    style={{
+                      backgroundColor: "transparent",
+                      boxShadow: "none",
+                    }}
+                  >
+                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                      <Typography
+                        onClick={() => handleColor1(index)}
+                        style={{
+                          color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                          fontSize: "25px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {faq.question}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography
+                        style={{
+                          color: "#4D5053",
+                          fontSize: "22px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {faq.answer}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <hr style={{ border: "1px solid #3D8C6E" }} />
+                </div>
+              ))}
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
       <div
         style={{
           backgroundImage: `url(${contentbackground})`,
@@ -450,12 +688,11 @@ const Managementbycare: React.FC = () => {
           <>
             <div
               style={{
-              paddingLeft:'350px',
-               paddingRight:'200px',
-               display:'flex',
-               justifyContent:'center',
-               alignItems:'center'
-               
+                paddingLeft: "350px",
+                paddingRight: "200px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
               <Typography
@@ -479,7 +716,7 @@ const Managementbycare: React.FC = () => {
                   flexDirection: "row",
                   justifyContent: "center",
                   gap: "80px",
-                  paddingTop:'91.29px'
+                  paddingTop: "91.29px",
                 }}
               >
                 <Grid item lg={5}>
