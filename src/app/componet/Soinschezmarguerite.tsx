@@ -82,20 +82,24 @@ const Soinschezmarguerite: React.FC = () => {
                 ))}
             </div>
 
-
+            <Box sx={{
+                display:'flex',
+                justifyContent:'center',
+                alignItems:'center',
+                
+            }}>
 
             <div
                 style={{
                     backgroundImage: `url(${contentbackground})`,
                     backgroundSize: "cover",
                     width: "875.5px",
-                    height: "428px",
+                    height: "440px",      
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginLeft: '280px',
                     marginTop: '209.87px',
-                    flexDirection: 'column'
+                    flexDirection: 'column',
 
                 }}
             >
@@ -151,6 +155,7 @@ const Soinschezmarguerite: React.FC = () => {
                     </>
                 ))}
             </div>
+            </Box>
             <div style={{ paddingTop: '209.87px' }}>
                 {posts.map((post: any, postIndex: number) => (
                     <Grid container spacing={2} >
