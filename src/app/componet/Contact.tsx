@@ -9,13 +9,6 @@ import "leaflet/dist/leaflet.css";
 import { client } from "../../../prismic-configuration";
 
 export default function Contact() {
-  const [formValues, setFormValues] = useState({
-    email_text_field: "",
-    nom_text_field: "",
-    subject_text_field: "",
-    telephone_text_field: "",
-    bonjour_text_field: "",
-  });
 
   const [posts, setPosts] = useState<any[]>([]);
 
@@ -23,26 +16,9 @@ export default function Contact() {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType("contact");
       setPosts(response);
-      // Initialize form values from fetched data
-      if (response.length > 0) {
-        setFormValues({
-          email_text_field: response[0]?.data.email_text_field || "",
-          nom_text_field: response[0]?.data.nom_text_field || "",
-          subject_text_field: response[0]?.data.subject_text_field || "",
-          telephone_text_field: response[0]?.data.telephone_text_field || "",
-          bonjour_text_field: response[0]?.data.bonjour_text_field || "",
-        });
-      }
     };
     fetchPosts();
   }, []);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormValues({
-      ...formValues,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   const [pinIcon, setPinIcon] = useState(null);
 
@@ -80,6 +56,12 @@ export default function Contact() {
     //   color: "blue", // Text color
     // },
   };
+
+  const [nomInputValue, setNomInputValue] = useState("");
+  const [emailInputValue, setEmailInputValue] = useState("");
+  const [subjectInputValue, setSubjectInputValue] = useState("");
+  const [telephoneInputValue, setTelephoneInputValue] = useState("");
+  const [bonjourInputValue, setBonjourInputValue] = useState("");
 
   return (
     <div>
@@ -286,8 +268,10 @@ export default function Contact() {
             >
               <TextField
                 name="nom_text_field"
-                value={formValues.nom_text_field}
-                onChange={handleChange}
+                // value={formValues.nom_text_field}
+                // onChange={handleChange}
+                value={nomInputValue}
+                onChange={(e) => setNomInputValue(e.target.value)}
                 placeholder="Nom"
                 variant="standard"
                 type="text"
@@ -296,8 +280,10 @@ export default function Contact() {
               />
               <TextField
                 name="email_text_field"
-                value={formValues.email_text_field}
-                onChange={handleChange}
+                // value={formValues.email_text_field}
+                // onChange={handleChange}
+                value={emailInputValue}
+                onChange={(e) => setEmailInputValue(e.target.value)}
                 placeholder="Email"
                 variant="standard"
                 type="text"
@@ -315,8 +301,10 @@ export default function Contact() {
             >
               <TextField
                 name="subject_text_field"
-                value={formValues.subject_text_field}
-                onChange={handleChange}
+                // value={formValues.subject_text_field}
+                // onChange={handleChange}
+                value={subjectInputValue}
+                onChange={(e) => setSubjectInputValue(e.target.value)}
                 placeholder="Subject"
                 variant="standard"
                 type="text"
@@ -325,8 +313,10 @@ export default function Contact() {
               />
               <TextField
                 name="telephone_text_field"
-                value={formValues.telephone_text_field}
-                onChange={handleChange}
+                // value={formValues.telephone_text_field}
+                // onChange={handleChange}
+                value={telephoneInputValue}
+                onChange={(e) => setTelephoneInputValue(e.target.value)}
                 placeholder="Téléphone"
                 variant="standard"
                 type="text"
@@ -337,8 +327,10 @@ export default function Contact() {
             <div>
               <TextField
                 name="bonjour_text_field"
-                value={formValues.bonjour_text_field}
-                onChange={handleChange}
+                // value={formValues.bonjour_text_field}
+                // onChange={handleChange}
+                value={bonjourInputValue}
+                onChange={(e) => setBonjourInputValue(e.target.value)}
                 placeholder="Bonjour, je suis intéressé par.."
                 variant="standard"
                 type="text"

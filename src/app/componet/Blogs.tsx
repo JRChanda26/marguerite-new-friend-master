@@ -7,7 +7,6 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { PrismicRichText } from "@prismicio/react";
 
 export default function Blogs() {
-
   const [settings, setSettings] = useState<any>(null);
   const [liberez, setLiberez] = useState<any>(null);
 
@@ -16,15 +15,14 @@ export default function Blogs() {
       const client = createClient();
       const [blogsData, liberezData] = await Promise.all([
         client.getSingle("blogs"),
-        client.getSingle("liberez")
+        client.getSingle("liberez"),
       ]);
       setSettings(blogsData);
       setLiberez(liberezData);
     }
-    fetchData().catch((error) => console.error('Error fetching data:', error));
+    fetchData().catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  
   const [page, setPage] = useState(0);
   const fixedRowsPerPage = 1;
 
@@ -132,6 +130,8 @@ export default function Blogs() {
     fontWeight: 400,
     lineHeight: "37.63px",
   };
+
+  const [inputValue, setInputValue] = useState("");
 
   return (
     <div>
@@ -604,7 +604,9 @@ export default function Blogs() {
           <div style={rightSectionStyle}>
             {" "}
             <TextField
-              value={liberez?.data.text_field} // Pre-populate with existing value or leave empty
+              // value={liberez?.data.text_field}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
               placeholder="Entrez votre adresse email"
               variant="outlined"
               sx={{

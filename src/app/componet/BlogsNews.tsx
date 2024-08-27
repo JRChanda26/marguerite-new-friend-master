@@ -134,6 +134,10 @@ export default function BlogsNews() {
     fontWeight: 400,
     lineHeight: "37.63px",
   };
+
+  const [inputValue, setInputValue] = useState("");
+  const [searchInputValue, setSearchInputValue] = useState("");
+
   return (
     <div>
       <div
@@ -223,7 +227,9 @@ export default function BlogsNews() {
           <Grid item lg={4}>
             <div>
               <TextField
-                value={blogs?.data.text_field} // Pre-populate with existing value or leave empty
+                // value={blogs?.data.text_field}
+                value={searchInputValue}
+                onChange={(e) => setSearchInputValue(e.target.value)}
                 placeholder="Search"
                 variant="outlined"
                 sx={{
@@ -276,7 +282,7 @@ export default function BlogsNews() {
                 background: "#BBDDD91A",
                 borderRadius: "20px",
                 padding: "27px 32px",
-                marginTop:'50px'
+                marginTop: "50px",
               }}
             >
               <div style={heading}>{blogs?.data.categories}</div>
@@ -297,8 +303,10 @@ export default function BlogsNews() {
               </div>
             </div>
             <div>
-              <div style={{...heading, marginTop:'50px'}}>{blogs?.data.tags}</div>
-              <div style={{marginTop: "20px"}}>
+              <div style={{ ...heading, marginTop: "50px" }}>
+                {blogs?.data.tags}
+              </div>
+              <div style={{ marginTop: "20px" }}>
                 {tabs.map((label: string, index: number) => (
                   <Button
                     key={index}
@@ -413,7 +421,9 @@ export default function BlogsNews() {
           <div style={rightSectionStyle}>
             {" "}
             <TextField
-              value={liberez?.data.text_field} // Pre-populate with existing value or leave empty
+              // value={liberez?.data.text_field}
+              value={inputValue}
+              onChange={(e) => setInputValue(e.target.value)}
               placeholder="Entrez votre adresse email"
               variant="outlined"
               sx={{
