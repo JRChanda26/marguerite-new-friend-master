@@ -243,7 +243,8 @@ const Managementbycare: React.FC = () => {
                       height: "auto",
                       background:
                         "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-                      padding: "85.33px 40.23px 85.33px 40.23px",
+                      // padding: "85.33px 40.23px 85.33px 40.23px",
+                      paddingBottom:'85.33px',
                       borderRadius: "19.5px",
                       boxShadow: "0px 32.91px 29.26px 0px #28626D33",
                     }}
@@ -284,7 +285,8 @@ const Managementbycare: React.FC = () => {
                       height: "auto",
                       background:
                         "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-                      padding: "85.33px 40.23px 85.33px 40.23px",
+                      // padding: "85.33px 40.23px 85.33px 40.23px",
+                      paddingBottom:'85.33px',
                       borderRadius: "19.5px",
                       boxShadow: "0px 32.91px 29.26px 0px #28626D33",
                       marginTop: "1.34px",
@@ -326,7 +328,8 @@ const Managementbycare: React.FC = () => {
                       height: "auto",
                       background:
                         "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-                      padding: "85.33px 40.23px 85.33px 40.23px",
+                      // padding: "85.33px 40.23px 85.33px 40.23px",
+                      paddingBottom:'85.33px',
                       borderRadius: "19.5px",
                       boxShadow: "0px 32.91px 29.26px 0px #28626D33",
                     }}
@@ -368,7 +371,8 @@ const Managementbycare: React.FC = () => {
                       background:
                         "linear-gradient(178.46deg, #FFFFFF 8.34%, rgba(255, 167, 123, 0.6) 257.47%)",
 
-                      padding: "85.33px 40.23px 85.33px 40.23px",
+                      // padding: "85.33px 40.23px 85.33px 40.23px",
+                      paddingBottom:'85.33px',
                       borderRadius: "19.5px",
                       boxShadow: "0px 32.91px 29.26px 0px #28626D33",
                       marginTop: "17.61px",
@@ -715,7 +719,7 @@ const Managementbycare: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  gap: "80px",
+                  gap: "180px",
                   paddingTop: "91.29px",
                 }}
               >

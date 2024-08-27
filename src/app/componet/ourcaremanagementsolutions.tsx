@@ -266,7 +266,7 @@ const Ourcaremanagementsolutions: React.FC = () => {
               <Grid
                 item
                 lg={12}
-                style={{ display: "flex", flexDirection: "row", gap: "20px" }}
+                style={{ display: "flex", flexDirection: "row", gap: "45px" }}
               >
                 <Grid item lg={4.5} style={{}}>
                   <img

@@ -173,7 +173,7 @@ const Pricing: React.FC = () => {
                                             display: "flex",
                                             flexDirection: "row",
                                             justifyContent: "center",
-                                            padding: "33.99px 62.74px 33.99px 62.74px",
+                                            padding: "33.99px 0px 33.99px 0px",
                                             borderRadius: "23.53px",
                                             background: "#EA875C",
                                         }}
@@ -302,13 +302,13 @@ const Pricing: React.FC = () => {
                                     {post.data.moderatecontent}
                                 </Typography>
 
-                                <div style={{ padding: "33.99px 62.74px 33.99px 62.74px" }}>
+                                <div style={{ padding: "0px 62.74px 33.99px 62.74px" }}>
                                     <div
                                         style={{
                                             display: "flex",
                                             flexDirection: "row",
                                             justifyContent: "center",
-                                            padding: "33.99px 62.74px 33.99px 62.74px",
+                                            padding: "33.99px 0px 33.99px 0px",
                                             borderRadius: "23.53px",
                                             background: "#292F36",
                                         }}
@@ -422,7 +422,7 @@ const Pricing: React.FC = () => {
                                             display: "flex",
                                             flexDirection: "row",
                                             justifyContent: "center",
-                                            padding: "33.99px 62.74px 33.99px 62.74px",
+                                            padding: "33.99px 0px 33.99px 0px",
                                             borderRadius: "23.53px",
                                             background: "#EA875C",
                                         }}
