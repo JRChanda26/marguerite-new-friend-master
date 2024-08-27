@@ -88,7 +88,8 @@ const Soinschezmarguerite: React.FC = () => {
                 alignItems:'center',
                 
             }}>
-
+                
+{/*  */}
             <div
                 style={{
                     backgroundImage: `url(${contentbackground})`,
