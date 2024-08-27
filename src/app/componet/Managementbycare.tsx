@@ -227,6 +227,7 @@ const Managementbycare: React.FC = () => {
                 style={{
                   display: "flex",
                   justifyContent: "center",
+                  alignItems:'center',
                   backgroundImage: `url(${boxbackground})`,
                   backgroundSize: "cover",
                   backgroundPosition: "center",
@@ -622,16 +623,23 @@ const Managementbycare: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
+      
+      <Box sx={{
+                display:'flex',
+                justifyContent:'center',
+                alignItems:'center',
+                
+            }}>
+
       <div
         style={{
           backgroundImage: `url(${contentbackground})`,
           backgroundSize: "cover",
           width: "875.5px",
-          height: "428px",
+          height: "440px",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginLeft: "345px",
           marginTop: "209.87px",
           flexDirection: "column",
         }}
@@ -686,7 +694,7 @@ const Managementbycare: React.FC = () => {
           </>
         ))}
       </div>
-
+        </Box>
       <div style={{}}>
         {posts.map((post: any, postIndex: number) => (
           <>
