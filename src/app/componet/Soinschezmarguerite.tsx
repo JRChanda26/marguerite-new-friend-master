@@ -93,7 +93,7 @@ const Soinschezmarguerite: React.FC = () => {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                    marginLeft: '345px',
+                    marginLeft: '280px',
                     marginTop: '209.87px',
                     flexDirection: 'column'
 
@@ -353,24 +353,29 @@ const Soinschezmarguerite: React.FC = () => {
                                 lineHeight: '33px',
                                 textAlign: 'center',
                                 color: '#4D5053',
-                                paddingLeft: '150px',
-                                paddingRight: '150px'
+                                paddingLeft: '120px',
+                                paddingRight: '120px'
                             }}>
                                 {post.data.peoplecontent}
                             </Typography>
                         </div>
                         <Grid container spacing={1}>
                             <Grid item lg={12} style={{
-                                display: 'flex', padding: '40px 200px 114.65px 200px'
-                            }}>
-                                <Grid item lg={3}>
+                                display: 'flex', padding: '',
+                                justifyContent:'center',
+                                gap:'60px',
+                                paddingBottom:'121.95px',
+                                paddingTop:'40px'
+                            }}
+                            container spacing={1}>
+                                <Grid item lg={2}>
                                     <img
                                         src={post.data.person1?.url || ""}
                                         alt={post.data.person1?.alt || "icon"}
                                         style={{ width: "283.55px", height: "433px" }}
                                     />
                                 </Grid>
-                                <Grid item lg={3}>
+                                <Grid item lg={2}>
                                     <img
                                         src={post.data.person2?.url || ""}
                                         alt={post.data.person2?.alt || "icon"}
@@ -378,7 +383,7 @@ const Soinschezmarguerite: React.FC = () => {
                                     />
 
                                 </Grid>
-                                <Grid item lg={3} >
+                                <Grid item lg={2} >
                                     <div style={{ background: '#FFFFFF', height: '433px', width: '283.55px', borderRadius: '30px' }}>
                                         <div>
                                             <Typography style={{
@@ -458,7 +463,7 @@ const Soinschezmarguerite: React.FC = () => {
                                     </div>
 
                                 </Grid>
-                                <Grid item lg={3}>
+                                <Grid item lg={2}>
                                     <img
                                         src={post.data.person3?.url || ""}
                                         alt={post.data.person3?.alt || "icon"}

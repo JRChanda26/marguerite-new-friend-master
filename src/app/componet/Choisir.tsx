@@ -67,7 +67,7 @@ const Choisir: React.FC = () => {
             </div>
 
 
-            <Grid container spacing={3} sx={{ display: 'flex', justifyContent: 'center', gap: '51.85px', paddingTop: '69.53px', paddingBottom: '113.83px' }}>
+            <Grid container spacing={1} sx={{ display: 'flex', justifyContent: 'center', gap: '10px', paddingTop: '69.53px', paddingBottom: '113.83px' }}>
                 <div style={{ height: '476px', width: '402px', borderRadius: '16px', background: 'linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)', marginTop: '40px',paddingBottom:'34px' }}>
                     {posts.map((post: any, postIndex: number) => (
                         <>
