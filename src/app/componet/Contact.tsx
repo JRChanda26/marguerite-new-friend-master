@@ -4,9 +4,15 @@ import { Grid, TextField, Typography } from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
 import React, { useEffect, useState } from "react";
 import EastIcon from "@mui/icons-material/East";
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import "leaflet/dist/leaflet.css";
 import { client } from "../../../prismic-configuration";
+// import { MapContainer, Marker, TileLayer } from "react-leaflet";
+import dynamic from 'next/dynamic';
+import "leaflet/dist/leaflet.css";
+
+// Dynamically import Leaflet components
+const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
 
 export default function Contact() {
 
@@ -368,6 +374,7 @@ export default function Contact() {
             display: "flex",
             justifyContent: "center",
             padding: "100px",
+            position:'sticky'
           }}
         >
           {latitude && longitude ? (
