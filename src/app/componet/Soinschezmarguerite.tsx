@@ -232,7 +232,7 @@ const Soinschezmarguerite: React.FC = () => {
                     fontWeight: 400,
                     lineHeight: "33px",
                     textAlign: "center",
-                    padding: "20px",
+                    padding: "20px 0px 0px 0px",
                     color: "#4D5053",
                   }}
                 >
@@ -291,7 +291,8 @@ const Soinschezmarguerite: React.FC = () => {
                     fontWeight: 400,
                     lineHeight: "33px",
                     textAlign: "center",
-                    padding: "20px",
+                    // padding: "20px",
+                    padding: "20px 0px 0px 0px",
                     color: "#4D5053",
                   }}
                 >
@@ -330,7 +331,8 @@ const Soinschezmarguerite: React.FC = () => {
                   />
                 </div>
               </Grid>
-              <Grid item lg={3}>
+              <Grid item lg={3} >
+                <div style={{paddingTop:'10px'}}>
                 <Typography
                   style={{
                     fontFamily: 'Mulish, sans-serif',
@@ -350,9 +352,8 @@ const Soinschezmarguerite: React.FC = () => {
                     fontWeight: 400,
                     lineHeight: "33px",
                     textAlign: "center",
-                    paddingLeft: "150px",
-                    paddingRight: "150px",
-                    paddingTop: "20px",
+                    // padding:'20px',
+                    padding: "20px 0px 0px 0px",
                     color: "#4D5053",
                   }}
                 >
@@ -389,6 +390,7 @@ const Soinschezmarguerite: React.FC = () => {
                       paddingLeft: "26.02px",
                     }}
                   />
+                </div>
                 </div>
               </Grid>
             </Grid>
