@@ -31,3 +31,13 @@ body {
     text-wrap: balance;
   }
 } */
+@font-face {
+  font-family: 'Jenna Sue';
+  src: url('/fonts/JennaSue.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Jenna Sue', sans-serif;
+}
