@@ -138,7 +138,7 @@ const Managementbycare: React.FC = () => {
                     style={{
                       paddingLeft: "40px",
                       paddingRight: "40px",
-                      fontFamily: "Mulish",
+                      fontFamily: 'Mulish, sans-serif',
                       fontWeight: 700,
                       fontSize: "48px",
                       lineHeight: "60.24px",
@@ -152,7 +152,7 @@ const Managementbycare: React.FC = () => {
                   <Typography
                     style={{
                       padding: "0px",
-                      fontFamily: "Mulish",
+                      fontFamily: 'Mulish, sans-serif',
                       fontWeight: 400,
                       fontSize: "24px",
                       lineHeight: "30.12px",
@@ -211,7 +211,7 @@ const Managementbycare: React.FC = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 color: "#24535C",
-                fontFamily: "Mulish",
+                fontFamily: 'Mulish, sans-serif',
                 fontWeight: 600,
                 fontSize: "40px",
                 lineHeight: "50.2px",
@@ -252,7 +252,7 @@ const Managementbycare: React.FC = () => {
                   >
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontSize: " 29.26px",
                         fontWeight: 600,
                         lineHeight: "36.72px",
@@ -266,7 +266,7 @@ const Managementbycare: React.FC = () => {
                     </Typography>
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontStyle: "italic",
                         fontSize: " 19.5px",
                         fontWeight: 400,
@@ -295,7 +295,7 @@ const Managementbycare: React.FC = () => {
                   >
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontSize: " 29.26px",
                         fontWeight: 600,
                         lineHeight: "36.72px",
@@ -307,7 +307,7 @@ const Managementbycare: React.FC = () => {
                     </Typography>
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontStyle: "italic",
                         fontSize: " 19.5px",
                         fontWeight: 400,
@@ -337,7 +337,7 @@ const Managementbycare: React.FC = () => {
                   >
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontSize: " 29.26px",
                         fontWeight: 600,
                         lineHeight: "36.72px",
@@ -351,7 +351,7 @@ const Managementbycare: React.FC = () => {
                     </Typography>
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontStyle: "italic",
                         fontSize: " 19.5px",
                         fontWeight: 400,
@@ -381,7 +381,7 @@ const Managementbycare: React.FC = () => {
                   >
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontSize: " 29.26px",
                         fontWeight: 600,
                         lineHeight: "36.72px",
@@ -395,7 +395,7 @@ const Managementbycare: React.FC = () => {
                     </Typography>
                     <Typography
                       style={{
-                        fontFamily: "Mulish",
+                        fontFamily: 'Mulish, sans-serif',
                         fontStyle: "italic",
                         fontSize: " 19.5px",
                         fontWeight: 400,
@@ -709,7 +709,7 @@ const Managementbycare: React.FC = () => {
             >
               <Typography
                 style={{
-                  fontFamily: "Mulish",
+                  fontFamily: 'Mulish, sans-serif',
                   color: "rgba(10, 20, 17, 1)",
                   fontWeight: 700,
                   fontSize: "64px",
@@ -744,7 +744,7 @@ const Managementbycare: React.FC = () => {
                 <Grid item lg={5}>
                   <Typography
                     style={{
-                      fontFamily: "Mulish",
+                      fontFamily: 'Mulish, sans-serif',
                       color: "rgba(36, 83, 92, 1)",
                       fontWeight: 400,
                       fontSize: "40px",
