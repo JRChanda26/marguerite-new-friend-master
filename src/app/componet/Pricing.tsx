@@ -203,7 +203,7 @@ const Pricing: React.FC = () => {
                     <Grid item lg={3}
                         style={{
                             width: "auto",
-                            height: "950px",
+                            height: "auto",
                             borderRadius: "16px",
                             background: "#BBDDD959",
                             paddingBottom: "34px",
@@ -302,7 +302,9 @@ const Pricing: React.FC = () => {
                                     {post.data.moderatecontent}
                                 </Typography>
 
-                                <div style={{ padding: "0px 62.74px 33.99px 62.74px" }}>
+                                <div style={{ 
+                                    padding: "0px 62.74px 33.99px 62.74px"
+                                     }}>
                                     <div
                                         style={{
                                             display: "flex",
