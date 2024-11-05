@@ -30,7 +30,8 @@ const Expertsinsocialintervention: React.FC = () => {
             boxShadow: '10px 10px 20px rgba(0, 0, 0, 0.2)',
             background: '#FFF',
             // background:'rgba(255, 255, 255, 0.6)',
-            padding: '26.98px 0px 20px 69.25px',
+            // padding: '21.97px 0px 21.94px 69.25px',
+            padding: '5px',
             left: 60,
             right: 0,
             // width:'100%',
@@ -51,7 +52,7 @@ const Expertsinsocialintervention: React.FC = () => {
               <Typography style={{ color: '#24535C', fontSize: '26.49px', fontWeight: 400, paddingTop:'13px'}}>
                 {post.data.title3}
               </Typography>
-              <img src={post.data.contact.url || ''} alt={post.data.contact.alt || 'icon'} style={{height:'66.7px',width:'66.7px'}} />
+              <img src={post.data.contact.url || ''} alt={post.data.contact.alt || 'icon'} style={{height:'50px',width:'50px',paddingTop:'10px'}} />
             </Grid>
           </Grid>
         ))}
