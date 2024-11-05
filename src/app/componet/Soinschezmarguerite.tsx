@@ -443,28 +443,29 @@ const Soinschezmarguerite: React.FC = () => {
                   display: "flex",
                   padding: "",
                   justifyContent: "center",
-                  gap: "60px",
+                //   gap: "60px",
                   paddingBottom: "121.95px",
                   paddingTop: "40px",
+                  paddingLeft:'35px'
                 }}
                 container
                 spacing={1}
               >
-                <Grid item lg={2}>
+                <Grid item lg={3}>
                   <img
                     src={post.data.person1?.url || ""}
                     alt={post.data.person1?.alt || "icon"}
                     style={{ width: "283.55px", height: "433px" }}
                   />
                 </Grid>
-                <Grid item lg={2}>
+                <Grid item lg={3}>
                   <img
                     src={post.data.person2?.url || ""}
                     alt={post.data.person2?.alt || "icon"}
                     style={{ width: "283.55px", height: "433px" }}
                   />
                 </Grid>
-                <Grid item lg={2}>
+                <Grid item lg={3}>
                   <div
                     style={{
                       background: "#FFFFFF",
@@ -572,7 +573,7 @@ const Soinschezmarguerite: React.FC = () => {
                     </div>
                   </div>
                 </Grid>
-                <Grid item lg={2}>
+                <Grid item lg={3}>
                   <img
                     src={post.data.person3?.url || ""}
                     alt={post.data.person3?.alt || "icon"}
