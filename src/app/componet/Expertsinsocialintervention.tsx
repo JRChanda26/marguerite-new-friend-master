@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { client } from '../../../prismic-configuration';
 import { Box, Button, Grid, Typography } from '@mui/material';
+import Link from 'next/link';
 
 
 const Expertsinsocialintervention: React.FC = () => {
@@ -77,10 +78,12 @@ const Expertsinsocialintervention: React.FC = () => {
                 <div style={{paddingTop:'68.14px',paddingBottom:'159.85px'}}>
                 {posts.map((post: any) => (
                   // eslint-disable-next-line react/jsx-key
+                  <Link href="/Footer" style={{textDecoration:'none'}}>
                   <Button style={{display:'flex',flexDirection:'row',background:'#24535C',padding:'16px 24px 16px 24px',gap:'18px',borderRadius:'82px'}}>
                     <Typography style={{ fontWeight: 400, fontSize: '15.2px', lineHeight: '18.24px', color: '#FFFFFF' }}>{post.data.buttontext}</Typography>
                     <img src={post.data.buttonimage.url || ''} alt={post.data.buttonimage} style={{}} />
                   </Button>
+                  </Link>
                 ))
                 }
               </div>

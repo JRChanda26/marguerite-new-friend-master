@@ -442,12 +442,21 @@ const Ourcaremanagementsolutions: React.FC = () => {
               </Typography>
             </div>
             <div
+              // style={{
+              //   backgroundImage: `url(${lastbackground})`,
+              //   backgroundSize:'cover',
+              //   height: "100%",
+              //   width: "100%",
+              // }}
               style={{
                 backgroundImage: `url(${lastbackground})`,
-                backgroundSize:'cover',
-                height: "100%",
-                width: "100%",
+                backgroundSize: 'cover',    // Ensures the image covers the entire element
+                backgroundPosition: 'center', // Centers the image
+                backgroundRepeat: 'no-repeat', // Prevents the image from repeating
+                height: 'auto',             // Ensures the div takes up the full viewport height
+                width: 'auto',               // Ensures the div takes up the full width
               }}
+            
             >
               <Grid container spacing={1}>
                 <Grid
