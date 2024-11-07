@@ -1,6 +1,6 @@
 "use client"
 import { createClient } from "@/prismicio";
-import { Grid, TextField } from "@mui/material";
+import { Button, Grid, TextField } from "@mui/material";
 import { PrismicRichText } from "@prismicio/react";
 import React, { useState } from "react";
 import { client } from "../../../prismic-configuration";
@@ -12,7 +12,7 @@ export default function Liberez() {
   const [settings, setSettings] = useState('')
   useState(()=>{
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("liberez");
+      const response: any = await client.getAllByType("liberez" as any);
       setSettings(response);
     };
     fetchPosts();
@@ -46,6 +46,10 @@ export default function Liberez() {
     width: "100%",
     backgroundColor: "#FFFFFF",
     borderRadius: "50px",
+    display:'flex',
+    flexDirection:'row',
+    justifyContent:'space-between',
+    padding:'5px'
   };
 
   const titleStyle: React.CSSProperties = {
@@ -53,6 +57,7 @@ export default function Liberez() {
     fontSize: "41.81px",
     fontWeight: 700,
     lineHeight: "52.47px",
+    fontFamily:'Mulish'
   };
 
   const descriptionStyle: React.CSSProperties = {
@@ -60,6 +65,7 @@ export default function Liberez() {
     fontSize: "23.52px",
     fontWeight: 400,
     lineHeight: "37.63px",
+    fontFamily:'Mulish'
   };
 
   const [inputValue, setInputValue] = useState("");
@@ -79,6 +85,7 @@ export default function Liberez() {
         </Grid>
         <div style={rightSectionStyle}>
           {" "}
+          <div style={inputStyle}>
           <TextField
             // value={settings?.data.text_field}
             value={inputValue}
@@ -86,7 +93,7 @@ export default function Liberez() {
             placeholder="Entrez votre adresse email"
             variant="outlined"
             sx={{
-              ...inputStyle,
+              // ...inputStyle,
               "& .MuiOutlinedInput-root": {
                 "& fieldset": {
                   borderColor: "transparent", // Initial border color
@@ -100,6 +107,18 @@ export default function Liberez() {
               },
             }}
           />
+          <Button style={{
+            background:'#24535C',
+            borderRadius:'25px',
+            textTransform:'none',
+            color:'#FFFFFF',
+            fontFamily:'Mulish',
+            fontSize:'19.25px',
+            fontWeight:400,
+          }}>
+          {settings[0]?.data.button_text}
+          </Button>
+          </div>
         </div>
       </div>
     </div>

@@ -13,7 +13,9 @@ export default async function NotreProcessus() {
 
   const title: React.CSSProperties = {
     color: "#1E1E1E",
-    fontSize: "42PX",
+    fontSize: "42px",
+    lineHeight:'49.22px',
+    fontFamily:'Mulish'
   };
   
   const subTitle: React.CSSProperties = {
@@ -21,23 +23,29 @@ export default async function NotreProcessus() {
     textTransform: "uppercase",
     fontSize: "18px",
     fontWeight: 600,
+    letterSpacing:'5px',
+    lineHeight:'20.59px',
+    fontFamily:'Mulish'
   };
 
   const description: React.CSSProperties = {
-    color: "#565656",
+    color: "#1E1E1E",
     fontSize: "18px",
     fontWeight: 400,
-    fontStyle: "italic",
+    lineHeight:'33.3px',
+    fontFamily:'Mulish',
+    fontStyle:'italic'
   };
 
   const textLink: React.CSSProperties = {
     color: "#24535C",
     fontSize: "14px",
     fontWeight: 400,
-    fontStyle: "italic",
     textDecoration: "none",
     display:'flex',
-    flexDirection:'row'
+    flexDirection:'row',
+    fontFamily:'Mulish',
+    fontStyle:'italic'
   };
 
   return (
@@ -52,22 +60,25 @@ export default async function NotreProcessus() {
             textAlign: "center",
           }}
         >
-          <h1
+          <div
             style={{
               fontSize: "64px",
               fontWeight: 700,
               lineHeight: "80.32px",
               color: "#0A1411",
+              fontFamily:'Mulish'
             }}
           >
             <PrismicRichText field={settings.data.title} />
-          </h1>
+          </div>
           <div
             style={{
               fontSize: "24px",
               fontWeight: 400,
               lineHeight: "38.04px",
               color: "#565656",
+              padding:'0px 100px',
+              fontFamily:'Mulish'
             }}
           >
             <PrismicRichText field={settings.data.description} />
@@ -79,7 +90,8 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            marginTop:'50px',
+            gap:'50px',
+            padding:'50px 50px 0px 80px'
           }}
         >
           <div>
@@ -89,7 +101,8 @@ export default async function NotreProcessus() {
                 src={settings.data.image1.url || undefined}
                 alt={settings.data.image1.alt || "Image"}
                 style={{
-                  height:'60vh',
+                  width: '100%',
+                  height: 'auto',
                 }}
               />
             )}
@@ -98,9 +111,10 @@ export default async function NotreProcessus() {
             style={{
               display: "flex",
               flexDirection: "column",
+              paddingTop:'30px'
             }}
           >
-            <p style={subTitle}>{settings.data.sub_title1}</p>
+            <div style={subTitle}>{settings.data.sub_title1}</div>
             <div
               style={title}
             >
@@ -127,17 +141,18 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            marginTop:'50px',
+            gap:'50px',
+            padding:'50px 50px 0px 80px'
           }}
         >
           <div
             style={{
               display: "flex",
               flexDirection: "column",
-              paddingLeft:'30px'
+              paddingTop:'30px'
             }}
           >
-            <p style={subTitle}>{settings.data.sub_title2}</p>
+            <div style={subTitle}>{settings.data.sub_title2}</div>
             <div
               style={title}
             >
@@ -164,7 +179,8 @@ export default async function NotreProcessus() {
                 src={settings.data.image2.url || undefined}
                 alt={settings.data.image2.alt || "Image"}
                 style={{
-                  height:'60vh',
+                  width: '100%',
+                  height: 'auto',
                 }}
               />
             )}
@@ -176,7 +192,8 @@ export default async function NotreProcessus() {
           style={{
             display: "flex",
             flexDirection: "row",
-            marginTop:'50px',
+            gap:'50px',
+            padding:'50px 50px 0px 50px'
           }}
         >
           <div
@@ -187,7 +204,8 @@ export default async function NotreProcessus() {
                 src={settings.data.image3.url || undefined}
                 alt={settings.data.image3.alt || "Image"}
                 style={{
-                  height:'60vh',
+                  width: '100%',
+                  height: 'auto',
                 }}
               />
             )}
@@ -196,9 +214,10 @@ export default async function NotreProcessus() {
             style={{
               display: "flex",
               flexDirection: "column",
+              paddingTop:'30px'
             }}
           >
-            <p style={subTitle}>{settings.data.sub_title3}</p>
+            <div style={subTitle}>{settings.data.sub_title3}</div>
             <div
               style={title}
             >
