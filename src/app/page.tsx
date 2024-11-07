@@ -23,21 +23,23 @@ export default function Home() {
   return (
     <div>
       <Headerwithfirstpage />
-      <SoinChez/>
+      
       <Choisir/>
       <NotreProcessus />
+      <SoinChez/>
       <Motsdenotreclient/>
       <Questions />
       <NosActes/>
       <Liberez/>
-      <Pricing/>
-      <Soinschezmarguerite/>
       <Footer/>
+
+      {/* <Pricing/>
+      <Soinschezmarguerite/>
       <Contact/>
       <Ourcaremanagementsolutions/>
       <Blogs/>
       <Managementbycare/>
-      <BlogsNews/>
+      <BlogsNews/> */}
     </div>
   );
 }
