@@ -346,7 +346,7 @@ export default function Blogs() {
                 margin: "50px",
               }}
             >
-              [{articlePage * fixedRowsPerArticlePage + index + 1}]
+              {/* [{articlePage * fixedRowsPerArticlePage + index + 1}] */}
               <Grid
                 item
                 lg={3.5}
@@ -368,7 +368,7 @@ export default function Blogs() {
                 )}
                 <p style={title}>{settings?.data.sub_title2}</p>
                 <p style={description}>{settings?.data.description2}</p>
-                <div
+                {/* <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -391,7 +391,7 @@ export default function Blogs() {
                     <p style={profileStyle}>{settings?.data.name1}</p>
                     <p style={dateStyle}>{settings?.data.date1}</p>
                   </div>
-                </div>
+                </div> */}
               </Grid>
               <Grid
                 item
@@ -414,7 +414,7 @@ export default function Blogs() {
                 )}
                 <p style={title}>{settings?.data.sub_title3}</p>
                 <p style={description}>{settings?.data.description3}</p>
-                <div
+                {/* <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -437,7 +437,7 @@ export default function Blogs() {
                     <p style={profileStyle}>{settings?.data.name2}</p>
                     <p style={dateStyle}>{settings?.data.date2}</p>
                   </div>
-                </div>
+                </div> */}
               </Grid>
               <Grid
                 item
@@ -460,7 +460,7 @@ export default function Blogs() {
                 )}
                 <p style={title}>{settings?.data.sub_title4}</p>
                 <p style={description}>{settings?.data.description4}</p>
-                <div
+                {/* <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -483,7 +483,7 @@ export default function Blogs() {
                     <p style={profileStyle}>{settings?.data.name3}</p>
                     <p style={dateStyle}>{settings?.data.date3}</p>
                   </div>
-                </div>
+                </div> */}
               </Grid>
             </Grid>
           ))}
