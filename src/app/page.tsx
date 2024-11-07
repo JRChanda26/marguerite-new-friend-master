@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Expertsinsocialintervention from "./componet/Expertsinsocialintervention";
+import Headerwithfirstpage from "./componet/Headerwithfirstpage";
 import NotreProcessus from "./componet/NotreProcessus";
 import Questions from "./componet/Questions";
 import Footer from "./componet/Footer";
@@ -22,7 +22,7 @@ import BlogsNews from "./componet/BlogsNews";
 export default function Home() {
   return (
     <div>
-      <Expertsinsocialintervention />
+      <Headerwithfirstpage />
       <SoinChez/>
       <Choisir/>
       <NotreProcessus />

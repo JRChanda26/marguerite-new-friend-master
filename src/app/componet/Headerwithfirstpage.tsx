@@ -17,6 +17,16 @@ const Headerwithfirstpage: React.FC = () => {
     fetchPosts();
   }, []);
 
+  const [isVisible, setIsVisible] = useState(false);
+
+useEffect(() => {
+  // Trigger the fade-in effect once the component mounts
+  setTimeout(() => {
+    setIsVisible(true);
+  }, 500); // Delay before the fade-in starts (adjust as needed)
+}, []);
+
+
   return (
     <Box>
       <div>
@@ -42,19 +52,24 @@ const Headerwithfirstpage: React.FC = () => {
               // width: "calc(100% - 123px)",
               borderRadius: "16px",
               // justifyContent: "space-between",
-              alignItems: "center",
               boxSizing: "border-box",
-              border:'2.32px solid rgba(255, 255, 255, 0.1)'
+              border:'2.32px solid rgba(255, 255, 255, 0.1)',
+              justifyContent:'space-evenly',
             }}
           >
             <Grid item lg={12} sx={{
                 display: "flex",
                 flexDirection: "row",
+                justifyContent:'space-evenly',
+                alignItems:'center',
+                padding:'10px'
                 }}>
               <img
                 src={post.data.logo.url || ""}
                 alt={post.data.logo.alt || "logo"}
-                style={{ height: "70px", width: "122px" ,padding:'13px 0px 13px 124px'}}
+                style={{ height: "70px", width: "122px" ,
+                  // padding:'13px 0px 13px 124px'
+                }}
               />
             {/* </Grid>
             <Grid
@@ -74,7 +89,7 @@ const Headerwithfirstpage: React.FC = () => {
                   fontSize: "26.49px",
                   fontWeight: 400,
                   lineHeight:'33.25px',
-                  padding:'27px 55.33px 36px 262px'
+                  // padding:'27px 55.33px 36px 262px'
                 }}
               >
                 {post.data.title1}
@@ -86,7 +101,7 @@ const Headerwithfirstpage: React.FC = () => {
                   fontSize: "26.49px",
                   fontWeight: 400,
                   lineHeight:'33.25px',
-                  padding:'27px 27.67px 36px 55.33px'
+                  // padding:'27px 27.67px 36px 55.33px'
                 }}
               >
                 {post.data.title2}
@@ -98,7 +113,7 @@ const Headerwithfirstpage: React.FC = () => {
                   fontSize: "26.49px",
                   fontWeight: 400,
                   lineHeight:'33.25px',
-                  padding:'27px 57.53px 36px 27.67px'
+                  // padding:'27px 57.53px 36px 27.67px'
                 }}
               >
                 {post.data.title3}
@@ -106,7 +121,9 @@ const Headerwithfirstpage: React.FC = () => {
               <img
                 src={post.data.contact.url || ""}
                 alt={post.data.contact.alt || "icon"}
-                style={{ height: "66.7px", width: "66.7px", padding:'13.08px 0px 16.22px 57.53px'}}
+                style={{ height: "66.7px", width: "66.7px", 
+                  // padding:'13.08px 0px 16.22px 57.53px'
+                }}
               />
             </Grid>
           </Grid>
@@ -117,12 +134,40 @@ const Headerwithfirstpage: React.FC = () => {
         {posts.map((post: any) => (
           <>
             <div
+              // style={{
+              //   position: "absolute",
+              //   backgroundColor: "#FFFFFF",
+              //   borderRadius: "48px",
+              //   margin: "260px 776px 219px 108.04px",
+              // }}
               style={{
                 position: "absolute",
                 backgroundColor: "#FFFFFF",
                 borderRadius: "48px",
                 margin: "260px 776px 219px 108.04px",
+                padding: '64px',
+                opacity: isVisible ? 1 : 0, // Control visibility with state
+                transform: isVisible ? 'translateY(0)' : 'translateY(50px)', // Initial animation effect
+                transition: 'opacity 2s ease-in-out, transform 2s ease-in-out', // Smooth transition for both opacity and transform
               }}
+      
+              
+              // style={{
+              //   position: "absolute",
+              //   backgroundColor: "#FFFFFF",
+              //   borderRadius: "48px",
+              //   margin: "260px 776px 219px 108.04px",
+              //   padding: '64px',
+              //   animation: "fadeInUp 2s ease-in-out",
+              //   opacity: 0,
+              //   animationFillMode: "forwards",
+              //   transform: 'translateY(50px)',
+              //   transition: 'opacity 2s ease-in-out, transform 2s ease-in-out',
+              // }}
+              // onAnimationEnd={(e) => {
+              //   e.currentTarget.style.opacity = "1"; // after animation ends, ensure opacity remains at 1
+              //   e.currentTarget.style.transform = "translateY(0)";
+              // }}
             >
               <div style={{padding:'64px 64px 64px 64px',}}>
               <Typography
