@@ -20,7 +20,22 @@ const Soinschezmarguerite: React.FC = () => {
   const contentbackground = posts[0]?.data?.contentbackground?.url || "";
   const backgroundpeople = posts[0]?.data?.backgroundpeople?.url || "";
   const lastbackground = posts[0]?.data?.lastbackground?.url || "";
-
+  const[person1,setPerson1]=useState(false)
+  const[person2,setPerson2]=useState(false)
+  const[person3,setPerson3]=useState(false)
+  const[person4,setPerson4]=useState(false)
+const handleChangePerson1=()=>{
+  setPerson1(!person1)
+}
+const handleChangePerson2=()=>{
+  setPerson2(!person2)
+}
+const handleChangePerson3=()=>{
+  setPerson3(!person3)
+}
+const handleChangePerson4=()=>{
+  setPerson4(!person4)
+}
   return (
     <Box>
       <div
@@ -459,27 +474,15 @@ const Soinschezmarguerite: React.FC = () => {
                 spacing={5}
               >
                 <Grid item lg={2}>
-                  <img
-                    src={post.data.person1?.url || ""}
-                    alt={post.data.person1?.alt || "icon"}
-                    style={{ width: "283.55px", height: "433px" }}
-                  />
-                </Grid>
-                <Grid item lg={2}>
-                  <img
-                    src={post.data.person2?.url || ""}
-                    alt={post.data.person2?.alt || "icon"}
-                    style={{ width: "283.55px", height: "433px" }}
-                  />
-                </Grid>
-                <Grid item lg={2}>
-                  <div
+                  {person1?(
+                    <div
                     style={{
                       background: "#FFFFFF",
                       height: "433px",
                       width: "283.55px",
                       borderRadius: "30px",
                     }}
+                    onClick={handleChangePerson1}
                   >
                     <div>
                       <Typography
@@ -579,13 +582,368 @@ const Soinschezmarguerite: React.FC = () => {
                       </Typography>
                     </div>
                   </div>
+                  ):(
+                  <img
+                    src={post.data.person1?.url || ""}
+                    alt={post.data.person1?.alt || "icon"}
+                    style={{ width: "283.55px", height: "433px" }}
+                    onClick={handleChangePerson1}
+                  />
+                  )}
                 </Grid>
                 <Grid item lg={2}>
+                {person2?(
+                    <div
+                    style={{
+                      background: "#FFFFFF",
+                      height: "433px",
+                      width: "283.55px",
+                      borderRadius: "30px",
+                    }}
+                    onClick={handleChangePerson2}
+                  >
+                    <div>
+                      <Typography
+                        style={{
+                          fontFamily: "'DM Serif Display', serif",
+                          fontWeight: 400,
+                          fontSize: "25px",
+                          lineHeight: "37.5px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                          paddingTop: "70px",
+                        }}
+                      >
+                        {post.data.designername}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                        }}
+                      >
+                        {post.data.designercontent}
+                      </Typography>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          paddingTop: "65.53px",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={post.data.facebook?.url || ""}
+                          alt={post.data.facebook?.alt || "icon"}
+                          style={{
+                            width: "7.9px",
+                            height: "21.03px",
+                            paddingRight: "36.85px",
+                          }}
+                        />
+                        <img
+                          src={post.data.twitter?.url || ""}
+                          alt={post.data.twitter?.alt || "icon"}
+                          style={{
+                            width: "11.84px",
+                            height: "21.03px",
+                            paddingRight: "33.56px",
+                          }}
+                        />
+                        <img
+                          src={post.data.linkedin?.url || ""}
+                          alt={post.data.linkedin?.alt || "icon"}
+                          style={{
+                            width: "10.53px",
+                            height: "21.03px",
+                            paddingRight: "35.53px",
+                          }}
+                        />
+                        <img
+                          src={post.data.instagram?.url || ""}
+                          alt={post.data.instagram?.alt || "icon"}
+                          style={{ width: "11.19px", height: "21.99px" }}
+                        />
+                      </div>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                          paddingTop: "66.01px",
+                        }}
+                      >
+                        {post.data.designercontact}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                        }}
+                      >
+                        {post.data.designeremail}
+                      </Typography>
+                    </div>
+                  </div>
+                  ):(
+                  <img
+                    src={post.data.person2?.url || ""}
+                    alt={post.data.person2?.alt || "icon"}
+                    style={{ width: "283.55px", height: "433px" }}
+                    onClick={handleChangePerson2}
+                  />
+                  )}
+                </Grid>
+                <Grid item lg={2}>
+                {person3?(
+                    <div
+                    style={{
+                      background: "#FFFFFF",
+                      height: "433px",
+                      width: "283.55px",
+                      borderRadius: "30px",
+                    }}
+                    onClick={handleChangePerson3}
+                  >
+                    <div>
+                      <Typography
+                        style={{
+                          fontFamily: "'DM Serif Display', serif",
+                          fontWeight: 400,
+                          fontSize: "25px",
+                          lineHeight: "37.5px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                          paddingTop: "70px",
+                        }}
+                      >
+                        {post.data.designername}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                        }}
+                      >
+                        {post.data.designercontent}
+                      </Typography>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          paddingTop: "65.53px",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={post.data.facebook?.url || ""}
+                          alt={post.data.facebook?.alt || "icon"}
+                          style={{
+                            width: "7.9px",
+                            height: "21.03px",
+                            paddingRight: "36.85px",
+                          }}
+                        />
+                        <img
+                          src={post.data.twitter?.url || ""}
+                          alt={post.data.twitter?.alt || "icon"}
+                          style={{
+                            width: "11.84px",
+                            height: "21.03px",
+                            paddingRight: "33.56px",
+                          }}
+                        />
+                        <img
+                          src={post.data.linkedin?.url || ""}
+                          alt={post.data.linkedin?.alt || "icon"}
+                          style={{
+                            width: "10.53px",
+                            height: "21.03px",
+                            paddingRight: "35.53px",
+                          }}
+                        />
+                        <img
+                          src={post.data.instagram?.url || ""}
+                          alt={post.data.instagram?.alt || "icon"}
+                          style={{ width: "11.19px", height: "21.99px" }}
+                        />
+                      </div>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                          paddingTop: "66.01px",
+                        }}
+                      >
+                        {post.data.designercontact}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                        }}
+                      >
+                        {post.data.designeremail}
+                      </Typography>
+                    </div>
+                  </div>
+                  ):(
                   <img
                     src={post.data.person3?.url || ""}
                     alt={post.data.person3?.alt || "icon"}
                     style={{ width: "283.55px", height: "433px" }}
+                    onClick={handleChangePerson3}
                   />
+                  )}
+                </Grid>
+                <Grid item lg={2}>
+                {person4?(
+                    <div
+                    style={{
+                      background: "#FFFFFF",
+                      height: "433px",
+                      width: "283.55px",
+                      borderRadius: "30px",
+                    }}
+                    onClick={handleChangePerson4}
+                  >
+                    <div>
+                      <Typography
+                        style={{
+                          fontFamily: "'DM Serif Display', serif",
+                          fontWeight: 400,
+                          fontSize: "25px",
+                          lineHeight: "37.5px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                          paddingTop: "70px",
+                        }}
+                      >
+                        {post.data.designername}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                        }}
+                      >
+                        {post.data.designercontent}
+                      </Typography>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "row",
+                          paddingTop: "65.53px",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <img
+                          src={post.data.facebook?.url || ""}
+                          alt={post.data.facebook?.alt || "icon"}
+                          style={{
+                            width: "7.9px",
+                            height: "21.03px",
+                            paddingRight: "36.85px",
+                          }}
+                        />
+                        <img
+                          src={post.data.twitter?.url || ""}
+                          alt={post.data.twitter?.alt || "icon"}
+                          style={{
+                            width: "11.84px",
+                            height: "21.03px",
+                            paddingRight: "33.56px",
+                          }}
+                        />
+                        <img
+                          src={post.data.linkedin?.url || ""}
+                          alt={post.data.linkedin?.alt || "icon"}
+                          style={{
+                            width: "10.53px",
+                            height: "21.03px",
+                            paddingRight: "35.53px",
+                          }}
+                        />
+                        <img
+                          src={post.data.instagram?.url || ""}
+                          alt={post.data.instagram?.alt || "icon"}
+                          style={{ width: "11.19px", height: "21.99px" }}
+                        />
+                      </div>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                          paddingTop: "66.01px",
+                        }}
+                      >
+                        {post.data.designercontact}
+                      </Typography>
+                      <Typography
+                        style={{
+                          fontFamily: "'Jost', sans-serif",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "27px",
+                          letterSpacing: "1%",
+                          textAlign: "center",
+                          color: "#292F36",
+                        }}
+                      >
+                        {post.data.designeremail}
+                      </Typography>
+                    </div>
+                  </div>
+                  ):(
+                  <img
+                    src={post.data.person4?.url || ""}
+                    alt={post.data.person4?.alt || "icon"}
+                    style={{ width: "283.55px", height: "433px" }}
+                    onClick={handleChangePerson4}
+                  />
+                  )}
                 </Grid>
               </Grid>
             </Grid>
