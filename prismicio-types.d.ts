@@ -1575,6 +1575,17 @@ interface HeaderDocumentData {
   buttonimage: prismic.ImageField<never>;
 
   /**
+   * backgroundimage field in *Header*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.backgroundimage
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  backgroundimage: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Header*
    *
    * - **Field Type**: Slice Zone
@@ -3705,6 +3716,72 @@ interface QuestionsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   answer: prismic.KeyTextField;
+
+  /**
+   * Question2 field in *Questions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: questions.question2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question2: prismic.KeyTextField;
+
+  /**
+   * Answer2 field in *Questions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: questions.answer2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  answer2: prismic.KeyTextField;
+
+  /**
+   * Question3 field in *Questions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: questions.question3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question3: prismic.KeyTextField;
+
+  /**
+   * Answer3 field in *Questions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: questions.answer3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  answer3: prismic.KeyTextField;
+
+  /**
+   * Question4 field in *Questions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: questions.question4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  question4: prismic.KeyTextField;
+
+  /**
+   * Answer4 field in *Questions*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: questions.answer4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  answer4: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Questions*
