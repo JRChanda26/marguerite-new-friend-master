@@ -8,16 +8,29 @@ import {
   Tab,
   Tabs,
   TextField,
+  Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { PrismicRichText } from "@prismicio/react";
 import Liberez from "@/app/mainpage/Liberez";
 import Footer from "@/app/mainpage/Footer";
+import Header from "@/app/mainpage/Header";
+import { PrismicNextLink } from "@prismicio/next";
+import { client } from "../../../../prismic-configuration";
 
 export default function BlogsNews() {
   const [blogs, setBlogs] = useState<any>(null);
   const [liberez, setLiberez] = useState<any>(null);
+  const [posts, setPosts] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType("contact" as any);
+      setPosts(response);
+    };
+    fetchPosts();
+  }, []);
 
   useEffect(() => {
     async function fetchData() {
@@ -140,8 +153,24 @@ export default function BlogsNews() {
   const [inputValue, setInputValue] = useState("");
   const [searchInputValue, setSearchInputValue] = useState("");
 
+  const [posts1, setPosts1] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType(
+        "soinschezmarguerite" as any
+      );
+      setPosts1(response);
+    };
+
+    fetchPosts();
+  }, []);
+
+  const contentbackground = posts1[0]?.data?.contentbackground?.url || "";
+
   return (
     <div>
+      <Header />
       <div
         style={{
           backgroundImage: `url(${blogs?.data?.banner?.url || ""})`,
@@ -162,6 +191,7 @@ export default function BlogsNews() {
             display: "flex",
             flexDirection: "row",
             justifyContent: "space-evenly",
+            marginTop: "50px",
           }}
         >
           <Grid item lg={7}>
@@ -180,6 +210,52 @@ export default function BlogsNews() {
             </div>
             <div
               style={{
+                display: "flex",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+                gap: "50px",
+                marginTop: "20px",
+              }}
+            >
+              <PrismicNextLink field={posts[0]?.data.facebook_link}>
+                {posts[0]?.data.facebook && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.facebook.url || undefined}
+                    alt={posts[0]?.data.facebook.alt || "Image"}
+                  />
+                )}
+              </PrismicNextLink>
+              <PrismicNextLink field={posts[0]?.data.twitter_link}>
+                {posts[0]?.data.twitter && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.twitter.url || undefined}
+                    alt={posts[0]?.data.twitter.alt || "Image"}
+                  />
+                )}
+              </PrismicNextLink>
+              <PrismicNextLink field={posts[0]?.data.linked_in_link}>
+                {posts[0]?.data.linked_in && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.linked_in.url || undefined}
+                    alt={posts[0]?.data.linked_in.alt || "Image"}
+                  />
+                )}
+              </PrismicNextLink>
+              <PrismicNextLink field={posts[0]?.data.instagram_link}>
+                {posts[0]?.data.instagram && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.instagram.url || undefined}
+                    alt={posts[0]?.data.instagram.alt || "Image"}
+                  />
+                )}
+              </PrismicNextLink>
+            </div>
+            <div
+              style={{
                 fontSize: "16px",
                 fontWeight: 400,
                 display: "flex",
@@ -195,7 +271,7 @@ export default function BlogsNews() {
             <div style={{ ...description, padding: "30px 0px 30px 0px" }}>
               {blogs?.data.description1}
             </div>
-            <div
+            {/* <div
               style={{
                 background: "#BBDDD91A",
                 display: "flex",
@@ -204,6 +280,38 @@ export default function BlogsNews() {
                 padding: "40px 100px",
                 borderRadius: "50px",
                 margin: "30px 0px 20px 0px ",
+              }}
+            >
+              <div>
+                {blogs?.data.quote_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={blogs?.data.quote_image.url || undefined}
+                    alt={blogs?.data.quote_image.alt || "Image"}
+                  />
+                )}
+              </div>
+              <div>
+                {blogs?.data.text_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={blogs?.data.text_image.url || undefined}
+                    alt={blogs?.data.text_image.alt || "Image"}
+                  />
+                )}
+              </div>
+            </div> */}
+            <div
+              style={{
+                backgroundImage: `url(${contentbackground})`,
+                backgroundSize: "cover",
+                width: "80%",
+                height: "500px",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                // marginTop: "209.87px",
+                flexDirection: "column",
               }}
             >
               <div>
@@ -336,6 +444,7 @@ export default function BlogsNews() {
           lg={7}
           style={{
             paddingLeft: "35px",
+            paddingTop:'100px'
           }}
         >
           <div style={title}>{blogs?.data.title2}</div>
@@ -408,8 +517,8 @@ export default function BlogsNews() {
           <hr style={{ border: "1px solid #24535C" }} />
         </Grid>
       </Grid>
-      <Liberez/>
-      <Footer/>
+      <Liberez />
+      <Footer />
     </div>
   );
 }

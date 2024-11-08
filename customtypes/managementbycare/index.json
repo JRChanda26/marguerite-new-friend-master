@@ -128,6 +128,209 @@
           "thumbnails": []
         }
       },
+      "question1": {
+        "type": "Text",
+        "config": {
+          "label": "Question1",
+          "placeholder": ""
+        }
+      },
+      "answer1": {
+        "type": "Text",
+        "config": {
+          "label": "Answer1",
+          "placeholder": ""
+        }
+      },
+      "question2": {
+        "type": "Text",
+        "config": {
+          "label": "Question2",
+          "placeholder": ""
+        }
+      },
+      "answer2": {
+        "type": "Text",
+        "config": {
+          "label": "Answer2",
+          "placeholder": ""
+        }
+      },
+      "question3": {
+        "type": "Text",
+        "config": {
+          "label": "Question3",
+          "placeholder": ""
+        }
+      },
+      "answer3": {
+        "type": "Text",
+        "config": {
+          "label": "Answer3",
+          "placeholder": ""
+        }
+      },
+      "question4": {
+        "type": "Text",
+        "config": {
+          "label": "Question4",
+          "placeholder": ""
+        }
+      },
+      "answer4": {
+        "type": "Text",
+        "config": {
+          "label": "Answer4",
+          "placeholder": ""
+        }
+      },
+      "question5": {
+        "type": "Text",
+        "config": {
+          "label": "Question5",
+          "placeholder": ""
+        }
+      },
+      "answer5": {
+        "type": "Text",
+        "config": {
+          "label": "Answer5",
+          "placeholder": ""
+        }
+      },
+      "question6": {
+        "type": "Text",
+        "config": {
+          "label": "Question6",
+          "placeholder": ""
+        }
+      },
+      "answer6": {
+        "type": "Text",
+        "config": {
+          "label": "Answer6",
+          "placeholder": ""
+        }
+      },
+      "title1": {
+        "type": "Text",
+        "config": {
+          "label": "Title1",
+          "placeholder": ""
+        }
+      },
+      "title2": {
+        "type": "Text",
+        "config": {
+          "label": "Title2",
+          "placeholder": ""
+        }
+      },
+      "title_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Title Heading",
+          "placeholder": ""
+        }
+      },
+      "title_description": {
+        "type": "Text",
+        "config": {
+          "label": "Title Description",
+          "placeholder": ""
+        }
+      },
+      "quote_image": {
+        "type": "Image",
+        "config": {
+          "label": "Quote Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "footer_title": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Title",
+          "placeholder": ""
+        }
+      },
+      "footer_description": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Description",
+          "placeholder": ""
+        }
+      },
+      "footer_image": {
+        "type": "Image",
+        "config": {
+          "label": "Footer Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "quote_text": {
+        "type": "Text",
+        "config": {
+          "label": "Quote Text ",
+          "placeholder": ""
+        }
+      },
+      "name": {
+        "type": "Text",
+        "config": {
+          "label": "Name",
+          "placeholder": ""
+        }
+      },
+      "comma_image": {
+        "type": "Image",
+        "config": {
+          "label": "Comma Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "video": {
+        "type": "Link",
+        "config": {
+          "label": "Video",
+          "placeholder": "",
+          "select": "media",
+          "allowText": true
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "leftheader": {
+        "type": "Text",
+        "config": {
+          "label": "leftheader",
+          "placeholder": ""
+        }
+      },
+      "leftcontentheader": {
+        "type": "Text",
+        "config": {
+          "label": "leftcontentheader",
+          "placeholder": ""
+        }
+      },
+      "rightimage": {
+        "type": "Image",
+        "config": {
+          "label": "rightimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
