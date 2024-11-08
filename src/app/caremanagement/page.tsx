@@ -12,13 +12,15 @@ import {
   Typography,
 } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import Liberez from "../mainpage/Liberez";
+import Footer from "../mainpage/Footer";
 
-const Managementbycare: React.FC = () => {
+const OurCareManagementSolutions: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("managementbycare");
+      const response: any = await client.getAllByType("managementbycare"as any);
       setPosts(response);
     };
 
@@ -31,7 +33,7 @@ const Managementbycare: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("soinschezmarguerite");
+      const response: any = await client.getAllByType("soinschezmarguerite"as any);
       setPosts1(response);
     };
 
@@ -762,8 +764,10 @@ const Managementbycare: React.FC = () => {
           </>
         ))}
       </div>
+      <Liberez/>
+      <Footer/>
     </Box>
   );
 };
 
-export default Managementbycare;
+export default OurCareManagementSolutions;

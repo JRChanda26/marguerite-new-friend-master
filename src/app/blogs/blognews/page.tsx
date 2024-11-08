@@ -12,6 +12,8 @@ import {
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 import { PrismicRichText } from "@prismicio/react";
+import Liberez from "@/app/mainpage/Liberez";
+import Footer from "@/app/mainpage/Footer";
 
 export default function BlogsNews() {
   const [blogs, setBlogs] = useState<any>(null);
@@ -21,8 +23,8 @@ export default function BlogsNews() {
     async function fetchData() {
       const client = createClient();
       const [blogsData, liberezData] = await Promise.all([
-        client.getSingle("blogs_news"),
-        client.getSingle("liberez"),
+        client.getSingle("blogs_news" as any),
+        client.getSingle("liberez" as any),
       ]);
       setBlogs(blogsData);
       setLiberez(liberezData);
@@ -406,44 +408,8 @@ export default function BlogsNews() {
           <hr style={{ border: "1px solid #24535C" }} />
         </Grid>
       </Grid>
-      <div style={{ background: "#FFFFFF", padding: "100px" }}>
-        <div style={containerStyle}>
-          <Grid container spacing={2} style={leftSectionStyle}>
-            <Grid item xs={12}>
-              <div style={titleStyle}>
-                <PrismicRichText field={liberez?.data.title} />
-              </div>
-              <div style={descriptionStyle}>
-                <PrismicRichText field={liberez?.data.description} />
-              </div>
-            </Grid>
-          </Grid>
-          <div style={rightSectionStyle}>
-            {" "}
-            <TextField
-              // value={liberez?.data.text_field}
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Entrez votre adresse email"
-              variant="outlined"
-              sx={{
-                ...inputStyle,
-                "& .MuiOutlinedInput-root": {
-                  "& fieldset": {
-                    borderColor: "transparent", // Initial border color
-                  },
-                  "&:hover fieldset": {
-                    borderColor: "transparent", // Hover border color
-                  },
-                  "&.Mui-focused fieldset": {
-                    borderColor: "transparent", // Focused border color
-                  },
-                },
-              }}
-            />
-          </div>
-        </div>
-      </div>
+      <Liberez/>
+      <Footer/>
     </div>
   );
 }
