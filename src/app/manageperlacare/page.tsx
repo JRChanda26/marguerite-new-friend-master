@@ -20,7 +20,9 @@ const ManagePerLaCare: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("managementbycare"as any);
+      const response: any = await client.getAllByType(
+        "managementbycare" as any
+      );
       setPosts(response);
     };
 
@@ -33,7 +35,9 @@ const ManagePerLaCare: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("soinschezmarguerite"as any);
+      const response: any = await client.getAllByType(
+        "soinschezmarguerite" as any
+      );
       setPosts1(response);
     };
 
@@ -121,7 +125,117 @@ const ManagePerLaCare: React.FC = () => {
           </>
         ))}
       </div>
-      <div style={{}}>
+
+      <div style={{ paddingTop: "173px" }}>
+        {posts.map((post: any) => (
+          <Grid container spacing={0} key={post.id}>
+            <Grid
+              item
+              lg={12}
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "row",
+                gap: "20px",
+              }}
+            >
+              <Grid item lg={5} style={{}}>
+                {posts.map((post: any, index: any) => (
+                  <Typography
+                    style={{
+                      fontFamily: "Mulish",
+                      fontWeight: 700,
+                      fontSize: "50px",
+                      lineHeight: "62.5px",
+                      color: "rgba(41, 47, 54, 1)",
+                      letterSpacing: "2%",
+                    }}
+                    key={index}
+                  >
+                    {post.data.leftheader}
+                  </Typography>
+                ))}
+                <Typography
+                  style={{
+                    fontFamily: "Mulish",
+                    color: "rgba(35, 125, 108, 1)",
+                    fontWeight: 700,
+                    fontSize: "24px",
+                    lineHeight: "30.12px",
+                    paddingTop: "33px",
+                  }}
+                >
+                  {post.data.leftcontentheader}
+                </Typography>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish",
+                    color: "rgba(35, 125, 108, 1)",
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    lineHeight: "30.12px",
+                  }}
+                >
+                  {post.data.leftcontent}
+                </Typography>
+                <div
+                  style={{ paddingTop: "68.14px", paddingBottom: "159.85px" }}
+                >
+                  {posts.map((post: any) => (
+                    <Button
+                      key={post}
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        background: "#24535C",
+                        padding: "16px 24px 16px 24px",
+                        gap: "18px",
+                        borderRadius: "82px",
+                      }}
+                    >
+                      <Typography
+                        style={{
+                          fontWeight: 400,
+                          fontSize: "15.2px",
+                          lineHeight: "18.24px",
+                          color: "#FFFFFF",
+                        }}
+                      >
+                        {post.data.buttontext}
+                      </Typography>
+                      <img
+                        src={post.data.buttonimage.url || ""}
+                        alt={post.data.buttonimage}
+                        style={{
+                          background: "#82C5BE",
+                          borderRadius: "15.9px",
+                          padding: "7.29px",
+                          width: "9.27px",
+                          height: "9.27px",
+                        }}
+                      />
+                    </Button>
+                  ))}
+                </div>
+              </Grid>
+
+              <Grid item lg={4}>
+                <img
+                  src={post.data.rightimage.url || ""}
+                  alt={post.data.rightimage}
+                  style={{
+                    height: "446.99px",
+                    width: "626.75px",
+                    borderRadius: "18px",
+                  }}
+                />
+              </Grid>
+            </Grid>
+          </Grid>
+        ))}
+      </div>
+
+      {/* <div style={{}}>
         {posts.map((post: any, postIndex: number) => (
           <>
             <Grid container spacing={1}>
@@ -202,221 +316,202 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
           </>
         ))}
-      </div>
+      </div> */}
 
-      <div style={{}}>
         {posts.map((post: any, postIndex: number) => (
           <>
             <div
               style={{
-                display: "flex",
+                color: "rgba(36, 83, 92, 1)",
+                fontFamily: "Mulish",
+                fontWeight: 800,
+                fontSize: "64px",
+                lineHeight: "80.32px",
+                paddingTop: "115px",
+                paddingBottom:'107px',
+                textAlign: "center",
                 justifyContent: "center",
-                alignItems: "center",
-                color: "#24535C",
-                fontFamily: 'Mulish, sans-serif',
-                fontWeight: 600,
-                fontSize: "40px",
-                lineHeight: "50.2px",
-                paddingTop: "281.26px",
+                display: "flex",
               }}
             >
               {post.data.boxtopheader}
             </div>
-            <Grid container spacing={1}>
-              <Grid
-                item
-                lg={12}
+
+            <div
+              style={{
+                backgroundImage: `url(${boxbackground})`,
+                height: "auto",
+                width: "100%", 
+                backgroundPosition: "center", 
+                backgroundSize: "cover", 
+                backgroundRepeat: "no-repeat",
+              }}
+            >
+              <Box
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems:'center',
-                  backgroundImage: `url(${boxbackground})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  backgroundRepeat: "no-repeat",
-                  width: "100%",
-                  height: "auto",
-                  paddingTop: "111.74px",
+                  background:
+                    "rgba(255, 255, 255, 1)",
+                  // padding: "85.33px 40.23px 85.33px 40.23px",
+                  paddingBottom: "85.33px",
+                  borderRadius: "19.5px",
+                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+                  height:'auto',
+                  width:'762px'
                 }}
               >
-                <Grid item lg={4.5}>
-                  <div
-                    style={{
-                      width: "490.06px",
-                      height: "auto",
-                      background:
-                        "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-                      // padding: "85.33px 40.23px 85.33px 40.23px",
-                      paddingBottom:'85.33px',
-                      borderRadius: "19.5px",
-                      boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                    }}
-                  >
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontSize: " 29.26px",
-                        fontWeight: 600,
-                        lineHeight: "36.72px",
-                        textAlign: "center",
-                        paddingTop: "85.33px",
-                        paddingLeft: "40px",
-                        paddingRight: "40px",
-                      }}
-                    >
-                      {post.data.box1header}
-                    </Typography>
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontStyle: "italic",
-                        fontSize: " 19.5px",
-                        fontWeight: 400,
-                        lineHeight: "36.08px",
-                        textAlign: "justify",
-                        paddingLeft: "60px",
-                        paddingRight: "60px",
-                        paddingTop: "20.72px",
-                      }}
-                    >
-                      {post.data.box1content}
-                    </Typography>
-                  </div>
-                  <div
-                    style={{
-                      width: "490.06px",
-                      height: "auto",
-                      background:
-                        "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-                      // padding: "85.33px 40.23px 85.33px 40.23px",
-                      paddingBottom:'85.33px',
-                      borderRadius: "19.5px",
-                      boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                      marginTop: "1.34px",
-                    }}
-                  >
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontSize: " 29.26px",
-                        fontWeight: 600,
-                        lineHeight: "36.72px",
-                        textAlign: "center",
-                        paddingTop: "85.33px",
-                      }}
-                    >
-                      {post.data.box2header}
-                    </Typography>
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontStyle: "italic",
-                        fontSize: " 19.5px",
-                        fontWeight: 400,
-                        lineHeight: "36.08px",
-                        textAlign: "justify",
-                        paddingLeft: "60px",
-                        paddingRight: "60px",
-                        paddingTop: "20.72px",
-                      }}
-                    >
-                      {post.data.box2content}
-                    </Typography>
-                  </div>
-                </Grid>
-                <Grid item lg={4.5}>
-                  <div
-                    style={{
-                      width: "490.06px",
-                      height: "auto",
-                      background:
-                        "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-                      // padding: "85.33px 40.23px 85.33px 40.23px",
-                      paddingBottom:'85.33px',
-                      borderRadius: "19.5px",
-                      boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                    }}
-                  >
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontSize: " 29.26px",
-                        fontWeight: 600,
-                        lineHeight: "36.72px",
-                        textAlign: "center",
-                        paddingLeft: "40px",
-                        paddingRight: "40px",
-                        paddingTop: "85.33px",
-                      }}
-                    >
-                      {post.data.box3header}
-                    </Typography>
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontStyle: "italic",
-                        fontSize: " 19.5px",
-                        fontWeight: 400,
-                        lineHeight: "36.08px",
-                        textAlign: "justify",
-                        paddingLeft: "60px",
-                        paddingRight: "60px",
-                        paddingTop: "20.72px",
-                      }}
-                    >
-                      {post.data.box3content}
-                    </Typography>
-                  </div>
-                  <div
-                    style={{
-                      width: "490px",
-                      height: "auto",
-                      background:
-                        "linear-gradient(178.46deg, #FFFFFF 8.34%, rgba(255, 167, 123, 0.6) 257.47%)",
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontSize: " 29.26px",
+                    fontWeight: 600,
+                    lineHeight: "36.72px",
+                    textAlign: "center",
+                   padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box1header}
+                </Typography>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontStyle: "italic",
+                    fontSize: " 19.5px",
+                    fontWeight: 400,
+                    lineHeight: "36.08px",
+                    textAlign: "justify",
+                   padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box1content}
+                </Typography>
+              </Box>
+              <Box
+                style={{
+                  width: "771px",
+                  height: "auto",
+                  background:
+                    "rgba(255, 255, 255, 1)",
+                  // padding: "85.33px 40.23px 85.33px 40.23px",
+                  paddingBottom: "85.33px",
+                  borderRadius: "19.5px",
+                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+                 
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontSize: " 29.26px",
+                    fontWeight: 600,
+                    lineHeight: "36.72px",
+                    textAlign: "center",
+                   padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box2header}
+                </Typography>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontStyle: "italic",
+                    fontSize: " 19.5px",
+                    fontWeight: 400,
+                    lineHeight: "36.08px",
+                    textAlign: "justify",
+                    padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box2content}
+                </Typography>
+              </Box>
+              <Box
+                style={{
+                  width: "738px",
+                  height: "auto",
+                  background:
+                    "rgba(255, 255, 255, 1)",
+                  // padding: "85.33px 40.23px 85.33px 40.23px",
+                  paddingBottom: "85.33px",
+                  borderRadius: "19.5px",
+                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontSize: " 29.26px",
+                    fontWeight: 600,
+                    lineHeight: "36.72px",
+                    textAlign: "center",
+                     padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box3header}
+                </Typography>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontStyle: "italic",
+                    fontSize: " 19.5px",
+                    fontWeight: 400,
+                    lineHeight: "36.08px",
+                    textAlign: "justify",
+                     padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box3content}
+                </Typography>
+              </Box>
+              <Box
+                style={{
+                  width: "746px",
+                  height: "auto",
+                  background:
+                  "rgba(255, 255, 255, 1)",
 
-                      // padding: "85.33px 40.23px 85.33px 40.23px",
-                      paddingBottom:'85.33px',
-                      borderRadius: "19.5px",
-                      boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                      marginTop: "17.61px",
-                    }}
-                  >
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontSize: " 29.26px",
-                        fontWeight: 600,
-                        lineHeight: "36.72px",
-                        textAlign: "center",
-                        paddingLeft: "60px",
-                        paddingRight: "60px",
-                        paddingTop: "85.33px",
-                      }}
-                    >
-                      {post.data.box4header}
-                    </Typography>
-                    <Typography
-                      style={{
-                        fontFamily: 'Mulish, sans-serif',
-                        fontStyle: "italic",
-                        fontSize: " 19.5px",
-                        fontWeight: 400,
-                        lineHeight: "36.08px",
-                        textAlign: "justify",
-                        paddingLeft: "65px",
-                        paddingRight: "65px",
-                        paddingTop: "20.72px",
-                      }}
-                    >
-                      {post.data.box4content}
-                    </Typography>
-                  </div>
-                </Grid>
-              </Grid>
-            </Grid>
+                  // padding: "85.33px 40.23px 85.33px 40.23px",
+                  paddingBottom: "85.33px",
+                  borderRadius: "19.5px",
+                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+                  marginTop: "17.61px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    fontSize: " 29.26px",
+                    fontWeight: 600,
+                    lineHeight: "36.72px",
+                    textAlign: "center",
+                    paddingLeft: "60px",
+                    paddingRight: "60px",
+                    paddingTop: "85.33px",
+                    padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box4header}
+                </Typography>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish",
+                    fontStyle: "italic",
+                    fontSize: " 19.5px",
+                    fontWeight: 400,
+                    lineHeight: "36.08px",
+                    textAlign: "justify",
+                   padding:'24px 25px 0px 25px'
+                  }}
+                >
+                  {post.data.box4content}
+                </Typography>
+              </Box>
+            </div>
           </>
         ))}
-      </div>
+
+
+
+
 
       <Grid container>
         <Grid
@@ -426,7 +521,7 @@ const ManagePerLaCare: React.FC = () => {
             display: "flex",
             flexDirection: "column",
             textAlign: "center",
-            marginTop:'100px'
+            marginTop: "100px",
           }}
         >
           <div
@@ -449,7 +544,7 @@ const ManagePerLaCare: React.FC = () => {
             {posts[0]?.data.description}
           </div>
         </Grid>
-        <Grid item lg={12} style={{marginTop:'100px'}}>
+        <Grid item lg={12} style={{ marginTop: "100px" }}>
           <div
             style={{
               textAlign: "center",
@@ -467,7 +562,7 @@ const ManagePerLaCare: React.FC = () => {
               display: "flex",
               flexDirection: "row",
               justifyContent: "space-evenly",
-              marginTop:'50px'
+              marginTop: "50px",
             }}
           >
             <Grid
@@ -556,10 +651,7 @@ const ManagePerLaCare: React.FC = () => {
               marginTop: "50px",
             }}
           >
-            <Grid
-              item
-              lg={5}
-            >
+            <Grid item lg={5}>
               {videoUrl ? (
                 <video
                   width="500"
@@ -625,78 +717,78 @@ const ManagePerLaCare: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
-      
-      <Box sx={{
-                display:'flex',
-                justifyContent:'center',
-                alignItems:'center',
-                
-            }}>
 
-      <div
-        style={{
-          backgroundImage: `url(${contentbackground})`,
-          backgroundSize: "cover",
-          width: "875.5px",
-          height: "440px",
+      <Box
+        sx={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          marginTop: "209.87px",
-          flexDirection: "column",
         }}
       >
-        {posts1.map((post: any, postIndex: number) => (
-          <>
-            <div>
-              <Typography
-                style={{
-                  fontFamily: "Mulish, sans-serif",
-                  color: "#0A1411",
-                  fontWeight: 400,
-                  fontSize: "85px",
-                  lineHeight: "106.25px",
-                  textAlign: "center",
-                  // padding:'67px 67px 0px 67px',
-                  fontStyle: "italic",
-                }}
-              >
-                {post.data.comma}
-              </Typography>
-            </div>
-            <div>
-              <Typography
-                style={{
-                  fontFamily: "Jenna Sue, sans-serif",
-                  color: "#0A1411",
-                  fontWeight: 400,
-                  fontSize: "48px",
-                  lineHeight: "60px",
-                  textAlign: "center",
-                  padding: "0px 80px 0px 80px",
-                }}
-              >
-                {post.data.excellence}
-              </Typography>
-            </div>
-            <div>
-              <Typography
-                style={{
-                  fontFamily: "Mulish, sans-serif",
-                  color: "#0A1411",
-                  fontWeight: 400,
-                  fontSize: "25px",
-                  lineHeight: "37.5px",
-                  textAlign: "center",
-                }}
-              >
-                {post.data.boxcontent}
-              </Typography>
-            </div>
-          </>
-        ))}
-      </div>
-        </Box>
+        <div
+          style={{
+            backgroundImage: `url(${contentbackground})`,
+            backgroundSize: "cover",
+            width: "875.5px",
+            height: "440px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop: "209.87px",
+            flexDirection: "column",
+          }}
+        >
+          {posts1.map((post: any, postIndex: number) => (
+            <>
+              <div>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    color: "#0A1411",
+                    fontWeight: 400,
+                    fontSize: "85px",
+                    lineHeight: "106.25px",
+                    textAlign: "center",
+                    // padding:'67px 67px 0px 67px',
+                    fontStyle: "italic",
+                  }}
+                >
+                  {post.data.comma}
+                </Typography>
+              </div>
+              <div>
+                <Typography
+                  style={{
+                    fontFamily: "Jenna Sue, sans-serif",
+                    color: "#0A1411",
+                    fontWeight: 400,
+                    fontSize: "48px",
+                    lineHeight: "60px",
+                    textAlign: "center",
+                    padding: "0px 80px 0px 80px",
+                  }}
+                >
+                  {post.data.excellence}
+                </Typography>
+              </div>
+              <div>
+                <Typography
+                  style={{
+                    fontFamily: "Mulish, sans-serif",
+                    color: "#0A1411",
+                    fontWeight: 400,
+                    fontSize: "25px",
+                    lineHeight: "37.5px",
+                    textAlign: "center",
+                  }}
+                >
+                  {post.data.boxcontent}
+                </Typography>
+              </div>
+            </>
+          ))}
+        </div>
+      </Box>
       <div style={{}}>
         {posts.map((post: any, postIndex: number) => (
           <>
@@ -711,7 +803,7 @@ const ManagePerLaCare: React.FC = () => {
             >
               <Typography
                 style={{
-                  fontFamily: 'Mulish, sans-serif',
+                  fontFamily: "Mulish, sans-serif",
                   color: "rgba(10, 20, 17, 1)",
                   fontWeight: 700,
                   fontSize: "64px",
@@ -746,7 +838,7 @@ const ManagePerLaCare: React.FC = () => {
                 <Grid item lg={5}>
                   <Typography
                     style={{
-                      fontFamily: 'Mulish, sans-serif',
+                      fontFamily: "Mulish, sans-serif",
                       color: "rgba(36, 83, 92, 1)",
                       fontWeight: 400,
                       fontSize: "40px",
@@ -764,8 +856,8 @@ const ManagePerLaCare: React.FC = () => {
           </>
         ))}
       </div>
-      <Liberez/>
-      <Footer/>
+      <Liberez />
+      <Footer />
     </Box>
   );
 };
