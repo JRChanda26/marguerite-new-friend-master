@@ -80,6 +80,14 @@
           "thumbnails": []
         }
       },
+      "backgroundimage": {
+        "type": "Image",
+        "config": {
+          "label": "backgroundimage",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

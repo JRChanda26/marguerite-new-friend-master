@@ -52,6 +52,48 @@
           "placeholder": ""
         }
       },
+      "question2": {
+        "type": "Text",
+        "config": {
+          "label": "Question2",
+          "placeholder": ""
+        }
+      },
+      "answer2": {
+        "type": "Text",
+        "config": {
+          "label": "Answer2",
+          "placeholder": ""
+        }
+      },
+      "question3": {
+        "type": "Text",
+        "config": {
+          "label": "Question3",
+          "placeholder": ""
+        }
+      },
+      "answer3": {
+        "type": "Text",
+        "config": {
+          "label": "Answer3",
+          "placeholder": ""
+        }
+      },
+      "question4": {
+        "type": "Text",
+        "config": {
+          "label": "Question4",
+          "placeholder": ""
+        }
+      },
+      "answer4": {
+        "type": "Text",
+        "config": {
+          "label": "Answer4",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
