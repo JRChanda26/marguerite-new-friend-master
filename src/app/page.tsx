@@ -1,29 +1,18 @@
-import Image from "next/image";
-import Headerwithfirstpage from "./componet/Headerwithfirstpage";
-import NotreProcessus from "./componet/NotreProcessus";
-import Questions from "./componet/Questions";
-import Footer from "./componet/Footer";
-
-import Choisir from "./componet/Choisir";
-
-import NosActes from "./componet/NosActes";
-import Liberez from "./componet/Liberez";
-import Motsdenotreclient from "./componet/Motsdenotreclient";
-import SoinChez from "./componet/SoinChez";
-import Pricing from "./componet/Pricing";
-import Contact from "./componet/Contact";
-import Soinschezmarguerite from "./componet/Soinschezmarguerite";
-import Ourcaremanagementsolutions from "./componet/ourcaremanagementsolutions";
-import Blogs from "./componet/Blogs";
-import Managementbycare from "./componet/Managementbycare";
-import BlogsNews from "./componet/BlogsNews";
+import Headerwithfirstpage from "./mainpage/Headerwithfirstpage";
+import NotreProcessus from "./mainpage/NotreProcessus";
+import Questions from "./mainpage/Questions";
+import Footer from "./mainpage/Footer";
+import Choisir from "./mainpage/Choisir";
+import NosActes from "./mainpage/NosActes";
+import Liberez from "./mainpage/Liberez";
+import Motsdenotreclient from "./mainpage/Motsdenotreclient";
+import SoinChez from "./mainpage/SoinChez";
 
 
 export default function Home() {
   return (
     <div>
       <Headerwithfirstpage />
-      
       <Choisir/>
       <NotreProcessus />
       <SoinChez/>
@@ -32,14 +21,6 @@ export default function Home() {
       <NosActes/>
       <Liberez/>
       <Footer/>
-
-      {/* <Pricing/>
-      <Soinschezmarguerite/>
-      <Contact/>
-      <Ourcaremanagementsolutions/>
-      <Blogs/>
-      <Managementbycare/>
-      <BlogsNews/> */}
     </div>
   );
 }

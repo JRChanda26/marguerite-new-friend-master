@@ -4,13 +4,15 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Button, Divider, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import Liberez from "../mainpage/Liberez";
+import Footer from "../mainpage/Footer";
 
-const Soinschezmarguerite: React.FC = () => {
+const LecarechezMargueriteServices: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("soinschezmarguerite");
+      const response: any = await client.getAllByType("soinschezmarguerite" as any);
       setPosts(response);
     };
 
@@ -1271,8 +1273,10 @@ const handleChangePerson4=()=>{
           </>
         ))}
       </div>
+      <Liberez/>
+      <Footer/>
     </Box>
   );
 };
 
-export default Soinschezmarguerite;
+export default LecarechezMargueriteServices;
