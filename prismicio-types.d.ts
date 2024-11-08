@@ -2244,6 +2244,28 @@ interface ManagementbycareDocumentData {
   rightimage: prismic.ImageField<never>;
 
   /**
+   * heading field in *managementbycare*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: managementbycare.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * description field in *managementbycare*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: managementbycare.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *managementbycare*
    *
    * - **Field Type**: Slice Zone

@@ -331,6 +331,20 @@
           "thumbnails": []
         }
       },
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "heading",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "description",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
