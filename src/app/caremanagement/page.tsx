@@ -2,9 +2,20 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
-import { Box, Button, Divider, Grid, Typography } from "@mui/material";
+import {
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  Box,
+  Button,
+  Divider,
+  Grid,
+  Typography,
+} from "@mui/material";
 import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
+import Header from "../mainpage/Header";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 
 const OurCareManagementSolutions: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -35,8 +46,105 @@ const OurCareManagementSolutions: React.FC = () => {
   }, []);
   const lastbackground = posts1[0]?.data?.lastbackground?.url || "";
 
+  const [videoPost, setVideoPost] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType(
+        "managementbycare" as any
+      );
+      setVideoPost(response);
+    };
+
+    fetchPosts();
+  }, []);
+
+  console.log(videoPost);
+
+  const faqs = [
+    {
+      question: videoPost[0]?.data.question1,
+      answer: videoPost[0]?.data.answer1,
+    },
+    {
+      question: videoPost[0]?.data.question2,
+      answer: videoPost[0]?.data.answer2,
+    },
+    {
+      question: videoPost[0]?.data.question3,
+      answer: videoPost[0]?.data.answer3,
+    },
+    {
+      question: videoPost[0]?.data.question4,
+      answer: videoPost[0]?.data.answer4,
+    },
+    {
+      question: videoPost[0]?.data.question5,
+      answer: videoPost[0]?.data.answer5,
+    },
+    {
+      question: videoPost[0]?.data.question6,
+      answer: videoPost[0]?.data.answer6,
+    },
+  ];
+
+  const videoUrl = videoPost[0]?.data.video?.url;
+
+  const [clicked1, setClicked1] = useState<number | null>(null);
+  const handleColor1 = (index: number) => {
+    setClicked1(index);
+  };
+
+  const points = [
+    {
+      heading: posts[0]?.data.heading1,
+      background: "#F6C09E",
+      points: [posts[0]?.data.heading1_point1, posts[0]?.data.heading1_point2],
+    },
+    {
+      heading: posts[0]?.data.heading2,
+      background: "#BBDDD9",
+      points: [posts[0]?.data.heading2_point1, posts[0]?.data.heading2_point2],
+    },
+    {
+      heading: posts[0]?.data.heading3,
+      background: "#EE8A74",
+      points: [posts[0]?.data.heading3_point1, posts[0]?.data.heading3_point2],
+    },
+    {
+      heading: posts[0]?.data.heading4,
+      background: "#82C5BE",
+      points: [posts[0]?.data.heading4_point1, posts[0]?.data.heading4_point2],
+    },
+    {
+      heading: posts[0]?.data.heading5,
+      background: "#F6C09E",
+      points: [
+        posts[0]?.data.heading5_point1,
+        posts[0]?.data.heading5_point2,
+        posts[0]?.data.heading5_point3,
+      ],
+    },
+    {
+      heading: posts[0]?.data.heading6,
+      background: "#BBDDD9",
+      points: [posts[0]?.data.heading6_point1, posts[0]?.data.heading6_point2],
+    },
+    {
+      heading: posts[0]?.data.heading7,
+      background: "#EE8A74",
+      points: [posts[0]?.data.heading7_point1, posts[0]?.data.heading7_point2],
+    },
+    {
+      heading: posts[0]?.data.heading8,
+      background: "#82C5BE",
+      points: [posts[0]?.data.heading8_point1, posts[0]?.data.heading8_point2],
+    },
+  ];
+
   return (
     <Box>
+      <Header />
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -108,9 +216,10 @@ const OurCareManagementSolutions: React.FC = () => {
                 gap: "20px",
               }}
             >
-              <Grid item lg={4} style={{}}>
+              <Grid item lg={5} style={{}}>
                 {posts.map((post: any) => (
                   <Typography
+                    key={post}
                     style={{
                       fontFamily: "Mulish, sans-serif",
                       fontWeight: 700,
@@ -176,11 +285,15 @@ const OurCareManagementSolutions: React.FC = () => {
                 </div>
               </Grid>
 
-              <Grid item lg={4}>
+              <Grid item lg={5}>
                 <img
                   src={post.data.rightimage.url || ""}
                   alt={post.data.rightimage}
-                  style={{ height: "700px", width: "653px" }}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                    borderRadius: "20px",
+                  }}
                 />
               </Grid>
             </Grid>
@@ -188,7 +301,122 @@ const OurCareManagementSolutions: React.FC = () => {
         ))}
       </div>
 
-      <div
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        style={{
+          marginTop: "100px",
+          padding: "0 20px",
+        }}
+      >
+        <Grid item xs={12}>
+          <div
+            style={{
+              textAlign: "center",
+              color: "#292F36",
+              fontSize: "2.5rem",
+              fontWeight: 400,
+            }}
+          >
+            {videoPost[0]?.data.title2}
+          </div>
+        </Grid>
+
+        <Grid
+          item
+          lg={12}
+          style={{
+            marginTop: "100px",
+          }}
+        >
+          <div
+            style={{
+              textAlign: "center",
+              color: "#292F36",
+              fontSize: "50px",
+              fontWeight: 400,
+            }}
+          >
+            {posts[0]?.data.title2}
+          </div>
+          <Grid
+            item
+            lg={12}
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "space-evenly",
+              // marginTop: "50px",
+            }}
+          >
+            <Grid item lg={5}>
+              {videoUrl ? (
+                <video
+                  width="100%"
+                  height="auto"
+                  controls
+                  style={{
+                    borderRadius: "12px",
+                    objectFit: "cover",
+                  }}
+                >
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              ) : (
+                <p>Video not available</p>
+              )}
+            </Grid>
+            <Grid
+              item
+              lg={5}
+              style={{
+                marginTop: "50px",
+                height: "350px",
+                overflowY: "auto",
+                scrollbarWidth: "thin",
+              }}
+            >
+              {faqs.slice(3, 6).map((faq, index) => (
+                <div key={index}>
+                  <Accordion
+                    style={{
+                      backgroundColor: "transparent",
+                      boxShadow: "none",
+                    }}
+                  >
+                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                      <Typography
+                        onClick={() => handleColor1(index)}
+                        style={{
+                          color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                          fontSize: "25px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {faq.question}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography
+                        style={{
+                          color: "#4D5053",
+                          fontSize: "22px",
+                          fontWeight: 400,
+                        }}
+                      >
+                        {faq.answer}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <hr style={{ border: "1px solid #3D8C6E" }} />
+                </div>
+              ))}
+            </Grid>
+          </Grid>
+        </Grid>
+      </Grid>
+      {/* <div
         style={{
           paddingTop: "124px",
           display: "flex",
@@ -237,9 +465,9 @@ const OurCareManagementSolutions: React.FC = () => {
             </Typography>
           </Box>
         ))}
-      </div>
+      </div> */}
 
-      <div
+      {/* <div
         style={{
           paddingTop: "124px",
         }}
@@ -413,9 +641,9 @@ const OurCareManagementSolutions: React.FC = () => {
             </Grid>
           </Grid>
         ))}
-      </div>
+      </div> */}
 
-      <div style={{}}>
+      {/* <div style={{}}>
         {posts1.map((post: any, postIndex: number) => (
           <>
             <div style={{ paddingTop: "142.8px" }}>
@@ -738,9 +966,44 @@ const OurCareManagementSolutions: React.FC = () => {
             </div>
           </>
         ))}
-      </div>
-      <Liberez/>
-      <Footer/>
+      </div> */}
+      <Grid container spacing={3} style={{ padding: "100px" }}>
+        {points.map((item, index) => (
+          <Grid
+            key={index}
+            item
+            lg={3}
+            md={6}
+            sm={12}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+            }}
+          >
+            <div
+              style={{
+                background: item.background,
+                borderRadius: "30px",
+                padding: "30px",
+                width: "80%",
+                textAlign: "center",
+              }}
+            >
+              {item.heading}
+            </div>
+            <ul>
+              {item.points.map((point, idx) => (
+                <li key={idx}>
+                  <span style={{ color: "#4D5053" }}>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </Grid>
+        ))}
+      </Grid>
+      <Liberez />
+      <Footer />
     </Box>
   );
 };
