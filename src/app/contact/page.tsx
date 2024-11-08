@@ -8,6 +8,7 @@ import { client } from "../../../prismic-configuration";
 // import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import dynamic from 'next/dynamic';
 import "leaflet/dist/leaflet.css";
+import Header from "../mainpage/Header";
 
 // Dynamically import Leaflet components
 const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
@@ -20,7 +21,7 @@ export default function Contact() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("contact");
+      const response: any = await client.getAllByType("contact" as any);
       setPosts(response);
     };
     fetchPosts();
@@ -71,6 +72,7 @@ export default function Contact() {
 
   return (
     <div>
+      <Header/>
       <div
         style={{
           backgroundImage: `url(${posts[0]?.data?.banner?.url || ""})`,
@@ -367,7 +369,7 @@ export default function Contact() {
             <EastIcon />
           </PrismicNextLink>
         </Grid>
-        <Grid
+        {/* <Grid
           item
           lg={12}
           style={{
@@ -390,7 +392,7 @@ export default function Contact() {
           ) : (
             ""
           )}
-        </Grid>
+        </Grid> */}
       </Grid>
     </div>
   );

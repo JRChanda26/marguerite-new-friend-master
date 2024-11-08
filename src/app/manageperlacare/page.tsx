@@ -14,6 +14,7 @@ import {
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
+import Header from "../mainpage/Header";
 
 const ManagePerLaCare: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -68,6 +69,7 @@ const ManagePerLaCare: React.FC = () => {
 
   return (
     <Box sx={{}}>
+      <Header />
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -318,200 +320,191 @@ const ManagePerLaCare: React.FC = () => {
         ))}
       </div> */}
 
-        {posts.map((post: any, postIndex: number) => (
-          <>
-            <div
-              style={{
-                color: "rgba(36, 83, 92, 1)",
-                fontFamily: "Mulish",
-                fontWeight: 800,
-                fontSize: "64px",
-                lineHeight: "80.32px",
-                paddingTop: "115px",
-                paddingBottom:'107px',
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-              }}
-            >
-              {post.data.boxtopheader}
-            </div>
+      {posts.map((post: any, postIndex: number) => (
+        <>
+          <div
+            style={{
+              color: "rgba(36, 83, 92, 1)",
+              fontFamily: "Mulish",
+              fontWeight: 800,
+              fontSize: "64px",
+              lineHeight: "80.32px",
+              paddingTop: "115px",
+              paddingBottom: "107px",
+              textAlign: "center",
+              justifyContent: "center",
+              display: "flex",
+            }}
+          >
+            {post.data.boxtopheader}
+          </div>
 
-            <div
+          <div
+            style={{
+              backgroundImage: `url(${boxbackground})`,
+              height: "auto",
+              width: "100%",
+              backgroundPosition: "center",
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+            }}
+          >
+            <Box
               style={{
-                backgroundImage: `url(${boxbackground})`,
+                background: "rgba(255, 255, 255, 1)",
+                // padding: "85.33px 40.23px 85.33px 40.23px",
+                paddingBottom: "85.33px",
+                borderRadius: "19.5px",
+                boxShadow: "0px 32.91px 29.26px 0px #28626D33",
                 height: "auto",
-                width: "100%", 
-                backgroundPosition: "center", 
-                backgroundSize: "cover", 
-                backgroundRepeat: "no-repeat",
+                width: "762px",
               }}
             >
-              <Box
+              <Typography
                 style={{
-                  background:
-                    "rgba(255, 255, 255, 1)",
-                  // padding: "85.33px 40.23px 85.33px 40.23px",
-                  paddingBottom: "85.33px",
-                  borderRadius: "19.5px",
-                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                  height:'auto',
-                  width:'762px'
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: " 29.26px",
+                  fontWeight: 600,
+                  lineHeight: "36.72px",
+                  textAlign: "center",
+                  padding: "24px 25px 0px 25px",
                 }}
               >
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: " 29.26px",
-                    fontWeight: 600,
-                    lineHeight: "36.72px",
-                    textAlign: "center",
-                   padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box1header}
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontStyle: "italic",
-                    fontSize: " 19.5px",
-                    fontWeight: 400,
-                    lineHeight: "36.08px",
-                    textAlign: "justify",
-                   padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box1content}
-                </Typography>
-              </Box>
-              <Box
+                {post.data.box1header}
+              </Typography>
+              <Typography
                 style={{
-                  width: "771px",
-                  height: "auto",
-                  background:
-                    "rgba(255, 255, 255, 1)",
-                  // padding: "85.33px 40.23px 85.33px 40.23px",
-                  paddingBottom: "85.33px",
-                  borderRadius: "19.5px",
-                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                 
+                  fontFamily: "Mulish, sans-serif",
+                  fontStyle: "italic",
+                  fontSize: " 19.5px",
+                  fontWeight: 400,
+                  lineHeight: "36.08px",
+                  textAlign: "justify",
+                  padding: "24px 25px 0px 25px",
                 }}
               >
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: " 29.26px",
-                    fontWeight: 600,
-                    lineHeight: "36.72px",
-                    textAlign: "center",
-                   padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box2header}
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontStyle: "italic",
-                    fontSize: " 19.5px",
-                    fontWeight: 400,
-                    lineHeight: "36.08px",
-                    textAlign: "justify",
-                    padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box2content}
-                </Typography>
-              </Box>
-              <Box
+                {post.data.box1content}
+              </Typography>
+            </Box>
+            <Box
+              style={{
+                width: "771px",
+                height: "auto",
+                background: "rgba(255, 255, 255, 1)",
+                // padding: "85.33px 40.23px 85.33px 40.23px",
+                paddingBottom: "85.33px",
+                borderRadius: "19.5px",
+                boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+              }}
+            >
+              <Typography
                 style={{
-                  width: "738px",
-                  height: "auto",
-                  background:
-                    "rgba(255, 255, 255, 1)",
-                  // padding: "85.33px 40.23px 85.33px 40.23px",
-                  paddingBottom: "85.33px",
-                  borderRadius: "19.5px",
-                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: " 29.26px",
+                  fontWeight: 600,
+                  lineHeight: "36.72px",
+                  textAlign: "center",
+                  padding: "24px 25px 0px 25px",
                 }}
               >
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: " 29.26px",
-                    fontWeight: 600,
-                    lineHeight: "36.72px",
-                    textAlign: "center",
-                     padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box3header}
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontStyle: "italic",
-                    fontSize: " 19.5px",
-                    fontWeight: 400,
-                    lineHeight: "36.08px",
-                    textAlign: "justify",
-                     padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box3content}
-                </Typography>
-              </Box>
-              <Box
+                {post.data.box2header}
+              </Typography>
+              <Typography
                 style={{
-                  width: "746px",
-                  height: "auto",
-                  background:
-                  "rgba(255, 255, 255, 1)",
-
-                  // padding: "85.33px 40.23px 85.33px 40.23px",
-                  paddingBottom: "85.33px",
-                  borderRadius: "19.5px",
-                  boxShadow: "0px 32.91px 29.26px 0px #28626D33",
-                  marginTop: "17.61px",
+                  fontFamily: "Mulish, sans-serif",
+                  fontStyle: "italic",
+                  fontSize: " 19.5px",
+                  fontWeight: 400,
+                  lineHeight: "36.08px",
+                  textAlign: "justify",
+                  padding: "24px 25px 0px 25px",
                 }}
               >
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: " 29.26px",
-                    fontWeight: 600,
-                    lineHeight: "36.72px",
-                    textAlign: "center",
-                    paddingLeft: "60px",
-                    paddingRight: "60px",
-                    paddingTop: "85.33px",
-                    padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box4header}
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish",
-                    fontStyle: "italic",
-                    fontSize: " 19.5px",
-                    fontWeight: 400,
-                    lineHeight: "36.08px",
-                    textAlign: "justify",
-                   padding:'24px 25px 0px 25px'
-                  }}
-                >
-                  {post.data.box4content}
-                </Typography>
-              </Box>
-            </div>
-          </>
-        ))}
+                {post.data.box2content}
+              </Typography>
+            </Box>
+            <Box
+              style={{
+                width: "738px",
+                height: "auto",
+                background: "rgba(255, 255, 255, 1)",
+                // padding: "85.33px 40.23px 85.33px 40.23px",
+                paddingBottom: "85.33px",
+                borderRadius: "19.5px",
+                boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+              }}
+            >
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: " 29.26px",
+                  fontWeight: 600,
+                  lineHeight: "36.72px",
+                  textAlign: "center",
+                  padding: "24px 25px 0px 25px",
+                }}
+              >
+                {post.data.box3header}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontStyle: "italic",
+                  fontSize: " 19.5px",
+                  fontWeight: 400,
+                  lineHeight: "36.08px",
+                  textAlign: "justify",
+                  padding: "24px 25px 0px 25px",
+                }}
+              >
+                {post.data.box3content}
+              </Typography>
+            </Box>
+            <Box
+              style={{
+                width: "746px",
+                height: "auto",
+                background: "rgba(255, 255, 255, 1)",
 
-
-
-
+                // padding: "85.33px 40.23px 85.33px 40.23px",
+                paddingBottom: "85.33px",
+                borderRadius: "19.5px",
+                boxShadow: "0px 32.91px 29.26px 0px #28626D33",
+                marginTop: "17.61px",
+              }}
+            >
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  fontSize: " 29.26px",
+                  fontWeight: 600,
+                  lineHeight: "36.72px",
+                  textAlign: "center",
+                  paddingLeft: "60px",
+                  paddingRight: "60px",
+                  paddingTop: "85.33px",
+                  padding: "24px 25px 0px 25px",
+                }}
+              >
+                {post.data.box4header}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Mulish",
+                  fontStyle: "italic",
+                  fontSize: " 19.5px",
+                  fontWeight: 400,
+                  lineHeight: "36.08px",
+                  textAlign: "justify",
+                  padding: "24px 25px 0px 25px",
+                }}
+              >
+                {post.data.box4content}
+              </Typography>
+            </Box>
+          </div>
+        </>
+      ))}
 
       <Grid container>
         <Grid
@@ -738,23 +731,18 @@ const ManagePerLaCare: React.FC = () => {
             flexDirection: "column",
           }}
         >
-          {posts1.map((post: any, postIndex: number) => (
+          {posts.map((post: any) => (
             <>
               <div>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#0A1411",
-                    fontWeight: 400,
-                    fontSize: "85px",
-                    lineHeight: "106.25px",
-                    textAlign: "center",
-                    // padding:'67px 67px 0px 67px',
-                    fontStyle: "italic",
-                  }}
-                >
-                  {post.data.comma}
-                </Typography>
+                {posts[0]?.data.comma_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.comma_image.url || undefined}
+                    alt={posts[0]?.data.comma_image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
               </div>
               <div>
                 <Typography
@@ -768,7 +756,7 @@ const ManagePerLaCare: React.FC = () => {
                     padding: "0px 80px 0px 80px",
                   }}
                 >
-                  {post.data.excellence}
+                  {post.data.quote_text}
                 </Typography>
               </div>
               <div>
@@ -782,14 +770,14 @@ const ManagePerLaCare: React.FC = () => {
                     textAlign: "center",
                   }}
                 >
-                  {post.data.boxcontent}
+                  {post.data.name}
                 </Typography>
               </div>
             </>
           ))}
         </div>
       </Box>
-      <div style={{}}>
+      {/* <div style={{}}>
         {posts.map((post: any, postIndex: number) => (
           <>
             <div
@@ -855,7 +843,57 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
           </>
         ))}
+      </div> */}
+
+      <div
+        style={{
+          fontSize: "64px",
+          fontWeight: 700,
+          lineHeight: "80px",
+          textAlign: "center",
+          padding: "50px 100px",
+        }}
+      >
+        {posts[0]?.data.footer_title}
       </div>
+
+      <Grid
+        item
+        lg={12}
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+          padding: "50px 200px",
+        }}
+      >
+        <Grid item lg={8}>
+          {" "}
+          {posts[0]?.data.footer_image && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={posts[0]?.data.footer_image.url || undefined}
+              alt={posts[0]?.data.footer_image.alt || "Image"}
+              width="500px"
+              height="auto"
+            />
+          )}
+        </Grid>
+        <Grid
+          item
+          lg={4}
+          style={{
+            alignContent: "center",
+            fontSize: "30px",
+            fontWeight: 400,
+            paddingLeft: "100px",
+            textAlign: "left",
+            color: "#24535C",
+          }}
+        >
+          {posts[0]?.data.footer_description}
+        </Grid>
+      </Grid>
       <Liberez />
       <Footer />
     </Box>

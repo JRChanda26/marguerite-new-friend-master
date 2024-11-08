@@ -50,7 +50,7 @@ useEffect(() => {
               // right: 0,
               width: "100%",
               // width: "calc(100% - 123px)",
-              borderRadius: "16px",
+              borderRadius: "0px 16px",
               // justifyContent: "space-between",
               boxSizing: "border-box",
               border:'2.32px solid rgba(255, 255, 255, 0.1)',

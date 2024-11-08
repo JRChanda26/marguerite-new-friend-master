@@ -7,6 +7,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { PrismicRichText } from "@prismicio/react";
 import Liberez from "@/app/mainpage/Liberez";
 import Footer from "@/app/mainpage/Footer";
+import Header from "@/app/mainpage/Header";
 
 export default function Blogs() {
   const [settings, setSettings] = useState<any>(null);
@@ -137,6 +138,7 @@ export default function Blogs() {
 
   return (
     <div>
+      <Header/>
       <div
         style={{
           backgroundImage: `url(${settings?.data?.banner?.url || ""})`,

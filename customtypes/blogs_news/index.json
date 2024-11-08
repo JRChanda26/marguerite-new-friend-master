@@ -214,6 +214,13 @@
           "placeholder": ""
         }
       },
+      "quote_text": {
+        "type": "Text",
+        "config": {
+          "label": "Quote Text",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
