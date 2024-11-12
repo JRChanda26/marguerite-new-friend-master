@@ -18,6 +18,7 @@ import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
 import { PrismicNextLink } from "@prismicio/next";
 import { client } from "../../../../prismic-configuration";
+import { useRouter } from "next/navigation";
 
 export default function BlogsNews() {
   const [blogs, setBlogs] = useState<any>(null);
@@ -168,6 +169,12 @@ export default function BlogsNews() {
 
   const contentbackground = blogs?.data?.box_image?.url || "";
 
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push('/contact');
+  };
+  
   return (
     <div>
       <Header />
@@ -514,6 +521,7 @@ export default function BlogsNews() {
                   gap: "18px",
                   borderRadius: "82px",
                 }}
+                onClick={handleNavigation}
               >
                 <Typography
                   style={{

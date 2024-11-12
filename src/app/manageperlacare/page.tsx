@@ -16,6 +16,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
 import Header from "../mainpage/Header";
+import { useRouter } from "next/navigation";
 
 const ManagePerLaCare: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -119,6 +120,12 @@ const ManagePerLaCare: React.FC = () => {
     },
   };
 
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push('/contact');
+  };
+  
   return (
     <Box sx={{}}>
       <Header />
@@ -246,6 +253,7 @@ const ManagePerLaCare: React.FC = () => {
                         gap: "18px",
                         borderRadius: "82px",
                       }}
+                      onClick={handleNavigation}
                     >
                       <Typography
                         style={{
