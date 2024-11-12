@@ -17,6 +17,7 @@ import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { PrismicNextLink } from "@prismicio/next";
+import Header from "../mainpage/Header";
 
 const LecarechezMargueriteServices: React.FC = () => {
   const [posts, setPosts] = useState<any[]>([]);
@@ -137,6 +138,7 @@ const LecarechezMargueriteServices: React.FC = () => {
 
   return (
     <Box>
+      <Header/>
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,

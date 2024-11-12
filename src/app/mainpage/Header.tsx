@@ -82,6 +82,7 @@ useEffect(() => {
                 // justifyContent: "flex-end",
               }}
             > */}
+            <Link href={'/manageperlacare'} style={{textDecoration:'none'}}>
               <Typography
                 style={{
                   fontFamily:'Mulish',
@@ -94,6 +95,8 @@ useEffect(() => {
               >
                 {post.data.title1}
               </Typography>
+              </Link>
+              <Link href={'/lecarechez'} style={{textDecoration:'none'}}>
               <Typography
                 style={{
                   fontFamily:'Mulish',
@@ -106,6 +109,8 @@ useEffect(() => {
               >
                 {post.data.title2}
               </Typography>
+              </Link>
+              <Link href={'/caremanagement'} style={{textDecoration:'none'}}>
               <Typography
                 style={{
                   fontFamily:'Mulish',
@@ -118,6 +123,7 @@ useEffect(() => {
               >
                 {post.data.title3}
               </Typography>
+              </Link>
               <img
                 src={post.data.contact.url || ""}
                 alt={post.data.contact.alt || "icon"}

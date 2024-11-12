@@ -1,22 +1,37 @@
 "use client";
 
-import { Grid, TextField, Typography } from "@mui/material";
+import {
+  Alert,
+  Button,
+  Grid,
+  Snackbar,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
 import React, { useEffect, useState } from "react";
 import EastIcon from "@mui/icons-material/East";
 import { client } from "../../../prismic-configuration";
 // import { MapContainer, Marker, TileLayer } from "react-leaflet";
-import dynamic from 'next/dynamic';
+import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import Header from "../mainpage/Header";
 
 // Dynamically import Leaflet components
-const MapContainer = dynamic(() => import('react-leaflet').then(mod => mod.MapContainer), { ssr: false });
-const TileLayer = dynamic(() => import('react-leaflet').then(mod => mod.TileLayer), { ssr: false });
-const Marker = dynamic(() => import('react-leaflet').then(mod => mod.Marker), { ssr: false });
+const MapContainer = dynamic(
+  () => import("react-leaflet").then((mod) => mod.MapContainer),
+  { ssr: false }
+);
+const TileLayer = dynamic(
+  () => import("react-leaflet").then((mod) => mod.TileLayer),
+  { ssr: false }
+);
+const Marker = dynamic(
+  () => import("react-leaflet").then((mod) => mod.Marker),
+  { ssr: false }
+);
 
 export default function Contact() {
-
   const [posts, setPosts] = useState<any[]>([]);
 
   useEffect(() => {
@@ -70,9 +85,79 @@ export default function Contact() {
   const [telephoneInputValue, setTelephoneInputValue] = useState("");
   const [bonjourInputValue, setBonjourInputValue] = useState("");
 
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+  const [message, setMessage] = useState("");
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
+  };
+
+  type Errors = {
+    nom?: string;
+    email?: string;
+    subject?: string;
+    telephone?: string;
+    bonjour?: string;
+  };
+
+  const [errors, setErrors] = useState<Errors>({});
+
+  const validateFields = (): Errors => {
+    const newErrors: Errors = {};
+    if (!nomInputValue) newErrors.nom = "Name is required";
+    if (!emailInputValue) newErrors.email = "Email is required";
+    if (!subjectInputValue) newErrors.subject = "Subject is required";
+    if (!telephoneInputValue) newErrors.telephone = "Telephone is required";
+    if (!bonjourInputValue) newErrors.bonjour = "Message is required";
+    return newErrors;
+  };
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    // Check for errors
+    const newErrors = validateFields();
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors); // Set errors if validation fails
+      return; // Stop form submission
+    } else {
+      setErrors({}); // Clear errors if validation passes
+    }
+
+    const formData = {
+      nom: nomInputValue,
+      email: emailInputValue,
+      subject: subjectInputValue,
+      telephone: telephoneInputValue,
+      bonjour: bonjourInputValue,
+    };
+
+    try {
+      const response = await fetch("/api/save-data", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      setMessage(result.message);
+      setOpenSnackbar(true);
+
+      setNomInputValue("");
+      setEmailInputValue("");
+      setSubjectInputValue("");
+      setTelephoneInputValue("");
+      setBonjourInputValue("");
+    } catch (error) {
+      console.error("Error saving contact:", error);
+    }
+  };
+
   return (
     <div>
-      <Header/>
+      <Header />
       <div
         style={{
           backgroundImage: `url(${posts[0]?.data?.banner?.url || ""})`,
@@ -276,8 +361,6 @@ export default function Contact() {
             >
               <TextField
                 name="nom_text_field"
-                // value={formValues.nom_text_field}
-                // onChange={handleChange}
                 value={nomInputValue}
                 onChange={(e) => setNomInputValue(e.target.value)}
                 placeholder="Nom"
@@ -285,11 +368,11 @@ export default function Contact() {
                 type="text"
                 fullWidth
                 sx={mouseHover}
+                error={!!errors.nom}
+                helperText={errors.nom}
               />
               <TextField
                 name="email_text_field"
-                // value={formValues.email_text_field}
-                // onChange={handleChange}
                 value={emailInputValue}
                 onChange={(e) => setEmailInputValue(e.target.value)}
                 placeholder="Email"
@@ -297,6 +380,8 @@ export default function Contact() {
                 type="text"
                 fullWidth
                 sx={mouseHover}
+                error={!!errors.email}
+                helperText={errors.email}
               />
             </div>
             <div
@@ -309,8 +394,6 @@ export default function Contact() {
             >
               <TextField
                 name="subject_text_field"
-                // value={formValues.subject_text_field}
-                // onChange={handleChange}
                 value={subjectInputValue}
                 onChange={(e) => setSubjectInputValue(e.target.value)}
                 placeholder="Subject"
@@ -318,11 +401,11 @@ export default function Contact() {
                 type="text"
                 fullWidth
                 sx={mouseHover}
+                error={!!errors.subject}
+                helperText={errors.subject}
               />
               <TextField
                 name="telephone_text_field"
-                // value={formValues.telephone_text_field}
-                // onChange={handleChange}
                 value={telephoneInputValue}
                 onChange={(e) => setTelephoneInputValue(e.target.value)}
                 placeholder="Téléphone"
@@ -330,13 +413,13 @@ export default function Contact() {
                 type="text"
                 fullWidth
                 sx={mouseHover}
+                error={!!errors.telephone}
+                helperText={errors.telephone}
               />
             </div>
             <div>
               <TextField
                 name="bonjour_text_field"
-                // value={formValues.bonjour_text_field}
-                // onChange={handleChange}
                 value={bonjourInputValue}
                 onChange={(e) => setBonjourInputValue(e.target.value)}
                 placeholder="Bonjour, je suis intéressé par.."
@@ -344,12 +427,14 @@ export default function Contact() {
                 type="text"
                 fullWidth
                 sx={mouseHover}
+                error={!!errors.bonjour}
+                helperText={errors.bonjour}
               />
             </div>
           </Grid>
         </Grid>
         <Grid item lg={12}>
-          <PrismicNextLink
+          {/* <PrismicNextLink
             field={posts[0]?.data.button_link}
             style={{
               textDecoration: "none",
@@ -367,7 +452,26 @@ export default function Contact() {
           >
             {posts[0]?.data.button_text}
             <EastIcon />
-          </PrismicNextLink>
+          </PrismicNextLink> */}
+          <Button
+            style={{
+              textDecoration: "none",
+              background: "#292F36",
+              color: "#FFFFFF",
+              padding: "10px 24px",
+              borderRadius: "10px",
+              display: "flex",
+              flexDirection: "row",
+              gap: "10px",
+              float: "right",
+              fontSize: "14px",
+              fontWeight: 600,
+            }}
+            onClick={handleSubmit}
+          >
+            {posts[0]?.data.button_text}
+            <EastIcon />
+          </Button>
         </Grid>
         {/* <Grid
           item
@@ -393,6 +497,15 @@ export default function Contact() {
             ""
           )}
         </Grid> */}
+        <Snackbar
+          open={openSnackbar}
+          autoHideDuration={3000}
+          onClose={handleCloseSnackbar}
+        >
+          <Alert onClose={handleCloseSnackbar} severity="success">
+            {message}
+          </Alert>
+        </Snackbar>
       </Grid>
     </div>
   );
