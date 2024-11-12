@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const NousAgissons: React.FC = () => {
   const [posts, setPosts] = useState<[]>([]);
@@ -26,6 +27,12 @@ useEffect(() => {
   }, 500); // Delay before the fade-in starts (adjust as needed)
 }, []);
 
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push('/contact');
+  };
+  
 
   return (
     <Box>
@@ -45,8 +52,8 @@ useEffect(() => {
                 position: "absolute",
                 backgroundColor: "#FFFFFF",
                 borderRadius: "48px",
-                margin: "260px 776px 219px 108.04px",
-                padding: '64px',
+                margin: "200px 600px 0px 100px",
+                padding: '30px',
                 opacity: isVisible ? 1 : 0, // Control visibility with state
                 transform: isVisible ? 'translateY(0)' : 'translateY(50px)', // Initial animation effect
                 transition: 'opacity 2s ease-in-out, transform 2s ease-in-out', // Smooth transition for both opacity and transform
@@ -70,12 +77,12 @@ useEffect(() => {
               //   e.currentTarget.style.transform = "translateY(0)";
               // }}
             >
-              <div style={{padding:'64px 64px 64px 64px',}}>
+              <div>
               <Typography
                 style={{
                   fontFamily: "Jenna Sue",
                   fontWeight: 400,
-                  fontSize: "64px",
+                  fontSize: "44px",
                   lineHeight: "76.8px",
                   color: "rgba(36, 83, 92, 1)",
                   
@@ -88,23 +95,24 @@ useEffect(() => {
                   fontFamily: "Mulish",
                   color: "rgba(36, 83, 92, 1)",
                   fontWeight: 700,
-                  fontSize: "58px",
+                  fontSize: "45px",
                   lineHeight: "69.6px",
                 }}
               >
                 {post.data.leftcontent2}
               </Typography>
-              <Link href="/Footer" style={{ textDecoration: "none" }}>
+              {/* <Link href="/Footer" style={{ textDecoration: "none" }}> */}
                 <Button
                   style={{
                     display: "flex",
                     flexDirection: "row",
                     background: "#24535C",
-                    padding: "16px 24px 16px 24px",
+                    padding: "5px 10px",
                     gap: "18px",
                     borderRadius: "82px",
-                    top:'36px'
+                    // top:'36px'
                   }}
+                  onClick={handleNavigation}
                 >
                   <Typography
                     style={{
@@ -120,10 +128,13 @@ useEffect(() => {
                   <img
                     src={post.data.buttonimage.url || ""}
                     alt={post.data.buttonimage}
-                    style={{}}
+                    style={{
+                      width:'30px',
+                      height:'30px'
+                    }}
                   />
                 </Button>
-              </Link>
+              {/* </Link> */}
               </div>
             </div>
             <Grid container spacing={0} key={post.id}>
