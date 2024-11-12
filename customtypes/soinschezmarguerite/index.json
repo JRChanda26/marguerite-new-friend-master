@@ -79,20 +79,6 @@
           "placeholder": ""
         }
       },
-      "missionheader": {
-        "type": "Text",
-        "config": {
-          "label": "missionheader",
-          "placeholder": ""
-        }
-      },
-      "missioncontent": {
-        "type": "Text",
-        "config": {
-          "label": "missioncontent",
-          "placeholder": ""
-        }
-      },
       "buttontext": {
         "type": "Text",
         "config": {
@@ -349,6 +335,112 @@
         "type": "Text",
         "config": {
           "label": "box4content",
+          "placeholder": ""
+        }
+      },
+      "notre_title": {
+        "type": "Text",
+        "config": {
+          "label": "Notre Title",
+          "placeholder": ""
+        }
+      },
+      "notre_description": {
+        "type": "Text",
+        "config": {
+          "label": "Notre Description",
+          "placeholder": ""
+        }
+      },
+      "notre_text": {
+        "type": "Text",
+        "config": {
+          "label": "Notre Text",
+          "placeholder": ""
+        }
+      },
+      "notre_image": {
+        "type": "Image",
+        "config": {
+          "label": "Notre Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "nos_text": {
+        "type": "Text",
+        "config": {
+          "label": "Nos Text",
+          "placeholder": ""
+        }
+      },
+      "nos_image": {
+        "type": "Image",
+        "config": {
+          "label": "Nos Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "notre_middle_image": {
+        "type": "Image",
+        "config": {
+          "label": "Notre Middle Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "person4": {
+        "type": "Image",
+        "config": {
+          "label": "person4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "last_image1": {
+        "type": "Image",
+        "config": {
+          "label": "last image1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "last_image2": {
+        "type": "Image",
+        "config": {
+          "label": "last image2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "last_image3": {
+        "type": "Image",
+        "config": {
+          "label": "last image3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "last_image4": {
+        "type": "Image",
+        "config": {
+          "label": "last image4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "notre_text_description": {
+        "type": "Text",
+        "config": {
+          "label": "Notre Text Description",
+          "placeholder": ""
+        }
+      },
+      "nos_text_description": {
+        "type": "Text",
+        "config": {
+          "label": "Nos Text Description",
           "placeholder": ""
         }
       },

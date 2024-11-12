@@ -8,6 +8,7 @@ import {
   AccordionSummary,
   Box,
   Button,
+  Card,
   Grid,
   Typography,
 } from "@mui/material";
@@ -66,6 +67,57 @@ const ManagePerLaCare: React.FC = () => {
     { question: posts[0]?.data.question5, answer: posts[0]?.data.answer5 },
     { question: posts[0]?.data.question6, answer: posts[0]?.data.answer6 },
   ];
+
+  const styles: {
+    container: React.CSSProperties;
+    card: React.CSSProperties;
+    topLeft: React.CSSProperties;
+    topRight: React.CSSProperties;
+    bottomLeft: React.CSSProperties;
+    bottomRight: React.CSSProperties;
+  } = {
+    container: {
+      position: "relative",
+      width: "100%",
+      height: "100vh",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+    card: {
+      position: "absolute",
+      width: "200px",
+      padding: "20px",
+      borderRadius: "8px",
+      boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+      backgroundColor: "#fff",
+      // textAlign: "center",
+    },
+    topLeft: {
+      top: "5%",
+      left: "5%",
+      transform: "rotate(0deg)",
+      width: "40%",
+    },
+    topRight: {
+      top: "30%",
+      right: "5%",
+      transform: "rotate(0deg)",
+      width: "40%",
+    },
+    bottomLeft: {
+      top: "55%",
+      left: "5%",
+      transform: "rotate(0deg)",
+      width: "40%",
+    },
+    bottomRight: {
+      top: "80%",
+      right: "5%",
+      transform: "rotate(0deg)",
+      width: "40%",
+    },
+  };
 
   return (
     <Box sx={{}}>
@@ -141,7 +193,7 @@ const ManagePerLaCare: React.FC = () => {
                 gap: "20px",
               }}
             >
-              <Grid item lg={5} style={{}}>
+              <Grid item lg={6} style={{}}>
                 {posts.map((post: any, index: any) => (
                   <Typography
                     style={{
@@ -221,13 +273,13 @@ const ManagePerLaCare: React.FC = () => {
                 </div>
               </Grid>
 
-              <Grid item lg={4}>
+              <Grid item lg={5}>
                 <img
                   src={post.data.rightimage.url || ""}
                   alt={post.data.rightimage}
                   style={{
-                    height: "446.99px",
-                    width: "626.75px",
+                    height: "auto",
+                    width: "100%",
                     borderRadius: "18px",
                   }}
                 />
@@ -329,8 +381,7 @@ const ManagePerLaCare: React.FC = () => {
               fontWeight: 800,
               fontSize: "64px",
               lineHeight: "80.32px",
-              paddingTop: "115px",
-              paddingBottom: "107px",
+              padding: "100px",
               textAlign: "center",
               justifyContent: "center",
               display: "flex",
@@ -349,7 +400,7 @@ const ManagePerLaCare: React.FC = () => {
               backgroundRepeat: "no-repeat",
             }}
           >
-            <Box
+            {/* <Box
               style={{
                 background: "rgba(255, 255, 255, 1)",
                 // padding: "85.33px 40.23px 85.33px 40.23px",
@@ -501,7 +552,41 @@ const ManagePerLaCare: React.FC = () => {
               >
                 {post.data.box4content}
               </Typography>
-            </Box>
+            </Box> */}
+            <div style={styles.container}>
+              <Card style={{ ...styles.card, ...styles.topLeft }}>
+                <Typography variant="h6" component="div">
+                  {post.data.box1header}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  {post.data.box1content}
+                </Typography>
+              </Card>
+              <Card style={{ ...styles.card, ...styles.topRight }}>
+                <Typography variant="h6" component="div">
+                  {post.data.box2header}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  {post.data.box2content}
+                </Typography>
+              </Card>
+              <Card style={{ ...styles.card, ...styles.bottomLeft }}>
+                <Typography variant="h6" component="div">
+                  {post.data.box3header}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  {post.data.box3content}
+                </Typography>
+              </Card>
+              <Card style={{ ...styles.card, ...styles.bottomRight }}>
+                <Typography variant="h6" component="div">
+                  {post.data.box4header}
+                </Typography>
+                <Typography variant="body2" color="textSecondary">
+                  {post.data.box4content}
+                </Typography>
+              </Card>
+            </div>
           </div>
         </>
       ))}
@@ -526,7 +611,7 @@ const ManagePerLaCare: React.FC = () => {
           >
             {posts[0]?.data.heading}
           </div>
-          <div
+          {/* <div
             style={{
               color: "#4D5053",
               fontSize: "22px",
@@ -535,9 +620,9 @@ const ManagePerLaCare: React.FC = () => {
             }}
           >
             {posts[0]?.data.description}
-          </div>
+          </div> */}
         </Grid>
-        <Grid item lg={12} style={{ marginTop: "100px" }}>
+        <Grid item lg={12} style={{ marginTop: "70px" }}>
           <div
             style={{
               textAlign: "center",
@@ -562,8 +647,8 @@ const ManagePerLaCare: React.FC = () => {
               item
               lg={5}
               style={{
-                marginTop: "50px",
-                height: "430px",
+                marginTop: "20px",
+                height: "320px",
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -610,8 +695,8 @@ const ManagePerLaCare: React.FC = () => {
                 <img
                   src={posts[0]?.data.image.url || undefined}
                   alt={posts[0]?.data.image.alt || "Image"}
-                  width={500}
-                  height={500}
+                  width="100%"
+                  height="50%"
                 />
               )}
             </Grid>
@@ -620,9 +705,11 @@ const ManagePerLaCare: React.FC = () => {
         <Grid
           item
           lg={12}
-          style={{
-            marginTop: "100px",
-          }}
+          style={
+            {
+              // marginTop: "100px",
+            }
+          }
         >
           <div
             style={{
@@ -647,8 +734,8 @@ const ManagePerLaCare: React.FC = () => {
             <Grid item lg={5}>
               {videoUrl ? (
                 <video
-                  width="500"
-                  height="500"
+                  width="100%"
+                  height="auto"
                   controls
                   style={{
                     borderRadius: "12px",
@@ -665,8 +752,8 @@ const ManagePerLaCare: React.FC = () => {
               item
               lg={5}
               style={{
-                marginTop: "100px",
-                height: "350px",
+                // marginTop: "100px",
+                height: "300px",
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -864,7 +951,7 @@ const ManagePerLaCare: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           textAlign: "center",
-          padding: "50px 200px",
+          padding: "50px 100px",
         }}
       >
         <Grid item lg={8}>

@@ -306,7 +306,7 @@ const OurCareManagementSolutions: React.FC = () => {
         justifyContent="center"
         alignItems="center"
         style={{
-          marginTop: "100px",
+          // marginTop: "100px",
           padding: "0 20px",
         }}
       >
@@ -371,8 +371,8 @@ const OurCareManagementSolutions: React.FC = () => {
               item
               lg={5}
               style={{
-                marginTop: "50px",
-                height: "350px",
+                // marginTop: "50px",
+                height: "300px",
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -967,7 +967,7 @@ const OurCareManagementSolutions: React.FC = () => {
           </>
         ))}
       </div> */}
-      <Grid container spacing={3} style={{ padding: "100px" }}>
+      <Grid container spacing={3} style={{ padding: "50px" }}>
         {points.map((item, index) => (
           <Grid
             key={index}
@@ -986,7 +986,7 @@ const OurCareManagementSolutions: React.FC = () => {
                 background: item.background,
                 borderRadius: "30px",
                 padding: "30px",
-                width: "80%",
+                width: "70%",
                 textAlign: "center",
               }}
             >

@@ -145,6 +145,181 @@
           "placeholder": ""
         }
       },
+      "heading1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading1",
+          "placeholder": ""
+        }
+      },
+      "heading1_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading1 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading1_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading1 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading2",
+          "placeholder": ""
+        }
+      },
+      "heading2_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading2 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading2_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading2 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading3": {
+        "type": "Text",
+        "config": {
+          "label": "Heading3",
+          "placeholder": ""
+        }
+      },
+      "heading3_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading3 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading3_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading3 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading4": {
+        "type": "Text",
+        "config": {
+          "label": "Heading4",
+          "placeholder": ""
+        }
+      },
+      "heading4_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading4 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading4_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading4 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading5": {
+        "type": "Text",
+        "config": {
+          "label": "Heading5",
+          "placeholder": ""
+        }
+      },
+      "heading5_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading5 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading5_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading5 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading5_point3": {
+        "type": "Text",
+        "config": {
+          "label": "Heading5 Point3",
+          "placeholder": ""
+        }
+      },
+      "heading6": {
+        "type": "Text",
+        "config": {
+          "label": "Heading6",
+          "placeholder": ""
+        }
+      },
+      "heading6_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading6 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading6_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading6 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading7": {
+        "type": "Text",
+        "config": {
+          "label": "Heading7",
+          "placeholder": ""
+        }
+      },
+      "heading7_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading7 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading7_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading7 Point2",
+          "placeholder": ""
+        }
+      },
+      "heading8": {
+        "type": "Text",
+        "config": {
+          "label": "Heading8",
+          "placeholder": ""
+        }
+      },
+      "heading8_point1": {
+        "type": "Text",
+        "config": {
+          "label": "Heading8 Point1",
+          "placeholder": ""
+        }
+      },
+      "heading8_point2": {
+        "type": "Text",
+        "config": {
+          "label": "Heading8 Point2",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

@@ -158,7 +158,7 @@ export default function BlogsNews() {
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType(
-        "soinschezmarguerite" as any
+        "managementbycare" as any
       );
       setPosts1(response);
     };
@@ -166,7 +166,7 @@ export default function BlogsNews() {
     fetchPosts();
   }, []);
 
-  const contentbackground = posts1[0]?.data?.contentbackground?.url || "";
+  const contentbackground = blogs?.data?.box_image?.url || "";
 
   return (
     <div>
@@ -301,38 +301,56 @@ export default function BlogsNews() {
                 )}
               </div>
             </div> */}
-            <div
-              style={{
-                backgroundImage: `url(${contentbackground})`,
-                backgroundSize: "cover",
-                width: "80%",
-                height: "500px",
+            <Box
+              sx={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                // marginTop: "209.87px",
-                flexDirection: "column",
               }}
             >
-              <div>
-                {blogs?.data.quote_image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={blogs?.data.quote_image.url || undefined}
-                    alt={blogs?.data.quote_image.alt || "Image"}
-                  />
-                )}
+              <div
+                style={{
+                  backgroundImage: `url(${contentbackground})`,
+                  backgroundSize: "cover",
+                  width: "100%",
+                  height: "390px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "50px",
+                  flexDirection: "column",
+                }}
+              >
+                <>
+                  <div>
+                    {blogs?.data.quote_image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={blogs?.data.quote_image.url || undefined}
+                        alt={blogs?.data.quote_image.alt || "Image"}
+                        width="100%"
+                        height="auto"
+                      />
+                    )}
+                  </div>
+                  <div>
+                    <Typography
+                      style={{
+                        fontFamily: "Jenna Sue, sans-serif",
+                        color: "#0A1411",
+                        fontWeight: 400,
+                        fontSize: "48px",
+                        lineHeight: "60px",
+                        textAlign: "center",
+                        padding: "0px 80px",
+                      }}
+                    >
+                      {blogs?.data.quote_text}
+                    </Typography>
+                  </div>
+                </>
               </div>
-              <div>
-                {blogs?.data.text_image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={blogs?.data.text_image.url || undefined}
-                    alt={blogs?.data.text_image.alt || "Image"}
-                  />
-                )}
-              </div>
-            </div>
+            </Box>
           </Grid>
           <Grid item lg={4}>
             <div>
@@ -365,8 +383,15 @@ export default function BlogsNews() {
                 }}
               />
             </div>
-            <div>
-              <div style={{ ...heading, marginTop: "50px" }}>
+            <div
+              style={{
+                background: "#FFF4EF",
+                padding: "30px 60px",
+                borderRadius: "20px",
+                marginTop: "20px",
+              }}
+            >
+              <div style={{ ...heading, marginBottom: "30px" }}>
                 {blogs?.data.latest_news}
               </div>
               {Array(3)
@@ -375,7 +400,7 @@ export default function BlogsNews() {
                   <div key={index}>
                     <div
                       style={{
-                        padding: "20px 0px",
+                        padding: "30px 0px",
                       }}
                     >
                       <div style={list}>{blogs?.data.news_lists}</div>
@@ -387,7 +412,7 @@ export default function BlogsNews() {
                   </div>
                 ))}
             </div>
-            <div
+            {/* <div
               style={{
                 background: "#BBDDD91A",
                 borderRadius: "20px",
@@ -411,8 +436,8 @@ export default function BlogsNews() {
                   </div>
                 ))}
               </div>
-            </div>
-            <div>
+            </div> */}
+            {/* <div>
               <div style={{ ...heading, marginTop: "50px" }}>
                 {blogs?.data.tags}
               </div>
@@ -436,7 +461,7 @@ export default function BlogsNews() {
                   </Button>
                 ))}
               </div>
-            </div>
+            </div> */}
           </Grid>
         </Grid>
         <Grid
@@ -444,7 +469,7 @@ export default function BlogsNews() {
           lg={7}
           style={{
             paddingLeft: "35px",
-            paddingTop:'100px'
+            paddingTop: "100px",
           }}
         >
           <div style={title}>{blogs?.data.title2}</div>
@@ -476,6 +501,49 @@ export default function BlogsNews() {
           </div>
           <div style={{ ...description, marginBottom: "60px" }}>
             {blogs?.data.description3}
+          </div>
+          <div style={{ margin: "30px 0px" }}>
+            {posts1.map((post: any) => (
+              <Button
+                key={post}
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  background: "#24535C",
+                  padding: "16px 24px 16px 24px",
+                  gap: "18px",
+                  borderRadius: "82px",
+                }}
+              >
+                <Typography
+                  style={{
+                    fontWeight: 400,
+                    fontSize: "15.2px",
+                    lineHeight: "18.24px",
+                    color: "#FFFFFF",
+                  }}
+                >
+                  {post.data.buttontext}
+                </Typography>
+                {post?.data.buttonimage && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post?.data.buttonimage.url || undefined}
+                    alt={post?.data.buttonimage.alt || "Image"}
+                    style={{
+                      background: "#82C5BE",
+                      borderRadius: "15.9px",
+                      padding: "7.29px",
+                      width: "9.27px",
+                      height: "9.27px",
+                    }}
+                  />
+                )}
+              </Button>
+            ))}
+          </div>
+          <div style={{ ...description, marginBottom: "60px" }}>
+            {blogs?.data.last_heading}
           </div>
           <hr style={{ border: "1px solid #24535C" }} />
           <div
