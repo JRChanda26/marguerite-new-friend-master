@@ -58,14 +58,6 @@
           "thumbnails": []
         }
       },
-      "text_image": {
-        "type": "Image",
-        "config": {
-          "label": "Text Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "title2": {
         "type": "Text",
         "config": {
@@ -218,6 +210,21 @@
         "type": "Text",
         "config": {
           "label": "Quote Text",
+          "placeholder": ""
+        }
+      },
+      "box_image": {
+        "type": "Image",
+        "config": {
+          "label": "Box Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "last_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Last Heading",
           "placeholder": ""
         }
       },
