@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mysqlDB from '../../lib/mysqlDB';
+import mysqlDB from '../../../lib/mysqlDB';
 
 export async function POST(req: NextRequest) {
   const { nom, email, subject, telephone, bonjour } = await req.json();

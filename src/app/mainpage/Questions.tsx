@@ -1,9 +1,10 @@
-"use client"
+"use client";
 import { createClient } from "@/prismicio";
 import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Button,
   Grid,
   Typography,
 } from "@mui/material";
@@ -12,6 +13,7 @@ import { PrismicRichText } from "@prismicio/react";
 import React, { useEffect, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import { useRouter } from "next/navigation";
 
 export default function Questions() {
   const client = createClient();
@@ -44,16 +46,24 @@ export default function Questions() {
     {
       question: settings?.data.question4,
       answer: settings?.data.answer4,
-    }
+    },
   ];
 
-  const [clicked, setClicked] = useState<{ [key: number]: boolean }>({ 1: true });
+  const [clicked, setClicked] = useState<{ [key: number]: boolean }>({
+    1: true,
+  });
 
-  const handleClicked = (index:any) => {
-    setClicked((prev:any) => ({
+  const handleClicked = (index: any) => {
+    setClicked((prev: any) => ({
       ...prev,
       [index]: !prev[index],
     }));
+  };
+
+  const router = useRouter();
+  
+  const handleNavigation = () => {
+    router.push("/contact");
   };
 
   return (
@@ -61,10 +71,14 @@ export default function Questions() {
       <Grid container spacing={2}>
         <Grid
           item
+          xs={12}
+          sm={12}
+          // md={6}
           lg={12}
-          style={{
+          sx={{
             display: "flex",
-            flexDirection: "row",
+            // flexDirection: "row",
+            flexDirection: { xs: "column", sm: "row" },
             justifyContent: "space-between",
           }}
         >
@@ -74,29 +88,30 @@ export default function Questions() {
                 color: "#14292D",
                 fontSize: "64px",
                 fontWeight: 700,
-                fontFamily:'Mulish',
-                lineHeight:'76.8px',
-                marginLeft:'50px'
+                fontFamily: "Mulish",
+                lineHeight: "76.8px",
+                marginLeft: "50px",
               }}
             >
               <PrismicRichText field={settings?.data.heading} />
             </div>
-            <PrismicNextLink
-              field={settings?.data.button_link}
+            <Button
               style={{
                 textDecoration: "none",
                 border: "1px solid #24535C",
                 color: "#24535C",
                 padding: "15px 25px",
                 borderRadius: "10px",
-                marginLeft:'50px',
-                fontFamily:'Mulish',
-                lineHeight:'26px',
-                fontSize:'21.67px'
+                marginLeft: "50px",
+                fontFamily: "Mulish",
+                lineHeight: "26px",
+                fontSize: "21.67px",
+                textTransform:'none'
               }}
+              onClick={handleNavigation}
             >
               {settings?.data.button_text}
-            </PrismicNextLink>
+            </Button>
             {settings?.data.image && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
@@ -105,12 +120,12 @@ export default function Questions() {
                 style={{
                   width: "100%",
                   height: "auto",
-                  marginTop:'100px'
+                  marginTop: "100px",
                 }}
               />
             )}
           </Grid>
-          <Grid item lg={6}>
+          <Grid item lg={6} md={6} xs={12} sm={12}>
             {faqs.map((faq, index) => (
               <Accordion
                 key={index}
@@ -123,14 +138,16 @@ export default function Questions() {
                 }}
                 onChange={() => handleClicked(index)}
               >
-                <AccordionSummary expandIcon={clicked[index] ? <RemoveIcon /> : <AddIcon />} >
+                <AccordionSummary
+                  expandIcon={clicked[index] ? <RemoveIcon /> : <AddIcon />}
+                >
                   <Typography
                     style={{
                       color: "#161C2D",
                       fontSize: "18px",
                       fontWeight: 700,
-                      lineHeight:'21.6px',
-                      fontFamily:'Mulish'
+                      lineHeight: "21.6px",
+                      fontFamily: "Mulish",
                     }}
                   >
                     {faq.question}
@@ -142,8 +159,8 @@ export default function Questions() {
                       color: "#161C2DB8",
                       fontSize: "16px",
                       fontWeight: 400,
-                      lineHeight:'28.8px',
-                      fontFamily:'Mulish'
+                      lineHeight: "28.8px",
+                      fontFamily: "Mulish",
                     }}
                   >
                     {faq.answer}

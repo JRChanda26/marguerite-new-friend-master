@@ -2,8 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
-import { Box, Button, Grid, Typography } from "@mui/material";
-import Link from "next/link";
+import { Box, Grid, Typography } from "@mui/material";
 
 const Choisir: React.FC = () => {
   const [posts, setPosts] = useState<[]>([]);
@@ -17,6 +16,8 @@ const Choisir: React.FC = () => {
     fetchPosts();
   }, []);
 
+  const [isHovered, setIsHovered] = useState<number | null>(null);
+
   return (
     <Box sx={{ background: "#BBDDD999" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -24,12 +25,14 @@ const Choisir: React.FC = () => {
           <div key={post}>
             <div>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#0A1411",
                   fontWeight: 700,
-                  fontSize: "64px",
-                  lineHeight: "80.32px",
+                  // fontSize:'64px',
+                  fontSize: { xs: "28px", md: "64px" },
+                  // lineHeight: "80.32px",
+                  lineHeight:{ xs: "28px", md: "80.32px" },
                   padding: "30px 70px",
                   textAlign: "center",
                 }}
@@ -38,22 +41,21 @@ const Choisir: React.FC = () => {
               </Typography>
             </div>
             <div style={{}}>
-              {post.data.content?.split("\n").map((line: any, index: any) => (
                 <Typography
-                  key={index}
-                  style={{
+                  sx={{
                     fontFamily: "Mulish, sans-serif",
                     color: "#565656",
                     fontWeight: 400,
-                    fontSize: "24px",
-                    lineHeight: "38.4px",
+                    // fontSize: "28px",
+                    fontSize: { xs: "14px", md: "28px" },
+                    // lineHeight: "38.4px",
+                    lineHeight:{ xs: "20px", md: "38.4px" },
                     padding: "0px 70px",
                     textAlign: "center",
                   }}
                 >
-                  {line}
+                  {post.data.content}
                 </Typography>
-              ))}
             </div>
           </div>
         ))}
@@ -65,7 +67,7 @@ const Choisir: React.FC = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
-          gap: "10px",
+          gap: "30px",
           paddingTop: "69.53px",
           paddingBottom: "113.83px",
         }}
@@ -73,7 +75,7 @@ const Choisir: React.FC = () => {
         <div
           style={{
             height: "476px",
-            width: "402px",
+            width: "350px",
             borderRadius: "16px",
             background:
               "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
@@ -82,71 +84,54 @@ const Choisir: React.FC = () => {
           }}
         >
           {posts.map((post: any, postIndex: number) => (
-            <>
-              <div
+            <div key={post} style={{ padding: "30px", textAlign: "center" }}>
+              {post?.data.homelogo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.data.homelogo.url || undefined}
+                  alt={post.data.homelogo.alt || "Image"}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                />
+              )}
+              <Typography
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  alignItems: "center",
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#1E1E1E",
+                  fontWeight: 400,
+                  fontSize: "24px",
+                  lineHeight: "38.4px",
+                  paddingTop: "20px",
                 }}
               >
-                <div>
-                  <img
-                    src={post.data.homelogo?.url || ""}
-                    alt={post.data.homelogo?.alt || "icon"}
-                    style={{
-                      height: "56.12px",
-                      width: "63.13px",
-                      paddingTop: "75.06px",
-                      paddingBottom: "62.83px",
-                    }}
-                  />
-                </div>
-                <div>
-                  {post.data.homeheader
-                    ?.split("\n")
-                    .map((line: any, index: any) => (
-                      <Typography
-                        key={index}
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          color: "#1E1E1E",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "38.4px",
-                        }}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                </div>
-                <div style={{ paddingTop: "21px" }}>
-                  {post.data.homecontent
-                    ?.split("\n")
-                    .map((line: any, index: any) => (
-                      <Typography
-                        key={index}
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          color: "#1E1E1E",
-                          fontWeight: 400,
-                          fontSize: "16px",
-                          lineHeight: "29.6px",
-                        }}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                </div>
-              </div>
+                {post.data.homeheader}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#1E1E1E",
+                  fontWeight: 400,
+                  fontSize: "16px",
+                  lineHeight: "29.6px",
+                  textAlign: "left",
+                  paddingTop: "20px",
+                }}
+              >
+                {post.data.homecontent}
+              </Typography>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
                   paddingTop: "21px",
+                  transition: "transform 0.3s ease",
+                  transform: isHovered === 1 ? "scale(1.05)" : "scale(1)",
                 }}
+                onMouseEnter={() => setIsHovered(1)}
+                onMouseLeave={() => setIsHovered(null)}
               >
                 <Typography
                   style={{
@@ -159,117 +144,112 @@ const Choisir: React.FC = () => {
                 >
                   {post.data.buttontext}
                 </Typography>
-                <img
-                  src={post.data.buttonicon?.url || ""}
-                  alt={post.data.buttonicon?.alt || "icon"}
-                  style={{ width: "48px", height: "24px" }}
-                />
+                {post?.data.buttonicon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.buttonicon.url || undefined}
+                    alt={post.data.buttonicon.alt || "Image"}
+                    style={{
+                      width: "48px",
+                      height: "24px",
+                    }}
+                  />
+                )}
               </div>
-            </>
+            </div>
           ))}
         </div>
 
         <div
           style={{
             height: "575.83px",
-            width: "486.31px",
+            width: "400px",
             borderRadius: "16px",
             background:
               "linear-gradient(180.23deg, #FFFFFF 7.39%, #FFFFFF 45.36%, #FFB699 193.52%)",
           }}
         >
           {posts.map((post: any, postIndex: number) => (
-            <>
-              <div
+            <div key={post} style={{ padding: "30px", textAlign: "center" }}>
+              {post?.data.editlogo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.data.editlogo.url || undefined}
+                  alt={post.data.editlogo.alt || "Image"}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                />
+              )}
+              <Typography
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  alignItems: "center",
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#1E1E1E",
+                  fontWeight: 400,
+                  fontSize: "28px",
+                  lineHeight: "38.4px",
+                  paddingTop: "30px",
                 }}
               >
-                <div>
-                  <img
-                    src={post.data.editlogo?.url || ""}
-                    alt={post.data.editlogo?.alt || "icon"}
-                    style={{
-                      height: "111.78px",
-                      width: "77.04px",
-                      paddingTop: "75.06px",
-                      paddingBottom: "58.84px",
-                    }}
-                  />
-                </div>
-                <div>
-                  {post.data.editlogoheader
-                    ?.split("\n")
-                    .map((line: any, index: any) => (
-                      <Typography
-                        key={index}
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          color: "#1E1E1E",
-                          fontWeight: 600,
-                          fontSize: "29.03px",
-                          lineHeight: "36.44px",
-                        }}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                </div>
-                <div style={{ paddingTop: "44.76px" }}>
-                  {post.data.editlogocontent
-                    ?.split("\n")
-                    .map((line: any, index: any) => (
-                      <Typography
-                        key={index}
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          color: "#1E1E1E",
-                          fontWeight: 400,
-                          fontSize: "16px",
-                          lineHeight: "29.6px",
-                        }}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                </div>
-              </div>
+                {post.data.editlogoheader}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#1E1E1E",
+                  fontWeight: 400,
+                  fontSize: "18px",
+                  lineHeight: "29.6px",
+                  textAlign: "left",
+                  paddingTop: "30px",
+                }}
+              >
+                {post.data.editlogocontent}
+              </Typography>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  paddingTop: "44.76px",
+                  paddingTop: "21px",
+                  transition: "transform 0.3s ease",
+                  transform: isHovered === 2 ? "scale(1.05)" : "scale(1)",
                 }}
+                onMouseEnter={() => setIsHovered(2)}
+                onMouseLeave={() => setIsHovered(null)}
               >
                 <Typography
                   style={{
                     color: "#24535C",
                     fontWeight: 400,
-                    fontSize: "16.94px",
-                    lineHeight: "31.33px",
-                    paddingRight: "14.31px",
+                    fontSize: "14px",
+                    lineHeight: "25.9px",
+                    paddingRight: "12px",
                   }}
                 >
                   {post.data.buttontext}
                 </Typography>
-                <img
-                  src={post.data.buttonicon?.url || ""}
-                  alt={post.data.buttonicon?.alt || "icon"}
-                  style={{ width: "48px", height: "24px" }}
-                />
+                {post?.data.buttonicon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.buttonicon.url || undefined}
+                    alt={post.data.buttonicon.alt || "Image"}
+                    style={{
+                      width: "48px",
+                      height: "24px",
+                    }}
+                  />
+                )}
               </div>
-            </>
+            </div>
           ))}
         </div>
 
         <div
           style={{
             height: "476px",
-            width: "402px",
+            width: "350px",
             borderRadius: "16px",
             background:
               "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
@@ -278,71 +258,54 @@ const Choisir: React.FC = () => {
           }}
         >
           {posts.map((post: any, postIndex: number) => (
-            <>
-              <div
+            <div key={post} style={{ padding: "30px", textAlign: "center" }}>
+              {post?.data.calenderlogo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.data.calenderlogo.url || undefined}
+                  alt={post.data.calenderlogo.alt || "Image"}
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                />
+              )}
+              <Typography
                 style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                  alignItems: "center",
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#1E1E1E",
+                  fontWeight: 400,
+                  fontSize: "24px",
+                  lineHeight: "38.4px",
+                  paddingTop: "20px",
                 }}
               >
-                <div>
-                  <img
-                    src={post.data.calenderlogo?.url || ""}
-                    alt={post.data.calenderlogo?.alt || "icon"}
-                    style={{
-                      height: "80.18px",
-                      width: "80.18px",
-                      paddingTop: "75.06px",
-                      paddingBottom: "43.59px",
-                    }}
-                  />
-                </div>
-                <div>
-                  {post.data.calenderheader
-                    ?.split("\n")
-                    .map((line: any, index: any) => (
-                      <Typography
-                        key={index}
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          color: "#565656",
-                          fontWeight: 400,
-                          fontSize: "24px",
-                          lineHeight: "38.4px",
-                        }}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                </div>
-                <div style={{ paddingTop: "17px" }}>
-                  {post.data.calendercontent
-                    ?.split("\n")
-                    .map((line: any, index: any) => (
-                      <Typography
-                        key={index}
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          color: "#1E1E1E",
-                          fontWeight: 400,
-                          fontSize: "16px",
-                          lineHeight: "29.6px",
-                        }}
-                      >
-                        {line}
-                      </Typography>
-                    ))}
-                </div>
-              </div>
+                {post.data.calenderheader}
+              </Typography>
+              <Typography
+                style={{
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#1E1E1E",
+                  fontWeight: 400,
+                  fontSize: "14px",
+                  lineHeight: "29.6px",
+                  textAlign: "left",
+                  paddingTop: "20px",
+                }}
+              >
+                {post.data.calendercontent}
+              </Typography>
               <div
                 style={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  paddingTop: "17px",
+                  paddingTop: "21px",
+                  transition: "transform 0.3s ease",
+                  transform: isHovered === 3 ? "scale(1.05)" : "scale(1)",
                 }}
+                onMouseEnter={() => setIsHovered(3)}
+                onMouseLeave={() => setIsHovered(null)}
               >
                 <Typography
                   style={{
@@ -355,13 +318,19 @@ const Choisir: React.FC = () => {
                 >
                   {post.data.buttontext}
                 </Typography>
-                <img
-                  src={post.data.buttonicon?.url || ""}
-                  alt={post.data.buttonicon?.alt || "icon"}
-                  style={{ width: "48px", height: "24px" }}
-                />
+                {post?.data.buttonicon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.buttonicon.url || undefined}
+                    alt={post.data.buttonicon.alt || "Image"}
+                    style={{
+                      width: "48px",
+                      height: "24px",
+                    }}
+                  />
+                )}
               </div>
-            </>
+            </div>
           ))}
         </div>
       </Grid>
