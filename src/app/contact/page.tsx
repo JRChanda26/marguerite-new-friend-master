@@ -133,7 +133,7 @@ export default function Contact() {
     };
 
     try {
-      const response = await fetch("/api/save-data", {
+      const response = await fetch("/api/save-data/contact-data", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -20,24 +20,20 @@ const NousAgissons: React.FC = () => {
 
   const [isVisible, setIsVisible] = useState(false);
 
-useEffect(() => {
-  // Trigger the fade-in effect once the component mounts
-  setTimeout(() => {
-    setIsVisible(true);
-  }, 500); // Delay before the fade-in starts (adjust as needed)
-}, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsVisible(true);
+    }, 500);
+  }, []);
 
   const router = useRouter();
 
   const handleNavigation = () => {
-    router.push('/contact');
+    router.push("/contact");
   };
-  
 
   return (
     <Box>
-      
-
       <div>
         {posts.map((post: any) => (
           <>
@@ -52,14 +48,14 @@ useEffect(() => {
                 position: "absolute",
                 backgroundColor: "#FFFFFF",
                 borderRadius: "48px",
-                margin: "200px 600px 0px 100px",
-                padding: '30px',
+                // margin: "200px 600px 0px 100px",
+                margin: "10% 40% 0px 5%",
+                padding: "30px",
                 opacity: isVisible ? 1 : 0, // Control visibility with state
-                transform: isVisible ? 'translateY(0)' : 'translateY(50px)', // Initial animation effect
-                transition: 'opacity 2s ease-in-out, transform 2s ease-in-out', // Smooth transition for both opacity and transform
+                transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
+                transition: "opacity 2s ease-in-out, transform 2s ease-in-out", // Smooth transition for both opacity and transform
               }}
-      
-              
+
               // style={{
               //   position: "absolute",
               //   backgroundColor: "#FFFFFF",
@@ -78,30 +74,32 @@ useEffect(() => {
               // }}
             >
               <div>
-              <Typography
-                style={{
-                  fontFamily: "Jenna Sue",
-                  fontWeight: 400,
-                  fontSize: "44px",
-                  lineHeight: "76.8px",
-                  color: "rgba(36, 83, 92, 1)",
-                  
-                }}
-              >
-                {post.data.leftcontent1}
-              </Typography>
-              <Typography
-                style={{
-                  fontFamily: "Mulish",
-                  color: "rgba(36, 83, 92, 1)",
-                  fontWeight: 700,
-                  fontSize: "45px",
-                  lineHeight: "69.6px",
-                }}
-              >
-                {post.data.leftcontent2}
-              </Typography>
-              {/* <Link href="/Footer" style={{ textDecoration: "none" }}> */}
+                <Typography
+                  sx={{
+                    fontFamily: "Jenna Sue",
+                    fontWeight: 400,
+                    // fontSize: "44px",
+                    fontSize: "5vw",
+                    // lineHeight: "76.8px",
+                    lineHeight:{ xs: "35px", md: "69.6px" },
+                    color: "rgba(36, 83, 92, 1)",
+                  }}
+                >
+                  {post.data.leftcontent1}
+                </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Mulish",
+                    color: "rgba(36, 83, 92, 1)",
+                    fontWeight: 700,
+                    // fontSize: "45px",
+                    fontSize: "3.5vw",
+                    // lineHeight: "69.6px",
+                    lineHeight:{ xs: "20px", md: "69.6px" },
+                  }}
+                >
+                  {post.data.leftcontent2}
+                </Typography>
                 <Button
                   style={{
                     display: "flex",
@@ -110,34 +108,40 @@ useEffect(() => {
                     padding: "5px 10px",
                     gap: "18px",
                     borderRadius: "82px",
-                    // top:'36px'
+                    marginTop: "20px",
+                    maxWidth: "200px",
+                    width: "100%",
+                    justifyContent: "center",
                   }}
                   onClick={handleNavigation}
                 >
                   <Typography
-                    style={{
-                      fontFamily:'Mulish',
+                    sx={{
+                      fontFamily: "Mulish",
                       fontWeight: 400,
-                      fontSize: "15.2px",
+                      // fontSize: "15.2px",
+                      fontSize: { xs: "10px", md: "15.2px" },
                       lineHeight: "18.24px",
                       color: "rgba(255, 255, 255, 1)",
                     }}
                   >
                     {post.data.buttontext}
                   </Typography>
-                  <img
-                    src={post.data.buttonimage.url || ""}
-                    alt={post.data.buttonimage}
-                    style={{
-                      width:'30px',
-                      height:'30px'
-                    }}
-                  />
+                  {post?.data.buttonimage && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.buttonimage.url || ""}
+                      alt={post.data.buttonimage}
+                      style={{
+                        width: "30px",
+                        height: "30px",
+                      }}
+                    />
+                  )}
                 </Button>
-              {/* </Link> */}
               </div>
             </div>
-            <Grid container spacing={0} key={post.id}>
+            {/* <Grid container spacing={0} key={post.id}>
               <Grid item lg={4} sx={{ backgroundColor: "#F6C09E" }}></Grid>
               <Grid item lg={8}>
                 <img
@@ -145,6 +149,28 @@ useEffect(() => {
                   alt={post.data.backgroundimage}
                   style={{ height: "100%", width: "100%" }}
                 />
+              </Grid>
+            </Grid> */}
+            <Grid container spacing={0} key={post.id}>
+              <Grid
+                item
+                xs={12}
+                sm={4}
+                sx={{ backgroundColor: "#F6C09E" }}
+              ></Grid>
+              <Grid item xs={12} sm={8}>
+                {post?.data.backgroundimage && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.backgroundimage.url || ""}
+                    alt={post.data.backgroundimage}
+                    style={{
+                      height: "100%",
+                      width: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                )}
               </Grid>
             </Grid>
           </>

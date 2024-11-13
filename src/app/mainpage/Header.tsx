@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 
 const Header: React.FC = () => {
@@ -16,16 +16,6 @@ const Header: React.FC = () => {
 
     fetchPosts();
   }, []);
-
-  const [isVisible, setIsVisible] = useState(false);
-
-useEffect(() => {
-  // Trigger the fade-in effect once the component mounts
-  setTimeout(() => {
-    setIsVisible(true);
-  }, 500); // Delay before the fade-in starts (adjust as needed)
-}, []);
-
 
   return (
     <Box>
@@ -41,96 +31,102 @@ useEffect(() => {
               zIndex: 1,
               display: "flex",
               flexDirection: "row",
-              boxShadow:'0px 0px 51.7px 0px rgba(36, 83, 92, 0.1)',
-              backdropFilter:'blur(58.09981155395508px)',
-              background:'rgba(255, 255, 255, 0.7)',
-              // boxShadow: "10px 10px 20px rgba(0, 0, 0, 0.2)",
-              // background: "#24535C1A",
-              // background: "rgba(36, 83, 92, 0.1)",
-              // right: 0,
-              width: "100%",
-              // width: "calc(100% - 123px)",
-              borderRadius: "0px 16px",
-              // justifyContent: "space-between",
+              boxShadow: "0px 0px 51.7px 0px rgba(36, 83, 92, 0.1)",
+              backdropFilter: "blur(58.09981155395508px)",
+              background: "rgba(255, 255, 255, 0.7)",
+              width: "99%",
+              borderBottomLeftRadius: "30px",
+              borderBottomRightRadius: "30px",
               boxSizing: "border-box",
-              border:'2.32px solid rgba(255, 255, 255, 0.1)',
-              justifyContent:'space-evenly',
+              // border: "2.32px solid rgba(255, 255, 255, 0.1)",
+              justifyContent: "space-evenly",
             }}
           >
-            <Grid item lg={12} sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent:'space-evenly',
-                alignItems:'center',
-                padding:'10px'
-                }}>
-              <img
-                src={post.data.logo.url || ""}
-                alt={post.data.logo.alt || "logo"}
-                style={{ height: "70px", width: "122px" ,
-                  // padding:'13px 0px 13px 124px'
-                }}
-              />
-            {/* </Grid>
             <Grid
               item
-              lg={10}
-              style={{
+              xs={12}
+              sm={12}
+              // md={3}
+              lg={12}
+              sx={{
                 display: "flex",
-                flexDirection: "row",
-                // gap: "55.33px",
-                // justifyContent: "flex-end",
+                // flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row" },
+                justifyContent: "space-evenly",
+                alignItems: "center",
+                padding: "10px",
               }}
-            > */}
-            <Link href={'/manageperlacare'} style={{textDecoration:'none'}}>
-              <Typography
-                style={{
-                  fontFamily:'Mulish',
-                  color: "#24535C",
-                  fontSize: "26.49px",
-                  fontWeight: 400,
-                  lineHeight:'33.25px',
-                  // padding:'27px 55.33px 36px 262px'
-                }}
+            >
+              {post?.data.logo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.data.logo.url || undefined}
+                  alt={post.data.logo.alt || "Image"}
+                  style={{
+                    width: "10%",
+                    height: "auto",
+                  }}
+                />
+              )}
+              <Link
+                href={"/manageperlacare"}
+                style={{ textDecoration: "none" }}
               >
-                {post.data.title1}
-              </Typography>
+                <Typography
+                  sx={{
+                    fontFamily: "Mulish",
+                    color: "#24535C",
+                    // fontSize: "26.49px",
+                    fontSize: { xs: "17px", md: "26.49px" },
+                    fontWeight: 400,
+                    lineHeight: "33.25px",
+                    // padding:'27px 55.33px 36px 262px'
+                  }}
+                >
+                  {post.data.title1}
+                </Typography>
               </Link>
-              <Link href={'/lecarechez'} style={{textDecoration:'none'}}>
-              <Typography
-                style={{
-                  fontFamily:'Mulish',
-                  color: "#24535C",
-                  fontSize: "26.49px",
-                  fontWeight: 400,
-                  lineHeight:'33.25px',
-                  // padding:'27px 27.67px 36px 55.33px'
-                }}
-              >
-                {post.data.title2}
-              </Typography>
+              <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    fontFamily: "Mulish",
+                    color: "#24535C",
+                    // fontSize: "26.49px",
+                    fontSize: { xs: "17px", md: "26.49px" },
+                    fontWeight: 400,
+                    lineHeight: "33.25px",
+                    // padding:'27px 27.67px 36px 55.33px'
+                  }}
+                >
+                  {post.data.title2}
+                </Typography>
               </Link>
-              <Link href={'/caremanagement'} style={{textDecoration:'none'}}>
-              <Typography
-                style={{
-                  fontFamily:'Mulish',
-                  color: "#24535C",
-                  fontSize: "26.49px",
-                  fontWeight: 400,
-                  lineHeight:'33.25px',
-                  // padding:'27px 57.53px 36px 27.67px'
-                }}
-              >
-                {post.data.title3}
-              </Typography>
+              <Link href={"/caremanagement"} style={{ textDecoration: "none" }}>
+                <Typography
+                  sx={{
+                    fontFamily: "Mulish",
+                    color: "#24535C",
+                    // fontSize: "26.49px",
+                    fontSize: { xs: "17px", md: "26.49px" },
+                    fontWeight: 400,
+                    lineHeight: "33.25px",
+                    // padding:'27px 57.53px 36px 27.67px'
+                  }}
+                >
+                  {post.data.title3}
+                </Typography>
               </Link>
-              <img
-                src={post.data.contact.url || ""}
-                alt={post.data.contact.alt || "icon"}
-                style={{ height: "66.7px", width: "66.7px", 
-                  // padding:'13.08px 0px 16.22px 57.53px'
-                }}
-              />
+              {post?.data.contact && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.data.contact.url || undefined}
+                  alt={post.data.contact.alt || "Image"}
+                  style={{
+                    width: "5%",
+                    height: "auto",
+                  }}
+                />
+              )}
             </Grid>
           </Grid>
         ))}
