@@ -14,33 +14,32 @@
           "thumbnails": []
         }
       },
-      "headertext": {
+      "title": {
         "type": "Text",
         "config": {
-          "label": "headertext",
+          "label": "Title",
           "placeholder": ""
         }
       },
-      "notre": {
+      "description": {
         "type": "Text",
         "config": {
-          "label": "notre",
+          "label": "Description",
           "placeholder": ""
         }
       },
-      "client": {
+      "testimonial1": {
         "type": "Text",
         "config": {
-          "label": "client",
+          "label": "Testimonial1",
           "placeholder": ""
         }
       },
-      "contentimage": {
-        "type": "Image",
+      "testimonial2": {
+        "type": "Text",
         "config": {
-          "label": "contentimage",
-          "constraint": {},
-          "thumbnails": []
+          "label": "Testimonial2",
+          "placeholder": ""
         }
       },
       "slices": {
