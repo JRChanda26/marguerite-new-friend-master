@@ -1662,39 +1662,6 @@ type LiberezDocumentDataSlicesSlice = never;
  */
 interface LiberezDocumentData {
   /**
-   * Title field in *Liberez*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: liberez.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  title: prismic.RichTextField;
-
-  /**
-   * Description field in *Liberez*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: liberez.description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Text Field field in *Liberez*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Entrez votre adresse email
-   * - **API ID Path**: liberez.text_field
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  text_field: prismic.KeyTextField;
-
-  /**
    * Button Text field in *Liberez*
    *
    * - **Field Type**: Text
@@ -1704,6 +1671,28 @@ interface LiberezDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
+
+  /**
+   * Title field in *Liberez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: liberez.title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * Description field in *Liberez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: liberez.description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  description: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Liberez*
@@ -2364,48 +2353,48 @@ interface MotsdenotreclientDocumentData {
   backgroundimage: prismic.ImageField<never>;
 
   /**
-   * headertext field in *motsdenotreclient*
+   * Title field in *motsdenotreclient*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: motsdenotreclient.headertext
+   * - **API ID Path**: motsdenotreclient.title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  headertext: prismic.KeyTextField;
+  title: prismic.KeyTextField;
 
   /**
-   * notre field in *motsdenotreclient*
+   * Description field in *motsdenotreclient*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: motsdenotreclient.notre
+   * - **API ID Path**: motsdenotreclient.description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  notre: prismic.KeyTextField;
+  description: prismic.KeyTextField;
 
   /**
-   * client field in *motsdenotreclient*
+   * Testimonial1 field in *motsdenotreclient*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: motsdenotreclient.client
+   * - **API ID Path**: motsdenotreclient.testimonial1
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  client: prismic.KeyTextField;
+  testimonial1: prismic.KeyTextField;
 
   /**
-   * contentimage field in *motsdenotreclient*
+   * Testimonial2 field in *motsdenotreclient*
    *
-   * - **Field Type**: Image
+   * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: motsdenotreclient.contentimage
+   * - **API ID Path**: motsdenotreclient.testimonial2
    * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
+   * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  contentimage: prismic.ImageField<never>;
+  testimonial2: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *motsdenotreclient*
@@ -4976,17 +4965,6 @@ declare module "@prismicio/client" {
       repositoryNameOrEndpoint: string,
       options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
-  }
-
-  interface CreateWriteClient {
-    (
-      repositoryNameOrEndpoint: string,
-      options: prismic.WriteClientConfig,
-    ): prismic.WriteClient<AllDocumentTypes>;
-  }
-
-  interface CreateMigration {
-    (): prismic.Migration<AllDocumentTypes>;
   }
 
   namespace Content {
