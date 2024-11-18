@@ -147,6 +147,28 @@
           "thumbnails": []
         }
       },
+      "footer_text": {
+        "type": "Text",
+        "config": {
+          "label": "Footer Text",
+          "placeholder": ""
+        }
+      },
+      "link_text": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text",
+          "placeholder": ""
+        }
+      },
+      "arrow_image": {
+        "type": "Image",
+        "config": {
+          "label": "Arrow Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

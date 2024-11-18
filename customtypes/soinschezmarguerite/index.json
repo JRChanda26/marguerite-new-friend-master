@@ -444,6 +444,14 @@
           "placeholder": ""
         }
       },
+      "comma_image": {
+        "type": "Image",
+        "config": {
+          "label": "Comma Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
