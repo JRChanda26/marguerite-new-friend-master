@@ -73,13 +73,37 @@ export default function Blogs() {
     color: "#161C2DB8",
   };
 
-  const [articlePage, setArticlePage] = useState(0);
-  const fixedRowsPerArticlePage = 3;
+  // const articleItems = Array.from({ length: 30 });
 
-  const articleItems = Array.from({ length: 30 });
+  const articleItems = [
+    {
+      image: settings?.data.image1,
+      subTitle: settings?.data.sub_title2,
+      description: settings?.data.description2,
+    },
+    {
+      image: settings?.data.image2,
+      subTitle: settings?.data.sub_title3,
+      description: settings?.data.description3,
+    },
+    {
+      image: settings?.data.image3,
+      subTitle: settings?.data.sub_title4,
+      description: settings?.data.description4,
+    },
+  ];
+
+  const repeatedArticleItems = Array.from(
+    { length: 27 },
+    (_, index) => articleItems[index % articleItems.length]
+  );
+
+  const fixedRowsPerArticlePage = 9;
+
+  const [articlePage, setArticlePage] = useState(0);
 
   const totalArticlePages = Math.ceil(
-    articleItems.length / fixedRowsPerArticlePage
+    repeatedArticleItems.length / fixedRowsPerArticlePage
   );
 
   const handleArticleBackButtonClick = () => {
@@ -135,6 +159,28 @@ export default function Blogs() {
   };
 
   const [inputValue, setInputValue] = useState("");
+
+  const [mouseHover, setMouseHover] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    setMouseHover(index);
+  };
+
+  const handleMouseLeave = () => {
+    setMouseHover(null);
+  };
+
+  const getHoverStyle = (baseStyle: React.CSSProperties, index: number) => {
+    return {
+      ...baseStyle,
+      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+      transform: mouseHover === index ? "scale(1.10)" : "scale(1)",
+      boxShadow:
+        mouseHover === index
+          ? "0px 8px 10px rgba(0, 0, 0, 0.3)"
+          : "0px 4px 12px rgba(0, 0, 0, 0.1)",
+    };
+  };
 
   return (
     <div>
@@ -298,11 +344,14 @@ export default function Blogs() {
                 disabled={page === 0}
                 aria-label="previous page"
                 sx={{
-                  ...buttonStyle,
+                  // ...buttonStyle,
+                  ...getHoverStyle({ ...buttonStyle }, 1),
                   "&:hover": {
                     background: "#BEDFDB",
                   },
                 }}
+                onMouseEnter={() => handleMouseEnter(1)}
+                onMouseLeave={handleMouseLeave}
               >
                 <KeyboardArrowLeftIcon />
               </IconButton>
@@ -311,11 +360,14 @@ export default function Blogs() {
                 disabled={page >= totalPages - 1}
                 aria-label="next page"
                 sx={{
-                  ...buttonStyle,
+                  // ...buttonStyle,
+                  ...getHoverStyle({ ...buttonStyle }, 2),
                   "&:hover": {
                     background: "#BEDFDB",
                   },
                 }}
+                onMouseEnter={() => handleMouseEnter(2)}
+                onMouseLeave={handleMouseLeave}
               >
                 <KeyboardArrowRightIcon />
               </IconButton>
@@ -333,18 +385,18 @@ export default function Blogs() {
       >
         <Typography
           sx={{
-            // fontSize: "48px",
             fontSize: { xs: "25px", sm: "40px", lg: "50px" },
             lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
             fontWeight: 700,
-            // lineHeight: "58px",
             color: "#000000",
-            marginTop: "50px",
+            textAlign: "center",
+            margin: "50px 0px",
           }}
         >
           {settings?.data.title2}
         </Typography>
-        {articleItems
+
+        {/* {articleItems
           .slice(
             articlePage * fixedRowsPerArticlePage,
             articlePage * fixedRowsPerArticlePage + fixedRowsPerArticlePage
@@ -365,7 +417,7 @@ export default function Blogs() {
                 gap: "50px",
               }}
             >
-              {/* [{articlePage * fixedRowsPerArticlePage + index + 1}] */}
+               [{articlePage * fixedRowsPerArticlePage + index + 1}] 
               <Grid
                 item
                 lg={3.5}
@@ -445,7 +497,67 @@ export default function Blogs() {
                 <p style={description}>{settings?.data.description4}</p>
               </Grid>
             </Grid>
-          ))}
+          ))} */}
+        <Grid
+          item
+          lg={12}
+          xs={12}
+          sm={12}
+          sx={{
+            display: "grid",
+            // gridTemplateColumns: "repeat(3, 1fr)",
+            gridTemplateColumns: {
+              xs: "repeat(1, 1fr)",
+              sm: "repeat(2, 1fr)",
+              lg: "repeat(3, 1fr)",
+            },
+            gap: "50px",
+            justifyContent: "center",
+            padding: "50px",
+          }}
+        >
+          {repeatedArticleItems
+            .slice(
+              articlePage * fixedRowsPerArticlePage,
+              articlePage * fixedRowsPerArticlePage + fixedRowsPerArticlePage
+            )
+            .map((item, index) => (
+              <Grid
+                item
+                lg={12}
+                xs={12}
+                sm={12}
+                key={index}
+                sx={{
+                  background: "#FFFFFF",
+                  display: "flex",
+                  flexDirection: "column",
+                  padding: "20px",
+                  borderRadius: "20px",
+                  boxShadow: "0 5px 10px rgba(0, 0, 0, 0.5)",
+                  gap: "10px",
+                  transition: "transform 0.3s ease",
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                  },
+                }}
+              >
+                {item.image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={item.image.url || undefined}
+                    alt={item.image.alt || "Image"}
+                    style={{
+                      height: "auto",
+                      width: "100%",
+                    }}
+                  />
+                )}
+                <p style={title}>{item.subTitle}</p>
+                <p style={description}>{item.description}</p>
+              </Grid>
+            ))}
+        </Grid>
         <div
           style={{
             display: "flex",
@@ -472,12 +584,13 @@ export default function Blogs() {
           </IconButton>
           {[
             ...Array(
-              Math.ceil(articleItems.length / fixedRowsPerArticlePage)
+              Math.ceil(repeatedArticleItems.length / fixedRowsPerArticlePage)
             ).keys(),
           ].map((pageNumber) => {
             const startPage = Math.max(0, articlePage - 1);
             const endPage = Math.min(
-              Math.ceil(articleItems.length / fixedRowsPerArticlePage) - 1,
+              Math.ceil(repeatedArticleItems.length / fixedRowsPerArticlePage) -
+                1,
               startPage + 2
             );
 

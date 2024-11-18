@@ -198,9 +198,12 @@ const Motsdenotreclient: React.FC = () => {
                 sx={{
                   display: "flex",
                   gap: "20px",
-                  animation: "slide 50s linear infinite",
+                  animation: "slide 40s linear infinite",
                   width: "100%",
                   maxWidth: "100vw",
+                  "&:hover": {
+                    animationDuration: "80s",
+                  },
                 }}
               >
                 {repeatedTestimonials.map((testimonial, index) => (
