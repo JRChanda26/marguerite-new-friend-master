@@ -1,41 +1,37 @@
-# Stage 1: Build environment (using node:18-alpine)
+# Stage 1: Build the application
 FROM node:18-alpine AS builder
-
-# Set working directory
+ 
+# Set the working directory
 WORKDIR /app
-
-# Copy package.json and package-lock.json (if present)
+ 
+# Copy package.json and package-lock.json (or yarn.lock)
 COPY package*.json ./
-
-# Install dependencies, including dev dependencies for build
-RUN npm install --legacy-peer-deps
-
+ 
+# Install dependencies
+RUN npm install
+ 
 # Copy the rest of the application code
 COPY . .
-
-# Build the Next.js application for production
+ 
+# Build the application for production
 RUN npm run build
-
-# Stage 2: Production environment (using node:18-alpine)
+ 
+# Stage 2: Run the application
 FROM node:18-alpine
-
-# Set working directory
+ 
+# Set the working directory
 WORKDIR /app
-
-# Copy necessary files from the builder stage
-COPY --from=builder /app/.next ./.next
+ 
+# Copy only the necessary files from the build stage
 COPY --from=builder /app/package*.json ./
+COPY --from=builder /app/.next ./.next
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/node_modules ./node_modules
-
-# Install only production dependencies (excluding dev dependencies)
-RUN npm install --only=production --legacy-peer-deps
-
-# Set environment variables for production (optional, if any)
-ENV NODE_ENV=production
-
-# Expose the port the app will run on
-EXPOSE 80
-
+ 
+# Set environment variables (optional)
+ENV PORT 3001
+EXPOSE 3001
+ 
 # Start the Next.js application
-CMD ["npm", "run", "start"]
+CMD ["npm", "start"]
+ 
