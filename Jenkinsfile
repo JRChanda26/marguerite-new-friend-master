@@ -57,7 +57,7 @@ pipeline {
           }
 
           // Run the new Docker container with the specified port mapping
-          sh "docker run -d -p 3001:3001 iosysdev/marguerite:${BUILD_NUMBER}"
+          sh "docker run -d -p 3001:80 iosysdev/marguerite:${BUILD_NUMBER}"
         }
       }
     }

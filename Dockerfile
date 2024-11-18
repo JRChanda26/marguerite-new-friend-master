@@ -35,7 +35,7 @@ RUN npm install --only=production --legacy-peer-deps
 ENV NODE_ENV=production
 
 # Expose the port the app will run on
-EXPOSE 3001
+EXPOSE 80
 
 # Start the Next.js application
 CMD ["npm", "run", "start"]
