@@ -244,7 +244,7 @@ export default function SoinChez() {
             flexWrap: "wrap",
             justifyContent: "space-evenly",
             marginBottom: "50px",
-            animation: "scroll-left 15s linear infinite",
+            animation: "slide 50s linear infinite",
           }}
         >
           {items
@@ -328,16 +328,16 @@ export default function SoinChez() {
           />
         ))}
         </Grid> */}
-       <style jsx>{`
-        @keyframes scroll-left {
-          0% {
-            transform: translateX(0);
+        <style jsx>{`
+          @keyframes slide {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
           }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-      `}</style>
+        `}</style>
       </Grid>
     </div>
   );

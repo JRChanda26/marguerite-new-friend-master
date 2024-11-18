@@ -120,6 +120,28 @@ const ManagePerLaCare: React.FC = () => {
     },
   };
 
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
+  const handleMouseEnter = (index: number) => {
+    setHoveredCard(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCard(null);
+  };
+
+  const getCardStyle = (baseStyle: React.CSSProperties, index: number) => {
+    return {
+      ...baseStyle,
+      transition: "transform 0.3s ease, box-shadow 0.3s ease",
+      transform: hoveredCard === index ? "scale(1.05)" : "scale(1)", // Zoom effect
+      boxShadow:
+        hoveredCard === index
+          ? "0px 8px 20px rgba(0, 0, 0, 0.2)" // Enhance shadow on hover
+          : "0px 4px 12px rgba(0, 0, 0, 0.1)", // Default shadow
+    };
+  };
+
   const router = useRouter();
 
   const handleNavigation = () => {
@@ -334,7 +356,12 @@ const ManagePerLaCare: React.FC = () => {
             }}
           >
             <div style={styles.container}>
-              <Card style={{ ...styles.card, ...styles.topLeft }}>
+              <Card
+                // style={{ ...styles.card, ...styles.topLeft }}
+                style={getCardStyle({ ...styles.card, ...styles.topLeft }, 0)}
+                onMouseEnter={() => handleMouseEnter(0)}
+                onMouseLeave={handleMouseLeave}
+              >
                 <Typography
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
@@ -348,7 +375,12 @@ const ManagePerLaCare: React.FC = () => {
                   {post.data.box1content}
                 </Typography>
               </Card>
-              <Card style={{ ...styles.card, ...styles.topRight }}>
+              <Card
+                // style={{ ...styles.card, ...styles.topRight }}
+                style={getCardStyle({ ...styles.card, ...styles.topRight }, 1)}
+                onMouseEnter={() => handleMouseEnter(1)}
+                onMouseLeave={handleMouseLeave}
+              >
                 <Typography
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
@@ -362,7 +394,15 @@ const ManagePerLaCare: React.FC = () => {
                   {post.data.box2content}
                 </Typography>
               </Card>
-              <Card style={{ ...styles.card, ...styles.bottomLeft }}>
+              <Card
+                // style={{ ...styles.card, ...styles.bottomLeft }}
+                style={getCardStyle(
+                  { ...styles.card, ...styles.bottomLeft },
+                  2
+                )}
+                onMouseEnter={() => handleMouseEnter(2)}
+                onMouseLeave={handleMouseLeave}
+              >
                 <Typography
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
@@ -376,7 +416,15 @@ const ManagePerLaCare: React.FC = () => {
                   {post.data.box3content}
                 </Typography>
               </Card>
-              <Card style={{ ...styles.card, ...styles.bottomRight }}>
+              <Card
+                // style={{ ...styles.card, ...styles.bottomRight }}
+                style={getCardStyle(
+                  { ...styles.card, ...styles.bottomRight },
+                  3
+                )}
+                onMouseEnter={() => handleMouseEnter(3)}
+                onMouseLeave={handleMouseLeave}
+              >
                 <Typography
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
