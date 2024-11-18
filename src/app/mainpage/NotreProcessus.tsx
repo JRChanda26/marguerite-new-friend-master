@@ -141,7 +141,7 @@ export default function NotreProcessus() {
               style={{
                 ...textLink,
                 transition: "transform 0.3s ease",
-                transform: isHovered === 1 ? "scale(1.05)" : "scale(1)",
+                transform: isHovered === 1 ? "scale(1.02)" : "scale(1)",
               }}
               onMouseEnter={() => setIsHovered(1)}
               onMouseLeave={() => setIsHovered(null)}
@@ -184,7 +184,7 @@ export default function NotreProcessus() {
               style={{
                 ...textLink,
                 transition: "transform 0.3s ease",
-                transform: isHovered === 2 ? "scale(1.05)" : "scale(1)",
+                transform: isHovered === 2 ? "scale(1.02)" : "scale(1)",
               }}
               onMouseEnter={() => setIsHovered(2)}
               onMouseLeave={() => setIsHovered(null)}
@@ -253,7 +253,7 @@ export default function NotreProcessus() {
               style={{
                 ...textLink,
                 transition: "transform 0.3s ease",
-                transform: isHovered === 3 ? "scale(1.05)" : "scale(1)",
+                transform: isHovered === 3 ? "scale(1.02)" : "scale(1)",
               }}
               onMouseEnter={() => setIsHovered(3)}
               onMouseLeave={() => setIsHovered(null)}

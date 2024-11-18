@@ -114,7 +114,7 @@ export default function Contact() {
     else if (telephoneInputValue.length !== 10)
       newErrors.telephone = "Phone number must be exactly 10 digits";
     if (!bonjourInputValue) newErrors.bonjour = "Message is required";
-    // if (!captchaVerified) newErrors.captcha = "Captcha is required";
+    if (!captchaVerified) newErrors.captcha = "Captcha is required";
     return newErrors;
   };
 

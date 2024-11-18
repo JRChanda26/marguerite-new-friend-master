@@ -172,37 +172,68 @@ export default function BlogsNews() {
   const router = useRouter();
 
   const handleNavigation = () => {
-    router.push('/contact');
+    router.push("/contact");
   };
-  
+
+  const socialLinks = [
+    {
+      platform: "facebook",
+      link: posts[0]?.data.facebook_link,
+      icon: posts[0]?.data.facebook,
+    },
+    {
+      platform: "twitter",
+      link: posts[0]?.data.twitter_link,
+      icon: posts[0]?.data.twitter,
+    },
+    {
+      platform: "linkedin",
+      link: posts[0]?.data.linked_in_link,
+      icon: posts[0]?.data.linked_in,
+    },
+    {
+      platform: "instagram",
+      link: posts[0]?.data.instagram_link,
+      icon: posts[0]?.data.instagram,
+    },
+  ];
+
   return (
     <div>
       <Header />
       <div
         style={{
           backgroundImage: `url(${blogs?.data?.banner?.url || ""})`,
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100%",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          paddingTop: "450.67px",
+          paddingTop: "30%",
         }}
       ></div>
       <Grid container>
         <Grid
           item
           lg={12}
-          style={{
+          sx={{
             display: "flex",
-            flexDirection: "row",
+            // flexDirection: "row",
+            flexDirection: { xs: "column", sm: "column", lg: "row" },
             justifyContent: "space-evenly",
             marginTop: "50px",
           }}
         >
           <Grid item lg={7}>
-            <div style={title}>{blogs?.data.title1}</div>
+            <Typography
+              sx={{
+                fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+                lineHeight: { xs: "30px", sm: "40px", lg: "62.5px" },
+              }}
+            >
+              {blogs?.data.title1}
+            </Typography>
             <div style={{ paddingTop: "21px" }}>
               {blogs?.data.image1 && (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -211,6 +242,7 @@ export default function BlogsNews() {
                   alt={blogs?.data.image1.alt || "Image"}
                   style={{
                     width: "100%",
+                    height: "auto",
                   }}
                 />
               )}
@@ -221,63 +253,63 @@ export default function BlogsNews() {
                 justifyContent: "flex-start",
                 flexDirection: "row",
                 gap: "50px",
-                marginTop: "20px",
+                padding: "2%",
               }}
             >
-              <PrismicNextLink field={posts[0]?.data.facebook_link}>
-                {posts[0]?.data.facebook && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={posts[0]?.data.facebook.url || undefined}
-                    alt={posts[0]?.data.facebook.alt || "Image"}
-                  />
-                )}
-              </PrismicNextLink>
-              <PrismicNextLink field={posts[0]?.data.twitter_link}>
-                {posts[0]?.data.twitter && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={posts[0]?.data.twitter.url || undefined}
-                    alt={posts[0]?.data.twitter.alt || "Image"}
-                  />
-                )}
-              </PrismicNextLink>
-              <PrismicNextLink field={posts[0]?.data.linked_in_link}>
-                {posts[0]?.data.linked_in && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={posts[0]?.data.linked_in.url || undefined}
-                    alt={posts[0]?.data.linked_in.alt || "Image"}
-                  />
-                )}
-              </PrismicNextLink>
-              <PrismicNextLink field={posts[0]?.data.instagram_link}>
-                {posts[0]?.data.instagram && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={posts[0]?.data.instagram.url || undefined}
-                    alt={posts[0]?.data.instagram.alt || "Image"}
-                  />
-                )}
-              </PrismicNextLink>
+              {socialLinks.map((social: any, index: any) => (
+                <PrismicNextLink key={index} field={social.link}>
+                  {social.icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={social.icon.url || undefined}
+                      alt={social.icon.alt || `${social.platform} icon`}
+                    />
+                  )}
+                </PrismicNextLink>
+              ))}
             </div>
-            <div
-              style={{
+            <Grid
+              sx={{
                 fontSize: "16px",
                 fontWeight: 400,
                 display: "flex",
-                flexDirection: "row",
+                // flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row", lg: "row" },
+                gap: "20px",
                 justifyContent: "space-between",
                 color: "#4D5053",
-                padding: "20px 0px 20px 0px",
+                padding: "2%",
               }}
             >
-              <div>{blogs?.data.date_text}</div>
-              <div>{blogs?.data.about}</div>
-            </div>
-            <div style={{ ...description, padding: "30px 0px 30px 0px" }}>
+              <Typography
+                sx={{
+                  fontSize: { xs: "12px", sm: "16px", lg: "22px" },
+                  lineHeight: { xs: "16px", sm: "20px", lg: "28px" },
+                  color: "#4D5053",
+                }}
+              >
+                {blogs?.data.date_text}
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "12px", sm: "16px", lg: "22px" },
+                  lineHeight: { xs: "16px", sm: "20px", lg: "28px" },
+                  color: "#4D5053",
+                }}
+              >
+                {blogs?.data.about}
+              </Typography>
+            </Grid>
+            <Typography
+              sx={{
+                fontSize: { xs: "12px", sm: "16px", lg: "22px" },
+                lineHeight: { xs: "16px", sm: "20px", lg: "28px" },
+                color: "#4D5053",
+                padding: "2%",
+              }}
+            >
               {blogs?.data.description1}
-            </div>
+            </Typography>
             {/* <div
               style={{
                 background: "#BBDDD91A",
@@ -320,11 +352,11 @@ export default function BlogsNews() {
                   backgroundImage: `url(${contentbackground})`,
                   backgroundSize: "cover",
                   width: "100%",
-                  height: "390px",
+                  height: "auto",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  marginTop: "50px",
+                  marginTop: "10%",
                   flexDirection: "column",
                 }}
               >
@@ -342,14 +374,17 @@ export default function BlogsNews() {
                   </div>
                   <div>
                     <Typography
-                      style={{
+                      sx={{
                         fontFamily: "Jenna Sue, sans-serif",
                         color: "#0A1411",
                         fontWeight: 400,
-                        fontSize: "48px",
-                        lineHeight: "60px",
+                        // fontSize: "48px",
+                        fontSize: { xs: "28px", sm: "38px", lg: "48px" },
+                        // lineHeight: "60px",
+                        lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
                         textAlign: "center",
-                        padding: "0px 80px",
+                        // padding: "20% 15%",
+                        padding: { xs: "12% 10%", sm: "39% 10%", lg: "19% 18%" },
                       }}
                     >
                       {blogs?.data.quote_text}
@@ -359,7 +394,13 @@ export default function BlogsNews() {
               </div>
             </Box>
           </Grid>
-          <Grid item lg={4}>
+          <Grid
+            item
+            lg={4}
+            style={{
+              marginTop: "20px",
+            }}
+          >
             <div>
               <TextField
                 // value={blogs?.data.text_field}
@@ -398,9 +439,9 @@ export default function BlogsNews() {
                 marginTop: "20px",
               }}
             >
-              <div style={{ ...heading, marginBottom: "30px" }}>
+              <Typography style={{ ...heading, marginBottom: "30px" }}>
                 {blogs?.data.latest_news}
-              </div>
+              </Typography>
               {Array(3)
                 .fill(null)
                 .map((_, index) => (
@@ -473,24 +514,46 @@ export default function BlogsNews() {
         </Grid>
         <Grid
           item
-          lg={7}
+          lg={8}
+          xs={12}
+          sm={12}
           style={{
-            paddingLeft: "35px",
-            paddingTop: "100px",
+            padding: "2%",
           }}
         >
-          <div style={title}>{blogs?.data.title2}</div>
-          <div style={{ ...description, padding: "20px 0px 20px 0px" }}>
+          <Typography
+            sx={{
+              fontSize: { xs: "28px", sm: "40px", lg: "50px" },
+              lineHeight: { xs: "30px", sm: "40px", lg: "62.5px" },
+            }}
+          >
+            {blogs?.data.title2}
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: { xs: "16px", sm: "20px", lg: "25px" },
+              lineHeight: { xs: "25px", sm: "30px", lg: "40px" },
+              padding: "10px 0px 10px 0px",
+              color: "#4D5053",
+            }}
+          >
             {blogs?.data.description2}
-          </div>
+          </Typography>
           <div>
             {Array(3)
               .fill(null)
               .map((_, index) => (
                 <div key={index}>
-                  <div style={{ ...description, padding: "10px 0px 10px 0px" }}>
+                  <Typography
+                    sx={{
+                      fontSize: { xs: "14px", sm: "16px", lg: "18px" },
+                      lineHeight: { xs: "15px", sm: "20px", lg: "30px" },
+                      padding: "10px 0px 10px 0px",
+                      color: "#4D5053",
+                    }}
+                  >
                     {index + 1}. {blogs?.data.points}
-                  </div>
+                  </Typography>
                 </div>
               ))}
           </div>
@@ -502,13 +565,22 @@ export default function BlogsNews() {
                 alt={blogs?.data.image2.alt || "Image"}
                 style={{
                   width: "100%",
+                  height: "auto",
                 }}
               />
             )}
           </div>
-          <div style={{ ...description, marginBottom: "60px" }}>
+          <Typography
+            sx={{
+              fontSize: { xs: "16px", sm: "20px", lg: "25px" },
+              lineHeight: { xs: "25px", sm: "30px", lg: "40px" },
+              padding: "10px 0px 10px 0px",
+              color: "#4D5053",
+              marginBottom: "60px",
+            }}
+          >
             {blogs?.data.description3}
-          </div>
+          </Typography>
           <div style={{ margin: "30px 0px" }}>
             {posts1.map((post: any) => (
               <Button
@@ -550,20 +622,28 @@ export default function BlogsNews() {
               </Button>
             ))}
           </div>
-          <div style={{ ...description, marginBottom: "60px" }}>
+          <Typography
+            sx={{
+              fontSize: { xs: "24px", sm: "30px", lg: "40px" },
+              lineHeight: { xs: "30px", sm: "40px", lg: "50px" },
+              marginBottom: "60px",
+            }}
+          >
             {blogs?.data.last_heading}
-          </div>
+          </Typography>
           <hr style={{ border: "1px solid #24535C" }} />
-          <div
-            style={{
+          <Grid
+            sx={{
               display: "flex",
-              flexDirection: "row",
-              padding: "20px 0px 20px 0px",
+              // flexDirection: "row",
+              flexDirection: { xs: "column", sm: "row", lg: "row" },
+              padding: "5% 0%",
+              textAlign: "center",
             }}
           >
             <div
               style={{
-                padding: "10px 30px 0px 0px",
+                padding: "2% 3%",
                 fontSize: "20px",
                 fontWeight: 400,
                 color: "#000000",
@@ -589,7 +669,7 @@ export default function BlogsNews() {
                 {label}
               </Button>
             ))}
-          </div>
+          </Grid>
           <hr style={{ border: "1px solid #24535C" }} />
         </Grid>
       </Grid>

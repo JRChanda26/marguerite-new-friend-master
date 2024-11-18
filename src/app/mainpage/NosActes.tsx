@@ -2,6 +2,7 @@
 import { createClient } from "@/prismicio";
 import { Grid } from "@mui/material";
 import { PrismicRichText } from "@prismicio/react";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function NosActes() {
@@ -18,7 +19,6 @@ export default function NosActes() {
     }
     fetchData();
   });
-  
 
   const title: React.CSSProperties = {
     color: "#161C2D",
@@ -45,7 +45,7 @@ export default function NosActes() {
   const repeatItems = Array.from({ length: 3 }, () => items[0]);
 
   const [isHovered, setIsHovered] = useState(null);
-  
+
   return (
     <div>
       <Grid
@@ -127,6 +127,50 @@ export default function NosActes() {
               )}
               <p style={title}>{item.title}</p>
               <p style={description}>{item.description}</p>
+              <div
+                style={{
+                  height: "24px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  visibility: isHovered === index ? "visible" : "hidden",
+                  opacity: isHovered === index ? 1 : 0,
+                  transition: "opacity 0.3s ease, visibility 0.3s ease",
+                }}
+              >
+                <Link
+                  href={"/blogs/blog"}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    textDecoration: "none",
+                  }}
+                >
+                  <p
+                    style={{
+                      textDecoration: "none",
+                      color: "#24535C",
+                      fontWeight: 400,
+                      fontSize: "14px",
+                      lineHeight: "25.9px",
+                    }}
+                  >
+                    {settings?.data.link_text}
+                  </p>
+                  {settings?.data.arrow_image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={settings.data.arrow_image.url || undefined}
+                      alt={settings.data.arrow_image.alt || "Image"}
+                      style={{
+                        width: "48px",
+                        height: "24px",
+                        paddingTop:'15px'
+                      }}
+                    />
+                  )}
+                </Link>
+              </div>
             </Grid>
           ))}
         </Grid>

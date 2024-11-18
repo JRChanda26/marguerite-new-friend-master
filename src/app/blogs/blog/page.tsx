@@ -138,12 +138,12 @@ export default function Blogs() {
 
   return (
     <div>
-      <Header/>
+      <Header />
       <div
         style={{
           backgroundImage: `url(${settings?.data?.banner?.url || ""})`,
+          backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
-          backgroundSize: "100%",
         }}
       >
         <div
@@ -163,27 +163,32 @@ export default function Blogs() {
               flexDirection: "column",
               alignItems: "center",
               borderRadius: "37px 37px 0px 0px",
-              padding: "41px 152px 41px 152px",
+              // padding: "41px 152px 41px 152px",
+              padding: "2% 5%",
             }}
           >
             <Typography
-              style={{
+              sx={{
                 fontFamily: "Mulish, sans-serif",
                 color: "#0A1411",
-                fontWeight: 700,
-                fontSize: "64px",
-                lineHeight: "80.32px",
+                fontWeight: 400,
+                // fontSize: "64px",
+                // lineHeight: "80.32px",
+                fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+                lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
               }}
             >
               {settings?.data.heading}
             </Typography>
             <Typography
-              style={{
+              sx={{
                 fontFamily: "Mulish, sans-serif",
                 color: "#565656",
                 fontWeight: 400,
-                fontSize: "24px",
-                lineHeight: "38.4px",
+                // fontSize: "24px",
+                // lineHeight: "38.4px",
+                fontSize: { xs: "12px", sm: "18px", lg: "22px" },
+                lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
               }}
             >
               {settings?.data.sub_heading}
@@ -192,23 +197,25 @@ export default function Blogs() {
         </div>
       </div>
       <Grid container>
-        <Grid item lg={12}>
-          <div
-            style={{
+        <Grid item xs={12} sm={12} lg={12}>
+          <Typography
+            sx={{
               color: "#292F36",
-              fontSize: "50px",
+              // fontSize: "50px",
+              fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+              lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
               fontWeight: 700,
               textAlign: "center",
               marginTop: "70px",
             }}
           >
             {settings?.data.title1}
-          </div>
-          <div
-            style={{
+          </Typography>
+          <Grid
+            sx={{
               borderRadius: "62px",
               border: "1px solid #E7E7E7",
-              margin: "50px 100px 0px 100px",
+              margin: "5% 10%",
             }}
           >
             {items
@@ -218,11 +225,12 @@ export default function Blogs() {
               )
               .map((_, index) => (
                 <Grid
-                  style={{
+                  sx={{
                     display: "flex",
-                    flexDirection: "row",
+                    // flexDirection: "row",
+                    flexDirection: { xs: "column", sm: "row", lg: "row" },
                     padding: "22px",
-                    gap: "65px",
+                    gap: "50px",
                   }}
                   key={index}
                 >
@@ -232,8 +240,8 @@ export default function Blogs() {
                       src={settings?.data.post_image.url || undefined}
                       alt={settings?.data.post_image.alt || "Image"}
                       style={{
-                        height: "300px",
-                        width: "400px",
+                        height: "auto",
+                        width: "100%",
                       }}
                     />
                   )}
@@ -312,9 +320,10 @@ export default function Blogs() {
                 <KeyboardArrowRightIcon />
               </IconButton>
             </div>
-          </div>
+          </Grid>
         </Grid>
       </Grid>
+
       <Grid
         container
         style={{
@@ -322,17 +331,19 @@ export default function Blogs() {
           justifyContent: "center",
         }}
       >
-        <div
-          style={{
-            fontSize: "48px",
+        <Typography
+          sx={{
+            // fontSize: "48px",
+            fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+            lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
             fontWeight: 700,
-            lineHeight: "58px",
+            // lineHeight: "58px",
             color: "#000000",
             marginTop: "50px",
           }}
         >
           {settings?.data.title2}
-        </div>
+        </Typography>
         {articleItems
           .slice(
             articlePage * fixedRowsPerArticlePage,
@@ -342,12 +353,16 @@ export default function Blogs() {
             <Grid
               item
               lg={12}
+              xs={12}
+              sm={12}
               key={index}
-              style={{
+              sx={{
                 display: "flex",
-                flexDirection: "row",
+                // flexDirection: "row",
+                flexDirection: { xs: "column", sm: "column", lg: "row" },
                 justifyContent: "space-evenly",
-                margin: "50px",
+                marginTop: "50px",
+                gap: "50px",
               }}
             >
               {/* [{articlePage * fixedRowsPerArticlePage + index + 1}] */}
@@ -368,34 +383,14 @@ export default function Blogs() {
                   <img
                     src={settings?.data.image1.url || undefined}
                     alt={settings?.data.image1.alt || "Image"}
+                    style={{
+                      height: "auto",
+                      width: "100%",
+                    }}
                   />
                 )}
                 <p style={title}>{settings?.data.sub_title2}</p>
                 <p style={description}>{settings?.data.description2}</p>
-                {/* <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "20px",
-                  }}
-                >
-                  {settings?.data.profile1 && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={settings?.data.profile1.url || undefined}
-                      alt={settings?.data.profile1.alt || "Image"}
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        paddingTop: "20px",
-                      }}
-                    />
-                  )}
-                  <div>
-                    <p style={profileStyle}>{settings?.data.name1}</p>
-                    <p style={dateStyle}>{settings?.data.date1}</p>
-                  </div>
-                </div> */}
               </Grid>
               <Grid
                 item
@@ -414,34 +409,14 @@ export default function Blogs() {
                   <img
                     src={settings?.data.image2.url || undefined}
                     alt={settings?.data.image2.alt || "Image"}
+                    style={{
+                      height: "auto",
+                      width: "100%",
+                    }}
                   />
                 )}
                 <p style={title}>{settings?.data.sub_title3}</p>
                 <p style={description}>{settings?.data.description3}</p>
-                {/* <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "20px",
-                  }}
-                >
-                  {settings?.data.profile2 && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={settings?.data.profile2.url || undefined}
-                      alt={settings?.data.profile2.alt || "Image"}
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        paddingTop: "20px",
-                      }}
-                    />
-                  )}
-                  <div>
-                    <p style={profileStyle}>{settings?.data.name2}</p>
-                    <p style={dateStyle}>{settings?.data.date2}</p>
-                  </div>
-                </div> */}
               </Grid>
               <Grid
                 item
@@ -460,34 +435,14 @@ export default function Blogs() {
                   <img
                     src={settings?.data.image3.url || undefined}
                     alt={settings?.data.image3.alt || "Image"}
+                    style={{
+                      height: "auto",
+                      width: "100%",
+                    }}
                   />
                 )}
                 <p style={title}>{settings?.data.sub_title4}</p>
                 <p style={description}>{settings?.data.description4}</p>
-                {/* <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    gap: "20px",
-                  }}
-                >
-                  {settings?.data.profile3 && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={settings?.data.profile3.url || undefined}
-                      alt={settings?.data.profile3.alt || "Image"}
-                      style={{
-                        width: "60px",
-                        height: "60px",
-                        paddingTop: "20px",
-                      }}
-                    />
-                  )}
-                  <div>
-                    <p style={profileStyle}>{settings?.data.name3}</p>
-                    <p style={dateStyle}>{settings?.data.date3}</p>
-                  </div>
-                </div> */}
               </Grid>
             </Grid>
           ))}
@@ -499,6 +454,7 @@ export default function Blogs() {
             gap: "20px",
             paddingRight: "50px",
             paddingBottom: "10px",
+            marginTop: "50px",
           }}
         >
           <IconButton
@@ -593,8 +549,8 @@ export default function Blogs() {
           </IconButton>
         </div>
       </Grid>
-      <Liberez/>
-      <Footer/>
+      <Liberez />
+      <Footer />
     </div>
   );
 }

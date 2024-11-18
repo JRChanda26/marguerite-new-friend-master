@@ -128,7 +128,7 @@ const ManagePerLaCare: React.FC = () => {
 
   return (
     <Box sx={{}}>
-      {/* <Header /> */}
+      <Header />
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,
@@ -512,7 +512,7 @@ const ManagePerLaCare: React.FC = () => {
               // fontSize: "50px",
               fontSize: { xs: "30px", sm: "40px", lg: "50px" },
               fontWeight: 400,
-              marginTop: "50PX",
+              marginTop: "50px",
             }}
           >
             {posts[0]?.data.title2}

@@ -2671,6 +2671,39 @@ interface NosActesDocumentData {
   sub_image3: prismic.ImageField<never>;
 
   /**
+   * Footer Text field in *Nos Actes*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_actes.footer_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  footer_text: prismic.KeyTextField;
+
+  /**
+   * Link Text field in *Nos Actes*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_actes.link_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  link_text: prismic.KeyTextField;
+
+  /**
+   * Arrow Image field in *Nos Actes*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_actes.arrow_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  arrow_image: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Nos Actes*
    *
    * - **Field Type**: Slice Zone
@@ -4882,6 +4915,17 @@ interface SoinschezmargueriteDocumentData {
   nos_text_description: prismic.KeyTextField;
 
   /**
+   * Comma Image field in *soinschezmarguerite*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: soinschezmarguerite.comma_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  comma_image: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *soinschezmarguerite*
    *
    * - **Field Type**: Slice Zone
@@ -4965,6 +5009,17 @@ declare module "@prismicio/client" {
       repositoryNameOrEndpoint: string,
       options?: prismic.ClientConfig,
     ): prismic.Client<AllDocumentTypes>;
+  }
+
+  interface CreateWriteClient {
+    (
+      repositoryNameOrEndpoint: string,
+      options: prismic.WriteClientConfig,
+    ): prismic.WriteClient<AllDocumentTypes>;
+  }
+
+  interface CreateMigration {
+    (): prismic.Migration<AllDocumentTypes>;
   }
 
   namespace Content {

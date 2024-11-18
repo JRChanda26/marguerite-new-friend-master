@@ -138,13 +138,14 @@ const LecarechezMargueriteServices: React.FC = () => {
 
   return (
     <Box>
-      <Header/>
+      <Header />
       <div
         style={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: "cover",
-          width: "100%",
-          height: "603.67px",
+          backgroundRepeat: "no-repeat",
+          // width: "100%",
+          // height: "603.67px",
         }}
       >
         {posts.map((post: any, postIndex: number) => (
@@ -154,8 +155,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
-                alignItems: "center",
-                paddingTop: "425.67px",
+                textAlign: "center",
+                padding: "250.67px 60px 0px 60px",
               }}
             >
               <div
@@ -166,27 +167,32 @@ const LecarechezMargueriteServices: React.FC = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   borderRadius: "37px 37px 0px 0px",
-                  padding: "41px 152px 42px 152px",
+                  // padding: "41px 152px 42px 152px",
+                  padding: "2% 5%",
                 }}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Mulish, sans-serif",
                     color: "#0A1411",
                     fontWeight: 400,
-                    fontSize: "50px",
-                    lineHeight: "62.5px",
+                    // fontSize: "50px",
+                    // lineHeight: "62.5px",
+                    fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+                    lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
                   }}
                 >
                   {post.data.headertext}
                 </Typography>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Jost, sans-serif",
                     color: "#4D5053",
                     fontWeight: 400,
-                    fontSize: "22px",
-                    lineHeight: "33px",
+                    // fontSize: "22px",
+                    // lineHeight: "33px",
+                    fontSize: { xs: "12px", sm: "18px", lg: "22px" },
+                    lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
                   }}
                 >
                   {post.data.content}
@@ -197,9 +203,6 @@ const LecarechezMargueriteServices: React.FC = () => {
         ))}
       </div>
 
-      <Grid item lg={12}>
-        <div></div>
-      </Grid>
       <Box
         sx={{
           display: "flex",
@@ -212,43 +215,48 @@ const LecarechezMargueriteServices: React.FC = () => {
           style={{
             backgroundImage: `url(${contentbackground})`,
             backgroundSize: "cover",
-            width: "875.5px",
-            height: "440px",
+            // width: "875.5px",
+            // height: "440px",
+            // display: "flex",
+            // justifyContent: "center",
+            // alignItems: "center",
+            // marginTop: "209.87px",
+            // flexDirection: "column",
+            width: "100%",
+            height: "auto",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "209.87px",
+            marginTop: "10%",
             flexDirection: "column",
           }}
         >
           {posts.map((post: any, postIndex: number) => (
             <>
               <div>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#0A1411",
-                    fontWeight: 400,
-                    fontSize: "85px",
-                    lineHeight: "106.25px",
-                    textAlign: "center",
-                    // padding:'67px 67px 0px 67px',
-                    fontStyle: "italic",
-                  }}
-                >
-                  {post.data.comma}
-                </Typography>
+                {posts[0]?.data.comma_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.comma_image.url || undefined}
+                    alt={posts[0]?.data.comma_image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
               </div>
               <div>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Jenna Sue, sans-serif",
                     color: "#0A1411",
                     fontWeight: 400,
-                    fontSize: "48px",
-                    lineHeight: "60px",
+                    // fontSize: "48px",
+                    fontSize: { xs: "28px", sm: "38px", lg: "48px" },
+                    // lineHeight: "60px",
+                    lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
                     textAlign: "center",
-                    padding: "0px 80px 0px 80px",
+                    // padding: "0px 80px 0px 80px",
+                    padding: { xs: "8% 15%", sm: "39% 12%", lg: "42% 18%" },
                   }}
                 >
                   {post.data.excellence}
@@ -256,12 +264,14 @@ const LecarechezMargueriteServices: React.FC = () => {
               </div>
               <div>
                 <Typography
-                  style={{
+                  sx={{
                     fontFamily: "Mulish, sans-serif",
                     color: "#0A1411",
                     fontWeight: 400,
-                    fontSize: "25px",
-                    lineHeight: "37.5px",
+                    // fontSize: "25px",
+                    fontSize: { xs: "14px", sm: "18px", lg: "25px" },
+                    // lineHeight: "37.5px",
+                    lineHeight: { xs: "18px", sm: "25px", lg: "37.5px" },
                     textAlign: "center",
                   }}
                 >
@@ -272,34 +282,39 @@ const LecarechezMargueriteServices: React.FC = () => {
           ))}
         </div>
       </Box>
-      <div style={{ paddingTop: "209.87px" }}>
+      <div style={{ padding: "7%" }}>
         {posts.map((post: any, postIndex: number) => (
           <Grid container spacing={2} key={post}>
             <Grid
               item
               lg={12}
-              style={{
+              sx={{
                 display: "flex",
-                flexDirection: "row",
+                // flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row", lg: "row" },
                 justifyContent: "center",
-                gap: "10px",
+                gap: "30px",
               }}
             >
-              <Grid item lg={4}>
+              <Grid item lg={5}>
                 <Typography
-                  style={{
-                    fontSize: "50px",
+                  sx={{
+                    // fontSize: "50px",
+                    fontSize: { xs: "30px", sm: "40px", lg: "50px" },
                     fontWeight: 600,
-                    lineHeight: "62.5px",
+                    // lineHeight: "62.5px",
+                    lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
                   }}
                 >
                   {post.data.leftheader}
                 </Typography>
                 <Typography
-                  style={{
-                    fontSize: "22px",
+                  sx={{
+                    // fontSize: "22px",
+                    fontSize: { xs: "12px", sm: "18px", lg: "24px" },
                     fontWeight: 400,
-                    lineHeight: "33px",
+                    // lineHeight: "33px",
+                    lineHeight: { xs: "18px", sm: "25px", lg: "30.12px" },
                     paddingTop: "23px",
                   }}
                 >
@@ -307,48 +322,54 @@ const LecarechezMargueriteServices: React.FC = () => {
                 </Typography>
               </Grid>
               <Grid item lg={5}>
-                <img
-                  src={post.data.bodyrightimage?.url || ""}
-                  alt={post.data.bodyrightimage?.alt || "icon"}
-                  style={{ width: "659px", height: "377px" }}
-                />
+                {posts[0]?.data.bodyrightimage && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.bodyrightimage.url || undefined}
+                    alt={posts[0]?.data.bodyrightimage.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
               </Grid>
             </Grid>
           </Grid>
         ))}
       </div>
 
-      <Grid container spacing={2} style={{ marginTop: "50px" }}>
-        <Grid
-          item
-          lg={12}
-          style={{
-            display: "flex",
-            justifyContent: "center",
+      <Grid item lg={12}>
+        <Typography
+          sx={{
+            textAlign: "center",
+            color: "#292F36",
+            // fontSize: "50px",
+            fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+            fontWeight: 400,
+            marginTop: "50PX",
           }}
         >
-          <div
-            style={{
-              textAlign: "center",
-              color: "#292F36",
-              fontSize: "50px",
-              fontWeight: 400,
-            }}
-          >
-            {posts1[0]?.data.title2}
-          </div>
-        </Grid>
+          {posts1[0]?.data.title2}
+        </Typography>
         <Grid
           item
           lg={12}
-          style={{
+          sx={{
             display: "flex",
-            flexDirection: "row",
+            // flexDirection: "row",
+            flexDirection: { xs: "column", sm: "row", lg: "row" },
             justifyContent: "space-evenly",
             marginTop: "50px",
+            gap: "50px",
+            padding: "2% 5%",
           }}
         >
-          <Grid item lg={5}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            lg={5}
+            sx={{ marginTop: { xs: "0px", sm: "40px", lg: "0px" } }}
+          >
             {videoUrl ? (
               <video
                 width="100%"
@@ -368,14 +389,15 @@ const LecarechezMargueriteServices: React.FC = () => {
           <Grid
             item
             lg={5}
-            style={{
+            sx={{
               // marginTop: "100px",
-              height: "300px",
+              // height: "300px",
+              height: { xs: "300px", sm: "300px", lg: "400px" },
               overflowY: "auto",
               scrollbarWidth: "thin",
             }}
           >
-            {faqs.slice(3, 6).map((faq: any, index: any) => (
+            {faqs.slice(3, 6).map((faq, index) => (
               <div key={index}>
                 <Accordion
                   style={{
@@ -386,9 +408,10 @@ const LecarechezMargueriteServices: React.FC = () => {
                   <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
                     <Typography
                       onClick={() => handleColor1(index)}
-                      style={{
+                      sx={{
                         color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                        fontSize: "25px",
+                        // fontSize: "25px",
+                        fontSize: { xs: "18px", sm: "25px", lg: "28px" },
                         fontWeight: 400,
                       }}
                     >
@@ -397,9 +420,10 @@ const LecarechezMargueriteServices: React.FC = () => {
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography
-                      style={{
+                      sx={{
                         color: "#4D5053",
-                        fontSize: "22px",
+                        // fontSize: "22px",
+                        fontSize: { xs: "14px", sm: "20px", lg: "20px" },
                         fontWeight: 400,
                       }}
                     >
@@ -413,17 +437,19 @@ const LecarechezMargueriteServices: React.FC = () => {
           </Grid>
         </Grid>
       </Grid>
+
       <div>
         <Grid
           item
           lg={12}
-          style={{
+          sx={{
             textAlign: "center",
-            fontSize: "64px",
+            // fontSize: "64px",
+            fontSize: { xs: "38px", sm: "50px", lg: "64px" },
             fontFamily: "Mulish",
             fontWeight: 700,
             color: "1D1D1D",
-            paddingTop: "100px",
+            paddingTop: "10%",
           }}
         >
           <div>{posts[0]?.data.notre_title}</div>
@@ -431,12 +457,13 @@ const LecarechezMargueriteServices: React.FC = () => {
         <Grid
           item
           lg={12}
-          style={{
+          sx={{
             textAlign: "center",
-            fontSize: "36px",
+            // fontSize: "36px",
+            fontSize: { xs: "18px", sm: "25px", lg: "36px" },
             fontFamily: "Mulish",
             color: "1D1D1D",
-            padding: "20px 100px",
+            padding: "5% 10%",
           }}
         >
           <div>{posts[0]?.data.notre_description}</div>
@@ -446,11 +473,13 @@ const LecarechezMargueriteServices: React.FC = () => {
             <Grid
               item
               lg={12}
-              style={{
+              sx={{
                 display: "flex",
-                flexDirection: "row",
+                // flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row", lg: "row" },
                 justifyContent: "space-evenly",
-                paddingTop: "100px",
+                // paddingTop: "100px",
+                gap: "50px",
               }}
             >
               {/* <Grid item lg={3}>
@@ -637,6 +666,8 @@ const LecarechezMargueriteServices: React.FC = () => {
               <Grid
                 item
                 lg={3}
+                xs={12}
+                sm={3.5}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -644,14 +675,15 @@ const LecarechezMargueriteServices: React.FC = () => {
                   gap: "40px",
                 }}
               >
-                <img
-                  src={post.data.notre_image?.url || ""}
-                  alt={post.data.notre_image?.alt || "icon"}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }}
-                />
+                {posts[0]?.data.notre_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.notre_image.url || undefined}
+                    alt={posts[0]?.data.notre_image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
                 <div
                   style={{
                     display: "flex",
@@ -663,29 +695,33 @@ const LecarechezMargueriteServices: React.FC = () => {
                     borderRadius: "12px",
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: "50px",
+                  <Typography
+                    sx={{
+                      // fontSize: "50px",
+                      fontSize: { xs: "50px", sm: "40px", lg: "50px" },
                       color: "#1D1D1D",
                       fontFamily: "Mulish",
                     }}
                   >
                     {post.data.notre_text}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "24px",
+                  </Typography>
+                  <Typography
+                    sx={{
+                      // fontSize: "24px",
+                      fontSize: { xs: "24px", sm: "20px", lg: "24px" },
                       color: "#1D1D1D",
                       fontFamily: "Mulish",
                     }}
                   >
                     {post.data.notre_text_description}
-                  </div>
+                  </Typography>
                 </div>
               </Grid>
               <Grid
                 item
                 lg={3}
+                xs={12}
+                sm={3.5}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -693,18 +729,21 @@ const LecarechezMargueriteServices: React.FC = () => {
                   gap: "50px",
                 }}
               >
-                <img
-                  src={post.data.notre_middle_image?.url || ""}
-                  alt={post.data.notre_middle_image?.alt || "icon"}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                  }}
-                />
+                {posts[0]?.data.notre_middle_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.notre_middle_image.url || undefined}
+                    alt={posts[0]?.data.notre_middle_image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
               </Grid>
               <Grid
                 item
                 lg={3}
+                xs={12}
+                sm={3.5}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -723,33 +762,36 @@ const LecarechezMargueriteServices: React.FC = () => {
                     borderRadius: "12px",
                   }}
                 >
-                  <div
-                    style={{
-                      fontSize: "50px",
+                  <Typography
+                    sx={{
+                      // fontSize: "50px",
+                      fontSize: { xs: "50px", sm: "40px", lg: "50px" },
                       color: "#1D1D1D",
                       fontFamily: "Mulish",
                     }}
                   >
                     {post.data.nos_text}
-                  </div>
-                  <div
-                    style={{
-                      fontSize: "24px",
+                  </Typography>
+                  <Typography
+                    sx={{
+                      // fontSize: "24px",
+                      fontSize: { xs: "24px", sm: "20px", lg: "24px" },
                       color: "#1D1D1D",
                       fontFamily: "Mulish",
                     }}
                   >
                     {post.data.nos_text_description}
-                  </div>
+                  </Typography>
                 </div>
-                <img
-                  src={post.data.nos_image?.url || ""}
-                  alt={post.data.nos_image?.alt || "icon"}
-                  style={{
-                    width: "100%",
-                    height: "53%",
-                  }}
-                />
+                {posts[0]?.data.nos_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={posts[0]?.data.nos_image.url || undefined}
+                    alt={posts[0]?.data.nos_image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
               </Grid>
             </Grid>
           </Grid>
@@ -759,37 +801,41 @@ const LecarechezMargueriteServices: React.FC = () => {
       <div
         style={{
           background: `url(${backgroundpeople})`,
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
-          width: "auto",
+          width: "100%",
           height: "auto",
-          paddingTop: "187.05px",
         }}
       >
         {posts.map((post: any, postIndex: number) => (
           <>
             <div>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
-                  fontSize: "64px",
+                  // fontSize: "64px",
+                  fontSize: { xs: "38px", sm: "52px", lg: "64px" },
                   fontWeight: 700,
-                  lineHeight: "80.32px",
+                  // lineHeight: "80.32px",
+                  lineHeight: { xs: "45px", sm: "65px", lg: "80.32px" },
                   textAlign: "center",
                   color: "#0A1411",
+                  padding: "10%",
                 }}
               >
                 {post.data.peopleheading}
               </Typography>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
-                  fontSize: "22px",
+                  // fontSize: "22px",
+                  fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                   fontWeight: 400,
-                  lineHeight: "33px",
+                  // lineHeight: "33px",
+                  lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
                   textAlign: "center",
                   color: "#4D5053",
-                  paddingLeft: "120px",
-                  paddingRight: "120px",
+                  padding: "5% 10%",
                 }}
               >
                 {post.data.peoplecontent}
@@ -812,7 +858,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   textAlign: "center",
                   alignItems: "center",
                   justifyContent: "space-evenly",
-                  padding: "60px 60px 60px 0px",
+                  // padding: "60px 60px 60px 0px",
                 }}
                 container
                 spacing={2}
@@ -871,10 +917,11 @@ const LecarechezMargueriteServices: React.FC = () => {
                       </div>
                     </div>
                   ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={post.data.person1?.url || ""}
                       alt={post.data.person1?.alt || "icon"}
-                      style={{ width: "283.55px", height: "433px" }}
+                      style={{ height: "433px", width: "283.55px" }}
                       onClick={handleChangePerson1}
                     />
                   )}
@@ -933,6 +980,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       </div>
                     </div>
                   ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={post.data.person2?.url || ""}
                       alt={post.data.person2?.alt || "icon"}
@@ -995,6 +1043,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       </div>
                     </div>
                   ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={post.data.person3?.url || ""}
                       alt={post.data.person3?.alt || "icon"}
@@ -1057,6 +1106,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       </div>
                     </div>
                   ) : (
+                    // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={post.data.person4?.url || ""}
                       alt={post.data.person4?.alt || "icon"}
@@ -1071,36 +1121,36 @@ const LecarechezMargueriteServices: React.FC = () => {
         ))}
       </div>
 
-      <div
-        style={{
-          paddingTop: "192.53px",
-        }}
-      >
+      <div>
         {posts.map((post: any, postIndex: number) => (
           <>
             <div>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
-                  fontSize: "64px",
+                  // fontSize: "64px",
+                  fontSize: { xs: "35px", sm: "48px", lg: "64px" },
                   fontWeight: 700,
-                  lineHeight: "80.32px",
+                  // lineHeight: "80.32px",
+                  lineHeight: { xs: "50px", sm: "64px", lg: "80.32px" },
                   textAlign: "center",
                   color: "#0A1411",
+                  padding: "10% 10% 0% 10%",
                 }}
               >
                 {post.data.lastheader}
               </Typography>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
-                  fontSize: "22px",
+                  // fontSize: "22px",
+                  fontSize: { xs: "16px", sm: "18px", lg: "22px" },
                   fontWeight: 400,
-                  lineHeight: "33px",
+                  // lineHeight: "33px",
+                  lineHeight: { xs: "20px", sm: "25px", lg: "33px" },
                   textAlign: "center",
                   color: "#4D5053",
-                  paddingLeft: "190px",
-                  paddingRight: "190px",
+                  padding: "5% 10%",
                 }}
               >
                 {post.data.lastcontent}
@@ -1110,286 +1160,34 @@ const LecarechezMargueriteServices: React.FC = () => {
               style={{
                 backgroundImage: `url(${lastbackground})`,
                 backgroundSize: "cover",
-                height: "100vh",
-                width: "auto",
+                backgroundRepeat: "no-repeat",
+                height: "auto",
+                width: "100%",
               }}
             >
-              <Grid container spacing={2} style={{
-                display:'flex',
-                flexDirection:'column',
-                gap:'30px',
-                padding:'50px'
-              }}>
+              <Grid
+                container
+                spacing={2}
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "30px",
+                  padding: "50px",
+                }}
+              >
                 <Grid
                   item
                   lg={12}
-                  style={{
+                  sx={{
                     display: "flex",
                     justifyContent: "space-evenly",
-                    alignItems: "center",
+                    // alignItems: "center",
                     // gap: "50px",
                     // padding: "80px",
+                    gap: "30px",
+                    flexDirection: { xs: "column", sm: "column", lg: "row" },
                   }}
                 >
-                  {/* <Grid
-                    item
-                    lg={3}
-                    style={{
-                      background: "#fff",
-                      width: "373px",
-                      height: "452px",
-                      borderRadius: "24px",
-                      marginTop: "144px",
-                      boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        paddingTop: "61.41px",
-                      }}
-                    >
-                      <img
-                        src={post.data.lastlogo1?.url || ""}
-                        alt={post.data.lastlogo1?.alt || "icon"}
-                        style={{ width: "62.63px", height: "60.49px" }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontSize: "29.26px",
-                          fontWeight: 600,
-                          lineHeight: "36.72px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "41.5px",
-                          padding: "20px",
-                        }}
-                      >
-                        {post.data.box1header}
-                      </Typography>
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontStyle: "italic",
-                          fontSize: "19.5px",
-                          fontWeight: 400,
-                          lineHeight: "36.08px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "20.72px",
-                          paddingLeft: "60px",
-                          paddingRight: "47px",
-                        }}
-                      >
-                        {post.data.box1content}
-                      </Typography>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={3}
-                    style={{
-                      background: "#FFFFFF",
-                      width: "auto",
-                      height: "452px",
-                      borderRadius: "24px",
-                      boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        paddingTop: "83.96px",
-                      }}
-                    >
-                      <img
-                        src={post.data.lastlogo2?.url || ""}
-                        alt={post.data.lastlogo2?.alt || "icon"}
-                        style={{ width: "63.33px", height: "60.26px" }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontSize: "29.26px",
-                          fontWeight: 600,
-                          lineHeight: "36.72px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "41.5px",
-                        }}
-                      >
-                        {post.data.box2header}
-                      </Typography>
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontStyle: "italic",
-                          fontSize: "19.5px",
-                          fontWeight: 400,
-                          lineHeight: "36.08px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "20.72px",
-                          paddingLeft: "60px",
-                          paddingRight: "47px",
-                        }}
-                      >
-                        {post.data.box2content}
-                      </Typography>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={3}
-                    style={{
-                      background: "#FFFFFF",
-                      width: "373px",
-                      height: "452px",
-                      borderRadius: "24px",
-                      marginTop: "144px",
-                      boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        paddingTop: "70.44px",
-                      }}
-                    >
-                      <img
-                        src={post.data.lastlogo3?.url || ""}
-                        alt={post.data.lastlogo3?.alt || "icon"}
-                        style={{ width: "56px", height: "60px" }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontSize: "29.26px",
-                          fontWeight: 600,
-                          lineHeight: "36.72px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "41.5px",
-                        }}
-                      >
-                        {post.data.box3header}
-                      </Typography>
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontStyle: "italic",
-                          fontSize: "19.5px",
-                          fontWeight: 400,
-                          lineHeight: "36.08px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "20.72px",
-                          paddingLeft: "60px",
-                          paddingRight: "47px",
-                        }}
-                      >
-                        {post.data.box3content}
-                      </Typography>
-                    </div>
-                  </Grid>
-                  <Grid
-                    item
-                    lg={3}
-                    style={{
-                      background: "#FFFFFF",
-                      width: "373px",
-                      height: "452px",
-                      borderRadius: "24px",
-                      boxShadow: "0px 16px 32px rgba(0, 0, 0, 0.1)",
-                    }}
-                  >
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        paddingTop: "104.62px",
-                      }}
-                    >
-                      <img
-                        src={post.data.lastlogo4?.url || ""}
-                        alt={post.data.lastlogo4?.alt || "icon"}
-                        style={{ width: "54.4px", height: "60px" }}
-                      />
-                    </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontSize: "29.26px",
-                          fontWeight: 600,
-                          lineHeight: "36.72px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "41.5px",
-                        }}
-                      >
-                        {post.data.box4header}
-                      </Typography>
-                      <Typography
-                        style={{
-                          fontFamily: "Mulish, sans-serif",
-                          fontStyle: "italic",
-                          fontSize: "19.5px",
-                          fontWeight: 400,
-                          lineHeight: "36.08px",
-                          textAlign: "center",
-                          color: "#1E1E1E",
-                          paddingTop: "20.72px",
-                          paddingLeft: "60px",
-                          paddingRight: "50px",
-                        }}
-                      >
-                        {post.data.box4content}
-                      </Typography>
-                    </div>
-                  </Grid>*/}
                   <Grid
                     item
                     lg={5}
@@ -1425,29 +1223,31 @@ const LecarechezMargueriteServices: React.FC = () => {
                             }}
                           />
                         )}
-                        <div
-                          style={{
-                            fontSize: "26px",
+                        <Typography
+                          sx={{
+                            // fontSize: "26px",
+                            fontSize: { xs: "15px", sm: "35px", lg: "26px" },
                             fontFamily: "Mulish",
                             fontWeight: 400,
                             color: "#1E1E1E",
-                            paddingLeft:'10px'
+                            paddingLeft: "10px",
                           }}
                         >
                           {posts[0]?.data.box1header}
-                        </div>
+                        </Typography>
                       </div>
-                      <div
-                        style={{
-                          fontSize: "18px",
+                      <Typography
+                        sx={{
+                          // fontSize: "18px",
+                          fontSize: { xs: "12px", sm: "25px", lg: "18px" },
                           fontFamily: "Mulish",
                           fontStyle: "italic",
                           color: "#1E1E1E",
-                          paddingTop:'20px'
+                          paddingTop: "20px",
                         }}
                       >
                         {posts[0]?.data.box1content}
-                      </div>
+                      </Typography>
                     </div>
                     {posts[0]?.data.last_image1 && (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -1457,7 +1257,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         style={{
                           width: "40%",
                           height: "auto",
-                          borderBottomRightRadius:'20px'
+                          borderBottomRightRadius: "20px",
                         }}
                       />
                     )}
@@ -1497,29 +1297,31 @@ const LecarechezMargueriteServices: React.FC = () => {
                             }}
                           />
                         )}
-                        <div
-                          style={{
-                            fontSize: "26px",
+                        <Typography
+                          sx={{
+                            // fontSize: "26px",
+                            fontSize: { xs: "15px", sm: "35px", lg: "26px" },
                             fontFamily: "Mulish",
                             fontWeight: 400,
                             color: "#1E1E1E",
-                            paddingLeft:'10px'
+                            paddingLeft: "10px",
                           }}
                         >
                           {posts[0]?.data.box2header}
-                        </div>
+                        </Typography>
                       </div>
-                      <div
-                        style={{
-                          fontSize: "18px",
+                      <Typography
+                        sx={{
+                          // fontSize: "18px",
+                          fontSize: { xs: "12px", sm: "25px", lg: "18px" },
                           fontFamily: "Mulish",
                           fontStyle: "italic",
                           color: "#1E1E1E",
-                          paddingTop:'20px'
+                          paddingTop: "20px",
                         }}
                       >
                         {posts[0]?.data.box2content}
-                      </div>
+                      </Typography>
                     </div>
                     {posts[0]?.data.last_image2 && (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -1529,7 +1331,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         style={{
                           width: "40%",
                           height: "auto",
-                          borderBottomRightRadius:'20px'
+                          borderBottomRightRadius: "20px",
                         }}
                       />
                     )}
@@ -1538,12 +1340,13 @@ const LecarechezMargueriteServices: React.FC = () => {
                 <Grid
                   item
                   lg={12}
-                  style={{
+                  sx={{
                     display: "flex",
                     justifyContent: "space-evenly",
                     alignItems: "center",
-                    // gap: "20px",
+                    gap: "30px",
                     // padding: "80px",
+                    flexDirection: { xs: "column", sm: "column", lg: "row" },
                   }}
                 >
                   <Grid
@@ -1581,29 +1384,31 @@ const LecarechezMargueriteServices: React.FC = () => {
                             }}
                           />
                         )}
-                        <div
-                          style={{
-                            fontSize: "26px",
+                        <Typography
+                          sx={{
+                            // fontSize: "26px",
+                            fontSize: { xs: "15px", sm: "35px", lg: "26px" },
                             fontFamily: "Mulish",
                             fontWeight: 400,
                             color: "#1E1E1E",
-                            paddingLeft:'10px'
+                            paddingLeft: "10px",
                           }}
                         >
                           {posts[0]?.data.box3header}
-                        </div>
+                        </Typography>
                       </div>
-                      <div
-                        style={{
-                          fontSize: "18px",
+                      <Typography
+                        sx={{
+                          // fontSize: "18px",
+                          fontSize: { xs: "12px", sm: "25px", lg: "18px" },
                           fontFamily: "Mulish",
                           fontStyle: "italic",
                           color: "#1E1E1E",
-                          paddingTop:'20px'
+                          paddingTop: "20px",
                         }}
                       >
                         {posts[0]?.data.box3content}
-                      </div>
+                      </Typography>
                     </div>
                     {posts[0]?.data.last_image3 && (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -1613,7 +1418,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         style={{
                           width: "40%",
                           height: "auto",
-                          borderBottomRightRadius:'20px'
+                          borderBottomRightRadius: "20px",
                         }}
                       />
                     )}
@@ -1653,29 +1458,31 @@ const LecarechezMargueriteServices: React.FC = () => {
                             }}
                           />
                         )}
-                        <div
-                          style={{
-                            fontSize: "26px",
+                        <Typography
+                          sx={{
+                            // fontSize: "26px",
+                            fontSize: { xs: "15px", sm: "35px", lg: "26px" },
                             fontFamily: "Mulish",
                             fontWeight: 400,
                             color: "#1E1E1E",
-                            paddingLeft:'10px'
+                            paddingLeft: "10px",
                           }}
                         >
                           {posts[0]?.data.box4header}
-                        </div>
+                        </Typography>
                       </div>
-                      <div
-                        style={{
-                          fontSize: "18px",
+                      <Typography
+                        sx={{
+                          // fontSize: "18px",
+                          fontSize: { xs: "12px", sm: "25px", lg: "18px" },
                           fontFamily: "Mulish",
                           fontStyle: "italic",
                           color: "#1E1E1E",
-                          paddingTop:'20px'
+                          paddingTop: "20px",
                         }}
                       >
                         {posts[0]?.data.box4content}
-                      </div>
+                      </Typography>
                     </div>
                     {posts[0]?.data.last_image4 && (
                       // eslint-disable-next-line @next/next/no-img-element
@@ -1685,7 +1492,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         style={{
                           width: "40%",
                           height: "auto",
-                          borderBottomRightRadius:'20px'
+                          borderBottomRightRadius: "20px",
                         }}
                       />
                     )}
