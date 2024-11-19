@@ -119,15 +119,15 @@ export default function Contact() {
   };
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
 
     // Check for errors
     const newErrors = validateFields();
     if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors); // Set errors if validation fails
-      return; // Stop form submission
+      setErrors(newErrors);
+      return;
     } else {
-      setErrors({}); // Clear errors if validation passes
+      setErrors({});
     }
 
     const formData = {
@@ -151,6 +151,8 @@ export default function Contact() {
       const result = await response.json();
       setMessage(result.message);
       setOpenSnackbar(true);
+
+      sendEmail(e);
 
       setNomInputValue("");
       setEmailInputValue("");
@@ -188,7 +190,7 @@ export default function Contact() {
     }
   };
 
-  const apiKey = "000006LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  const apiKey = "0006LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
 
   const handleCaptcha = (value: any) => {
     console.log("Captcha value:", value);
@@ -499,9 +501,7 @@ export default function Contact() {
                 boxShadow: "none",
               },
             }}
-            onClick={(e: any) => {
-              handleSubmit(e), sendEmail(e);
-            }}
+            onClick={(e: any) => handleSubmit(e)}
           >
             {posts[0]?.data.button_text}
             <EastIcon />
