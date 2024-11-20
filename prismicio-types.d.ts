@@ -1345,6 +1345,17 @@ interface ContactDocumentData {
   instagram_link: prismic.LinkField;
 
   /**
+   * Button Icon field in *Contact*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: contact.button_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  button_icon: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Contact*
    *
    * - **Field Type**: Slice Zone

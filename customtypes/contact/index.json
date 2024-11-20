@@ -158,6 +158,14 @@
           "select": null
         }
       },
+      "button_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Button Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
