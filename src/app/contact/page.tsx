@@ -17,6 +17,7 @@ import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
 import Header from "../mainpage/Header";
 import ReCAPTCHA from "react-google-recaptcha";
+import Footer from "../mainpage/Footer";
 
 // Dynamically import Leaflet components
 const MapContainer = dynamic(
@@ -33,20 +34,20 @@ const Marker = dynamic(
 );
 
 export default function Contact() {
-  const [posts, setPosts] = useState<any[]>([]);
+  const [contactPage, setContactPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType("contact" as any);
-      setPosts(response);
+      setContactPage(response);
     };
     fetchPosts();
   }, []);
 
   const [pinIcon, setPinIcon] = useState(null);
 
-  const latitude = posts[0]?.data.map.latitude;
-  const longitude = posts[0]?.data.map.longitude;
+  const latitude = contactPage[0]?.data.map.latitude;
+  const longitude = contactPage[0]?.data.map.longitude;
 
   const position: [number, number] = [latitude, longitude];
 
@@ -203,39 +204,39 @@ export default function Contact() {
 
   const contactDetails = [
     {
-      icon: posts[0]?.data.email_icon,
-      text: posts[0]?.data.email,
+      icon: contactPage[0]?.data.email_icon,
+      text: contactPage[0]?.data.email,
     },
     {
-      icon: posts[0]?.data.phone_icon,
-      text: posts[0]?.data.phone,
+      icon: contactPage[0]?.data.phone_icon,
+      text: contactPage[0]?.data.phone,
     },
     {
-      icon: posts[0]?.data.web_icon,
-      text: posts[0]?.data.web,
+      icon: contactPage[0]?.data.web_icon,
+      text: contactPage[0]?.data.web,
     },
   ];
 
   const socialLinks = [
     {
       platform: "facebook",
-      link: posts[0]?.data.facebook_link,
-      icon: posts[0]?.data.facebook,
+      link: contactPage[0]?.data.facebook_link,
+      icon: contactPage[0]?.data.facebook,
     },
     {
       platform: "twitter",
-      link: posts[0]?.data.twitter_link,
-      icon: posts[0]?.data.twitter,
+      link: contactPage[0]?.data.twitter_link,
+      icon: contactPage[0]?.data.twitter,
     },
     {
       platform: "linkedin",
-      link: posts[0]?.data.linked_in_link,
-      icon: posts[0]?.data.linked_in,
+      link: contactPage[0]?.data.linkedin_link,
+      icon: contactPage[0]?.data.linked_in,
     },
     {
       platform: "instagram",
-      link: posts[0]?.data.instagram_link,
-      icon: posts[0]?.data.instagram,
+      link: contactPage[0]?.data.instagram_link,
+      icon: contactPage[0]?.data.instagram,
     },
   ];
 
@@ -244,7 +245,7 @@ export default function Contact() {
       <Header />
       <div
         style={{
-          backgroundImage: `url(${posts[0]?.data?.banner?.url || ""})`,
+          backgroundImage: `url(${contactPage[0]?.data?.banner?.url || ""})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -280,7 +281,7 @@ export default function Contact() {
                 lineHeight: "80.32px",
               }}
             >
-              {posts[0]?.data.heading}
+              {contactPage[0]?.data.heading}
             </Typography>
             <Typography
               sx={{
@@ -291,7 +292,7 @@ export default function Contact() {
                 lineHeight: "38.4px",
               }}
             >
-              {posts[0]?.data.sub_heading}
+              {contactPage[0]?.data.sub_heading}
             </Typography>
           </div>
         </div>
@@ -311,7 +312,7 @@ export default function Contact() {
               textAlign: "center",
             }}
           >
-            {posts[0]?.data.title}
+            {contactPage[0]?.data.title}
           </Typography>
         </Grid>
 
@@ -503,7 +504,7 @@ export default function Contact() {
             }}
             onClick={(e: any) => handleSubmit(e)}
           >
-            {posts[0]?.data.button_text}
+            {contactPage[0]?.data.button_text}
             <EastIcon />
           </Button>
         </Grid>
@@ -518,6 +519,7 @@ export default function Contact() {
           </Alert>
         </Snackbar>
       </Grid>
+      <Footer/>
     </div>
   );
 }

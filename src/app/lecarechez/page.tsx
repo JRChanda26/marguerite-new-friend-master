@@ -126,7 +126,7 @@ const LecarechezMargueriteServices: React.FC = () => {
     },
     {
       platform: "linkedin",
-      link: posts2[0]?.data.linked_in_link,
+      link: posts2[0]?.data.linkedin_link,
       icon: posts2[0]?.data.linked_in,
     },
     {

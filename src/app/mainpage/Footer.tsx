@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                   gap: "20px",
                 }}
               >
-                <PrismicNextLink field={socialLinkPage[0]?.data.linked_in_link}>
+                <PrismicNextLink field={socialLinkPage[0]?.data.linkedin_link}>
                 {post?.data.linkedin_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

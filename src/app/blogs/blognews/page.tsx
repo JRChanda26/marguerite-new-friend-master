@@ -188,7 +188,7 @@ export default function BlogsNews() {
     },
     {
       platform: "linkedin",
-      link: posts[0]?.data.linked_in_link,
+      link: posts[0]?.data.linkedin_link,
       icon: posts[0]?.data.linked_in,
     },
     {

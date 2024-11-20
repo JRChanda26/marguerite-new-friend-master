@@ -1246,61 +1246,6 @@ interface ContactDocumentData {
   instagram: prismic.ImageField<never>;
 
   /**
-   * Email Text Field field in *Contact*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Email
-   * - **API ID Path**: contact.email_text_field
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  email_text_field: prismic.KeyTextField;
-
-  /**
-   * Nom Text Field field in *Contact*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Nom
-   * - **API ID Path**: contact.nom_text_field
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  nom_text_field: prismic.KeyTextField;
-
-  /**
-   * Subject Text Field field in *Contact*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Subject
-   * - **API ID Path**: contact.subject_text_field
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  subject_text_field: prismic.KeyTextField;
-
-  /**
-   * Phone Text Field field in *Contact*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Téléphone
-   * - **API ID Path**: contact.phone_text_field
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  phone_text_field: prismic.KeyTextField;
-
-  /**
-   * Bonjour Text Field field in *Contact*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Bonjour, je suis intéressé par..
-   * - **API ID Path**: contact.bonjour_text_field
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  bonjour_text_field: prismic.KeyTextField;
-
-  /**
    * Button Text field in *Contact*
    *
    * - **Field Type**: Text
@@ -1310,17 +1255,6 @@ interface ContactDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   button_text: prismic.KeyTextField;
-
-  /**
-   * Button Link field in *Contact*
-   *
-   * - **Field Type**: Link
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.button_link
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  button_link: prismic.LinkField;
 
   /**
    * Map field in *Contact*
@@ -1378,15 +1312,15 @@ interface ContactDocumentData {
   facebook_link: prismic.LinkField;
 
   /**
-   * Linked In Link field in *Contact*
+   * LinkedIn Link field in *Contact*
    *
    * - **Field Type**: Link
    * - **Placeholder**: *None*
-   * - **API ID Path**: contact.linked_in_link
+   * - **API ID Path**: contact.linkedin_link
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
-  linked_in_link: prismic.LinkField;
+  linkedin_link: prismic.LinkField;
 
   /**
    * Twitter Link field in *Contact*
@@ -1409,17 +1343,6 @@ interface ContactDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
    */
   instagram_link: prismic.LinkField;
-
-  /**
-   * Map Image field in *Contact*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: contact.map_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  map_image: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *Contact*
