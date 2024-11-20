@@ -242,7 +242,12 @@ export default function Blogs() {
           </div>
         </div>
       </div>
-      <Grid container>
+      <Grid
+        container
+        style={{
+          background: "#e1f5f2",
+        }}
+      >
         <Grid item xs={12} sm={12} lg={12}>
           <Typography
             sx={{
@@ -381,6 +386,7 @@ export default function Blogs() {
         style={{
           display: "flex",
           justifyContent: "center",
+          background: "#e1f5f2",
         }}
       >
         <Typography

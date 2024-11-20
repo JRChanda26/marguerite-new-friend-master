@@ -92,7 +92,7 @@ export default function Liberez() {
           item
           lg={12}
           sx={{
-            background: "linear-gradient(to right, #F6C09E 60%, #24535C 40%)",
+            background: "linear-gradient(to right, #F29B64 60%, #24535C 40%)",
             display: "flex",
             justifyContent: "space-evenly",
             flexDirection: { xs: "column", sm: "row" },

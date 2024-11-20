@@ -505,7 +505,18 @@ export default function Contact() {
             onClick={(e: any) => handleSubmit(e)}
           >
             {contactPage[0]?.data.button_text}
-            <EastIcon />
+            {contactPage[0]?.data.button_icon && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={contactPage[0].data.button_icon.url || undefined}
+                  alt={contactPage[0].data.button_icon.alt || "Logo"}
+                  style={{
+                    height: "auto",
+                    width: "30px",
+                    paddingTop:'5%'
+                  }}
+                />
+              )}
           </Button>
         </Grid>
 
