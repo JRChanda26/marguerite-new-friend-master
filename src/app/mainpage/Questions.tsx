@@ -16,36 +16,36 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import { useRouter } from "next/navigation";
 
 export default function Questions() {
-  const client = createClient();
+  // const client = createClient();
   // const settings = await client.getSingle("questions");
 
-  const [settings, setSettings] = useState<any>(null);
+  const [questionPage, setQuestionPage] = useState<any>(null);
 
   useEffect(() => {
     async function fetchData() {
       const client = createClient();
-      const data = await client.getSingle("questions" as any);
-      setSettings(data);
+      const data = await client.getSingle("questions");
+      setQuestionPage(data);
     }
     fetchData();
   });
 
   const faqs = [
     {
-      question: settings?.data.question,
-      answer: settings?.data.answer,
+      question: questionPage?.data.question1,
+      answer: questionPage?.data.answer1,
     },
     {
-      question: settings?.data.question2,
-      answer: settings?.data.answer2,
+      question: questionPage?.data.question2,
+      answer: questionPage?.data.answer2,
     },
     {
-      question: settings?.data.question3,
-      answer: settings?.data.answer3,
+      question: questionPage?.data.question3,
+      answer: questionPage?.data.answer3,
     },
     {
-      question: settings?.data.question4,
-      answer: settings?.data.answer4,
+      question: questionPage?.data.question4,
+      answer: questionPage?.data.answer4,
     },
   ];
 
@@ -83,7 +83,7 @@ export default function Questions() {
           }}
         >
           <Grid item lg={6}>
-            <div
+            <Typography
               style={{
                 color: "#14292D",
                 fontSize: "64px",
@@ -93,8 +93,21 @@ export default function Questions() {
                 marginLeft: "50px",
               }}
             >
-              <PrismicRichText field={settings?.data.heading} />
-            </div>
+              {questionPage?.data.heading}
+            </Typography>
+            <Typography
+              style={{
+                color: "#161C2DB8",
+                fontSize: "34px",
+                fontWeight: 400,
+                fontFamily: "Mulish",
+                lineHeight: "36.8px",
+                marginLeft: "50px",
+                marginTop:'20px'
+              }}
+            >
+              {questionPage?.data.description}
+            </Typography>
             <Button
               style={{
                 textDecoration: "none",
@@ -103,6 +116,7 @@ export default function Questions() {
                 padding: "15px 25px",
                 borderRadius: "10px",
                 marginLeft: "50px",
+                marginTop:'80px',
                 fontFamily: "Mulish",
                 lineHeight: "26px",
                 fontSize: "21.67px",
@@ -110,13 +124,13 @@ export default function Questions() {
               }}
               onClick={handleNavigation}
             >
-              {settings?.data.button_text}
+              {questionPage?.data.button_text}
             </Button>
-            {settings?.data.image && (
+            {questionPage?.data.image && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={settings?.data.image.url || undefined}
-                alt={settings?.data.image.alt || "Image"}
+                src={questionPage?.data.image.url || undefined}
+                alt={questionPage?.data.image.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",

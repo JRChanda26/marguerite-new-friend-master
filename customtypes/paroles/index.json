@@ -1,44 +1,53 @@
 {
   "format": "page",
-  "id": "header",
-  "label": "Header",
+  "id": "paroles",
+  "label": "Paroles",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "marguerite_logo": {
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "video": {
+        "type": "Link",
+        "config": {
+          "label": "Video",
+          "placeholder": "",
+          "select": "media",
+          "allowText": true
+        }
+      },
+      "title": {
+        "type": "Text",
+        "config": {
+          "label": "Title",
+          "placeholder": ""
+        }
+      },
+      "left_arrow_icon": {
         "type": "Image",
         "config": {
-          "label": "Marguerite Logo",
+          "label": "Left Arrow Icon",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "page1": {
-        "type": "Text",
-        "config": {
-          "label": "Page1",
-          "placeholder": ""
-        }
-      },
-      "page2": {
-        "type": "Text",
-        "config": {
-          "label": "Page2",
-          "placeholder": ""
-        }
-      },
-      "page3": {
-        "type": "Text",
-        "config": {
-          "label": "Page3",
-          "placeholder": ""
-        }
-      },
-      "contact_icon": {
+      "right_arrow_icon": {
         "type": "Image",
         "config": {
-          "label": "Contact Icon",
+          "label": "Right Arrow Icon",
           "constraint": {},
           "thumbnails": []
         }

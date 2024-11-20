@@ -6,12 +6,12 @@ import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 
 const Header: React.FC = () => {
-  const [posts, setPosts] = useState<[]>([]);
+  const [headerPage, setHeaderPage] = useState<[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType("header");
-      setPosts(response);
+      setHeaderPage(response);
     };
 
     fetchPosts();
@@ -20,7 +20,7 @@ const Header: React.FC = () => {
   return (
     <Box>
       <div>
-        {posts.map((post: any) => (
+        {headerPage.map((post: any) => (
           <Grid
             container
             spacing={0}
@@ -57,11 +57,11 @@ const Header: React.FC = () => {
                 padding: "10px",
               }}
             >
-              {post?.data.logo && (
+              {post?.data.marguerite_logo && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={post.data.logo.url || undefined}
-                  alt={post.data.logo.alt || "Image"}
+                  src={post.data.marguerite_logo.url || undefined}
+                  alt={post.data.marguerite_logo.alt || "Image"}
                   style={{
                     width: "10%",
                     height: "auto",
@@ -83,7 +83,7 @@ const Header: React.FC = () => {
                     // padding:'27px 55.33px 36px 262px'
                   }}
                 >
-                  {post.data.title1}
+                  {post.data.page1}
                 </Typography>
               </Link>
               <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
                     // padding:'27px 27.67px 36px 55.33px'
                   }}
                 >
-                  {post.data.title2}
+                  {post.data.page2}
                 </Typography>
               </Link>
               <Link href={"/caremanagement"} style={{ textDecoration: "none" }}>
@@ -113,14 +113,14 @@ const Header: React.FC = () => {
                     // padding:'27px 57.53px 36px 27.67px'
                   }}
                 >
-                  {post.data.title3}
+                  {post.data.page3}
                 </Typography>
               </Link>
-              {post?.data.contact && (
+              {post?.data.contact_icon && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={post.data.contact.url || undefined}
-                  alt={post.data.contact.alt || "Image"}
+                  src={post.data.contact_icon.url || undefined}
+                  alt={post.data.contact_icon.alt || "Image"}
                   style={{
                     width: "5%",
                     height: "auto",

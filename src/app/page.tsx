@@ -2,12 +2,13 @@ import NotreProcessus from "./mainpage/NotreProcessus";
 import Questions from "./mainpage/Questions";
 import Footer from "./mainpage/Footer";
 import Choisir from "./mainpage/Choisir";
-import NosActes from "./mainpage/NosActes";
 import Liberez from "./mainpage/Liberez";
-import Motsdenotreclient from "./mainpage/Motsdenotreclient";
-import SoinChez from "./mainpage/SoinChez";
 import Header from "./mainpage/Header";
 import NousAgissons from "./mainpage/NousAgissons";
+import Paroles from "./mainpage/Paroles";
+import NosExperiences from "./mainpage/NosExperiences";
+import BlogEt from "./mainpage/BlogEt";
+
 
 
 export default function Home() {
@@ -17,10 +18,10 @@ export default function Home() {
       <NousAgissons />
       <Choisir/>
       <NotreProcessus />
-      <SoinChez/>
-      <Motsdenotreclient/>
+      <Paroles/>
+      <NosExperiences/>
       <Questions />
-      <NosActes/>
+      <BlogEt/>
       <Liberez/>
       <Footer/>
     </div>

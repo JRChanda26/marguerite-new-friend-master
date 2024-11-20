@@ -9,94 +9,94 @@
       "heading": {
         "type": "Text",
         "config": {
-          "label": "heading",
+          "label": "Heading",
           "placeholder": ""
         }
       },
-      "content": {
+      "description": {
         "type": "Text",
         "config": {
-          "label": "content",
+          "label": "Description",
           "placeholder": ""
         }
       },
-      "homelogo": {
+      "card_image1": {
         "type": "Image",
         "config": {
-          "label": "homelogo",
+          "label": "Card Image1",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "editlogo": {
+      "card_image2": {
         "type": "Image",
         "config": {
-          "label": "editlogo",
+          "label": "Card Image2",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "calenderlogo": {
+      "card_image3": {
         "type": "Image",
         "config": {
-          "label": "calenderlogo",
+          "label": "Card Image3",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "homeheader": {
+      "card_title1": {
         "type": "Text",
         "config": {
-          "label": "homeheader",
+          "label": "Card Title1",
           "placeholder": ""
         }
       },
-      "homecontent": {
+      "card_description1": {
         "type": "Text",
         "config": {
-          "label": "homecontent",
+          "label": "Card Description1",
           "placeholder": ""
         }
       },
-      "editlogoheader": {
+      "card_title2": {
         "type": "Text",
         "config": {
-          "label": "editlogoheader",
+          "label": "Card Title2",
           "placeholder": ""
         }
       },
-      "editlogocontent": {
+      "card_description2": {
         "type": "Text",
         "config": {
-          "label": "editlogocontent",
+          "label": "Card Description2",
           "placeholder": ""
         }
       },
-      "calenderheader": {
+      "card_title3": {
         "type": "Text",
         "config": {
-          "label": "calenderheader",
+          "label": "Card Title3",
           "placeholder": ""
         }
       },
-      "calendercontent": {
+      "card_description3": {
         "type": "Text",
         "config": {
-          "label": "calendercontent",
+          "label": "Card Description3",
           "placeholder": ""
         }
       },
-      "buttontext": {
+      "link_text": {
         "type": "Text",
         "config": {
-          "label": "buttontext",
+          "label": "Link Text",
           "placeholder": ""
         }
       },
-      "buttonicon": {
+      "link_icon": {
         "type": "Image",
         "config": {
-          "label": "buttonicon",
+          "label": "Link Icon",
           "constraint": {},
           "thumbnails": []
         }

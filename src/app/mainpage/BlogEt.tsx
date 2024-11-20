@@ -1,21 +1,21 @@
 "use client";
 import { createClient } from "@/prismicio";
-import { Grid } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-export default function NosActes() {
+export default function BlogEt() {
   // const client = createClient();
   // const settings = await client.getSingle("nos_actes");
 
-  const [settings, setSettings] = useState<any>(null);
+  const [blogPage, setBlogPage] = useState<any>(null);
 
   useEffect(() => {
     async function fetchData() {
       const client = createClient();
-      const data = await client.getSingle("nos_actes" as any);
-      setSettings(data);
+      const data = await client.getSingle("blog_et" as any);
+      setBlogPage(data);
     }
     fetchData();
   });
@@ -25,6 +25,8 @@ export default function NosActes() {
     fontSize: "21.27px",
     fontWeight: 700,
     lineHeight: "25.52px",
+    textAlign:'left',
+    paddingTop:'2%'
   };
 
   const description: React.CSSProperties = {
@@ -32,13 +34,15 @@ export default function NosActes() {
     fontSize: "18.61px",
     fontWeight: 400,
     lineHeight: "29.78px",
+    textAlign:'left',
+    paddingTop:'5%'
   };
 
   const items = [
     {
-      image: settings?.data.image2,
-      title: settings?.data.title2,
-      description: settings?.data.description2,
+      image: blogPage?.data.card_image,
+      title: blogPage?.data.card_title,
+      description: blogPage?.data.card_description,
     },
   ];
 
@@ -59,18 +63,19 @@ export default function NosActes() {
         <Grid
           item
           xs={12}
-          style={{ textAlign: "center", marginBottom: "20px" }}
+          style={{ textAlign: "center"}}
         >
-          <div
+          <Typography
             style={{
               fontSize: "48px",
               fontWeight: 700,
               lineHeight: "58px",
               color: "#000000",
+              padding:'5%'
             }}
           >
-            <PrismicRichText field={settings?.data.title} />
-          </div>
+            {blogPage?.data.heading}
+          </Typography>
         </Grid>
 
         {/* Responsive layout for items */}
@@ -125,8 +130,8 @@ export default function NosActes() {
                   }}
                 />
               )}
-              <p style={title}>{item.title}</p>
-              <p style={description}>{item.description}</p>
+              <Typography style={title}>{item.title}</Typography>
+              <Typography style={description}>{item.description}</Typography>
               <div
                 style={{
                   height: "24px",
@@ -136,6 +141,7 @@ export default function NosActes() {
                   visibility: isHovered === index ? "visible" : "hidden",
                   opacity: isHovered === index ? 1 : 0,
                   transition: "opacity 0.3s ease, visibility 0.3s ease",
+                  paddingTop:'5%'
                 }}
               >
                 <Link
@@ -146,7 +152,7 @@ export default function NosActes() {
                     textDecoration: "none",
                   }}
                 >
-                  <p
+                  <Typography
                     style={{
                       textDecoration: "none",
                       color: "#24535C",
@@ -155,17 +161,16 @@ export default function NosActes() {
                       lineHeight: "25.9px",
                     }}
                   >
-                    {settings?.data.link_text}
-                  </p>
-                  {settings?.data.arrow_image && (
+                    {blogPage?.data.link_text}
+                  </Typography>
+                  {blogPage?.data.link_icon && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={settings.data.arrow_image.url || undefined}
-                      alt={settings.data.arrow_image.alt || "Image"}
+                      src={blogPage.data.link_icon.url || undefined}
+                      alt={blogPage.data.link_icon.alt || "Image"}
                       style={{
                         width: "48px",
                         height: "24px",
-                        paddingTop:'15px'
                       }}
                     />
                   )}
@@ -174,17 +179,19 @@ export default function NosActes() {
             </Grid>
           ))}
         </Grid>
-        <p
+        <Typography
           style={{
             fontFamily: "Jenna Sue",
             color: "#24535C",
             fontSize: "44px",
             lineHeight: "44px",
             textAlign: "center",
+            textDecoration:'underline',
+            paddingTop:'5%'
           }}
         >
-          {settings?.data.footer_text}
-        </p>
+          {blogPage?.data.footer_text}
+        </Typography>
       </Grid>
     </div>
   );

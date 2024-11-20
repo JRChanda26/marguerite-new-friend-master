@@ -1,24 +1,23 @@
 {
   "format": "page",
-  "id": "soin_chez",
-  "label": "Soin Chez",
+  "id": "nos_experiences",
+  "label": "Nos Experiences",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "title": {
-        "type": "StructuredText",
+      "background_image": {
+        "type": "Image",
         "config": {
-          "label": "Title",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          "label": "Background Image",
+          "constraint": {},
+          "thumbnails": []
         }
       },
-      "sub_title": {
+      "heading": {
         "type": "Text",
         "config": {
-          "label": "Sub Title",
+          "label": "Heading",
           "placeholder": ""
         }
       },
@@ -29,12 +28,18 @@
           "placeholder": ""
         }
       },
-      "video": {
-        "type": "Link",
+      "testimonial1": {
+        "type": "Text",
         "config": {
-          "label": "Video",
-          "placeholder": "",
-          "select": "media"
+          "label": "Testimonial1",
+          "placeholder": ""
+        }
+      },
+      "testimonial2": {
+        "type": "Text",
+        "config": {
+          "label": "Testimonial2",
+          "placeholder": ""
         }
       },
       "slices": {
