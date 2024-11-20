@@ -5,14 +5,11 @@ import {
   Button,
   Grid,
   InputAdornment,
-  Tab,
-  Tabs,
   TextField,
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { PrismicRichText } from "@prismicio/react";
 import Liberez from "@/app/mainpage/Liberez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";

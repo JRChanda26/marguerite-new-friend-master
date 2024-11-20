@@ -68,13 +68,13 @@ export default function Contact() {
 
   const mouseHover = {
     "& .MuiInput-underline:before": {
-      borderBottomColor: "gray", // Default underline color
+      borderBottomColor: "gray",
     },
     "& .MuiInput-underline:hover:before": {
-      borderBottomColor: "gray", // Underline color on hover
+      borderBottomColor: "gray",
     },
     "& .MuiInput-underline:after": {
-      borderBottomColor: "transparent", // Remove blue color on focus
+      borderBottomColor: "transparent",
     },
     // "& .MuiInput-input": {
     //   color: "blue", // Text color

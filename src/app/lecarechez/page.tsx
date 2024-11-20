@@ -7,12 +7,9 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Button,
-  Divider,
   Grid,
   Typography,
 } from "@mui/material";
-import Link from "next/link";
 import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
