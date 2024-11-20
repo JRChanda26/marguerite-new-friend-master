@@ -4,19 +4,38 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import { PrismicNextLink } from "@prismicio/next";
 
 const Footer: React.FC = () => {
-  const [posts, setPosts] = useState<any[]>([]);
+  const [footerPage, setFooterPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType("footer");
-      setPosts(response);
+      setFooterPage(response);
     };
 
     fetchPosts();
   }, []);
 
+  const [socialLinkPage, setSocialLinkPage] = useState<any[]>([]);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType("contact" as any);
+      setSocialLinkPage(response);
+    };
+    fetchPosts();
+  }, []);
+
+  const allLinkText = [
+    footerPage[0]?.data.link_text1,
+    footerPage[0]?.data.link_text2,
+    footerPage[0]?.data.link_text3,
+    footerPage[0]?.data.link_text4,
+    footerPage[0]?.data.link_text5,
+    footerPage[0]?.data.link_text6,
+    footerPage[0]?.data.link_text7,
+  ];
   return (
     <Box sx={{ backgroundColor: "#24535C", padding: "50px", mt: 4 }}>
       <Grid
@@ -30,20 +49,19 @@ const Footer: React.FC = () => {
           item
           xs={12}
           sm={6}
-          lg={4}
+          lg={5}
           textAlign={{ xs: "center", sm: "left" }}
         >
-          {posts.map((post, postIndex) => (
+          {footerPage.map((post, postIndex) => (
             <div key={postIndex}>
-              {post?.data.footerlogo && (
+              {post?.data.marguerite_logo && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={post.data.footerlogo.url || undefined}
-                  alt={post.data.footerlogo.alt || "Logo"}
+                  src={post.data.marguerite_logo.url || undefined}
+                  alt={post.data.marguerite_logo.alt || "Logo"}
                   style={{
-                    height: "67.1px",
-                    width: "56.26px",
-                    paddingBottom: "36.49px",
+                    height: "auto",
+                    width: "50%",
                   }}
                 />
               )}
@@ -58,7 +76,7 @@ const Footer: React.FC = () => {
                   textAlign: { xs: "center", sm: "left" },
                 }}
               >
-                {post?.data.lefttext}
+                {post?.data.description}
               </Typography>
               <Box
                 sx={{
@@ -68,82 +86,64 @@ const Footer: React.FC = () => {
                   gap: "20px",
                 }}
               >
-                <Link
-                  href={"www.linkedin.com"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {post?.data.linkedin && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.linkedin.url || undefined}
-                      alt={post.data.linkedin.alt || "LinkedIn"}
-                      style={{ width: "24px", height: "24px" }}
-                    />
-                  )}
-                </Link>
-                <Link
-                  href={"www.twitter.com"}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {post?.data.twitter && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.twitter.url || undefined}
-                      alt={post.data.twitter.alt || "Twitter"}
-                      style={{ width: "24px", height: "24px" }}
-                    />
-                  )}
-                </Link>
+                <PrismicNextLink field={socialLinkPage[0]?.data.linked_in_link}>
+                {post?.data.linkedin_icon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.linkedin_icon.url || undefined}
+                    alt={post.data.linkedin_icon.alt || "LinkedIn"}
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                )}
+                </PrismicNextLink>
+                <PrismicNextLink field={socialLinkPage[0]?.data.twitter_link}>
+                {post?.data.twitter_icon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.twitter_icon.url || undefined}
+                    alt={post.data.twitter_icon.alt || "Twitter"}
+                    style={{ width: "24px", height: "24px" }}
+                  />
+                )}
+                </PrismicNextLink>
               </Box>
             </div>
           ))}
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
-          {posts.map((post, postIndex) => (
-            <div key={postIndex}>
-              {post?.data.middletext
-                ?.split("\n")
-                .map((line: any, index: any) => (
-                  <Typography
-                    key={index}
-                    sx={{
-                      fontFamily: "Mulish, sans-serif",
-                      color: "#D3DDDE",
-                      fontWeight: 400,
-                      fontSize: { xs: "18px", md: "24.8px" },
-                      lineHeight: "31.13px",
-                      paddingBottom: "19.84px",
-                      textAlign: { xs: "center", sm: "left" },
-                    }}
-                  >
-                    {line}
-                  </Typography>
-                ))}
-            </div>
+          {allLinkText.slice(0, 4).map((text: any, index: number) => (
+            <Typography
+              key={index}
+              sx={{
+                fontFamily: "Mulish, sans-serif",
+                color: "#D3DDDE",
+                fontWeight: 400,
+                fontSize: { xs: "18px", md: "24.8px" },
+                lineHeight: "31.13px",
+                paddingBottom: "19.84px",
+                textAlign: { xs: "center", sm: "left" },
+              }}
+            >
+              {text}
+            </Typography>
           ))}
         </Grid>
         <Grid item xs={12} sm={6} lg={3}>
-          {posts.map((post, postIndex) => (
-            <div key={postIndex}>
-              {post?.data.righttext.split("\n").map((line: any, index: any) => (
-                <Typography
-                  key={index}
-                  sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#D3DDDE",
-                    fontWeight: 400,
-                    fontSize: { xs: "18px", md: "24.8px" },
-                    lineHeight: "31.13px",
-                    paddingBottom: "19.84px",
-                    textAlign: { xs: "center", sm: "left" },
-                  }}
-                >
-                  {line}
-                </Typography>
-              ))}
-            </div>
+          {allLinkText.slice(4).map((text: any, index: number) => (
+            <Typography
+              key={index}
+              sx={{
+                fontFamily: "Mulish, sans-serif",
+                color: "#D3DDDE",
+                fontWeight: 400,
+                fontSize: { xs: "18px", md: "24.8px" },
+                lineHeight: "31.13px",
+                paddingBottom: "19.84px",
+                textAlign: { xs: "center", sm: "left" },
+              }}
+            >
+              {text}
+            </Typography>
           ))}
         </Grid>
       </Grid>

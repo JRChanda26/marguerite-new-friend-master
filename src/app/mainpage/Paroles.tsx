@@ -2,32 +2,32 @@
 
 import { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
-import { Button, Grid } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import { PrismicRichText } from "@prismicio/react";
 import EastIcon from "@mui/icons-material/East";
 import WestIcon from "@mui/icons-material/West";
 
-export default function SoinChez() {
-  const [settings, setSettings] = useState<any>(null);
+export default function Paroles() {
+  const [parolesPage, setParolesPage] = useState<any>(null);
   const [currentIndex, setCurrentIndex] = useState(1);
   const fixedRowsPerPage = 3;
 
   useEffect(() => {
     async function fetchData() {
       const client = createClient();
-      const data = await client.getSingle("soin_chez" as any);
-      setSettings(data);
+      const data = await client.getSingle("paroles" as any);
+      setParolesPage(data);
     }
     fetchData();
   });
 
-  if (!settings) {
+  if (!parolesPage) {
     return;
   }
 
-  const videoUrl = settings.data.video?.url;
-  const subTitle = settings.data.sub_title;
-  const description = settings.data.description;
+  const videoUrl = parolesPage?.data.video?.url;
+  const title = parolesPage?.data.title;
+  const description = parolesPage?.data.description;
 
   const highlightWords = [
     "Marguerite Services,",
@@ -71,7 +71,7 @@ export default function SoinChez() {
   // const items = Array.from({ length: 10 });
   const items = Array.from({ length: 16 }, (_, i) => ({
     id: i + 1,
-    subTitle,
+    title,
     videoUrl,
   }));
 
@@ -162,7 +162,7 @@ export default function SoinChez() {
         </Button>
       </Grid> */}
       <Grid container alignItems="center" justifyContent="center" gap="20px">
-        <div
+        <Typography
           style={{
             color: "#0A1411",
             fontSize: "64px",
@@ -171,8 +171,8 @@ export default function SoinChez() {
             fontFamily: "Mulish",
           }}
         >
-          <PrismicRichText field={settings.data.title} />
-        </div>
+          {parolesPage?.data.heading}
+        </Typography>
         <Grid
           item
           style={{
@@ -197,7 +197,17 @@ export default function SoinChez() {
               },
             }}
           >
-            <WestIcon />
+            {parolesPage?.data.left_arrow_icon && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={parolesPage.data.left_arrow_icon.url || ""}
+                alt={parolesPage.data.left_arrow_icon}
+                style={{
+                  width: "50px",
+                  height: "auto",
+                }}
+              />
+            )}
           </Button>
           <Button
             onClick={handleNextButtonClick}
@@ -214,7 +224,17 @@ export default function SoinChez() {
               },
             }}
           >
-            <EastIcon />
+            {parolesPage?.data.right_arrow_icon && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={parolesPage.data.right_arrow_icon.url || ""}
+                alt={parolesPage.data.right_arrow_icon}
+                style={{
+                  width: "50px",
+                  height: "auto",
+                }}
+              />
+            )}
           </Button>
         </Grid>
       </Grid>
@@ -297,7 +317,7 @@ export default function SoinChez() {
                   }}
                 >
                   {/* {page * fixedRowsPerPage + index + 1}. {subTitle} */}
-                  {item.id}. {item.subTitle}
+                  {item.id}. {item.title}
                 </div>
               </Grid>
             ))}

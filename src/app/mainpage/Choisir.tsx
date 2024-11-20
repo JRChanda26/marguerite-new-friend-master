@@ -5,12 +5,12 @@ import { client } from "../../../prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
 
 const Choisir: React.FC = () => {
-  const [posts, setPosts] = useState<[]>([]);
+  const [choisirPage, setChoisirPage] = useState<[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType("choisir");
-      setPosts(response);
+      setChoisirPage(response);
     };
 
     fetchPosts();
@@ -21,7 +21,7 @@ const Choisir: React.FC = () => {
   return (
     <Box sx={{ background: "#BBDDD999" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
-        {posts.map((post: any, postIndex: number) => (
+        {choisirPage.map((post: any) => (
           <div key={post}>
             <div>
               <Typography
@@ -32,7 +32,7 @@ const Choisir: React.FC = () => {
                   // fontSize:'64px',
                   fontSize: { xs: "28px", md: "64px" },
                   // lineHeight: "80.32px",
-                  lineHeight:{ xs: "28px", md: "80.32px" },
+                  lineHeight: { xs: "28px", md: "80.32px" },
                   padding: "30px 70px",
                   textAlign: "center",
                 }}
@@ -41,21 +41,21 @@ const Choisir: React.FC = () => {
               </Typography>
             </div>
             <div style={{}}>
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#565656",
-                    fontWeight: 400,
-                    // fontSize: "28px",
-                    fontSize: { xs: "14px", md: "28px" },
-                    // lineHeight: "38.4px",
-                    lineHeight:{ xs: "20px", md: "38.4px" },
-                    padding: "0px 70px",
-                    textAlign: "center",
-                  }}
-                >
-                  {post.data.content}
-                </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Mulish, sans-serif",
+                  color: "#565656",
+                  fontWeight: 400,
+                  // fontSize: "28px",
+                  fontSize: { xs: "14px", md: "28px" },
+                  // lineHeight: "38.4px",
+                  lineHeight: { xs: "20px", md: "38.4px" },
+                  padding: "0px 70px",
+                  textAlign: "center",
+                }}
+              >
+                {post.data.description}
+              </Typography>
             </div>
           </div>
         ))}
@@ -83,13 +83,13 @@ const Choisir: React.FC = () => {
             paddingBottom: "34px",
           }}
         >
-          {posts.map((post: any, postIndex: number) => (
+          {choisirPage.map((post: any) => (
             <div key={post} style={{ padding: "30px", textAlign: "center" }}>
-              {post?.data.homelogo && (
+              {post?.data.card_image1 && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={post.data.homelogo.url || undefined}
-                  alt={post.data.homelogo.alt || "Image"}
+                  src={post.data.card_image1.url || undefined}
+                  alt={post.data.card_image1.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -106,7 +106,7 @@ const Choisir: React.FC = () => {
                   paddingTop: "20px",
                 }}
               >
-                {post.data.homeheader}
+                {post.data.card_title1}
               </Typography>
               <Typography
                 style={{
@@ -119,7 +119,7 @@ const Choisir: React.FC = () => {
                   paddingTop: "20px",
                 }}
               >
-                {post.data.homecontent}
+                {post.data.card_description1}
               </Typography>
               <div
                 style={{
@@ -142,13 +142,13 @@ const Choisir: React.FC = () => {
                     paddingRight: "12px",
                   }}
                 >
-                  {post.data.buttontext}
+                  {post.data.link_text}
                 </Typography>
-                {post?.data.buttonicon && (
+                {post?.data.link_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post.data.buttonicon.url || undefined}
-                    alt={post.data.buttonicon.alt || "Image"}
+                    src={post.data.link_icon.url || undefined}
+                    alt={post.data.link_icon.alt || "Image"}
                     style={{
                       width: "48px",
                       height: "24px",
@@ -169,13 +169,13 @@ const Choisir: React.FC = () => {
               "linear-gradient(180.23deg, #FFFFFF 7.39%, #FFFFFF 45.36%, #FFB699 193.52%)",
           }}
         >
-          {posts.map((post: any, postIndex: number) => (
+          {choisirPage.map((post: any) => (
             <div key={post} style={{ padding: "30px", textAlign: "center" }}>
-              {post?.data.editlogo && (
+              {post?.data.card_image2 && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={post.data.editlogo.url || undefined}
-                  alt={post.data.editlogo.alt || "Image"}
+                  src={post.data.card_image2.url || undefined}
+                  alt={post.data.card_image2.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -192,7 +192,7 @@ const Choisir: React.FC = () => {
                   paddingTop: "30px",
                 }}
               >
-                {post.data.editlogoheader}
+                {post.data.card_title2}
               </Typography>
               <Typography
                 style={{
@@ -205,7 +205,7 @@ const Choisir: React.FC = () => {
                   paddingTop: "30px",
                 }}
               >
-                {post.data.editlogocontent}
+                {post.data.card_description2}
               </Typography>
               <div
                 style={{
@@ -228,13 +228,13 @@ const Choisir: React.FC = () => {
                     paddingRight: "12px",
                   }}
                 >
-                  {post.data.buttontext}
+                  {post.data.link_text}
                 </Typography>
-                {post?.data.buttonicon && (
+                {post?.data.link_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post.data.buttonicon.url || undefined}
-                    alt={post.data.buttonicon.alt || "Image"}
+                    src={post.data.link_icon.url || undefined}
+                    alt={post.data.link_icon.alt || "Image"}
                     style={{
                       width: "48px",
                       height: "24px",
@@ -257,13 +257,13 @@ const Choisir: React.FC = () => {
             paddingBottom: "34px",
           }}
         >
-          {posts.map((post: any, postIndex: number) => (
+          {choisirPage.map((post: any) => (
             <div key={post} style={{ padding: "30px", textAlign: "center" }}>
-              {post?.data.calenderlogo && (
+              {post?.data.card_image3 && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={post.data.calenderlogo.url || undefined}
-                  alt={post.data.calenderlogo.alt || "Image"}
+                  src={post.data.card_image3.url || undefined}
+                  alt={post.data.card_image3.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -280,7 +280,7 @@ const Choisir: React.FC = () => {
                   paddingTop: "20px",
                 }}
               >
-                {post.data.calenderheader}
+                {post.data.card_title3}
               </Typography>
               <Typography
                 style={{
@@ -293,7 +293,7 @@ const Choisir: React.FC = () => {
                   paddingTop: "20px",
                 }}
               >
-                {post.data.calendercontent}
+                {post.data.card_description3}
               </Typography>
               <div
                 style={{
@@ -316,13 +316,13 @@ const Choisir: React.FC = () => {
                     paddingRight: "12px",
                   }}
                 >
-                  {post.data.buttontext}
+                  {post.data.link_text}
                 </Typography>
-                {post?.data.buttonicon && (
+                {post?.data.link_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post.data.buttonicon.url || undefined}
-                    alt={post.data.buttonicon.alt || "Image"}
+                    src={post.data.link_icon.url || undefined}
+                    alt={post.data.link_icon.alt || "Image"}
                     style={{
                       width: "48px",
                       height: "24px",

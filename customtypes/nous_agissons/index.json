@@ -1,17 +1,24 @@
 {
   "format": "page",
-  "id": "motsdenotreclient",
-  "label": "motsdenotreclient",
+  "id": "nous_agissons",
+  "label": "Nous Agissons",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "backgroundimage": {
+      "background_image": {
         "type": "Image",
         "config": {
-          "label": "backgroundimage",
+          "label": "Background Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
         }
       },
       "title": {
@@ -21,25 +28,19 @@
           "placeholder": ""
         }
       },
-      "description": {
+      "button_text": {
         "type": "Text",
         "config": {
-          "label": "Description",
+          "label": "Button Text",
           "placeholder": ""
         }
       },
-      "testimonial1": {
-        "type": "Text",
+      "button_icon": {
+        "type": "Image",
         "config": {
-          "label": "Testimonial1",
-          "placeholder": ""
-        }
-      },
-      "testimonial2": {
-        "type": "Text",
-        "config": {
-          "label": "Testimonial2",
-          "placeholder": ""
+          "label": "Button Icon",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "slices": {

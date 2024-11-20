@@ -1,22 +1,19 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
-import { PrismicRichText } from "@prismicio/react";
 import { Grid, Typography } from "@mui/material";
-import { PrismicNextLink } from "@prismicio/next";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 
 export default function NotreProcessus() {
   // const client = createClient();
   // const settings = await client.getSingle("notre_processus");
 
-  const [settings, setSettings] = useState<any>(null);
+  const [notrePage, setNotrePage] = useState<any>(null);
 
   useEffect(() => {
     async function fetchData() {
       const client = createClient();
       const data = await client.getSingle("notre_processus" as any);
-      setSettings(data);
+      setNotrePage(data);
     }
     fetchData();
   });
@@ -28,7 +25,7 @@ export default function NotreProcessus() {
     fontFamily: "Mulish",
   };
 
-  const subTitle: React.CSSProperties = {
+  const heading: React.CSSProperties = {
     color: "#24535C",
     textTransform: "uppercase",
     fontSize: "18px",
@@ -72,7 +69,7 @@ export default function NotreProcessus() {
             textAlign: "center",
           }}
         >
-          <div
+          <Typography
             style={{
               fontSize: "64px",
               fontWeight: 700,
@@ -81,9 +78,9 @@ export default function NotreProcessus() {
               fontFamily: "Mulish",
             }}
           >
-            <PrismicRichText field={settings?.data.title} />
-          </div>
-          <div
+            {notrePage?.data.heading}
+          </Typography>
+          <Typography
             style={{
               fontSize: "24px",
               fontWeight: 400,
@@ -93,8 +90,8 @@ export default function NotreProcessus() {
               fontFamily: "Mulish",
             }}
           >
-            <PrismicRichText field={settings?.data.description} />
-          </div>
+            {notrePage?.data.description}
+          </Typography>
         </Grid>
         <Grid
           item
@@ -105,17 +102,17 @@ export default function NotreProcessus() {
           sx={{
             display: "flex",
             // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: "column", sm: "row", lg: "row" },
             gap: "50px",
             // padding: "50px 50px 0px 80px",
           }}
         >
           <div>
-            {settings?.data.image1 && (
+            {notrePage?.data.card_image1 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={settings.data.image1.url || undefined}
-                alt={settings.data.image1.alt || "Image"}
+                src={notrePage.data.card_image1.url || undefined}
+                alt={notrePage.data.card_image1.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -123,20 +120,22 @@ export default function NotreProcessus() {
               />
             )}
           </div>
-          <div
-            style={{
+          <Grid
+            sx={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: "30px",
+              paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
+              paddingRight: "5%",
+              paddingLeft:'5%'
             }}
           >
-            <div style={subTitle}>{settings?.data.sub_title1}</div>
-            <div style={title}>
-              <PrismicRichText field={settings?.data.title1} />
-            </div>
-            <div style={description}>
-              <PrismicRichText field={settings?.data.description1} />
-            </div>
+            <Typography style={heading}>
+              {notrePage?.data.card_heading1}
+            </Typography>
+            <Typography style={title}>{notrePage?.data.card_title1}</Typography>
+            <Typography style={description}>
+              {notrePage?.data.card_description1}
+            </Typography>
             <Typography
               style={{
                 ...textLink,
@@ -146,10 +145,20 @@ export default function NotreProcessus() {
               onMouseEnter={() => setIsHovered(1)}
               onMouseLeave={() => setIsHovered(null)}
             >
-              {settings?.data.button_text1}
-              <ArrowRightAltIcon />
+              {notrePage?.data.link_text}
+              {notrePage?.data.link_icon && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={notrePage.data.link_icon.url || undefined}
+                  alt={notrePage.data.link_icon.alt || "Image"}
+                  style={{
+                    width: "50px",
+                    height: "auto",
+                  }}
+                />
+              )}
             </Typography>
-          </div>
+          </Grid>
         </Grid>
         <Grid
           item
@@ -160,26 +169,26 @@ export default function NotreProcessus() {
           sx={{
             display: "flex",
             // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: "column", sm: "row", lg: "row" },
             gap: "50px",
             // padding: "50px 0px 0px 50px",
           }}
         >
-          <div
-            style={{
+          <Grid
+            sx={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: "30px",
+              paddingTop: {xs:'10%', sm:'3%', lg:'10%'},
+              paddingLeft: "5%",
             }}
           >
-            <div style={subTitle}>{settings?.data.sub_title2}</div>
-            <div style={title}>
-              <PrismicRichText field={settings?.data.title2} />
-            </div>
-            <div style={description}>
-              <PrismicRichText field={settings?.data.description2} />
-            </div>
-
+            <Typography style={heading}>
+              {notrePage?.data.card_heading2}
+            </Typography>
+            <Typography style={title}>{notrePage?.data.card_title2}</Typography>
+            <Typography style={description}>
+              {notrePage?.data.card_description2}
+            </Typography>
             <Typography
               style={{
                 ...textLink,
@@ -189,16 +198,26 @@ export default function NotreProcessus() {
               onMouseEnter={() => setIsHovered(2)}
               onMouseLeave={() => setIsHovered(null)}
             >
-              {settings?.data.button_text2}
-              <ArrowRightAltIcon />
+              {notrePage?.data.link_text}
+              {notrePage?.data.link_icon && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={notrePage.data.link_icon.url || undefined}
+                  alt={notrePage.data.link_icon.alt || "Image"}
+                  style={{
+                    width: "50px",
+                    height: "auto",
+                  }}
+                />
+              )}
             </Typography>
-          </div>
+          </Grid>
           <div>
-            {settings?.data.image2 && (
+            {notrePage?.data.card_image2 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={settings.data.image2.url || undefined}
-                alt={settings.data.image2.alt || "Image"}
+                src={notrePage.data.card_image2.url || undefined}
+                alt={notrePage.data.card_image2.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -216,17 +235,17 @@ export default function NotreProcessus() {
           sx={{
             display: "flex",
             // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: "column", sm: "row", lg: "row" },
             gap: "50px",
             // padding: "50px 50px 0px 50px",
           }}
         >
           <div>
-            {settings?.data.image3 && (
+            {notrePage?.data.card_image3 && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={settings.data.image3.url || undefined}
-                alt={settings.data.image3.alt || "Image"}
+                src={notrePage.data.card_image3.url || undefined}
+                alt={notrePage.data.card_image3.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -234,21 +253,22 @@ export default function NotreProcessus() {
               />
             )}
           </div>
-          <div
-            style={{
+          <Grid
+            sx={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: "30px",
+              paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
+              paddingRight: "5%",
+              paddingLeft:'5%'
             }}
           >
-            <div style={subTitle}>{settings?.data.sub_title3}</div>
-            <div style={title}>
-              <PrismicRichText field={settings?.data.title3} />
-            </div>
-            <div style={description}>
-              <PrismicRichText field={settings?.data.description3} />
-            </div>
-
+            <Typography style={heading}>
+              {notrePage?.data.card_heading3}
+            </Typography>
+            <Typography style={title}>{notrePage?.data.card_title3}</Typography>
+            <Typography style={description}>
+              {notrePage?.data.card_description3}
+            </Typography>
             <Typography
               style={{
                 ...textLink,
@@ -258,10 +278,20 @@ export default function NotreProcessus() {
               onMouseEnter={() => setIsHovered(3)}
               onMouseLeave={() => setIsHovered(null)}
             >
-              {settings?.data.button_text3}
-              <ArrowRightAltIcon />
+              {notrePage?.data.link_text}
+              {notrePage?.data.link_icon && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={notrePage.data.link_icon.url || undefined}
+                  alt={notrePage.data.link_icon.alt || "Image"}
+                  style={{
+                    width: "50px",
+                    height: "auto",
+                  }}
+                />
+              )}
             </Typography>
-          </div>
+          </Grid>
         </Grid>
       </Grid>
     </div>

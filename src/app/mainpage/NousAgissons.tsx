@@ -7,12 +7,12 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const NousAgissons: React.FC = () => {
-  const [posts, setPosts] = useState<[]>([]);
+  const [nousPage, setNousPage] = useState<[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("header");
-      setPosts(response);
+      const response: any = await client.getAllByType("nous_agissons");
+      setNousPage(response);
     };
 
     fetchPosts();
@@ -35,7 +35,7 @@ const NousAgissons: React.FC = () => {
   return (
     <Box>
       <div>
-        {posts.map((post: any) => (
+        {nousPage.map((post: any) => (
           <>
             <div
               // style={{
@@ -81,11 +81,11 @@ const NousAgissons: React.FC = () => {
                     // fontSize: "44px",
                     fontSize: "5vw",
                     // lineHeight: "76.8px",
-                    lineHeight:{ xs: "35px", md: "69.6px" },
+                    lineHeight: { xs: "35px", md: "69.6px" },
                     color: "rgba(36, 83, 92, 1)",
                   }}
                 >
-                  {post.data.leftcontent1}
+                  {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
@@ -95,10 +95,10 @@ const NousAgissons: React.FC = () => {
                     // fontSize: "45px",
                     fontSize: "3.5vw",
                     // lineHeight: "69.6px",
-                    lineHeight:{ xs: "20px", md: "69.6px" },
+                    lineHeight: { xs: "20px", md: "69.6px" },
                   }}
                 >
-                  {post.data.leftcontent2}
+                  {post.data.title}
                 </Typography>
                 <Button
                   style={{
@@ -111,7 +111,7 @@ const NousAgissons: React.FC = () => {
                     marginTop: "20px",
                     maxWidth: "200px",
                     width: "100%",
-                    justifyContent: "center",
+                    justifyContent: "space-around",
                   }}
                   onClick={handleNavigation}
                 >
@@ -123,18 +123,19 @@ const NousAgissons: React.FC = () => {
                       fontSize: { xs: "10px", md: "15.2px" },
                       lineHeight: "18.24px",
                       color: "rgba(255, 255, 255, 1)",
+                      textTransform:'none'
                     }}
                   >
-                    {post.data.buttontext}
+                    {post.data.button_text}
                   </Typography>
-                  {post?.data.buttonimage && (
+                  {post?.data.button_icon && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={post.data.buttonimage.url || ""}
-                      alt={post.data.buttonimage}
+                      src={post.data.button_icon.url || ""}
+                      alt={post.data.button_icon}
                       style={{
-                        width: "30px",
-                        height: "30px",
+                        width: "40px",
+                        height: "40px",
                       }}
                     />
                   )}
@@ -159,11 +160,11 @@ const NousAgissons: React.FC = () => {
                 sx={{ backgroundColor: "#F6C09E" }}
               ></Grid>
               <Grid item xs={12} sm={8}>
-                {post?.data.backgroundimage && (
+                {post?.data.background_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post.data.backgroundimage.url || ""}
-                    alt={post.data.backgroundimage}
+                    src={post.data.background_image.url || ""}
+                    alt={post.data.background_image}
                     style={{
                       height: "100%",
                       width: "100%",

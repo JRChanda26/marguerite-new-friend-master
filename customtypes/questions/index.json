@@ -6,15 +6,6 @@
   "status": true,
   "json": {
     "Main": {
-      "heading": {
-        "type": "StructuredText",
-        "config": {
-          "label": "Heading",
-          "placeholder": "",
-          "allowTargetBlank": true,
-          "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-        }
-      },
       "image": {
         "type": "Image",
         "config": {
@@ -30,25 +21,17 @@
           "placeholder": ""
         }
       },
-      "button_link": {
-        "type": "Link",
-        "config": {
-          "label": "Button Link",
-          "placeholder": "",
-          "select": null
-        }
-      },
-      "question": {
+      "question1": {
         "type": "Text",
         "config": {
-          "label": "Question",
+          "label": "Question1",
           "placeholder": ""
         }
       },
-      "answer": {
+      "answer1": {
         "type": "Text",
         "config": {
-          "label": "Answer",
+          "label": "Answer1",
           "placeholder": ""
         }
       },
@@ -91,6 +74,20 @@
         "type": "Text",
         "config": {
           "label": "Answer4",
+          "placeholder": ""
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "Description",
+          "placeholder": ""
+        }
+      },
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
           "placeholder": ""
         }
       },

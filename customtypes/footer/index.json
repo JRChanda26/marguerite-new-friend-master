@@ -6,49 +6,84 @@
   "status": true,
   "json": {
     "Main": {
-      "footerlogo": {
+      "marguerite_logo": {
         "type": "Image",
         "config": {
-          "label": "footerlogo",
+          "label": "Marguerite Logo",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "lefttext": {
+      "description": {
         "type": "Text",
         "config": {
-          "label": "lefttext",
+          "label": "Description",
           "placeholder": ""
         }
       },
-      "middletext": {
-        "type": "Text",
-        "config": {
-          "label": "middletext",
-          "placeholder": ""
-        }
-      },
-      "righttext": {
-        "type": "Text",
-        "config": {
-          "label": "righttext",
-          "placeholder": ""
-        }
-      },
-      "linkedin": {
+      "linkedin_icon": {
         "type": "Image",
         "config": {
-          "label": "linkedin",
+          "label": "LinkedIn Icon",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "twitter": {
+      "twitter_icon": {
         "type": "Image",
         "config": {
-          "label": "twitter",
+          "label": "Twitter Icon",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "link_text1": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text1",
+          "placeholder": ""
+        }
+      },
+      "link_text2": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text2",
+          "placeholder": ""
+        }
+      },
+      "link_text3": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text3",
+          "placeholder": ""
+        }
+      },
+      "link_text4": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text4",
+          "placeholder": ""
+        }
+      },
+      "link_text5": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text5",
+          "placeholder": ""
+        }
+      },
+      "link_text6": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text6",
+          "placeholder": ""
+        }
+      },
+      "link_text7": {
+        "type": "Text",
+        "config": {
+          "label": "Link Text7",
+          "placeholder": ""
         }
       },
       "slices": {
