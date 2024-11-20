@@ -7,12 +7,9 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Button,
-  Divider,
   Grid,
   Typography,
 } from "@mui/material";
-import Link from "next/link";
 import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -126,7 +123,7 @@ const LecarechezMargueriteServices: React.FC = () => {
     },
     {
       platform: "linkedin",
-      link: posts2[0]?.data.linked_in_link,
+      link: posts2[0]?.data.linkedin_link,
       icon: posts2[0]?.data.linked_in,
     },
     {

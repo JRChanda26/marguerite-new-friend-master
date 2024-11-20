@@ -91,54 +91,11 @@
           "thumbnails": []
         }
       },
-      "email_text_field": {
-        "type": "Text",
-        "config": {
-          "label": "Email Text Field",
-          "placeholder": "Email"
-        }
-      },
-      "nom_text_field": {
-        "type": "Text",
-        "config": {
-          "label": "Nom Text Field",
-          "placeholder": "Nom"
-        }
-      },
-      "subject_text_field": {
-        "type": "Text",
-        "config": {
-          "label": "Subject Text Field",
-          "placeholder": "Subject"
-        }
-      },
-      "phone_text_field": {
-        "type": "Text",
-        "config": {
-          "label": "Phone Text Field",
-          "placeholder": "Téléphone"
-        }
-      },
-      "bonjour_text_field": {
-        "type": "Text",
-        "config": {
-          "label": "Bonjour Text Field",
-          "placeholder": "Bonjour, je suis intéressé par.."
-        }
-      },
       "button_text": {
         "type": "Text",
         "config": {
           "label": "Button Text",
           "placeholder": ""
-        }
-      },
-      "button_link": {
-        "type": "Link",
-        "config": {
-          "label": "Button Link",
-          "placeholder": "",
-          "select": null
         }
       },
       "map": {
@@ -176,11 +133,12 @@
           "select": null
         }
       },
-      "linked_in_link": {
+      "linkedin_link": {
         "type": "Link",
         "config": {
-          "label": "Linked In Link",
+          "label": "LinkedIn Link",
           "placeholder": "",
+          "allowTargetBlank": true,
           "select": null
         }
       },
@@ -198,14 +156,6 @@
           "label": "Instagram Link",
           "placeholder": "",
           "select": null
-        }
-      },
-      "map_image": {
-        "type": "Image",
-        "config": {
-          "label": "Map Image",
-          "constraint": {},
-          "thumbnails": []
         }
       },
       "slices": {

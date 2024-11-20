@@ -5,14 +5,11 @@ import {
   Button,
   Grid,
   InputAdornment,
-  Tab,
-  Tabs,
   TextField,
   Typography,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import { PrismicRichText } from "@prismicio/react";
 import Liberez from "@/app/mainpage/Liberez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
@@ -188,7 +185,7 @@ export default function BlogsNews() {
     },
     {
       platform: "linkedin",
-      link: posts[0]?.data.linked_in_link,
+      link: posts[0]?.data.linkedin_link,
       icon: posts[0]?.data.linked_in,
     },
     {

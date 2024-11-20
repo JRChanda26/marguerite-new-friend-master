@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
-import Link from "next/link";
 import { PrismicNextLink } from "@prismicio/next";
 
 const Footer: React.FC = () => {
@@ -86,7 +85,7 @@ const Footer: React.FC = () => {
                   gap: "20px",
                 }}
               >
-                <PrismicNextLink field={socialLinkPage[0]?.data.linked_in_link}>
+                <PrismicNextLink field={socialLinkPage[0]?.data.linkedin_link}>
                 {post?.data.linkedin_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
