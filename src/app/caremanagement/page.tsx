@@ -455,7 +455,6 @@ const OurCareManagementSolutions: React.FC = () => {
             style={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
             }}
           >
             <div
