@@ -4105,17 +4105,6 @@ interface SoinschezmargueriteDocumentData {
   excellence: prismic.KeyTextField;
 
   /**
-   * comma field in *soinschezmarguerite*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: soinschezmarguerite.comma
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  comma: prismic.KeyTextField;
-
-  /**
    * boxcontent field in *soinschezmarguerite*
    *
    * - **Field Type**: Text
@@ -4708,6 +4697,17 @@ interface SoinschezmargueriteDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   comma_image: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *soinschezmarguerite*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: soinschezmarguerite.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *soinschezmarguerite*

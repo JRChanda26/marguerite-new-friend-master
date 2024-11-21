@@ -165,7 +165,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   alignItems: "center",
                   borderRadius: "37px 37px 0px 0px",
                   // padding: "41px 152px 42px 152px",
-                  padding: "2% 5%",
+                  padding: "2%",
                 }}
               >
                 <Typography
@@ -200,6 +200,25 @@ const LecarechezMargueriteServices: React.FC = () => {
         ))}
       </div>
 
+      <Grid
+        sx={{
+          textAlign: "center",
+          padding: "2% 5%",
+        }}
+      >
+        <Typography
+          sx={{
+            fontFamily: "Mulish",
+            color: "#24535C",
+            fontWeight: 400,
+            fontSize: { xs: "28px", sm: "38px", lg: "48px" },
+            lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
+          }}
+        >
+          {posts[0]?.data.heading}
+        </Typography>
+      </Grid>
+
       <Box
         sx={{
           display: "flex",
@@ -207,18 +226,10 @@ const LecarechezMargueriteServices: React.FC = () => {
           alignItems: "center",
         }}
       >
-        {/*  */}
         <div
           style={{
             backgroundImage: `url(${contentbackground})`,
             backgroundSize: "cover",
-            // width: "875.5px",
-            // height: "440px",
-            // display: "flex",
-            // justifyContent: "center",
-            // alignItems: "center",
-            // marginTop: "209.87px",
-            // flexDirection: "column",
             width: "100%",
             height: "auto",
             display: "flex",
@@ -293,7 +304,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                 gap: "30px",
               }}
             >
-              <Grid item lg={5}>
+              <Grid item lg={5} xs={12} sm={7}>
                 <Typography
                   sx={{
                     // fontSize: "50px",
@@ -318,7 +329,15 @@ const LecarechezMargueriteServices: React.FC = () => {
                   {post.data.leftcontent}
                 </Typography>
               </Grid>
-              <Grid item lg={5}>
+              <Grid
+                lg={6}
+                xs={12}
+                sm={5}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
                 {posts[0]?.data.bodyrightimage && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

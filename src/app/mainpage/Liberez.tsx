@@ -151,7 +151,7 @@ export default function Liberez() {
               variant="outlined"
               type="text"
               error={!!errors.email}
-              helperText={errors.email}
+              // helperText={errors.email}
               autoComplete="off"
               sx={{
                 // ...inputStyle,
@@ -176,12 +176,13 @@ export default function Liberez() {
             <Button
               sx={{
                 background: "#24535C",
-                borderRadius: "25px",
+                borderRadius: "30px",
                 textTransform: "none",
                 color: "#FFFFFF",
                 fontFamily: "Mulish",
-                fontSize: { xs: "12px", sm: "19.25px" },
+                fontSize: { xs: "10px", sm: "15px",lg:'19.25px' },
                 fontWeight: 400,
+                padding:'5px 10px',
                 "&:hover": {
                   background: "#24535C",
                   boxShadow: "none",
@@ -200,7 +201,8 @@ export default function Liberez() {
                 {message}
               </Alert>
             </Snackbar>
-            {/* {errors.email && (
+          </Grid>
+          {errors.email && (
               <Typography
                 color="error"
                 variant="body2"
@@ -208,8 +210,7 @@ export default function Liberez() {
               >
                 {errors.email}
               </Typography>
-            )} */}
-          </Grid>
+            )}
         </Grid>
       </Grid>
     </div>
