@@ -11,7 +11,6 @@ export default function Paroles() {
   const [playingVideoId, setPlayingVideoId] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const fixedRowsPerPage = 3;
   const visibleCards = 3;
 
   useEffect(() => {
@@ -197,80 +196,89 @@ export default function Paroles() {
         </p>
       </Grid>
 
-      <Grid container spacing={2}>
-        <Grid
-          item
-          lg={12}
-          style={{
-            flex: "0 0 auto",
-            display: "flex",
-            flexDirection: "row",
-            flexWrap: "nowrap",
-            justifyContent: "space-evenly",
-            padding: "5%",
-            gap: "50px",
-            animation: isVideoPlaying ? "none" : "slide 50s linear infinite",
-          }}
-        >
-          {items
-            .slice(currentIndex, currentIndex + visibleCards)
-            .map((item) => (
-              <Grid
-                item
-                xs={12}
-                sm={6}
-                md={4}
-                lg={3.5}
-                key={item.id}
+      {/* Cards Scrolling Section */}
+      <style jsx>{`
+        @keyframes slide {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
+
+      <Grid
+        container
+        item
+        lg={12}
+        style={{
+          // flex: "0 0 auto",
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "nowrap",
+          justifyContent: "space-evenly",
+          padding: "5%",
+          gap: "50px",
+          animation: isVideoPlaying ? "none" : "slide 50s linear infinite",
+        }}
+      >
+        {items.slice(currentIndex, currentIndex + visibleCards).map((item) => (
+          <Grid
+            item
+            xs={12}
+            sm={6}
+            md={4}
+            lg={3.5}
+            key={item.id}
+            style={{
+              background:
+                isCardHovered === item.id || playingVideoId === item.id
+                  ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
+                  : "#FFFFFF",
+              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
+              padding: "20px",
+              borderRadius: "20px",
+              transform:
+                isCardHovered === item.id || playingVideoId === item.id
+                  ? "scale(1.1)"
+                  : "scale(1)",
+              transition: "transform 0.3s ease",
+            }}
+            onMouseEnter={() => setIsCardHovered(item.id)}
+            onMouseLeave={() => setIsCardHovered(null)}
+          >
+            {videoUrl ? (
+              <video
+                width="100%"
+                controls
                 style={{
-                  background:
-                    isCardHovered === item.id || playingVideoId === item.id
-                      ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
-                      : "#FFFFFF",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-                  padding: "20px",
-                  borderRadius: "20px",
-                  transform:
-                    isCardHovered === item.id || playingVideoId === item.id
-                      ? "scale(1.1)"
-                      : "scale(1)",
-                  transition: "transform 0.3s ease",
+                  borderRadius: "12px",
                 }}
-                onMouseEnter={() => setIsCardHovered(item.id)}
-                onMouseLeave={() => setIsCardHovered(null)}
+                onPlay={() => handleVideoPlay(item.id)}
+                onPause={handleVideoPause}
+                onEnded={handleVideoPause}
               >
-                {videoUrl ? (
-                  <video
-                    width="100%"
-                    controls
-                    style={{
-                      borderRadius: "12px",
-                    }}
-                    onPlay={() => handleVideoPlay(item.id)}
-                    onPause={handleVideoPause}
-                    onEnded={handleVideoPause}
-                  >
-                    <source src={videoUrl} type="video/mp4" />
-                  </video>
-                ) : (
-                  <p>Video not available</p>
-                )}
-                <div
-                  style={{
-                    color: "#000000",
-                    fontSize: "22.02px",
-                    fontWeight: 700,
-                    fontFamily: "Mulish",
-                    lineHeight: "25.74px",
-                    textAlign: "center",
-                    padding: "10px 20px",
-                  }}
-                >
-                  {item.id}. {item.title}
-                </div>
-              </Grid>
-            ))}
-        </Grid>
+                <source src={videoUrl} type="video/mp4" />
+              </video>
+            ) : (
+              <p>Video not available</p>
+            )}
+            <div
+              style={{
+                color: "#000000",
+                fontSize: "22.02px",
+                fontWeight: 700,
+                fontFamily: "Mulish",
+                lineHeight: "25.74px",
+                textAlign: "center",
+                padding: "10px 20px",
+              }}
+            >
+              {item.id}. {item.title}
+            </div>
+          </Grid>
+        ))}
       </Grid>
     </div>
   );

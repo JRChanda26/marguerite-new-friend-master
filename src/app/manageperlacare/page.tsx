@@ -215,7 +215,7 @@ const ManagePerLaCare: React.FC = () => {
         ))}
       </div>
 
-      <div style={{ padding: "7%" }}>
+      <div style={{ padding: "5%" }}>
         {posts.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
             <Grid
@@ -224,25 +224,22 @@ const ManagePerLaCare: React.FC = () => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                // flexDirection: "row",
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
                 gap: "20px",
               }}
             >
-              <Grid item lg={6}>
+              <Grid item lg={7} xs={12} sm={7}>
                 {posts.map((post: any, index: any) => (
                   <Typography
+                    key={index}
                     sx={{
                       fontFamily: "Mulish",
                       fontWeight: 700,
-                      // fontSize: "50px",
                       fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-                      // lineHeight: "62.5px",
                       lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
-                      color: "rgba(41, 47, 54, 1)",
+                      color: "#292F36",
                       letterSpacing: "2%",
                     }}
-                    key={index}
                   >
                     {post.data.leftheader}
                   </Typography>
@@ -252,11 +249,10 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "rgba(35, 125, 108, 1)",
                     fontWeight: 700,
-                    // fontSize: "24px",
                     fontSize: { xs: "12px", sm: "18px", lg: "24px" },
-                    // lineHeight: "30.12px",
                     lineHeight: { xs: "18px", sm: "25px", lg: "30.12px" },
                     paddingTop: "33px",
+                    whiteSpace: "pre-line",
                   }}
                 >
                   {post.data.leftcontentheader}
@@ -278,7 +274,6 @@ const ManagePerLaCare: React.FC = () => {
                       <Typography
                         sx={{
                           fontWeight: 400,
-                          // fontSize: "15.2px",
                           fontSize: { xs: "10px", sm: "13px", lg: "15.2px" },
                           lineHeight: "18.24px",
                           color: "#FFFFFF",
@@ -305,7 +300,16 @@ const ManagePerLaCare: React.FC = () => {
                 </div>
               </Grid>
 
-              <Grid item lg={5} xs={12} sm={12} md={12}>
+              <Grid
+                item
+                lg={5}
+                xs={12}
+                sm={5}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                }}
+              >
                 {post?.data.rightimage && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -314,7 +318,7 @@ const ManagePerLaCare: React.FC = () => {
                     style={{
                       height: "auto",
                       width: "100%",
-                      borderRadius: "18px",
+                      borderRadius: "20px",
                     }}
                   />
                 )}
@@ -324,7 +328,7 @@ const ManagePerLaCare: React.FC = () => {
         ))}
       </div>
 
-      {posts.map((post: any, postIndex: number) => (
+      {posts.map((post: any) => (
         <>
           <Typography
             sx={{
@@ -491,12 +495,12 @@ const ManagePerLaCare: React.FC = () => {
           >
             <Grid
               item
+              xs={12}
+              sm={5}
               lg={5}
               sx={{
-                // marginTop: "20px",
                 marginTop: { xs: "20px", sm: "40px", lg: "150px" },
-                // height: "400px",
-                height: { xs: "300px", sm: "300px", lg: "400px" },
+                height: { xs: "0px", sm: "450px", lg: "420px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -539,7 +543,7 @@ const ManagePerLaCare: React.FC = () => {
                 </div>
               ))}
             </Grid>
-            <Grid item xs={12} sm={12} lg={5}>
+            <Grid item xs={12} sm={5} lg={5}>
               {posts[0]?.data.image && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -580,9 +584,9 @@ const ManagePerLaCare: React.FC = () => {
             <Grid
               item
               xs={12}
-              sm={12}
+              sm={5}
               lg={5}
-              sx={{ marginTop: { xs: "0px", sm: "60px", lg: "0px" } }}
+              sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
             >
               {videoUrl ? (
                 <video
@@ -602,10 +606,11 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
             <Grid
               item
+              xs={12}
+              sm={5}
               lg={5}
-              style={{
-                // marginTop: "100px",
-                height: "300px",
+              sx={{
+                height: { xs: "0px", sm: "400px", lg: "350px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -691,12 +696,9 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Jenna Sue, sans-serif",
                     color: "#0A1411",
                     fontWeight: 400,
-                    // fontSize: "48px",
                     fontSize: { xs: "28px", sm: "38px", lg: "48px" },
-                    // lineHeight: "60px",
                     lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
                     textAlign: "center",
-                    // padding: "20% 15%",
                     padding: { xs: "3% 15%", sm: "20% 12%", lg: "21% 18%" },
                   }}
                 >
@@ -709,9 +711,7 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Mulish, sans-serif",
                     color: "#0A1411",
                     fontWeight: 400,
-                    // fontSize: "25px",
                     fontSize: { xs: "14px", sm: "18px", lg: "25px" },
-                    // lineHeight: "37.5px",
                     lineHeight: { xs: "18px", sm: "25px", lg: "37.5px" },
                     textAlign: "center",
                   }}
@@ -725,10 +725,8 @@ const ManagePerLaCare: React.FC = () => {
       </Box>
       <Typography
         sx={{
-          // fontSize: "64px",
           fontSize: { xs: "38px", sm: "50px", lg: "64px" },
           fontWeight: 700,
-          // lineHeight: "80px",
           lineHeight: { xs: "45px", sm: "60px", lg: "80px" },
           textAlign: "center",
           padding: "10% 10% 0% 10%",
@@ -749,7 +747,7 @@ const ManagePerLaCare: React.FC = () => {
           gap: "50px",
         }}
       >
-        <Grid item lg={7} xs={12} sm={12}>
+        <Grid item lg={6} xs={12} sm={6}>
           {" "}
           {posts[0]?.data.footer_image && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -763,13 +761,14 @@ const ManagePerLaCare: React.FC = () => {
         </Grid>
         <Grid
           item
-          lg={4}
+          lg={6}
+          xs={12}
+          sm={6}
           sx={{
             alignContent: "center",
-            // fontSize: "30px",
-            fontSize: { xs: "16px", sm: "22px", lg: "30px" },
+            fontSize: { xs: "18px", sm: "22px", lg: "25px" },
+            lineHeight: { xs: "20px", sm: "30px", lg: "40px" },
             fontWeight: 400,
-            // paddingLeft: "100px",
             textAlign: "left",
             color: "#24535C",
           }}

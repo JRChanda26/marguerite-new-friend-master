@@ -26,6 +26,11 @@ const NosExperiences: React.FC = () => {
     () => testimonials
   ).flat();
 
+  const [animationSpeed, setAnimationSpeed] = useState(40);
+
+  const handleMouseEnter = () => setAnimationSpeed(100);
+  const handleMouseLeave = () => setAnimationSpeed(40);
+
   return (
     <Box
       sx={{
@@ -41,7 +46,6 @@ const NosExperiences: React.FC = () => {
         container
         spacing={3}
         sx={{
-          // maxWidth: "1200px",
           padding: "40px 20px",
         }}
       >
@@ -84,6 +88,17 @@ const NosExperiences: React.FC = () => {
             </Typography>
 
             {/* Testimonials Scrolling Section */}
+            <style jsx>{`
+              @keyframes slide {
+                0% {
+                  transform: translateX(0);
+                }
+                100% {
+                  transform: translateX(-100%);
+                }
+              }
+            `}</style>
+
             <Grid
               container
               item
@@ -99,13 +114,12 @@ const NosExperiences: React.FC = () => {
                 sx={{
                   display: "flex",
                   gap: "20px",
-                  animation: "slide 40s linear infinite",
+                  animation: `slide ${animationSpeed}s linear infinite`,
                   width: "100%",
                   maxWidth: "100vw",
-                  "&:hover": {
-                    animationDuration: "80s",
-                  },
                 }}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
               >
                 {repeatedTestimonials.map((testimonial, index) => (
                   <Box
@@ -125,17 +139,6 @@ const NosExperiences: React.FC = () => {
           </Grid>
         ))}
       </Grid>
-
-      <style jsx>{`
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </Box>
   );
 };

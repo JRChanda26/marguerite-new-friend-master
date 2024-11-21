@@ -43,13 +43,6 @@
           "placeholder": ""
         }
       },
-      "comma": {
-        "type": "Text",
-        "config": {
-          "label": "comma",
-          "placeholder": ""
-        }
-      },
       "boxcontent": {
         "type": "Text",
         "config": {
@@ -450,6 +443,13 @@
           "label": "Comma Image",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
         }
       },
       "slices": {
