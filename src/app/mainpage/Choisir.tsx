@@ -18,6 +18,8 @@ const Choisir: React.FC = () => {
 
   const [isHovered, setIsHovered] = useState<number | null>(null);
 
+  const [isCardHovered, setIsCardHovered] = useState<number | null>(null);
+
   return (
     <Box sx={{ background: "#BBDDD999" }}>
       <div style={{ display: "flex", justifyContent: "center" }}>
@@ -74,14 +76,18 @@ const Choisir: React.FC = () => {
       >
         <div
           style={{
-            height: "476px",
-            width: "350px",
+            height: isCardHovered === 1 ? "520px" : "500px",
+            width: isCardHovered === 1 ? "400px" : "380px",
             borderRadius: "16px",
             background:
-              "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-            marginTop: "40px",
-            paddingBottom: "34px",
+              isCardHovered === 1
+                ? "linear-gradient(180.23deg, #FFFFFF 7.39%, #FFFFFF 45.36%, #FFB699 193.52%)"
+                : "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
+            transition: "transform 0.3s ease",
+            transform: isCardHovered === 1 ? "scale(1.05)" : "scale(1)",
           }}
+          onMouseEnter={() => setIsCardHovered(1)}
+          onMouseLeave={() => setIsCardHovered(null)}
         >
           {choisirPage.map((post: any) => (
             <div key={post} style={{ padding: "30px", textAlign: "center" }}>
@@ -101,7 +107,7 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: "24px",
+                  fontSize: isCardHovered === 1 ? "28px" : "24px",
                   lineHeight: "38.4px",
                   paddingTop: "20px",
                 }}
@@ -113,7 +119,7 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: "16px",
+                  fontSize: isCardHovered === 1 ? "18px" : "16px",
                   lineHeight: "29.6px",
                   textAlign: "left",
                   paddingTop: "20px",
@@ -162,11 +168,20 @@ const Choisir: React.FC = () => {
 
         <div
           style={{
-            height: "575.83px",
-            width: "400px",
+            height:
+              isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
+            width:
+              isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
             borderRadius: "16px",
             background:
-              "linear-gradient(180.23deg, #FFFFFF 7.39%, #FFFFFF 45.36%, #FFB699 193.52%)",
+              isCardHovered === 1 || isCardHovered === 2
+                ? "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)"
+                : "linear-gradient(180.23deg, #FFFFFF 7.39%, #FFFFFF 45.36%, #FFB699 193.52%)",
+            transition: "transform 0.3s ease",
+            transform:
+              isCardHovered === 1 || isCardHovered === 2
+                ? "scale(1)"
+                : "scale(1.05)",
           }}
         >
           {choisirPage.map((post: any) => (
@@ -187,7 +202,10 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: "28px",
+                  fontSize:
+                    isCardHovered === 1 || isCardHovered === 2
+                      ? "24px"
+                      : "28px",
                   lineHeight: "38.4px",
                   paddingTop: "30px",
                 }}
@@ -199,7 +217,10 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: "18px",
+                  fontSize:
+                    isCardHovered === 1 || isCardHovered === 2
+                      ? "16px"
+                      : "18px",
                   lineHeight: "29.6px",
                   textAlign: "left",
                   paddingTop: "30px",
@@ -248,14 +269,18 @@ const Choisir: React.FC = () => {
 
         <div
           style={{
-            height: "476px",
-            width: "350px",
+            height: isCardHovered === 2 ? "520px" : "500px",
+            width: isCardHovered === 2 ? "400px" : "380px",
             borderRadius: "16px",
             background:
-              "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
-            marginTop: "40px",
-            paddingBottom: "34px",
+              isCardHovered === 2
+                ? "linear-gradient(180.23deg, #FFFFFF 7.39%, #FFFFFF 45.36%, #FFB699 193.52%)"
+                : "linear-gradient(180.79deg, #FFFFFF 7.81%, rgba(187, 221, 217, 0.6) 205.96%)",
+            transition: "transform 0.3s ease",
+            transform: isCardHovered === 2 ? "scale(1.05)" : "scale(1)",
           }}
+          onMouseEnter={() => setIsCardHovered(2)}
+          onMouseLeave={() => setIsCardHovered(null)}
         >
           {choisirPage.map((post: any) => (
             <div key={post} style={{ padding: "30px", textAlign: "center" }}>
@@ -275,7 +300,7 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: "24px",
+                  fontSize: isCardHovered === 2 ? "28px" : "24px",
                   lineHeight: "38.4px",
                   paddingTop: "20px",
                 }}
@@ -287,7 +312,7 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: "14px",
+                  fontSize: isCardHovered === 2 ? "18px" : "16px",
                   lineHeight: "29.6px",
                   textAlign: "left",
                   paddingTop: "20px",
