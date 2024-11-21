@@ -3,14 +3,16 @@
 import { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
 import { Button, Grid, Typography } from "@mui/material";
-import { PrismicRichText } from "@prismicio/react";
-import EastIcon from "@mui/icons-material/East";
-import WestIcon from "@mui/icons-material/West";
 
 export default function Paroles() {
   const [parolesPage, setParolesPage] = useState<any>(null);
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const fixedRowsPerPage = 3;
+  const [isCardHovered, setIsCardHovered] = useState<number | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [playingVideoId, setPlayingVideoId] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // const fixedRowsPerPage = 3;
+  const visibleCards = 3;
 
   useEffect(() => {
     async function fetchData() {
@@ -68,32 +70,31 @@ export default function Paroles() {
       );
   };
 
-  // const items = Array.from({ length: 10 });
-  const items = Array.from({ length: 16 }, (_, i) => ({
+  const items = Array.from({ length: 5 }, (_, i) => ({
     id: i + 1,
     title,
     videoUrl,
   }));
 
-  // const totalPages = Math.ceil(items.length / fixedRowsPerPage);
-
-  // const handleBackButtonClick = () => {
-  //   setPage((prevPage) => Math.max(prevPage - 1, 0));
-  // };
-
-  // const handleNextButtonClick = () => {
-  //   setPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
-  // };
   const handleBackButtonClick = () => {
     setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
 
   const handleNextButtonClick = () => {
-    setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, items.length - 1));
+    setCurrentIndex((prevIndex) =>
+      Math.min(prevIndex + 1, items.length - visibleCards)
+    );
   };
 
-  const totalPages = Math.ceil(items.length / fixedRowsPerPage) - 1;
-  const currentPage = Math.floor(currentIndex / fixedRowsPerPage) + 1;
+  const handleVideoPlay = (id: any) => {
+    setIsVideoPlaying(true);
+    setPlayingVideoId(id);
+  };
+
+  const handleVideoPause = () => {
+    setIsVideoPlaying(false);
+    setPlayingVideoId(null);
+  };
 
   return (
     <div
@@ -103,64 +104,6 @@ export default function Paroles() {
         textAlign: "center",
       }}
     >
-      {/* <div
-        style={{
-          color: "#0A1411",
-          fontSize: "64px",
-          fontWeight: 700,
-          lineHeight: "80.32px",
-          fontFamily:'Mulish'
-        }}
-      >
-        <PrismicRichText field={settings.data.title} />
-      </div>
-      <Grid
-        item
-        lg={12}
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "flex-end",
-          gap: "20px",
-        }}
-      >
-        <Button
-          onClick={handleBackButtonClick}
-          // disabled={page === 0}
-          disabled={currentIndex ===0}
-          aria-label="previous page"
-          sx={{
-            fontSize: "16px",
-            color: "#000000",
-            background: "#FFFFFF",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-            padding: "7px",
-            "&:hover": {
-              background: "inherit",
-            },
-          }}
-        >
-          <WestIcon />
-        </Button>
-        <Button
-          onClick={handleNextButtonClick}
-          // disabled={page >= totalPages - 1}
-          disabled={currentIndex >= items.length - fixedRowsPerPage}
-          aria-label="next page"
-          sx={{
-            fontSize: "16px",
-            color: "#000000",
-            background: "#FFFFFF",
-            boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-            padding: "7px",
-            "&:hover": {
-              background: "inherit",
-            },
-          }}
-        >
-          <EastIcon />
-        </Button>
-      </Grid> */}
       <Grid container alignItems="center" justifyContent="center" gap="20px">
         <Typography
           style={{
@@ -203,7 +146,7 @@ export default function Paroles() {
                 src={parolesPage.data.left_arrow_icon.url || ""}
                 alt={parolesPage.data.left_arrow_icon}
                 style={{
-                  width: "50px",
+                  width: "30px",
                   height: "auto",
                 }}
               />
@@ -211,7 +154,7 @@ export default function Paroles() {
           </Button>
           <Button
             onClick={handleNextButtonClick}
-            disabled={currentIndex >= items.length - fixedRowsPerPage}
+            disabled={currentIndex >= items.length - visibleCards}
             aria-label="next page"
             sx={{
               fontSize: "16px",
@@ -230,7 +173,7 @@ export default function Paroles() {
                 src={parolesPage.data.right_arrow_icon.url || ""}
                 alt={parolesPage.data.right_arrow_icon}
                 style={{
-                  width: "50px",
+                  width: "30px",
                   height: "auto",
                 }}
               />
@@ -259,19 +202,18 @@ export default function Paroles() {
           item
           lg={12}
           style={{
+            flex: "0 0 auto",
             display: "flex",
             flexDirection: "row",
-            flexWrap: "wrap",
+            flexWrap: "nowrap",
             justifyContent: "space-evenly",
-            marginBottom: "50px",
-            animation: "slide 50s linear infinite",
+            padding: "5%",
+            gap: "50px",
+            animation: isVideoPlaying ? "none" : "slide 50s linear infinite",
           }}
         >
           {items
-            .slice(
-              Math.max(currentIndex - 1, 0),
-              Math.min(currentIndex + 2, items.length)
-            )
+            .slice(currentIndex, currentIndex + visibleCards)
             .map((item) => (
               <Grid
                 item
@@ -282,15 +224,20 @@ export default function Paroles() {
                 key={item.id}
                 style={{
                   background:
-                    currentIndex === item.id - 1 ? "#fdf2e9" : "#FFFFFF",
+                    isCardHovered === item.id || playingVideoId === item.id
+                      ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
+                      : "#FFFFFF",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
                   padding: "20px",
                   borderRadius: "20px",
                   transform:
-                    currentIndex === item.id - 1 ? "scale(1.1)" : "scale(1)",
+                    isCardHovered === item.id || playingVideoId === item.id
+                      ? "scale(1.1)"
+                      : "scale(1)",
                   transition: "transform 0.3s ease",
-                  margin: currentIndex === item.id - 1 ? "10px 20px" : "10px",
                 }}
+                onMouseEnter={() => setIsCardHovered(item.id)}
+                onMouseLeave={() => setIsCardHovered(null)}
               >
                 {videoUrl ? (
                   <video
@@ -299,6 +246,9 @@ export default function Paroles() {
                     style={{
                       borderRadius: "12px",
                     }}
+                    onPlay={() => handleVideoPlay(item.id)}
+                    onPause={handleVideoPause}
+                    onEnded={handleVideoPause}
                   >
                     <source src={videoUrl} type="video/mp4" />
                   </video>
@@ -310,54 +260,17 @@ export default function Paroles() {
                     color: "#000000",
                     fontSize: "22.02px",
                     fontWeight: 700,
-                    // fontFamily:'Mulish',
+                    fontFamily: "Mulish",
                     lineHeight: "25.74px",
                     textAlign: "center",
                     padding: "10px 20px",
                   }}
                 >
-                  {/* {page * fixedRowsPerPage + index + 1}. {subTitle} */}
                   {item.id}. {item.title}
                 </div>
               </Grid>
             ))}
         </Grid>
-        {/* <Grid
-          item
-          xs={12}
-          lg={12}
-          md={12}
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            paddingTop: "20px",
-          }}
-        >
-           {Array.from({ length: totalPages }).map((_, index) => (
-          <Box
-            key={index}
-            style={{
-              width: "12px",
-              height: "12px",
-              borderRadius: "50%",
-              margin: "0 8px",
-              backgroundColor: currentPage === index + 1 ? "#24535C" : "#BBDDD999",
-              cursor: "pointer",
-              transition: "background-color 0.3s ease",
-            }}
-          />
-        ))}
-        </Grid> */}
-        <style jsx>{`
-          @keyframes slide {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-        `}</style>
       </Grid>
     </div>
   );
