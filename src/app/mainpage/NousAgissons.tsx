@@ -78,10 +78,8 @@ const NousAgissons: React.FC = () => {
                   sx={{
                     fontFamily: "Jenna Sue",
                     fontWeight: 400,
-                    // fontSize: "44px",
-                    fontSize: "5vw",
-                    // lineHeight: "76.8px",
-                    lineHeight: { xs: "35px", md: "69.6px" },
+                    fontSize: { xs: "25px", sm: "45px", lg: "65px" },
+                    lineHeight: { xs: "20px", sm: "69.6px", lg: "76.8px" },
                     color: "rgba(36, 83, 92, 1)",
                   }}
                 >
@@ -92,10 +90,8 @@ const NousAgissons: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "rgba(36, 83, 92, 1)",
                     fontWeight: 700,
-                    // fontSize: "45px",
-                    fontSize: "3.5vw",
-                    // lineHeight: "69.6px",
-                    lineHeight: { xs: "20px", md: "69.6px" },
+                    fontSize: { xs: "15px", sm: "25px", lg: "45px" },
+                    lineHeight: { xs: "20px", sm: "40px", lg: "69.6px" },
                   }}
                 >
                   {post.data.title}
@@ -105,12 +101,8 @@ const NousAgissons: React.FC = () => {
                     display: "flex",
                     flexDirection: "row",
                     background: "#24535C",
-                    padding: "5px 10px",
-                    gap: "18px",
                     borderRadius: "82px",
                     marginTop: "20px",
-                    maxWidth: "200px",
-                    width: "100%",
                     justifyContent: "space-around",
                   }}
                   onClick={handleNavigation}
@@ -119,11 +111,10 @@ const NousAgissons: React.FC = () => {
                     sx={{
                       fontFamily: "Mulish",
                       fontWeight: 400,
-                      // fontSize: "15.2px",
-                      fontSize: { xs: "10px", md: "15.2px" },
-                      lineHeight: "18.24px",
-                      color: "rgba(255, 255, 255, 1)",
-                      textTransform:'none'
+                      fontSize: { xs: "10px", sm: "12px", lg: "15.2px" },
+                      lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
+                      color: "#FFFFFF",
+                      textTransform: "none",
                     }}
                   >
                     {post.data.button_text}
@@ -134,8 +125,8 @@ const NousAgissons: React.FC = () => {
                       src={post.data.button_icon.url || ""}
                       alt={post.data.button_icon}
                       style={{
-                        width: "40px",
-                        height: "40px",
+                        width: "20%",
+                        height: "auto",
                       }}
                     />
                   )}

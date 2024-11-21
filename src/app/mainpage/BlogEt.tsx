@@ -58,6 +58,7 @@ export default function BlogEt() {
         style={{
           background: "#BBDDD9",
           padding: "20px",
+          marginTop:'10px',
         }}
       >
         <Grid
