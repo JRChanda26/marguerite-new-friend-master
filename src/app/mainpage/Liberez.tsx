@@ -1,5 +1,5 @@
 "use client";
-import { createClient } from "@/prismicio";
+
 import {
   Alert,
   Button,
@@ -8,7 +8,6 @@ import {
   TextField,
   Typography,
 } from "@mui/material";
-import { PrismicRichText } from "@prismicio/react";
 import React, { useState } from "react";
 import { client } from "../../../prismic-configuration";
 

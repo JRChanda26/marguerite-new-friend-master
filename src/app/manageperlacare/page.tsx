@@ -328,7 +328,7 @@ const ManagePerLaCare: React.FC = () => {
         ))}
       </div>
 
-      {posts.map((post: any, postIndex: number) => (
+      {posts.map((post: any) => (
         <>
           <Typography
             sx={{

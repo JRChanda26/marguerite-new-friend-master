@@ -291,14 +291,13 @@ const LecarechezMargueriteServices: React.FC = () => {
         </div>
       </Box>
       <div style={{ padding: "7%" }}>
-        {posts.map((post: any, postIndex: number) => (
+        {posts.map((post: any) => (
           <Grid container spacing={2} key={post}>
             <Grid
               item
               lg={12}
               sx={{
                 display: "flex",
-                // flexDirection: "row",
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
                 justifyContent: "center",
                 gap: "30px",

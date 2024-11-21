@@ -11,7 +11,6 @@ export default function Paroles() {
   const [playingVideoId, setPlayingVideoId] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // const fixedRowsPerPage = 3;
   const visibleCards = 3;
 
   useEffect(() => {

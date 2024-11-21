@@ -46,7 +46,6 @@ const NosExperiences: React.FC = () => {
         container
         spacing={3}
         sx={{
-          // maxWidth: "1200px",
           padding: "40px 20px",
         }}
       >
