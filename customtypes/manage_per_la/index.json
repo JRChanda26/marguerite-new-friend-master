@@ -6,10 +6,10 @@
   "status": true,
   "json": {
     "Main": {
-      "header_image": {
+      "header_background": {
         "type": "Image",
         "config": {
-          "label": "Header Image",
+          "label": "Header Background",
           "constraint": {},
           "thumbnails": []
         }
@@ -72,10 +72,10 @@
           "placeholder": ""
         }
       },
-      "middle_image": {
+      "middle_background": {
         "type": "Image",
         "config": {
-          "label": "Middle Image",
+          "label": "Middle Background",
           "constraint": {},
           "thumbnails": []
         }
@@ -136,132 +136,10 @@
           "placeholder": ""
         }
       },
-      "accordion_title": {
-        "type": "Text",
-        "config": {
-          "label": "Accordion Title",
-          "placeholder": ""
-        }
-      },
-      "accordion_sub_title1": {
-        "type": "Text",
-        "config": {
-          "label": "Accordion Sub Title1",
-          "placeholder": ""
-        }
-      },
-      "accordion_sub_title2": {
-        "type": "Text",
-        "config": {
-          "label": "Accordion Sub Title2",
-          "placeholder": ""
-        }
-      },
-      "accordion_image": {
+      "square_brackets_background": {
         "type": "Image",
         "config": {
-          "label": "Accordion Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "accordion_video": {
-        "type": "Link",
-        "config": {
-          "label": "Accordion Video",
-          "placeholder": "",
-          "select": "media",
-          "allowText": true
-        }
-      },
-      "question1": {
-        "type": "Text",
-        "config": {
-          "label": "Question1",
-          "placeholder": ""
-        }
-      },
-      "answer1": {
-        "type": "Text",
-        "config": {
-          "label": "Answer1",
-          "placeholder": ""
-        }
-      },
-      "question2": {
-        "type": "Text",
-        "config": {
-          "label": "Question2",
-          "placeholder": ""
-        }
-      },
-      "answer2": {
-        "type": "Text",
-        "config": {
-          "label": "Answer2",
-          "placeholder": ""
-        }
-      },
-      "question3": {
-        "type": "Text",
-        "config": {
-          "label": "Question3",
-          "placeholder": ""
-        }
-      },
-      "answer3": {
-        "type": "Text",
-        "config": {
-          "label": "Answer3",
-          "placeholder": ""
-        }
-      },
-      "question4": {
-        "type": "Text",
-        "config": {
-          "label": "Question4",
-          "placeholder": ""
-        }
-      },
-      "answer4": {
-        "type": "Text",
-        "config": {
-          "label": "Answer4",
-          "placeholder": ""
-        }
-      },
-      "question5": {
-        "type": "Text",
-        "config": {
-          "label": "Question5",
-          "placeholder": ""
-        }
-      },
-      "answer5": {
-        "type": "Text",
-        "config": {
-          "label": "Answer5",
-          "placeholder": ""
-        }
-      },
-      "question6": {
-        "type": "Text",
-        "config": {
-          "label": "Question6",
-          "placeholder": ""
-        }
-      },
-      "answer6": {
-        "type": "Text",
-        "config": {
-          "label": "Answer6",
-          "placeholder": ""
-        }
-      },
-      "square_brackets_image": {
-        "type": "Image",
-        "config": {
-          "label": "Square Brackets Image",
+          "label": "Square Brackets Background",
           "constraint": {},
           "thumbnails": []
         }
@@ -302,10 +180,10 @@
           "placeholder": ""
         }
       },
-      "bottom_image": {
+      "bottom_left_image": {
         "type": "Image",
         "config": {
-          "label": "Bottom Image",
+          "label": "Bottom Left Image",
           "constraint": {},
           "thumbnails": []
         }

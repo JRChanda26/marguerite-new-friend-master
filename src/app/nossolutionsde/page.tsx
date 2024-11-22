@@ -17,78 +17,64 @@ import Header from "../mainpage/Header";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { useRouter } from "next/navigation";
 
-const OurCareManagementSolutions: React.FC = () => {
-  const [posts, setPosts] = useState<any[]>([]);
+const NosSolutionsDe: React.FC = () => {
+  const [nosPage, setNosPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType(
-        "ourcaremanagementsolutions" as any
+        "nos_solutions_de" as any
       );
-      setPosts(response);
+      setNosPage(response);
     };
 
     fetchPosts();
   }, []);
-  const backgroundImage = posts[0]?.data?.headerbackground?.url || "";
+  const backgroundImage = nosPage[0]?.data?.header_background?.url || "";
 
-  const [posts1, setPosts1] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "soinschezmarguerite" as any
-      );
-      setPosts1(response);
-    };
-
-    fetchPosts();
-  }, []);
-  const lastbackground = posts1[0]?.data?.lastbackground?.url || "";
-
-  const [videoPost, setVideoPost] = useState<any[]>([]);
+  const [modulesPage, setModulesPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType(
-        "managementbycare" as any
+        "interactive_learning_modules" as any
       );
-      setVideoPost(response);
+      setModulesPage(response);
     };
 
     fetchPosts();
   }, []);
 
-  console.log(videoPost);
+  console.log(modulesPage);
 
   const faqs = [
     {
-      question: videoPost[0]?.data.question1,
-      answer: videoPost[0]?.data.answer1,
+      question: modulesPage[0]?.data.question1,
+      answer: modulesPage[0]?.data.answer1,
     },
     {
-      question: videoPost[0]?.data.question2,
-      answer: videoPost[0]?.data.answer2,
+      question: modulesPage[0]?.data.question2,
+      answer: modulesPage[0]?.data.answer2,
     },
     {
-      question: videoPost[0]?.data.question3,
-      answer: videoPost[0]?.data.answer3,
+      question: modulesPage[0]?.data.question3,
+      answer: modulesPage[0]?.data.answer3,
     },
     {
-      question: videoPost[0]?.data.question4,
-      answer: videoPost[0]?.data.answer4,
+      question: modulesPage[0]?.data.question4,
+      answer: modulesPage[0]?.data.answer4,
     },
     {
-      question: videoPost[0]?.data.question5,
-      answer: videoPost[0]?.data.answer5,
+      question: modulesPage[0]?.data.question5,
+      answer: modulesPage[0]?.data.answer5,
     },
     {
-      question: videoPost[0]?.data.question6,
-      answer: videoPost[0]?.data.answer6,
+      question: modulesPage[0]?.data.question6,
+      answer: modulesPage[0]?.data.answer6,
     },
   ];
 
-  const videoUrl = videoPost[0]?.data.video?.url;
+  const videoUrl = modulesPage[0]?.data.video?.url;
 
   const [clicked1, setClicked1] = useState<number | null>(null);
   const handleColor1 = (index: number) => {
@@ -97,48 +83,48 @@ const OurCareManagementSolutions: React.FC = () => {
 
   const points = [
     {
-      heading: posts[0]?.data.heading1,
+      heading: nosPage[0]?.data.box1,
       background: "#F6C09E",
-      points: [posts[0]?.data.heading1_point1, posts[0]?.data.heading1_point2],
+      points: [nosPage[0]?.data.box1_point1, nosPage[0]?.data.box1_point2],
     },
     {
-      heading: posts[0]?.data.heading2,
+      heading: nosPage[0]?.data.box2,
       background: "#BBDDD9",
-      points: [posts[0]?.data.heading2_point1, posts[0]?.data.heading2_point2],
+      points: [nosPage[0]?.data.box2_point1, nosPage[0]?.data.box2_point2],
     },
     {
-      heading: posts[0]?.data.heading3,
+      heading: nosPage[0]?.data.box3,
       background: "#EE8A74",
-      points: [posts[0]?.data.heading3_point1, posts[0]?.data.heading3_point2],
+      points: [nosPage[0]?.data.box3_point1, nosPage[0]?.data.box3_point2],
     },
     {
-      heading: posts[0]?.data.heading4,
+      heading: nosPage[0]?.data.box4,
       background: "#82C5BE",
-      points: [posts[0]?.data.heading4_point1, posts[0]?.data.heading4_point2],
+      points: [nosPage[0]?.data.box4_point1, nosPage[0]?.data.box4_point2],
     },
     {
-      heading: posts[0]?.data.heading5,
+      heading: nosPage[0]?.data.box5,
       background: "#F6C09E",
       points: [
-        posts[0]?.data.heading5_point1,
-        posts[0]?.data.heading5_point2,
-        posts[0]?.data.heading5_point3,
+        nosPage[0]?.data.box5_point1,
+        nosPage[0]?.data.box5_point2,
+        nosPage[0]?.data.box5_point3,
       ],
     },
     {
-      heading: posts[0]?.data.heading6,
+      heading: nosPage[0]?.data.box6,
       background: "#BBDDD9",
-      points: [posts[0]?.data.heading6_point1, posts[0]?.data.heading6_point2],
+      points: [nosPage[0]?.data.box6_point1, nosPage[0]?.data.box6_point2],
     },
     {
-      heading: posts[0]?.data.heading7,
+      heading: nosPage[0]?.data.box7,
       background: "#EE8A74",
-      points: [posts[0]?.data.heading7_point1, posts[0]?.data.heading7_point2],
+      points: [nosPage[0]?.data.box7_point1, nosPage[0]?.data.box7_point2],
     },
     {
-      heading: posts[0]?.data.heading8,
+      heading: nosPage[0]?.data.box8,
       background: "#82C5BE",
-      points: [posts[0]?.data.heading8_point1, posts[0]?.data.heading8_point2],
+      points: [nosPage[0]?.data.box8_point1, nosPage[0]?.data.box8_point2],
     },
   ];
 
@@ -160,7 +146,7 @@ const OurCareManagementSolutions: React.FC = () => {
           // height: "auto",
         }}
       >
-        {posts.map((post: any, postIndex: number) => (
+        {nosPage.map((post: any, postIndex: number) => (
           <>
             <div
               style={{
@@ -194,7 +180,7 @@ const OurCareManagementSolutions: React.FC = () => {
                     lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
                   }}
                 >
-                  {post.data.headertext}
+                  {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
@@ -207,7 +193,7 @@ const OurCareManagementSolutions: React.FC = () => {
                     lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
                   }}
                 >
-                  {post.data.content}
+                  {post.data.sub_heading}
                 </Typography>
               </div>
             </div>
@@ -216,7 +202,7 @@ const OurCareManagementSolutions: React.FC = () => {
       </div>
 
       <div style={{ padding: "7%" }}>
-        {posts.map((post: any) => (
+        {nosPage.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
             <Grid
               item
@@ -229,7 +215,7 @@ const OurCareManagementSolutions: React.FC = () => {
               }}
             >
               <Grid item lg={5} xs={12} sm={7}>
-                {posts.map((post: any) => (
+                {nosPage.map((post: any) => (
                   <Typography
                     key={post}
                     sx={{
@@ -241,7 +227,7 @@ const OurCareManagementSolutions: React.FC = () => {
                       letterSpacing: "2%",
                     }}
                   >
-                    {post.data.leftheader}
+                    {post.data.top_left_title}
                   </Typography>
                 ))}
                 <Typography
@@ -254,10 +240,10 @@ const OurCareManagementSolutions: React.FC = () => {
                     paddingTop: "33px",
                   }}
                 >
-                  {post.data.leftcontent}
+                  {post.data.top_left_description}
                 </Typography>
                 <div style={{ paddingTop: "50px" }}>
-                  {posts.map((post: any) => (
+                  {nosPage.map((post: any) => (
                     <Button
                       key={post}
                       style={{
@@ -278,13 +264,13 @@ const OurCareManagementSolutions: React.FC = () => {
                           color: "#FFFFFF",
                         }}
                       >
-                        {post.data.buttontext}
+                        {post.data.button_text}
                       </Typography>
-                      {post?.data.buttonimage && (
+                      {post?.data.button_icon && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                          src={post?.data.buttonimage.url || undefined}
-                          alt={post?.data.buttonimage.alt || "Image"}
+                          src={post?.data.button_icon.url || undefined}
+                          alt={post?.data.button_icon.alt || "Image"}
                           style={{
                             width: "20%",
                             height: "auto",
@@ -305,11 +291,11 @@ const OurCareManagementSolutions: React.FC = () => {
                   alignItems: "center",
                 }}
               >
-                {post?.data.rightimage && (
+                {post?.data.top_right_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post?.data.rightimage.url || undefined}
-                    alt={post?.data.rightimage.alt || "Image"}
+                    src={post?.data.top_right_image.url || undefined}
+                    alt={post?.data.top_right_image.alt || "Image"}
                     style={{
                       width: "100%",
                       height: "auto",
@@ -335,7 +321,7 @@ const OurCareManagementSolutions: React.FC = () => {
               marginTop: "50px",
             }}
           >
-            {videoPost[0]?.data.title2}
+            {modulesPage[0]?.data.video_title}
           </Typography>
           <Grid
             item
@@ -465,4 +451,4 @@ const OurCareManagementSolutions: React.FC = () => {
   );
 };
 
-export default OurCareManagementSolutions;
+export default NosSolutionsDe;

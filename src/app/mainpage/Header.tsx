@@ -110,7 +110,7 @@ const Header: React.FC = () => {
                   {post.data.page2}
                 </Typography>
               </Link>
-              <Link href={"/caremanagement"} style={{ textDecoration: "none" }}>
+              <Link href={"/nossolutionsde"} style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
                     fontFamily: "Mulish",
