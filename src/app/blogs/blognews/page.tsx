@@ -381,7 +381,11 @@ export default function BlogsNews() {
                         lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
                         textAlign: "center",
                         // padding: "20% 15%",
-                        padding: { xs: "12% 10%", sm: "39% 10%", lg: "19% 18%" },
+                        padding: {
+                          xs: "12% 10%",
+                          sm: "39% 10%",
+                          lg: "19% 18%",
+                        },
                       }}
                     >
                       {blogs?.data.quote_text}
@@ -586,17 +590,17 @@ export default function BlogsNews() {
                   display: "flex",
                   flexDirection: "row",
                   background: "#24535C",
-                  padding: "16px 24px 16px 24px",
-                  gap: "18px",
                   borderRadius: "82px",
+                  marginTop: "20px",
+                  justifyContent: "space-around",
                 }}
-                onClick={handleNavigation}
+                // onClick={handleNavigation}
               >
                 <Typography
-                  style={{
+                  sx={{
                     fontWeight: 400,
-                    fontSize: "15.2px",
-                    lineHeight: "18.24px",
+                    fontSize: { xs: "12px", sm: "18px", lg: "20px" },
+                    lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
                     color: "#FFFFFF",
                   }}
                 >
@@ -608,11 +612,8 @@ export default function BlogsNews() {
                     src={post?.data.buttonimage.url || undefined}
                     alt={post?.data.buttonimage.alt || "Image"}
                     style={{
-                      background: "#82C5BE",
-                      borderRadius: "15.9px",
-                      padding: "7.29px",
-                      width: "9.27px",
-                      height: "9.27px",
+                      width: "20%",
+                      height: "auto",
                     }}
                   />
                 )}

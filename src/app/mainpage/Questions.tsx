@@ -28,7 +28,7 @@ export default function Questions() {
       setQuestionPage(data);
     }
     fetchData();
-  });
+  },[]);
 
   const faqs = [
     {

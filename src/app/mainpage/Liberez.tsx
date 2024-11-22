@@ -28,6 +28,7 @@ export default function Liberez() {
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<number | null>(null);
 
   const handleCloseSnackbar = () => {
     setOpenSnackbar(false);
@@ -43,9 +44,9 @@ export default function Liberez() {
 
   const validateFields = (): Errors => {
     const newErrors: Errors = {};
-    if (!emailValue) newErrors.email = "Email is required";
+    if (!emailValue) newErrors.email = "L'email est requis";
     else if (!emailRegex.test(emailValue))
-      newErrors.email = "Please enter a valid email address";
+      newErrors.email = "Veuillez entrer une adresse email valide";
     return newErrors;
   };
 
@@ -77,6 +78,9 @@ export default function Liberez() {
       const result = await response.json();
       setMessage(result.message);
       setOpenSnackbar(true);
+
+      const statusCode = response.status;
+      setStatus(statusCode);
 
       setEmailValue("");
     } catch (error) {
@@ -127,6 +131,17 @@ export default function Liberez() {
               }}
             >
               {liberezPage[0]?.data.description}
+            </div>
+            <div>
+              {errors.email && (
+                <Typography
+                  color="error"
+                  variant="body2"
+                  sx={{ marginTop: "4px" }}
+                >
+                  {errors.email}
+                </Typography>
+              )}
             </div>
           </Grid>
           <Grid
@@ -179,9 +194,9 @@ export default function Liberez() {
                 textTransform: "none",
                 color: "#FFFFFF",
                 fontFamily: "Mulish",
-                fontSize: { xs: "10px", sm: "15px",lg:'19.25px' },
+                fontSize: { xs: "10px", sm: "15px", lg: "19.25px" },
                 fontWeight: 400,
-                padding:'5px 10px',
+                padding: "5px 10px",
                 "&:hover": {
                   background: "#24535C",
                   boxShadow: "none",
@@ -196,20 +211,14 @@ export default function Liberez() {
               autoHideDuration={3000}
               onClose={handleCloseSnackbar}
             >
-              <Alert onClose={handleCloseSnackbar} severity="success">
+              <Alert
+                onClose={handleCloseSnackbar}
+                severity={status === 200 ? "success" : "error"}
+              >
                 {message}
               </Alert>
             </Snackbar>
           </Grid>
-          {errors.email && (
-              <Typography
-                color="error"
-                variant="body2"
-                sx={{ marginTop: "4px" }}
-              >
-                {errors.email}
-              </Typography>
-            )}
         </Grid>
       </Grid>
     </div>

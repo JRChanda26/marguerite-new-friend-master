@@ -20,7 +20,7 @@ export default function Paroles() {
       setParolesPage(data);
     }
     fetchData();
-  });
+  },[]);
 
   if (!parolesPage) {
     return;
@@ -212,10 +212,10 @@ export default function Paroles() {
         container
         item
         lg={12}
-        style={{
+        sx={{
           // flex: "0 0 auto",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: { xs: "column", sm: "row", lg: "row" },
           flexWrap: "nowrap",
           justifyContent: "space-evenly",
           padding: "5%",

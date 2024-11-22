@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Header: React.FC = () => {
   const [headerPage, setHeaderPage] = useState<[]>([]);
@@ -16,6 +17,11 @@ const Header: React.FC = () => {
 
     fetchPosts();
   }, []);
+
+  const router = useRouter();
+  const handleNavigation = () => {
+    router.push("/");
+  };
 
   return (
     <Box>
@@ -46,11 +52,9 @@ const Header: React.FC = () => {
               item
               xs={12}
               sm={12}
-              // md={3}
               lg={12}
               sx={{
                 display: "flex",
-                // flexDirection: "row",
                 flexDirection: { xs: "column", sm: "row" },
                 justifyContent: "space-evenly",
                 alignItems: "center",
@@ -66,6 +70,7 @@ const Header: React.FC = () => {
                     width: "10%",
                     height: "auto",
                   }}
+                  onClick={handleNavigation}
                 />
               )}
               <Link
