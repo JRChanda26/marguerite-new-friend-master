@@ -8,22 +8,21 @@ import { PrismicRichText } from "@prismicio/react";
 import Liberez from "@/app/mainpage/Liberez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
+import { client } from "../../../../prismic-configuration";
 
 export default function Blogs() {
-  const [settings, setSettings] = useState<any>(null);
-  const [liberez, setLiberez] = useState<any>(null);
+
+  const [blogPage, setBlogPage] = useState<any[]>([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const client = createClient();
-      const [blogsData, liberezData] = await Promise.all([
-        client.getSingle("blogs" as any),
-        client.getSingle("liberez" as any),
-      ]);
-      setSettings(blogsData);
-      setLiberez(liberezData);
-    }
-    fetchData().catch((error) => console.error("Error fetching data:", error));
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType(
+        "blogs" as any
+      );
+      setBlogPage(response);
+    };
+
+    fetchPosts();
   }, []);
 
   const [page, setPage] = useState(0);
@@ -77,19 +76,19 @@ export default function Blogs() {
 
   const articleItems = [
     {
-      image: settings?.data.image1,
-      subTitle: settings?.data.sub_title2,
-      description: settings?.data.description2,
+      image: blogPage[0]?.data.card1_image,
+      subTitle: blogPage[0]?.data.card1_title,
+      description: blogPage[0]?.data.card1_description,
     },
     {
-      image: settings?.data.image2,
-      subTitle: settings?.data.sub_title3,
-      description: settings?.data.description3,
+      image: blogPage[0]?.data.card2_image,
+      subTitle: blogPage[0]?.data.card2_title,
+      description: blogPage[0]?.data.card2_description,
     },
     {
-      image: settings?.data.image3,
-      subTitle: settings?.data.sub_title4,
-      description: settings?.data.description4,
+      image: blogPage[0]?.data.card3_image,
+      subTitle: blogPage[0]?.data.card3_title,
+      description: blogPage[0]?.data.card3_description,
     },
   ];
 
@@ -187,7 +186,7 @@ export default function Blogs() {
       <Header />
       <div
         style={{
-          backgroundImage: `url(${settings?.data?.banner?.url || ""})`,
+          backgroundImage: `url(${blogPage[0]?.data?.header_background?.url || ""})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
         }}
@@ -224,7 +223,7 @@ export default function Blogs() {
                 lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
               }}
             >
-              {settings?.data.heading}
+              {blogPage[0]?.data.heading}
             </Typography>
             <Typography
               sx={{
@@ -237,7 +236,7 @@ export default function Blogs() {
                 lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
               }}
             >
-              {settings?.data.sub_heading}
+              {blogPage[0]?.data.sub_heading}
             </Typography>
           </div>
         </div>
@@ -260,7 +259,7 @@ export default function Blogs() {
               marginTop: "70px",
             }}
           >
-            {settings?.data.title1}
+            {blogPage[0]?.data.title1}
           </Typography>
           <Grid
             sx={{
@@ -285,11 +284,11 @@ export default function Blogs() {
                   }}
                   key={index}
                 >
-                  {settings?.data.post_image && (
+                  {blogPage[0]?.data.testimonial_image && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={settings?.data.post_image.url || undefined}
-                      alt={settings?.data.post_image.alt || "Image"}
+                      src={blogPage[0]?.data.testimonial_image.url || undefined}
+                      alt={blogPage[0]?.data.testimonial_image.alt || "Image"}
                       style={{
                         height: "auto",
                         width: "100%",
@@ -311,16 +310,17 @@ export default function Blogs() {
                       }}
                     >
                       {page * fixedRowsPerPage + index + 1}.
-                      {settings?.data.sub_title1}
+                      {blogPage[0]?.data.testimonial_title}
                     </div>
                     <div
                       style={{
                         color: "#4D5053",
                         fontSize: "22px",
                         fontWeight: 400,
+                        whiteSpace: "pre-line",
                       }}
                     >
-                      {settings?.data.description1}
+                      {blogPage[0]?.data.testimonial_description}
                     </div>
                     <div
                       style={{
@@ -329,7 +329,7 @@ export default function Blogs() {
                         fontWeight: 400,
                       }}
                     >
-                      {settings?.data.date}
+                      {blogPage[0]?.data.testimonial_date}
                     </div>
                   </div>
                 </Grid>
@@ -399,7 +399,7 @@ export default function Blogs() {
             margin: "50px 0px",
           }}
         >
-          {settings?.data.title2}
+          {blogPage[0]?.data.title2}
         </Typography>
 
         {/* {articleItems

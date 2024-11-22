@@ -43,23 +43,11 @@ const ManagePerLaCare: React.FC = () => {
     fetchPosts();
   }, []);
 
-  const backgroundImage = managePage[0]?.data?.header_image?.url || "";
-  const boxbackground = managePage[0]?.data?.middle_image?.url || "";
+  const backgroundImage = managePage[0]?.data?.header_background?.url || "";
+  const boxbackground = managePage[0]?.data?.middle_background?.url || "";
 
-  // const [posts1, setPosts1] = useState<any[]>([]);
-
-  // useEffect(() => {
-  //   const fetchPosts = async () => {
-  //     const response: any = await client.getAllByType(
-  //       "soinschezmarguerite" as any
-  //     );
-  //     setPosts1(response);
-  //   };
-
-  //   fetchPosts();
-  // }, []);
   const contentbackground =
-    managePage[0]?.data?.square_brackets_image?.url || "";
+    managePage[0]?.data?.square_brackets_background?.url || "";
 
   const videoUrl = modulesPage[0]?.data.video?.url;
 
@@ -778,11 +766,11 @@ const ManagePerLaCare: React.FC = () => {
       >
         <Grid item lg={6} xs={12} sm={6}>
           {" "}
-          {managePage[0]?.data.bottom_image && (
+          {managePage[0]?.data.bottom_left_image && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={managePage[0]?.data.bottom_image.url || undefined}
-              alt={managePage[0]?.data.bottom_image.alt || "Image"}
+              src={managePage[0]?.data.bottom_left_image.url || undefined}
+              alt={managePage[0]?.data.bottom_left_image.alt || "Image"}
               width="100%"
               height="auto"
             />

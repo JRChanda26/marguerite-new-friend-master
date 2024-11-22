@@ -1,322 +1,242 @@
 {
   "format": "page",
-  "id": "ourcaremanagementsolutions",
-  "label": "ourcaremanagementsolutions",
+  "id": "nos_solutions_de",
+  "label": "Nos Solutions De",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "headerbackground": {
+      "header_background": {
         "type": "Image",
         "config": {
-          "label": "headerbackground",
+          "label": "Header Background",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "headertext": {
+      "heading": {
         "type": "Text",
         "config": {
-          "label": "headertext",
+          "label": "Heading",
           "placeholder": ""
         }
       },
-      "content": {
+      "sub_heading": {
         "type": "Text",
         "config": {
-          "label": "content",
+          "label": "Sub Heading",
           "placeholder": ""
         }
       },
-      "leftheader": {
+      "top_left_title": {
         "type": "Text",
         "config": {
-          "label": "leftheader",
+          "label": "Top Left Title",
           "placeholder": ""
         }
       },
-      "leftcontent": {
+      "top_left_description": {
         "type": "Text",
         "config": {
-          "label": "leftcontent",
+          "label": "Top Left Description",
           "placeholder": ""
         }
       },
-      "buttontext": {
-        "type": "Text",
-        "config": {
-          "label": "buttontext",
-          "placeholder": ""
-        }
-      },
-      "rightimage": {
+      "top_right_image": {
         "type": "Image",
         "config": {
-          "label": "rightimage",
+          "label": "Top Right Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "buttonimage": {
+      "button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "button_icon": {
         "type": "Image",
         "config": {
-          "label": "buttonimage",
+          "label": "Button Icon",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "leafimageleft": {
-        "type": "Image",
-        "config": {
-          "label": "leafimageleft",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "leafimageright": {
-        "type": "Image",
-        "config": {
-          "label": "leafimageright",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "pieimage": {
-        "type": "Image",
-        "config": {
-          "label": "pieimage",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "pietext": {
+      "box1": {
         "type": "Text",
         "config": {
-          "label": "pietext",
+          "label": "Box1",
           "placeholder": ""
         }
       },
-      "rightleaftextheader": {
+      "box1_point1": {
         "type": "Text",
         "config": {
-          "label": "rightleaftextheader",
+          "label": "Box1 Point1",
           "placeholder": ""
         }
       },
-      "rightleaftextcontent": {
+      "box1_point2": {
         "type": "Text",
         "config": {
-          "label": "rightleaftextcontent",
+          "label": "Box1 Point2",
           "placeholder": ""
         }
       },
-      "rightleafdowntextheader": {
+      "box2": {
         "type": "Text",
         "config": {
-          "label": "rightleafdowntextheader",
+          "label": "Box2",
           "placeholder": ""
         }
       },
-      "rightleafdowntextcontent": {
+      "box2_point1": {
         "type": "Text",
         "config": {
-          "label": "rightleafdowntextcontent",
+          "label": "Box2 Point1",
           "placeholder": ""
         }
       },
-      "pielefttext": {
+      "box2_point2": {
         "type": "Text",
         "config": {
-          "label": "pielefttext",
+          "label": "Box2 Point2",
           "placeholder": ""
         }
       },
-      "leafsectionheader": {
+      "box3": {
         "type": "Text",
         "config": {
-          "label": "leafsectionheader",
+          "label": "Box3",
           "placeholder": ""
         }
       },
-      "leafsectioncontent": {
+      "box3_point1": {
         "type": "Text",
         "config": {
-          "label": "leafsectioncontent",
+          "label": "Box3 Point1",
           "placeholder": ""
         }
       },
-      "heading1": {
+      "box3_point2": {
         "type": "Text",
         "config": {
-          "label": "Heading1",
+          "label": "Box3 Point2",
           "placeholder": ""
         }
       },
-      "heading1_point1": {
+      "box4": {
         "type": "Text",
         "config": {
-          "label": "Heading1 Point1",
+          "label": "Box4",
           "placeholder": ""
         }
       },
-      "heading1_point2": {
+      "box4_point1": {
         "type": "Text",
         "config": {
-          "label": "Heading1 Point2",
+          "label": "Box4 Point1",
           "placeholder": ""
         }
       },
-      "heading2": {
+      "box4_point2": {
         "type": "Text",
         "config": {
-          "label": "Heading2",
+          "label": "Box4 Point2",
           "placeholder": ""
         }
       },
-      "heading2_point1": {
+      "box5_point1": {
         "type": "Text",
         "config": {
-          "label": "Heading2 Point1",
+          "label": "Box5 Point1",
           "placeholder": ""
         }
       },
-      "heading2_point2": {
+      "box5_point2": {
         "type": "Text",
         "config": {
-          "label": "Heading2 Point2",
+          "label": "Box5 Point2",
           "placeholder": ""
         }
       },
-      "heading3": {
+      "box5_point3": {
         "type": "Text",
         "config": {
-          "label": "Heading3",
+          "label": "Box5 Point3",
           "placeholder": ""
         }
       },
-      "heading3_point1": {
+      "box6": {
         "type": "Text",
         "config": {
-          "label": "Heading3 Point1",
+          "label": "Box6",
           "placeholder": ""
         }
       },
-      "heading3_point2": {
+      "box6_point1": {
         "type": "Text",
         "config": {
-          "label": "Heading3 Point2",
+          "label": "Box6 Point1",
           "placeholder": ""
         }
       },
-      "heading4": {
+      "box6_point2": {
         "type": "Text",
         "config": {
-          "label": "Heading4",
+          "label": "Box6 Point2",
           "placeholder": ""
         }
       },
-      "heading4_point1": {
+      "box7": {
         "type": "Text",
         "config": {
-          "label": "Heading4 Point1",
+          "label": "Box7",
           "placeholder": ""
         }
       },
-      "heading4_point2": {
+      "box7_point1": {
         "type": "Text",
         "config": {
-          "label": "Heading4 Point2",
+          "label": "Box7 Point1",
           "placeholder": ""
         }
       },
-      "heading5": {
+      "box7_point2": {
         "type": "Text",
         "config": {
-          "label": "Heading5",
+          "label": "Box7 Point2",
           "placeholder": ""
         }
       },
-      "heading5_point1": {
+      "box8": {
         "type": "Text",
         "config": {
-          "label": "Heading5 Point1",
+          "label": "Box8",
           "placeholder": ""
         }
       },
-      "heading5_point2": {
+      "box8_point1": {
         "type": "Text",
         "config": {
-          "label": "Heading5 Point2",
+          "label": "Box8 Point1",
           "placeholder": ""
         }
       },
-      "heading5_point3": {
+      "box8_point2": {
         "type": "Text",
         "config": {
-          "label": "Heading5 Point3",
+          "label": "Box8 Point2",
           "placeholder": ""
         }
       },
-      "heading6": {
+      "box5": {
         "type": "Text",
         "config": {
-          "label": "Heading6",
-          "placeholder": ""
-        }
-      },
-      "heading6_point1": {
-        "type": "Text",
-        "config": {
-          "label": "Heading6 Point1",
-          "placeholder": ""
-        }
-      },
-      "heading6_point2": {
-        "type": "Text",
-        "config": {
-          "label": "Heading6 Point2",
-          "placeholder": ""
-        }
-      },
-      "heading7": {
-        "type": "Text",
-        "config": {
-          "label": "Heading7",
-          "placeholder": ""
-        }
-      },
-      "heading7_point1": {
-        "type": "Text",
-        "config": {
-          "label": "Heading7 Point1",
-          "placeholder": ""
-        }
-      },
-      "heading7_point2": {
-        "type": "Text",
-        "config": {
-          "label": "Heading7 Point2",
-          "placeholder": ""
-        }
-      },
-      "heading8": {
-        "type": "Text",
-        "config": {
-          "label": "Heading8",
-          "placeholder": ""
-        }
-      },
-      "heading8_point1": {
-        "type": "Text",
-        "config": {
-          "label": "Heading8 Point1",
-          "placeholder": ""
-        }
-      },
-      "heading8_point2": {
-        "type": "Text",
-        "config": {
-          "label": "Heading8 Point2",
+          "label": "Box5",
           "placeholder": ""
         }
       },

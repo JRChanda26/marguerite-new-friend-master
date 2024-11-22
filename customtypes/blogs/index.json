@@ -27,39 +27,31 @@
           "placeholder": ""
         }
       },
-      "sub_title1": {
+      "testimonial_title": {
         "type": "Text",
         "config": {
-          "label": "Sub Title1",
+          "label": "Testimonial Title",
           "placeholder": ""
         }
       },
-      "description1": {
+      "testimonial_description": {
         "type": "Text",
         "config": {
-          "label": "Description1",
+          "label": "Testimonial Description",
           "placeholder": ""
         }
       },
-      "date": {
+      "testimonial_date": {
         "type": "Text",
         "config": {
-          "label": "Date",
+          "label": "Testimonial Date",
           "placeholder": ""
         }
       },
-      "banner": {
+      "header_background": {
         "type": "Image",
         "config": {
-          "label": "Banner",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "post_image": {
-        "type": "Image",
-        "config": {
-          "label": "Post Image",
+          "label": "Header Background",
           "constraint": {},
           "thumbnails": []
         }
@@ -71,134 +63,76 @@
           "placeholder": ""
         }
       },
-      "sub_title2": {
+      "card1_title": {
         "type": "Text",
         "config": {
-          "label": "Sub Title2",
+          "label": "Card1 Title",
           "placeholder": ""
         }
       },
-      "description2": {
+      "card1_description": {
         "type": "Text",
         "config": {
-          "label": "Description2",
+          "label": "Card1 Description",
           "placeholder": ""
         }
       },
-      "name1": {
+      "card2_title": {
         "type": "Text",
         "config": {
-          "label": "Name1",
+          "label": "Card2 Title",
           "placeholder": ""
         }
       },
-      "date1": {
+      "card2_description": {
         "type": "Text",
         "config": {
-          "label": "Date1",
+          "label": "Card2 Description",
           "placeholder": ""
         }
       },
-      "profile1": {
+      "card3_title": {
+        "type": "Text",
+        "config": {
+          "label": "Card3 Title",
+          "placeholder": ""
+        }
+      },
+      "card3_description": {
+        "type": "Text",
+        "config": {
+          "label": "Card3 Description",
+          "placeholder": ""
+        }
+      },
+      "card1_image": {
         "type": "Image",
         "config": {
-          "label": "Profile1",
+          "label": "Card1 Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "sub_title3": {
-        "type": "Text",
-        "config": {
-          "label": "Sub Title3",
-          "placeholder": ""
-        }
-      },
-      "description3": {
-        "type": "Text",
-        "config": {
-          "label": "Description3",
-          "placeholder": ""
-        }
-      },
-      "name2": {
-        "type": "Text",
-        "config": {
-          "label": "Name2",
-          "placeholder": ""
-        }
-      },
-      "date2": {
-        "type": "Text",
-        "config": {
-          "label": "Date2",
-          "placeholder": ""
-        }
-      },
-      "profile2": {
+      "card2_image": {
         "type": "Image",
         "config": {
-          "label": "Profile2",
+          "label": "Card2 Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "sub_title4": {
-        "type": "Text",
-        "config": {
-          "label": "Sub Title4",
-          "placeholder": ""
-        }
-      },
-      "description4": {
-        "type": "Text",
-        "config": {
-          "label": "Description4",
-          "placeholder": ""
-        }
-      },
-      "name3": {
-        "type": "Text",
-        "config": {
-          "label": "Name3",
-          "placeholder": ""
-        }
-      },
-      "date3": {
-        "type": "Text",
-        "config": {
-          "label": "Date3",
-          "placeholder": ""
-        }
-      },
-      "profile3": {
+      "card3_image": {
         "type": "Image",
         "config": {
-          "label": "Profile3",
+          "label": "Card3 Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "image1": {
+      "testimonial_image": {
         "type": "Image",
         "config": {
-          "label": "Image1",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "image2": {
-        "type": "Image",
-        "config": {
-          "label": "Image2",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "image3": {
-        "type": "Image",
-        "config": {
-          "label": "Image3",
+          "label": "Testimonial Image",
           "constraint": {},
           "thumbnails": []
         }

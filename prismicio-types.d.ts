@@ -186,59 +186,48 @@ interface BlogsDocumentData {
   title1: prismic.KeyTextField;
 
   /**
-   * Sub Title1 field in *Blogs*
+   * Testimonial Title field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.sub_title1
+   * - **API ID Path**: blogs.testimonial_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  sub_title1: prismic.KeyTextField;
+  testimonial_title: prismic.KeyTextField;
 
   /**
-   * Description1 field in *Blogs*
+   * Testimonial Description field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.description1
+   * - **API ID Path**: blogs.testimonial_description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description1: prismic.KeyTextField;
+  testimonial_description: prismic.KeyTextField;
 
   /**
-   * Date field in *Blogs*
+   * Testimonial Date field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.date
+   * - **API ID Path**: blogs.testimonial_date
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  date: prismic.KeyTextField;
+  testimonial_date: prismic.KeyTextField;
 
   /**
-   * Banner field in *Blogs*
+   * Header Background field in *Blogs*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.banner
+   * - **API ID Path**: blogs.header_background
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  banner: prismic.ImageField<never>;
-
-  /**
-   * Post Image field in *Blogs*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.post_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  post_image: prismic.ImageField<never>;
+  header_background: prismic.ImageField<never>;
 
   /**
    * Title2 field in *Blogs*
@@ -252,202 +241,114 @@ interface BlogsDocumentData {
   title2: prismic.KeyTextField;
 
   /**
-   * Sub Title2 field in *Blogs*
+   * Card1 Title field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.sub_title2
+   * - **API ID Path**: blogs.card1_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  sub_title2: prismic.KeyTextField;
+  card1_title: prismic.KeyTextField;
 
   /**
-   * Description2 field in *Blogs*
+   * Card1 Description field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.description2
+   * - **API ID Path**: blogs.card1_description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  description2: prismic.KeyTextField;
+  card1_description: prismic.KeyTextField;
 
   /**
-   * Name1 field in *Blogs*
+   * Card2 Title field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.name1
+   * - **API ID Path**: blogs.card2_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  name1: prismic.KeyTextField;
+  card2_title: prismic.KeyTextField;
 
   /**
-   * Date1 field in *Blogs*
+   * Card2 Description field in *Blogs*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.date1
+   * - **API ID Path**: blogs.card2_description
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  date1: prismic.KeyTextField;
+  card2_description: prismic.KeyTextField;
 
   /**
-   * Profile1 field in *Blogs*
+   * Card3 Title field in *Blogs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blogs.card3_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  card3_title: prismic.KeyTextField;
+
+  /**
+   * Card3 Description field in *Blogs*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: blogs.card3_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  card3_description: prismic.KeyTextField;
+
+  /**
+   * Card1 Image field in *Blogs*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.profile1
+   * - **API ID Path**: blogs.card1_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  profile1: prismic.ImageField<never>;
+  card1_image: prismic.ImageField<never>;
 
   /**
-   * Sub Title3 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.sub_title3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  sub_title3: prismic.KeyTextField;
-
-  /**
-   * Description3 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.description3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description3: prismic.KeyTextField;
-
-  /**
-   * Name2 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.name2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name2: prismic.KeyTextField;
-
-  /**
-   * Date2 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.date2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  date2: prismic.KeyTextField;
-
-  /**
-   * Profile2 field in *Blogs*
+   * Card2 Image field in *Blogs*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.profile2
+   * - **API ID Path**: blogs.card2_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  profile2: prismic.ImageField<never>;
+  card2_image: prismic.ImageField<never>;
 
   /**
-   * Sub Title4 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.sub_title4
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  sub_title4: prismic.KeyTextField;
-
-  /**
-   * Description4 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.description4
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  description4: prismic.KeyTextField;
-
-  /**
-   * Name3 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.name3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  name3: prismic.KeyTextField;
-
-  /**
-   * Date3 field in *Blogs*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.date3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  date3: prismic.KeyTextField;
-
-  /**
-   * Profile3 field in *Blogs*
+   * Card3 Image field in *Blogs*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.profile3
+   * - **API ID Path**: blogs.card3_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  profile3: prismic.ImageField<never>;
+  card3_image: prismic.ImageField<never>;
 
   /**
-   * Image1 field in *Blogs*
+   * Testimonial Image field in *Blogs*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.image1
+   * - **API ID Path**: blogs.testimonial_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  image1: prismic.ImageField<never>;
-
-  /**
-   * Image2 field in *Blogs*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.image2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image2: prismic.ImageField<never>;
-
-  /**
-   * Image3 field in *Blogs*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blogs.image3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  image3: prismic.ImageField<never>;
+  testimonial_image: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *Blogs*
@@ -2077,15 +1978,15 @@ type ManagePerLaDocumentDataSlicesSlice = never;
  */
 interface ManagePerLaDocumentData {
   /**
-   * Header Image field in *Manage Per La*
+   * Header Background field in *Manage Per La*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.header_image
+   * - **API ID Path**: manage_per_la.header_background
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  header_image: prismic.ImageField<never>;
+  header_background: prismic.ImageField<never>;
 
   /**
    * Heading field in *Manage Per La*
@@ -2176,15 +2077,15 @@ interface ManagePerLaDocumentData {
   middle_title: prismic.KeyTextField;
 
   /**
-   * Middle Image field in *Manage Per La*
+   * Middle Background field in *Manage Per La*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.middle_image
+   * - **API ID Path**: manage_per_la.middle_background
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  middle_image: prismic.ImageField<never>;
+  middle_background: prismic.ImageField<never>;
 
   /**
    * Card Title1 field in *Manage Per La*
@@ -2275,202 +2176,15 @@ interface ManagePerLaDocumentData {
   card_description4: prismic.KeyTextField;
 
   /**
-   * Accordion Title field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.accordion_title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  accordion_title: prismic.KeyTextField;
-
-  /**
-   * Accordion Sub Title1 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.accordion_sub_title1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  accordion_sub_title1: prismic.KeyTextField;
-
-  /**
-   * Accordion Sub Title2 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.accordion_sub_title2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  accordion_sub_title2: prismic.KeyTextField;
-
-  /**
-   * Accordion Image field in *Manage Per La*
+   * Square Brackets Background field in *Manage Per La*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.accordion_image
+   * - **API ID Path**: manage_per_la.square_brackets_background
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  accordion_image: prismic.ImageField<never>;
-
-  /**
-   * Accordion Video field in *Manage Per La*
-   *
-   * - **Field Type**: Link to Media
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.accordion_video
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-   */
-  accordion_video: prismic.LinkToMediaField;
-
-  /**
-   * Question1 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.question1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  question1: prismic.KeyTextField;
-
-  /**
-   * Answer1 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.answer1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  answer1: prismic.KeyTextField;
-
-  /**
-   * Question2 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.question2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  question2: prismic.KeyTextField;
-
-  /**
-   * Answer2 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.answer2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  answer2: prismic.KeyTextField;
-
-  /**
-   * Question3 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.question3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  question3: prismic.KeyTextField;
-
-  /**
-   * Answer3 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.answer3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  answer3: prismic.KeyTextField;
-
-  /**
-   * Question4 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.question4
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  question4: prismic.KeyTextField;
-
-  /**
-   * Answer4 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.answer4
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  answer4: prismic.KeyTextField;
-
-  /**
-   * Question5 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.question5
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  question5: prismic.KeyTextField;
-
-  /**
-   * Answer5 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.answer5
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  answer5: prismic.KeyTextField;
-
-  /**
-   * Question6 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.question6
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  question6: prismic.KeyTextField;
-
-  /**
-   * Answer6 field in *Manage Per La*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.answer6
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  answer6: prismic.KeyTextField;
-
-  /**
-   * Square Brackets Image field in *Manage Per La*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.square_brackets_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  square_brackets_image: prismic.ImageField<never>;
+  square_brackets_background: prismic.ImageField<never>;
 
   /**
    * Quote Image field in *Manage Per La*
@@ -2528,15 +2242,15 @@ interface ManagePerLaDocumentData {
   bottom_description: prismic.KeyTextField;
 
   /**
-   * Bottom Image field in *Manage Per La*
+   * Bottom Left Image field in *Manage Per La*
    *
    * - **Field Type**: Image
    * - **Placeholder**: *None*
-   * - **API ID Path**: manage_per_la.bottom_image
+   * - **API ID Path**: manage_per_la.bottom_left_image
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#image
    */
-  bottom_image: prismic.ImageField<never>;
+  bottom_left_image: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *Manage Per La*
@@ -2714,6 +2428,434 @@ export type NosExperiencesDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
     Simplify<NosExperiencesDocumentData>,
     "nos_experiences",
+    Lang
+  >;
+
+type NosSolutionsDeDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Nos Solutions De documents
+ */
+interface NosSolutionsDeDocumentData {
+  /**
+   * Header Background field in *Nos Solutions De*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.header_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  header_background: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Sub Heading field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.sub_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_heading: prismic.KeyTextField;
+
+  /**
+   * Top Left Title field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.top_left_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_left_title: prismic.KeyTextField;
+
+  /**
+   * Top Left Description field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.top_left_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_left_description: prismic.KeyTextField;
+
+  /**
+   * Top Right Image field in *Nos Solutions De*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.top_right_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  top_right_image: prismic.ImageField<never>;
+
+  /**
+   * Button Text field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Icon field in *Nos Solutions De*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.button_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  button_icon: prismic.ImageField<never>;
+
+  /**
+   * Box1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box1: prismic.KeyTextField;
+
+  /**
+   * Box1 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box1_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box1_point1: prismic.KeyTextField;
+
+  /**
+   * Box1 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box1_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box1_point2: prismic.KeyTextField;
+
+  /**
+   * Box2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box2: prismic.KeyTextField;
+
+  /**
+   * Box2 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box2_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box2_point1: prismic.KeyTextField;
+
+  /**
+   * Box2 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box2_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box2_point2: prismic.KeyTextField;
+
+  /**
+   * Box3 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box3: prismic.KeyTextField;
+
+  /**
+   * Box3 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box3_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box3_point1: prismic.KeyTextField;
+
+  /**
+   * Box3 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box3_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box3_point2: prismic.KeyTextField;
+
+  /**
+   * Box4 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box4: prismic.KeyTextField;
+
+  /**
+   * Box4 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box4_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box4_point1: prismic.KeyTextField;
+
+  /**
+   * Box4 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box4_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box4_point2: prismic.KeyTextField;
+
+  /**
+   * Box5 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box5_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box5_point1: prismic.KeyTextField;
+
+  /**
+   * Box5 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box5_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box5_point2: prismic.KeyTextField;
+
+  /**
+   * Box5 Point3 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box5_point3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box5_point3: prismic.KeyTextField;
+
+  /**
+   * Box6 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box6: prismic.KeyTextField;
+
+  /**
+   * Box6 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box6_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box6_point1: prismic.KeyTextField;
+
+  /**
+   * Box6 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box6_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box6_point2: prismic.KeyTextField;
+
+  /**
+   * Box7 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box7: prismic.KeyTextField;
+
+  /**
+   * Box7 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box7_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box7_point1: prismic.KeyTextField;
+
+  /**
+   * Box7 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box7_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box7_point2: prismic.KeyTextField;
+
+  /**
+   * Box8 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box8: prismic.KeyTextField;
+
+  /**
+   * Box8 Point1 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box8_point1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box8_point1: prismic.KeyTextField;
+
+  /**
+   * Box8 Point2 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box8_point2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box8_point2: prismic.KeyTextField;
+
+  /**
+   * Box5 field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.box5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  box5: prismic.KeyTextField;
+
+  /**
+   * Slice Zone field in *Nos Solutions De*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<NosSolutionsDeDocumentDataSlicesSlice> /**
+   * Meta Title field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: nos_solutions_de.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Nos Solutions De*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: nos_solutions_de.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Nos Solutions De*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: nos_solutions_de.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Nos Solutions De document from Prismic
+ *
+ * - **API ID**: `nos_solutions_de`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NosSolutionsDeDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<NosSolutionsDeDocumentData>,
+    "nos_solutions_de",
     Lang
   >;
 
@@ -3075,555 +3217,6 @@ export type NousAgissonsDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
     Simplify<NousAgissonsDocumentData>,
     "nous_agissons",
-    Lang
-  >;
-
-type OurcaremanagementsolutionsDocumentDataSlicesSlice = never;
-
-/**
- * Content for ourcaremanagementsolutions documents
- */
-interface OurcaremanagementsolutionsDocumentData {
-  /**
-   * headerbackground field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.headerbackground
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  headerbackground: prismic.ImageField<never>;
-
-  /**
-   * headertext field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.headertext
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  headertext: prismic.KeyTextField;
-
-  /**
-   * content field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.content
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  content: prismic.KeyTextField;
-
-  /**
-   * leftheader field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.leftheader
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  leftheader: prismic.KeyTextField;
-
-  /**
-   * leftcontent field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.leftcontent
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  leftcontent: prismic.KeyTextField;
-
-  /**
-   * buttontext field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.buttontext
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  buttontext: prismic.KeyTextField;
-
-  /**
-   * rightimage field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.rightimage
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  rightimage: prismic.ImageField<never>;
-
-  /**
-   * buttonimage field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.buttonimage
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  buttonimage: prismic.ImageField<never>;
-
-  /**
-   * leafimageleft field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.leafimageleft
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  leafimageleft: prismic.ImageField<never>;
-
-  /**
-   * leafimageright field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.leafimageright
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  leafimageright: prismic.ImageField<never>;
-
-  /**
-   * pieimage field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.pieimage
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  pieimage: prismic.ImageField<never>;
-
-  /**
-   * pietext field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.pietext
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  pietext: prismic.KeyTextField;
-
-  /**
-   * rightleaftextheader field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.rightleaftextheader
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  rightleaftextheader: prismic.KeyTextField;
-
-  /**
-   * rightleaftextcontent field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.rightleaftextcontent
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  rightleaftextcontent: prismic.KeyTextField;
-
-  /**
-   * rightleafdowntextheader field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.rightleafdowntextheader
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  rightleafdowntextheader: prismic.KeyTextField;
-
-  /**
-   * rightleafdowntextcontent field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.rightleafdowntextcontent
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  rightleafdowntextcontent: prismic.KeyTextField;
-
-  /**
-   * pielefttext field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.pielefttext
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  pielefttext: prismic.KeyTextField;
-
-  /**
-   * leafsectionheader field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.leafsectionheader
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  leafsectionheader: prismic.KeyTextField;
-
-  /**
-   * leafsectioncontent field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.leafsectioncontent
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  leafsectioncontent: prismic.KeyTextField;
-
-  /**
-   * Heading1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading1: prismic.KeyTextField;
-
-  /**
-   * Heading1 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading1_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading1_point1: prismic.KeyTextField;
-
-  /**
-   * Heading1 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading1_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading1_point2: prismic.KeyTextField;
-
-  /**
-   * Heading2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading2: prismic.KeyTextField;
-
-  /**
-   * Heading2 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading2_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading2_point1: prismic.KeyTextField;
-
-  /**
-   * Heading2 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading2_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading2_point2: prismic.KeyTextField;
-
-  /**
-   * Heading3 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading3: prismic.KeyTextField;
-
-  /**
-   * Heading3 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading3_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading3_point1: prismic.KeyTextField;
-
-  /**
-   * Heading3 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading3_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading3_point2: prismic.KeyTextField;
-
-  /**
-   * Heading4 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading4
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading4: prismic.KeyTextField;
-
-  /**
-   * Heading4 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading4_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading4_point1: prismic.KeyTextField;
-
-  /**
-   * Heading4 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading4_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading4_point2: prismic.KeyTextField;
-
-  /**
-   * Heading5 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading5
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading5: prismic.KeyTextField;
-
-  /**
-   * Heading5 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading5_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading5_point1: prismic.KeyTextField;
-
-  /**
-   * Heading5 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading5_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading5_point2: prismic.KeyTextField;
-
-  /**
-   * Heading5 Point3 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading5_point3
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading5_point3: prismic.KeyTextField;
-
-  /**
-   * Heading6 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading6
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading6: prismic.KeyTextField;
-
-  /**
-   * Heading6 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading6_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading6_point1: prismic.KeyTextField;
-
-  /**
-   * Heading6 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading6_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading6_point2: prismic.KeyTextField;
-
-  /**
-   * Heading7 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading7
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading7: prismic.KeyTextField;
-
-  /**
-   * Heading7 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading7_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading7_point1: prismic.KeyTextField;
-
-  /**
-   * Heading7 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading7_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading7_point2: prismic.KeyTextField;
-
-  /**
-   * Heading8 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading8
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading8: prismic.KeyTextField;
-
-  /**
-   * Heading8 Point1 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading8_point1
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading8_point1: prismic.KeyTextField;
-
-  /**
-   * Heading8 Point2 field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.heading8_point2
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  heading8_point2: prismic.KeyTextField;
-
-  /**
-   * Slice Zone field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Slice Zone
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.slices[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#slices
-   */
-  slices: prismic.SliceZone<OurcaremanagementsolutionsDocumentDataSlicesSlice> /**
-   * Meta Title field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A title of the page used for social media and search engines
-   * - **API ID Path**: ourcaremanagementsolutions.meta_title
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */;
-  meta_title: prismic.KeyTextField;
-
-  /**
-   * Meta Description field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: A brief summary of the page
-   * - **API ID Path**: ourcaremanagementsolutions.meta_description
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  meta_description: prismic.KeyTextField;
-
-  /**
-   * Meta Image field in *ourcaremanagementsolutions*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: ourcaremanagementsolutions.meta_image
-   * - **Tab**: SEO & Metadata
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  meta_image: prismic.ImageField<never>;
-}
-
-/**
- * ourcaremanagementsolutions document from Prismic
- *
- * - **API ID**: `ourcaremanagementsolutions`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type OurcaremanagementsolutionsDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<OurcaremanagementsolutionsDocumentData>,
-    "ourcaremanagementsolutions",
     Lang
   >;
 
@@ -4977,9 +4570,9 @@ export type AllDocumentTypes =
   | LiberezDocument
   | ManagePerLaDocument
   | NosExperiencesDocument
+  | NosSolutionsDeDocument
   | NotreProcessusDocument
   | NousAgissonsDocument
-  | OurcaremanagementsolutionsDocument
   | ParolesDocument
   | PricingDocument
   | QuestionsDocument
@@ -5039,15 +4632,15 @@ declare module "@prismicio/client" {
       NosExperiencesDocument,
       NosExperiencesDocumentData,
       NosExperiencesDocumentDataSlicesSlice,
+      NosSolutionsDeDocument,
+      NosSolutionsDeDocumentData,
+      NosSolutionsDeDocumentDataSlicesSlice,
       NotreProcessusDocument,
       NotreProcessusDocumentData,
       NotreProcessusDocumentDataSlicesSlice,
       NousAgissonsDocument,
       NousAgissonsDocumentData,
       NousAgissonsDocumentDataSlicesSlice,
-      OurcaremanagementsolutionsDocument,
-      OurcaremanagementsolutionsDocumentData,
-      OurcaremanagementsolutionsDocumentDataSlicesSlice,
       ParolesDocument,
       ParolesDocumentData,
       ParolesDocumentDataSlicesSlice,
