@@ -1,131 +1,177 @@
 {
   "format": "page",
-  "id": "managementbycare",
-  "label": "managementbycare",
+  "id": "manage_per_la",
+  "label": "Manage Per La",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "headerbackground": {
+      "header_image": {
         "type": "Image",
         "config": {
-          "label": "headerbackground",
+          "label": "Header Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "headertext": {
+      "heading": {
         "type": "Text",
         "config": {
-          "label": "headertext",
+          "label": "Heading",
           "placeholder": ""
         }
       },
-      "content": {
+      "sub_heading": {
         "type": "Text",
         "config": {
-          "label": "content",
+          "label": "Sub Heading",
           "placeholder": ""
         }
       },
-      "leftparagraph1": {
+      "top_left_title": {
         "type": "Text",
         "config": {
-          "label": "leftparagraph1",
+          "label": "Top Left Title",
           "placeholder": ""
         }
       },
-      "rightparagraph1": {
+      "top_left_description": {
         "type": "Text",
         "config": {
-          "label": "rightparagraph1",
+          "label": "Top Left Description",
           "placeholder": ""
         }
       },
-      "buttontext": {
-        "type": "Text",
-        "config": {
-          "label": "buttontext",
-          "placeholder": ""
-        }
-      },
-      "buttonimage": {
+      "top_right_image": {
         "type": "Image",
         "config": {
-          "label": "buttonimage",
+          "label": "Top Right Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "boxtopheader": {
+      "button_text": {
         "type": "Text",
         "config": {
-          "label": "boxtopheader",
+          "label": "Button Text",
           "placeholder": ""
         }
       },
-      "box1header": {
-        "type": "Text",
-        "config": {
-          "label": "box1header",
-          "placeholder": ""
-        }
-      },
-      "box1content": {
-        "type": "Text",
-        "config": {
-          "label": "box1content",
-          "placeholder": ""
-        }
-      },
-      "box2header": {
-        "type": "Text",
-        "config": {
-          "label": "box2header",
-          "placeholder": ""
-        }
-      },
-      "box2content": {
-        "type": "Text",
-        "config": {
-          "label": "box2content",
-          "placeholder": ""
-        }
-      },
-      "box3header": {
-        "type": "Text",
-        "config": {
-          "label": "box3header",
-          "placeholder": ""
-        }
-      },
-      "box3content": {
-        "type": "Text",
-        "config": {
-          "label": "box3content",
-          "placeholder": ""
-        }
-      },
-      "box4header": {
-        "type": "Text",
-        "config": {
-          "label": "box4header",
-          "placeholder": ""
-        }
-      },
-      "box4content": {
-        "type": "Text",
-        "config": {
-          "label": "box4content",
-          "placeholder": ""
-        }
-      },
-      "boxbackground": {
+      "button_icon": {
         "type": "Image",
         "config": {
-          "label": "boxbackground",
+          "label": "Button Icon",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "middle_title": {
+        "type": "Text",
+        "config": {
+          "label": "Middle Title",
+          "placeholder": ""
+        }
+      },
+      "middle_image": {
+        "type": "Image",
+        "config": {
+          "label": "Middle Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "card_title1": {
+        "type": "Text",
+        "config": {
+          "label": "Card Title1",
+          "placeholder": ""
+        }
+      },
+      "card_description1": {
+        "type": "Text",
+        "config": {
+          "label": "Card Description1",
+          "placeholder": ""
+        }
+      },
+      "card_title2": {
+        "type": "Text",
+        "config": {
+          "label": "Card Title2",
+          "placeholder": ""
+        }
+      },
+      "card_description2": {
+        "type": "Text",
+        "config": {
+          "label": "Card Description2",
+          "placeholder": ""
+        }
+      },
+      "card_title3": {
+        "type": "Text",
+        "config": {
+          "label": "Card Title3",
+          "placeholder": ""
+        }
+      },
+      "card_description3": {
+        "type": "Text",
+        "config": {
+          "label": "Card Description3",
+          "placeholder": ""
+        }
+      },
+      "card_title4": {
+        "type": "Text",
+        "config": {
+          "label": "Card Title4",
+          "placeholder": ""
+        }
+      },
+      "card_description4": {
+        "type": "Text",
+        "config": {
+          "label": "Card Description4",
+          "placeholder": ""
+        }
+      },
+      "accordion_title": {
+        "type": "Text",
+        "config": {
+          "label": "Accordion Title",
+          "placeholder": ""
+        }
+      },
+      "accordion_sub_title1": {
+        "type": "Text",
+        "config": {
+          "label": "Accordion Sub Title1",
+          "placeholder": ""
+        }
+      },
+      "accordion_sub_title2": {
+        "type": "Text",
+        "config": {
+          "label": "Accordion Sub Title2",
+          "placeholder": ""
+        }
+      },
+      "accordion_image": {
+        "type": "Image",
+        "config": {
+          "label": "Accordion Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "accordion_video": {
+        "type": "Link",
+        "config": {
+          "label": "Accordion Video",
+          "placeholder": "",
+          "select": "media",
+          "allowText": true
         }
       },
       "question1": {
@@ -212,32 +258,12 @@
           "placeholder": ""
         }
       },
-      "title1": {
-        "type": "Text",
+      "square_brackets_image": {
+        "type": "Image",
         "config": {
-          "label": "Title1",
-          "placeholder": ""
-        }
-      },
-      "title2": {
-        "type": "Text",
-        "config": {
-          "label": "Title2",
-          "placeholder": ""
-        }
-      },
-      "title_heading": {
-        "type": "Text",
-        "config": {
-          "label": "Title Heading",
-          "placeholder": ""
-        }
-      },
-      "title_description": {
-        "type": "Text",
-        "config": {
-          "label": "Title Description",
-          "placeholder": ""
+          "label": "Square Brackets Image",
+          "constraint": {},
+          "thumbnails": []
         }
       },
       "quote_image": {
@@ -248,101 +274,40 @@
           "thumbnails": []
         }
       },
-      "footer_title": {
-        "type": "Text",
-        "config": {
-          "label": "Footer Title",
-          "placeholder": ""
-        }
-      },
-      "footer_description": {
-        "type": "Text",
-        "config": {
-          "label": "Footer Description",
-          "placeholder": ""
-        }
-      },
-      "footer_image": {
-        "type": "Image",
-        "config": {
-          "label": "Footer Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "quote_text": {
         "type": "Text",
         "config": {
-          "label": "Quote Text ",
+          "label": "Quote Text",
           "placeholder": ""
         }
       },
-      "name": {
+      "writer_name": {
         "type": "Text",
         "config": {
-          "label": "Name",
+          "label": "Writer Name",
           "placeholder": ""
         }
       },
-      "comma_image": {
+      "bottom_title": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Title",
+          "placeholder": ""
+        }
+      },
+      "bottom_description": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Description",
+          "placeholder": ""
+        }
+      },
+      "bottom_image": {
         "type": "Image",
         "config": {
-          "label": "Comma Image",
+          "label": "Bottom Image",
           "constraint": {},
           "thumbnails": []
-        }
-      },
-      "video": {
-        "type": "Link",
-        "config": {
-          "label": "Video",
-          "placeholder": "",
-          "select": "media",
-          "allowText": true
-        }
-      },
-      "image": {
-        "type": "Image",
-        "config": {
-          "label": "Image",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "leftheader": {
-        "type": "Text",
-        "config": {
-          "label": "leftheader",
-          "placeholder": ""
-        }
-      },
-      "leftcontentheader": {
-        "type": "Text",
-        "config": {
-          "label": "leftcontentheader",
-          "placeholder": ""
-        }
-      },
-      "rightimage": {
-        "type": "Image",
-        "config": {
-          "label": "rightimage",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
-      "heading": {
-        "type": "Text",
-        "config": {
-          "label": "heading",
-          "placeholder": ""
-        }
-      },
-      "description": {
-        "type": "Text",
-        "config": {
-          "label": "description",
-          "placeholder": ""
         }
       },
       "slices": {
