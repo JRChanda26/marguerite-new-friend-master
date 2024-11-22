@@ -19,36 +19,49 @@ import Header from "../mainpage/Header";
 import { useRouter } from "next/navigation";
 
 const ManagePerLaCare: React.FC = () => {
-  const [posts, setPosts] = useState<any[]>([]);
+  const [managePage, setManagePage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "managementbycare" as any
-      );
-      setPosts(response);
+      const response: any = await client.getAllByType("manage_per_la" as any);
+      setManagePage(response);
     };
 
     fetchPosts();
   }, []);
-  const backgroundImage = posts[0]?.data?.headerbackground?.url || "";
-  const boxbackground = posts[0]?.data?.boxbackground?.url || "";
 
-  const [posts1, setPosts1] = useState<any[]>([]);
+  const [modulesPage, setModulesPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
       const response: any = await client.getAllByType(
-        "soinschezmarguerite" as any
+        "interactive_learning_modules" as any
       );
-      setPosts1(response);
+      setModulesPage(response);
     };
 
     fetchPosts();
   }, []);
-  const contentbackground = posts1[0]?.data?.contentbackground?.url || "";
 
-  const videoUrl = posts[0]?.data.video?.url;
+  const backgroundImage = managePage[0]?.data?.header_image?.url || "";
+  const boxbackground = managePage[0]?.data?.middle_image?.url || "";
+
+  // const [posts1, setPosts1] = useState<any[]>([]);
+
+  // useEffect(() => {
+  //   const fetchPosts = async () => {
+  //     const response: any = await client.getAllByType(
+  //       "soinschezmarguerite" as any
+  //     );
+  //     setPosts1(response);
+  //   };
+
+  //   fetchPosts();
+  // }, []);
+  const contentbackground =
+    managePage[0]?.data?.square_brackets_image?.url || "";
+
+  const videoUrl = modulesPage[0]?.data.video?.url;
 
   const [clicked, setClicked] = useState<number | null>(null);
   const handleColor = (index: number) => {
@@ -61,12 +74,30 @@ const ManagePerLaCare: React.FC = () => {
   };
 
   const faqs = [
-    { question: posts[0]?.data.question1, answer: posts[0]?.data.answer1 },
-    { question: posts[0]?.data.question2, answer: posts[0]?.data.answer2 },
-    { question: posts[0]?.data.question3, answer: posts[0]?.data.answer3 },
-    { question: posts[0]?.data.question4, answer: posts[0]?.data.answer4 },
-    { question: posts[0]?.data.question5, answer: posts[0]?.data.answer5 },
-    { question: posts[0]?.data.question6, answer: posts[0]?.data.answer6 },
+    {
+      question: modulesPage[0]?.data.question1,
+      answer: modulesPage[0]?.data.answer1,
+    },
+    {
+      question: modulesPage[0]?.data.question2,
+      answer: modulesPage[0]?.data.answer2,
+    },
+    {
+      question: modulesPage[0]?.data.question3,
+      answer: modulesPage[0]?.data.answer3,
+    },
+    {
+      question: modulesPage[0]?.data.question4,
+      answer: modulesPage[0]?.data.answer4,
+    },
+    {
+      question: modulesPage[0]?.data.question5,
+      answer: modulesPage[0]?.data.answer5,
+    },
+    {
+      question: modulesPage[0]?.data.question6,
+      answer: modulesPage[0]?.data.answer6,
+    },
   ];
 
   const styles: {
@@ -160,7 +191,7 @@ const ManagePerLaCare: React.FC = () => {
           // height: "auto",
         }}
       >
-        {posts.map((post: any, postIndex: number) => (
+        {managePage.map((post: any, postIndex: number) => (
           <>
             <div
               style={{
@@ -194,7 +225,7 @@ const ManagePerLaCare: React.FC = () => {
                     lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
                   }}
                 >
-                  {post.data.headertext}
+                  {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
@@ -207,7 +238,7 @@ const ManagePerLaCare: React.FC = () => {
                     lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
                   }}
                 >
-                  {post.data.content}
+                  {post.data.sub_heading}
                 </Typography>
               </div>
             </div>
@@ -216,7 +247,7 @@ const ManagePerLaCare: React.FC = () => {
       </div>
 
       <div style={{ padding: "5%" }}>
-        {posts.map((post: any) => (
+        {managePage.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
             <Grid
               item
@@ -229,7 +260,7 @@ const ManagePerLaCare: React.FC = () => {
               }}
             >
               <Grid item lg={7} xs={12} sm={7}>
-                {posts.map((post: any, index: any) => (
+                {managePage.map((post: any, index: any) => (
                   <Typography
                     key={index}
                     sx={{
@@ -241,7 +272,7 @@ const ManagePerLaCare: React.FC = () => {
                       letterSpacing: "2%",
                     }}
                   >
-                    {post.data.leftheader}
+                    {post.data.top_left_title}
                   </Typography>
                 ))}
                 <Typography
@@ -255,10 +286,10 @@ const ManagePerLaCare: React.FC = () => {
                     whiteSpace: "pre-line",
                   }}
                 >
-                  {post.data.leftcontentheader}
+                  {post.data.top_left_description}
                 </Typography>
                 <div style={{ paddingTop: "50px" }}>
-                  {posts.map((post: any) => (
+                  {managePage.map((post: any) => (
                     <Button
                       key={post}
                       style={{
@@ -279,13 +310,13 @@ const ManagePerLaCare: React.FC = () => {
                           color: "#FFFFFF",
                         }}
                       >
-                        {post.data.buttontext}
+                        {post.data.button_text}
                       </Typography>
-                      {post?.data.buttonimage && (
+                      {post?.data.button_icon && (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
-                          src={post.data.buttonimage.url || undefined}
-                          alt={post.data.buttonimage.alt || "Twitter"}
+                          src={post.data.button_icon.url || undefined}
+                          alt={post.data.button_icon.alt || "Twitter"}
                           style={{
                             width: "20%",
                             height: "auto",
@@ -307,11 +338,11 @@ const ManagePerLaCare: React.FC = () => {
                   alignItems: "center",
                 }}
               >
-                {post?.data.rightimage && (
+                {post?.data.top_right_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post.data.rightimage.url || undefined}
-                    alt={post.data.rightimage.alt || "image"}
+                    src={post.data.top_right_image.url || undefined}
+                    alt={post.data.top_right_image.alt || "image"}
                     style={{
                       height: "auto",
                       width: "100%",
@@ -325,7 +356,7 @@ const ManagePerLaCare: React.FC = () => {
         ))}
       </div>
 
-      {posts.map((post: any) => (
+      {managePage.map((post: any) => (
         <>
           <Typography
             sx={{
@@ -341,9 +372,10 @@ const ManagePerLaCare: React.FC = () => {
               textAlign: "center",
               justifyContent: "center",
               display: "flex",
+              whiteSpace: "pre-line",
             }}
           >
-            {post.data.boxtopheader}
+            {post.data.middle_title}
           </Typography>
 
           <div
@@ -367,13 +399,13 @@ const ManagePerLaCare: React.FC = () => {
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
                 >
-                  {post.data.box1header}
+                  {post.data.card_title1}
                 </Typography>
                 <Typography
                   sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
                   color="textSecondary"
                 >
-                  {post.data.box1content}
+                  {post.data.card_description1}
                 </Typography>
               </Card>
               <Card
@@ -386,13 +418,13 @@ const ManagePerLaCare: React.FC = () => {
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
                 >
-                  {post.data.box2header}
+                  {post.data.card_title2}
                 </Typography>
                 <Typography
                   sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
                   color="textSecondary"
                 >
-                  {post.data.box2content}
+                  {post.data.card_description2}
                 </Typography>
               </Card>
               <Card
@@ -408,13 +440,13 @@ const ManagePerLaCare: React.FC = () => {
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
                 >
-                  {post.data.box3header}
+                  {post.data.card_title3}
                 </Typography>
                 <Typography
                   sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
                   color="textSecondary"
                 >
-                  {post.data.box3content}
+                  {post.data.card_description3}
                 </Typography>
               </Card>
               <Card
@@ -430,13 +462,13 @@ const ManagePerLaCare: React.FC = () => {
                   sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
                   component="div"
                 >
-                  {post.data.box4header}
+                  {post.data.card_title4}
                 </Typography>
                 <Typography
                   sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
                   color="textSecondary"
                 >
-                  {post.data.box4content}
+                  {post.data.card_description4}
                 </Typography>
               </Card>
             </div>
@@ -463,7 +495,7 @@ const ManagePerLaCare: React.FC = () => {
               fontWeight: 700,
             }}
           >
-            {posts[0]?.data.heading}
+            {modulesPage[0]?.data.heading}
           </Typography>
         </Grid>
         <Grid item lg={12} style={{ marginTop: "70px" }}>
@@ -476,7 +508,7 @@ const ManagePerLaCare: React.FC = () => {
               fontWeight: 400,
             }}
           >
-            {posts[0]?.data.title1}
+            {modulesPage[0]?.data.image_title}
           </Typography>
           <Grid
             item
@@ -541,11 +573,11 @@ const ManagePerLaCare: React.FC = () => {
               ))}
             </Grid>
             <Grid item xs={12} sm={5} lg={5}>
-              {posts[0]?.data.image && (
+              {modulesPage[0]?.data.image && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={posts[0]?.data.image.url || undefined}
-                  alt={posts[0]?.data.image.alt || "Image"}
+                  src={modulesPage[0]?.data.image.url || undefined}
+                  alt={modulesPage[0]?.data.image.alt || "Image"}
                   width="100%"
                   height="auto"
                 />
@@ -564,7 +596,7 @@ const ManagePerLaCare: React.FC = () => {
               marginTop: "50px",
             }}
           >
-            {posts[0]?.data.title2}
+            {modulesPage[0]?.data.video_title}
           </Typography>
           <Grid
             item
@@ -674,14 +706,14 @@ const ManagePerLaCare: React.FC = () => {
             flexDirection: "column",
           }}
         >
-          {posts.map((post: any) => (
+          {managePage.map((post: any) => (
             <>
               <div>
-                {posts[0]?.data.comma_image && (
+                {managePage[0]?.data.quote_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={posts[0]?.data.comma_image.url || undefined}
-                    alt={posts[0]?.data.comma_image.alt || "Image"}
+                    src={managePage[0]?.data.quote_image.url || undefined}
+                    alt={managePage[0]?.data.quote_image.alt || "Image"}
                     width="100%"
                     height="auto"
                   />
@@ -713,7 +745,7 @@ const ManagePerLaCare: React.FC = () => {
                     textAlign: "center",
                   }}
                 >
-                  {post.data.name}
+                  {post.data.writer_name}
                 </Typography>
               </div>
             </>
@@ -729,7 +761,7 @@ const ManagePerLaCare: React.FC = () => {
           padding: "10% 10% 0% 10%",
         }}
       >
-        {posts[0]?.data.footer_title}
+        {managePage[0]?.data.bottom_title}
       </Typography>
 
       <Grid
@@ -746,11 +778,11 @@ const ManagePerLaCare: React.FC = () => {
       >
         <Grid item lg={6} xs={12} sm={6}>
           {" "}
-          {posts[0]?.data.footer_image && (
+          {managePage[0]?.data.bottom_image && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
-              src={posts[0]?.data.footer_image.url || undefined}
-              alt={posts[0]?.data.footer_image.alt || "Image"}
+              src={managePage[0]?.data.bottom_image.url || undefined}
+              alt={managePage[0]?.data.bottom_image.alt || "Image"}
               width="100%"
               height="auto"
             />
@@ -770,7 +802,7 @@ const ManagePerLaCare: React.FC = () => {
             color: "#24535C",
           }}
         >
-          {posts[0]?.data.footer_description}
+          {managePage[0]?.data.bottom_description}
         </Grid>
       </Grid>
       <Liberez />

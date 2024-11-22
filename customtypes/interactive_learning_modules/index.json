@@ -1,0 +1,167 @@
+{
+  "format": "page",
+  "id": "interactive_learning_modules",
+  "label": "Interactive Learning Modules",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
+        }
+      },
+      "image_title": {
+        "type": "Text",
+        "config": {
+          "label": "Image Title",
+          "placeholder": ""
+        }
+      },
+      "video_title": {
+        "type": "Text",
+        "config": {
+          "label": "Video Title",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "video": {
+        "type": "Link",
+        "config": {
+          "label": "Video",
+          "placeholder": "",
+          "select": "media",
+          "allowText": true
+        }
+      },
+      "question1": {
+        "type": "Text",
+        "config": {
+          "label": "Question1",
+          "placeholder": ""
+        }
+      },
+      "answer1": {
+        "type": "Text",
+        "config": {
+          "label": "Answer1",
+          "placeholder": ""
+        }
+      },
+      "question2": {
+        "type": "Text",
+        "config": {
+          "label": "Question2",
+          "placeholder": ""
+        }
+      },
+      "answer2": {
+        "type": "Text",
+        "config": {
+          "label": "Answer2",
+          "placeholder": ""
+        }
+      },
+      "question3": {
+        "type": "Text",
+        "config": {
+          "label": "Question3",
+          "placeholder": ""
+        }
+      },
+      "answer3": {
+        "type": "Text",
+        "config": {
+          "label": "Answer3",
+          "placeholder": ""
+        }
+      },
+      "question4": {
+        "type": "Text",
+        "config": {
+          "label": "Question4",
+          "placeholder": ""
+        }
+      },
+      "answer4": {
+        "type": "Text",
+        "config": {
+          "label": "Answer4",
+          "placeholder": ""
+        }
+      },
+      "question5": {
+        "type": "Text",
+        "config": {
+          "label": "Question5",
+          "placeholder": ""
+        }
+      },
+      "answer5": {
+        "type": "Text",
+        "config": {
+          "label": "Answer5",
+          "placeholder": ""
+        }
+      },
+      "question6": {
+        "type": "Text",
+        "config": {
+          "label": "Question6",
+          "placeholder": ""
+        }
+      },
+      "answer6": {
+        "type": "Text",
+        "config": {
+          "label": "Answer6",
+          "placeholder": ""
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}
