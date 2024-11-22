@@ -29,6 +29,20 @@ const LecarechezMargueriteServices: React.FC = () => {
 
     fetchPosts();
   }, []);
+
+  const [modulesPage, setModulesPage] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType(
+        "interactive_learning_modules" as any
+      );
+      setModulesPage(response);
+    };
+    fetchPosts();
+  }, []);
+
+
   const backgroundImage = posts[0]?.data?.headerbackground?.url || "";
   const contentbackground = posts[0]?.data?.contentbackground?.url || "";
   const backgroundpeople = posts[0]?.data?.backgroundpeople?.url || "";
@@ -55,29 +69,17 @@ const LecarechezMargueriteServices: React.FC = () => {
     setClicked1(index);
   };
 
-  const [posts1, setPosts1] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "managementbycare" as any
-      );
-      setPosts1(response);
-    };
-
-    fetchPosts();
-  }, []);
 
   const faqs = [
-    { question: posts1[0]?.data.question1, answer: posts1[0]?.data.answer1 },
-    { question: posts1[0]?.data.question2, answer: posts1[0]?.data.answer2 },
-    { question: posts1[0]?.data.question3, answer: posts1[0]?.data.answer3 },
-    { question: posts1[0]?.data.question4, answer: posts1[0]?.data.answer4 },
-    { question: posts1[0]?.data.question5, answer: posts1[0]?.data.answer5 },
-    { question: posts1[0]?.data.question6, answer: posts1[0]?.data.answer6 },
+    { question: modulesPage[0]?.data.question1, answer: modulesPage[0]?.data.answer1 },
+    { question: modulesPage[0]?.data.question2, answer: modulesPage[0]?.data.answer2 },
+    { question: modulesPage[0]?.data.question3, answer: modulesPage[0]?.data.answer3 },
+    { question: modulesPage[0]?.data.question4, answer: modulesPage[0]?.data.answer4 },
+    { question: modulesPage[0]?.data.question5, answer: modulesPage[0]?.data.answer5 },
+    { question: modulesPage[0]?.data.question6, answer: modulesPage[0]?.data.answer6 },
   ];
 
-  const videoUrl = posts1[0]?.data.video?.url;
+  const videoUrl = modulesPage[0]?.data.video?.url;
 
   const [posts2, setPost2] = useState<any[]>([]);
 
@@ -368,7 +370,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             marginTop: "50PX",
           }}
         >
-          {posts1[0]?.data.title2}
+          {modulesPage[0]?.data.video_title}
         </Typography>
         <Grid
           item
