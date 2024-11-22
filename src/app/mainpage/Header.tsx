@@ -23,6 +23,10 @@ const Header: React.FC = () => {
     router.push("/");
   };
 
+  const handleContactNavigation = () => {
+    router.push("/contact");
+  };
+
   return (
     <Box>
       <div>
@@ -70,7 +74,7 @@ const Header: React.FC = () => {
                     width: "10%",
                     height: "auto",
                   }}
-                  onClick={handleNavigation}
+                  // onClick={handleNavigation}
                 />
               )}
               <Link
@@ -130,6 +134,7 @@ const Header: React.FC = () => {
                     width: "5%",
                     height: "auto",
                   }}
+                  onClick={handleContactNavigation}
                 />
               )}
             </Grid>

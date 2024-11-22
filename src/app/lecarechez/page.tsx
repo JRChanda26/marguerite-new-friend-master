@@ -147,13 +147,17 @@ const LecarechezMargueriteServices: React.FC = () => {
       >
         {posts.map((post: any, postIndex: number) => (
           <>
-            <div
-              style={{
+            <Grid
+              sx={{
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
                 textAlign: "center",
-                padding: "250.67px 60px 0px 60px",
+                padding: {
+                  xs: "250.67px 0px 0px 0px",
+                  sm: "250.67px 150px 0px 150px",
+                  lg: "250.67px 200px 0px 200px",
+                },
               }}
             >
               <div
@@ -165,7 +169,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   alignItems: "center",
                   borderRadius: "37px 37px 0px 0px",
                   // padding: "41px 152px 42px 152px",
-                  padding: "2%",
+                  padding: "2% 5%",
                 }}
               >
                 <Typography
@@ -195,7 +199,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   {post.data.content}
                 </Typography>
               </div>
-            </div>
+            </Grid>
           </>
         ))}
       </div>
@@ -213,6 +217,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             fontWeight: 400,
             fontSize: { xs: "28px", sm: "38px", lg: "48px" },
             lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
+            marginTop:'5%'
           }}
         >
           {posts[0]?.data.heading}
