@@ -16,7 +16,7 @@ export default function NotreProcessus() {
       setNotrePage(data);
     }
     fetchData();
-  });
+  },[]);
 
   const title: React.CSSProperties = {
     color: "#1E1E1E",

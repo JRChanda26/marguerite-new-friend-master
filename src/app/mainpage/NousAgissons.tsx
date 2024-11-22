@@ -105,13 +105,13 @@ const NousAgissons: React.FC = () => {
                     marginTop: "20px",
                     justifyContent: "space-around",
                   }}
-                  onClick={handleNavigation}
+                  // onClick={handleNavigation}
                 >
                   <Typography
                     sx={{
                       fontFamily: "Mulish",
                       fontWeight: 400,
-                      fontSize: { xs: "10px", sm: "12px", lg: "15.2px" },
+                      fontSize: { xs: "12px", sm: "18px", lg: "20px" },
                       lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
                       color: "#FFFFFF",
                       textTransform: "none",

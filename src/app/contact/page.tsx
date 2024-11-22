@@ -83,18 +83,23 @@ export default function Contact() {
 
   const [nomInputValue, setNomInputValue] = useState("");
   const [emailInputValue, setEmailInputValue] = useState("");
-  const [subjectInputValue, setSubjectInputValue] = useState("");
+  const [sujetInputValue, setSujetInputValue] = useState("");
   const [telephoneInputValue, setTelephoneInputValue] = useState("");
   const [bonjourInputValue, setBonjourInputValue] = useState("");
   const [captchaVerified, setCaptchaVerified] = useState(false);
 
   const [openSnackbar, setOpenSnackbar] = useState(false);
   const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<number | null>(null);
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
+  };
 
   type Errors = {
     nom?: string;
     email?: string;
-    subject?: string;
+    sujet?: string;
     telephone?: string;
     bonjour?: string;
     captcha?: string;
@@ -106,21 +111,22 @@ export default function Contact() {
 
   const validateFields = (): Errors => {
     const newErrors: Errors = {};
-    if (!nomInputValue) newErrors.nom = "Name is required";
-    if (!emailInputValue) newErrors.email = "Email is required";
+    if (!nomInputValue) newErrors.nom = "Le nom est requis";
+    if (!emailInputValue) newErrors.email = "L'email est requis";
     else if (!emailRegex.test(emailInputValue))
-      newErrors.email = "Please enter a valid email address";
-    if (!subjectInputValue) newErrors.subject = "Subject is required";
-    if (!telephoneInputValue) newErrors.telephone = "Telephone is required";
+      newErrors.email = "Veuillez entrer une adresse email valide";
+    if (!sujetInputValue) newErrors.sujet = "Le sujet est requis";
+    if (!telephoneInputValue) newErrors.telephone = "Le téléphone est requis";
     else if (telephoneInputValue.length !== 10)
-      newErrors.telephone = "Phone number must be exactly 10 digits";
-    if (!bonjourInputValue) newErrors.bonjour = "Message is required";
-    if (!captchaVerified) newErrors.captcha = "Captcha is required";
+      newErrors.telephone =
+        "Le numéro de téléphone doit comporter exactement 10 chiffres";
+    if (!bonjourInputValue) newErrors.bonjour = "Le bonjour est requis";
+    // if (!captchaVerified) newErrors.captcha = "Le captcha est requis";
     return newErrors;
   };
 
   const handleSubmit = async (e: any) => {
-    e.preventDefault(); 
+    e.preventDefault();
 
     // Check for errors
     const newErrors = validateFields();
@@ -134,7 +140,7 @@ export default function Contact() {
     const formData = {
       nom: nomInputValue,
       email: emailInputValue,
-      subject: subjectInputValue,
+      sujet: sujetInputValue,
       telephone: telephoneInputValue,
       bonjour: bonjourInputValue,
       // captcha:captchaVerified,
@@ -153,11 +159,14 @@ export default function Contact() {
       setMessage(result.message);
       setOpenSnackbar(true);
 
+      const statusCode = response.status;
+      setStatus(statusCode);
+
       sendEmail(e);
 
       setNomInputValue("");
       setEmailInputValue("");
-      setSubjectInputValue("");
+      setSujetInputValue("");
       setTelephoneInputValue("");
       setBonjourInputValue("");
       setCaptchaVerified(false);
@@ -166,12 +175,12 @@ export default function Contact() {
     }
   };
 
-  const [status, setStatus] = useState("");
+  const [emailStatus, setEmailStatus] = useState("");
 
   const sendEmail = async (e: any) => {
     e.preventDefault();
 
-    setStatus("Sending...");
+    setEmailStatus("Sending...");
 
     const response = await fetch("/api/send-email", {
       method: "POST",
@@ -185,9 +194,9 @@ export default function Contact() {
     console.log("Result", result);
 
     if (response.ok) {
-      setStatus("Email sent successfully!");
+      setEmailStatus("Email sent successfully!");
     } else {
-      setStatus("Failed to send email");
+      setEmailStatus("Failed to send email");
     }
   };
 
@@ -423,16 +432,16 @@ export default function Contact() {
             <Grid container spacing={2} sx={{ mb: 4 }}>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  name="subject_text_field"
-                  value={subjectInputValue}
-                  onChange={(e) => setSubjectInputValue(e.target.value)}
-                  placeholder="Subject"
+                  name="sujet_text_field"
+                  value={sujetInputValue}
+                  onChange={(e) => setSujetInputValue(e.target.value)}
+                  placeholder="Sujet"
                   variant="standard"
                   type="text"
                   fullWidth
                   autoComplete="off"
-                  error={!!errors.subject}
-                  helperText={errors.subject}
+                  error={!!errors.sujet}
+                  helperText={errors.sujet}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -506,31 +515,34 @@ export default function Contact() {
           >
             {contactPage[0]?.data.button_text}
             {contactPage[0]?.data.button_icon && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={contactPage[0].data.button_icon.url || undefined}
-                  alt={contactPage[0].data.button_icon.alt || "Logo"}
-                  style={{
-                    height: "auto",
-                    width: "30px",
-                    paddingTop:'5%'
-                  }}
-                />
-              )}
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={contactPage[0].data.button_icon.url || undefined}
+                alt={contactPage[0].data.button_icon.alt || "Logo"}
+                style={{
+                  height: "auto",
+                  width: "30px",
+                  paddingTop: "5%",
+                }}
+              />
+            )}
           </Button>
         </Grid>
 
         <Snackbar
           open={openSnackbar}
           autoHideDuration={3000}
-          onClose={() => setOpenSnackbar(false)}
+          onClose={handleCloseSnackbar}
         >
-          <Alert onClose={() => setOpenSnackbar(false)} severity="success">
+          <Alert
+            onClose={handleCloseSnackbar}
+            severity={status === 200 ? "success" : "error"}
+          >
             {message}
           </Alert>
         </Snackbar>
       </Grid>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

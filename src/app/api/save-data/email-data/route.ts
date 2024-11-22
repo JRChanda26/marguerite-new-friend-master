@@ -13,9 +13,9 @@ export async function POST(req: NextRequest) {
 
     await mysqlDB.execute(query, values);
 
-    return NextResponse.json({ message: 'Email saved successfully' }, { status: 200 });
+    return NextResponse.json({ message: 'Votre email a été soumis' }, { status: 200 });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ message: 'Error saving email' }, { status: 500 });
+    return NextResponse.json({ message: 'Erreur lors de l\'enregistrement de l\'email' }, { status: 500 });
   }
 }

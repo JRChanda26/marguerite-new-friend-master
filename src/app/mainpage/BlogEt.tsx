@@ -18,7 +18,7 @@ export default function BlogEt() {
       setBlogPage(data);
     }
     fetchData();
-  });
+  },[]);
 
   const title: React.CSSProperties = {
     color: "#161C2D",

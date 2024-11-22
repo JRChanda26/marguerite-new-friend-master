@@ -265,17 +265,17 @@ const ManagePerLaCare: React.FC = () => {
                         display: "flex",
                         flexDirection: "row",
                         background: "#24535C",
-                        padding: "2% 3%",
-                        gap: "18px",
                         borderRadius: "82px",
+                        marginTop: "20px",
+                        justifyContent: "space-around",
                       }}
-                      onClick={handleNavigation}
+                      // onClick={handleNavigation}
                     >
                       <Typography
                         sx={{
                           fontWeight: 400,
-                          fontSize: { xs: "10px", sm: "13px", lg: "15.2px" },
-                          lineHeight: "18.24px",
+                          fontSize: { xs: "12px", sm: "18px", lg: "20px" },
+                          lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
                           color: "#FFFFFF",
                         }}
                       >
@@ -287,11 +287,8 @@ const ManagePerLaCare: React.FC = () => {
                           src={post.data.buttonimage.url || undefined}
                           alt={post.data.buttonimage.alt || "Twitter"}
                           style={{
-                            background: "#82C5BE",
-                            borderRadius: "15.9px",
-                            padding: "7.29px",
-                            width: "9.27px",
-                            height: "9.27px",
+                            width: "20%",
+                            height: "auto",
                           }}
                         />
                       )}
