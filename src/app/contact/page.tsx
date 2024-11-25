@@ -483,7 +483,7 @@ export default function Contact() {
           xs={12}
           sx={{ display: "flex", justifyContent: "center", mt: 2 }}
         >
-          <ReCAPTCHA sitekey={apiKey} onChange={handleCaptcha} />
+          {/* <ReCAPTCHA sitekey={apiKey} onChange={handleCaptcha} /> */}
         </Grid>
 
         {errors.captcha && (

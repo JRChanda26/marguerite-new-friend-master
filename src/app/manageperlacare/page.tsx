@@ -156,8 +156,8 @@ const ManagePerLaCare: React.FC = () => {
       transform: hoveredCard === index ? "scale(1.05)" : "scale(1)", // Zoom effect
       boxShadow:
         hoveredCard === index
-          ? "0px 8px 20px rgba(0, 0, 0, 0.2)" // Enhance shadow on hover
-          : "0px 4px 12px rgba(0, 0, 0, 0.1)", // Default shadow
+          ? "0px 8px 20px rgba(35, 107, 121, 0.2)" // Enhance shadow on hover with #236B79 color
+          : "0px 4px 12px rgba(35, 107, 121, 0.1)", // Default shadow with #236B79 color
     };
   };
 
@@ -366,13 +366,14 @@ const ManagePerLaCare: React.FC = () => {
             {post.data.middle_title}
           </Typography>
 
-          <div
-            style={{
+          <Grid
+            sx={{
               backgroundImage: `url(${boxbackground})`,
               height: "auto",
               width: "100%",
               backgroundPosition: "center",
-              backgroundSize: "cover",
+              // backgroundSize: "cover",
+              backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
               backgroundRepeat: "no-repeat",
             }}
           >
@@ -460,7 +461,7 @@ const ManagePerLaCare: React.FC = () => {
                 </Typography>
               </Card>
             </div>
-          </div>
+          </Grid>
         </>
       ))}
 
@@ -486,7 +487,7 @@ const ManagePerLaCare: React.FC = () => {
             {modulesPage[0]?.data.heading}
           </Typography>
         </Grid>
-        <Grid item lg={12} style={{ marginTop: "70px" }}>
+        <Grid item lg={12} style={{ marginTop: "30px" }}>
           <Typography
             sx={{
               textAlign: "center",
@@ -503,21 +504,20 @@ const ManagePerLaCare: React.FC = () => {
             lg={12}
             sx={{
               display: "flex",
-              // flexDirection: "row",
               flexDirection: { xs: "column", sm: "row", lg: "row" },
               justifyContent: "space-evenly",
               marginTop: "50px",
-              gap: "50px",
+              alignItems: "center",
             }}
           >
             <Grid
               item
               xs={12}
               sm={5}
-              lg={5}
+              lg={4}
               sx={{
-                marginTop: { xs: "20px", sm: "40px", lg: "150px" },
-                height: { xs: "0px", sm: "450px", lg: "420px" },
+                // marginTop: { xs: "20px", sm: "40px", lg: "150px" },
+                height: { xs: "0px", sm: "450px", lg: "585px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -536,8 +536,9 @@ const ManagePerLaCare: React.FC = () => {
                         sx={{
                           color: clicked === index ? "#3D8C6E" : "#292F36",
                           // fontSize: "25px",
-                          fontSize: { xs: "18px", sm: "25px", lg: "28px" },
+                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
+                          fontFamily: "Mulish",
                         }}
                       >
                         {faq.question}
@@ -548,8 +549,9 @@ const ManagePerLaCare: React.FC = () => {
                         sx={{
                           color: "#4D5053",
                           // fontSize: "22px",
-                          fontSize: { xs: "14px", sm: "20px", lg: "20px" },
+                          fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
+                          fontFamily: "Mulish",
                         }}
                       >
                         {faq.answer}
@@ -560,7 +562,7 @@ const ManagePerLaCare: React.FC = () => {
                 </div>
               ))}
             </Grid>
-            <Grid item xs={12} sm={5} lg={5}>
+            <Grid item xs={12} sm={5} lg={4}>
               {modulesPage[0]?.data.image && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -591,18 +593,17 @@ const ManagePerLaCare: React.FC = () => {
             lg={12}
             sx={{
               display: "flex",
-              // flexDirection: "row",
               flexDirection: { xs: "column", sm: "row", lg: "row" },
               justifyContent: "space-evenly",
               marginTop: "50px",
-              gap: "50px",
+              alignItems: "center",
             }}
           >
             <Grid
               item
               xs={12}
               sm={5}
-              lg={5}
+              lg={4}
               sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
             >
               {videoUrl ? (
@@ -625,9 +626,9 @@ const ManagePerLaCare: React.FC = () => {
               item
               xs={12}
               sm={5}
-              lg={5}
+              lg={4}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "350px" },
+                height: { xs: "0px", sm: "400px", lg: "410px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -646,8 +647,9 @@ const ManagePerLaCare: React.FC = () => {
                         sx={{
                           color: clicked1 === index ? "#3D8C6E" : "#292F36",
                           // fontSize: "25px",
-                          fontSize: { xs: "18px", sm: "25px", lg: "28px" },
+                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
+                          fontFamily: "Mulish",
                         }}
                       >
                         {faq.question}
@@ -658,8 +660,9 @@ const ManagePerLaCare: React.FC = () => {
                         sx={{
                           color: "#4D5053",
                           // fontSize: "22px",
-                          fontSize: { xs: "14px", sm: "20px", lg: "20px" },
+                          fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
+                          fontFamily: "Mulish",
                         }}
                       >
                         {faq.answer}
@@ -681,10 +684,13 @@ const ManagePerLaCare: React.FC = () => {
           alignItems: "center",
         }}
       >
-        <div
-          style={{
+        <Grid
+          sx={{
             backgroundImage: `url(${contentbackground})`,
-            backgroundSize: "cover",
+            // backgroundSize: "cover",
+            backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             width: "100%",
             height: "auto",
             display: "flex",
@@ -716,7 +722,7 @@ const ManagePerLaCare: React.FC = () => {
                     fontSize: { xs: "28px", sm: "38px", lg: "48px" },
                     lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
                     textAlign: "center",
-                    padding: { xs: "3% 15%", sm: "20% 12%", lg: "21% 18%" },
+                    padding: { xs: "12%", sm: "12%", lg: "12%" },
                   }}
                 >
                   {post.data.quote_text}
@@ -738,7 +744,7 @@ const ManagePerLaCare: React.FC = () => {
               </div>
             </>
           ))}
-        </div>
+        </Grid>
       </Box>
       <Typography
         sx={{

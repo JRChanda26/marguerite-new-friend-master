@@ -1873,6 +1873,1314 @@ export type InteractiveLearningModulesDocument<Lang extends string = string> =
     Lang
   >;
 
+type LeCareChezDocumentDataSlicesSlice = never;
+
+/**
+ * Content for Le Care Chez documents
+ */
+interface LeCareChezDocumentData {
+  /**
+   * Header Background field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.header_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  header_background: prismic.ImageField<never>;
+
+  /**
+   * Heading field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  heading: prismic.KeyTextField;
+
+  /**
+   * Sub Heading field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.sub_heading
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  sub_heading: prismic.KeyTextField;
+
+  /**
+   * Main Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.main_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  main_title: prismic.KeyTextField;
+
+  /**
+   * Square Brackets Background field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.square_brackets_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  square_brackets_background: prismic.ImageField<never>;
+
+  /**
+   * Quote Image field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.quote_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  quote_image: prismic.ImageField<never>;
+
+  /**
+   * Quote Text field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.quote_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  quote_text: prismic.KeyTextField;
+
+  /**
+   * Writer Name field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.writer_name
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  writer_name: prismic.KeyTextField;
+
+  /**
+   * Top Left Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.top_left_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_left_title: prismic.KeyTextField;
+
+  /**
+   * Top Left Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.top_left_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  top_left_description: prismic.KeyTextField;
+
+  /**
+   * Mission Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission_title: prismic.KeyTextField;
+
+  /**
+   * Mission Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission_description: prismic.KeyTextField;
+
+  /**
+   * Mission Left Image field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_left_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  mission_left_image: prismic.ImageField<never>;
+
+  /**
+   * Mission Left Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_left_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission_left_title: prismic.KeyTextField;
+
+  /**
+   * Mission Left Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_left_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission_left_description: prismic.KeyTextField;
+
+  /**
+   * Mission Middle Image field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_middle_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  mission_middle_image: prismic.ImageField<never>;
+
+  /**
+   * Mission Right Image field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_right_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  mission_right_image: prismic.ImageField<never>;
+
+  /**
+   * Mission Right Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_right_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission_right_title: prismic.KeyTextField;
+
+  /**
+   * Mission Right Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.mission_right_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission_right_description: prismic.KeyTextField;
+
+  /**
+   * Middle Background field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.middle_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  middle_background: prismic.ImageField<never>;
+
+  /**
+   * Profile Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_title: prismic.KeyTextField;
+
+  /**
+   * Profile Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_description: prismic.KeyTextField;
+
+  /**
+   * Profile Picture1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture1: prismic.ImageField<never>;
+
+  /**
+   * Profile Name1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name1: prismic.KeyTextField;
+
+  /**
+   * Profile Details1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details1: prismic.KeyTextField;
+
+  /**
+   * Profile Phone1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone1: prismic.KeyTextField;
+
+  /**
+   * Profile Email1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email1: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook1: prismic.LinkField;
+
+  /**
+   * Profile Twitter1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter1: prismic.LinkField;
+
+  /**
+   * Profile Linkedin1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin1: prismic.LinkField;
+
+  /**
+   * Profile Instagram1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram1: prismic.LinkField;
+
+  /**
+   * Profile Picture2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture2: prismic.ImageField<never>;
+
+  /**
+   * Profile Name2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name2: prismic.KeyTextField;
+
+  /**
+   * Profile Details2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details2: prismic.KeyTextField;
+
+  /**
+   * Profile Phone2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone2: prismic.KeyTextField;
+
+  /**
+   * Profile Email2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email2: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook2: prismic.LinkField;
+
+  /**
+   * Profile Twitter2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter2: prismic.LinkField;
+
+  /**
+   * Profile Linkedin2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin2: prismic.LinkField;
+
+  /**
+   * Profile Instagram2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram2: prismic.LinkField;
+
+  /**
+   * Profile Picture3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture3: prismic.ImageField<never>;
+
+  /**
+   * Profile Name3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name3: prismic.KeyTextField;
+
+  /**
+   * Profile Details3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details3: prismic.KeyTextField;
+
+  /**
+   * Profile Phone3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone3: prismic.KeyTextField;
+
+  /**
+   * Profile Email3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email3: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook3: prismic.LinkField;
+
+  /**
+   * Profile Twitter3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter3: prismic.LinkField;
+
+  /**
+   * Profile Linkedin3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin3: prismic.LinkField;
+
+  /**
+   * Profile Instagram3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram3: prismic.LinkField;
+
+  /**
+   * Profile Picture4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture4: prismic.ImageField<never>;
+
+  /**
+   * Profile Name4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name4: prismic.KeyTextField;
+
+  /**
+   * Profile Details4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details4: prismic.KeyTextField;
+
+  /**
+   * Profile Phone4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone4: prismic.KeyTextField;
+
+  /**
+   * Profile Email4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email4: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook4: prismic.LinkField;
+
+  /**
+   * Profile Twitter4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter4: prismic.LinkField;
+
+  /**
+   * Profile Linkedin4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin4: prismic.LinkField;
+
+  /**
+   * Profile Instagram4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram4: prismic.LinkField;
+
+  /**
+   * Profile Picture5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture5: prismic.ImageField<never>;
+
+  /**
+   * Profile Name5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name5: prismic.KeyTextField;
+
+  /**
+   * Profile Details5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details5: prismic.KeyTextField;
+
+  /**
+   * Profile Phone5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone5: prismic.KeyTextField;
+
+  /**
+   * Profile Email5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email5: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook5: prismic.LinkField;
+
+  /**
+   * Profile Twitter5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter5: prismic.LinkField;
+
+  /**
+   * Profile Linkedin5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin5: prismic.LinkField;
+
+  /**
+   * Profile Instagram5 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram5: prismic.LinkField;
+
+  /**
+   * Profile Picture6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture6: prismic.ImageField<never>;
+
+  /**
+   * Profile Name6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name6: prismic.KeyTextField;
+
+  /**
+   * Profile Details6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details6: prismic.KeyTextField;
+
+  /**
+   * Profile Phone6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone6: prismic.KeyTextField;
+
+  /**
+   * Profile Email6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email6: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook6: prismic.LinkField;
+
+  /**
+   * Profile Linkedin6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin6: prismic.LinkField;
+
+  /**
+   * Profile Twitter6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter6: prismic.LinkField;
+
+  /**
+   * Profile Instagram6 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram6
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram6: prismic.LinkField;
+
+  /**
+   * Profile Picture7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture7: prismic.ImageField<never>;
+
+  /**
+   * Profile Name7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name7: prismic.KeyTextField;
+
+  /**
+   * Profile Details7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details7: prismic.KeyTextField;
+
+  /**
+   * Profile Phone7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone7: prismic.KeyTextField;
+
+  /**
+   * Profile Email7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email7: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook7: prismic.LinkField;
+
+  /**
+   * Profile Twitter7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter7: prismic.LinkField;
+
+  /**
+   * Profile Linkedin7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin7: prismic.LinkField;
+
+  /**
+   * Profile Instagram7 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram7
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram7: prismic.LinkField;
+
+  /**
+   * Profile Picture8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_picture8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  profile_picture8: prismic.ImageField<never>;
+
+  /**
+   * Profile Name8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_name8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_name8: prismic.KeyTextField;
+
+  /**
+   * Profile Details8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_details8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_details8: prismic.KeyTextField;
+
+  /**
+   * Profile Phone8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_phone8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_phone8: prismic.KeyTextField;
+
+  /**
+   * Profile Email8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_email8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  profile_email8: prismic.KeyTextField;
+
+  /**
+   * Profile Facebook8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_facebook8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_facebook8: prismic.LinkField;
+
+  /**
+   * Profile Twitter8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_twitter8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_twitter8: prismic.LinkField;
+
+  /**
+   * Profile Linkedin8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_linkedin8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_linkedin8: prismic.LinkField;
+
+  /**
+   * Profile Instagram8 field in *Le Care Chez*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.profile_instagram8
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  profile_instagram8: prismic.LinkField;
+
+  /**
+   * Bottom Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_title
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_title: prismic.KeyTextField;
+
+  /**
+   * Bottom Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_description
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_description: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Image1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_image1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_image1: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Icon1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_icon1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_icon1: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Title1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_title1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_title1: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Description1 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_description1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_description1: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Image2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_image2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_image2: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Icon2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_icon2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_icon2: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Title2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_title2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_title2: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Description2 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_description2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_description2: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Image3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_image3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_image3: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Icon3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_icon3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_icon3: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Title3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_title3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_title3: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Description3 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_description3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_description3: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Image4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_image4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_image4: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Icon4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_icon4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_card_icon4: prismic.ImageField<never>;
+
+  /**
+   * Bottom Card Title4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_title4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_title4: prismic.KeyTextField;
+
+  /**
+   * Bottom Card Description4 field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_card_description4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  bottom_card_description4: prismic.KeyTextField;
+
+  /**
+   * Top Right Image field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.top_right_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  top_right_image: prismic.ImageField<never>;
+
+  /**
+   * Slice Zone field in *Le Care Chez*
+   *
+   * - **Field Type**: Slice Zone
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.slices[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#slices
+   */
+  slices: prismic.SliceZone<LeCareChezDocumentDataSlicesSlice> /**
+   * Meta Title field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A title of the page used for social media and search engines
+   * - **API ID Path**: le_care_chez.meta_title
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */;
+  meta_title: prismic.KeyTextField;
+
+  /**
+   * Meta Description field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: A brief summary of the page
+   * - **API ID Path**: le_care_chez.meta_description
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  meta_description: prismic.KeyTextField;
+
+  /**
+   * Meta Image field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.meta_image
+   * - **Tab**: SEO & Metadata
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  meta_image: prismic.ImageField<never>;
+}
+
+/**
+ * Le Care Chez document from Prismic
+ *
+ * - **API ID**: `le_care_chez`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LeCareChezDocument<Lang extends string = string> =
+  prismic.PrismicDocumentWithoutUID<
+    Simplify<LeCareChezDocumentData>,
+    "le_care_chez",
+    Lang
+  >;
+
 type LiberezDocumentDataSlicesSlice = never;
 
 /**
@@ -4567,6 +5875,7 @@ export type AllDocumentTypes =
   | FooterDocument
   | HeaderDocument
   | InteractiveLearningModulesDocument
+  | LeCareChezDocument
   | LiberezDocument
   | ManagePerLaDocument
   | NosExperiencesDocument
@@ -4623,6 +5932,9 @@ declare module "@prismicio/client" {
       InteractiveLearningModulesDocument,
       InteractiveLearningModulesDocumentData,
       InteractiveLearningModulesDocumentDataSlicesSlice,
+      LeCareChezDocument,
+      LeCareChezDocumentData,
+      LeCareChezDocumentDataSlicesSlice,
       LiberezDocument,
       LiberezDocumentData,
       LiberezDocumentDataSlicesSlice,

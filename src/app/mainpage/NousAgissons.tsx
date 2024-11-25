@@ -46,7 +46,7 @@ const NousAgissons: React.FC = () => {
               // }}
               style={{
                 position: "absolute",
-                backgroundColor: "#FFFFFF",
+                // backgroundColor: "#FFFFFF",
                 borderRadius: "48px",
                 // margin: "200px 600px 0px 100px",
                 margin: "10% 40% 0px 5%",
@@ -78,8 +78,8 @@ const NousAgissons: React.FC = () => {
                   sx={{
                     fontFamily: "Jenna Sue",
                     fontWeight: 400,
-                    fontSize: { xs: "25px", sm: "45px", lg: "65px" },
-                    lineHeight: { xs: "20px", sm: "69.6px", lg: "76.8px" },
+                    fontSize: { xs: "20px", sm: "30px", lg: "45px" },
+                    lineHeight: { xs: "20px", sm: "40.6px", lg: "56.8px" },
                     color: "rgba(36, 83, 92, 1)",
                   }}
                 >
@@ -90,8 +90,8 @@ const NousAgissons: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "rgba(36, 83, 92, 1)",
                     fontWeight: 700,
-                    fontSize: { xs: "15px", sm: "25px", lg: "45px" },
-                    lineHeight: { xs: "20px", sm: "40px", lg: "69.6px" },
+                    fontSize: { xs: "15px", sm: "25px", lg: "35px" },
+                    lineHeight: { xs: "20px", sm: "35px", lg: "45.6px" },
                   }}
                 >
                   {post.data.title}
@@ -159,7 +159,7 @@ const NousAgissons: React.FC = () => {
                     style={{
                       height: "100%",
                       width: "100%",
-                      objectFit: "cover",
+                      // objectFit: "cover",
                     }}
                   />
                 )}
