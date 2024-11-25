@@ -344,10 +344,17 @@ export default function BlogsNews() {
                 alignItems: "center",
               }}
             >
-              <div
-                style={{
+              <Grid
+                sx={{
                   backgroundImage: `url(${contentbackground})`,
-                  backgroundSize: "cover",
+                  // backgroundSize: "cover",
+                  backgroundSize: {
+                    xs: "contain",
+                    sm: "contain",
+                    lg: "contain",
+                  },
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "center",
                   width: "100%",
                   height: "auto",
                   display: "flex",
@@ -382,9 +389,9 @@ export default function BlogsNews() {
                         textAlign: "center",
                         // padding: "20% 15%",
                         padding: {
-                          xs: "12% 10%",
-                          sm: "39% 10%",
-                          lg: "19% 18%",
+                          xs: "12%",
+                          sm: "12%",
+                          lg: "12%",
                         },
                       }}
                     >
@@ -392,7 +399,7 @@ export default function BlogsNews() {
                     </Typography>
                   </div>
                 </>
-              </div>
+              </Grid>
             </Box>
           </Grid>
           <Grid

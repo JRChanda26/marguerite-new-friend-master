@@ -1,0 +1,956 @@
+{
+  "format": "page",
+  "id": "le_care_chez",
+  "label": "Le Care Chez",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "header_background": {
+        "type": "Image",
+        "config": {
+          "label": "Header Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "heading": {
+        "type": "Text",
+        "config": {
+          "label": "Heading",
+          "placeholder": ""
+        }
+      },
+      "sub_heading": {
+        "type": "Text",
+        "config": {
+          "label": "Sub Heading",
+          "placeholder": ""
+        }
+      },
+      "main_title": {
+        "type": "Text",
+        "config": {
+          "label": "Main Title",
+          "placeholder": ""
+        }
+      },
+      "square_brackets_background": {
+        "type": "Image",
+        "config": {
+          "label": "Square Brackets Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "quote_image": {
+        "type": "Image",
+        "config": {
+          "label": "Quote Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "quote_text": {
+        "type": "Text",
+        "config": {
+          "label": "Quote Text",
+          "placeholder": ""
+        }
+      },
+      "writer_name": {
+        "type": "Text",
+        "config": {
+          "label": "Writer Name",
+          "placeholder": ""
+        }
+      },
+      "top_left_title": {
+        "type": "Text",
+        "config": {
+          "label": "Top Left Title",
+          "placeholder": ""
+        }
+      },
+      "top_left_description": {
+        "type": "Text",
+        "config": {
+          "label": "Top Left Description",
+          "placeholder": ""
+        }
+      },
+      "mission_title": {
+        "type": "Text",
+        "config": {
+          "label": "Mission Title",
+          "placeholder": ""
+        }
+      },
+      "mission_description": {
+        "type": "Text",
+        "config": {
+          "label": "Mission Description",
+          "placeholder": ""
+        }
+      },
+      "mission_left_image": {
+        "type": "Image",
+        "config": {
+          "label": "Mission Left Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "mission_left_title": {
+        "type": "Text",
+        "config": {
+          "label": "Mission Left Title",
+          "placeholder": ""
+        }
+      },
+      "mission_left_description": {
+        "type": "Text",
+        "config": {
+          "label": "Mission Left Description",
+          "placeholder": ""
+        }
+      },
+      "mission_middle_image": {
+        "type": "Image",
+        "config": {
+          "label": "Mission Middle Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "mission_right_image": {
+        "type": "Image",
+        "config": {
+          "label": "Mission Right Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "mission_right_title": {
+        "type": "Text",
+        "config": {
+          "label": "Mission Right Title",
+          "placeholder": ""
+        }
+      },
+      "mission_right_description": {
+        "type": "Text",
+        "config": {
+          "label": "Mission Right Description",
+          "placeholder": ""
+        }
+      },
+      "middle_background": {
+        "type": "Image",
+        "config": {
+          "label": "Middle Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_title": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Title",
+          "placeholder": ""
+        }
+      },
+      "profile_description": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Description",
+          "placeholder": ""
+        }
+      },
+      "profile_picture1": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name1": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name1",
+          "placeholder": ""
+        }
+      },
+      "profile_details1": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details1",
+          "placeholder": ""
+        }
+      },
+      "profile_phone1": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone1",
+          "placeholder": ""
+        }
+      },
+      "profile_email1": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email1",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook1": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter1": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin1": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram1": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram1",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture2": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name2": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name2",
+          "placeholder": ""
+        }
+      },
+      "profile_details2": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details2",
+          "placeholder": ""
+        }
+      },
+      "profile_phone2": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone2",
+          "placeholder": ""
+        }
+      },
+      "profile_email2": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email2",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook2": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter2": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin2": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram2": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram2",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture3": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name3": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name3",
+          "placeholder": ""
+        }
+      },
+      "profile_details3": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details3",
+          "placeholder": ""
+        }
+      },
+      "profile_phone3": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone3",
+          "placeholder": ""
+        }
+      },
+      "profile_email3": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email3",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook3": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter3": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin3": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram3": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram3",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture4": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name4": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name4",
+          "placeholder": ""
+        }
+      },
+      "profile_details4": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details4",
+          "placeholder": ""
+        }
+      },
+      "profile_phone4": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone4",
+          "placeholder": ""
+        }
+      },
+      "profile_email4": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email4",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook4": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook4",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter4": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter4",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin4": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin4",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram4": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram4",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture5": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture5",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name5": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name5",
+          "placeholder": ""
+        }
+      },
+      "profile_details5": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details5",
+          "placeholder": ""
+        }
+      },
+      "profile_phone5": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone5",
+          "placeholder": ""
+        }
+      },
+      "profile_email5": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email5",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook5": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook5",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter5": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter5",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin5": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin5",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram5": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram5",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture6": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture6",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name6": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name6",
+          "placeholder": ""
+        }
+      },
+      "profile_details6": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details6",
+          "placeholder": ""
+        }
+      },
+      "profile_phone6": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone6",
+          "placeholder": ""
+        }
+      },
+      "profile_email6": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email6",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook6": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook6",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin6": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin6",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter6": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter6",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram6": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram6",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture7": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture7",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name7": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name7",
+          "placeholder": ""
+        }
+      },
+      "profile_details7": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details7",
+          "placeholder": ""
+        }
+      },
+      "profile_phone7": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone7",
+          "placeholder": ""
+        }
+      },
+      "profile_email7": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email7",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook7": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook7",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter7": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter7",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin7": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin7",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram7": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram7",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_picture8": {
+        "type": "Image",
+        "config": {
+          "label": "Profile Picture8",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "profile_name8": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Name8",
+          "placeholder": ""
+        }
+      },
+      "profile_details8": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Details8",
+          "placeholder": ""
+        }
+      },
+      "profile_phone8": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Phone8",
+          "placeholder": ""
+        }
+      },
+      "profile_email8": {
+        "type": "Text",
+        "config": {
+          "label": "Profile Email8",
+          "placeholder": ""
+        }
+      },
+      "profile_facebook8": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Facebook8",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_twitter8": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Twitter8",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_linkedin8": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Linkedin8",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "profile_instagram8": {
+        "type": "Link",
+        "config": {
+          "label": "Profile Instagram8",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "select": null,
+          "allowText": true
+        }
+      },
+      "bottom_title": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Title",
+          "placeholder": ""
+        }
+      },
+      "bottom_description": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Description",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_image1": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Image1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_icon1": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Icon1",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_title1": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Title1",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_description1": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Description1",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_image2": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Image2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_icon2": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Icon2",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_title2": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Title2",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_description2": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Description2",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_image3": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Image3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_icon3": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Icon3",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_title3": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Title3",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_description3": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Description3",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_image4": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Image4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_icon4": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Card Icon4",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "bottom_card_title4": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Title4",
+          "placeholder": ""
+        }
+      },
+      "bottom_card_description4": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Card Description4",
+          "placeholder": ""
+        }
+      },
+      "top_right_image": {
+        "type": "Image",
+        "config": {
+          "label": "Top Right Image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    },
+    "SEO & Metadata": {
+      "meta_title": {
+        "config": {
+          "label": "Meta Title",
+          "placeholder": "A title of the page used for social media and search engines"
+        },
+        "type": "Text"
+      },
+      "meta_description": {
+        "config": {
+          "label": "Meta Description",
+          "placeholder": "A brief summary of the page"
+        },
+        "type": "Text"
+      },
+      "meta_image": {
+        "config": {
+          "constraint": {
+            "height": 1260,
+            "width": 2400
+          },
+          "label": "Meta Image",
+          "thumbnails": []
+        },
+        "type": "Image"
+      }
+    }
+  }
+}

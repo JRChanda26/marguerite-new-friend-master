@@ -78,8 +78,10 @@ export default function Questions() {
           sx={{
             display: "flex",
             // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: "column", sm: "row", lg:"row" },
             justifyContent: "space-between",
+            marginTop:'5%'
+            
           }}
         >
           <Grid item lg={6}>
@@ -90,7 +92,8 @@ export default function Questions() {
                 fontWeight: 700,
                 fontFamily: "Mulish",
                 lineHeight: "76.8px",
-                marginLeft: "50px",
+                marginLeft: "20%",
+                // marginTop:'10%'
               }}
             >
               {questionPage?.data.heading}
@@ -102,8 +105,8 @@ export default function Questions() {
                 fontWeight: 400,
                 fontFamily: "Mulish",
                 lineHeight: "36.8px",
-                marginLeft: "50px",
-                marginTop:'20px'
+                marginLeft: "20%",
+                marginTop:'5%'
               }}
             >
               {questionPage?.data.description}
@@ -115,8 +118,8 @@ export default function Questions() {
                 color: "#24535C",
                 padding: "15px 25px",
                 borderRadius: "10px",
-                marginLeft: "50px",
-                marginTop:'80px',
+                marginLeft: "20%",
+                marginTop:'10%',
                 fontFamily: "Mulish",
                 lineHeight: "26px",
                 fontSize: "21.67px",
@@ -139,7 +142,7 @@ export default function Questions() {
               />
             )}
           </Grid>
-          <Grid item lg={6} md={6} xs={12} sm={12}>
+          <Grid item lg={6} md={6} xs={12} sm={12} sx={{marginRight: {xs:'0%', sm:'5%', lg:'10%'}}}>
             {faqs.map((faq, index) => (
               <Accordion
                 key={index}

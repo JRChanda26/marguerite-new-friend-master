@@ -310,7 +310,7 @@ const NosSolutionsDe: React.FC = () => {
       </div>
 
       <Grid container justifyContent="center" alignItems="center">
-        <Grid item lg={12}>
+      <Grid item lg={12}>
           <Typography
             sx={{
               textAlign: "center",
@@ -328,18 +328,17 @@ const NosSolutionsDe: React.FC = () => {
             lg={12}
             sx={{
               display: "flex",
-              // flexDirection: "row",
               flexDirection: { xs: "column", sm: "row", lg: "row" },
               justifyContent: "space-evenly",
               marginTop: "50px",
-              gap: "50px",
+              alignItems: "center",
             }}
           >
             <Grid
               item
               xs={12}
               sm={5}
-              lg={5}
+              lg={4}
               sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
             >
               {videoUrl ? (
@@ -362,9 +361,9 @@ const NosSolutionsDe: React.FC = () => {
               item
               xs={12}
               sm={5}
-              lg={5}
+              lg={4}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "350px" },
+                height: { xs: "0px", sm: "400px", lg: "410px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -383,8 +382,9 @@ const NosSolutionsDe: React.FC = () => {
                         sx={{
                           color: clicked1 === index ? "#3D8C6E" : "#292F36",
                           // fontSize: "25px",
-                          fontSize: { xs: "18px", sm: "25px", lg: "28px" },
+                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
+                          fontFamily: "Mulish",
                         }}
                       >
                         {faq.question}
@@ -395,8 +395,9 @@ const NosSolutionsDe: React.FC = () => {
                         sx={{
                           color: "#4D5053",
                           // fontSize: "22px",
-                          fontSize: { xs: "14px", sm: "20px", lg: "20px" },
+                          fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
+                          fontFamily: "Mulish",
                         }}
                       >
                         {faq.answer}

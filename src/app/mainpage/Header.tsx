@@ -38,13 +38,14 @@ const Header: React.FC = () => {
             style={{
               position: "fixed",
               top: 0,
+              left:0,
               zIndex: 1,
               display: "flex",
               flexDirection: "row",
               boxShadow: "0px 0px 51.7px 0px rgba(36, 83, 92, 0.1)",
-              backdropFilter: "blur(58.09981155395508px)",
+              // backdropFilter: "blur(58.09981155395508px)",
               background: "rgba(255, 255, 255, 0.7)",
-              width: "99%",
+              width: "100%",
               borderBottomLeftRadius: "30px",
               borderBottomRightRadius: "30px",
               boxSizing: "border-box",
@@ -131,7 +132,7 @@ const Header: React.FC = () => {
                   src={post.data.contact_icon.url || undefined}
                   alt={post.data.contact_icon.alt || "Image"}
                   style={{
-                    width: "5%",
+                    width: "30px",
                     height: "auto",
                   }}
                   onClick={handleContactNavigation}

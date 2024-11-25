@@ -124,7 +124,8 @@ export default function NotreProcessus() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
+              // paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
+              justifyContent:'center',
               paddingRight: "5%",
               paddingLeft:'5%'
             }}
@@ -178,7 +179,8 @@ export default function NotreProcessus() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: {xs:'10%', sm:'3%', lg:'10%'},
+              // paddingTop: {xs:'10%', sm:'3%', lg:'10%'},
+              justifyContent:'center',
               paddingLeft: "5%",
             }}
           >
@@ -257,7 +259,8 @@ export default function NotreProcessus() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
+              // paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
+              justifyContent:'center',
               paddingRight: "5%",
               paddingLeft:'5%'
             }}

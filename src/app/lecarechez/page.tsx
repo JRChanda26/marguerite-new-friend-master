@@ -233,10 +233,13 @@ const LecarechezMargueriteServices: React.FC = () => {
           alignItems: "center",
         }}
       >
-        <div
-          style={{
+        <Grid
+          sx={{
             backgroundImage: `url(${contentbackground})`,
-            backgroundSize: "cover",
+            // backgroundSize: "cover",
+            backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
             width: "100%",
             height: "auto",
             display: "flex",
@@ -266,12 +269,12 @@ const LecarechezMargueriteServices: React.FC = () => {
                     color: "#0A1411",
                     fontWeight: 400,
                     // fontSize: "48px",
-                    fontSize: { xs: "28px", sm: "38px", lg: "48px" },
+                    fontSize: { xs: "28px", sm: "38px", lg: "58px" },
                     // lineHeight: "60px",
                     lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
                     textAlign: "center",
                     // padding: "0px 80px 0px 80px",
-                    padding: { xs: "8% 15%", sm: "39% 12%", lg: "42% 18%" },
+                    padding: { xs: "10%", sm: "12%", lg: "12%" },
                   }}
                 >
                   {post.data.excellence}
@@ -295,7 +298,7 @@ const LecarechezMargueriteServices: React.FC = () => {
               </div>
             </>
           ))}
-        </div>
+        </Grid>
       </Box>
       <div style={{ padding: "7%" }}>
         {posts.map((post: any) => (
@@ -359,103 +362,105 @@ const LecarechezMargueriteServices: React.FC = () => {
         ))}
       </div>
 
+      <Grid container justifyContent="center" alignItems="center">
       <Grid item lg={12}>
-        <Typography
-          sx={{
-            textAlign: "center",
-            color: "#292F36",
-            // fontSize: "50px",
-            fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-            fontWeight: 400,
-            marginTop: "50PX",
-          }}
-        >
-          {modulesPage[0]?.data.video_title}
-        </Typography>
-        <Grid
-          item
-          lg={12}
-          sx={{
-            display: "flex",
-            // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "row", lg: "row" },
-            justifyContent: "space-evenly",
-            marginTop: "50px",
-            gap: "50px",
-            padding: "2% 5%",
-          }}
-        >
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            lg={5}
-            sx={{ marginTop: { xs: "0px", sm: "40px", lg: "0px" } }}
-          >
-            {videoUrl ? (
-              <video
-                width="100%"
-                height="auto"
-                controls
-                style={{
-                  borderRadius: "12px",
-                  objectFit: "cover",
-                }}
-              >
-                <source src={videoUrl} type="video/mp4" />
-              </video>
-            ) : (
-              <p>Video not available</p>
-            )}
-          </Grid>
-          <Grid
-            item
-            lg={5}
+          <Typography
             sx={{
-              // marginTop: "100px",
-              // height: "300px",
-              height: { xs: "300px", sm: "300px", lg: "400px" },
-              overflowY: "auto",
-              scrollbarWidth: "thin",
+              textAlign: "center",
+              color: "#292F36",
+              // fontSize: "50px",
+              fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+              fontWeight: 400,
+              marginTop: "50px",
             }}
           >
-            {faqs.slice(3, 6).map((faq, index) => (
-              <div key={index}>
-                <Accordion
+            {modulesPage[0]?.data.video_title}
+          </Typography>
+          <Grid
+            item
+            lg={12}
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row", lg: "row" },
+              justifyContent: "space-evenly",
+              marginTop: "50px",
+              alignItems: "center",
+            }}
+          >
+            <Grid
+              item
+              xs={12}
+              sm={5}
+              lg={4}
+              sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
+            >
+              {videoUrl ? (
+                <video
+                  width="100%"
+                  height="auto"
+                  controls
                   style={{
-                    backgroundColor: "transparent",
-                    boxShadow: "none",
+                    borderRadius: "12px",
+                    objectFit: "cover",
                   }}
                 >
-                  <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
-                    <Typography
-                      onClick={() => handleColor1(index)}
-                      sx={{
-                        color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                        // fontSize: "25px",
-                        fontSize: { xs: "18px", sm: "25px", lg: "28px" },
-                        fontWeight: 400,
-                      }}
-                    >
-                      {faq.question}
-                    </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography
-                      sx={{
-                        color: "#4D5053",
-                        // fontSize: "22px",
-                        fontSize: { xs: "14px", sm: "20px", lg: "20px" },
-                        fontWeight: 400,
-                      }}
-                    >
-                      {faq.answer}
-                    </Typography>
-                  </AccordionDetails>
-                </Accordion>
-                <hr style={{ border: "1px solid #3D8C6E" }} />
-              </div>
-            ))}
+                  <source src={videoUrl} type="video/mp4" />
+                </video>
+              ) : (
+                <p>Video not available</p>
+              )}
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              sm={5}
+              lg={4}
+              sx={{
+                height: { xs: "0px", sm: "400px", lg: "410px" },
+                overflowY: "auto",
+                scrollbarWidth: "thin",
+              }}
+            >
+              {faqs.slice(3, 6).map((faq, index) => (
+                <div key={index}>
+                  <Accordion
+                    style={{
+                      backgroundColor: "transparent",
+                      boxShadow: "none",
+                    }}
+                  >
+                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                      <Typography
+                        onClick={() => handleColor1(index)}
+                        sx={{
+                          color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                          // fontSize: "25px",
+                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
+                          fontWeight: 400,
+                          fontFamily: "Mulish",
+                        }}
+                      >
+                        {faq.question}
+                      </Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                      <Typography
+                        sx={{
+                          color: "#4D5053",
+                          // fontSize: "22px",
+                          fontSize: { xs: "14px", sm: "18px", lg: "22px" },
+                          fontWeight: 400,
+                          fontFamily: "Mulish",
+                        }}
+                      >
+                        {faq.answer}
+                      </Typography>
+                    </AccordionDetails>
+                  </Accordion>
+                  <hr style={{ border: "1px solid #3D8C6E" }} />
+                </div>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
       </Grid>
