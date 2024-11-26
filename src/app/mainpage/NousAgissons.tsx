@@ -78,8 +78,8 @@ const NousAgissons: React.FC = () => {
                   sx={{
                     fontFamily: "Jenna Sue",
                     fontWeight: 400,
-                    fontSize: { xs: "20px", sm: "30px", lg: "45px" },
-                    lineHeight: { xs: "20px", sm: "40.6px", lg: "56.8px" },
+                    fontSize: { xs: "28px", sm: "40px", lg: "65px" },
+                    lineHeight: { xs: "20px", sm: "50px", lg: "80px" },
                     color: "rgba(36, 83, 92, 1)",
                   }}
                 >
@@ -90,8 +90,8 @@ const NousAgissons: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "rgba(36, 83, 92, 1)",
                     fontWeight: 700,
-                    fontSize: { xs: "15px", sm: "25px", lg: "35px" },
-                    lineHeight: { xs: "20px", sm: "35px", lg: "45.6px" },
+                    fontSize: { xs: "15px", sm: "25px", lg: "65px" },
+                    lineHeight: { xs: "20px", sm: "45px", lg: "69px" },
                   }}
                 >
                   {post.data.title}

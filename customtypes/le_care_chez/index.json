@@ -917,6 +917,46 @@
           "thumbnails": []
         }
       },
+      "bottom_background": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "facebook_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Facebook Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "twitter_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Twitter Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "linkedin_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Linkedin Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "instagram_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Instagram Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

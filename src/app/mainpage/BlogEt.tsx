@@ -18,15 +18,15 @@ export default function BlogEt() {
       setBlogPage(data);
     }
     fetchData();
-  },[]);
+  }, []);
 
   const title: React.CSSProperties = {
     color: "#161C2D",
     fontSize: "21.27px",
     fontWeight: 700,
     lineHeight: "25.52px",
-    textAlign:'left',
-    paddingTop:'2%'
+    textAlign: "left",
+    paddingTop: "2%",
   };
 
   const description: React.CSSProperties = {
@@ -34,8 +34,8 @@ export default function BlogEt() {
     fontSize: "18.61px",
     fontWeight: 400,
     lineHeight: "29.78px",
-    textAlign:'left',
-    paddingTop:'5%'
+    textAlign: "left",
+    paddingTop: "5%",
   };
 
   const items = [
@@ -58,21 +58,19 @@ export default function BlogEt() {
         style={{
           background: "#BBDDD9",
           padding: "20px",
-          marginTop:'10px',
+          marginTop: "10px",
         }}
       >
-        <Grid
-          item
-          xs={12}
-          style={{ textAlign: "center"}}
-        >
+        <Grid item xs={12} style={{ textAlign: "center" }}>
           <Typography
-            style={{
-              fontSize: "48px",
+            sx={{
+              // fontSize: "48px",
               fontWeight: 700,
-              lineHeight: "58px",
+              // lineHeight: "58px",
+              fontSize: { xs: "28px", md: "45px", lg: "65px" },
+              lineHeight: { xs: "30px", md: "50px", lg: "80px" },
               color: "#000000",
-              padding:'5%'
+              padding: "5%",
             }}
           >
             {blogPage?.data.heading}
@@ -84,7 +82,6 @@ export default function BlogEt() {
           container
           item
           lg={12}
-          spacing={2}
           style={{
             display: "flex",
             justifyContent: "space-evenly",
@@ -142,7 +139,7 @@ export default function BlogEt() {
                   visibility: isHovered === index ? "visible" : "hidden",
                   opacity: isHovered === index ? 1 : 0,
                   transition: "opacity 0.3s ease, visibility 0.3s ease",
-                  paddingTop:'5%'
+                  paddingTop: "5%",
                 }}
               >
                 <Link
@@ -187,8 +184,8 @@ export default function BlogEt() {
             fontSize: "44px",
             lineHeight: "44px",
             textAlign: "center",
-            textDecoration:'underline',
-            paddingTop:'5%'
+            textDecoration: "underline",
+            paddingTop: "5%",
           }}
         >
           {blogPage?.data.footer_text}

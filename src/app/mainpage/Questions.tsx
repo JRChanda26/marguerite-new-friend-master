@@ -28,7 +28,7 @@ export default function Questions() {
       setQuestionPage(data);
     }
     fetchData();
-  },[]);
+  }, []);
 
   const faqs = [
     {
@@ -61,7 +61,7 @@ export default function Questions() {
   };
 
   const router = useRouter();
-  
+
   const handleNavigation = () => {
     router.push("/contact");
   };
@@ -78,52 +78,69 @@ export default function Questions() {
           sx={{
             display: "flex",
             // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "row", lg:"row" },
+            flexDirection: { xs: "column", sm: "row", lg: "row" },
             justifyContent: "space-between",
-            marginTop:'5%'
-            
+            marginTop: "5%",
           }}
         >
           <Grid item lg={6}>
             <Typography
-              style={{
+              sx={{
                 color: "#14292D",
-                fontSize: "64px",
+                // fontSize: "64px",
                 fontWeight: 700,
-                fontFamily: "Mulish",
-                lineHeight: "76.8px",
-                marginLeft: "20%",
-                // marginTop:'10%'
+                // fontFamily: "Mulish",
+                // lineHeight: "76.8px",
+                fontSize: { xs: "28px", md: "45px", lg: "65px" },
+                lineHeight: { xs: "30px", md: "50px", lg: "80px" },
+                margin: {
+                  xs: "0% 0% 0% 10%",
+                  sm: "0% 0% 0% 12%",
+                  lg: "0% 0% 0% 20%",
+                },
               }}
             >
               {questionPage?.data.heading}
             </Typography>
             <Typography
-              style={{
+              sx={{
                 color: "#161C2DB8",
-                fontSize: "34px",
+                // fontSize: "34px",
                 fontWeight: 400,
-                fontFamily: "Mulish",
-                lineHeight: "36.8px",
-                marginLeft: "20%",
-                marginTop:'5%'
+                // fontFamily: "Mulish",
+                // lineHeight: "36.8px",
+                fontSize: { xs: "12px", md: "20px", lg: "25px" },
+                lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
+                margin: {
+                  xs: "1% 0% 0% 10%",
+                  sm: "3% 0% 0% 12%",
+                  lg: "5% 0% 0% 20%",
+                },
               }}
             >
               {questionPage?.data.description}
             </Typography>
             <Button
-              style={{
+              sx={{
                 textDecoration: "none",
                 border: "1px solid #24535C",
                 color: "#24535C",
-                padding: "15px 25px",
+                // padding: "15px 25px",
+                padding: { xs: "1% 3%", sm: "2% 5%", lg: "2% 5%" },
                 borderRadius: "10px",
-                marginLeft: "20%",
-                marginTop:'10%',
-                fontFamily: "Mulish",
-                lineHeight: "26px",
-                fontSize: "21.67px",
-                textTransform:'none'
+                // marginLeft: "20%",
+                // marginTop: "10%",
+                margin: {
+                  xs: "5% 0% 0% 10%",
+                  sm: "5% 0% 0% 12%",
+                  lg: "5% 0% 0% 20%",
+                },
+                // fontFamily: "Mulish",
+                // lineHeight: "26px",
+                // fontSize: "21.67px",
+                fontSize: { xs: "12px", md: "20px", lg: "25px" },
+                lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
+                textTransform: "none",
               }}
               onClick={handleNavigation}
             >
@@ -142,7 +159,14 @@ export default function Questions() {
               />
             )}
           </Grid>
-          <Grid item lg={6} md={6} xs={12} sm={12} sx={{marginRight: {xs:'0%', sm:'5%', lg:'10%'}}}>
+          <Grid
+            item
+            lg={6}
+            md={6}
+            xs={12}
+            sm={12}
+            sx={{ marginRight: { xs: "0%", sm: "0%", lg: "10%" } }}
+          >
             {faqs.map((faq, index) => (
               <Accordion
                 key={index}

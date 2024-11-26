@@ -31,8 +31,9 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#0A1411",
                   fontWeight: 700,
-                  fontSize: { xs: "28px", md: "45px", lg:"65px" },
-                  lineHeight: { xs: "30px", md: "50px", lg:"80px" },
+                  fontSize: { xs: "28px", md: "45px", lg: "65px" },
+                  lineHeight: { xs: "30px", md: "50px", lg: "80px" },
+                  padding: { xs: "2% 3%", md: "2% 8%", lg: "2% 15%" },
                   textAlign: "center",
                 }}
               >
@@ -45,9 +46,9 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#565656",
                   fontWeight: 400,
-                  fontSize: { xs: "12px", md: "16px", lg:"25px" },
-                  lineHeight: { xs: "20px", md: "25px", lg:"38.4px" },
-                  padding: "0% 18%",
+                  fontSize: { xs: "12px", md: "16px", lg: "25px" },
+                  lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
+                  padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
                   textAlign: "center",
                 }}
               >
@@ -57,6 +58,37 @@ const Choisir: React.FC = () => {
           </div>
         ))}
       </div>
+
+      {/* <Grid
+        sx={{
+          backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center",
+          width: "100%",
+          height: "auto",
+          display: "flex",
+          justifyContent: "flex-end",
+          alignItems: "center",
+          flexDirection: "column",
+          position: "absolute",
+        }}
+      >
+        {choisirPage.map((post: any) => (
+          <div key={post}>
+            {post?.data.bottom_background && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={post.data.bottom_background.url || undefined}
+                alt={post.data.bottom_background.alt || "Image"}
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
+              />
+            )}
+          </div>
+        ))}
+      </Grid> */}
 
       <Grid
         container

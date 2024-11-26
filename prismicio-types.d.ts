@@ -961,6 +961,17 @@ interface ChoisirDocumentData {
   link_icon: prismic.ImageField<never>;
 
   /**
+   * Bottom Background field in *Choisir*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: choisir.bottom_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_background: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Choisir*
    *
    * - **Field Type**: Slice Zone
@@ -3121,6 +3132,61 @@ interface LeCareChezDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#image
    */
   top_right_image: prismic.ImageField<never>;
+
+  /**
+   * Bottom Background field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.bottom_background
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  bottom_background: prismic.ImageField<never>;
+
+  /**
+   * Facebook Icon field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.facebook_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  facebook_icon: prismic.ImageField<never>;
+
+  /**
+   * Twitter Icon field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.twitter_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  twitter_icon: prismic.ImageField<never>;
+
+  /**
+   * Linkedin Icon field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.linkedin_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  linkedin_icon: prismic.ImageField<never>;
+
+  /**
+   * Instagram Icon field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.instagram_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  instagram_icon: prismic.ImageField<never>;
 
   /**
    * Slice Zone field in *Le Care Chez*

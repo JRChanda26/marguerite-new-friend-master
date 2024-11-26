@@ -101,6 +101,14 @@
           "thumbnails": []
         }
       },
+      "bottom_background": {
+        "type": "Image",
+        "config": {
+          "label": "Bottom Background",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
