@@ -1,17 +1,17 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createClient } from "@/prismicio";
-import { Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography } from "@mui/material";
 
 export default function Paroles() {
   const [parolesPage, setParolesPage] = useState<any>(null);
   const [isCardHovered, setIsCardHovered] = useState<number | null>(null);
-  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
   const [playingVideoId, setPlayingVideoId] = useState(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState<number | null>(0);
 
-  const visibleCards = 3;
+  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
 
   useEffect(() => {
     async function fetchData() {
@@ -20,7 +20,7 @@ export default function Paroles() {
       setParolesPage(data);
     }
     fetchData();
-  },[]);
+  }, []);
 
   if (!parolesPage) {
     return;
@@ -69,30 +69,38 @@ export default function Paroles() {
       );
   };
 
-  const items = Array.from({ length: 5 }, (_, i) => ({
+  const items = Array.from({ length: 10 }, (_, i) => ({
     id: i + 1,
     title,
     videoUrl,
   }));
 
-  const handleBackButtonClick = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex !== null && prevIndex + 1 < items.length ? prevIndex + 1 : 0
+    );
   };
 
-  const handleNextButtonClick = () => {
+  const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
-      Math.min(prevIndex + 1, items.length - visibleCards)
+      prevIndex !== null && prevIndex - 1 >= 0
+        ? prevIndex - 1
+        : items.length - 1
     );
   };
 
   const handleVideoPlay = (id: any) => {
-    setIsVideoPlaying(true);
+    if (playingVideoId !== null && videoRefs.current[playingVideoId]) {
+      videoRefs.current[playingVideoId]?.pause();
+    }
     setPlayingVideoId(id);
+    setIsAnimationPlaying(true);
+    setCurrentIndex(null);
   };
 
   const handleVideoPause = () => {
-    setIsVideoPlaying(false);
     setPlayingVideoId(null);
+    setIsAnimationPlaying(false);
   };
 
   return (
@@ -105,12 +113,13 @@ export default function Paroles() {
     >
       <Grid container alignItems="center" justifyContent="center" gap="20px">
         <Typography
-          style={{
+          sx={{
             color: "#0A1411",
-            fontSize: "64px",
             fontWeight: 700,
-            lineHeight: "80.32px",
-            fontFamily: "Mulish",
+            fontSize: { xs: "28px", md: "45px", lg: "65px" },
+            lineHeight: { xs: "30px", md: "50px", lg: "80px" },
+            padding: { xs: "2% 0%", md: "2% 0%", lg: "2% 0%" },
+            // fontFamily: "Mulish",
           }}
         >
           {parolesPage?.data.heading}
@@ -125,8 +134,7 @@ export default function Paroles() {
           }}
         >
           <Button
-            onClick={handleBackButtonClick}
-            disabled={currentIndex === 0}
+            onClick={handlePrevious}
             aria-label="previous page"
             sx={{
               fontSize: "16px",
@@ -152,8 +160,7 @@ export default function Paroles() {
             )}
           </Button>
           <Button
-            onClick={handleNextButtonClick}
-            disabled={currentIndex >= items.length - visibleCards}
+            onClick={handleNext}
             aria-label="next page"
             sx={{
               fontSize: "16px",
@@ -182,103 +189,129 @@ export default function Paroles() {
       </Grid>
 
       <Grid item lg={12}>
-        <p
-          style={{
-            padding: "50px",
+        <Typography
+          sx={{
             color: "#000000",
-            fontSize: "32px",
             fontWeight: 300,
-            lineHeight: "40.16px",
-            fontFamily: "Mulish",
+            // fontFamily: "Mulish",
+            fontSize: { xs: "12px", md: "16px", lg: "25px" },
+            lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
+            padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
           }}
         >
           {formatText(description)}
-        </p>
+        </Typography>
       </Grid>
 
-      {/* Cards Scrolling Section */}
-      <style jsx>{`
-        @keyframes slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
-
       <Grid
-        container
         item
-        lg={12}
+        xs={12}
         sx={{
-          // flex: "0 0 auto",
+          textAlign: "center",
           display: "flex",
-          flexDirection: { xs: "column", sm: "row", lg: "row" },
-          flexWrap: "nowrap",
-          justifyContent: "space-evenly",
-          padding: "5%",
-          gap: "50px",
-          animation: isVideoPlaying ? "none" : "slide 50s linear infinite",
+          flexDirection: "column",
+          alignItems: "center",
         }}
       >
-        {items.slice(currentIndex, currentIndex + visibleCards).map((item) => (
-          <Grid
-            item
-            xs={12}
-            sm={6}
-            md={4}
-            lg={3.5}
-            key={item.id}
-            style={{
-              background:
-                isCardHovered === item.id || playingVideoId === item.id
-                  ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
-                  : "#FFFFFF",
-              boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
-              padding: "20px",
-              borderRadius: "20px",
-              transform:
-                isCardHovered === item.id || playingVideoId === item.id
-                  ? "scale(1.1)"
-                  : "scale(1)",
-              transition: "transform 0.3s ease",
+        {/* Cards Scrolling Section */}
+        <style jsx>{`
+          @keyframes slide {
+            0% {
+              transform: translateX(0);
+            }
+            100% {
+              transform: translateX(-100%);
+            }
+          }
+        `}</style>
+
+        <Grid
+          container
+          item
+          xs={12}
+          sx={{
+            overflow: "hidden",
+            display: "flex",
+            justifyContent: "center",
+            padding: { xs: "20px", md: "40px 0" },
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              gap: "50px",
+              animation: isAnimationPlaying
+                ? "none"
+                : "slide 40s linear infinite",
+              width: "100%",
+              maxWidth: "100vw",
             }}
-            onMouseEnter={() => setIsCardHovered(item.id)}
-            onMouseLeave={() => setIsCardHovered(null)}
           >
-            {videoUrl ? (
-              <video
-                width="100%"
-                controls
-                style={{
-                  borderRadius: "12px",
+            {items.map((item) => (
+              <Box
+                key={item.id}
+                sx={{
+                  borderRadius: "22.08px",
+                  padding: "20px",
+                  minWidth: { xs: "250px", sm: "300px", md: "350px" },
+                  background:
+                    isCardHovered === item.id ||
+                    playingVideoId === item.id ||
+                    currentIndex === item.id
+                      ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
+                      : "#FFFFFF",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
+                  transform:
+                    isCardHovered === item.id ||
+                    playingVideoId === item.id ||
+                    currentIndex === item.id
+                      ? "scale(1.1)"
+                      : "scale(1)",
+                  transition: "transform 0.3s ease, background-color 0.3s ease",
                 }}
-                onPlay={() => handleVideoPlay(item.id)}
-                onPause={handleVideoPause}
-                onEnded={handleVideoPause}
+                onMouseEnter={() => setIsCardHovered(item.id)}
+                onMouseLeave={() => setIsCardHovered(null)}
               >
-                <source src={videoUrl} type="video/mp4" />
-              </video>
-            ) : (
-              <p>Video not available</p>
-            )}
-            <div
-              style={{
-                color: "#000000",
-                fontSize: "22.02px",
-                fontWeight: 700,
-                fontFamily: "Mulish",
-                lineHeight: "25.74px",
-                textAlign: "center",
-                padding: "10px 20px",
-              }}
-            >
-              {item.id}. {item.title}
-            </div>
-          </Grid>
-        ))}
+                {videoUrl ? (
+                  <video
+                    ref={(el) => {
+                      if (el) {
+                        videoRefs.current[item.id] = el;
+                      } else {
+                        delete videoRefs.current[item.id];
+                      }
+                    }}
+                    width="100%"
+                    controls
+                    style={{
+                      borderRadius: "12px",
+                    }}
+                    onPlay={() => handleVideoPlay(item.id)}
+                    // onPause={handleVideoPause}
+                    onEnded={handleVideoPause}
+                  >
+                    <source src={videoUrl} type="video/mp4" />
+                  </video>
+                ) : (
+                  <p>Video not available</p>
+                )}
+                <Typography
+                  style={{
+                    color: "#000000",
+                    fontSize: "22.02px",
+                    fontWeight: 700,
+                    fontFamily: "Mulish",
+                    lineHeight: "25.74px",
+                    textAlign: "center",
+                    padding: "10px 20px",
+                  }}
+                >
+                  {item.title}
+                </Typography>
+              </Box>
+            ))}
+          </Box>
+        </Grid>
       </Grid>
     </div>
   );

@@ -17,14 +17,12 @@ import { PrismicNextLink } from "@prismicio/next";
 import Header from "../mainpage/Header";
 
 const LecarechezMargueriteServices: React.FC = () => {
-  const [posts, setPosts] = useState<any[]>([]);
+  const [leCarePage, setLeCarePage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "soinschezmarguerite" as any
-      );
-      setPosts(response);
+      const response: any = await client.getAllByType("le_care_chez" as any);
+      setLeCarePage(response);
     };
 
     fetchPosts();
@@ -42,26 +40,119 @@ const LecarechezMargueriteServices: React.FC = () => {
     fetchPosts();
   }, []);
 
+  const headerBackground = leCarePage[0]?.data?.header_background?.url || "";
+  const squareBracketsBackground =
+    leCarePage[0]?.data?.square_brackets_background?.url || "";
+  const middleBackground = leCarePage[0]?.data?.middle_background?.url || "";
+  const bottomBackground = leCarePage[0]?.data?.bottom_background?.url || "";
 
-  const backgroundImage = posts[0]?.data?.headerbackground?.url || "";
-  const contentbackground = posts[0]?.data?.contentbackground?.url || "";
-  const backgroundpeople = posts[0]?.data?.backgroundpeople?.url || "";
-  const lastbackground = posts[0]?.data?.lastbackground?.url || "";
-  const [person1, setPerson1] = useState(false);
-  const [person2, setPerson2] = useState(false);
-  const [person3, setPerson3] = useState(false);
-  const [person4, setPerson4] = useState(false);
-  const handleChangePerson1 = () => {
-    setPerson1(!person1);
-  };
-  const handleChangePerson2 = () => {
-    setPerson2(!person2);
-  };
-  const handleChangePerson3 = () => {
-    setPerson3(!person3);
-  };
-  const handleChangePerson4 = () => {
-    setPerson4(!person4);
+  const personCards = [
+    {
+      id: 1,
+      profile: leCarePage[0]?.data?.profile_picture1?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook1,
+      twitterLink: leCarePage[0]?.data.profile_twitter1,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin1,
+      instagramLink: leCarePage[0]?.data.profile_instagram1,
+    },
+    {
+      id: 2,
+      profile: leCarePage[0]?.data?.profile_picture2?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook2,
+      twitterLink: leCarePage[0]?.data.profile_twitter2,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin2,
+      instagramLink: leCarePage[0]?.data.profile_instagram2,
+    },
+    {
+      id: 3,
+      profile: leCarePage[0]?.data?.profile_picture3?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook3,
+      twitterLink: leCarePage[0]?.data.profile_twitter3,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin3,
+      instagramLink: leCarePage[0]?.data.profile_instagram3,
+    },
+    {
+      id: 4,
+      profile: leCarePage[0]?.data?.profile_picture4?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook4,
+      twitterLink: leCarePage[0]?.data.profile_twitter4,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin4,
+      instagramLink: leCarePage[0]?.data.profile_instagram4,
+    },
+    {
+      id: 5,
+      profile: leCarePage[0]?.data?.profile_picture5?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook5,
+      twitterLink: leCarePage[0]?.data.profile_twitter5,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin5,
+      instagramLink: leCarePage[0]?.data.profile_instagram5,
+    },
+    {
+      id: 6,
+      profile: leCarePage[0]?.data?.profile_picture6?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook6,
+      twitterLink: leCarePage[0]?.data.profile_twitter6,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin6,
+      instagramLink: leCarePage[0]?.data.profile_instagram6,
+    },
+    {
+      id: 7,
+      profile: leCarePage[0]?.data?.profile_picture7?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook7,
+      twitterLink: leCarePage[0]?.data.profile_twitter7,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin7,
+      instagramLink: leCarePage[0]?.data.profile_instagram7,
+    },
+    {
+      id: 8,
+      profile: leCarePage[0]?.data?.profile_picture8?.url || "",
+      name: leCarePage[0]?.data.profile_name1,
+      details: leCarePage[0]?.data.profile_details1,
+      phone: leCarePage[0]?.data.profile_phone1,
+      email: leCarePage[0]?.data.profile_email1,
+      facebookLink: leCarePage[0]?.data.profile_facebook8,
+      twitterLink: leCarePage[0]?.data.profile_twitter8,
+      linkedinLink: leCarePage[0]?.data.profile_linkedin8,
+      instagramLink: leCarePage[0]?.data.profile_instagram8,
+    },
+  ];
+
+  const [flippedStates, setFlippedStates] = useState(
+    Array(personCards.length).fill(false)
+  );
+
+  const handleFlipCard = (index: any) => {
+    setFlippedStates((prevStates) =>
+      prevStates.map((flipped, i) => (i === index ? !flipped : flipped))
+    );
   };
 
   const [clicked1, setClicked1] = useState<number | null>(null);
@@ -69,27 +160,34 @@ const LecarechezMargueriteServices: React.FC = () => {
     setClicked1(index);
   };
 
-
   const faqs = [
-    { question: modulesPage[0]?.data.question1, answer: modulesPage[0]?.data.answer1 },
-    { question: modulesPage[0]?.data.question2, answer: modulesPage[0]?.data.answer2 },
-    { question: modulesPage[0]?.data.question3, answer: modulesPage[0]?.data.answer3 },
-    { question: modulesPage[0]?.data.question4, answer: modulesPage[0]?.data.answer4 },
-    { question: modulesPage[0]?.data.question5, answer: modulesPage[0]?.data.answer5 },
-    { question: modulesPage[0]?.data.question6, answer: modulesPage[0]?.data.answer6 },
+    {
+      question: modulesPage[0]?.data.question1,
+      answer: modulesPage[0]?.data.answer1,
+    },
+    {
+      question: modulesPage[0]?.data.question2,
+      answer: modulesPage[0]?.data.answer2,
+    },
+    {
+      question: modulesPage[0]?.data.question3,
+      answer: modulesPage[0]?.data.answer3,
+    },
+    {
+      question: modulesPage[0]?.data.question4,
+      answer: modulesPage[0]?.data.answer4,
+    },
+    {
+      question: modulesPage[0]?.data.question5,
+      answer: modulesPage[0]?.data.answer5,
+    },
+    {
+      question: modulesPage[0]?.data.question6,
+      answer: modulesPage[0]?.data.answer6,
+    },
   ];
 
   const videoUrl = modulesPage[0]?.data.video?.url;
-
-  const [posts2, setPost2] = useState<any[]>([]);
-
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType("contact" as any);
-      setPost2(response);
-    };
-    fetchPosts();
-  }, []);
 
   const designerNameStyle: React.CSSProperties = {
     fontFamily: "'DM Serif Display', serif",
@@ -112,42 +210,19 @@ const LecarechezMargueriteServices: React.FC = () => {
     color: "#292F36",
   };
 
-  const socialLinks = [
-    {
-      platform: "facebook",
-      link: posts2[0]?.data.facebook_link,
-      icon: posts2[0]?.data.facebook,
-    },
-    {
-      platform: "twitter",
-      link: posts2[0]?.data.twitter_link,
-      icon: posts2[0]?.data.twitter,
-    },
-    {
-      platform: "linkedin",
-      link: posts2[0]?.data.linkedin_link,
-      icon: posts2[0]?.data.linked_in,
-    },
-    {
-      platform: "instagram",
-      link: posts2[0]?.data.instagram_link,
-      icon: posts2[0]?.data.instagram,
-    },
-  ];
-
   return (
     <Box>
       <Header />
       <div
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${headerBackground})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           // width: "100%",
           // height: "603.67px",
         }}
       >
-        {posts.map((post: any, postIndex: number) => (
+        {leCarePage.map((post: any, postIndex: number) => (
           <>
             <Grid
               sx={{
@@ -185,7 +260,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
                   }}
                 >
-                  {post.data.headertext}
+                  {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
@@ -198,7 +273,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
                   }}
                 >
-                  {post.data.content}
+                  {post.data.sub_heading}
                 </Typography>
               </div>
             </Grid>
@@ -219,10 +294,10 @@ const LecarechezMargueriteServices: React.FC = () => {
             fontWeight: 400,
             fontSize: { xs: "28px", sm: "38px", lg: "48px" },
             lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
-            marginTop:'5%'
+            marginTop: "5%",
           }}
         >
-          {posts[0]?.data.heading}
+          {leCarePage[0]?.data.main_title}
         </Typography>
       </Grid>
 
@@ -235,7 +310,7 @@ const LecarechezMargueriteServices: React.FC = () => {
       >
         <Grid
           sx={{
-            backgroundImage: `url(${contentbackground})`,
+            backgroundImage: `url(${squareBracketsBackground})`,
             // backgroundSize: "cover",
             backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
             backgroundRepeat: "no-repeat",
@@ -249,14 +324,14 @@ const LecarechezMargueriteServices: React.FC = () => {
             flexDirection: "column",
           }}
         >
-          {posts.map((post: any, postIndex: number) => (
+          {leCarePage.map((post: any, postIndex: number) => (
             <>
               <div>
-                {posts[0]?.data.comma_image && (
+                {leCarePage[0]?.data.quote_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={posts[0]?.data.comma_image.url || undefined}
-                    alt={posts[0]?.data.comma_image.alt || "Image"}
+                    src={leCarePage[0]?.data.quote_image.url || undefined}
+                    alt={leCarePage[0]?.data.quote_image.alt || "Image"}
                     width="100%"
                     height="auto"
                   />
@@ -277,7 +352,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     padding: { xs: "10%", sm: "12%", lg: "12%" },
                   }}
                 >
-                  {post.data.excellence}
+                  {post.data.quote_text}
                 </Typography>
               </div>
               <div>
@@ -293,7 +368,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     textAlign: "center",
                   }}
                 >
-                  {post.data.boxcontent}
+                  {post.data.writer_name}
                 </Typography>
               </div>
             </>
@@ -301,7 +376,7 @@ const LecarechezMargueriteServices: React.FC = () => {
         </Grid>
       </Box>
       <div style={{ padding: "7%" }}>
-        {posts.map((post: any) => (
+        {leCarePage.map((post: any) => (
           <Grid container spacing={2} key={post}>
             <Grid
               item
@@ -323,7 +398,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
                   }}
                 >
-                  {post.data.leftheader}
+                  {post.data.top_left_title}
                 </Typography>
                 <Typography
                   sx={{
@@ -335,7 +410,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     paddingTop: "23px",
                   }}
                 >
-                  {post.data.leftcontent}
+                  {post.data.top_left_description}
                 </Typography>
               </Grid>
               <Grid
@@ -347,11 +422,11 @@ const LecarechezMargueriteServices: React.FC = () => {
                   alignItems: "center",
                 }}
               >
-                {posts[0]?.data.bodyrightimage && (
+                {leCarePage[0]?.data.top_right_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={posts[0]?.data.bodyrightimage.url || undefined}
-                    alt={posts[0]?.data.bodyrightimage.alt || "Image"}
+                    src={leCarePage[0]?.data.top_right_image.url || undefined}
+                    alt={leCarePage[0]?.data.top_right_image.alt || "Image"}
                     width="100%"
                     height="auto"
                   />
@@ -363,7 +438,7 @@ const LecarechezMargueriteServices: React.FC = () => {
       </div>
 
       <Grid container justifyContent="center" alignItems="center">
-      <Grid item lg={12}>
+        <Grid item lg={12}>
           <Typography
             sx={{
               textAlign: "center",
@@ -479,7 +554,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             paddingTop: "10%",
           }}
         >
-          <div>{posts[0]?.data.notre_title}</div>
+          <div>{leCarePage[0]?.data.mission_title}</div>
         </Grid>
         <Grid
           item
@@ -493,9 +568,9 @@ const LecarechezMargueriteServices: React.FC = () => {
             padding: "5% 10%",
           }}
         >
-          <div>{posts[0]?.data.notre_description}</div>
+          <div>{leCarePage[0]?.data.mission_description}</div>
         </Grid>
-        {posts.map((post: any, postIndex: number) => (
+        {leCarePage.map((post: any, postIndex: number) => (
           <Grid container spacing={2} key={post}>
             <Grid
               item
@@ -509,187 +584,6 @@ const LecarechezMargueriteServices: React.FC = () => {
                 gap: "50px",
               }}
             >
-              {/* <Grid item lg={3}>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: "25px",
-                    fontWeight: 700,
-                    lineHeight: "31.25px",
-                    textAlign: "center",
-                    color: "#292F36",
-                  }}
-                >
-                  {post.data.missionheader}
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: "22px",
-                    fontWeight: 400,
-                    lineHeight: "33px",
-                    textAlign: "center",
-                    padding: "20px 0px 0px 0px",
-                    color: "#4D5053",
-                  }}
-                >
-                  {post.data.missioncontent}
-                </Typography>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    paddingTop: "52px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Button
-                    style={{
-                      fontFamily: "Mulish, sans-serif",
-                      fontSize: "18px",
-                      fontWeight: 600,
-                      lineHeight: "22.5px",
-                      textAlign: "center",
-                      color: "#4D5053",
-                      textTransform: "none",
-                    }}
-                  >
-                    {post.data.buttontext}
-                  </Button>
-                  <img
-                    src={post.data.buttonicon?.url || ""}
-                    alt={post.data.buttonicon?.alt || "icon"}
-                    style={{
-                      width: "15.14px",
-                      height: "13.18px",
-                      paddingLeft: "26.02px",
-                    }}
-                  />
-                </div>
-              </Grid>
-              <Grid item lg={3}>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: "25px",
-                    fontWeight: 700,
-                    lineHeight: "31.25px",
-                    textAlign: "center",
-                    color: "#292F36",
-                  }}
-                >
-                  {post.data.vissionheader}
-                </Typography>
-                <Typography
-                  style={{
-                    fontFamily: "Mulish, sans-serif",
-                    fontSize: "22px",
-                    fontWeight: 400,
-                    lineHeight: "33px",
-                    textAlign: "center",
-                    // padding: "20px",
-                    padding: "20px 0px 0px 0px",
-                    color: "#4D5053",
-                  }}
-                >
-                  {post.data.vissioncontent}
-                </Typography>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "row",
-                    paddingTop: "52px",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <Button
-                    style={{
-                      fontFamily: "Mulish, sans-serif",
-                      fontSize: "18px",
-                      fontWeight: 600,
-                      lineHeight: "22.5px",
-                      textAlign: "center",
-                      color: "#4D5053",
-                      textTransform: "none",
-                    }}
-                  >
-                    {post.data.buttontext}
-                  </Button>
-                  <img
-                    src={post.data.buttonicon?.url || ""}
-                    alt={post.data.buttonicon?.alt || "icon"}
-                    style={{
-                      width: "15.14px",
-                      height: "13.18px",
-                      paddingLeft: "26.02px",
-                    }}
-                  />
-                </div>
-              </Grid>
-              <Grid item lg={3}>
-                <div style={{ paddingTop: "10px" }}>
-                  <Typography
-                    style={{
-                      fontFamily: "Mulish, sans-serif",
-                      fontSize: "25px",
-                      fontWeight: 700,
-                      lineHeight: "31.25px",
-                      textAlign: "center",
-                      color: "#292F36",
-                    }}
-                  >
-                    {post.data.valeursheader}
-                  </Typography>
-                  <Typography
-                    style={{
-                      fontFamily: "Mulish, sans-serif",
-                      fontSize: "22px",
-                      fontWeight: 400,
-                      lineHeight: "33px",
-                      textAlign: "center",
-                      // padding:'20px',
-                      padding: "20px 0px 0px 0px",
-                      color: "#4D5053",
-                    }}
-                  >
-                    {post.data.valeurscontent}
-                  </Typography>
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "row",
-                      paddingTop: "73px",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Button
-                      style={{
-                        fontFamily: "Mulish, sans-serif",
-                        fontSize: "18px",
-                        fontWeight: 600,
-                        lineHeight: "22.5px",
-                        textAlign: "center",
-                        color: "#4D5053",
-                        textTransform: "none",
-                      }}
-                    >
-                      {post.data.buttontext}
-                    </Button>
-                    <img
-                      src={post.data.buttonicon?.url || ""}
-                      alt={post.data.buttonicon?.alt || "icon"}
-                      style={{
-                        width: "15.14px",
-                        height: "13.18px",
-                        paddingLeft: "26.02px",
-                      }}
-                    />
-                  </div>
-                </div>
-              </Grid> */}
               <Grid
                 item
                 lg={3}
@@ -702,11 +596,13 @@ const LecarechezMargueriteServices: React.FC = () => {
                   gap: "40px",
                 }}
               >
-                {posts[0]?.data.notre_image && (
+                {leCarePage[0]?.data.mission_left_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={posts[0]?.data.notre_image.url || undefined}
-                    alt={posts[0]?.data.notre_image.alt || "Image"}
+                    src={
+                      leCarePage[0]?.data.mission_left_image.url || undefined
+                    }
+                    alt={leCarePage[0]?.data.mission_left_image.alt || "Image"}
                     width="100%"
                     height="auto"
                   />
@@ -730,7 +626,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                     }}
                   >
-                    {post.data.notre_text}
+                    {post.data.mission_left_title}
                   </Typography>
                   <Typography
                     sx={{
@@ -740,7 +636,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                     }}
                   >
-                    {post.data.notre_text_description}
+                    {post.data.mission_left_description}
                   </Typography>
                 </div>
               </Grid>
@@ -756,11 +652,15 @@ const LecarechezMargueriteServices: React.FC = () => {
                   gap: "50px",
                 }}
               >
-                {posts[0]?.data.notre_middle_image && (
+                {leCarePage[0]?.data.mission_middle_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={posts[0]?.data.notre_middle_image.url || undefined}
-                    alt={posts[0]?.data.notre_middle_image.alt || "Image"}
+                    src={
+                      leCarePage[0]?.data.mission_middle_image.url || undefined
+                    }
+                    alt={
+                      leCarePage[0]?.data.mission_middle_image.alt || "Image"
+                    }
                     width="100%"
                     height="auto"
                   />
@@ -797,7 +697,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                     }}
                   >
-                    {post.data.nos_text}
+                    {post.data.mission_right_title}
                   </Typography>
                   <Typography
                     sx={{
@@ -807,14 +707,16 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                     }}
                   >
-                    {post.data.nos_text_description}
+                    {post.data.mission_right_description}
                   </Typography>
                 </div>
-                {posts[0]?.data.nos_image && (
+                {leCarePage[0]?.data.mission_right_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={posts[0]?.data.nos_image.url || undefined}
-                    alt={posts[0]?.data.nos_image.alt || "Image"}
+                    src={
+                      leCarePage[0]?.data.mission_right_image.url || undefined
+                    }
+                    alt={leCarePage[0]?.data.mission_right_image.alt || "Image"}
                     width="100%"
                     height="auto"
                   />
@@ -827,329 +729,197 @@ const LecarechezMargueriteServices: React.FC = () => {
 
       <div
         style={{
-          background: `url(${backgroundpeople})`,
+          background: `url(${middleBackground})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           width: "100%",
           height: "auto",
         }}
       >
-        {posts.map((post: any, postIndex: number) => (
-          <>
+        {leCarePage.map((post: any, postIndex: number) => (
+          <React.Fragment key={postIndex}>
             <div>
               <Typography
                 sx={{
                   fontFamily: "Mulish, sans-serif",
-                  // fontSize: "64px",
                   fontSize: { xs: "38px", sm: "52px", lg: "64px" },
                   fontWeight: 700,
-                  // lineHeight: "80.32px",
                   lineHeight: { xs: "45px", sm: "65px", lg: "80.32px" },
                   textAlign: "center",
                   color: "#0A1411",
-                  padding: "10%",
+                  padding: "0% 10%",
                 }}
               >
-                {post.data.peopleheading}
+                {post.data.profile_title}
               </Typography>
               <Typography
                 sx={{
                   fontFamily: "Mulish, sans-serif",
-                  // fontSize: "22px",
                   fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                   fontWeight: 400,
-                  // lineHeight: "33px",
                   lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
                   textAlign: "center",
                   color: "#4D5053",
-                  padding: "5% 10%",
+                  padding: "2% 10%",
                 }}
               >
-                {post.data.peoplecontent}
+                {post.data.profile_description}
               </Typography>
             </div>
-            <Grid
-              container
-              spacing={2}
-              // sx={{
-              //   display: "flex",
-              //   alignItems: "center",
-              //   justifyContent: "center",
-              // }}
-            >
+            <Grid container spacing={2}>
               <Grid
                 item
                 lg={12}
-                style={{
-                  display: "flex",
+                xs={12}
+                sm={12}
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "repeat(1, 1fr)",
+                    sm: "repeat(2, 1fr)",
+                    md: "repeat(3, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                  },
+                  // gridTemplateRows: "repeat(2, auto)",
                   textAlign: "center",
-                  alignItems: "center",
-                  justifyContent: "space-evenly",
-                  // padding: "60px 60px 60px 0px",
+                  gap: "3%",
                 }}
-                container
-                spacing={2}
               >
-                <Grid item lg={2}>
-                  {person1 ? (
-                    <div
-                      style={{
-                        background: "#FFFFFF",
-                        height: "433px",
-                        width: "283.55px",
-                        borderRadius: "30px",
-                      }}
-                      onClick={handleChangePerson1}
-                    >
-                      <div>
-                        <Typography style={designerNameStyle}>
-                          {post.data.designername}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designercontent}
-                        </Typography>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            paddingTop: "65.53px",
-                            justifyContent: "space-evenly",
-                          }}
-                        >
-                          {socialLinks.map((social: any, index: any) => (
-                            <PrismicNextLink key={index} field={social.link}>
-                              {social.icon && (
+                {personCards.map((person, index) => (
+                  <Grid
+                    key={person.id}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {flippedStates[index] ? (
+                      <Grid
+                        sx={{
+                          background: "#FFFFFF",
+                          height: "433px",
+                          width: "283.55px",
+                          borderRadius: "30px",
+                        }}
+                        onClick={() => handleFlipCard(index)}
+                      >
+                        <div>
+                          <Typography style={designerNameStyle}>
+                            {person.name}
+                          </Typography>
+                          <Typography style={designerDetailsStyle}>
+                            {person.details}
+                          </Typography>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              paddingTop: "65.53px",
+                              justifyContent: "space-evenly",
+                            }}
+                          >
+                            <PrismicNextLink field={person.facebookLink}>
+                              {leCarePage[0]?.data.facebook_icon && (
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img
-                                  src={social.icon.url || undefined}
+                                  src={
+                                    leCarePage[0]?.data.facebook_icon.url ||
+                                    undefined
+                                  }
                                   alt={
-                                    social.icon.alt || `${social.platform} icon`
+                                    leCarePage[0]?.data.facebook_icon.alt ||
+                                    "Image"
                                   }
                                 />
                               )}
                             </PrismicNextLink>
-                          ))}
-                        </div>
-                        <Typography
-                          style={{
-                            ...designerDetailsStyle,
-                            paddingTop: "65px",
-                          }}
-                        >
-                          {post.data.designercontact}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designeremail}
-                        </Typography>
-                      </div>
-                    </div>
-                  ) : (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.person1?.url || ""}
-                      alt={post.data.person1?.alt || "icon"}
-                      style={{ height: "433px", width: "283.55px" }}
-                      onClick={handleChangePerson1}
-                    />
-                  )}
-                </Grid>
-                <Grid item lg={2}>
-                  {person2 ? (
-                    <div
-                      style={{
-                        background: "#FFFFFF",
-                        height: "433px",
-                        width: "283.55px",
-                        borderRadius: "30px",
-                      }}
-                      onClick={handleChangePerson2}
-                    >
-                      <div>
-                        <Typography style={designerNameStyle}>
-                          {post.data.designername}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designercontent}
-                        </Typography>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            paddingTop: "65.53px",
-                            justifyContent: "space-evenly",
-                          }}
-                        >
-                          {socialLinks.map((social: any, index: any) => (
-                            <PrismicNextLink key={index} field={social.link}>
-                              {social.icon && (
+                            <PrismicNextLink field={person.twitterLink}>
+                              {leCarePage[0]?.data.twitter_icon && (
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img
-                                  src={social.icon.url || undefined}
+                                  src={
+                                    leCarePage[0]?.data.twitter_icon.url ||
+                                    undefined
+                                  }
                                   alt={
-                                    social.icon.alt || `${social.platform} icon`
+                                    leCarePage[0]?.data.twitter_icon.alt ||
+                                    "Image"
                                   }
                                 />
                               )}
                             </PrismicNextLink>
-                          ))}
-                        </div>
-                        <Typography
-                          style={{
-                            ...designerDetailsStyle,
-                            paddingTop: "65px",
-                          }}
-                        >
-                          {post.data.designercontact}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designeremail}
-                        </Typography>
-                      </div>
-                    </div>
-                  ) : (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.person2?.url || ""}
-                      alt={post.data.person2?.alt || "icon"}
-                      style={{ width: "283.55px", height: "433px" }}
-                      onClick={handleChangePerson2}
-                    />
-                  )}
-                </Grid>
-                <Grid item lg={2}>
-                  {person3 ? (
-                    <div
-                      style={{
-                        background: "#FFFFFF",
-                        height: "433px",
-                        width: "283.55px",
-                        borderRadius: "30px",
-                      }}
-                      onClick={handleChangePerson3}
-                    >
-                      <div>
-                        <Typography style={designerNameStyle}>
-                          {post.data.designername}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designercontent}
-                        </Typography>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            paddingTop: "65.53px",
-                            justifyContent: "space-evenly",
-                          }}
-                        >
-                          {socialLinks.map((social: any, index: any) => (
-                            <PrismicNextLink key={index} field={social.link}>
-                              {social.icon && (
+                            <PrismicNextLink field={person.linkedinLink}>
+                              {leCarePage[0]?.data.linkedin_icon && (
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img
-                                  src={social.icon.url || undefined}
+                                  src={
+                                    leCarePage[0]?.data.linkedin_icon.url ||
+                                    undefined
+                                  }
                                   alt={
-                                    social.icon.alt || `${social.platform} icon`
+                                    leCarePage[0]?.data.linkedin_icon.alt ||
+                                    "Image"
                                   }
                                 />
                               )}
                             </PrismicNextLink>
-                          ))}
-                        </div>
-                        <Typography
-                          style={{
-                            ...designerDetailsStyle,
-                            paddingTop: "65px",
-                          }}
-                        >
-                          {post.data.designercontact}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designeremail}
-                        </Typography>
-                      </div>
-                    </div>
-                  ) : (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.person3?.url || ""}
-                      alt={post.data.person3?.alt || "icon"}
-                      style={{ width: "283.55px", height: "433px" }}
-                      onClick={handleChangePerson3}
-                    />
-                  )}
-                </Grid>
-                <Grid item lg={2}>
-                  {person4 ? (
-                    <div
-                      style={{
-                        background: "#FFFFFF",
-                        height: "433px",
-                        width: "283.55px",
-                        borderRadius: "30px",
-                      }}
-                      onClick={handleChangePerson4}
-                    >
-                      <div>
-                        <Typography style={designerNameStyle}>
-                          {post.data.designername}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designercontent}
-                        </Typography>
-                        <div
-                          style={{
-                            display: "flex",
-                            flexDirection: "row",
-                            paddingTop: "65.53px",
-                            justifyContent: "space-evenly",
-                          }}
-                        >
-                          {socialLinks.map((social: any, index: any) => (
-                            <PrismicNextLink key={index} field={social.link}>
-                              {social.icon && (
+                            <PrismicNextLink field={person.instagramLink}>
+                              {leCarePage[0]?.data.instagram_icon && (
                                 // eslint-disable-next-line @next/next/no-img-element
                                 <img
-                                  src={social.icon.url || undefined}
+                                  src={
+                                    leCarePage[0]?.data.instagram_icon.url ||
+                                    undefined
+                                  }
                                   alt={
-                                    social.icon.alt || `${social.platform} icon`
+                                    leCarePage[0]?.data.instagram_icon.alt ||
+                                    "Image"
                                   }
                                 />
                               )}
                             </PrismicNextLink>
-                          ))}
+                          </div>
+                          <Typography
+                            style={{
+                              ...designerDetailsStyle,
+                              paddingTop: "65px",
+                            }}
+                          >
+                            {person.phone}
+                          </Typography>
+                          <Typography style={designerDetailsStyle}>
+                            {person.email}
+                          </Typography>
                         </div>
-                        <Typography
-                          style={{
-                            ...designerDetailsStyle,
-                            paddingTop: "65px",
-                          }}
-                        >
-                          {post.data.designercontact}
-                        </Typography>
-                        <Typography style={designerDetailsStyle}>
-                          {post.data.designeremail}
-                        </Typography>
-                      </div>
-                    </div>
-                  ) : (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.person4?.url || ""}
-                      alt={post.data.person4?.alt || "icon"}
-                      style={{ width: "283.55px", height: "433px" }}
-                      onClick={handleChangePerson4}
-                    />
-                  )}
-                </Grid>
+                      </Grid>
+                    ) : (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={person.profile || undefined}
+                        alt={person.name || "Image"}
+                        style={{ width: "283.55px", height: "433px" }}
+                        onClick={() => handleFlipCard(index)}
+                      />
+                    )}
+                  </Grid>
+                ))}
               </Grid>
             </Grid>
-          </>
+          </React.Fragment>
         ))}
       </div>
 
-      <div>
-        {posts.map((post: any, postIndex: number) => (
+      <div
+        style={{
+          backgroundImage: `url(${bottomBackground})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          height: "auto",
+          width: "100%",
+        }}
+      >
+        {leCarePage.map((post: any, postIndex: number) => (
           <>
             <div>
               <Typography
@@ -1165,7 +935,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   padding: "10% 10% 0% 10%",
                 }}
               >
-                {post.data.lastheader}
+                {post.data.bottom_title}
               </Typography>
               <Typography
                 sx={{
@@ -1180,17 +950,20 @@ const LecarechezMargueriteServices: React.FC = () => {
                   padding: "5% 10%",
                 }}
               >
-                {post.data.lastcontent}
+                {post.data.bottom_description}
               </Typography>
             </div>
             <div
-              style={{
-                backgroundImage: `url(${lastbackground})`,
-                backgroundSize: "cover",
-                backgroundRepeat: "no-repeat",
-                height: "auto",
-                width: "100%",
-              }}
+              style={
+                {
+                  // backgroundImage: `url(${bottomBackground})`,
+                  // backgroundSize: "cover",
+                  // backgroundPosition: "center",
+                  // backgroundRepeat: "no-repeat",
+                  // height: "auto",
+                  // width: "100%",
+                }
+              }
             >
               <Grid
                 container
@@ -1225,6 +998,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       justifyContent: "space-between",
                       flexDirection: "row",
                       padding: "20px 0px 0px 20px",
+                      boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.2)",
                     }}
                   >
                     <div
@@ -1239,11 +1013,17 @@ const LecarechezMargueriteServices: React.FC = () => {
                           flexDirection: "row",
                         }}
                       >
-                        {posts[0]?.data.lastlogo1 && (
+                        {leCarePage[0]?.data.bottom_card_icon1 && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={posts[0]?.data.lastlogo1.url || undefined}
-                            alt={posts[0]?.data.lastlogo1.alt || "Image"}
+                            src={
+                              leCarePage[0]?.data.bottom_card_icon1.url ||
+                              undefined
+                            }
+                            alt={
+                              leCarePage[0]?.data.bottom_card_icon1.alt ||
+                              "Image"
+                            }
                             style={{
                               width: "30px",
                               height: "30px",
@@ -1260,7 +1040,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                             paddingLeft: "10px",
                           }}
                         >
-                          {posts[0]?.data.box1header}
+                          {leCarePage[0]?.data.bottom_card_title1}
                         </Typography>
                       </div>
                       <Typography
@@ -1273,14 +1053,19 @@ const LecarechezMargueriteServices: React.FC = () => {
                           paddingTop: "20px",
                         }}
                       >
-                        {posts[0]?.data.box1content}
+                        {leCarePage[0]?.data.bottom_card_description1}
                       </Typography>
                     </div>
-                    {posts[0]?.data.last_image1 && (
+                    {leCarePage[0]?.data.bottom_card_image1 && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={posts[0]?.data.last_image1.url || undefined}
-                        alt={posts[0]?.data.last_image1.alt || "Image"}
+                        src={
+                          leCarePage[0]?.data.bottom_card_image1.url ||
+                          undefined
+                        }
+                        alt={
+                          leCarePage[0]?.data.bottom_card_image1.alt || "Image"
+                        }
                         style={{
                           width: "40%",
                           height: "auto",
@@ -1299,6 +1084,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       justifyContent: "space-between",
                       flexDirection: "row",
                       padding: "20px 0px 0px 20px",
+                      boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.2)",
                     }}
                   >
                     <div
@@ -1313,11 +1099,17 @@ const LecarechezMargueriteServices: React.FC = () => {
                           flexDirection: "row",
                         }}
                       >
-                        {posts[0]?.data.lastlogo2 && (
+                        {leCarePage[0]?.data.bottom_card_icon2 && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={posts[0]?.data.lastlogo2.url || undefined}
-                            alt={posts[0]?.data.lastlogo2.alt || "Image"}
+                            src={
+                              leCarePage[0]?.data.bottom_card_icon2.url ||
+                              undefined
+                            }
+                            alt={
+                              leCarePage[0]?.data.bottom_card_icon2.alt ||
+                              "Image"
+                            }
                             style={{
                               width: "30px",
                               height: "30px",
@@ -1334,7 +1126,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                             paddingLeft: "10px",
                           }}
                         >
-                          {posts[0]?.data.box2header}
+                          {leCarePage[0]?.data.bottom_card_title2}
                         </Typography>
                       </div>
                       <Typography
@@ -1347,14 +1139,19 @@ const LecarechezMargueriteServices: React.FC = () => {
                           paddingTop: "20px",
                         }}
                       >
-                        {posts[0]?.data.box2content}
+                        {leCarePage[0]?.data.bottom_card_description2}
                       </Typography>
                     </div>
-                    {posts[0]?.data.last_image2 && (
+                    {leCarePage[0]?.data.bottom_card_image2 && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={posts[0]?.data.last_image2.url || undefined}
-                        alt={posts[0]?.data.last_image2.alt || "Image"}
+                        src={
+                          leCarePage[0]?.data.bottom_card_image2.url ||
+                          undefined
+                        }
+                        alt={
+                          leCarePage[0]?.data.bottom_card_image2.alt || "Image"
+                        }
                         style={{
                           width: "40%",
                           height: "auto",
@@ -1386,6 +1183,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       justifyContent: "space-between",
                       flexDirection: "row",
                       padding: "20px 0px 0px 20px",
+                      boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.2)",
                     }}
                   >
                     <div
@@ -1400,11 +1198,17 @@ const LecarechezMargueriteServices: React.FC = () => {
                           flexDirection: "row",
                         }}
                       >
-                        {posts[0]?.data.lastlogo3 && (
+                        {leCarePage[0]?.data.bottom_card_icon3 && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={posts[0]?.data.lastlogo3.url || undefined}
-                            alt={posts[0]?.data.lastlogo3.alt || "Image"}
+                            src={
+                              leCarePage[0]?.data.bottom_card_icon3.url ||
+                              undefined
+                            }
+                            alt={
+                              leCarePage[0]?.data.bottom_card_icon3.alt ||
+                              "Image"
+                            }
                             style={{
                               width: "30px",
                               height: "30px",
@@ -1421,7 +1225,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                             paddingLeft: "10px",
                           }}
                         >
-                          {posts[0]?.data.box3header}
+                          {leCarePage[0]?.data.bottom_card_title3}
                         </Typography>
                       </div>
                       <Typography
@@ -1434,14 +1238,19 @@ const LecarechezMargueriteServices: React.FC = () => {
                           paddingTop: "20px",
                         }}
                       >
-                        {posts[0]?.data.box3content}
+                        {leCarePage[0]?.data.bottom_card_description3}
                       </Typography>
                     </div>
-                    {posts[0]?.data.last_image3 && (
+                    {leCarePage[0]?.data.bottom_card_image3 && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={posts[0]?.data.last_image3.url || undefined}
-                        alt={posts[0]?.data.last_image3.alt || "Image"}
+                        src={
+                          leCarePage[0]?.data.bottom_card_image3.url ||
+                          undefined
+                        }
+                        alt={
+                          leCarePage[0]?.data.bottom_card_image3.alt || "Image"
+                        }
                         style={{
                           width: "40%",
                           height: "auto",
@@ -1460,6 +1269,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       justifyContent: "space-between",
                       flexDirection: "row",
                       padding: "20px 0px 0px 20px",
+                      boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.2)",
                     }}
                   >
                     <div
@@ -1474,11 +1284,17 @@ const LecarechezMargueriteServices: React.FC = () => {
                           flexDirection: "row",
                         }}
                       >
-                        {posts[0]?.data.lastlogo4 && (
+                        {leCarePage[0]?.data.bottom_card_icon4 && (
                           // eslint-disable-next-line @next/next/no-img-element
                           <img
-                            src={posts[0]?.data.lastlogo4.url || undefined}
-                            alt={posts[0]?.data.lastlogo4.alt || "Image"}
+                            src={
+                              leCarePage[0]?.data.bottom_card_icon4.url ||
+                              undefined
+                            }
+                            alt={
+                              leCarePage[0]?.data.bottom_card_icon4.alt ||
+                              "Image"
+                            }
                             style={{
                               width: "30px",
                               height: "30px",
@@ -1495,7 +1311,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                             paddingLeft: "10px",
                           }}
                         >
-                          {posts[0]?.data.box4header}
+                          {leCarePage[0]?.data.bottom_card_title4}
                         </Typography>
                       </div>
                       <Typography
@@ -1508,14 +1324,19 @@ const LecarechezMargueriteServices: React.FC = () => {
                           paddingTop: "20px",
                         }}
                       >
-                        {posts[0]?.data.box4content}
+                        {leCarePage[0]?.data.bottom_card_description4}
                       </Typography>
                     </div>
-                    {posts[0]?.data.last_image4 && (
+                    {leCarePage[0]?.data.bottom_card_image4 && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={posts[0]?.data.last_image4.url || undefined}
-                        alt={posts[0]?.data.last_image4.alt || "Image"}
+                        src={
+                          leCarePage[0]?.data.bottom_card_image4.url ||
+                          undefined
+                        }
+                        alt={
+                          leCarePage[0]?.data.bottom_card_image4.alt || "Image"
+                        }
                         style={{
                           width: "40%",
                           height: "auto",

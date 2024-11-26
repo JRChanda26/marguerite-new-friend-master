@@ -16,7 +16,7 @@ export default function NotreProcessus() {
       setNotrePage(data);
     }
     fetchData();
-  },[]);
+  }, []);
 
   const title: React.CSSProperties = {
     color: "#1E1E1E",
@@ -70,24 +70,29 @@ export default function NotreProcessus() {
           }}
         >
           <Typography
-            style={{
-              fontSize: "64px",
+            sx={{
+              // fontSize: "64px",
               fontWeight: 700,
-              lineHeight: "80.32px",
+              // lineHeight: "80.32px",
+              fontSize: { xs: "28px", md: "45px", lg: "65px" },
+              lineHeight: { xs: "30px", md: "50px", lg: "80px" },
               color: "#0A1411",
-              fontFamily: "Mulish",
+              // fontFamily: "Mulish",
+              padding: { xs: "2% 3%", md: "2% 8%", lg: "2% 15%" },
             }}
           >
             {notrePage?.data.heading}
           </Typography>
           <Typography
-            style={{
-              fontSize: "24px",
+            sx={{
+              // fontSize: "24px",
               fontWeight: 400,
-              lineHeight: "38.04px",
+              // lineHeight: "38.04px",
+              fontSize: { xs: "12px", md: "16px", lg: "25px" },
+              lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
               color: "#565656",
-              padding: "0px 100px",
-              fontFamily: "Mulish",
+              padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
+              // fontFamily: "Mulish",
             }}
           >
             {notrePage?.data.description}
@@ -98,13 +103,12 @@ export default function NotreProcessus() {
           lg={12}
           xs={12}
           sm={12}
-          // md={6}
           sx={{
             display: "flex",
-            // flexDirection: "row",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
-            gap: "50px",
-            // padding: "50px 50px 0px 80px",
+            justifyContent: "space-evenly",
+            margin: "0% 5%",
+            gap:'3%'
           }}
         >
           <div>
@@ -124,10 +128,8 @@ export default function NotreProcessus() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              // paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
-              justifyContent:'center',
-              paddingRight: "5%",
-              paddingLeft:'5%'
+              justifyContent: "center",
+              gap: {xs:'2%', sm:'2%',lg:'5%'},
             }}
           >
             <Typography style={heading}>
@@ -166,22 +168,20 @@ export default function NotreProcessus() {
           xs={12}
           sm={12}
           lg={12}
-          // md={6}
           sx={{
             display: "flex",
-            // flexDirection: "row",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
-            gap: "50px",
-            // padding: "50px 0px 0px 50px",
+            justifyContent: "space-evenly",
+            margin: "0% 5%",
+            gap:'3%'
           }}
         >
           <Grid
             sx={{
               display: "flex",
               flexDirection: "column",
-              // paddingTop: {xs:'10%', sm:'3%', lg:'10%'},
-              justifyContent:'center',
-              paddingLeft: "5%",
+              justifyContent: "center",
+              gap: {xs:'2%', sm:'2%',lg:'5%'},
             }}
           >
             <Typography style={heading}>
@@ -233,13 +233,12 @@ export default function NotreProcessus() {
           xs={12}
           sm={12}
           lg={12}
-          // md={6}
           sx={{
             display: "flex",
-            // flexDirection: "row",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
-            gap: "50px",
-            // padding: "50px 50px 0px 50px",
+            justifyContent: "space-evenly",
+            margin: "0% 5%",
+            gap:'3%'
           }}
         >
           <div>
@@ -259,10 +258,8 @@ export default function NotreProcessus() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              // paddingTop: {xs:'0%', sm:'3%', lg:'10%'},
-              justifyContent:'center',
-              paddingRight: "5%",
-              paddingLeft:'5%'
+              justifyContent: "center",
+              gap: {xs:'2%', sm:'2%',lg:'5%'},
             }}
           >
             <Typography style={heading}>
