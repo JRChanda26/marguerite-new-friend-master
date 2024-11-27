@@ -133,7 +133,7 @@ export default function Paroles() {
             fontSize: { xs: "28px", md: "45px", lg: "65px" },
             lineHeight: { xs: "30px", md: "50px", lg: "80px" },
             padding: { xs: "2% 0%", md: "2% 0%", lg: "2% 0%" },
-            // fontFamily: "Mulish",
+            fontFamily: "sans-serif",
           }}
         >
           {parolesPage?.data.heading}
@@ -207,7 +207,7 @@ export default function Paroles() {
           sx={{
             color: "#000000",
             fontWeight: 300,
-            // fontFamily: "Mulish",
+            fontFamily: "sans-serif",
             fontSize: { xs: "12px", md: "16px", lg: "25px" },
             lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
             padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
@@ -310,7 +310,7 @@ export default function Paroles() {
                     color: "#000000",
                     fontSize: "22.02px",
                     fontWeight: 700,
-                    fontFamily: "Mulish",
+                    fontFamily: "sans-serif",
                     lineHeight: "25.74px",
                     textAlign: "center",
                     padding: "10px 20px",

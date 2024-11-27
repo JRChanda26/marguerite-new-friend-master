@@ -22,7 +22,7 @@ export default function NotreProcessus() {
     color: "#1E1E1E",
     fontSize: "42px",
     lineHeight: "49.22px",
-    fontFamily: "Mulish",
+    fontFamily: "sans-serif",
   };
 
   const heading: React.CSSProperties = {
@@ -32,7 +32,7 @@ export default function NotreProcessus() {
     fontWeight: 600,
     letterSpacing: "5px",
     lineHeight: "20.59px",
-    fontFamily: "Mulish",
+    fontFamily: "sans-serif",
   };
 
   const description: React.CSSProperties = {
@@ -40,7 +40,7 @@ export default function NotreProcessus() {
     fontSize: "18px",
     fontWeight: 400,
     lineHeight: "33.3px",
-    fontFamily: "Mulish",
+    fontFamily: "sans-serif",
     fontStyle: "italic",
   };
 
@@ -51,7 +51,7 @@ export default function NotreProcessus() {
     textDecoration: "none",
     display: "flex",
     flexDirection: "row",
-    fontFamily: "Mulish",
+    fontFamily: "sans-serif",
     fontStyle: "italic",
   };
 
@@ -77,7 +77,7 @@ export default function NotreProcessus() {
               fontSize: { xs: "28px", md: "45px", lg: "65px" },
               lineHeight: { xs: "30px", md: "50px", lg: "80px" },
               color: "#0A1411",
-              // fontFamily: "Mulish",
+              fontFamily: "sans-serif",
               padding: { xs: "2% 3%", md: "2% 8%", lg: "2% 15%" },
             }}
           >
@@ -92,7 +92,7 @@ export default function NotreProcessus() {
               lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
               color: "#565656",
               padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
-              // fontFamily: "Mulish",
+              fontFamily: "sans-serif",
             }}
           >
             {notrePage?.data.description}

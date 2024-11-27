@@ -212,6 +212,7 @@ const NosSolutionsDe: React.FC = () => {
                 justifyContent: "center",
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
                 gap: "20px",
+                alignItems:'center'
               }}
             >
               <Grid item lg={5} xs={12} sm={7}>
@@ -219,7 +220,7 @@ const NosSolutionsDe: React.FC = () => {
                   <Typography
                     key={post}
                     sx={{
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish, sans-serif",
                       fontWeight: 700,
                       fontSize: { xs: "30px", sm: "40px", lg: "50px" },
                       lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
@@ -233,8 +234,8 @@ const NosSolutionsDe: React.FC = () => {
                 <Typography
                   sx={{
                     color: "#4D5053",
-                    fontFamily: "Mulish",
-                    fontWeight: 700,
+                    // fontFamily: "Mulish, sans-serif",
+                    fontWeight: 400,
                     fontSize: { xs: "12px", sm: "18px", lg: "24px" },
                     lineHeight: { xs: "18px", sm: "25px", lg: "30.12px" },
                     paddingTop: "33px",
@@ -363,7 +364,7 @@ const NosSolutionsDe: React.FC = () => {
               sm={5}
               lg={4}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "410px" },
+                height: { xs: "0px", sm: "400px", lg: "530px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -384,7 +385,7 @@ const NosSolutionsDe: React.FC = () => {
                           // fontSize: "25px",
                           fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.question}
@@ -397,7 +398,7 @@ const NosSolutionsDe: React.FC = () => {
                           // fontSize: "22px",
                           fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.answer}

@@ -9,6 +9,7 @@ import {
   Box,
   Grid,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Liberez from "../mainpage/Liberez";
 import Footer from "../mainpage/Footer";
@@ -210,6 +211,21 @@ const LecarechezMargueriteServices: React.FC = () => {
     color: "#292F36",
   };
 
+  const isLg = useMediaQuery("(max-width:1200px)");
+  const isMd = useMediaQuery("(max-width:992px)");
+  const isSm = useMediaQuery("(max-width:768px)");
+  const isXs = useMediaQuery("(max-width:576px)");
+
+  const getDimensions = () => {
+    if (isXs) return { width: "180px", height: "350px" };
+    if (isSm) return { width: "200px", height: "350px" };
+    if (isMd) return { width: "250px", height: "400px" };
+    if (isLg) return { width: "283px", height: "433px" };
+    return { width: "283.55px", height: "433px" }; // Default for larger screens
+  };
+
+  const dimensions = getDimensions();
+
   return (
     <Box>
       <Header />
@@ -289,7 +305,7 @@ const LecarechezMargueriteServices: React.FC = () => {
       >
         <Typography
           sx={{
-            fontFamily: "Mulish",
+            // fontFamily: "Mulish, sans-serif",
             color: "#24535C",
             fontWeight: 400,
             fontSize: { xs: "28px", sm: "38px", lg: "48px" },
@@ -320,7 +336,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "10%",
+            marginTop: "5%",
             flexDirection: "column",
           }}
         >
@@ -386,6 +402,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
                 justifyContent: "center",
                 gap: "30px",
+                alignItems: "center",
               }}
             >
               <Grid item lg={5} xs={12} sm={7}>
@@ -393,7 +410,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   sx={{
                     // fontSize: "50px",
                     fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-                    fontWeight: 600,
+                    fontWeight: 700,
                     // lineHeight: "62.5px",
                     lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
                   }}
@@ -491,7 +508,7 @@ const LecarechezMargueriteServices: React.FC = () => {
               sm={5}
               lg={4}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "410px" },
+                height: { xs: "0px", sm: "400px", lg: "530px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -512,7 +529,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           // fontSize: "25px",
                           fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.question}
@@ -525,7 +542,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           // fontSize: "22px",
                           fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.answer}
@@ -548,10 +565,10 @@ const LecarechezMargueriteServices: React.FC = () => {
             textAlign: "center",
             // fontSize: "64px",
             fontSize: { xs: "38px", sm: "50px", lg: "64px" },
-            fontFamily: "Mulish",
+            // fontFamily: "Mulish, sans-serif",
             fontWeight: 700,
             color: "1D1D1D",
-            paddingTop: "10%",
+            paddingTop: "5%",
           }}
         >
           <div>{leCarePage[0]?.data.mission_title}</div>
@@ -563,7 +580,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             textAlign: "center",
             // fontSize: "36px",
             fontSize: { xs: "18px", sm: "25px", lg: "36px" },
-            fontFamily: "Mulish",
+            // fontFamily: "Mulish, sans-serif",
             color: "1D1D1D",
             padding: "5% 10%",
           }}
@@ -623,7 +640,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       // fontSize: "50px",
                       fontSize: { xs: "50px", sm: "40px", lg: "50px" },
                       color: "#1D1D1D",
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish, sans-serif",
                     }}
                   >
                     {post.data.mission_left_title}
@@ -633,7 +650,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       // fontSize: "24px",
                       fontSize: { xs: "24px", sm: "20px", lg: "24px" },
                       color: "#1D1D1D",
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish, sans-serif",
                     }}
                   >
                     {post.data.mission_left_description}
@@ -694,7 +711,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       // fontSize: "50px",
                       fontSize: { xs: "50px", sm: "40px", lg: "50px" },
                       color: "#1D1D1D",
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish, sans-serif",
                     }}
                   >
                     {post.data.mission_right_title}
@@ -704,7 +721,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       // fontSize: "24px",
                       fontSize: { xs: "24px", sm: "20px", lg: "24px" },
                       color: "#1D1D1D",
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish, sans-serif",
                     }}
                   >
                     {post.data.mission_right_description}
@@ -729,11 +746,12 @@ const LecarechezMargueriteServices: React.FC = () => {
 
       <div
         style={{
-          background: `url(${middleBackground})`,
+          backgroundImage: `url(${middleBackground})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           width: "100%",
           height: "auto",
+          marginTop:'5%'
         }}
       >
         {leCarePage.map((post: any, postIndex: number) => (
@@ -747,7 +765,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   lineHeight: { xs: "45px", sm: "65px", lg: "80.32px" },
                   textAlign: "center",
                   color: "#0A1411",
-                  padding: "0% 10%",
+                  padding: "8% 10% 0% 10%",
                 }}
               >
                 {post.data.profile_title}
@@ -775,14 +793,15 @@ const LecarechezMargueriteServices: React.FC = () => {
                 sx={{
                   display: "grid",
                   gridTemplateColumns: {
-                    xs: "repeat(1, 1fr)",
-                    sm: "repeat(2, 1fr)",
+                    xs: "repeat(2, 1fr)",
+                    sm: "repeat(3, 1fr)",
                     md: "repeat(3, 1fr)",
                     lg: "repeat(4, 1fr)",
                   },
                   // gridTemplateRows: "repeat(2, auto)",
                   textAlign: "center",
                   gap: "3%",
+                  margin:{xs:'0%', sm:'0%', lg:'0% 10%'},
                 }}
               >
                 {personCards.map((person, index) => (
@@ -797,8 +816,10 @@ const LecarechezMargueriteServices: React.FC = () => {
                       <Grid
                         sx={{
                           background: "#FFFFFF",
-                          height: "433px",
-                          width: "283.55px",
+                          // height: "433px",
+                          // width: "283.55px",
+                          width: dimensions.width,
+                          height: dimensions.height,
                           borderRadius: "30px",
                         }}
                         onClick={() => handleFlipCard(index)}
@@ -897,7 +918,11 @@ const LecarechezMargueriteServices: React.FC = () => {
                       <img
                         src={person.profile || undefined}
                         alt={person.name || "Image"}
-                        style={{ width: "283.55px", height: "433px" }}
+                        // style={{ width: "283.55px", height: "433px" }}
+                        style={{
+                          width: dimensions.width,
+                          height: dimensions.height,
+                        }}
                         onClick={() => handleFlipCard(index)}
                       />
                     )}
@@ -933,6 +958,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   textAlign: "center",
                   color: "#0A1411",
                   padding: "10% 10% 0% 10%",
+                  marginTop:{xs:'50%', sm:'0%',lg:'0%'}
                 }}
               >
                 {post.data.bottom_title}
@@ -1034,7 +1060,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           sx={{
                             // fontSize: "26px",
                             fontSize: { xs: "15px", sm: "35px", lg: "26px" },
-                            fontFamily: "Mulish",
+                            // fontFamily: "Mulish, sans-serif",
                             fontWeight: 400,
                             color: "#1E1E1E",
                             paddingLeft: "10px",
@@ -1047,7 +1073,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         sx={{
                           // fontSize: "18px",
                           fontSize: { xs: "12px", sm: "25px", lg: "18px" },
-                          fontFamily: "Mulish",
+                          // fontFamily: "Mulish, sans-serif",
                           fontStyle: "italic",
                           color: "#1E1E1E",
                           paddingTop: "20px",
@@ -1120,7 +1146,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           sx={{
                             // fontSize: "26px",
                             fontSize: { xs: "15px", sm: "35px", lg: "26px" },
-                            fontFamily: "Mulish",
+                            // fontFamily: "Mulish, sans-serif",
                             fontWeight: 400,
                             color: "#1E1E1E",
                             paddingLeft: "10px",
@@ -1133,7 +1159,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         sx={{
                           // fontSize: "18px",
                           fontSize: { xs: "12px", sm: "25px", lg: "18px" },
-                          fontFamily: "Mulish",
+                          // fontFamily: "Mulish, sans-serif",
                           fontStyle: "italic",
                           color: "#1E1E1E",
                           paddingTop: "20px",
@@ -1219,7 +1245,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           sx={{
                             // fontSize: "26px",
                             fontSize: { xs: "15px", sm: "35px", lg: "26px" },
-                            fontFamily: "Mulish",
+                            // fontFamily: "Mulish, sans-serif",
                             fontWeight: 400,
                             color: "#1E1E1E",
                             paddingLeft: "10px",
@@ -1232,7 +1258,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         sx={{
                           // fontSize: "18px",
                           fontSize: { xs: "12px", sm: "25px", lg: "18px" },
-                          fontFamily: "Mulish",
+                          // fontFamily: "Mulish, sans-serif",
                           fontStyle: "italic",
                           color: "#1E1E1E",
                           paddingTop: "20px",
@@ -1305,7 +1331,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           sx={{
                             // fontSize: "26px",
                             fontSize: { xs: "15px", sm: "35px", lg: "26px" },
-                            fontFamily: "Mulish",
+                            // fontFamily: "Mulish, sans-serif",
                             fontWeight: 400,
                             color: "#1E1E1E",
                             paddingLeft: "10px",
@@ -1318,7 +1344,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                         sx={{
                           // fontSize: "18px",
                           fontSize: { xs: "12px", sm: "25px", lg: "18px" },
-                          fontFamily: "Mulish",
+                          // fontFamily: "Mulish, sans-serif",
                           fontStyle: "italic",
                           color: "#1E1E1E",
                           paddingTop: "20px",

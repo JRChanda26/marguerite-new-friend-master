@@ -251,7 +251,7 @@ const ManagePerLaCare: React.FC = () => {
                   <Typography
                     key={index}
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "Mulish, sans-serif",
                       fontWeight: 700,
                       fontSize: { xs: "30px", sm: "40px", lg: "50px" },
                       lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
@@ -264,7 +264,7 @@ const ManagePerLaCare: React.FC = () => {
                 ))}
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "Mulish, sans-serif",
                     color: "rgba(35, 125, 108, 1)",
                     fontWeight: 700,
                     fontSize: { xs: "12px", sm: "18px", lg: "24px" },
@@ -348,7 +348,7 @@ const ManagePerLaCare: React.FC = () => {
           <Typography
             sx={{
               color: "rgba(36, 83, 92, 1)",
-              fontFamily: "Mulish",
+              fontFamily: "Mulish, sans-serif",
               fontWeight: 800,
               // fontSize: "64px",
               fontSize: { xs: "30px", sm: "50px", lg: "64px" },
@@ -537,7 +537,7 @@ const ManagePerLaCare: React.FC = () => {
                           // fontSize: "25px",
                           fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.question}
@@ -550,7 +550,7 @@ const ManagePerLaCare: React.FC = () => {
                           // fontSize: "22px",
                           fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.answer}
@@ -627,7 +627,7 @@ const ManagePerLaCare: React.FC = () => {
               sm={5}
               lg={4}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "410px" },
+                height: { xs: "0px", sm: "400px", lg: "530px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -648,7 +648,7 @@ const ManagePerLaCare: React.FC = () => {
                           // fontSize: "25px",
                           fontSize: { xs: "18px", sm: "28px", lg: "38px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.question}
@@ -661,7 +661,7 @@ const ManagePerLaCare: React.FC = () => {
                           // fontSize: "22px",
                           fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish",
+                          fontFamily: "Mulish, sans-serif",
                         }}
                       >
                         {faq.answer}

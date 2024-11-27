@@ -89,7 +89,7 @@ export default function Liberez() {
   };
 
   return (
-    <div style={{ background: "#FFFFFF", margin: "5%" }}>
+    <div style={{ background: "#FFFFFF", margin: "5% 10%" }}>
       <Grid container spacing={2}>
         <Grid
           item
@@ -101,7 +101,7 @@ export default function Liberez() {
             flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             padding: "5%",
-            borderRadius: "30px",
+            borderRadius: "60px",
           }}
         >
           <Grid
@@ -114,7 +114,7 @@ export default function Liberez() {
             <div
               style={{
                 color: "#24535C",
-                fontFamily: "Mulish",
+                fontFamily: "Mulish, sans-serif",
                 fontSize: "41px",
                 fontWeight: 700,
               }}
@@ -124,7 +124,7 @@ export default function Liberez() {
             <div
               style={{
                 color: "#24535C",
-                fontFamily: "Mulish",
+                fontFamily: "Mulish, sans-serif",
                 fontSize: "23px",
                 fontWeight: 400,
                 paddingTop: "30px",
@@ -193,7 +193,7 @@ export default function Liberez() {
                 borderRadius: "30px",
                 textTransform: "none",
                 color: "#FFFFFF",
-                fontFamily: "Mulish",
+                fontFamily: "Mulish, sans-serif",
                 fontSize: { xs: "10px", sm: "15px", lg: "19.25px" },
                 fontWeight: 400,
                 padding: "5px 10px",
