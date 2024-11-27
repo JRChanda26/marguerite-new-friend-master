@@ -11,7 +11,7 @@ export default function Paroles() {
   const [playingVideoId, setPlayingVideoId] = useState(null);
   const [currentIndex, setCurrentIndex] = useState<number | null>(0);
 
-  const videoRefs = useRef<Record<number, HTMLVideoElement | null>>({});
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -90,15 +90,29 @@ export default function Paroles() {
   };
 
   const handleVideoPlay = (id: any) => {
-    if (playingVideoId !== null && videoRefs.current[playingVideoId]) {
-      videoRefs.current[playingVideoId]?.pause();
-    }
+    // Pause previous video
+    videoRefs.current.forEach((video, idx) => {
+      if (idx !== id && video) {
+        video.pause();
+      }
+    });
+
     setPlayingVideoId(id);
     setIsAnimationPlaying(true);
     setCurrentIndex(null);
   };
 
   const handleVideoPause = () => {
+    if (playingVideoId !== null) {
+      setPlayingVideoId(playingVideoId);
+      setIsAnimationPlaying(true);
+    } else {
+      setPlayingVideoId(null);
+      setIsAnimationPlaying(false);
+    }
+  };
+
+  const handleVideoEnd = () => {
     setPlayingVideoId(null);
     setIsAnimationPlaying(false);
   };
@@ -275,11 +289,7 @@ export default function Paroles() {
                 {videoUrl ? (
                   <video
                     ref={(el) => {
-                      if (el) {
-                        videoRefs.current[item.id] = el;
-                      } else {
-                        delete videoRefs.current[item.id];
-                      }
+                      if (el) videoRefs.current[item.id] = el; 
                     }}
                     width="100%"
                     controls
@@ -287,8 +297,8 @@ export default function Paroles() {
                       borderRadius: "12px",
                     }}
                     onPlay={() => handleVideoPlay(item.id)}
-                    // onPause={handleVideoPause}
-                    onEnded={handleVideoPause}
+                    onPause={handleVideoPause}
+                    onEnded={handleVideoEnd}
                   >
                     <source src={videoUrl} type="video/mp4" />
                   </video>
@@ -306,7 +316,7 @@ export default function Paroles() {
                     padding: "10px 20px",
                   }}
                 >
-                  {item.title}
+                 {item.title}
                 </Typography>
               </Box>
             ))}
