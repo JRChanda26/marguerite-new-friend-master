@@ -177,19 +177,21 @@ export default function BlogEt() {
             </Grid>
           ))}
         </Grid>
+        <Link href='/blogs/blog' style={{textDecoration:'none'}}>
         <Typography
-          style={{
-            fontFamily: "Jenna Sue",
+          sx={{
+            // fontFamily: "Jenna Sue",
             color: "#24535C",
             fontSize: "44px",
             lineHeight: "44px",
             textAlign: "center",
-            textDecoration: "underline",
+            // textDecoration: "underline",
             paddingTop: "5%",
           }}
         >
           {blogPage?.data.footer_text}
         </Typography>
+        </Link>
       </Grid>
     </div>
   );
