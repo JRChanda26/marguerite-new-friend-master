@@ -368,8 +368,8 @@ export default function Contact() {
                 )}
                 <Typography
                   sx={{
-                    fontSize: { sm: "12px", lg: "16px" },
-                    paddingTop: "15px",
+                    fontSize: { xs: "16px", sm: "20px", lg: "24px" },
+                    paddingTop: "20px",
                   }}
                 >
                   {detail.text}
