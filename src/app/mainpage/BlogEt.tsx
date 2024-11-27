@@ -64,9 +64,7 @@ export default function BlogEt() {
         <Grid item xs={12} style={{ textAlign: "center" }}>
           <Typography
             sx={{
-              // fontSize: "48px",
               fontWeight: 700,
-              // lineHeight: "58px",
               fontSize: { xs: "28px", md: "45px", lg: "65px" },
               lineHeight: { xs: "30px", md: "50px", lg: "80px" },
               color: "#000000",
@@ -87,6 +85,7 @@ export default function BlogEt() {
             justifyContent: "space-evenly",
             flexWrap: "wrap",
             gap: "20px",
+            margin:'0% 5%'
           }}
         >
           {repeatItems.map((item, index: any) => (
@@ -177,20 +176,20 @@ export default function BlogEt() {
             </Grid>
           ))}
         </Grid>
-        <Link href='/blogs/blog' style={{textDecoration:'none'}}>
-        <Typography
-          sx={{
-            // fontFamily: "Jenna Sue",
-            color: "#24535C",
-            fontSize: "44px",
-            lineHeight: "44px",
-            textAlign: "center",
-            // textDecoration: "underline",
-            paddingTop: "5%",
-          }}
-        >
-          {blogPage?.data.footer_text}
-        </Typography>
+        <Link href="/blogs/blog" style={{ textDecoration: "none" }}>
+          <Typography
+            sx={{
+              // fontFamily: "Jenna Sue",
+              color: "#24535C",
+              fontSize: "44px",
+              lineHeight: "44px",
+              textAlign: "center",
+              // textDecoration: "underline",
+              padding: "10% 0%",
+            }}
+          >
+            {blogPage?.data.footer_text}
+          </Typography>
         </Link>
       </Grid>
     </div>

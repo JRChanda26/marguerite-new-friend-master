@@ -278,7 +278,7 @@ export default function Blogs() {
                   sx={{
                     display: "flex",
                     // flexDirection: "row",
-                    flexDirection: { xs: "column", sm: "row", lg: "row" },
+                    flexDirection: { xs: "column", sm: "column", lg: "row" },
                     padding: "22px",
                     gap: "50px",
                   }}
@@ -519,7 +519,7 @@ export default function Blogs() {
             },
             gap: "50px",
             justifyContent: "center",
-            padding: "50px",
+            padding: "3% 8%",
           }}
         >
           {repeatedArticleItems

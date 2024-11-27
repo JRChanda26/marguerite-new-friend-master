@@ -219,7 +219,7 @@ export default function BlogsNews() {
             // flexDirection: "row",
             flexDirection: { xs: "column", sm: "column", lg: "row" },
             justifyContent: "space-evenly",
-            marginTop: "50px",
+            margin: "5%",
           }}
         >
           <Grid item lg={7}>
@@ -526,7 +526,7 @@ export default function BlogsNews() {
           xs={12}
           sm={12}
           style={{
-            padding: "2%",
+            margin: "0% 5%",
           }}
         >
           <Typography

@@ -64,7 +64,7 @@ const NousAgissons: React.FC = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    // fontFamily: "Mulish",
+                    fontFamily: "sans-serif",
                     color: "rgba(36, 83, 92, 1)",
                     fontWeight: 700,
                     fontSize: { xs: "15px", sm: "25px", lg: "65px" },
@@ -86,7 +86,7 @@ const NousAgissons: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      // fontFamily: "Mulish",
+                      // fontFamily: "Mulish, sans-serif",
                       fontWeight: 400,
                       fontSize: { xs: "12px", sm: "18px", lg: "20px" },
                       lineHeight: { xs: "5px", sm: "12px", lg: "18.24px" },

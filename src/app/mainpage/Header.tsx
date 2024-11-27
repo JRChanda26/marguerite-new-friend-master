@@ -84,7 +84,7 @@ const Header: React.FC = () => {
               >
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "Mulish, sans-serif",
                     color: "#24535C",
                     // fontSize: "26.49px",
                     fontSize: { xs: "17px", md: "26.49px" },
@@ -99,7 +99,7 @@ const Header: React.FC = () => {
               <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "Mulish, sans-serif",
                     color: "#24535C",
                     // fontSize: "26.49px",
                     fontSize: { xs: "17px", md: "26.49px" },
@@ -114,7 +114,7 @@ const Header: React.FC = () => {
               <Link href={"/nossolutionsde"} style={{ textDecoration: "none" }}>
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "Mulish, sans-serif",
                     color: "#24535C",
                     // fontSize: "26.49px",
                     fontSize: { xs: "17px", md: "26.49px" },

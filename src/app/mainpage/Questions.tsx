@@ -89,7 +89,7 @@ export default function Questions() {
                 color: "#14292D",
                 // fontSize: "64px",
                 fontWeight: 700,
-                // fontFamily: "Mulish",
+                // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "76.8px",
                 fontSize: { xs: "28px", md: "45px", lg: "65px" },
                 lineHeight: { xs: "30px", md: "50px", lg: "80px" },
@@ -107,7 +107,7 @@ export default function Questions() {
                 color: "#161C2DB8",
                 // fontSize: "34px",
                 fontWeight: 400,
-                // fontFamily: "Mulish",
+                // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "36.8px",
                 fontSize: { xs: "12px", md: "20px", lg: "25px" },
                 lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
@@ -135,7 +135,7 @@ export default function Questions() {
                   sm: "5% 0% 0% 12%",
                   lg: "5% 0% 0% 20%",
                 },
-                // fontFamily: "Mulish",
+                // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "26px",
                 // fontSize: "21.67px",
                 fontSize: { xs: "12px", md: "20px", lg: "25px" },
@@ -188,7 +188,7 @@ export default function Questions() {
                       fontSize: "18px",
                       fontWeight: 700,
                       lineHeight: "21.6px",
-                      fontFamily: "Mulish",
+                      fontFamily: "Mulish, sans-serif",
                     }}
                   >
                     {faq.question}
@@ -201,7 +201,7 @@ export default function Questions() {
                       fontSize: "16px",
                       fontWeight: 400,
                       lineHeight: "28.8px",
-                      fontFamily: "Mulish",
+                      fontFamily: "Mulish, sans-serif",
                     }}
                   >
                     {faq.answer}
