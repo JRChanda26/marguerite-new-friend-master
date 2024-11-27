@@ -5,7 +5,7 @@ import { client } from "../../../prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
 
 const Choisir: React.FC = () => {
-  const [choisirPage, setChoisirPage] = useState<[]>([]);
+  const [choisirPage, setChoisirPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -20,8 +20,25 @@ const Choisir: React.FC = () => {
 
   const [isCardHovered, setIsCardHovered] = useState<number | null>(null);
 
+  const bottomBackground = choisirPage[0]?.data?.bottom_background?.url || "";
+
   return (
-    <Box sx={{ background: "#BBDDD999" }}>
+    <Box
+      sx={{
+        background: "#BBDDD999",
+        backgroundImage: `url(${bottomBackground})`,
+        backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "bottom",
+        width: "100%",
+        height: "auto",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
+        // position: "absolute",
+      }}
+    >
       <div style={{ display: "flex", justifyContent: "center" }}>
         {choisirPage.map((post: any) => (
           <div key={post}>
@@ -60,18 +77,19 @@ const Choisir: React.FC = () => {
       </div>
 
       {/* <Grid
-        sx={{
-          backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          width: "100%",
-          height: "auto",
-          display: "flex",
-          justifyContent: "flex-end",
-          alignItems: "center",
-          flexDirection: "column",
-          position: "absolute",
-        }}
+      sx={{
+        backgroundImage: `url(${bottomBackground})`,
+        backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        width: "100%",
+        height: "auto",
+        display: "flex",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        flexDirection: "column",
+        position: "absolute",
+      }}
       >
         {choisirPage.map((post: any) => (
           <div key={post}>
@@ -92,13 +110,12 @@ const Choisir: React.FC = () => {
 
       <Grid
         container
-        spacing={1}
+        // spacing={1}
         sx={{
           display: "flex",
           justifyContent: "center",
           gap: "30px",
-          paddingTop: "69.53px",
-          paddingBottom: "113.83px",
+          padding:'5% 0%'
         }}
       >
         <div

@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const NousAgissons: React.FC = () => {
@@ -27,7 +26,6 @@ const NousAgissons: React.FC = () => {
   }, []);
 
   const router = useRouter();
-
   const handleNavigation = () => {
     router.push("/contact");
   };
@@ -37,41 +35,20 @@ const NousAgissons: React.FC = () => {
       <div>
         {nousPage.map((post: any) => (
           <>
-            <div
-              // style={{
-              //   position: "absolute",
-              //   backgroundColor: "#FFFFFF",
-              //   borderRadius: "48px",
-              //   margin: "260px 776px 219px 108.04px",
-              // }}
-              style={{
+            <Grid
+              sx={{
                 position: "absolute",
-                // backgroundColor: "#FFFFFF",
                 borderRadius: "48px",
-                // margin: "200px 600px 0px 100px",
-                margin: "10% 40% 0px 5%",
+                margin: {
+                  xs: "5% 40% 0% 0%",
+                  sm: "10% 40% 0% 5%",
+                  lg: "15% 40% 0% 5%",
+                },
                 padding: "30px",
                 opacity: isVisible ? 1 : 0, // Control visibility with state
                 transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
                 transition: "opacity 2s ease-in-out, transform 2s ease-in-out", // Smooth transition for both opacity and transform
               }}
-
-              // style={{
-              //   position: "absolute",
-              //   backgroundColor: "#FFFFFF",
-              //   borderRadius: "48px",
-              //   margin: "260px 776px 219px 108.04px",
-              //   padding: '64px',
-              //   animation: "fadeInUp 2s ease-in-out",
-              //   opacity: 0,
-              //   animationFillMode: "forwards",
-              //   transform: 'translateY(50px)',
-              //   transition: 'opacity 2s ease-in-out, transform 2s ease-in-out',
-              // }}
-              // onAnimationEnd={(e) => {
-              //   e.currentTarget.style.opacity = "1"; // after animation ends, ensure opacity remains at 1
-              //   e.currentTarget.style.transform = "translateY(0)";
-              // }}
             >
               <div>
                 <Typography
@@ -87,7 +64,7 @@ const NousAgissons: React.FC = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    // fontFamily: "Mulish",
                     color: "rgba(36, 83, 92, 1)",
                     fontWeight: 700,
                     fontSize: { xs: "15px", sm: "25px", lg: "65px" },
@@ -109,10 +86,10 @@ const NousAgissons: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish",
                       fontWeight: 400,
                       fontSize: { xs: "12px", sm: "18px", lg: "20px" },
-                      lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
+                      lineHeight: { xs: "5px", sm: "12px", lg: "18.24px" },
                       color: "#FFFFFF",
                       textTransform: "none",
                     }}
@@ -132,17 +109,7 @@ const NousAgissons: React.FC = () => {
                   )}
                 </Button>
               </div>
-            </div>
-            {/* <Grid container spacing={0} key={post.id}>
-              <Grid item lg={4} sx={{ backgroundColor: "#F6C09E" }}></Grid>
-              <Grid item lg={8}>
-                <img
-                  src={post.data.backgroundimage.url || ""}
-                  alt={post.data.backgroundimage}
-                  style={{ height: "100%", width: "100%" }}
-                />
-              </Grid>
-            </Grid> */}
+            </Grid>
             <Grid container spacing={0} key={post.id}>
               <Grid
                 item
@@ -159,7 +126,6 @@ const NousAgissons: React.FC = () => {
                     style={{
                       height: "100%",
                       width: "100%",
-                      // objectFit: "cover",
                     }}
                   />
                 )}

@@ -43,9 +43,8 @@ const ManagePerLaCare: React.FC = () => {
     fetchPosts();
   }, []);
 
-  const backgroundImage = managePage[0]?.data?.header_background?.url || "";
-  const boxbackground = managePage[0]?.data?.middle_background?.url || "";
-
+  const headerBackground = managePage[0]?.data?.header_background?.url || "";
+  const cardsBackground = managePage[0]?.data?.middle_background?.url || "";
   const contentbackground =
     managePage[0]?.data?.square_brackets_background?.url || "";
 
@@ -172,7 +171,7 @@ const ManagePerLaCare: React.FC = () => {
       <Header />
       <div
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${headerBackground})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           // width: "100%",
@@ -368,7 +367,7 @@ const ManagePerLaCare: React.FC = () => {
 
           <Grid
             sx={{
-              backgroundImage: `url(${boxbackground})`,
+              backgroundImage: `url(${cardsBackground})`,
               height: "auto",
               width: "100%",
               backgroundPosition: "center",
