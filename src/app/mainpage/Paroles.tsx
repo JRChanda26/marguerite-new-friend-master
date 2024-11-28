@@ -123,6 +123,7 @@ export default function Paroles() {
         display: "flex",
         flexDirection: "column",
         textAlign: "center",
+        paddingTop: "5%",
       }}
     >
       <Grid container alignItems="center" justifyContent="center" gap="20px">
@@ -206,7 +207,7 @@ export default function Paroles() {
         <Typography
           sx={{
             color: "#000000",
-            fontWeight: 300,
+            fontWeight: 400,
             fontFamily: "sans-serif",
             fontSize: { xs: "12px", md: "16px", lg: "25px" },
             lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
@@ -289,7 +290,7 @@ export default function Paroles() {
                 {videoUrl ? (
                   <video
                     ref={(el) => {
-                      if (el) videoRefs.current[item.id] = el; 
+                      if (el) videoRefs.current[item.id] = el;
                     }}
                     width="100%"
                     controls
@@ -306,17 +307,17 @@ export default function Paroles() {
                   <p>Video not available</p>
                 )}
                 <Typography
-                  style={{
+                  sx={{
                     color: "#000000",
-                    fontSize: "22.02px",
                     fontWeight: 700,
                     fontFamily: "sans-serif",
-                    lineHeight: "25.74px",
                     textAlign: "center",
-                    padding: "10px 20px",
+                    padding: { xs: "0px", sm: "0px", lg: "10px 20px" },
+                    fontSize: { xs: "12px", sm: "16px", lg: "22px" },
+                    lineHeight: { xs: "20px", sm: "20px", lg: "25px" },
                   }}
                 >
-                 {item.title}
+                  {item.title}
                 </Typography>
               </Box>
             ))}

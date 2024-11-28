@@ -5,6 +5,7 @@ import { client } from "../../../prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
 
 const Header: React.FC = () => {
   const [headerPage, setHeaderPage] = useState<[]>([]);
@@ -38,7 +39,7 @@ const Header: React.FC = () => {
             style={{
               position: "fixed",
               top: 0,
-              left:0,
+              left: 0,
               zIndex: 1,
               display: "flex",
               flexDirection: "row",
@@ -60,7 +61,7 @@ const Header: React.FC = () => {
               lg={12}
               sx={{
                 display: "flex",
-                flexDirection: { xs: "column", sm: "row" },
+                flexDirection: { xs: "row", sm: "row",lg:"row" },
                 justifyContent: "space-evenly",
                 alignItems: "center",
                 padding: "10px",
@@ -75,7 +76,7 @@ const Header: React.FC = () => {
                     width: "10%",
                     height: "auto",
                   }}
-                  // onClick={handleNavigation}
+                  onClick={handleNavigation}
                 />
               )}
               <Link
@@ -86,11 +87,9 @@ const Header: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish, sans-serif",
                     color: "#24535C",
-                    // fontSize: "26.49px",
-                    fontSize: { xs: "17px", md: "26.49px" },
+                    fontSize: { xs: "12px",sm:"18px", lg: "26.49px" },
                     fontWeight: 400,
-                    lineHeight: "33.25px",
-                    // padding:'27px 55.33px 36px 262px'
+                    lineHeight: { xs: "18px",sm:"25px", lg: "33px" },
                   }}
                 >
                   {post.data.page1}
@@ -101,11 +100,9 @@ const Header: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish, sans-serif",
                     color: "#24535C",
-                    // fontSize: "26.49px",
-                    fontSize: { xs: "17px", md: "26.49px" },
+                    fontSize: { xs: "12px",sm:"18px", lg: "26.49px" },
                     fontWeight: 400,
-                    lineHeight: "33.25px",
-                    // padding:'27px 27.67px 36px 55.33px'
+                    lineHeight: { xs: "18px",sm:"25px", lg: "33px" },
                   }}
                 >
                   {post.data.page2}
@@ -116,17 +113,15 @@ const Header: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish, sans-serif",
                     color: "#24535C",
-                    // fontSize: "26.49px",
-                    fontSize: { xs: "17px", md: "26.49px" },
+                    fontSize: { xs: "12px",sm:"18px", lg: "26.49px" },
                     fontWeight: 400,
-                    lineHeight: "33.25px",
-                    // padding:'27px 57.53px 36px 27.67px'
+                    lineHeight: { xs: "18px",sm:"25px", lg: "33px" },
                   }}
                 >
                   {post.data.page3}
                 </Typography>
               </Link>
-              {post?.data.contact_icon && (
+              {/* {post?.data.contact_icon && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
                   src={post.data.contact_icon.url || undefined}
@@ -137,7 +132,16 @@ const Header: React.FC = () => {
                   }}
                   onClick={handleContactNavigation}
                 />
-              )}
+              )} */}
+              <MailOutlineIcon
+                sx={{
+                  background: "#236B79",
+                  color: "#FFFFFF",
+                  padding: {xs:'5px',sm:'10px',lg:'15px'},
+                  borderRadius: "30px",
+                }}
+                onClick={handleContactNavigation}
+              />
             </Grid>
           </Grid>
         ))}

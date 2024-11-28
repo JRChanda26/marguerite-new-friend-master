@@ -96,7 +96,7 @@ export default function Questions() {
                 margin: {
                   xs: "0% 0% 0% 10%",
                   sm: "0% 0% 0% 12%",
-                  lg: "0% 0% 0% 20%",
+                  lg: "0% 10% 0% 20%",
                 },
               }}
             >
@@ -183,12 +183,12 @@ export default function Questions() {
                   expandIcon={clicked[index] ? <RemoveIcon /> : <AddIcon />}
                 >
                   <Typography
-                    style={{
+                    sx={{
                       color: "#161C2D",
-                      fontSize: "18px",
                       fontWeight: 700,
-                      lineHeight: "21.6px",
                       fontFamily: "Mulish, sans-serif",
+                      fontSize: { xs: "14px", md: "14px", lg: "18px" },
+                      lineHeight: { xs: "20px", md: "20px", lg: "21.6px" },
                     }}
                   >
                     {faq.question}
@@ -196,12 +196,12 @@ export default function Questions() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography
-                    style={{
+                    sx={{
                       color: "#161C2DB8",
-                      fontSize: "16px",
                       fontWeight: 400,
-                      lineHeight: "28.8px",
                       fontFamily: "Mulish, sans-serif",
+                      fontSize: { xs: "14px", md: "14px", lg: "16px" },
+                      lineHeight: { xs: "20px", md: "20px", lg: "28px" },
                     }}
                   >
                     {faq.answer}
