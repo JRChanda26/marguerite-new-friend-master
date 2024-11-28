@@ -22,18 +22,14 @@ export default function BlogEt() {
 
   const title: React.CSSProperties = {
     color: "#161C2D",
-    fontSize: "21.27px",
     fontWeight: 700,
-    lineHeight: "25.52px",
     textAlign: "left",
     paddingTop: "2%",
   };
 
   const description: React.CSSProperties = {
     color: "#161C2DB8",
-    fontSize: "18.61px",
     fontWeight: 400,
-    lineHeight: "29.78px",
     textAlign: "left",
     paddingTop: "5%",
   };
@@ -65,8 +61,8 @@ export default function BlogEt() {
           <Typography
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "28px", md: "45px", lg: "65px" },
-              lineHeight: { xs: "30px", md: "50px", lg: "80px" },
+              fontSize: { xs: "28px", sm: "45px", lg: "65px" },
+              lineHeight: { xs: "30px", sm: "50px", lg: "80px" },
               color: "#000000",
               padding: "5%",
             }}
@@ -80,12 +76,12 @@ export default function BlogEt() {
           container
           item
           lg={12}
-          style={{
+          sx={{
             display: "flex",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
             gap: "20px",
-            margin:'0% 5%'
+            margin: "0% 5%",
           }}
         >
           {repeatItems.map((item, index: any) => (
@@ -127,8 +123,24 @@ export default function BlogEt() {
                   }}
                 />
               )}
-              <Typography style={title}>{item.title}</Typography>
-              <Typography style={description}>{item.description}</Typography>
+              <Typography
+                sx={{
+                  ...title,
+                  fontSize: { xs: "14px", sm: "18px", lg: "21.27px" },
+                  lineHeight: { xs: "20px", sm: "22px", lg: "25.52px" },
+                }}
+              >
+                {item.title}
+              </Typography>
+              <Typography
+                sx={{
+                  ...description,
+                  fontSize: { xs: "12px", sm: "14px", lg: "18.61px" },
+                  lineHeight: { xs: "15px", sm: "25px", lg: "29.71px" },
+                }}
+              >
+                {item.description}
+              </Typography>
               <div
                 style={{
                   height: "24px",
@@ -181,8 +193,7 @@ export default function BlogEt() {
             sx={{
               // fontFamily: "Jenna Sue",
               color: "#24535C",
-              fontSize: "44px",
-              lineHeight: "44px",
+              fontSize: { xs: "20px", sm: "25px", lg: "30px" },
               textAlign: "center",
               // textDecoration: "underline",
               padding: "10% 0%",

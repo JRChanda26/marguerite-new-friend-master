@@ -111,27 +111,29 @@ export default function Liberez() {
               margin: "30px",
             }}
           >
-            <div
-              style={{
+            <Typography
+              sx={{
                 color: "#24535C",
                 fontFamily: "Mulish, sans-serif",
-                fontSize: "41px",
+                fontSize: { xs: "27px", sm: "35px", lg: "41px" },
+                lineHeight: { xs: "28px", sm: "38px", lg: "45px" },
                 fontWeight: 700,
               }}
             >
               {liberezPage[0]?.data.heading}
-            </div>
-            <div
-              style={{
+            </Typography>
+            <Typography
+              sx={{
                 color: "#24535C",
                 fontFamily: "Mulish, sans-serif",
-                fontSize: "23px",
+                fontSize: { xs: "14px", sm: "18px", lg: "23px" },
+                lineHeight: { xs: "18px", sm: "28px", lg: "35px" },
                 fontWeight: 400,
                 paddingTop: "30px",
               }}
             >
               {liberezPage[0]?.data.description}
-            </div>
+            </Typography>
             <div>
               {errors.email && (
                 <Typography

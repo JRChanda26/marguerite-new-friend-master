@@ -66,8 +66,8 @@ const NosExperiences: React.FC = () => {
                 fontFamily: "Mulish, sans-serif",
                 color: "#FFFFFF",
                 fontWeight: 700,
-                fontSize: { xs: "36px", md: "66.25px" },
-                lineHeight: { xs: "44px", md: "79.51px" },
+                fontSize: { xs: "36px", sm: "48px", lg: "66.25px" },
+                lineHeight: { xs: "44px", sm: "55px", lg: "79.51px" },
                 paddingTop: "200px",
               }}
             >
@@ -78,8 +78,8 @@ const NosExperiences: React.FC = () => {
                 fontFamily: "Mulish, sans-serif",
                 color: "#FFFFFF",
                 fontWeight: 400,
-                fontSize: { xs: "18px", md: "24px" },
-                lineHeight: "1.5",
+                fontSize: { xs: "14px", sm: "18px", lg: "24px" },
+                lineHeight: { xs: "18px", sm: "25px", lg: "38px" },
                 paddingTop: "20px",
                 maxWidth: "800px",
               }}
@@ -131,7 +131,17 @@ const NosExperiences: React.FC = () => {
                       minWidth: { xs: "250px", sm: "300px", md: "350px" },
                     }}
                   >
-                    <Typography>{testimonial}</Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish, sans-serif",
+                        color: "#000000",
+                        fontWeight: 400,
+                        fontSize: { xs: "12px", sm: "16px", lg: "19.32px" },
+                        lineHeight: { xs: "16px", sm: "22px", lg: "30px" },
+                      }}
+                    >
+                      {testimonial}
+                    </Typography>
                   </Box>
                 ))}
               </Box>
