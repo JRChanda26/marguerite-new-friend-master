@@ -11,7 +11,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import Liberez from "../mainpage/Liberez";
+import Liberez from "../mainpage/NeManquez";
 import Footer from "../mainpage/Footer";
 import Header from "../mainpage/Header";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -420,7 +420,7 @@ const NosSolutionsDe: React.FC = () => {
             item
             lg={3}
             md={6}
-            sm={12}
+            sm={6}
             style={{
               display: "flex",
               flexDirection: "column",

@@ -11,15 +11,15 @@ import {
 import React, { useState } from "react";
 import { client } from "../../../prismic-configuration";
 
-export default function Liberez() {
+export default function NeManquez() {
   // const client = createClient();
   // const settings = await client.getSingle("liberez");
 
-  const [liberezPage, setLiberezPage] = useState<any>("");
+  const [neManquezPage, setNeManquezPage] = useState<any>("");
   useState(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("liberez" as any);
-      setLiberezPage(response);
+      const response: any = await client.getAllByType("ne_manquez" as any);
+      setNeManquezPage(response);
     };
     fetchPosts();
   });
@@ -120,7 +120,7 @@ export default function Liberez() {
                 fontWeight: 700,
               }}
             >
-              {liberezPage[0]?.data.heading}
+              {neManquezPage[0]?.data.title}
             </Typography>
             <Typography
               sx={{
@@ -132,7 +132,7 @@ export default function Liberez() {
                 paddingTop: "30px",
               }}
             >
-              {liberezPage[0]?.data.description}
+              {neManquezPage[0]?.data.description}
             </Typography>
             <div>
               {errors.email && (
@@ -206,7 +206,7 @@ export default function Liberez() {
               }}
               onClick={handleSubmit}
             >
-              {liberezPage[0]?.data.button_text}
+              {neManquezPage[0]?.data.button_text}
             </Button>
             <Snackbar
               open={openSnackbar}

@@ -11,7 +11,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import Liberez from "../mainpage/Liberez";
+import Liberez from "../mainpage/NeManquez";
 import Footer from "../mainpage/Footer";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { PrismicNextLink } from "@prismicio/next";
@@ -217,7 +217,7 @@ const LecarechezMargueriteServices: React.FC = () => {
   const isXs = useMediaQuery("(max-width:576px)");
 
   const getDimensions = () => {
-    if (isXs) return { width: "180px", height: "350px" };
+    if (isXs) return { width: "200px", height: "350px" };
     if (isSm) return { width: "200px", height: "350px" };
     if (isMd) return { width: "250px", height: "400px" };
     if (isLg) return { width: "283px", height: "433px" };
@@ -958,7 +958,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   textAlign: "center",
                   color: "#0A1411",
                   padding: "10% 10% 0% 10%",
-                  marginTop:{xs:'50%', sm:'0%',lg:'0%'}
+                  marginTop:{xs:'600px', sm:'0px',lg:'0px'}
                 }}
               >
                 {post.data.bottom_title}

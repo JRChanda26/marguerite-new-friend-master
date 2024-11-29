@@ -48,9 +48,9 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#0A1411",
                   fontWeight: 700,
-                  fontSize: { xs: "28px", md: "45px", lg: "65px" },
-                  lineHeight: { xs: "30px", md: "50px", lg: "80px" },
-                  padding: { xs: "2% 3%", md: "2% 8%", lg: "2% 15%" },
+                  fontSize: { xs: "28px", sm: "45px", lg: "65px" },
+                  lineHeight: { xs: "30px", sm: "50px", lg: "80px" },
+                  padding: { xs: "8% 5% 2% 5%", sm: "5% 5% 2% 5%", lg: "5% 15% 2% 15%" },
                   textAlign: "center",
                 }}
               >
@@ -63,9 +63,9 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish, sans-serif",
                   color: "#565656",
                   fontWeight: 400,
-                  fontSize: { xs: "12px", md: "16px", lg: "25px" },
-                  lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
-                  padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
+                  fontSize: { xs: "12px", sm: "16px", lg: "25px" },
+                  lineHeight: { xs: "20px", sm: "20px", lg: "38.4px" },
+                  padding: { xs: "0% 3%", sm: "0% 8%", lg: "0% 15%" },
                   textAlign: "center",
                 }}
               >

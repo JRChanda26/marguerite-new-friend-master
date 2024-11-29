@@ -6,25 +6,25 @@
   "status": true,
   "json": {
     "Main": {
-      "banner": {
+      "header_background": {
         "type": "Image",
         "config": {
-          "label": "Banner",
+          "label": "Header Background",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "title1": {
+      "top_heading": {
         "type": "Text",
         "config": {
-          "label": "Title1",
+          "label": "Top Heading",
           "placeholder": ""
         }
       },
-      "image1": {
+      "top_image": {
         "type": "Image",
         "config": {
-          "label": "Image1",
+          "label": "Top Image",
           "constraint": {},
           "thumbnails": []
         }
@@ -36,17 +36,10 @@
           "placeholder": ""
         }
       },
-      "about": {
+      "top_description": {
         "type": "Text",
         "config": {
-          "label": "About",
-          "placeholder": ""
-        }
-      },
-      "description1": {
-        "type": "Text",
-        "config": {
-          "label": "Description1",
+          "label": "Top Description",
           "placeholder": ""
         }
       },
@@ -58,95 +51,46 @@
           "thumbnails": []
         }
       },
-      "title2": {
+      "bottom_heading": {
         "type": "Text",
         "config": {
-          "label": "Title2",
+          "label": "Bottom Heading",
           "placeholder": ""
         }
       },
-      "description2": {
+      "bottom_description1": {
         "type": "Text",
         "config": {
-          "label": "Description2",
+          "label": "Bottom Description1",
           "placeholder": ""
         }
       },
-      "points": {
+      "bottom_points": {
         "type": "Text",
         "config": {
-          "label": "Points",
+          "label": "Bottom Points",
           "placeholder": ""
         }
       },
-      "image2": {
+      "bottom_image": {
         "type": "Image",
         "config": {
-          "label": "Image2",
+          "label": "Bottom Image",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "description3": {
+      "card_heading": {
         "type": "Text",
         "config": {
-          "label": "Description3",
+          "label": "Card Heading",
           "placeholder": ""
         }
       },
-      "search": {
+      "card_title_lists": {
         "type": "Text",
         "config": {
-          "label": "Search",
-          "placeholder": ""
-        }
-      },
-      "latest_news": {
-        "type": "Text",
-        "config": {
-          "label": "Latest News",
-          "placeholder": ""
-        }
-      },
-      "news_lists": {
-        "type": "Text",
-        "config": {
-          "label": "News Lists",
-          "placeholder": ""
-        }
-      },
-      "categories": {
-        "type": "Text",
-        "config": {
-          "label": "Categories",
-          "placeholder": ""
-        }
-      },
-      "categories_list1": {
-        "type": "Text",
-        "config": {
-          "label": "Categories List1",
-          "placeholder": ""
-        }
-      },
-      "categories_list2": {
-        "type": "Text",
-        "config": {
-          "label": "Categories List2",
-          "placeholder": ""
-        }
-      },
-      "categories_list3": {
-        "type": "Text",
-        "config": {
-          "label": "Categories List3",
-          "placeholder": ""
-        }
-      },
-      "categories_list4": {
-        "type": "Text",
-        "config": {
-          "label": "Categories List4",
+          "label": "Card Title Lists",
           "placeholder": ""
         }
       },
@@ -171,38 +115,10 @@
           "placeholder": ""
         }
       },
-      "tags_tab3": {
+      "card_date_lists": {
         "type": "Text",
         "config": {
-          "label": "Tags Tab3",
-          "placeholder": ""
-        }
-      },
-      "tags_tab4": {
-        "type": "Text",
-        "config": {
-          "label": "Tags Tab4",
-          "placeholder": ""
-        }
-      },
-      "tags_tab5": {
-        "type": "Text",
-        "config": {
-          "label": "Tags Tab5",
-          "placeholder": ""
-        }
-      },
-      "tags_tab6": {
-        "type": "Text",
-        "config": {
-          "label": "Tags Tab6",
-          "placeholder": ""
-        }
-      },
-      "date_lists": {
-        "type": "Text",
-        "config": {
-          "label": "Date Lists",
+          "label": "Card Date Lists",
           "placeholder": ""
         }
       },
@@ -213,18 +129,47 @@
           "placeholder": ""
         }
       },
-      "box_image": {
+      "square_brackets_background": {
         "type": "Image",
         "config": {
-          "label": "Box Image",
+          "label": "Square Brackets Background",
           "constraint": {},
           "thumbnails": []
         }
       },
-      "last_heading": {
+      "bottom_title": {
         "type": "Text",
         "config": {
-          "label": "Last Heading",
+          "label": "Bottom Title",
+          "placeholder": ""
+        }
+      },
+      "bottom_description2": {
+        "type": "Text",
+        "config": {
+          "label": "Bottom Description2",
+          "placeholder": ""
+        }
+      },
+      "button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "button_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Button Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "about": {
+        "type": "Text",
+        "config": {
+          "label": "About",
           "placeholder": ""
         }
       },

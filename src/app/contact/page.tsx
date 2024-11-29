@@ -200,7 +200,7 @@ export default function Contact() {
     }
   };
 
-  const apiKey = "0006LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI";
+  const apiKey = "abcdefghijklmnopqrstuvwxyz";
 
   const handleCaptcha = (value: any) => {
     console.log("Captcha value:", value);
@@ -254,7 +254,7 @@ export default function Contact() {
       <Header />
       <div
         style={{
-          backgroundImage: `url(${contactPage[0]?.data?.banner?.url || ""})`,
+          backgroundImage: `url(${contactPage[0]?.data?.header_background?.url || ""})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
@@ -310,7 +310,7 @@ export default function Contact() {
       <Grid
         container
         spacing={3}
-        sx={{ padding: { xs: "20px", sm: "50px 200px" } }}
+        sx={{ padding: { xs: "6%", sm: "5% 15%", lg: "8% 20%" } }}
       >
         <Grid item xs={12}>
           <Typography
@@ -333,15 +333,16 @@ export default function Contact() {
           md={12}
           lg={12}
           spacing={2}
-          sx={{ justifyContent: "center" }}
+          sx={{ justifyContent: "center", marginTop: "7%" }}
         >
           <Grid
             item
             xs={12}
-            sm={4}
+            sm={7}
+            lg={4}
             sx={{
               background: "#BBDDD9",
-              borderRadius: "12px",
+              borderRadius: "40px",
               padding: "20px",
               display: "flex",
               flexDirection: "column",
@@ -362,14 +363,18 @@ export default function Contact() {
                   <img
                     src={detail.icon.url || undefined}
                     alt={detail.icon.alt || "Image"}
-                    width="20%"
-                    height="auto"
+                   style={{
+                    background:'#FFFFFF',
+                    padding:'5%',
+                    borderRadius:'25px'
+                   }}
                   />
                 )}
                 <Typography
                   sx={{
                     fontSize: { xs: "16px", sm: "20px", lg: "24px" },
-                    paddingTop: "20px",
+                    display: "flex",
+                    alignItems: "center",
                   }}
                 >
                   {detail.text}
