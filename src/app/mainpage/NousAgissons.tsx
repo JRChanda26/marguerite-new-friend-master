@@ -81,8 +81,8 @@ const NousAgissons: React.FC = () => {
                     background: "#24535C",
                     borderRadius: "82px",
                     marginTop: "3%",
-                    justifyContent: "space-between",
-                    padding:{ xs: "2% 7%", sm: "3% 5%", lg: "2% 4%" }
+                    justifyContent: "space-around",
+                    padding:{ xs: "2% 5%", sm: "3% 5%", lg: "2% 4%" }
                   }}
                   // onClick={handleNavigation}
                 >
@@ -98,7 +98,7 @@ const NousAgissons: React.FC = () => {
                   >
                     {post.data.button_text}
                   </Typography>
-                  {/* {post?.data.button_icon && (
+                  {post?.data.button_icon && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={post.data.button_icon.url || ""}
@@ -108,15 +108,15 @@ const NousAgissons: React.FC = () => {
                         height: "auto",
                       }}
                     />
-                  )} */}
-                  <EastIcon
+                  )}
+                  {/* <EastIcon
                     sx={{
                       background: "#82C5BE",
                       borderRadius: "30px",
                       color: "#FFFFFF",
                       padding: {xs:'2px',sm:'5px',lg:'10px'},
                     }}
-                  />
+                  /> */}
                 </Button>
               </div>
             </Grid>

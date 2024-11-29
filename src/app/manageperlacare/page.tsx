@@ -13,7 +13,7 @@ import {
   Typography,
 } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import Liberez from "../mainpage/Liberez";
+import Liberez from "../mainpage/NeManquez";
 import Footer from "../mainpage/Footer";
 import Header from "../mainpage/Header";
 import { useRouter } from "next/navigation";

@@ -1,15 +1,15 @@
 {
   "format": "page",
-  "id": "liberez",
-  "label": "Liberez",
+  "id": "ne_manquez",
+  "label": "Ne Manquez",
   "repeatable": false,
   "status": true,
   "json": {
     "Main": {
-      "button_text": {
+      "title": {
         "type": "Text",
         "config": {
-          "label": "Button Text",
+          "label": "Title",
           "placeholder": ""
         }
       },
@@ -20,10 +20,10 @@
           "placeholder": ""
         }
       },
-      "heading": {
+      "button_text": {
         "type": "Text",
         "config": {
-          "label": "Heading",
+          "label": "Button Text",
           "placeholder": ""
         }
       },

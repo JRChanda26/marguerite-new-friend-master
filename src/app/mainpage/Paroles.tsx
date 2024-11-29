@@ -131,9 +131,9 @@ export default function Paroles() {
           sx={{
             color: "#0A1411",
             fontWeight: 700,
-            fontSize: { xs: "28px", md: "45px", lg: "65px" },
-            lineHeight: { xs: "30px", md: "50px", lg: "80px" },
-            padding: { xs: "2% 0%", md: "2% 0%", lg: "2% 0%" },
+            fontSize: { xs: "28px", sm: "45px", lg: "65px" },
+            lineHeight: { xs: "30px", sm: "50px", lg: "80px" },
+            padding: { xs: "2% 0%", sm: "5% 0%", lg: "5% 0%" },
             fontFamily: "sans-serif",
           }}
         >
@@ -209,9 +209,9 @@ export default function Paroles() {
             color: "#000000",
             fontWeight: 400,
             fontFamily: "sans-serif",
-            fontSize: { xs: "12px", md: "16px", lg: "25px" },
-            lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
-            padding: { xs: "0% 3%", md: "0% 8%", lg: "0% 15%" },
+            fontSize: { xs: "12px", sm: "16px", lg: "25px" },
+            lineHeight: { xs: "20px", sm: "20px", lg: "38.4px" },
+            padding: { xs: "2% 3%", sm: "2% 8%", lg: "2% 15%" },
           }}
         >
           {formatText(description)}
@@ -248,7 +248,7 @@ export default function Paroles() {
             overflow: "hidden",
             display: "flex",
             justifyContent: "center",
-            padding: { xs: "20px", md: "40px 0" },
+            padding: { xs: "20px", sm: "40px 0" },
           }}
         >
           <Box
@@ -268,14 +268,14 @@ export default function Paroles() {
                 sx={{
                   borderRadius: "22.08px",
                   padding: "20px",
-                  minWidth: { xs: "250px", sm: "300px", md: "350px" },
+                  minWidth: { xs: "250px", sm: "300px", lg: "350px" },
                   background:
                     isCardHovered === item.id ||
                     playingVideoId === item.id ||
                     currentIndex === item.id
                       ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
                       : "#FFFFFF",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.5)",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
                   transform:
                     isCardHovered === item.id ||
                     playingVideoId === item.id ||

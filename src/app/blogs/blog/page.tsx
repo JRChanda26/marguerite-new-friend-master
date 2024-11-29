@@ -1,11 +1,11 @@
 "use client";
 import { createClient } from "@/prismicio";
-import { Grid, IconButton, TextField, Typography } from "@mui/material";
+import { Grid, IconButton, TextField, Typography, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import { PrismicRichText } from "@prismicio/react";
-import Liberez from "@/app/mainpage/Liberez";
+import Liberez from "@/app/mainpage/NeManquez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
 import { client } from "../../../../prismic-configuration";
@@ -181,6 +181,21 @@ export default function Blogs() {
     };
   };
 
+  const isLg = useMediaQuery("(max-width:1200px)");
+  const isMd = useMediaQuery("(max-width:992px)");
+  const isSm = useMediaQuery("(max-width:768px)");
+  const isXs = useMediaQuery("(max-width:576px)");
+
+  const getDimensions = () => {
+    if (isXs) return { width: "100%", height: "auto" };
+    if (isSm) return { width: "100%", height: "auto" };
+    if (isMd) return { width: "100%", height: "auto" };
+    if (isLg) return { width: "100%", height: "auto" };
+    return { width: "50%", height: "auto" }; // Default for larger screens
+  };
+
+  const dimensions = getDimensions();
+  
   return (
     <div>
       <Header />
@@ -290,8 +305,8 @@ export default function Blogs() {
                       src={blogPage[0]?.data.testimonial_image.url || undefined}
                       alt={blogPage[0]?.data.testimonial_image.alt || "Image"}
                       style={{
-                        height: "auto",
-                        width: "100%",
+                        height: dimensions.height,
+                        width: dimensions.width,
                       }}
                     />
                   )}

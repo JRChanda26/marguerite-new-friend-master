@@ -6,10 +6,10 @@
   "status": true,
   "json": {
     "Main": {
-      "banner": {
+      "header_background": {
         "type": "Image",
         "config": {
-          "label": "Banner",
+          "label": "Header Background",
           "constraint": {},
           "thumbnails": []
         }

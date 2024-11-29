@@ -60,7 +60,7 @@ const Footer: React.FC = () => {
                   alt={post.data.marguerite_logo.alt || "Logo"}
                   style={{
                     height: "auto",
-                    width: "50%",
+                    width: "20%",
                   }}
                 />
               )}

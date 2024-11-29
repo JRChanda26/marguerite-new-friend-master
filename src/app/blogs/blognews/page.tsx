@@ -1,5 +1,4 @@
 "use client";
-import { createClient } from "@/prismicio";
 import {
   Box,
   Button,
@@ -10,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
-import Liberez from "@/app/mainpage/Liberez";
+import Liberez from "@/app/mainpage/NeManquez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
 import { PrismicNextLink } from "@prismicio/next";
@@ -18,69 +17,40 @@ import { client } from "../../../../prismic-configuration";
 import { useRouter } from "next/navigation";
 
 export default function BlogsNews() {
-  const [blogs, setBlogs] = useState<any>(null);
-  const [liberez, setLiberez] = useState<any>(null);
-  const [posts, setPosts] = useState<any[]>([]);
+
+  const [blogNewsPage, setBlogNewsPage] = useState<any>(null);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType("contact" as any);
-      setPosts(response);
+      const response: any = await client.getSingle("blogs_news" as any);
+      setBlogNewsPage(response);
     };
     fetchPosts();
   }, []);
 
+  const [contactPage, setContactPage] = useState<any[]>([]);
+
   useEffect(() => {
-    async function fetchData() {
-      const client = createClient();
-      const [blogsData, liberezData] = await Promise.all([
-        client.getSingle("blogs_news" as any),
-        client.getSingle("liberez" as any),
-      ]);
-      setBlogs(blogsData);
-      setLiberez(liberezData);
-    }
-    fetchData().catch((error) => console.error("Error fetching data:", error));
+    const fetchPosts = async () => {
+      const response: any = await client.getAllByType("contact" as any);
+      setContactPage(response);
+    };
+    fetchPosts();
   }, []);
 
+  console.log("bbbbbbbb", blogNewsPage);
   const searchInputStyle: React.CSSProperties = {
     width: "100%",
     backgroundColor: "#BBDDD91A",
     borderRadius: "20px",
   };
 
-  const tabs = [
-    blogs?.data.tags_tab1,
-    blogs?.data.tags_tab2,
-    blogs?.data.tags_tab3,
-    blogs?.data.tags_tab4,
-    blogs?.data.tags_tab5,
-    blogs?.data.tags_tab6,
-  ];
+  const tabs = [blogNewsPage?.data.tags_tab1, blogNewsPage?.data.tags_tab2];
 
-  const [selectedTab, setSelectedTab] = useState<number | null>(null);
+  const [selectedTab, setSelectedTab] = useState<number | null>(0);
 
   const handleButtonClick = (index: number) => {
     setSelectedTab(index);
-  };
-
-  const categories = [
-    blogs?.data.categories_list1,
-    blogs?.data.categories_list2,
-    blogs?.data.categories_list3,
-    blogs?.data.categories_list4,
-  ];
-
-  const title: React.CSSProperties = {
-    color: "#292F36",
-    fontSize: "50px",
-    fontWeight: 400,
-  };
-
-  const description: React.CSSProperties = {
-    color: "#4D5053",
-    fontSize: "22px",
-    fontWeight: 400,
   };
 
   const buttonText: React.CSSProperties = {
@@ -104,67 +74,11 @@ export default function BlogsNews() {
     fontWeight: 400,
   };
 
-  const containerStyle: React.CSSProperties = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "20px",
-    borderRadius: "60px",
-    background: "linear-gradient(to right, #F6C09E 60%, #24535C 40%)",
-    margin: "auto",
-  };
-
-  const leftSectionStyle: React.CSSProperties = {
-    flex: 1,
-    color: "#161C2D",
-    padding: "10px",
-  };
-
-  const rightSectionStyle: React.CSSProperties = {
-    flex: 1,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "10px",
-  };
-
-  const inputStyle: React.CSSProperties = {
-    width: "100%",
-    backgroundColor: "#FFFFFF",
-    borderRadius: "50px",
-  };
-
-  const titleStyle: React.CSSProperties = {
-    color: "#24535C",
-    fontSize: "41.81px",
-    fontWeight: 700,
-    lineHeight: "52.47px",
-  };
-
-  const descriptionStyle: React.CSSProperties = {
-    color: "#24535C",
-    fontSize: "23.52px",
-    fontWeight: 400,
-    lineHeight: "37.63px",
-  };
-
-  const [inputValue, setInputValue] = useState("");
   const [searchInputValue, setSearchInputValue] = useState("");
 
-  const [posts1, setPosts1] = useState<any[]>([]);
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "managementbycare" as any
-      );
-      setPosts1(response);
-    };
-
-    fetchPosts();
-  }, []);
-
-  const contentbackground = blogs?.data?.box_image?.url || "";
+  const squareBrackets =
+    blogNewsPage?.data?.square_brackets_background?.url || "";
 
   const router = useRouter();
 
@@ -175,23 +89,23 @@ export default function BlogsNews() {
   const socialLinks = [
     {
       platform: "facebook",
-      link: posts[0]?.data.facebook_link,
-      icon: posts[0]?.data.facebook,
+      link: contactPage[0]?.data.facebook_link,
+      icon: contactPage[0]?.data.facebook,
     },
     {
       platform: "twitter",
-      link: posts[0]?.data.twitter_link,
-      icon: posts[0]?.data.twitter,
+      link: contactPage[0]?.data.twitter_link,
+      icon: contactPage[0]?.data.twitter,
     },
     {
       platform: "linkedin",
-      link: posts[0]?.data.linkedin_link,
-      icon: posts[0]?.data.linked_in,
+      link: contactPage[0]?.data.linkedin_link,
+      icon: contactPage[0]?.data.linked_in,
     },
     {
       platform: "instagram",
-      link: posts[0]?.data.instagram_link,
-      icon: posts[0]?.data.instagram,
+      link: contactPage[0]?.data.instagram_link,
+      icon: contactPage[0]?.data.instagram,
     },
   ];
 
@@ -200,7 +114,7 @@ export default function BlogsNews() {
       <Header />
       <div
         style={{
-          backgroundImage: `url(${blogs?.data?.banner?.url || ""})`,
+          backgroundImage: `url(${blogNewsPage?.data?.header_background?.url || ""})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           display: "flex",
@@ -229,14 +143,14 @@ export default function BlogsNews() {
                 lineHeight: { xs: "30px", sm: "40px", lg: "62.5px" },
               }}
             >
-              {blogs?.data.title1}
+              {blogNewsPage?.data.top_heading}
             </Typography>
             <div style={{ paddingTop: "21px" }}>
-              {blogs?.data.image1 && (
+              {blogNewsPage?.data.top_image && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={blogs?.data.image1.url || undefined}
-                  alt={blogs?.data.image1.alt || "Image"}
+                  src={blogNewsPage?.data.top_image.url || undefined}
+                  alt={blogNewsPage?.data.top_image.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -285,7 +199,7 @@ export default function BlogsNews() {
                   color: "#4D5053",
                 }}
               >
-                {blogs?.data.date_text}
+                {blogNewsPage?.data.date_text}
               </Typography>
               <Typography
                 sx={{
@@ -294,7 +208,7 @@ export default function BlogsNews() {
                   color: "#4D5053",
                 }}
               >
-                {blogs?.data.about}
+                {blogNewsPage?.data.about}
               </Typography>
             </Grid>
             <Typography
@@ -303,9 +217,10 @@ export default function BlogsNews() {
                 lineHeight: { xs: "16px", sm: "20px", lg: "28px" },
                 color: "#4D5053",
                 padding: "2%",
+                whiteSpace: "pre-line",
               }}
             >
-              {blogs?.data.description1}
+              {blogNewsPage?.data.top_description}
             </Typography>
             {/* <div
               style={{
@@ -346,7 +261,7 @@ export default function BlogsNews() {
             >
               <Grid
                 sx={{
-                  backgroundImage: `url(${contentbackground})`,
+                  backgroundImage: `url(${squareBrackets})`,
                   // backgroundSize: "cover",
                   backgroundSize: {
                     xs: "contain",
@@ -366,11 +281,11 @@ export default function BlogsNews() {
               >
                 <>
                   <div>
-                    {blogs?.data.quote_image && (
+                    {blogNewsPage?.data.quote_image && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={blogs?.data.quote_image.url || undefined}
-                        alt={blogs?.data.quote_image.alt || "Image"}
+                        src={blogNewsPage?.data.quote_image.url || undefined}
+                        alt={blogNewsPage?.data.quote_image.alt || "Image"}
                         width="100%"
                         height="auto"
                       />
@@ -380,7 +295,7 @@ export default function BlogsNews() {
                     <Typography
                       sx={{
                         fontFamily: "Jenna Sue, sans-serif",
-                        color: "#0A1411",
+                        color: "#24535C",
                         fontWeight: 400,
                         // fontSize: "48px",
                         fontSize: { xs: "28px", sm: "38px", lg: "48px" },
@@ -395,7 +310,7 @@ export default function BlogsNews() {
                         },
                       }}
                     >
-                      {blogs?.data.quote_text}
+                      {blogNewsPage?.data.quote_text}
                     </Typography>
                   </div>
                 </>
@@ -448,7 +363,7 @@ export default function BlogsNews() {
               }}
             >
               <Typography style={{ ...heading, marginBottom: "30px" }}>
-                {blogs?.data.latest_news}
+                {blogNewsPage?.data.card_heading}
               </Typography>
               {Array(3)
                 .fill(null)
@@ -459,9 +374,11 @@ export default function BlogsNews() {
                         padding: "30px 0px",
                       }}
                     >
-                      <div style={list}>{blogs?.data.news_lists}</div>
+                      <div style={list}>
+                        {blogNewsPage?.data.card_title_lists}
+                      </div>
                       <div style={{ float: "right" }}>
-                        {blogs?.data.date_lists}
+                        {blogNewsPage?.data.card_date_lists}
                       </div>
                     </div>
                     <hr style={{ border: "1px solid #24535C" }} />
@@ -535,7 +452,7 @@ export default function BlogsNews() {
               lineHeight: { xs: "30px", sm: "40px", lg: "62.5px" },
             }}
           >
-            {blogs?.data.title2}
+            {blogNewsPage?.data.bottom_heading}
           </Typography>
           <Typography
             sx={{
@@ -545,7 +462,7 @@ export default function BlogsNews() {
               color: "#4D5053",
             }}
           >
-            {blogs?.data.description2}
+            {blogNewsPage?.data.bottom_description1}
           </Typography>
           <div>
             {Array(3)
@@ -554,23 +471,23 @@ export default function BlogsNews() {
                 <div key={index}>
                   <Typography
                     sx={{
-                      fontSize: { xs: "14px", sm: "16px", lg: "18px" },
-                      lineHeight: { xs: "15px", sm: "20px", lg: "30px" },
+                      fontSize: { xs: "16px", sm: "20px", lg: "25px" },
+                      lineHeight: { xs: "25px", sm: "30px", lg: "40px" },
                       padding: "10px 0px 10px 0px",
                       color: "#4D5053",
                     }}
                   >
-                    {index + 1}. {blogs?.data.points}
+                    {index + 1}.{blogNewsPage?.data.bottom_points}
                   </Typography>
                 </div>
               ))}
           </div>
           <div style={{ margin: "40px 0px 40px 0px" }}>
-            {blogs?.data.image2 && (
+            {blogNewsPage?.data.bottom_image && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={blogs?.data.image2.url || undefined}
-                alt={blogs?.data.image2.alt || "Image"}
+                src={blogNewsPage?.data.bottom_image.url || undefined}
+                alt={blogNewsPage?.data.bottom_image.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -587,12 +504,10 @@ export default function BlogsNews() {
               marginBottom: "60px",
             }}
           >
-            {blogs?.data.description3}
+            {blogNewsPage?.data.bottom_description2}
           </Typography>
           <div style={{ margin: "30px 0px" }}>
-            {posts1.map((post: any) => (
               <Button
-                key={post}
                 style={{
                   display: "flex",
                   flexDirection: "row",
@@ -611,13 +526,13 @@ export default function BlogsNews() {
                     color: "#FFFFFF",
                   }}
                 >
-                  {post.data.buttontext}
+                  {blogNewsPage?.data.button_text}
                 </Typography>
-                {post?.data.buttonimage && (
+                {blogNewsPage?.data.button_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={post?.data.buttonimage.url || undefined}
-                    alt={post?.data.buttonimage.alt || "Image"}
+                    src={blogNewsPage?.data.button_icon.url || undefined}
+                    alt={blogNewsPage?.data.button_icon.alt || "Image"}
                     style={{
                       width: "20%",
                       height: "auto",
@@ -625,7 +540,6 @@ export default function BlogsNews() {
                   />
                 )}
               </Button>
-            ))}
           </div>
           <Typography
             sx={{
@@ -634,7 +548,7 @@ export default function BlogsNews() {
               marginBottom: "60px",
             }}
           >
-            {blogs?.data.last_heading}
+            {blogNewsPage?.data.bottom_title}
           </Typography>
           <hr style={{ border: "1px solid #24535C" }} />
           <Grid
@@ -654,7 +568,7 @@ export default function BlogsNews() {
                 color: "#000000",
               }}
             >
-              {blogs?.data.tags}
+              {blogNewsPage?.data.tags}
             </div>
             {tabs.slice(0, 5).map((label: string, index: number) => (
               <Button
@@ -666,7 +580,7 @@ export default function BlogsNews() {
                   ...buttonText,
                   "&:hover": {
                     backgroundColor:
-                      selectedTab === index ? "#24535C" : "transparent",
+                      selectedTab === index ? "#292F36" : "transparent",
                   },
                 }}
                 onClick={() => handleButtonClick(index)}
