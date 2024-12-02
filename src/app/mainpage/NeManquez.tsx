@@ -163,6 +163,11 @@ export default function NeManquez() {
               name="email_text_field"
               value={emailValue}
               onChange={(e) => setEmailValue(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  handleSubmit(e); 
+                }
+              }}
               placeholder="Entrez votre adresse email"
               variant="outlined"
               type="text"
