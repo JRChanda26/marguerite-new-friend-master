@@ -118,10 +118,20 @@ const Choisir: React.FC = () => {
           padding:'5% 0%'
         }}
       >
-        <div
-          style={{
-            height: isCardHovered === 1 ? "520px" : "500px",
-            width: isCardHovered === 1 ? "400px" : "380px",
+        <Grid
+          sx={{
+            // height: isCardHovered === 1 ? "520px" : "500px",
+            height: {
+              xs: isCardHovered === 1 ? "400px" : "380px", // Mobile
+              sm: isCardHovered === 1 ? "450px" : "430px", // Tablet
+              lg: isCardHovered === 1 ? "520px" : "500px", // Desktop
+            },            
+            // width: isCardHovered === 1 ? "400px" : "380px",
+            width: {
+              xs: isCardHovered === 1 ? "320px" : "300px", // Mobile
+              sm: isCardHovered === 1 ? "340px" : "320px", // Tablet
+              lg: isCardHovered === 1 ? "400px" : "380px", // Desktop
+            },            
             borderRadius: "16px",
             background:
               isCardHovered === 1
@@ -147,26 +157,36 @@ const Choisir: React.FC = () => {
                 />
               )}
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: isCardHovered === 1 ? "28px" : "24px",
-                  lineHeight: "38.4px",
-                  paddingTop: "20px",
+                  // fontSize: isCardHovered === 1 ? "28px" : "24px",
+                  fontSize: {
+                    xs: isCardHovered === 1 ? "20px" : "18px", // Mobile
+                    sm: isCardHovered === 1 ? "24px" : "22px", // Tablet
+                    lg: isCardHovered === 1 ? "28px" : "24px", // Desktop
+                  },                  
+                  lineHeight: {xs:'25px',sm:'32px',lg:'38.4px'},
+                  paddingTop: "5%",
                 }}
               >
                 {post.data.card_title1}
               </Typography>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: isCardHovered === 1 ? "18px" : "16px",
-                  lineHeight: "29.6px",
+                  // fontSize: isCardHovered === 1 ? "18px" : "16px",
+                  fontSize: {
+                    xs: isCardHovered === 1 ? "14px" : "12px", // Mobile
+                    sm: isCardHovered === 1 ? "16px" : "14px", // Tablet
+                    lg: isCardHovered === 1 ? "18px" : "16px", // Desktop
+                  },                  
+                  lineHeight: {xs:'22px',sm:'22px',lg:'29.6px'},
                   textAlign: "left",
-                  paddingTop: "20px",
+                  paddingTop: "5%",
                 }}
               >
                 {post.data.card_description1}
@@ -176,7 +196,7 @@ const Choisir: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  paddingTop: "21px",
+                  paddingTop: "5%",
                   transition: "transform 0.3s ease",
                   transform: isHovered === 1 ? "scale(1.05)" : "scale(1)",
                 }}
@@ -184,10 +204,15 @@ const Choisir: React.FC = () => {
                 onMouseLeave={() => setIsHovered(null)}
               >
                 <Typography
-                  style={{
+                  sx={{
                     color: "#24535C",
                     fontWeight: 400,
-                    fontSize: "14px",
+                    // fontSize: "14px",
+                    fontSize: {
+                      xs: isCardHovered === 1 ? "14px" : "12px", // Mobile
+                      sm: isCardHovered === 1 ? "16px" : "14px", // Tablet
+                      lg: isCardHovered === 1 ? "18px" : "16px", // Desktop
+                    },   
                     lineHeight: "25.9px",
                     paddingRight: "12px",
                   }}
@@ -208,14 +233,24 @@ const Choisir: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Grid>
 
-        <div
-          style={{
-            height:
-              isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
-            width:
-              isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
+        <Grid
+          sx={{
+            // height:
+            //   isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
+            height: {
+              xs: isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
+              sm: isCardHovered === 1 || isCardHovered === 2 ? "430px" : "450px",
+              lg: isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
+            },
+            // width:
+            //   isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
+            width: {
+              xs: isCardHovered === 1 || isCardHovered === 2 ? "300px" : "320px",
+              sm: isCardHovered === 1 || isCardHovered === 2 ? "320px" : "340px",
+              lg: isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
+            },
             borderRadius: "16px",
             background:
               isCardHovered === 1 || isCardHovered === 2
@@ -242,32 +277,43 @@ const Choisir: React.FC = () => {
                 />
               )}
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize:
-                    isCardHovered === 1 || isCardHovered === 2
-                      ? "24px"
-                      : "28px",
-                  lineHeight: "38.4px",
-                  paddingTop: "30px",
+                  // fontSize:
+                  //   isCardHovered === 1 || isCardHovered === 2
+                  //     ? "24px"
+                  //     : "28px",
+                  fontSize: {
+                    xs: isCardHovered === 1 || isCardHovered === 2 ? "18px" : "20px", // Mobile
+                    sm: isCardHovered === 1 || isCardHovered === 2 ? "22px" : "24px", // Tablet
+                    lg: isCardHovered === 1 || isCardHovered === 2 ? "24px" : "28px", // Desktop
+                  },                  
+                  lineHeight: {xs:'25px',sm:'32px',lg:'38.4px'},
+                  paddingTop: "5%",
                 }}
               >
                 {post.data.card_title2}
               </Typography>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize:
-                    isCardHovered === 1 || isCardHovered === 2
-                      ? "16px"
-                      : "18px",
-                  lineHeight: "29.6px",
+                  // fontSize:
+                  //   isCardHovered === 1 || isCardHovered === 2
+                  //     ? "16px"
+                  //     : "18px",
+                  fontSize: {
+                    xs: isCardHovered === 1 || isCardHovered === 2 ? "12px" : "14px", // Mobile
+                    sm: isCardHovered === 1 || isCardHovered === 2 ? "14px" : "16px", // Tablet
+                    lg: isCardHovered === 1 || isCardHovered === 2 ? "16px" : "18px", // Desktop
+                  },   
+                  // lineHeight: "29.6px",
+                  lineHeight: {xs:'22px',sm:'22px',lg:'29.6px'},
                   textAlign: "left",
-                  paddingTop: "30px",
+                  paddingTop: "5%",
                 }}
               >
                 {post.data.card_description2}
@@ -277,7 +323,7 @@ const Choisir: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  paddingTop: "21px",
+                  paddingTop: "5%",
                   transition: "transform 0.3s ease",
                   transform: isHovered === 2 ? "scale(1.05)" : "scale(1)",
                 }}
@@ -285,10 +331,15 @@ const Choisir: React.FC = () => {
                 onMouseLeave={() => setIsHovered(null)}
               >
                 <Typography
-                  style={{
+                  sx={{
                     color: "#24535C",
                     fontWeight: 400,
-                    fontSize: "14px",
+                    // fontSize: "14px",
+                    fontSize: {
+                      xs: isCardHovered === 1 || isCardHovered === 2 ? "12px" : "14px", // Mobile
+                      sm: isCardHovered === 1 || isCardHovered === 2 ? "14px" : "16px", // Tablet
+                      lg: isCardHovered === 1 || isCardHovered === 2 ? "16px" : "18px", // Desktop
+                    },  
                     lineHeight: "25.9px",
                     paddingRight: "12px",
                   }}
@@ -309,12 +360,22 @@ const Choisir: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Grid>
 
-        <div
-          style={{
-            height: isCardHovered === 2 ? "520px" : "500px",
-            width: isCardHovered === 2 ? "400px" : "380px",
+        <Grid
+          sx={{
+            // height: isCardHovered === 2 ? "520px" : "500px",
+            height: {
+              xs: isCardHovered === 2 ? "400px" : "380px", // Mobile
+              sm: isCardHovered === 2 ? "450px" : "430px", // Tablet
+              lg: isCardHovered === 2 ? "520px" : "500px", // Desktop
+            },            
+            // width: isCardHovered === 2 ? "400px" : "380px",
+            width: {
+              xs: isCardHovered === 2 ? "320px" : "300px", // Mobile
+              sm: isCardHovered === 2 ? "340px" : "320px", // Tablet
+              lg: isCardHovered === 2 ? "400px" : "380px", // Desktop
+            },               
             borderRadius: "16px",
             background:
               isCardHovered === 2
@@ -340,26 +401,36 @@ const Choisir: React.FC = () => {
                 />
               )}
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: isCardHovered === 2 ? "28px" : "24px",
-                  lineHeight: "38.4px",
-                  paddingTop: "20px",
+                  // fontSize: isCardHovered === 2 ? "28px" : "24px",
+                  fontSize: {
+                    xs: isCardHovered === 2 ? "20px" : "18px", // Mobile
+                    sm: isCardHovered === 2 ? "24px" : "22px", // Tablet
+                    lg: isCardHovered === 2 ? "28px" : "24px", // Desktop
+                  },    
+                  lineHeight: {xs:'25px',sm:'32px',lg:'38.4px'},
+                  paddingTop: "5%",
                 }}
               >
                 {post.data.card_title3}
               </Typography>
               <Typography
-                style={{
+                sx={{
                   fontFamily: "Mulish, sans-serif",
                   color: "#1E1E1E",
                   fontWeight: 400,
-                  fontSize: isCardHovered === 2 ? "18px" : "16px",
-                  lineHeight: "29.6px",
+                  // fontSize: isCardHovered === 2 ? "18px" : "16px",
+                  fontSize: {
+                    xs: isCardHovered === 2 ? "14px" : "12px", // Mobile
+                    sm: isCardHovered === 2 ? "16px" : "14px", // Tablet
+                    lg: isCardHovered === 2 ? "18px" : "16px", // Desktop
+                  },   
+                  lineHeight: {xs:'22px',sm:'22px',lg:'29.6px'},
                   textAlign: "left",
-                  paddingTop: "20px",
+                  paddingTop: "5%",
                 }}
               >
                 {post.data.card_description3}
@@ -369,7 +440,7 @@ const Choisir: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  paddingTop: "21px",
+                  paddingTop: "5%",
                   transition: "transform 0.3s ease",
                   transform: isHovered === 3 ? "scale(1.05)" : "scale(1)",
                 }}
@@ -377,10 +448,15 @@ const Choisir: React.FC = () => {
                 onMouseLeave={() => setIsHovered(null)}
               >
                 <Typography
-                  style={{
+                  sx={{
                     color: "#24535C",
                     fontWeight: 400,
-                    fontSize: "14px",
+                    // fontSize: "14px",
+                    fontSize: {
+                      xs: isCardHovered === 2 ? "14px" : "12px", // Mobile
+                      sm: isCardHovered === 2 ? "16px" : "14px", // Tablet
+                      lg: isCardHovered === 2 ? "18px" : "16px", // Desktop
+                    }, 
                     lineHeight: "25.9px",
                     paddingRight: "12px",
                   }}
@@ -401,7 +477,7 @@ const Choisir: React.FC = () => {
               </div>
             </div>
           ))}
-        </div>
+        </Grid>
       </Grid>
     </Box>
   );
