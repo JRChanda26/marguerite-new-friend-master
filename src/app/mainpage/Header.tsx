@@ -315,15 +315,6 @@ const Header: React.FC = () => {
                             marginRight: "10px",
                           }}
                         />
-                        <ListItemText
-                          primary="Contact"
-                          sx={{
-                            fontFamily: "Mulish, sans-serif",
-                            color: "#24535C",
-                            fontSize: "18px",
-                            fontWeight: 400,
-                          }}
-                        />
                       </ListItem>
                     </List>
                   </Box>
@@ -338,7 +329,7 @@ const Header: React.FC = () => {
                 sx={{
                   display: "flex",
                   flexDirection: "row",
-                  justifyContent: "space-evenly",
+                  justifyContent: "space-around",
                   alignItems: "center",
                 }}
               >
@@ -363,9 +354,9 @@ const Header: React.FC = () => {
                     sx={{
                       fontFamily: "Mulish, sans-serif",
                       color: "#24535C",
-                      fontSize: "18px",
+                      fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
                       fontWeight: 400,
-                      lineHeight: "25px",
+                      lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
                     }}
                   >
                     {post.data.page1}
@@ -376,9 +367,9 @@ const Header: React.FC = () => {
                     sx={{
                       fontFamily: "Mulish, sans-serif",
                       color: "#24535C",
-                      fontSize: "18px",
+                      fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
                       fontWeight: 400,
-                      lineHeight: "25px",
+                      lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
                     }}
                   >
                     {post.data.page2}
@@ -392,9 +383,9 @@ const Header: React.FC = () => {
                     sx={{
                       fontFamily: "Mulish, sans-serif",
                       color: "#24535C",
-                      fontSize: "18px",
+                      fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
                       fontWeight: 400,
-                      lineHeight: "25px",
+                      lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
                     }}
                   >
                     {post.data.page3}
