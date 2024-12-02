@@ -82,7 +82,10 @@ const NousAgissons: React.FC = () => {
                     borderRadius: "82px",
                     marginTop: "3%",
                     justifyContent: "space-around",
-                    padding:{ xs: "2% 5%", sm: "3% 5%", lg: "2% 4%" }
+                    padding: { xs: "2% 5%", sm: "3% 5%", lg: "2% 4%" },
+                    "&:focus": {
+                      background: "#24535C",
+                    },
                   }}
                   // onClick={handleNavigation}
                 >

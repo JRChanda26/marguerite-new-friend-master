@@ -2,7 +2,6 @@ import NotreProcessus from "./mainpage/NotreProcessus";
 import Questions from "./mainpage/Questions";
 import Footer from "./mainpage/Footer";
 import Choisir from "./mainpage/Choisir";
-import Liberez from "./mainpage/NeManquez";
 import Header from "./mainpage/Header";
 import NousAgissons from "./mainpage/NousAgissons";
 import Paroles from "./mainpage/Paroles";
