@@ -45,7 +45,7 @@ const NousAgissons: React.FC = () => {
                   sm: "5% 55% 0% 0%",
                   lg: "10% 55% 0% 0%",
                 },
-                padding: "30px",
+                padding: {xs:"25px",sm:"20px",lg:"30px"},
                 opacity: isVisible ? 1 : 0, // Control visibility with state
                 transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
                 transition: "opacity 2s ease-in-out, transform 2s ease-in-out", // Smooth transition for both opacity and transform
