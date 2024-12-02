@@ -86,6 +86,9 @@ const NousAgissons: React.FC = () => {
                     "&:focus": {
                       background: "#24535C",
                     },
+                    "&:hover": {
+                      background: "#24535C",
+                    },
                   }}
                   // onClick={handleNavigation}
                 >
