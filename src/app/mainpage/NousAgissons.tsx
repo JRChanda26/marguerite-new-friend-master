@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 import { Box, Button, Grid, Typography } from "@mui/material";
-import { useRouter } from "next/navigation";
 import EastIcon from "@mui/icons-material/East";
 
 const NousAgissons: React.FC = () => {
@@ -26,11 +25,6 @@ const NousAgissons: React.FC = () => {
     }, 500);
   }, []);
 
-  const router = useRouter();
-  const handleNavigation = () => {
-    router.push("/contact");
-  };
-
   return (
     <Box>
       <div>
@@ -41,9 +35,9 @@ const NousAgissons: React.FC = () => {
                 position: "absolute",
                 borderRadius: "48px",
                 margin: {
-                  xs: "0% 55% 0% 0%",
-                  sm: "5% 55% 0% 0%",
-                  lg: "10% 55% 0% 0%",
+                  xs: "6% 65% 0% 0%",
+                  sm: "11% 65% 0% 0%",
+                  lg: "20% 65% 0% 0%",
                 },
                 padding: {xs:"25px",sm:"20px",lg:"30px"},
                 opacity: isVisible ? 1 : 0, // Control visibility with state
@@ -56,20 +50,22 @@ const NousAgissons: React.FC = () => {
                   sx={{
                     fontFamily: "Jenna Sue",
                     fontWeight: 400,
-                    fontSize: { xs: "20px", sm: "40px", lg: "75px" },
-                    lineHeight: { xs: "20px", sm: "30px", lg: "80px" },
-                    color: "rgba(36, 83, 92, 1)",
+                    fontSize: { xs: "20px", sm: "40px", lg: "64px" },
+                    lineHeight: { xs: "20px", sm: "30px", lg: "120%" },
+                    color: "#24535C",
+                    letterSpacing:'0%'
                   }}
                 >
                   {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "rgba(36, 83, 92, 1)",
+                    fontFamily: "Mulish",
+                    color: "#24535C",
                     fontWeight: 700,
-                    fontSize: { xs: "10px", sm: "25px", lg: "65px" },
-                    lineHeight: { xs: "12px", sm: "30px", lg: "80px" },
+                    fontSize: { xs: "10px", sm: "25px", lg: "58px" },
+                    lineHeight: { xs: "12px", sm: "30px", lg: "120%" },
+                    letterSpacing:'0%'
                   }}
                 >
                   {post.data.title}
@@ -80,7 +76,9 @@ const NousAgissons: React.FC = () => {
                     flexDirection: "row",
                     background: "#24535C",
                     borderRadius: "82px",
-                    marginTop: "3%",
+                    marginTop: {lg:"36px"},
+                    height:{lg:'66px'},
+                    width:{lg:'203.85px'},
                     justifyContent: "space-around",
                     padding: { xs: "2% 5%", sm: "3% 5%", lg: "2% 4%" },
                     "&:focus": {
@@ -94,10 +92,11 @@ const NousAgissons: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "Mulish, sans-serif",
-                      fontWeight: 700,
-                      fontSize: { xs: "10px", sm: "12px", lg: "16px" },
-                      lineHeight: { xs: "10px", sm: "12px", lg: "18.24px" },
+                      fontFamily: "Mulish",
+                      fontWeight: 400,
+                      fontSize: { xs: "10px", sm: "12px", lg: "15.2px" },
+                      lineHeight: { xs: "10px", sm: "12px", lg: "120%" },
+                      letterSpacing:'0%',
                       color: "#FFFFFF",
                       textTransform: "none",
                     }}
@@ -126,15 +125,15 @@ const NousAgissons: React.FC = () => {
                 </Button>
               </div>
             </Grid>
-            <Grid container spacing={0} key={post.id}>
+            <Grid container spacing={0} key={post.id} sx={{marginTop:{xs:'20px',sm:'-25px',lg:'-100px'}}}>
               <Grid
                 item
-                xs={5}
-                sm={5}
-                lg={5}
+                xs={4}
+                sm={4}
+                lg={4}
                 sx={{ backgroundColor: "#F6C09E" }}
               />
-              <Grid item xs={7} sm={7} lg={7}>
+              <Grid item xs={8} sm={8} lg={8}>
                 {post?.data.background_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

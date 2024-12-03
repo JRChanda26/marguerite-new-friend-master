@@ -221,6 +221,7 @@ const Header: React.FC = () => {
               boxSizing: "border-box",
               justifyContent: "space-between",
               padding: "10px 20px",
+              backdropFilter: "blur(58.1px)",
             }}
           >
             {isSmallScreen ? (
@@ -346,60 +347,68 @@ const Header: React.FC = () => {
                     onClick={handleNavigation}
                   />
                 )}
-                <Link
-                  href={"/manageperlacare"}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish, sans-serif",
-                      color: "#24535C",
-                      fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
-                      fontWeight: 400,
-                      lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
-                    }}
-                  >
-                    {post.data.page1}
-                  </Typography>
-                </Link>
-                <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish, sans-serif",
-                      color: "#24535C",
-                      fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
-                      fontWeight: 400,
-                      lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
-                    }}
-                  >
-                    {post.data.page2}
-                  </Typography>
-                </Link>
-                <Link
-                  href={"/nossolutionsde"}
-                  style={{ textDecoration: "none" }}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish, sans-serif",
-                      color: "#24535C",
-                      fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
-                      fontWeight: 400,
-                      lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
-                    }}
-                  >
-                    {post.data.page3}
-                  </Typography>
-                </Link>
-                <MailOutlineIcon
+                <Grid
                   sx={{
-                    background: "#236B79",
-                    color: "#FFFFFF",
-                    padding: "10px",
-                    borderRadius: "30px",
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "45px",
                   }}
-                  onClick={handleContactNavigation}
-                />
+                >
+                  <Link
+                    href={"/manageperlacare"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish, sans-serif",
+                        color: "#24535C",
+                        fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
+                        fontWeight: 400,
+                        lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
+                      }}
+                    >
+                      {post.data.page1}
+                    </Typography>
+                  </Link>
+                  <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish, sans-serif",
+                        color: "#24535C",
+                        fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
+                        fontWeight: 400,
+                        lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
+                      }}
+                    >
+                      {post.data.page2}
+                    </Typography>
+                  </Link>
+                  <Link
+                    href={"/nossolutionsde"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish, sans-serif",
+                        color: "#24535C",
+                        fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
+                        fontWeight: 400,
+                        lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
+                      }}
+                    >
+                      {post.data.page3}
+                    </Typography>
+                  </Link>
+                  <MailOutlineIcon
+                    sx={{
+                      background: "#236B79",
+                      color: "#FFFFFF",
+                      padding: "10px",
+                      borderRadius: "30px",
+                    }}
+                    onClick={handleContactNavigation}
+                  />
+                </Grid>
               </Grid>
             )}
           </Grid>
