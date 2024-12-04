@@ -265,7 +265,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   padding: {
                     xs: "2% 5%",
                     sm: "2% 5%",
-                    lg: "41px 152px 42px 152px",
+                    lg: "41px 132px 42px 132px",
                   },
                 }}
               >
@@ -273,7 +273,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   sx={{
                     fontFamily: "DM Serif Display",
                     color: "#292F36",
-                    fontWeight: 400,
+                    fontWeight: 700,
                     // fontSize: "50px",
                     fontSize: { xs: "25px", sm: "40px", lg: "50px" },
                     // lineHeight: "62.5px",
@@ -555,7 +555,16 @@ const LecarechezMargueriteServices: React.FC = () => {
                       boxShadow: "none",
                     }}
                   >
-                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                    <AccordionSummary
+                      expandIcon={
+                        <KeyboardArrowUpIcon
+                          onClick={() => handleColor1(index)}
+                          sx={{
+                            color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                          }}
+                        />
+                      }
+                    >
                       <Typography
                         onClick={() => handleColor1(index)}
                         sx={{
@@ -660,7 +669,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     }
                     alt={leCarePage[0]?.data.mission_left_image.alt || "Image"}
                     width="100%"
-                    height="100%"
+                    height="auto"
                   />
                 )}
                 <Grid
@@ -681,7 +690,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                       lineHeight: "125%",
                       letterSpacing: "0%",
-                      padding: { lg: "95px 49px 24px 49px" },
+                      padding: { lg: "85px 49px 24px 49px" },
                     }}
                   >
                     {post.data.mission_left_title}
@@ -694,7 +703,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                       lineHeight: "30px",
                       letterSpacing: "0%",
-                      padding: { lg: "0px 49px 96px 49px" },
+                      padding: { lg: "0px 49px 80px 49px" },
                     }}
                   >
                     {post.data.mission_left_description}
@@ -723,7 +732,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       leCarePage[0]?.data.mission_middle_image.alt || "Image"
                     }
                     width="100%"
-                    height="100%"
+                    height="auto"
                   />
                 )}
               </Grid>
@@ -758,7 +767,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                       lineHeight: "125%",
                       letterSpacing: "0%",
-                      padding: { lg: "58px 49px 24px 49px" },
+                      padding: { lg: "28px 49px 24px 49px" },
                     }}
                   >
                     {post.data.mission_right_title}
@@ -771,7 +780,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       fontFamily: "Mulish",
                       lineHeight: "30px",
                       letterSpacing: "0%",
-                      padding: { lg: "0px 49px 59px 49px" },
+                      padding: { lg: "0px 20px 40px 49px" },
                     }}
                   >
                     {post.data.mission_right_description}
@@ -785,7 +794,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     }
                     alt={leCarePage[0]?.data.mission_right_image.alt || "Image"}
                     width="100%"
-                    height="auto"
+                    height="62%"
                   />
                 )}
               </Grid>
@@ -1061,7 +1070,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   display: "flex",
                   flexDirection: "column",
                   gap: "30px",
-                  padding: {lg:'0px 112px 177px 112px'},
+                  padding: { lg: "0px 112px 177px 112px" },
                 }}
               >
                 <Grid
@@ -1148,8 +1157,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                           color: "#1E1E1E",
                           paddingTop: { lg: "14px 21px 148px 32px" },
                           opacity: "80%",
-                          letterSpacing:'0%',
-                          lineHeight:'185%'
+                          letterSpacing: "0%",
+                          lineHeight: "185%",
                         }}
                       >
                         {leCarePage[0]?.data.bottom_card_description1}
@@ -1216,7 +1225,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                           />
                         )}
                         <Typography
-                           sx={{
+                          sx={{
                             // fontSize: "26px",
                             fontSize: { xs: "15px", sm: "35px", lg: "36px" },
                             fontFamily: "Mulish",
@@ -1240,8 +1249,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                           color: "#1E1E1E",
                           paddingTop: { lg: "14px 21px 148px 32px" },
                           opacity: "80%",
-                          letterSpacing:'0%',
-                          lineHeight:'185%'
+                          letterSpacing: "0%",
+                          lineHeight: "185%",
                         }}
                       >
                         {leCarePage[0]?.data.bottom_card_description2}
@@ -1345,8 +1354,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                           color: "#1E1E1E",
                           paddingTop: { lg: "14px 21px 148px 32px" },
                           opacity: "80%",
-                          letterSpacing:'0%',
-                          lineHeight:'185%'
+                          letterSpacing: "0%",
+                          lineHeight: "185%",
                         }}
                       >
                         {leCarePage[0]?.data.bottom_card_description3}
@@ -1437,8 +1446,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                           color: "#1E1E1E",
                           paddingTop: { lg: "14px 21px 148px 32px" },
                           opacity: "80%",
-                          letterSpacing:'0%',
-                          lineHeight:'185%'
+                          letterSpacing: "0%",
+                          lineHeight: "185%",
                         }}
                       >
                         {leCarePage[0]?.data.bottom_card_description4}

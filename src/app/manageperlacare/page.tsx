@@ -248,7 +248,7 @@ const ManagePerLaCare: React.FC = () => {
                   sx={{
                     fontFamily: "DM Serif Display",
                     color: "#292F36",
-                    fontWeight: 400,
+                    fontWeight: 700,
                     // fontSize: "50px",
                     fontSize: { xs: "25px", sm: "40px", lg: "50px" },
                     // lineHeight: "62.5px",
@@ -334,6 +334,12 @@ const ManagePerLaCare: React.FC = () => {
                         justifyContent: "space-around",
                         width: { xs: "50%", sm: "70%", lg: "220.47px" },
                         height: { xs: "auto", sm: "auto", lg: "62.47px" },
+                        "&:focus": {
+                          background: "#24535C",
+                        },
+                        "&:hover": {
+                          background: "#24535C",
+                        },
                       }}
                       // onClick={handleNavigation}
                     >
@@ -661,7 +667,16 @@ const ManagePerLaCare: React.FC = () => {
                         boxShadow: "none",
                       }}
                     >
-                      <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                      <AccordionSummary
+                        expandIcon={
+                          <KeyboardArrowUpIcon
+                            onClick={() => handleColor(index)}
+                            sx={{
+                              color: clicked === index ? "#3D8C6E" : "#292F36",
+                            }}
+                          />
+                        }
+                      >
                         <Typography
                           onClick={() => handleColor(index)}
                           sx={{
@@ -789,7 +804,16 @@ const ManagePerLaCare: React.FC = () => {
                         boxShadow: "none",
                       }}
                     >
-                      <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                      <AccordionSummary
+                        expandIcon={
+                          <KeyboardArrowUpIcon
+                            onClick={() => handleColor1(index)}
+                            sx={{
+                              color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                            }}
+                          />
+                        }
+                      >
                         <Typography
                           onClick={() => handleColor1(index)}
                           sx={{

@@ -76,7 +76,7 @@ const NosSolutionsDe: React.FC = () => {
 
   const videoUrl = modulesPage[0]?.data.video?.url;
 
-  const [clicked1, setClicked1] = useState<number | null>(null);
+  const [clicked1, setClicked1] = useState<number | null>(1);
   const handleColor1 = (index: number) => {
     setClicked1(index);
   };
@@ -148,17 +148,22 @@ const NosSolutionsDe: React.FC = () => {
       >
         {nosPage.map((post: any, postIndex: number) => (
           <>
-            <div
-              style={{
+            <Grid
+              sx={{
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingTop: "250.67px",
+                // paddingTop: "250.67px",
+                padding: {
+                  xs: "250.67px 0px 0px 0px",
+                  sm: "250.67px 150px 0px 150px",
+                  lg: "352px 441px 0px 441px",
+                },
               }}
             >
-              <div
-                style={{
+              <Grid
+                sx={{
                   background: "#fff",
                   display: "flex",
                   justifyContent: "center",
@@ -166,42 +171,50 @@ const NosSolutionsDe: React.FC = () => {
                   textAlign: "center",
                   borderRadius: "37px 37px 0px 0px",
                   // padding: "41px 152px 42px 152px",
-                  padding: "2% 5%",
+                  padding: {
+                    xs: "2% 5%",
+                    sm: "2% 5%",
+                    lg: "41px 82px 42px 82px",
+                  },
                 }}
               >
                 <Typography
                   sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#0A1411",
-                    fontWeight: 400,
+                    fontFamily: "DM Serif Display",
+                    color: "#292F36",
+                    fontWeight: 700,
                     // fontSize: "50px",
-                    // lineHeight: "62.5px",
                     fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-                    lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
+                    // lineHeight: "62.5px",
+                    lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                    letterSpacing: "0%",
                   }}
                 >
                   {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Jost, sans-serif",
+                    fontFamily: "Jost",
                     color: "#4D5053",
                     fontWeight: 400,
                     // fontSize: "22px",
-                    // lineHeight: "33px",
                     fontSize: { xs: "12px", sm: "18px", lg: "22px" },
-                    lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
+                    // lineHeight: "33px",
+                    lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                    letterSpacing: "1%",
                   }}
                 >
                   {post.data.sub_heading}
                 </Typography>
-              </div>
-            </div>
+              </Grid>
+            </Grid>
           </>
         ))}
       </div>
 
-      <div style={{ padding: "7%" }}>
+      <Grid
+        sx={{ padding: { xs: "7%", sm: "7%", lg: "200px 228px 229px 228px" } }}
+      >
         {nosPage.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
             <Grid
@@ -211,8 +224,8 @@ const NosSolutionsDe: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
-                gap: "20px",
-                alignItems:'center'
+                gap: "191px",
+                alignItems: "center",
               }}
             >
               <Grid item lg={5} xs={12} sm={7}>
@@ -220,10 +233,10 @@ const NosSolutionsDe: React.FC = () => {
                   <Typography
                     key={post}
                     sx={{
-                      // fontFamily: "Mulish, sans-serif",
+                      fontFamily: "Mulish",
                       fontWeight: 700,
                       fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-                      lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
+                      lineHeight: { xs: "35px", sm: "48px", lg: "125%" },
                       color: "#292F36",
                       letterSpacing: "2%",
                     }}
@@ -233,12 +246,12 @@ const NosSolutionsDe: React.FC = () => {
                 ))}
                 <Typography
                   sx={{
-                    color: "#4D5053",
-                    // fontFamily: "Mulish, sans-serif",
+                    fontSize: { xs: "12px", sm: "18px", lg: "22px" },
                     fontWeight: 400,
-                    fontSize: { xs: "12px", sm: "18px", lg: "24px" },
-                    lineHeight: { xs: "18px", sm: "25px", lg: "30.12px" },
-                    paddingTop: "33px",
+                    lineHeight: { xs: "18px", sm: "25px", lg: "150%px" },
+                    paddingTop: "23px",
+                    fontFamily: "Jost",
+                    color: "#4D5053",
                   }}
                 >
                   {post.data.top_left_description}
@@ -247,20 +260,29 @@ const NosSolutionsDe: React.FC = () => {
                   {nosPage.map((post: any) => (
                     <Button
                       key={post}
-                      style={{
+                      sx={{
                         display: "flex",
                         flexDirection: "row",
                         background: "#24535C",
                         borderRadius: "82px",
-                        marginTop: "20px",
+                        marginTop: { xs: "20px", sm: "20px", lg: "45px" },
                         justifyContent: "space-around",
+                        width: { xs: "50%", sm: "70%", lg: "220.47px" },
+                        height: { xs: "auto", sm: "auto", lg: "62.47px" },
+                        "&:focus": {
+                          background: "#24535C",
+                        },
+                        "&:hover": {
+                          background: "#24535C",
+                        },
                       }}
                       // onClick={handleNavigation}
                     >
                       <Typography
                         sx={{
                           fontWeight: 400,
-                          fontSize: { xs: "12px", sm: "18px", lg: "20px" },
+                          fontFamily: "Mulish",
+                          fontSize: { xs: "12px", sm: "18px", lg: "15.2px" },
                           lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
                           color: "#FFFFFF",
                         }}
@@ -308,10 +330,17 @@ const NosSolutionsDe: React.FC = () => {
             </Grid>
           </Grid>
         ))}
-      </div>
+      </Grid>
 
-      <Grid container justifyContent="center" alignItems="center">
-      <Grid item lg={12}>
+      <Grid
+        container
+        justifyContent="center"
+        alignItems="center"
+        sx={{
+          padding: { lg: "0px 363px 0px 363px" },
+        }}
+      >
+        <Grid item lg={12}>
           <Typography
             sx={{
               textAlign: "center",
@@ -333,16 +362,17 @@ const NosSolutionsDe: React.FC = () => {
               justifyContent: "space-evenly",
               marginTop: "50px",
               alignItems: "center",
+              gap: { lg: "60px" },
             }}
           >
             <Grid
               item
               xs={12}
               sm={5}
-              lg={4}
-              sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
+              lg={6}
+              // sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
             >
-              {videoUrl ? (
+              {/* {videoUrl ? (
                 <video
                   width="100%"
                   height="auto"
@@ -356,15 +386,24 @@ const NosSolutionsDe: React.FC = () => {
                 </video>
               ) : (
                 <p>Video not available</p>
+              )} */}
+              {modulesPage[0]?.data.video_image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={modulesPage[0]?.data.video_image.url || undefined}
+                  alt={modulesPage[0]?.data.video_image.alt || "Image"}
+                  width="100%"
+                  height="auto"
+                />
               )}
             </Grid>
             <Grid
               item
               xs={12}
               sm={5}
-              lg={4}
+              lg={6}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "530px" },
+                height: { xs: "0px", sm: "400px", lg: "450px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -372,20 +411,31 @@ const NosSolutionsDe: React.FC = () => {
               {faqs.slice(3, 6).map((faq, index) => (
                 <div key={index}>
                   <Accordion
+                    expanded={clicked1 === index}
                     style={{
                       backgroundColor: "transparent",
                       boxShadow: "none",
                     }}
                   >
-                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                    <AccordionSummary
+                      expandIcon={
+                        <KeyboardArrowUpIcon
+                          onClick={() => handleColor1(index)}
+                          sx={{
+                            color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                          }}
+                        />
+                      }
+                    >
                       <Typography
                         onClick={() => handleColor1(index)}
                         sx={{
                           color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                          // fontSize: "25px",
-                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
-                          fontWeight: 400,
-                          fontFamily: "Mulish, sans-serif",
+                          lineHeight: "150%",
+                          fontSize: { xs: "18px", sm: "22px", lg: "25px" },
+                          fontWeight: 500,
+                          fontFamily: "Mulish",
+                          letterSpacing: "1%",
                         }}
                       >
                         {faq.question}
@@ -398,7 +448,9 @@ const NosSolutionsDe: React.FC = () => {
                           // fontSize: "22px",
                           fontSize: { xs: "14px", sm: "18px", lg: "22px" },
                           fontWeight: 400,
-                          fontFamily: "Mulish, sans-serif",
+                          fontFamily: "Mulish",
+                          lineHeight: "150%",
+                          letterSpacing: "1%",
                         }}
                       >
                         {faq.answer}
@@ -413,7 +465,7 @@ const NosSolutionsDe: React.FC = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} style={{ padding: "10% 5%" }}>
+      <Grid container sx={{ padding: { lg: "228px 156px" } }}>
         {points.map((item, index) => (
           <Grid
             key={index}
@@ -426,21 +478,36 @@ const NosSolutionsDe: React.FC = () => {
               flexDirection: "column",
             }}
           >
-            <div
-              style={{
+            <Typography
+              sx={{
                 background: item.background,
-                borderRadius: "30px",
+                borderRadius: "42.9px",
                 padding: "30px",
                 width: "70%",
                 textAlign: "center",
+                fontFamily: "Mulish",
+                fontSize: "18.98px",
+                lineHeight: "125%",
+                letterSpacing: "2%",
+                color: "#000000",
               }}
             >
               {item.heading}
-            </div>
+            </Typography>
             <ul>
               {item.points.map((point, idx) => (
                 <li key={idx}>
-                  <span style={{ color: "#4D5053" }}>{point}</span>
+                  <span
+                    style={{
+                      color: "#4D5053",
+                      fontFamily: "Mulish",
+                      fontSize: "22px",
+                      lineHeight: "150%",
+                      letterSpacing: "1%",
+                    }}
+                  >
+                    {point}
+                  </span>
                 </li>
               ))}
             </ul>
