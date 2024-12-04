@@ -246,7 +246,7 @@ const ManagePerLaCare: React.FC = () => {
               >
                 <Typography
                   sx={{
-                    fontFamily: "DM Serif",
+                    fontFamily: "DM Serif Display",
                     color: "#292F36",
                     fontWeight: 400,
                     // fontSize: "50px",
