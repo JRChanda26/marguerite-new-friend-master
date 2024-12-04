@@ -106,35 +106,35 @@ const ManagePerLaCare: React.FC = () => {
     card: {
       position: "absolute",
       // width: "200px",
-      padding: "20px",
+      padding: "25px",
       borderRadius: "8px",
       boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       backgroundColor: "#fff",
       // textAlign: "center",
     },
     topLeft: {
-      top: "2%",
+      top: "0%",
       left: "5%",
       transform: "rotate(0deg)",
-      width: "40%",
+      width: "50%",
     },
     topRight: {
-      top: "28%",
+      top: "30%",
       right: "5%",
       transform: "rotate(0deg)",
-      width: "40%",
+      width: "50%",
     },
     bottomLeft: {
-      top: "55%",
+      top: "60%",
       left: "5%",
       transform: "rotate(0deg)",
-      width: "40%",
+      width: "50%",
     },
     bottomRight: {
-      top: "75%",
+      top: "90%",
       right: "5%",
       transform: "rotate(0deg)",
-      width: "40%",
+      width: "50%",
     },
   };
 
@@ -166,6 +166,44 @@ const ManagePerLaCare: React.FC = () => {
     router.push("/contact");
   };
 
+  const description = managePage[0]?.data.top_left_description;
+
+  const highlightWords = ["UN BESOIN D'AIDE ACCRU-"] as const;
+
+  type HighlightWord = (typeof highlightWords)[number];
+
+  const fontMap: Record<
+    HighlightWord,
+    { fontWeight: number; marginBottom: string }
+  > = {
+    "UN BESOIN D'AIDE ACCRU-": { fontWeight: 700, marginBottom: "28px" },
+  };
+
+  const escapeRegExp = (string: string) => {
+    return string.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  };
+
+  const formatText = (text: string) => {
+    return text
+      .split(new RegExp(`(${highlightWords.map(escapeRegExp).join("|")})`, "g"))
+      .map((part, index) =>
+        highlightWords.includes(part as HighlightWord) ? (
+          <span
+            key={index}
+            style={{
+              display: "block", // Ensures the heading is on its own line
+              fontWeight: fontMap[part as HighlightWord].fontWeight,
+              marginBottom: fontMap[part as HighlightWord].marginBottom,
+            }}
+          >
+            {part}
+          </span>
+        ) : (
+          part
+        )
+      );
+  };
+
   return (
     <Box sx={{}}>
       <Header />
@@ -180,17 +218,18 @@ const ManagePerLaCare: React.FC = () => {
       >
         {managePage.map((post: any, postIndex: number) => (
           <>
-            <div
-              style={{
+            <Grid
+              sx={{
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingTop: "250.67px",
+                // paddingTop: "250.67px",
+                paddingTop:{xs:'250.67px',sm:'250.67px',lg:'352px'}
               }}
             >
-              <div
-                style={{
+              <Grid
+                sx={{
                   background: "#fff",
                   display: "flex",
                   justifyContent: "center",
@@ -198,42 +237,44 @@ const ManagePerLaCare: React.FC = () => {
                   alignItems: "center",
                   borderRadius: "37px 37px 0px 0px",
                   // padding: "41px 152px 42px 152px",
-                  padding: "2% 5%",
+                  padding: {xs:"2% 5%",sm:"2% 5%",lg:'41px 152px 74px 152px'},
                 }}
               >
                 <Typography
                   sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#0A1411",
+                    fontFamily: "DM Serif",
+                    color: "#292F36",
                     fontWeight: 400,
                     // fontSize: "50px",
                     fontSize: { xs: "25px", sm: "40px", lg: "50px" },
                     // lineHeight: "62.5px",
-                    lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
+                    lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                    letterSpacing:'0%'
                   }}
                 >
                   {post.data.heading}
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Jost, sans-serif",
+                    fontFamily: "Jost",
                     color: "#4D5053",
                     fontWeight: 400,
                     // fontSize: "22px",
                     fontSize: { xs: "12px", sm: "18px", lg: "22px" },
                     // lineHeight: "33px",
-                    lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
+                    lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                    letterSpacing:'1%'
                   }}
                 >
                   {post.data.sub_heading}
                 </Typography>
-              </div>
-            </div>
+              </Grid>
+            </Grid>
           </>
         ))}
       </div>
 
-      <div style={{ padding: "5%" }}>
+      <Grid sx={{ padding: { xs: "5%", sm: "5%", lg: "123px 116px" } }}>
         {managePage.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
             <Grid
@@ -243,7 +284,7 @@ const ManagePerLaCare: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
-                gap: "20px",
+                gap: { xs: "20px", sm: "20px", lg: "133px" },
               }}
             >
               <Grid item lg={7} xs={12} sm={7}>
@@ -251,10 +292,10 @@ const ManagePerLaCare: React.FC = () => {
                   <Typography
                     key={index}
                     sx={{
-                      fontFamily: "Mulish, sans-serif",
+                      fontFamily: "Mulish",
                       fontWeight: 700,
                       fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-                      lineHeight: { xs: "35px", sm: "48px", lg: "62.5px" },
+                      lineHeight: { xs: "35px", sm: "48px", lg: "125%" },
                       color: "#292F36",
                       letterSpacing: "2%",
                     }}
@@ -264,35 +305,39 @@ const ManagePerLaCare: React.FC = () => {
                 ))}
                 <Typography
                   sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "rgba(35, 125, 108, 1)",
+                    fontFamily: "Mulish",
+                    color: "#237D6C",
                     fontWeight: 700,
                     fontSize: { xs: "12px", sm: "18px", lg: "24px" },
-                    lineHeight: { xs: "18px", sm: "25px", lg: "30.12px" },
+                    lineHeight: { xs: "18px", sm: "25px", lg: "1.5" },
                     paddingTop: "33px",
                     whiteSpace: "pre-line",
                   }}
                 >
-                  {post.data.top_left_description}
+                  {/* {post.data.top_left_description} */}
+                  {formatText(description)}
                 </Typography>
                 <div style={{ paddingTop: "50px" }}>
                   {managePage.map((post: any) => (
                     <Button
                       key={post}
-                      style={{
+                      sx={{
                         display: "flex",
                         flexDirection: "row",
                         background: "#24535C",
                         borderRadius: "82px",
-                        marginTop: "20px",
+                        marginTop: { xs: "20px", sm: "20px", lg: "45px" },
                         justifyContent: "space-around",
+                        width: { xs: "50%", sm: "70%", lg: "220.47px" },
+                        height: { xs: "auto", sm: "auto", lg: "62.47px" },
                       }}
                       // onClick={handleNavigation}
                     >
                       <Typography
                         sx={{
                           fontWeight: 400,
-                          fontSize: { xs: "12px", sm: "18px", lg: "20px" },
+                          fontFamily: "Mulish",
+                          fontSize: { xs: "12px", sm: "18px", lg: "15.2px" },
                           lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
                           color: "#FFFFFF",
                         }}
@@ -341,21 +386,25 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
           </Grid>
         ))}
-      </div>
+      </Grid>
 
       {managePage.map((post: any) => (
-        <>
+        <Grid
+          sx={{
+            margin: { xs: "0px", sm: "0px", lg: "0px 270px 107px 270px" },
+          }}
+        >
           <Typography
             sx={{
-              color: "rgba(36, 83, 92, 1)",
-              fontFamily: "Mulish, sans-serif",
+              color: "#24535C",
+              fontFamily: "Mulish",
               fontWeight: 800,
               // fontSize: "64px",
               fontSize: { xs: "30px", sm: "50px", lg: "64px" },
               // lineHeight: "80.32px",
               lineHeight: { xs: "50px", sm: "65px", lg: "80.32px" },
               // padding: "100px",
-              padding: "8%",
+              // padding: "8%",
               textAlign: "center",
               justifyContent: "center",
               display: "flex",
@@ -374,6 +423,7 @@ const ManagePerLaCare: React.FC = () => {
               // backgroundSize: "cover",
               backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
               backgroundRepeat: "no-repeat",
+              marginTop: { xs: "0px", sm: "0px", lg: "107px" },
             }}
           >
             <div style={styles.container}>
@@ -384,13 +434,29 @@ const ManagePerLaCare: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Typography
-                  sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "90%",
+                    color: "#1E1E1E",
+                    lineHeight: "auto",
+                    letterSpacing: "0%",
+                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                  }}
                   component="div"
                 >
                   {post.data.card_title1}
                 </Typography>
                 <Typography
-                  sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "80%",
+                    color: "#1E1E1E",
+                    lineHeight: "185%",
+                    letterSpacing: "-4%",
+                    fontStyle: "italic",
+                    marginTop: "24px",
+                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                  }}
                   color="textSecondary"
                 >
                   {post.data.card_description1}
@@ -403,13 +469,29 @@ const ManagePerLaCare: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Typography
-                  sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "90%",
+                    color: "#1E1E1E",
+                    lineHeight: "auto",
+                    letterSpacing: "0%",
+                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                  }}
                   component="div"
                 >
                   {post.data.card_title2}
                 </Typography>
                 <Typography
-                  sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "80%",
+                    color: "#1E1E1E",
+                    lineHeight: "185%",
+                    letterSpacing: "-4%",
+                    fontStyle: "italic",
+                    marginTop: "24px",
+                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                  }}
                   color="textSecondary"
                 >
                   {post.data.card_description2}
@@ -425,13 +507,29 @@ const ManagePerLaCare: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Typography
-                  sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "90%",
+                    color: "#1E1E1E",
+                    lineHeight: "auto",
+                    letterSpacing: "0%",
+                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                  }}
                   component="div"
                 >
                   {post.data.card_title3}
                 </Typography>
                 <Typography
-                  sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "80%",
+                    color: "#1E1E1E",
+                    lineHeight: "185%",
+                    letterSpacing: "-4%",
+                    fontStyle: "italic",
+                    marginTop: "24px",
+                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                  }}
                   color="textSecondary"
                 >
                   {post.data.card_description3}
@@ -447,13 +545,29 @@ const ManagePerLaCare: React.FC = () => {
                 onMouseLeave={handleMouseLeave}
               >
                 <Typography
-                  sx={{ fontSize: { xs: "16px", sm: "20px", lg: "25px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "90%",
+                    color: "#1E1E1E",
+                    lineHeight: "auto",
+                    letterSpacing: "0%",
+                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                  }}
                   component="div"
                 >
                   {post.data.card_title4}
                 </Typography>
                 <Typography
-                  sx={{ fontSize: { xs: "10px", sm: "14px", lg: "16px" } }}
+                  sx={{
+                    fontFamily: "Mulish",
+                    opacity: "80%",
+                    color: "#1E1E1E",
+                    lineHeight: "185%",
+                    letterSpacing: "-4%",
+                    fontStyle: "italic",
+                    marginTop: "24px",
+                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                  }}
                   color="textSecondary"
                 >
                   {post.data.card_description4}
@@ -461,216 +575,239 @@ const ManagePerLaCare: React.FC = () => {
               </Card>
             </div>
           </Grid>
-        </>
+        </Grid>
       ))}
 
       <Grid container>
         <Grid
-          item
-          lg={12}
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            textAlign: "center",
-            marginTop: "100px",
+          sx={{
+            margin: { xs: "0px", sm: "0px", lg: "90px 359px 153px 359px" },
           }}
         >
-          <Typography
-            sx={{
-              color: "#0A1411",
-              // fontSize: "64px",
-              fontSize: { xs: "45px", sm: "60px", lg: "64px" },
-              fontWeight: 700,
-            }}
-          >
-            {modulesPage[0]?.data.heading}
-          </Typography>
-        </Grid>
-        <Grid item lg={12} style={{ marginTop: "30px" }}>
-          <Typography
-            sx={{
-              textAlign: "center",
-              color: "#292F36",
-              // fontSize: "50px",
-              fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-              fontWeight: 400,
-            }}
-          >
-            {modulesPage[0]?.data.image_title}
-          </Typography>
           <Grid
             item
             lg={12}
             sx={{
               display: "flex",
-              flexDirection: { xs: "column", sm: "row", lg: "row" },
-              justifyContent: "space-evenly",
-              marginTop: "50px",
-              alignItems: "center",
+              flexDirection: "column",
+              textAlign: "center",
+              // marginTop: "100px",
             }}
           >
-            <Grid
-              item
-              xs={12}
-              sm={5}
-              lg={4}
+            <Typography
               sx={{
-                // marginTop: { xs: "20px", sm: "40px", lg: "150px" },
-                height: { xs: "0px", sm: "450px", lg: "585px" },
-                overflowY: "auto",
-                scrollbarWidth: "thin",
+                color: "#0A1411",
+                fontFamily: "Mulish",
+                fontSize: { xs: "45px", sm: "60px", lg: "64px" },
+                fontWeight: 700,
               }}
             >
-              {faqs.slice(0, 3).map((faq, index) => (
-                <div key={index}>
-                  <Accordion
-                    style={{
-                      backgroundColor: "transparent",
-                      boxShadow: "none",
-                    }}
-                  >
-                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
-                      <Typography
-                        onClick={() => handleColor(index)}
-                        sx={{
-                          color: clicked === index ? "#3D8C6E" : "#292F36",
-                          // fontSize: "25px",
-                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
-                          fontWeight: 400,
-                          fontFamily: "Mulish, sans-serif",
-                        }}
-                      >
-                        {faq.question}
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography
-                        sx={{
-                          color: "#4D5053",
-                          // fontSize: "22px",
-                          fontSize: { xs: "14px", sm: "18px", lg: "22px" },
-                          fontWeight: 400,
-                          fontFamily: "Mulish, sans-serif",
-                        }}
-                      >
-                        {faq.answer}
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <hr style={{ border: "1px solid #3D8C6E" }} />
-                </div>
-              ))}
-            </Grid>
-            <Grid item xs={12} sm={5} lg={4}>
-              {modulesPage[0]?.data.image && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={modulesPage[0]?.data.image.url || undefined}
-                  alt={modulesPage[0]?.data.image.alt || "Image"}
-                  width="100%"
-                  height="auto"
-                />
-              )}
+              {modulesPage[0]?.data.heading}
+            </Typography>
+          </Grid>
+          <Grid
+            item
+            lg={12}
+            sx={{ marginTop: { xs: "30px", sm: "30px", lg: "162px" } }}
+          >
+            <Typography
+              sx={{
+                textAlign: "center",
+                color: "#292F36",
+                // fontSize: "50px",
+                fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+                fontWeight: 400,
+                letterSpacing: "1%",
+                fontFamily: "Mulish",
+                lineHeight: "150%",
+              }}
+            >
+              {modulesPage[0]?.data.image_title}
+            </Typography>
+            <Grid
+              item
+              lg={12}
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row", lg: "row" },
+                justifyContent: "space-evenly",
+                marginTop: "50px",
+                alignItems: "center",
+                gap: { lg: "60px" },
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                sm={5}
+                lg={6}
+                sx={{
+                  height: { xs: "0px", sm: "390px", lg: "490px" },
+                  overflowY: "auto",
+                  scrollbarWidth: "thin",
+                }}
+              >
+                {faqs.slice(0, 3).map((faq, index) => (
+                  <div key={index}>
+                    <Accordion
+                      style={{
+                        backgroundColor: "transparent",
+                        boxShadow: "none",
+                      }}
+                    >
+                      <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                        <Typography
+                          onClick={() => handleColor(index)}
+                          sx={{
+                            color: clicked === index ? "#3D8C6E" : "#292F36",
+                            lineHeight: "150%",
+                            fontSize: { xs: "18px", sm: "22px", lg: "25px" },
+                            fontWeight: 500,
+                            fontFamily: "Mulish",
+                            letterSpacing: "1%",
+                          }}
+                        >
+                          {faq.question}
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography
+                          sx={{
+                            color: "#4D5053",
+                            // fontSize: "22px",
+                            fontSize: { xs: "14px", sm: "18px", lg: "22px" },
+                            fontWeight: 400,
+                            fontFamily: "Mulish",
+                            lineHeight: "150%",
+                            letterSpacing: "1%",
+                          }}
+                        >
+                          {faq.answer}
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                    <hr style={{ border: "1px solid #3D8C6E" }} />
+                  </div>
+                ))}
+              </Grid>
+              <Grid item xs={12} sm={5} lg={6}>
+                {modulesPage[0]?.data.image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={modulesPage[0]?.data.image.url || undefined}
+                    alt={modulesPage[0]?.data.image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
+                )}
+              </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid item lg={12}>
-          <Typography
-            sx={{
-              textAlign: "center",
-              color: "#292F36",
-              // fontSize: "50px",
-              fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-              fontWeight: 400,
-              marginTop: "50px",
-            }}
-          >
-            {modulesPage[0]?.data.video_title}
-          </Typography>
-          <Grid
-            item
-            lg={12}
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row", lg: "row" },
-              justifyContent: "space-evenly",
-              marginTop: "50px",
-              alignItems: "center",
-            }}
-          >
-            <Grid
-              item
-              xs={12}
-              sm={5}
-              lg={4}
-              sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
-            >
-              {videoUrl ? (
-                <video
-                  width="100%"
-                  height="auto"
-                  controls
-                  style={{
-                    borderRadius: "12px",
-                    objectFit: "cover",
-                  }}
-                >
-                  <source src={videoUrl} type="video/mp4" />
-                </video>
-              ) : (
-                <p>Video not available</p>
-              )}
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={5}
-              lg={4}
+          <Grid item lg={12}>
+            <Typography
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "530px" },
-                overflowY: "auto",
-                scrollbarWidth: "thin",
+                textAlign: "center",
+                color: "#292F36",
+                // fontSize: "50px",
+                fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+                fontWeight: 400,
+                marginTop: { xs: "50px", sm: "50px", lg: "269px" },
+                letterSpacing: "1%",
+                fontFamily: "Mulish",
+                lineHeight: "150%",
               }}
             >
-              {faqs.slice(3, 6).map((faq, index) => (
-                <div key={index}>
-                  <Accordion
+              {modulesPage[0]?.data.video_title}
+            </Typography>
+            <Grid
+              item
+              lg={12}
+              sx={{
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row", lg: "row" },
+                justifyContent: "space-evenly",
+                marginTop: "50px",
+                alignItems: "center",
+                gap: { lg: "60px" },
+              }}
+            >
+              <Grid
+                item
+                xs={12}
+                sm={5}
+                lg={6}
+                // sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
+              >
+                {videoUrl ? (
+                  <video
+                    width="100%"
+                    height="auto"
+                    controls
                     style={{
-                      backgroundColor: "transparent",
-                      boxShadow: "none",
+                      borderRadius: "12px",
+                      objectFit: "cover",
                     }}
                   >
-                    <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
-                      <Typography
-                        onClick={() => handleColor1(index)}
-                        sx={{
-                          color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                          // fontSize: "25px",
-                          fontSize: { xs: "18px", sm: "28px", lg: "38px" },
-                          fontWeight: 400,
-                          fontFamily: "Mulish, sans-serif",
-                        }}
-                      >
-                        {faq.question}
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography
-                        sx={{
-                          color: "#4D5053",
-                          // fontSize: "22px",
-                          fontSize: { xs: "14px", sm: "18px", lg: "22px" },
-                          fontWeight: 400,
-                          fontFamily: "Mulish, sans-serif",
-                        }}
-                      >
-                        {faq.answer}
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <hr style={{ border: "1px solid #3D8C6E" }} />
-                </div>
-              ))}
+                    <source src={videoUrl} type="video/mp4" />
+                  </video>
+                ) : (
+                  <p>Video not available</p>
+                )}
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={5}
+                lg={6}
+                sx={{
+                  height: { xs: "0px", sm: "400px", lg: "450px" },
+                  overflowY: "auto",
+                  scrollbarWidth: "thin",
+                }}
+              >
+                {faqs.slice(3, 6).map((faq, index) => (
+                  <div key={index}>
+                    <Accordion
+                      style={{
+                        backgroundColor: "transparent",
+                        boxShadow: "none",
+                      }}
+                    >
+                      <AccordionSummary expandIcon={<KeyboardArrowUpIcon />}>
+                        <Typography
+                          onClick={() => handleColor1(index)}
+                          sx={{
+                            color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                            lineHeight: "150%",
+                            fontSize: { xs: "18px", sm: "22px", lg: "25px" },
+                            fontWeight: 500,
+                            fontFamily: "Mulish",
+                            letterSpacing: "1%",
+                          }}
+                        >
+                          {faq.question}
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography
+                          sx={{
+                            color: "#4D5053",
+                            // fontSize: "22px",
+                            fontSize: { xs: "14px", sm: "18px", lg: "22px" },
+                            fontWeight: 400,
+                            fontFamily: "Mulish",
+                            lineHeight: "150%",
+                            letterSpacing: "1%",
+                          }}
+                        >
+                          {faq.answer}
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                    <hr style={{ border: "1px solid #3D8C6E" }} />
+                  </div>
+                ))}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
@@ -695,33 +832,39 @@ const ManagePerLaCare: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            marginTop: "10%",
+            // marginTop: "10%",
+            margin: { xs: "10%", sm: "10%", lg: "107px 522px" },
             flexDirection: "column",
           }}
         >
           {managePage.map((post: any) => (
             <>
-              <div>
+              <Grid
+                sx={{
+                  padding: { lg: "67px 0px 27px 0px" },
+                }}
+              >
                 {managePage[0]?.data.quote_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={managePage[0]?.data.quote_image.url || undefined}
                     alt={managePage[0]?.data.quote_image.alt || "Image"}
-                    width="100%"
+                    width="50%"
                     height="auto"
                   />
                 )}
-              </div>
+              </Grid>
               <div>
                 <Typography
                   sx={{
-                    fontFamily: "Jenna Sue, sans-serif",
-                    color: "#0A1411",
+                    fontFamily: "Jenna Sue",
+                    color: "#292F36",
                     fontWeight: 400,
                     fontSize: { xs: "28px", sm: "38px", lg: "48px" },
-                    lineHeight: { xs: "30px", sm: "45px", lg: "60px" },
+                    lineHeight: { xs: "30px", sm: "45px", lg: "125%" },
                     textAlign: "center",
-                    padding: { xs: "12%", sm: "12%", lg: "12%" },
+                    padding: { xs: "12%", sm: "12%", lg: "0px 82px 34px 82px" },
+                    letterSpacing: "2%",
                   }}
                 >
                   {post.data.quote_text}
@@ -730,12 +873,14 @@ const ManagePerLaCare: React.FC = () => {
               <div>
                 <Typography
                   sx={{
-                    fontFamily: "Mulish, sans-serif",
-                    color: "#0A1411",
+                    fontFamily: "Jost",
+                    color: "#4D5053",
                     fontWeight: 400,
                     fontSize: { xs: "14px", sm: "18px", lg: "25px" },
-                    lineHeight: { xs: "18px", sm: "25px", lg: "37.5px" },
+                    lineHeight: { xs: "18px", sm: "25px", lg: "150%" },
                     textAlign: "center",
+                    letterSpacing: "1%",
+                    padding: { lg: "0px 303px 78px 303px" },
                   }}
                 >
                   {post.data.writer_name}
@@ -747,29 +892,38 @@ const ManagePerLaCare: React.FC = () => {
       </Box>
       <Typography
         sx={{
+          fontFamily:'Mulish',
           fontSize: { xs: "38px", sm: "50px", lg: "64px" },
           fontWeight: 700,
-          lineHeight: { xs: "45px", sm: "60px", lg: "80px" },
+          lineHeight: { xs: "45px", sm: "60px", lg: "auto" },
           textAlign: "center",
-          padding: "10% 10% 0% 10%",
+          // padding: "10% 10% 0% 10%",
+          padding: {
+            xs: "10% 10% 0% 10%",
+            sm: "10% 10% 0% 10%",
+            lg: "187px 414px 0px 414px",
+          },
+          color:'#0A1411'
         }}
       >
         {managePage[0]?.data.bottom_title}
       </Typography>
 
       <Grid
-        item
-        lg={12}
+        // item
+        // lg={12}
+        container
         sx={{
           display: "flex",
-          justifyContent: "center",
+          justifyContent: "space-evenly",
           flexDirection: { xs: "column", sm: "row", lg: "row" },
           textAlign: "center",
-          padding: "5%",
-          gap: "50px",
+          // padding: "5%",
+          // gap: "50px",
+          margin:{lg:'114px 0px 346px 0px'}
         }}
       >
-        <Grid item lg={6} xs={12} sm={6}>
+        <Grid item lg={4} xs={12} sm={6}>
           {" "}
           {managePage[0]?.data.bottom_left_image && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -783,7 +937,7 @@ const ManagePerLaCare: React.FC = () => {
         </Grid>
         <Grid
           item
-          lg={6}
+          lg={4}
           xs={12}
           sm={6}
           sx={{
@@ -793,6 +947,7 @@ const ManagePerLaCare: React.FC = () => {
             fontWeight: 400,
             textAlign: "left",
             color: "#24535C",
+            fontFamily:'Mulish'
           }}
         >
           {managePage[0]?.data.bottom_description}
