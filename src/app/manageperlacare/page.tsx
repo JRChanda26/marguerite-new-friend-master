@@ -50,12 +50,12 @@ const ManagePerLaCare: React.FC = () => {
 
   const videoUrl = modulesPage[0]?.data.video?.url;
 
-  const [clicked, setClicked] = useState<number | null>(null);
+  const [clicked, setClicked] = useState<number | null>(1);
   const handleColor = (index: number) => {
     setClicked(index);
   };
 
-  const [clicked1, setClicked1] = useState<number | null>(null);
+  const [clicked1, setClicked1] = useState<number | null>(1);
   const handleColor1 = (index: number) => {
     setClicked1(index);
   };
@@ -225,7 +225,7 @@ const ManagePerLaCare: React.FC = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 // paddingTop: "250.67px",
-                paddingTop:{xs:'250.67px',sm:'250.67px',lg:'352px'}
+                paddingTop: { xs: "250.67px", sm: "250.67px", lg: "352px" },
               }}
             >
               <Grid
@@ -237,7 +237,11 @@ const ManagePerLaCare: React.FC = () => {
                   alignItems: "center",
                   borderRadius: "37px 37px 0px 0px",
                   // padding: "41px 152px 42px 152px",
-                  padding: {xs:"2% 5%",sm:"2% 5%",lg:'41px 152px 74px 152px'},
+                  padding: {
+                    xs: "2% 5%",
+                    sm: "2% 5%",
+                    lg: "41px 152px 74px 152px",
+                  },
                 }}
               >
                 <Typography
@@ -249,7 +253,7 @@ const ManagePerLaCare: React.FC = () => {
                     fontSize: { xs: "25px", sm: "40px", lg: "50px" },
                     // lineHeight: "62.5px",
                     lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
-                    letterSpacing:'0%'
+                    letterSpacing: "0%",
                   }}
                 >
                   {post.data.heading}
@@ -263,7 +267,7 @@ const ManagePerLaCare: React.FC = () => {
                     fontSize: { xs: "12px", sm: "18px", lg: "22px" },
                     // lineHeight: "33px",
                     lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
-                    letterSpacing:'1%'
+                    letterSpacing: "1%",
                   }}
                 >
                   {post.data.sub_heading}
@@ -390,6 +394,7 @@ const ManagePerLaCare: React.FC = () => {
 
       {managePage.map((post: any) => (
         <Grid
+          key={post}
           sx={{
             margin: { xs: "0px", sm: "0px", lg: "0px 270px 107px 270px" },
           }}
@@ -650,6 +655,7 @@ const ManagePerLaCare: React.FC = () => {
                 {faqs.slice(0, 3).map((faq, index) => (
                   <div key={index}>
                     <Accordion
+                      expanded={clicked === index}
                       style={{
                         backgroundColor: "transparent",
                         boxShadow: "none",
@@ -738,7 +744,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 // sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
               >
-                {videoUrl ? (
+                {/* {videoUrl ? (
                   <video
                     width="100%"
                     height="auto"
@@ -752,6 +758,15 @@ const ManagePerLaCare: React.FC = () => {
                   </video>
                 ) : (
                   <p>Video not available</p>
+                )} */}
+                {modulesPage[0]?.data.video_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={modulesPage[0]?.data.video_image.url || undefined}
+                    alt={modulesPage[0]?.data.video_image.alt || "Image"}
+                    width="100%"
+                    height="auto"
+                  />
                 )}
               </Grid>
               <Grid
@@ -768,6 +783,7 @@ const ManagePerLaCare: React.FC = () => {
                 {faqs.slice(3, 6).map((faq, index) => (
                   <div key={index}>
                     <Accordion
+                      expanded={clicked1 === index}
                       style={{
                         backgroundColor: "transparent",
                         boxShadow: "none",
@@ -892,7 +908,7 @@ const ManagePerLaCare: React.FC = () => {
       </Box>
       <Typography
         sx={{
-          fontFamily:'Mulish',
+          fontFamily: "Mulish",
           fontSize: { xs: "38px", sm: "50px", lg: "64px" },
           fontWeight: 700,
           lineHeight: { xs: "45px", sm: "60px", lg: "auto" },
@@ -903,7 +919,7 @@ const ManagePerLaCare: React.FC = () => {
             sm: "10% 10% 0% 10%",
             lg: "187px 414px 0px 414px",
           },
-          color:'#0A1411'
+          color: "#0A1411",
         }}
       >
         {managePage[0]?.data.bottom_title}
@@ -920,7 +936,7 @@ const ManagePerLaCare: React.FC = () => {
           textAlign: "center",
           // padding: "5%",
           // gap: "50px",
-          margin:{lg:'114px 0px 346px 0px'}
+          margin: { lg: "114px 0px 346px 0px" },
         }}
       >
         <Grid item lg={4} xs={12} sm={6}>
@@ -947,7 +963,7 @@ const ManagePerLaCare: React.FC = () => {
             fontWeight: 400,
             textAlign: "left",
             color: "#24535C",
-            fontFamily:'Mulish'
+            fontFamily: "Mulish",
           }}
         >
           {managePage[0]?.data.bottom_description}
