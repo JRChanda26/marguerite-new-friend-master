@@ -1738,6 +1738,17 @@ interface InteractiveLearningModulesDocumentData {
   answer6: prismic.KeyTextField;
 
   /**
+   * Video Image field in *Interactive Learning Modules*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: interactive_learning_modules.video_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  video_image: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Interactive Learning Modules*
    *
    * - **Field Type**: Slice Zone
