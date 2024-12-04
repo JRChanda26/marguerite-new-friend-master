@@ -340,7 +340,7 @@ const Header: React.FC = () => {
                     src={post.data.marguerite_logo.url || undefined}
                     alt={post.data.marguerite_logo.alt || "Image"}
                     style={{
-                      width: "10%",
+                      width: "8%",
                       height: "auto",
                       cursor: "pointer",
                     }}
@@ -360,7 +360,7 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Mulish, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
                         fontWeight: 400,
@@ -373,7 +373,7 @@ const Header: React.FC = () => {
                   <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
                     <Typography
                       sx={{
-                        fontFamily: "Mulish, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
                         fontWeight: 400,
@@ -389,7 +389,7 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Mulish, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: { xs: "12px", sm: "18px", lg: "26.49px" },
                         fontWeight: 400,

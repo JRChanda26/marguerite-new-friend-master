@@ -35,9 +35,10 @@ const NosExperiences: React.FC = () => {
     <Box
       sx={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
+        backgroundSize: { xs: "cover", sm: "cover", lg: "cover" },
+        backgroundRepeat: "no-repeat",
         width: "100%",
-        paddingBottom: "100px",
+        // paddingBottom: "100px",
         display: "flex",
         justifyContent: "center",
       }}
@@ -45,9 +46,9 @@ const NosExperiences: React.FC = () => {
       <Grid
         container
         spacing={3}
-        sx={{
-          padding: "40px 20px",
-        }}
+        // sx={{
+        //   padding: "0px",
+        // }}
       >
         {nosPage.map((post: any, postIndex: number) => (
           <Grid
@@ -63,25 +64,29 @@ const NosExperiences: React.FC = () => {
           >
             <Typography
               sx={{
-                fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 color: "#FFFFFF",
                 fontWeight: 700,
                 fontSize: { xs: "36px", sm: "48px", lg: "66.25px" },
-                lineHeight: { xs: "44px", sm: "55px", lg: "79.51px" },
-                paddingTop: "200px",
+                lineHeight: { xs: "44px", sm: "55px", lg: "120%" },
+                padding: {
+                  xs: "12% 0% 2% 0%",
+                  sm: "8% 0% 2% 0%",
+                  lg: "250px 0px 36px 0px",
+                },
               }}
             >
               {post.data.heading}
             </Typography>
             <Typography
               sx={{
-                fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 color: "#FFFFFF",
                 fontWeight: 400,
                 fontSize: { xs: "14px", sm: "18px", lg: "24px" },
-                lineHeight: { xs: "18px", sm: "25px", lg: "38px" },
-                paddingTop: "20px",
-                maxWidth: "800px",
+                lineHeight: { xs: "18px", sm: "25px", lg: "120%" },
+                padding: { xs: "5%", sm: "2%", lg: "0px 0px 0px 0px" },
+                // maxWidth: "800px",
               }}
             >
               {post.data.description}
@@ -107,7 +112,11 @@ const NosExperiences: React.FC = () => {
                 overflow: "hidden",
                 display: "flex",
                 justifyContent: "center",
-                padding: { xs: "20px", md: "40px 0" },
+                padding: {
+                  xs: "20px",
+                  md: "40px 0",
+                  lg: "179px 0px 231px 0px",
+                },
               }}
             >
               <Box
@@ -128,16 +137,21 @@ const NosExperiences: React.FC = () => {
                       background: "#FFFFFF",
                       borderRadius: "22.08px",
                       padding: "20px",
-                      minWidth: { xs: "250px", sm: "300px", md: "350px" },
+                      minWidth: {
+                        xs: "250px",
+                        sm: "300px",
+                        md: "350px",
+                        lg: "394px",
+                      },
                     }}
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Mulish, sans-serif",
-                        color: "#000000",
+                        fontFamily: "Mulish",
+                        color: "#161C2D",
                         fontWeight: 400,
                         fontSize: { xs: "12px", sm: "16px", lg: "19.32px" },
-                        lineHeight: { xs: "16px", sm: "22px", lg: "30px" },
+                        lineHeight: { xs: "16px", sm: "22px", lg: "160%" },
                       }}
                     >
                       {testimonial}

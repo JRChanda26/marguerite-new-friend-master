@@ -3539,6 +3539,17 @@ interface NeManquezDocumentData {
   button_text: prismic.KeyTextField;
 
   /**
+   * Background Image field in *Ne Manquez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: ne_manquez.background_image
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  background_image: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Ne Manquez*
    *
    * - **Field Type**: Slice Zone

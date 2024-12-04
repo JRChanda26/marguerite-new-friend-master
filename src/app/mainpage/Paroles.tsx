@@ -57,7 +57,8 @@ export default function Paroles() {
               fontFamily: fontMap[part as HighlightWord].fontFamily,
               fontWeight: 400,
               fontSize: "44px",
-              lineHeight: "44px",
+              lineHeight: "auto",
+              letterSpacing:'0%',
               color: "#24535C",
             }}
           >
@@ -123,7 +124,7 @@ export default function Paroles() {
         display: "flex",
         flexDirection: "column",
         textAlign: "center",
-        paddingTop: "5%",
+        // paddingTop: "5%",
       }}
     >
       <Grid container alignItems="center" justifyContent="center" gap="20px">
@@ -131,21 +132,23 @@ export default function Paroles() {
           sx={{
             color: "#0A1411",
             fontWeight: 700,
-            fontSize: { xs: "28px", sm: "45px", lg: "65px" },
-            lineHeight: { xs: "30px", sm: "50px", lg: "80px" },
-            padding: { xs: "2% 0%", sm: "5% 0%", lg: "5% 0%" },
-            fontFamily: "sans-serif",
+            fontSize: { xs: "28px", sm: "45px", lg: "64px" },
+            lineHeight: { xs: "30px", sm: "50px", lg: "auto" },
+            padding: { xs: "2% 0%", sm: "5% 0%", lg: "140px 194px 100px 194px" },
+            fontFamily: "Mulish",
+            letterSpacing:'0%'
           }}
         >
           {parolesPage?.data.heading}
         </Typography>
         <Grid
           item
-          style={{
+          sx={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "flex-end",
             gap: "20px",
+            paddingTop:{lg:'30px'},
           }}
         >
           <Button
@@ -156,7 +159,7 @@ export default function Paroles() {
               color: "#000000",
               background: "#FFFFFF",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              padding: "7px",
+              padding: "20px",
               "&:hover": {
                 background: "inherit",
               },
@@ -182,7 +185,7 @@ export default function Paroles() {
               color: "#000000",
               background: "#FFFFFF",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-              padding: "7px",
+              padding: "20px",
               "&:hover": {
                 background: "inherit",
               },
@@ -208,10 +211,11 @@ export default function Paroles() {
           sx={{
             color: "#000000",
             fontWeight: 400,
-            fontFamily: "sans-serif",
+           fontFamily: "Mulish",
+            letterSpacing:'0%',
             fontSize: { xs: "12px", sm: "16px", lg: "25px" },
             lineHeight: { xs: "20px", sm: "20px", lg: "38.4px" },
-            padding: { xs: "2% 3%", sm: "2% 8%", lg: "2% 15%" },
+            padding: { xs: "2% 3%", sm: "2% 8%", lg: "0px 194px 0px 194px" },
           }}
         >
           {formatText(description)}
@@ -248,7 +252,7 @@ export default function Paroles() {
             overflow: "hidden",
             display: "flex",
             justifyContent: "center",
-            padding: { xs: "20px", sm: "40px 0" },
+            padding: { xs: "20px", sm: "40px 0" ,lg:"117px 0px 128px 0px"},
           }}
         >
           <Box
@@ -268,7 +272,7 @@ export default function Paroles() {
                 sx={{
                   borderRadius: "22.08px",
                   padding: "20px",
-                  minWidth: { xs: "250px", sm: "300px", lg: "350px" },
+                  minWidth: { xs: "250px", sm: "300px", lg: "529px" },
                   background:
                     isCardHovered === item.id ||
                     playingVideoId === item.id ||
@@ -310,14 +314,14 @@ export default function Paroles() {
                   sx={{
                     color: "#000000",
                     fontWeight: 700,
-                    fontFamily: "sans-serif",
+                    fontFamily: "Mulish",
                     textAlign: "center",
                     padding: { xs: "0px", sm: "0px", lg: "10px 20px" },
-                    fontSize: { xs: "12px", sm: "16px", lg: "22px" },
+                    fontSize: { xs: "12px", sm: "16px", lg: "35.2px" },
                     lineHeight: { xs: "20px", sm: "20px", lg: "25px" },
                   }}
                 >
-                  {item.title}
+                  {item.id}.{item.title}
                 </Typography>
               </Box>
             ))}
