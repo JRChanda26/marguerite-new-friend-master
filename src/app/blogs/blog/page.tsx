@@ -52,12 +52,19 @@ export default function Blogs() {
     color: "#161C2D",
     fontSize: "21.27px",
     fontWeight: 700,
+    fontFamily:'Mulish',
+    lineHeight:'120%',
+    letterSpacing:'0%'
   };
 
   const description: React.CSSProperties = {
-    color: "#161C2DB8",
+    color: "#161C2D",
     fontSize: "18.61px",
     fontWeight: 400,
+    opacity:'72%',
+    fontFamily:'Mulish',
+    lineHeight:'160%',
+    letterSpacing:'0%'
   };
 
   const profileStyle: React.CSSProperties = {
@@ -206,17 +213,18 @@ export default function Blogs() {
           backgroundRepeat: "no-repeat",
         }}
       >
-        <div
-          style={{
+        <Grid
+          sx={{
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            paddingTop: "250.67px",
+            // paddingTop: "250.67px",
+            paddingTop: { xs: "250.67px", sm: "250.67px", lg: "352px" },
           }}
         >
-          <div
-            style={{
+          <Grid
+            sx={{
               background: "#fff",
               display: "flex",
               justifyContent: "center",
@@ -224,37 +232,43 @@ export default function Blogs() {
               alignItems: "center",
               borderRadius: "37px 37px 0px 0px",
               // padding: "41px 152px 41px 152px",
-              padding: "2% 5%",
+              padding: {
+                xs: "2% 5%",
+                sm: "2% 5%",
+                lg: "41px 152px 74px 152px",
+              },
             }}
           >
             <Typography
               sx={{
-                fontFamily: "Mulish, sans-serif",
-                color: "#0A1411",
-                fontWeight: 400,
-                // fontSize: "64px",
-                // lineHeight: "80.32px",
+                fontFamily: "DM Serif Display",
+                color: "#292F36",
+                fontWeight: 700,
+                // fontSize: "50px",
                 fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-                lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
+                // lineHeight: "62.5px",
+                lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                letterSpacing: "0%",
               }}
             >
               {blogPage[0]?.data.heading}
             </Typography>
             <Typography
               sx={{
-                fontFamily: "Mulish, sans-serif",
-                color: "#565656",
+                fontFamily: "Jost",
+                color: "#4D5053",
                 fontWeight: 400,
-                // fontSize: "24px",
-                // lineHeight: "38.4px",
+                // fontSize: "22px",
                 fontSize: { xs: "12px", sm: "18px", lg: "22px" },
-                lineHeight: { xs: "20px", sm: "28px", lg: "33px" },
+                // lineHeight: "33px",
+                lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                letterSpacing: "1%",
               }}
             >
               {blogPage[0]?.data.sub_heading}
             </Typography>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </div>
       <Grid
         container
@@ -268,10 +282,12 @@ export default function Blogs() {
               color: "#292F36",
               // fontSize: "50px",
               fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-              lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
+              lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
               fontWeight: 700,
               textAlign: "center",
-              marginTop: "70px",
+              marginTop: {lg:'233px'},
+              fontFamily:'Mulish',
+
             }}
           >
             {blogPage[0]?.data.title1}
@@ -280,7 +296,8 @@ export default function Blogs() {
             sx={{
               borderRadius: "62px",
               border: "1px solid #E7E7E7",
-              margin: "5% 10%",
+              // margin: "5% 10%",
+              margin:{lg:'27px 252px 212px 252px'}
             }}
           >
             {items
@@ -294,7 +311,7 @@ export default function Blogs() {
                     display: "flex",
                     // flexDirection: "row",
                     flexDirection: { xs: "column", sm: "column", lg: "row" },
-                    padding: "22px",
+                    padding: {lg:'22px 130px'},
                     gap: "50px",
                   }}
                   key={index}
@@ -314,38 +331,50 @@ export default function Blogs() {
                     style={{
                       display: "flex",
                       flexDirection: "column",
-                      justifyContent: "space-around",
+                      // justifyContent: "space-evenly",
+                      gap:'22px'
                     }}
                   >
-                    <div
-                      style={{
+                    <Typography
+                      sx={{
                         color: "#292F36",
                         fontSize: "25px",
                         fontWeight: 700,
+                        fontFamily:'Mulish',
+                        lineHeight:'125%',
+                        letterSpacing:'2%',
+                        padding:{lg:'50px 50px 0px 0px'}
                       }}
                     >
-                      {page * fixedRowsPerPage + index + 1}.
+                      {/* {page * fixedRowsPerPage + index + 1}. */}
                       {blogPage[0]?.data.testimonial_title}
-                    </div>
-                    <div
-                      style={{
+                    </Typography>
+                    <Typography
+                      sx={{
                         color: "#4D5053",
                         fontSize: "22px",
                         fontWeight: 400,
+                        fontFamily:'Mulish',
+                        lineHeight:'150%',
+                        letterSpacing:'1%',
                         whiteSpace: "pre-line",
                       }}
                     >
                       {blogPage[0]?.data.testimonial_description}
-                    </div>
-                    <div
-                      style={{
+                    </Typography>
+                    <Typography
+                      sx={{
                         color: "#4D5053",
                         fontSize: "16px",
                         fontWeight: 400,
+                        fontFamily:'Mulish',
+                        lineHeight:'150%',
+                        letterSpacing:'1%',
+                        marginTop:{lg:'41px'}
                       }}
                     >
                       {blogPage[0]?.data.testimonial_date}
-                    </div>
+                    </Typography>
                   </div>
                 </Grid>
               ))}
@@ -407,11 +436,14 @@ export default function Blogs() {
         <Typography
           sx={{
             fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-            lineHeight: { xs: "40px", sm: "48px", lg: "62.5px" },
+            lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
             fontWeight: 700,
-            color: "#000000",
+            color: "#292F36",
             textAlign: "center",
-            margin: "50px 0px",
+            // margin: "50px 0px",
+            fontFamily:'Mulish',
+            letterSpacing:'2%'
+
           }}
         >
           {blogPage[0]?.data.title2}
@@ -532,9 +564,10 @@ export default function Blogs() {
               sm: "repeat(2, 1fr)",
               lg: "repeat(3, 1fr)",
             },
-            gap: "50px",
+            gap: "70px",
             justifyContent: "center",
-            padding: "3% 8%",
+            // padding: "3% 8%",
+            padding:{xs:'3% 8%',sm:'3% 8%',lg:'78px 162px 432px 162px'}
           }}
         >
           {repeatedArticleItems
@@ -554,7 +587,7 @@ export default function Blogs() {
                   display: "flex",
                   flexDirection: "column",
                   padding: "20px",
-                  borderRadius: "20px",
+                  borderRadius: "21.27px",
                   boxShadow: "0 5px 10px rgba(0, 0, 0, 0.5)",
                   gap: "10px",
                   transition: "transform 0.3s ease",

@@ -86,11 +86,11 @@ export default function NotreProcessus() {
               // fontSize: "24px",
               fontWeight: 400,
               // lineHeight: "38.04px",
-              fontSize: { xs: "12px", sm: "16px", lg: "25px" },
+              fontSize: { xs: "12px", sm: "16px", lg: "24px" },
               lineHeight: { xs: "20px", sm: "20px", lg: "38.4px" },
               color: "#565656",
               margin: { xs: "1% 3%", sm: "1% 8%", lg: "0px 425px 196px 425px" },
-              fontFamily: "sans-serif",
+              fontFamily: "Mulish",
             }}
           >
             {notrePage?.data.description}

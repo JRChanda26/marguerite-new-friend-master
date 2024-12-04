@@ -259,58 +259,81 @@ export default function Contact() {
           backgroundSize: "cover",
         }}
       >
-        <div
-          style={{
+        <Grid
+          sx={{
             display: "flex",
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            paddingTop: "250.67px",
+            // paddingTop: "250.67px",
+            paddingTop: { xs: "250.67px", sm: "250.67px", lg: "352px" },
           }}
         >
-          <div
-            style={{
+          <Grid
+            // style={{
+            //   background: "#fff",
+            //   display: "flex",
+            //   justifyContent: "center",
+            //   flexDirection: "column",
+            //   alignItems: "center",
+            //   borderRadius: "37px 37px 0px 0px",
+            //   padding: "2% 10%",
+            //   textAlign: "center",
+            // }}
+            sx={{
               background: "#fff",
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
               alignItems: "center",
               borderRadius: "37px 37px 0px 0px",
-              padding: "2% 10%",
-              textAlign: "center",
+              // padding: "41px 152px 42px 152px",
+              padding: {
+                xs: "2% 5%",
+                sm: "2% 5%",
+                lg: "41px 152px 41px 152px",
+              },
             }}
           >
             <Typography
               variant="h1"
               sx={{
-                fontFamily: "Mulish, sans-serif",
-                color: "#0A1411",
+                fontFamily: "DM Serif Display",
+                color: "#292F36",
                 fontWeight: 700,
-                fontSize: { xs: "32px", sm: "48px", lg: "64px" },
-                lineHeight: "80.32px",
+                // fontSize: "50px",
+                fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+                // lineHeight: "62.5px",
+                lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                letterSpacing: "0%",
               }}
             >
               {contactPage[0]?.data.heading}
             </Typography>
             <Typography
               sx={{
-                fontFamily: "Mulish, sans-serif",
-                color: "#565656",
+                fontFamily: "Jost",
+                color: "#4D5053",
                 fontWeight: 400,
-                fontSize: { xs: "16px", sm: "20px", lg: "24px" },
-                lineHeight: "38.4px",
+                // fontSize: "22px",
+                fontSize: { xs: "12px", sm: "18px", lg: "22px" },
+                // lineHeight: "33px",
+                lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                letterSpacing: "1%",
               }}
             >
               {contactPage[0]?.data.sub_heading}
             </Typography>
-          </div>
-        </div>
+          </Grid>
+        </Grid>
       </div>
 
       <Grid
         container
         spacing={3}
-        sx={{ padding: { xs: "6%", sm: "5% 15%", lg: "8% 20%" } }}
+        sx={{
+          padding: { xs: "6%", sm: "5% 15%", lg: "135px 356px 287px 356px" },
+        }}
       >
         <Grid item xs={12}>
           <Typography
@@ -319,6 +342,10 @@ export default function Contact() {
               fontSize: { xs: "30px", sm: "40px", lg: "50px" },
               fontWeight: 700,
               textAlign: "center",
+              padding: { lg: "0px 196px 80px 196px" },
+              fontFamily: "Mulish",
+              lineHeight: "150%",
+              letterSpacing: "1%",
             }}
           >
             {contactPage[0]?.data.title}
@@ -332,8 +359,13 @@ export default function Contact() {
           sm={12}
           md={12}
           lg={12}
-          spacing={2}
-          sx={{ justifyContent: "center", marginTop: "7%" }}
+          // spacing={2}
+          sx={{
+            justifyContent: "center",
+            gap: "55px",
+            display: "flex",
+            alignItems: "center",
+          }}
         >
           <Grid
             item
@@ -342,11 +374,11 @@ export default function Contact() {
             lg={4}
             sx={{
               background: "#BBDDD9",
-              borderRadius: "40px",
-              padding: "20px",
+              borderRadius: "50px",
+              padding: { lg: "76px 32px" },
               display: "flex",
               flexDirection: "column",
-              gap: "20px",
+              gap: "42px",
             }}
           >
             {contactDetails.map((detail, index) => (
@@ -355,7 +387,7 @@ export default function Contact() {
                 style={{
                   display: "flex",
                   flexDirection: "row",
-                  gap: "20px",
+                  gap: "15px",
                 }}
               >
                 {detail.icon && (
@@ -363,18 +395,22 @@ export default function Contact() {
                   <img
                     src={detail.icon.url || undefined}
                     alt={detail.icon.alt || "Image"}
-                   style={{
-                    background:'#FFFFFF',
-                    padding:'5%',
-                    borderRadius:'25px'
-                   }}
+                    style={{
+                      background: "#FFFFFF",
+                      padding: "4%",
+                      borderRadius: "40%",
+                    }}
                   />
                 )}
                 <Typography
                   sx={{
-                    fontSize: { xs: "16px", sm: "20px", lg: "24px" },
+                    fontSize: { xs: "16px", sm: "20px", lg: "20px" },
                     display: "flex",
                     alignItems: "center",
+                    fontFamily: "Jost",
+                    lineHeight: "150%",
+                    letterSpacing: "1%",
+                    color: "#4D5053",
                   }}
                 >
                   {detail.text}
@@ -384,8 +420,9 @@ export default function Contact() {
             <div
               style={{
                 display: "flex",
-                justifyContent: "space-evenly",
+                justifyContent: "flex-start",
                 flexDirection: "row",
+                gap: "35px",
               }}
             >
               {socialLinks.map((social, index) => (
@@ -403,7 +440,17 @@ export default function Contact() {
             </div>
           </Grid>
 
-          <Grid item xs={12} sm={8}>
+          <Grid
+            item
+            xs={12}
+            sm={8}
+            lg={7}
+            sx={{
+              display: "flex",
+              flexDirection: {xs:"column",sm:"column",lg:"column"},
+              gap: {lg:"50px"},
+            }}
+          >
             <Grid container spacing={2} sx={{ mb: 4 }}>
               <Grid item xs={12} sm={6}>
                 <TextField
