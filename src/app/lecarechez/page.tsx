@@ -306,7 +306,7 @@ const LecarechezMargueriteServices: React.FC = () => {
       <Grid
         sx={{
           textAlign: "center",
-          padding: { lg: "92px 204px 168px 204px" },
+          padding: { lg: "92px 254px 168px 254px" },
         }}
       >
         <Typography
@@ -416,7 +416,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                 display: "flex",
                 flexDirection: { xs: "column", sm: "row", lg: "row" },
                 justifyContent: "center",
-                gap: "36px",
+                gap: "206px",
                 alignItems: "center",
               }}
             >
