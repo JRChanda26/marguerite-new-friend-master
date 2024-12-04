@@ -21,22 +21,24 @@ export default function NotreProcessus() {
   const title: React.CSSProperties = {
     fontWeight: 400,
     color: "#1E1E1E",
-    fontFamily: "Mulish, sans-serif",
+    fontFamily: "Mulish",
+    letterSpacing: "0%",
   };
 
   const heading: React.CSSProperties = {
     color: "#24535C",
     textTransform: "uppercase",
     fontWeight: 600,
-    letterSpacing: "5px",
-    fontFamily: "Mulish, sans-serif",
+    letterSpacing: "17.5%",
+    fontFamily: "Mulish",
   };
 
   const description: React.CSSProperties = {
     color: "#1E1E1E",
     fontWeight: 400,
-    fontFamily: "Mulish, sans-serif",
-    // fontStyle: "italic",
+    fontFamily: "Mulish",
+    fontStyle: "italic",
+    letterSpacing: "0%",
   };
 
   const textLink: React.CSSProperties = {
@@ -46,8 +48,9 @@ export default function NotreProcessus() {
     textDecoration: "none",
     display: "flex",
     flexDirection: "row",
-    fontFamily: "Mulish, sans-serif",
-    // fontStyle: "italic",
+    fontFamily: "Mulish",
+    fontStyle: "italic",
+    letterSpacing: "0%",
   };
 
   const [isHovered, setIsHovered] = useState<number | null>(null);
@@ -69,11 +72,11 @@ export default function NotreProcessus() {
               // fontSize: "64px",
               fontWeight: 700,
               // lineHeight: "80.32px",
-              fontSize: { xs: "28px", sm: "45px", lg: "65px" },
-              lineHeight: { xs: "30px", sm: "50px", lg: "80px" },
+              fontSize: { xs: "28px", sm: "45px", lg: "64px" },
+              lineHeight: { xs: "30px", sm: "50px", lg: "auto" },
               color: "#0A1411",
-              fontFamily: "sans-serif",
-              marginTop: { xs: "10%", sm: "10%", lg: "7%" },
+              fontFamily: "Mulish",
+              margin: { xs: "10%", sm: "10%", lg: "225.32px 273px 31px 379px" },
             }}
           >
             {notrePage?.data.heading}
@@ -86,13 +89,14 @@ export default function NotreProcessus() {
               fontSize: { xs: "12px", sm: "16px", lg: "25px" },
               lineHeight: { xs: "20px", sm: "20px", lg: "38.4px" },
               color: "#565656",
-              margin: { xs: "1% 3%", sm: "1% 8%", lg: "1% 15%" },
+              margin: { xs: "1% 3%", sm: "1% 8%", lg: "0px 425px 196px 425px" },
               fontFamily: "sans-serif",
             }}
           >
             {notrePage?.data.description}
           </Typography>
         </Grid>
+        <Grid sx={{margin:{xs:'5%',sm:'5%',lg: '0px 249px 349px 237px',}}}>
         <Grid
           item
           lg={12}
@@ -102,8 +106,8 @@ export default function NotreProcessus() {
             display: "flex",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
             justifyContent: "space-evenly",
-            margin: "8% 5% 0% 5%",
-            gap: "3%",
+            margin: {lg:'0px 42px 0px 0px'},
+            gap: {lg:'124px'},
           }}
         >
           <div>
@@ -124,14 +128,14 @@ export default function NotreProcessus() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              gap: { xs: "2%", sm: "2%", lg: "5%" },
+              gap: { xs: "2%", sm: "2%", lg: "18px" },
             }}
           >
             <Typography
               sx={{
                 ...heading,
                 fontSize: { xs: "12px", sm: "14px", lg: "18px" },
-                lineHeight: { xs: "28px", sm: "25px", lg: "33px" },
+                lineHeight: { xs: "28px", sm: "25px", lg: "auto" },
               }}
             >
               {notrePage?.data.card_heading1}
@@ -140,7 +144,7 @@ export default function NotreProcessus() {
               sx={{
                 ...title,
                 fontSize: { xs: "25px", sm: "32px", lg: "42px" },
-                lineHeight: { xs: "30px", sm: "38px", lg: "49.22px" },
+                lineHeight: { xs: "30px", sm: "38px", lg: "auto" },
               }}
             >
               {notrePage?.data.card_title1}
@@ -149,7 +153,7 @@ export default function NotreProcessus() {
               sx={{
                 ...description,
                 fontSize: { xs: "12px", sm: "14px", lg: "18px" },
-                lineHeight: { xs: "20px", sm: "25px", lg: "33px" },
+                lineHeight: { xs: "20px", sm: "25px", lg: "185%" },
               }}
             >
               {notrePage?.data.card_description1}
@@ -187,8 +191,8 @@ export default function NotreProcessus() {
             display: "flex",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
             justifyContent: "space-evenly",
-            margin: "0% 5%",
-            gap: "3%",
+            margin: {lg:'128px 42px 128px 0px'},
+            gap: {lg:'154px'},
           }}
         >
           <Grid
@@ -196,14 +200,14 @@ export default function NotreProcessus() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              gap: { xs: "2%", sm: "2%", lg: "5%" },
+              gap: { xs: "2%", sm: "2%", lg: "18px" },
             }}
           >
             <Typography
               sx={{
                 ...heading,
                 fontSize: { xs: "12px", sm: "14px", lg: "18px" },
-                lineHeight: { xs: "28px", sm: "25px", lg: "33px" },
+                lineHeight: { xs: "28px", sm: "25px", lg: "auto" },
               }}
             >
               {notrePage?.data.card_heading2}
@@ -212,7 +216,7 @@ export default function NotreProcessus() {
               sx={{
                 ...title,
                 fontSize: { xs: "25px", sm: "32px", lg: "42px" },
-                lineHeight: { xs: "30px", sm: "38px", lg: "49.22px" },
+                lineHeight: { xs: "30px", sm: "38px", lg: "auto" },
               }}
             >
               {notrePage?.data.card_title2}
@@ -221,7 +225,7 @@ export default function NotreProcessus() {
               sx={{
                 ...description,
                 fontSize: { xs: "12px", sm: "14px", lg: "18px" },
-                lineHeight: { xs: "20px", sm: "25px", lg: "33px" },
+                lineHeight: { xs: "20px", sm: "25px", lg: "185%" },
               }}
             >
               {notrePage?.data.card_description2}
@@ -272,8 +276,8 @@ export default function NotreProcessus() {
             display: "flex",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
             justifyContent: "space-evenly",
-            margin: "0% 5%",
-            gap: "3%",
+            margin: {lg:'0px 42px 0px 0px'},
+            gap: {lg:'111px'},
           }}
         >
           <div>
@@ -294,14 +298,14 @@ export default function NotreProcessus() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              gap: { xs: "2%", sm: "2%", lg: "5%" },
+              gap: { xs: "2%", sm: "2%", lg: "18px" },
             }}
           >
            <Typography
               sx={{
                 ...heading,
                 fontSize: { xs: "12px", sm: "14px", lg: "18px" },
-                lineHeight: { xs: "28px", sm: "25px", lg: "33px" },
+                lineHeight: { xs: "28px", sm: "25px", lg: "auto" },
               }}
             >
               {notrePage?.data.card_heading3}
@@ -310,7 +314,7 @@ export default function NotreProcessus() {
               sx={{
                 ...title,
                 fontSize: { xs: "25px", sm: "32px", lg: "42px" },
-                lineHeight: { xs: "30px", sm: "38px", lg: "49.22px" },
+                lineHeight: { xs: "30px", sm: "38px", lg: "auto" },
               }}
             >
               {notrePage?.data.card_title3}
@@ -319,7 +323,7 @@ export default function NotreProcessus() {
               sx={{
                 ...description,
                 fontSize: { xs: "12px", sm: "14px", lg: "18px" },
-                lineHeight: { xs: "20px", sm: "25px", lg: "33px" },
+                lineHeight: { xs: "20px", sm: "25px", lg: "185%" },
               }}
             >
               {notrePage?.data.card_description3}
@@ -347,6 +351,7 @@ export default function NotreProcessus() {
               )}
             </Typography>
           </Grid>
+        </Grid>
         </Grid>
       </Grid>
     </div>

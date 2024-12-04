@@ -36,7 +36,13 @@ const Footer: React.FC = () => {
     footerPage[0]?.data.link_text7,
   ];
   return (
-    <Box sx={{ backgroundColor: "#24535C", padding: "50px", mt: 4 }}>
+    <Box
+      sx={{
+        backgroundColor: "#24535C",
+        padding: { xs: "5%", sm: "5%", lg: "167px 152px 164px 121px" },
+        // mt: 4,
+      }}
+    >
       <Grid
         container
         spacing={2}
@@ -48,7 +54,7 @@ const Footer: React.FC = () => {
           item
           xs={12}
           sm={6}
-          lg={5}
+          lg={4}
           textAlign={{ xs: "center", sm: "left" }}
         >
           {footerPage.map((post, postIndex) => (
@@ -60,17 +66,17 @@ const Footer: React.FC = () => {
                   alt={post.data.marguerite_logo.alt || "Logo"}
                   style={{
                     height: "auto",
-                    width: "20%",
+                    width: "147px",
                   }}
                 />
               )}
               <Typography
                 sx={{
-                  fontFamily: "Mulish, sans-serif",
+                  fontFamily: "Mulish",
                   color: "#FFFFFF",
                   fontWeight: 400,
                   fontSize: { xs: "16px", sm: "18px", md: "19.84px" },
-                  lineHeight: "24.9px",
+                  lineHeight: "auto",
                   paddingTop: "10px",
                   textAlign: { xs: "center", sm: "left" },
                 }}
@@ -86,24 +92,24 @@ const Footer: React.FC = () => {
                 }}
               >
                 <PrismicNextLink field={socialLinkPage[0]?.data.linkedin_link}>
-                {post?.data.linkedin_icon && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post.data.linkedin_icon.url || undefined}
-                    alt={post.data.linkedin_icon.alt || "LinkedIn"}
-                    style={{ width: "24px", height: "24px" }}
-                  />
-                )}
+                  {post?.data.linkedin_icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.linkedin_icon.url || undefined}
+                      alt={post.data.linkedin_icon.alt || "LinkedIn"}
+                      style={{ width: "24px", height: "24px" }}
+                    />
+                  )}
                 </PrismicNextLink>
                 <PrismicNextLink field={socialLinkPage[0]?.data.twitter_link}>
-                {post?.data.twitter_icon && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post.data.twitter_icon.url || undefined}
-                    alt={post.data.twitter_icon.alt || "Twitter"}
-                    style={{ width: "24px", height: "24px" }}
-                  />
-                )}
+                  {post?.data.twitter_icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.twitter_icon.url || undefined}
+                      alt={post.data.twitter_icon.alt || "Twitter"}
+                      style={{ width: "24px", height: "24px" }}
+                    />
+                  )}
                 </PrismicNextLink>
               </Box>
             </div>
@@ -114,11 +120,11 @@ const Footer: React.FC = () => {
             <Typography
               key={index}
               sx={{
-                fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 color: "#D3DDDE",
                 fontWeight: 400,
-                fontSize: { xs: "18px", md: "24.8px" },
-                lineHeight: "31.13px",
+                fontSize: { xs: "18px", md: "24.8px", lg: "24.8px" },
+                lineHeight: "auto",
                 paddingBottom: "19.84px",
                 textAlign: { xs: "center", sm: "left" },
               }}
@@ -132,11 +138,11 @@ const Footer: React.FC = () => {
             <Typography
               key={index}
               sx={{
-                fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 color: "#D3DDDE",
                 fontWeight: 400,
-                fontSize: { xs: "18px", md: "24.8px" },
-                lineHeight: "31.13px",
+                fontSize: { xs: "18px", md: "24.8px", lg: "24.8px" },
+                lineHeight: "auto",
                 paddingBottom: "19.84px",
                 textAlign: { xs: "center", sm: "left" },
               }}

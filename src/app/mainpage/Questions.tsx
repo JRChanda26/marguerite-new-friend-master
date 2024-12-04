@@ -80,7 +80,7 @@ export default function Questions() {
             // flexDirection: "row",
             flexDirection: { xs: "column", sm: "row", lg: "row" },
             justifyContent: "space-between",
-            marginTop: "5%",
+            margin: { lg:"164px 132px 51px 0px"},
           }}
         >
           <Grid item lg={6}>
@@ -89,14 +89,14 @@ export default function Questions() {
                 color: "#14292D",
                 // fontSize: "64px",
                 fontWeight: 700,
-                // fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 // lineHeight: "76.8px",
-                fontSize: { xs: "28px", md: "45px", lg: "65px" },
-                lineHeight: { xs: "30px", md: "50px", lg: "80px" },
+                fontSize: { xs: "28px", md: "45px", lg: "64px" },
+                lineHeight: { xs: "30px", md: "50px", lg: "120%" },
                 margin: {
                   xs: "0% 0% 0% 10%",
                   sm: "0% 0% 0% 12%",
-                  lg: "0% 10% 0% 20%",
+                  lg: "0px 150px 0px 176px",
                 },
               }}
             >
@@ -104,17 +104,17 @@ export default function Questions() {
             </Typography>
             <Typography
               sx={{
-                color: "#161C2DB8",
+                color: "#565656",
                 // fontSize: "34px",
                 fontWeight: 400,
-                // fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 // lineHeight: "36.8px",
-                fontSize: { xs: "12px", md: "20px", lg: "25px" },
-                lineHeight: { xs: "20px", md: "20px", lg: "38.4px" },
+                fontSize: { xs: "12px", md: "20px", lg: "24px" },
+                lineHeight: { xs: "20px", md: "20px", lg: "160%" },
                 margin: {
                   xs: "1% 0% 0% 10%",
                   sm: "3% 0% 0% 12%",
-                  lg: "5% 0% 0% 20%",
+                  lg: "63px 0px 0px 176px",
                 },
               }}
             >
@@ -133,7 +133,7 @@ export default function Questions() {
                 margin: {
                   xs: "5% 0% 0% 10%",
                   sm: "5% 0% 0% 12%",
-                  lg: "5% 0% 0% 20%",
+                  lg: "63px 0px 0px 176px",
                 },
                 // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "26px",
@@ -165,7 +165,10 @@ export default function Questions() {
             md={6}
             xs={12}
             sm={12}
-            sx={{ marginRight: { xs: "0%", sm: "0%", lg: "10%" } }}
+            sx={{
+              paddingRight: { xs: "0%", sm: "0%", lg: "50px" },
+              paddingLeft: { xs: "0%", sm: "0%", lg: "310px" },
+            }}
           >
             {faqs.map((faq, index) => (
               <Accordion
@@ -186,9 +189,9 @@ export default function Questions() {
                     sx={{
                       color: "#161C2D",
                       fontWeight: 700,
-                      fontFamily: "Mulish, sans-serif",
+                      fontFamily: "Mulish",
                       fontSize: { xs: "14px", md: "14px", lg: "18px" },
-                      lineHeight: { xs: "20px", md: "20px", lg: "21.6px" },
+                      lineHeight: { xs: "20px", md: "20px", lg: "120%" },
                     }}
                   >
                     {faq.question}
@@ -197,11 +200,12 @@ export default function Questions() {
                 <AccordionDetails>
                   <Typography
                     sx={{
-                      color: "#161C2DB8",
+                      color: "#161C2D",
+                      opacity:'72%',
                       fontWeight: 400,
-                      fontFamily: "Mulish, sans-serif",
+                      fontFamily: "Mulish",
                       fontSize: { xs: "14px", md: "14px", lg: "16px" },
-                      lineHeight: { xs: "20px", md: "20px", lg: "28px" },
+                      lineHeight: { xs: "20px", md: "20px", lg: "180%" },
                     }}
                   >
                     {faq.answer}

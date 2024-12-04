@@ -88,35 +88,40 @@ export default function NeManquez() {
     }
   };
 
+  const backgroundImage = neManquezPage[0]?.data?.background_image?.url || "";
+  console.log(backgroundImage);
   return (
-    <div style={{ background: "#FFFFFF", margin: "5% 10%" }}>
+    <div style={{ background: "#FFFFFF", margin: "145px 178px" }}>
       <Grid container spacing={2}>
         <Grid
           item
           lg={12}
           sx={{
-            background: "linear-gradient(to right, #F29B64 60%, #24535C 40%)",
+            backgroundImage: `url(${backgroundImage}), linear-gradient(to bottom, #F6C09E, #F29B64)`,
+            backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right",
             display: "flex",
             justifyContent: "space-evenly",
             flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
-            padding: "5%",
-            borderRadius: "60px",
+            // padding: "5%",
+            borderRadius: "110px",
           }}
         >
           <Grid
             item
             lg={4}
-            style={{
-              margin: "30px",
+            sx={{
+              padding: { lg: "103px 0px 0px 114px" },
             }}
           >
             <Typography
               sx={{
                 color: "#24535C",
-                fontFamily: "Mulish, sans-serif",
-                fontSize: { xs: "27px", sm: "35px", lg: "41px" },
-                lineHeight: { xs: "28px", sm: "38px", lg: "45px" },
+                fontFamily: "Mulish",
+                fontSize: { xs: "27px", sm: "35px", lg: "41.81px" },
+                lineHeight: { xs: "28px", sm: "38px", lg: "auto" },
                 fontWeight: 700,
               }}
             >
@@ -125,16 +130,16 @@ export default function NeManquez() {
             <Typography
               sx={{
                 color: "#24535C",
-                fontFamily: "Mulish, sans-serif",
-                fontSize: { xs: "14px", sm: "18px", lg: "23px" },
-                lineHeight: { xs: "18px", sm: "28px", lg: "35px" },
+                fontFamily: "Mulish",
+                fontSize: { xs: "14px", sm: "18px", lg: "23.52px" },
+                lineHeight: { xs: "18px", sm: "28px", lg: "160%" },
                 fontWeight: 400,
-                paddingTop: "30px",
+                padding: { lg: "15px 0px 120px 0px" },
               }}
             >
               {neManquezPage[0]?.data.description}
             </Typography>
-            <div>
+            {/* <div>
               {errors.email && (
                 <Typography
                   color="error"
@@ -144,7 +149,7 @@ export default function NeManquez() {
                   {errors.email}
                 </Typography>
               )}
-            </div>
+            </div> */}
           </Grid>
           <Grid
             item
@@ -157,6 +162,9 @@ export default function NeManquez() {
               justifyContent: "space-between",
               padding: "5px 10px",
               alignItems: "center",
+              boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
+              height: { lg: "86.58px" },
+              width: { lg: "786px" },
             }}
           >
             <TextField
@@ -165,7 +173,7 @@ export default function NeManquez() {
               onChange={(e) => setEmailValue(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
-                  handleSubmit(e); 
+                  handleSubmit(e);
                 }
               }}
               placeholder="Entrez votre adresse email"
@@ -197,13 +205,13 @@ export default function NeManquez() {
             <Button
               sx={{
                 background: "#24535C",
-                borderRadius: "30px",
+                borderRadius: "88px",
                 textTransform: "none",
                 color: "#FFFFFF",
-                fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 fontSize: { xs: "10px", sm: "15px", lg: "19.25px" },
                 fontWeight: 400,
-                padding: "5px 10px",
+                padding: "2.5%",
                 "&:hover": {
                   background: "#24535C",
                   boxShadow: "none",
@@ -227,6 +235,13 @@ export default function NeManquez() {
             </Snackbar>
           </Grid>
         </Grid>
+        <div>
+          {errors.email && (
+            <Typography color="error" variant="body2">
+              {errors.email}
+            </Typography>
+          )}
+        </div>
       </Grid>
     </div>
   );

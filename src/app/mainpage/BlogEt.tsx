@@ -24,14 +24,16 @@ export default function BlogEt() {
     color: "#161C2D",
     fontWeight: 700,
     textAlign: "left",
-    paddingTop: "2%",
+    paddingTop: "31.9px",
+    fontFamily:'Mulish',
   };
 
   const description: React.CSSProperties = {
     color: "#161C2DB8",
     fontWeight: 400,
     textAlign: "left",
-    paddingTop: "5%",
+    paddingTop: "21.27px",
+    fontFamily:'Mulish',
   };
 
   const items = [
@@ -53,18 +55,20 @@ export default function BlogEt() {
         justifyContent="center"
         style={{
           background: "#BBDDD9",
-          padding: "20px",
-          marginTop: "10px",
+          // padding: "20px",
+          // marginTop: "10px",
         }}
       >
         <Grid item xs={12} style={{ textAlign: "center" }}>
           <Typography
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "28px", sm: "45px", lg: "65px" },
-              lineHeight: { xs: "30px", sm: "50px", lg: "80px" },
-              color: "#000000",
-              padding: "5%",
+              fontSize: { xs: "28px", sm: "45px", lg: "47.85px" },
+              lineHeight: { xs: "30px", sm: "50px", lg: "120%" },
+              color: "#161C2D",
+              // padding: "5%",
+              fontFamily:'Mulish',
+              padding:{lg:'159px 448px 79px 448px'}
             }}
           >
             {blogPage?.data.heading}
@@ -80,8 +84,8 @@ export default function BlogEt() {
             display: "flex",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
-            gap: "20px",
-            margin: "0% 5%",
+            gap: "90px",
+            margin: "0px 161px 79px 161px",
           }}
         >
           {repeatItems.map((item, index: any) => (
@@ -96,7 +100,7 @@ export default function BlogEt() {
               onMouseLeave={() => setIsHovered(null)}
               style={{
                 background: "#FFFFFF",
-                borderRadius: "12px",
+                borderRadius: "21.27px",
                 padding: "20px",
                 display: "flex",
                 flexDirection: "column",
@@ -127,7 +131,7 @@ export default function BlogEt() {
                 sx={{
                   ...title,
                   fontSize: { xs: "14px", sm: "18px", lg: "21.27px" },
-                  lineHeight: { xs: "20px", sm: "22px", lg: "25.52px" },
+                  lineHeight: { xs: "20px", sm: "22px", lg: "120%" },
                 }}
               >
                 {item.title}
@@ -136,7 +140,7 @@ export default function BlogEt() {
                 sx={{
                   ...description,
                   fontSize: { xs: "12px", sm: "14px", lg: "18.61px" },
-                  lineHeight: { xs: "15px", sm: "25px", lg: "29.71px" },
+                  lineHeight: { xs: "15px", sm: "25px", lg: "160%" },
                 }}
               >
                 {item.description}
@@ -192,11 +196,15 @@ export default function BlogEt() {
           <Typography
             sx={{
               // fontFamily: "Jenna Sue",
-              color: "#24535C",
+              fontFamily:'Mulish',
+              color: "#FFFFFF",
               fontSize: { xs: "20px", sm: "25px", lg: "30px" },
               textAlign: "center",
               // textDecoration: "underline",
-              padding: "10% 0%",
+              borderRadius:'12px',
+              padding:'8px 15px',
+              background:'#24535C',
+              margin:'0px 0px  159px 0px'
             }}
           >
             {blogPage?.data.footer_text}
