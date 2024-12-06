@@ -37,9 +37,10 @@ const NousAgissons: React.FC = () => {
                 margin: {
                   xs: "6% 65% 0% 0%",
                   sm: "11% 65% 0% 0%",
-                  lg: "20% 65% 0% 0%",
+                  lg: "15% 65% 0% 0%",
+                  xl: "20% 65% 0% 0%",
                 },
-                padding: {xs:"25px",sm:"20px",lg:"30px"},
+                padding: { xs: "25px", sm: "20px", lg: "30px", xl: "30px" },
                 opacity: isVisible ? 1 : 0, // Control visibility with state
                 transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
                 transition: "opacity 2s ease-in-out, transform 2s ease-in-out", // Smooth transition for both opacity and transform
@@ -50,10 +51,20 @@ const NousAgissons: React.FC = () => {
                   sx={{
                     fontFamily: "Jenna Sue",
                     fontWeight: 400,
-                    fontSize: { xs: "20px", sm: "40px", lg: "64px" },
-                    lineHeight: { xs: "20px", sm: "30px", lg: "120%" },
+                    fontSize: {
+                      xs: "20px",
+                      sm: "40px",
+                      lg: "50px",
+                      xl: "64px",
+                    },
+                    lineHeight: {
+                      xs: "20px",
+                      sm: "30px",
+                      lg: "120%",
+                      xl: "120%",
+                    },
                     color: "#24535C",
-                    letterSpacing:'0%'
+                    letterSpacing: "0%",
                   }}
                 >
                   {post.data.heading}
@@ -63,9 +74,19 @@ const NousAgissons: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "#24535C",
                     fontWeight: 700,
-                    fontSize: { xs: "10px", sm: "25px", lg: "58px" },
-                    lineHeight: { xs: "12px", sm: "30px", lg: "120%" },
-                    letterSpacing:'0%'
+                    fontSize: {
+                      xs: "10px",
+                      sm: "25px",
+                      lg: "45px",
+                      xl: "58px",
+                    },
+                    lineHeight: {
+                      xs: "12px",
+                      sm: "30px",
+                      lg: "120%",
+                      xl: "120%",
+                    },
+                    letterSpacing: "0%",
                   }}
                 >
                   {post.data.title}
@@ -76,11 +97,10 @@ const NousAgissons: React.FC = () => {
                     flexDirection: "row",
                     background: "#24535C",
                     borderRadius: "82px",
-                    marginTop: {lg:"36px"},
-                    height:{lg:'66px'},
-                    width:{lg:'203.85px'},
+                    marginTop: { xs: "", sm: "", lg: "36px", xl: "36px" },
+                    height: { xs: "", sm: "", lg: "66px", xl: "66px" },
+                    width: { xs: "", sm: "", lg: "203.85px", xl: "203.85px" },
                     justifyContent: "space-around",
-                    padding: { xs: "2% 5%", sm: "3% 5%", lg: "2% 4%" },
                     "&:focus": {
                       background: "#24535C",
                     },
@@ -94,9 +114,19 @@ const NousAgissons: React.FC = () => {
                     sx={{
                       fontFamily: "Mulish",
                       fontWeight: 400,
-                      fontSize: { xs: "10px", sm: "12px", lg: "15.2px" },
-                      lineHeight: { xs: "10px", sm: "12px", lg: "120%" },
-                      letterSpacing:'0%',
+                      fontSize: {
+                        xs: "10px",
+                        sm: "12px",
+                        lg: "15.2px",
+                        xl: "15.2px",
+                      },
+                      lineHeight: {
+                        xs: "10px",
+                        sm: "12px",
+                        lg: "120%",
+                        xl: "120%",
+                      },
+                      letterSpacing: "0%",
                       color: "#FFFFFF",
                       textTransform: "none",
                     }}
@@ -125,15 +155,28 @@ const NousAgissons: React.FC = () => {
                 </Button>
               </div>
             </Grid>
-            <Grid container spacing={0} key={post.id} sx={{marginTop:{xs:'20px',sm:'-25px',lg:'-100px'}}}>
+            <Grid
+              container
+              spacing={0}
+              key={post.id}
+              sx={{
+                marginTop: {
+                  xs: "20px",
+                  sm: "-25px",
+                  lg: "-90px",
+                  xl: "-100px",
+                },
+              }}
+            >
               <Grid
                 item
                 xs={4}
                 sm={4}
                 lg={4}
+                xl={4}
                 sx={{ backgroundColor: "#F6C09E" }}
               />
-              <Grid item xs={8} sm={8} lg={8}>
+              <Grid item xs={8} sm={8} lg={8} xl={8}>
                 {post?.data.background_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img

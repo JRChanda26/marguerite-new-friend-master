@@ -35,7 +35,7 @@ const NosExperiences: React.FC = () => {
     <Box
       sx={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: { xs: "cover", sm: "cover", lg: "cover" },
+        backgroundSize: { xs: "cover", sm: "cover", lg: "cover", xl: "cover" },
         backgroundRepeat: "no-repeat",
         width: "100%",
         // paddingBottom: "100px",
@@ -67,12 +67,18 @@ const NosExperiences: React.FC = () => {
                 fontFamily: "Mulish",
                 color: "#FFFFFF",
                 fontWeight: 700,
-                fontSize: { xs: "36px", sm: "48px", lg: "66.25px" },
-                lineHeight: { xs: "44px", sm: "55px", lg: "120%" },
+                fontSize: {
+                  xs: "36px",
+                  sm: "48px",
+                  lg: "66.25px",
+                  xl: "66.25px",
+                },
+                lineHeight: { xs: "44px", sm: "55px", lg: "120%", xl: "120%" },
                 padding: {
                   xs: "12% 0% 2% 0%",
                   sm: "8% 0% 2% 0%",
                   lg: "250px 0px 36px 0px",
+                  xl: "250px 0px 36px 0px",
                 },
               }}
             >
@@ -83,9 +89,14 @@ const NosExperiences: React.FC = () => {
                 fontFamily: "Mulish",
                 color: "#FFFFFF",
                 fontWeight: 400,
-                fontSize: { xs: "14px", sm: "18px", lg: "24px" },
-                lineHeight: { xs: "18px", sm: "25px", lg: "120%" },
-                padding: { xs: "5%", sm: "2%", lg: "0px 0px 0px 0px" },
+                fontSize: { xs: "14px", sm: "18px", lg: "24px", xl: "24px" },
+                lineHeight: { xs: "18px", sm: "25px", lg: "120%", xl: "120%" },
+                padding: {
+                  xs: "5%",
+                  sm: "2%",
+                  lg: "0px 0px 0px 0px",
+                  xl: "0px 0px 0px 0px",
+                },
                 // maxWidth: "800px",
               }}
             >
@@ -116,6 +127,7 @@ const NosExperiences: React.FC = () => {
                   xs: "20px",
                   md: "40px 0",
                   lg: "179px 0px 231px 0px",
+                  xl: "179px 0px 231px 0px",
                 },
               }}
             >
@@ -142,6 +154,7 @@ const NosExperiences: React.FC = () => {
                         sm: "300px",
                         md: "350px",
                         lg: "394px",
+                        xl: "394px",
                       },
                     }}
                   >
@@ -150,8 +163,18 @@ const NosExperiences: React.FC = () => {
                         fontFamily: "Mulish",
                         color: "#161C2D",
                         fontWeight: 400,
-                        fontSize: { xs: "12px", sm: "16px", lg: "19.32px" },
-                        lineHeight: { xs: "16px", sm: "22px", lg: "160%" },
+                        fontSize: {
+                          xs: "12px",
+                          sm: "16px",
+                          lg: "19.32px",
+                          xl: "19.32px",
+                        },
+                        lineHeight: {
+                          xs: "16px",
+                          sm: "22px",
+                          lg: "160%",
+                          xl: "160%",
+                        },
                       }}
                     >
                       {testimonial}

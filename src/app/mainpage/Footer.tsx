@@ -39,7 +39,12 @@ const Footer: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "#24535C",
-        padding: { xs: "5%", sm: "5%", lg: "167px 152px 164px 121px" },
+        padding: {
+          xs: "5%",
+          sm: "5%",
+          lg: "120px 80px 100px 80px",
+          xl: "167px 152px 164px 121px",
+        },
         // mt: 4,
       }}
     >

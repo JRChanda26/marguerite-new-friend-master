@@ -25,7 +25,7 @@ export default function BlogEt() {
     fontWeight: 700,
     textAlign: "left",
     paddingTop: "31.9px",
-    fontFamily:'Mulish',
+    fontFamily: "Mulish",
   };
 
   const description: React.CSSProperties = {
@@ -33,7 +33,7 @@ export default function BlogEt() {
     fontWeight: 400,
     textAlign: "left",
     paddingTop: "21.27px",
-    fontFamily:'Mulish',
+    fontFamily: "Mulish",
   };
 
   const items = [
@@ -63,12 +63,20 @@ export default function BlogEt() {
           <Typography
             sx={{
               fontWeight: 700,
-              fontSize: { xs: "28px", sm: "45px", lg: "47.85px" },
-              lineHeight: { xs: "30px", sm: "50px", lg: "120%" },
+              fontSize: {
+                xs: "28px",
+                sm: "45px",
+                lg: "47.85px",
+                xl: "47.85px",
+              },
+              lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "120%" },
               color: "#161C2D",
               // padding: "5%",
-              fontFamily:'Mulish',
-              padding:{lg:'159px 448px 79px 448px'}
+              fontFamily: "Mulish",
+              padding: {
+                lg: "100px 448px 79px 448px",
+                xl: "159px 448px 79px 448px",
+              },
             }}
           >
             {blogPage?.data.heading}
@@ -84,8 +92,8 @@ export default function BlogEt() {
             display: "flex",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
-            gap: "90px",
-            margin: "0px 161px 79px 161px",
+            gap: { lg: "20px", xl: "90px" },
+            margin: { lg: "", xl: "0px 161px 79px 161px" },
           }}
         >
           {repeatItems.map((item, index: any) => (
@@ -96,6 +104,7 @@ export default function BlogEt() {
               sm={6}
               md={4}
               lg={3.5}
+              xl={3.5}
               onMouseEnter={() => setIsHovered(index)}
               onMouseLeave={() => setIsHovered(null)}
               style={{
@@ -130,8 +139,18 @@ export default function BlogEt() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "14px", sm: "18px", lg: "21.27px" },
-                  lineHeight: { xs: "20px", sm: "22px", lg: "120%" },
+                  fontSize: {
+                    xs: "14px",
+                    sm: "18px",
+                    lg: "21.27px",
+                    xl: "21.27px",
+                  },
+                  lineHeight: {
+                    xs: "20px",
+                    sm: "22px",
+                    lg: "120%",
+                    xl: "120%",
+                  },
                 }}
               >
                 {item.title}
@@ -139,8 +158,18 @@ export default function BlogEt() {
               <Typography
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18.61px" },
-                  lineHeight: { xs: "15px", sm: "25px", lg: "160%" },
+                  fontSize: {
+                    xs: "12px",
+                    sm: "14px",
+                    lg: "18.61px",
+                    xl: "18.61px",
+                  },
+                  lineHeight: {
+                    xs: "15px",
+                    sm: "25px",
+                    lg: "160%",
+                    xl: "160%",
+                  },
                 }}
               >
                 {item.description}
@@ -196,15 +225,15 @@ export default function BlogEt() {
           <Typography
             sx={{
               // fontFamily: "Jenna Sue",
-              fontFamily:'Mulish',
+              fontFamily: "Mulish",
               color: "#FFFFFF",
-              fontSize: { xs: "20px", sm: "25px", lg: "30px" },
+              fontSize: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               textAlign: "center",
               // textDecoration: "underline",
-              borderRadius:'12px',
-              padding:'8px 15px',
-              background:'#24535C',
-              margin:'0px 0px  159px 0px'
+              borderRadius: "12px",
+              padding: "8px 15px",
+              background: "#24535C",
+              margin: { lg: "50px 0px  100px 0px", xl: "0px 0px  159px 0px" },
             }}
           >
             {blogPage?.data.footer_text}
