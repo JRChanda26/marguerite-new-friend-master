@@ -265,8 +265,12 @@ export default function Contact() {
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            // paddingTop: "250.67px",
-            paddingTop: { xs: "250.67px", sm: "250.67px", lg: "352px" },
+            padding: {
+              xs: "250.67px 0px 0px 0px",
+              sm: "250.67px 150px 0px 150px",
+              lg: "250px 150px 0px 150px",
+              xl: "352px 441px 0px 441px",
+            },
           }}
         >
           <Grid
@@ -292,19 +296,19 @@ export default function Contact() {
                 xs: "2% 5%",
                 sm: "2% 5%",
                 lg: "41px 152px 41px 152px",
+                xl: "41px 152px 41px 152px",
               },
             }}
           >
             <Typography
-              variant="h1"
               sx={{
                 fontFamily: "DM Serif Display",
                 color: "#292F36",
                 fontWeight: 700,
                 // fontSize: "50px",
-                fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+                fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
                 // lineHeight: "62.5px",
-                lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
                 letterSpacing: "0%",
               }}
             >
@@ -316,9 +320,9 @@ export default function Contact() {
                 color: "#4D5053",
                 fontWeight: 400,
                 // fontSize: "22px",
-                fontSize: { xs: "12px", sm: "18px", lg: "22px" },
+                fontSize: { xs: "12px", sm: "18px", lg: "22px", xl: "22px" },
                 // lineHeight: "33px",
-                lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                lineHeight: { xs: "20px", sm: "28px", lg: "150%", xl: "150%" },
                 letterSpacing: "1%",
               }}
             >
@@ -332,17 +336,25 @@ export default function Contact() {
         container
         spacing={3}
         sx={{
-          padding: { xs: "6%", sm: "5% 15%", lg: "135px 356px 287px 356px" },
+          padding: {
+            xs: "6%",
+            sm: "5% 15%",
+            lg: "50px 120px 287px 120px",
+            xl: "135px 356px 287px 356px",
+          },
         }}
       >
         <Grid item xs={12}>
           <Typography
             sx={{
               color: "#292F36",
-              fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+              fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
               fontWeight: 700,
               textAlign: "center",
-              padding: { lg: "0px 196px 80px 196px" },
+              padding: {
+                lg: "0px 196px 80px 196px",
+                xl: "0px 196px 80px 196px",
+              },
               fontFamily: "Mulish",
               lineHeight: "150%",
               letterSpacing: "1%",
@@ -359,6 +371,7 @@ export default function Contact() {
           sm={12}
           md={12}
           lg={12}
+          xl={12}
           // spacing={2}
           sx={{
             justifyContent: "center",
@@ -372,10 +385,11 @@ export default function Contact() {
             xs={12}
             sm={7}
             lg={4}
+            xl={4}
             sx={{
               background: "#BBDDD9",
               borderRadius: "50px",
-              padding: { lg: "76px 32px" },
+              padding: { lg: "76px 32px", xl: "76px 32px" },
               display: "flex",
               flexDirection: "column",
               gap: "42px",
@@ -404,7 +418,12 @@ export default function Contact() {
                 )}
                 <Typography
                   sx={{
-                    fontSize: { xs: "16px", sm: "20px", lg: "20px" },
+                    fontSize: {
+                      xs: "16px",
+                      sm: "20px",
+                      lg: "20px",
+                      xl: "20px",
+                    },
                     display: "flex",
                     alignItems: "center",
                     fontFamily: "Jost",
@@ -445,10 +464,16 @@ export default function Contact() {
             xs={12}
             sm={8}
             lg={7}
+            xl={7}
             sx={{
               display: "flex",
-              flexDirection: {xs:"column",sm:"column",lg:"column"},
-              gap: {lg:"50px"},
+              flexDirection: {
+                xs: "column",
+                sm: "column",
+                lg: "column",
+                xl: "column",
+              },
+              gap: { lg: "50px", xl: "50px" },
             }}
           >
             <Grid container spacing={2} sx={{ mb: 4 }}>
@@ -546,7 +571,11 @@ export default function Contact() {
           </Grid>
         )}
 
-        <Grid item xs={12} sx={{ textAlign: { xs: "center", lg: "right" } }}>
+        <Grid
+          item
+          xs={12}
+          sx={{ textAlign: { xs: "center", lg: "right", xl: "right" } }}
+        >
           <Button
             variant="contained"
             color="primary"
