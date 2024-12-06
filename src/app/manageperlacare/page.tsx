@@ -11,6 +11,8 @@ import {
   Card,
   Grid,
   Typography,
+  useMediaQuery,
+  useTheme,
 } from "@mui/material";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import Liberez from "../mainpage/NeManquez";
@@ -87,6 +89,66 @@ const ManagePerLaCare: React.FC = () => {
     },
   ];
 
+  // const styles: {
+  //   container: React.CSSProperties;
+  //   card: React.CSSProperties;
+  //   topLeft: React.CSSProperties;
+  //   topRight: React.CSSProperties;
+  //   bottomLeft: React.CSSProperties;
+  //   bottomRight: React.CSSProperties;
+  // } = {
+  //   container: {
+  //     position: "relative",
+  //     width: "100%",
+  //     height: "100vh",
+  //     display: "flex",
+  //     alignItems: "center",
+  //     justifyContent: "center",
+  //   },
+  //   card: {
+  //     position: "absolute",
+  //     // width: "200px",
+  //     padding: "25px",
+  //     borderRadius: "8px",
+  //     boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+  //     backgroundColor: "#fff",
+  //     // textAlign: "center",
+  //   },
+  //   topLeft: {
+  //     top: "0%",
+  //     left: "5%",
+  //     transform: "rotate(0deg)",
+  //     width: "50%",
+  //   },
+  //   topRight: {
+  //     top: "30%",
+  //     right: "5%",
+  //     transform: "rotate(0deg)",
+  //     width: "50%",
+  //   },
+  //   bottomLeft: {
+  //     top: "60%",
+  //     left: "5%",
+  //     transform: "rotate(0deg)",
+  //     width: "50%",
+  //   },
+  //   bottomRight: {
+  //     top: "90%",
+  //     right: "5%",
+  //     transform: "rotate(0deg)",
+  //     width: "50%",
+  //   },
+  // };
+
+  const theme = useTheme();
+
+  // Media queries for breakpoints
+  const isExtraSmall = useMediaQuery(theme.breakpoints.only("xs")); // 'xs' (0px - 600px)
+  const isSmall = useMediaQuery(theme.breakpoints.only("sm")); // 'sm' (600px - 960px)
+  const isLarge = useMediaQuery(theme.breakpoints.only("lg")); // 'lg' (1280px - 1920px)
+  const isExtraLarge = useMediaQuery(theme.breakpoints.up("xl")); // 'xl' (1920px and above)
+
+  // Define responsive styles
   const styles: {
     container: React.CSSProperties;
     card: React.CSSProperties;
@@ -105,36 +167,126 @@ const ManagePerLaCare: React.FC = () => {
     },
     card: {
       position: "absolute",
-      // width: "200px",
       padding: "25px",
       borderRadius: "8px",
       boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       backgroundColor: "#fff",
-      // textAlign: "center",
     },
     topLeft: {
-      top: "0%",
-      left: "5%",
-      transform: "rotate(0deg)",
-      width: "50%",
+      top: isExtraSmall
+        ? "10%"
+        : isSmall
+          ? "5%"
+          : isLarge
+            ? "0%"
+            : isExtraLarge
+              ? "0%"
+              : "0%",
+      left: isExtraSmall
+        ? "5%"
+        : isSmall
+          ? "5%"
+          : isLarge
+            ? "0%"
+            : isExtraLarge
+              ? "5%"
+              : "5%",
+      width: isExtraSmall
+        ? "90%"
+        : isSmall
+          ? "80%"
+          : isLarge
+            ? "70%"
+            : isExtraLarge
+              ? "50%"
+              : "50%",
     },
     topRight: {
-      top: "30%",
-      right: "5%",
-      transform: "rotate(0deg)",
-      width: "50%",
+      top: isExtraSmall
+        ? "25%"
+        : isSmall
+          ? "20%"
+          : isLarge
+            ? "35%"
+            : isExtraLarge
+              ? "30%"
+              : "30%",
+      right: isExtraSmall
+        ? "5%"
+        : isSmall
+          ? "5%"
+          : isLarge
+            ? "0%"
+            : isExtraLarge
+              ? "5%"
+              : "5%",
+      width: isExtraSmall
+        ? "90%"
+        : isSmall
+          ? "80%"
+          : isLarge
+            ? "70%"
+            : isExtraLarge
+              ? "50%"
+              : "50%",
     },
     bottomLeft: {
-      top: "60%",
-      left: "5%",
-      transform: "rotate(0deg)",
-      width: "50%",
+      top: isExtraSmall
+        ? "55%"
+        : isSmall
+          ? "50%"
+          : isLarge
+            ? "65%"
+            : isExtraLarge
+              ? "60%"
+              : "60%",
+      left: isExtraSmall
+        ? "5%"
+        : isSmall
+          ? "5%"
+          : isLarge
+            ? "0%"
+            : isExtraLarge
+              ? "5%"
+              : "5%",
+      width: isExtraSmall
+        ? "90%"
+        : isSmall
+          ? "80%"
+          : isLarge
+            ? "70%"
+            : isExtraLarge
+              ? "50%"
+              : "50%",
     },
     bottomRight: {
-      top: "90%",
-      right: "5%",
-      transform: "rotate(0deg)",
-      width: "50%",
+      top: isExtraSmall
+        ? "75%"
+        : isSmall
+          ? "70%"
+          : isLarge
+            ? "100%"
+            : isExtraLarge
+              ? "90%"
+              : "90%",
+      right: isExtraSmall
+        ? "5%"
+        : isSmall
+          ? "5%"
+          : isLarge
+            ? "0%"
+            : isExtraLarge
+              ? "5%"
+              : "5%",
+      width: isExtraSmall
+        ? "90%"
+        : isSmall
+          ? "80%"
+          : isLarge
+            ? "70%"
+            : isExtraLarge
+              ? "50%"
+              : "50%",
     },
   };
 
@@ -224,8 +376,12 @@ const ManagePerLaCare: React.FC = () => {
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                // paddingTop: "250.67px",
-                paddingTop: { xs: "250.67px", sm: "250.67px", lg: "352px" },
+                paddingTop: {
+                  xs: "250.67px",
+                  sm: "250.67px",
+                  lg: "300px",
+                  xl: "352px",
+                },
               }}
             >
               <Grid
@@ -236,11 +392,11 @@ const ManagePerLaCare: React.FC = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   borderRadius: "37px 37px 0px 0px",
-                  // padding: "41px 152px 42px 152px",
                   padding: {
                     xs: "2% 5%",
                     sm: "2% 5%",
                     lg: "41px 152px 74px 152px",
+                    xl: "41px 152px 74px 152px",
                   },
                 }}
               >
@@ -249,10 +405,18 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "DM Serif Display",
                     color: "#292F36",
                     fontWeight: 700,
-                    // fontSize: "50px",
-                    fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-                    // lineHeight: "62.5px",
-                    lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                    fontSize: {
+                      xs: "25px",
+                      sm: "40px",
+                      lg: "50px",
+                      xl: "50px",
+                    },
+                    lineHeight: {
+                      xs: "40px",
+                      sm: "48px",
+                      lg: "125%",
+                      xl: "125%",
+                    },
                     letterSpacing: "0%",
                   }}
                 >
@@ -263,10 +427,18 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Jost",
                     color: "#4D5053",
                     fontWeight: 400,
-                    // fontSize: "22px",
-                    fontSize: { xs: "12px", sm: "18px", lg: "22px" },
-                    // lineHeight: "33px",
-                    lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                    fontSize: {
+                      xs: "12px",
+                      sm: "18px",
+                      lg: "22px",
+                      xl: "22px",
+                    },
+                    lineHeight: {
+                      xs: "20px",
+                      sm: "28px",
+                      lg: "150%",
+                      xl: "150%",
+                    },
                     letterSpacing: "1%",
                   }}
                 >
@@ -278,7 +450,9 @@ const ManagePerLaCare: React.FC = () => {
         ))}
       </div>
 
-      <Grid sx={{ padding: { xs: "5%", sm: "5%", lg: "123px 116px" } }}>
+      <Grid
+        sx={{ padding: { xs: "5%", sm: "5%", lg: "80px", xl: "123px 116px" } }}
+      >
         {managePage.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
             <Grid
@@ -287,19 +461,34 @@ const ManagePerLaCare: React.FC = () => {
               sx={{
                 display: "flex",
                 justifyContent: "center",
-                flexDirection: { xs: "column", sm: "row", lg: "row" },
-                gap: { xs: "20px", sm: "20px", lg: "133px" },
+                flexDirection: {
+                  xs: "column",
+                  sm: "row",
+                  lg: "row",
+                  xl: "row",
+                },
+                gap: { xs: "20px", sm: "20px", lg: "50px", xl: "133px" },
               }}
             >
-              <Grid item lg={7} xs={12} sm={7}>
+              <Grid item xl={7} lg={7} xs={12} sm={7}>
                 {managePage.map((post: any, index: any) => (
                   <Typography
                     key={index}
                     sx={{
                       fontFamily: "Mulish",
                       fontWeight: 700,
-                      fontSize: { xs: "30px", sm: "40px", lg: "50px" },
-                      lineHeight: { xs: "35px", sm: "48px", lg: "125%" },
+                      fontSize: {
+                        xs: "30px",
+                        sm: "40px",
+                        lg: "50px",
+                        xl: "50px",
+                      },
+                      lineHeight: {
+                        xs: "35px",
+                        sm: "48px",
+                        lg: "125%",
+                        xl: "125%",
+                      },
                       color: "#292F36",
                       letterSpacing: "2%",
                     }}
@@ -312,8 +501,18 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "#237D6C",
                     fontWeight: 700,
-                    fontSize: { xs: "12px", sm: "18px", lg: "24px" },
-                    lineHeight: { xs: "18px", sm: "25px", lg: "1.5" },
+                    fontSize: {
+                      xs: "12px",
+                      sm: "18px",
+                      lg: "24px",
+                      xl: "24px",
+                    },
+                    lineHeight: {
+                      xs: "18px",
+                      sm: "25px",
+                      lg: "1.5",
+                      xl: "1.5",
+                    },
                     paddingTop: "33px",
                     whiteSpace: "pre-line",
                   }}
@@ -330,10 +529,25 @@ const ManagePerLaCare: React.FC = () => {
                         flexDirection: "row",
                         background: "#24535C",
                         borderRadius: "82px",
-                        marginTop: { xs: "20px", sm: "20px", lg: "45px" },
+                        marginTop: {
+                          xs: "20px",
+                          sm: "20px",
+                          lg: "45px",
+                          xl: "45px",
+                        },
                         justifyContent: "space-around",
-                        width: { xs: "50%", sm: "70%", lg: "220.47px" },
-                        height: { xs: "auto", sm: "auto", lg: "62.47px" },
+                        width: {
+                          xs: "50%",
+                          sm: "70%",
+                          lg: "220.47px",
+                          xl: "220.47px",
+                        },
+                        height: {
+                          xs: "auto",
+                          sm: "auto",
+                          lg: "62.47px",
+                          xl: "62.47px",
+                        },
                         "&:focus": {
                           background: "#24535C",
                         },
@@ -347,8 +561,18 @@ const ManagePerLaCare: React.FC = () => {
                         sx={{
                           fontWeight: 400,
                           fontFamily: "Mulish",
-                          fontSize: { xs: "12px", sm: "18px", lg: "15.2px" },
-                          lineHeight: { xs: "8px", sm: "12px", lg: "18.24px" },
+                          fontSize: {
+                            xs: "12px",
+                            sm: "18px",
+                            lg: "15.2px",
+                            xl: "15.2px",
+                          },
+                          lineHeight: {
+                            xs: "8px",
+                            sm: "12px",
+                            lg: "18.24px",
+                            xl: "18.24px",
+                          },
                           color: "#FFFFFF",
                         }}
                       >
@@ -372,6 +596,7 @@ const ManagePerLaCare: React.FC = () => {
 
               <Grid
                 item
+                xl={5}
                 lg={5}
                 xs={12}
                 sm={5}
@@ -402,7 +627,12 @@ const ManagePerLaCare: React.FC = () => {
         <Grid
           key={post}
           sx={{
-            margin: { xs: "0px", sm: "0px", lg: "0px 270px 107px 270px" },
+            margin: {
+              xs: "0px",
+              sm: "0px",
+              lg: "0px 200px 107px 200px",
+              xl: "0px 270px 107px 270px",
+            },
           }}
         >
           <Typography
@@ -411,9 +641,14 @@ const ManagePerLaCare: React.FC = () => {
               fontFamily: "Mulish",
               fontWeight: 800,
               // fontSize: "64px",
-              fontSize: { xs: "30px", sm: "50px", lg: "64px" },
+              fontSize: { xs: "30px", sm: "50px", lg: "64px", xl: "64px" },
               // lineHeight: "80.32px",
-              lineHeight: { xs: "50px", sm: "65px", lg: "80.32px" },
+              lineHeight: {
+                xs: "50px",
+                sm: "65px",
+                lg: "80.32px",
+                xl: "80.32px",
+              },
               // padding: "100px",
               // padding: "8%",
               textAlign: "center",
@@ -432,9 +667,14 @@ const ManagePerLaCare: React.FC = () => {
               width: "100%",
               backgroundPosition: "center",
               // backgroundSize: "cover",
-              backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+              backgroundSize: {
+                xs: "contain",
+                sm: "contain",
+                lg: "contain",
+                xl: "contain",
+              },
               backgroundRepeat: "no-repeat",
-              marginTop: { xs: "0px", sm: "0px", lg: "107px" },
+              marginTop: { xs: "0px", sm: "0px", lg: "50px", xl: "107px" },
             }}
           >
             <div style={styles.container}>
@@ -451,7 +691,12 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#1E1E1E",
                     lineHeight: "auto",
                     letterSpacing: "0%",
-                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                    fontSize: {
+                      xs: "16px",
+                      sm: "20px",
+                      lg: "32px",
+                      xl: "32px",
+                    },
                   }}
                   component="div"
                 >
@@ -466,7 +711,12 @@ const ManagePerLaCare: React.FC = () => {
                     letterSpacing: "-4%",
                     fontStyle: "italic",
                     marginTop: "24px",
-                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                    fontSize: {
+                      xs: "10px",
+                      sm: "14px",
+                      lg: "19.5px",
+                      xl: "19.5px",
+                    },
                   }}
                   color="textSecondary"
                 >
@@ -486,7 +736,12 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#1E1E1E",
                     lineHeight: "auto",
                     letterSpacing: "0%",
-                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                    fontSize: {
+                      xs: "16px",
+                      sm: "20px",
+                      lg: "32px",
+                      xl: "32px",
+                    },
                   }}
                   component="div"
                 >
@@ -501,7 +756,12 @@ const ManagePerLaCare: React.FC = () => {
                     letterSpacing: "-4%",
                     fontStyle: "italic",
                     marginTop: "24px",
-                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                    fontSize: {
+                      xs: "10px",
+                      sm: "14px",
+                      lg: "19.5px",
+                      xl: "19.5px",
+                    },
                   }}
                   color="textSecondary"
                 >
@@ -524,7 +784,12 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#1E1E1E",
                     lineHeight: "auto",
                     letterSpacing: "0%",
-                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                    fontSize: {
+                      xs: "16px",
+                      sm: "20px",
+                      lg: "32px",
+                      xl: "32px",
+                    },
                   }}
                   component="div"
                 >
@@ -539,7 +804,12 @@ const ManagePerLaCare: React.FC = () => {
                     letterSpacing: "-4%",
                     fontStyle: "italic",
                     marginTop: "24px",
-                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                    fontSize: {
+                      xs: "10px",
+                      sm: "14px",
+                      lg: "19.5px",
+                      xl: "19.5px",
+                    },
                   }}
                   color="textSecondary"
                 >
@@ -562,7 +832,12 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#1E1E1E",
                     lineHeight: "auto",
                     letterSpacing: "0%",
-                    fontSize: { xs: "16px", sm: "20px", lg: "32px" },
+                    fontSize: {
+                      xs: "16px",
+                      sm: "20px",
+                      lg: "32px",
+                      xl: "32px",
+                    },
                   }}
                   component="div"
                 >
@@ -577,7 +852,12 @@ const ManagePerLaCare: React.FC = () => {
                     letterSpacing: "-4%",
                     fontStyle: "italic",
                     marginTop: "24px",
-                    fontSize: { xs: "10px", sm: "14px", lg: "19.5px" },
+                    fontSize: {
+                      xs: "10px",
+                      sm: "14px",
+                      lg: "19.5px",
+                      xl: "19.5px",
+                    },
                   }}
                   color="textSecondary"
                 >
@@ -592,7 +872,12 @@ const ManagePerLaCare: React.FC = () => {
       <Grid container>
         <Grid
           sx={{
-            margin: { xs: "0px", sm: "0px", lg: "90px 359px 153px 359px" },
+            margin: {
+              xs: "0px",
+              sm: "0px",
+              lg: "150px 100px 153px 100px",
+              xl: "90px 359px 153px 359px",
+            },
           }}
         >
           <Grid
@@ -609,7 +894,7 @@ const ManagePerLaCare: React.FC = () => {
               sx={{
                 color: "#0A1411",
                 fontFamily: "Mulish",
-                fontSize: { xs: "45px", sm: "60px", lg: "64px" },
+                fontSize: { xs: "45px", sm: "60px", lg: "64px", xl: "64px" },
                 fontWeight: 700,
               }}
             >
@@ -619,14 +904,16 @@ const ManagePerLaCare: React.FC = () => {
           <Grid
             item
             lg={12}
-            sx={{ marginTop: { xs: "30px", sm: "30px", lg: "162px" } }}
+            sx={{
+              marginTop: { xs: "30px", sm: "30px", lg: "100px", xl: "162px" },
+            }}
           >
             <Typography
               sx={{
                 textAlign: "center",
                 color: "#292F36",
                 // fontSize: "50px",
-                fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+                fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
                 fontWeight: 400,
                 letterSpacing: "1%",
                 fontFamily: "Mulish",
@@ -640,11 +927,16 @@ const ManagePerLaCare: React.FC = () => {
               lg={12}
               sx={{
                 display: "flex",
-                flexDirection: { xs: "column", sm: "row", lg: "row" },
+                flexDirection: {
+                  xs: "column",
+                  sm: "row",
+                  lg: "row",
+                  xl: "row",
+                },
                 justifyContent: "space-evenly",
                 marginTop: "50px",
                 alignItems: "center",
-                gap: { lg: "60px" },
+                gap: { lg: "60px", xl: "60px" },
               }}
             >
               <Grid
@@ -652,8 +944,9 @@ const ManagePerLaCare: React.FC = () => {
                 xs={12}
                 sm={5}
                 lg={6}
+                xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "390px", lg: "490px" },
+                  height: { xs: "0px", sm: "390px", lg: "490px", xl: "490px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -682,7 +975,12 @@ const ManagePerLaCare: React.FC = () => {
                           sx={{
                             color: clicked === index ? "#3D8C6E" : "#292F36",
                             lineHeight: "150%",
-                            fontSize: { xs: "18px", sm: "22px", lg: "25px" },
+                            fontSize: {
+                              xs: "18px",
+                              sm: "22px",
+                              lg: "25px",
+                              xl: "25px",
+                            },
                             fontWeight: 500,
                             fontFamily: "Mulish",
                             letterSpacing: "1%",
@@ -696,7 +994,12 @@ const ManagePerLaCare: React.FC = () => {
                           sx={{
                             color: "#4D5053",
                             // fontSize: "22px",
-                            fontSize: { xs: "14px", sm: "18px", lg: "22px" },
+                            fontSize: {
+                              xs: "14px",
+                              sm: "18px",
+                              lg: "22px",
+                              xl: "22px",
+                            },
                             fontWeight: 400,
                             fontFamily: "Mulish",
                             lineHeight: "150%",
@@ -711,7 +1014,7 @@ const ManagePerLaCare: React.FC = () => {
                   </div>
                 ))}
               </Grid>
-              <Grid item xs={12} sm={5} lg={6}>
+              <Grid item xs={12} sm={5} lg={6} xl={6}>
                 {modulesPage[0]?.data.image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -730,9 +1033,9 @@ const ManagePerLaCare: React.FC = () => {
                 textAlign: "center",
                 color: "#292F36",
                 // fontSize: "50px",
-                fontSize: { xs: "30px", sm: "40px", lg: "50px" },
+                fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
                 fontWeight: 400,
-                marginTop: { xs: "50px", sm: "50px", lg: "269px" },
+                marginTop: { xs: "50px", sm: "50px", lg: "150px", xl: "269px" },
                 letterSpacing: "1%",
                 fontFamily: "Mulish",
                 lineHeight: "150%",
@@ -745,11 +1048,16 @@ const ManagePerLaCare: React.FC = () => {
               lg={12}
               sx={{
                 display: "flex",
-                flexDirection: { xs: "column", sm: "row", lg: "row" },
+                flexDirection: {
+                  xs: "column",
+                  sm: "row",
+                  lg: "row",
+                  xl: "row",
+                },
                 justifyContent: "space-evenly",
                 marginTop: "50px",
                 alignItems: "center",
-                gap: { lg: "60px" },
+                gap: { lg: "60px", xl: "60px" },
               }}
             >
               <Grid
@@ -757,6 +1065,7 @@ const ManagePerLaCare: React.FC = () => {
                 xs={12}
                 sm={5}
                 lg={6}
+                xl={6}
                 // sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
               >
                 {/* {videoUrl ? (
@@ -789,8 +1098,9 @@ const ManagePerLaCare: React.FC = () => {
                 xs={12}
                 sm={5}
                 lg={6}
+                xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "400px", lg: "450px" },
+                  height: { xs: "0px", sm: "400px", lg: "450px", xl: "450px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -819,7 +1129,12 @@ const ManagePerLaCare: React.FC = () => {
                           sx={{
                             color: clicked1 === index ? "#3D8C6E" : "#292F36",
                             lineHeight: "150%",
-                            fontSize: { xs: "18px", sm: "22px", lg: "25px" },
+                            fontSize: {
+                              xs: "18px",
+                              sm: "22px",
+                              lg: "25px",
+                              xl: "25px",
+                            },
                             fontWeight: 500,
                             fontFamily: "Mulish",
                             letterSpacing: "1%",
@@ -833,7 +1148,12 @@ const ManagePerLaCare: React.FC = () => {
                           sx={{
                             color: "#4D5053",
                             // fontSize: "22px",
-                            fontSize: { xs: "14px", sm: "18px", lg: "22px" },
+                            fontSize: {
+                              xs: "14px",
+                              sm: "18px",
+                              lg: "22px",
+                              xl: "22px",
+                            },
                             fontWeight: 400,
                             fontFamily: "Mulish",
                             lineHeight: "150%",
@@ -864,7 +1184,12 @@ const ManagePerLaCare: React.FC = () => {
           sx={{
             backgroundImage: `url(${contentbackground})`,
             // backgroundSize: "cover",
-            backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+            backgroundSize: {
+              xs: "contain",
+              sm: "contain",
+              lg: "contain",
+              xl: "contain",
+            },
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
             width: "100%",
@@ -873,7 +1198,12 @@ const ManagePerLaCare: React.FC = () => {
             justifyContent: "center",
             alignItems: "center",
             // marginTop: "10%",
-            margin: { xs: "10%", sm: "10%", lg: "107px 522px" },
+            margin: {
+              xs: "10%",
+              sm: "10%",
+              lg: "107px 522px",
+              xl: "107px 522px",
+            },
             flexDirection: "column",
           }}
         >
@@ -881,7 +1211,10 @@ const ManagePerLaCare: React.FC = () => {
             <>
               <Grid
                 sx={{
-                  padding: { lg: "67px 0px 27px 0px" },
+                  padding: {
+                    lg: "100px 0px 27px 0px",
+                    xl: "67px 0px 27px 0px",
+                  },
                 }}
               >
                 {managePage[0]?.data.quote_image && (
@@ -900,10 +1233,25 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Jenna Sue",
                     color: "#292F36",
                     fontWeight: 400,
-                    fontSize: { xs: "28px", sm: "38px", lg: "48px" },
-                    lineHeight: { xs: "30px", sm: "45px", lg: "125%" },
+                    fontSize: {
+                      xs: "28px",
+                      sm: "38px",
+                      lg: "48px",
+                      xl: "48px",
+                    },
+                    lineHeight: {
+                      xs: "30px",
+                      sm: "45px",
+                      lg: "125%",
+                      xl: "125%",
+                    },
                     textAlign: "center",
-                    padding: { xs: "12%", sm: "12%", lg: "0px 82px 34px 82px" },
+                    padding: {
+                      xs: "12%",
+                      sm: "12%",
+                      lg: "0px 82px 34px 82px",
+                      xl: "0px 82px 34px 82px",
+                    },
                     letterSpacing: "2%",
                   }}
                 >
@@ -916,11 +1264,24 @@ const ManagePerLaCare: React.FC = () => {
                     fontFamily: "Jost",
                     color: "#4D5053",
                     fontWeight: 400,
-                    fontSize: { xs: "14px", sm: "18px", lg: "25px" },
-                    lineHeight: { xs: "18px", sm: "25px", lg: "150%" },
+                    fontSize: {
+                      xs: "14px",
+                      sm: "18px",
+                      lg: "25px",
+                      xl: "25px",
+                    },
+                    lineHeight: {
+                      xs: "18px",
+                      sm: "25px",
+                      lg: "150%",
+                      xl: "150%",
+                    },
                     textAlign: "center",
                     letterSpacing: "1%",
-                    padding: { lg: "0px 303px 78px 303px" },
+                    padding: {
+                      lg: "0px 303px 78px 303px",
+                      xl: "0px 303px 78px 303px",
+                    },
                   }}
                 >
                   {post.data.writer_name}
@@ -933,15 +1294,16 @@ const ManagePerLaCare: React.FC = () => {
       <Typography
         sx={{
           fontFamily: "Mulish",
-          fontSize: { xs: "38px", sm: "50px", lg: "64px" },
+          fontSize: { xs: "38px", sm: "50px", lg: "64px", xl: "64px" },
           fontWeight: 700,
-          lineHeight: { xs: "45px", sm: "60px", lg: "auto" },
+          lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "auto" },
           textAlign: "center",
           // padding: "10% 10% 0% 10%",
           padding: {
             xs: "10% 10% 0% 10%",
             sm: "10% 10% 0% 10%",
-            lg: "187px 414px 0px 414px",
+            lg: "100px 200px 0px 200px",
+            xl: "187px 414px 0px 414px",
           },
           color: "#0A1411",
         }}
@@ -956,14 +1318,14 @@ const ManagePerLaCare: React.FC = () => {
         sx={{
           display: "flex",
           justifyContent: "space-evenly",
-          flexDirection: { xs: "column", sm: "row", lg: "row" },
+          flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
           textAlign: "center",
           // padding: "5%",
           // gap: "50px",
-          margin: { lg: "114px 0px 346px 0px" },
+          margin: { lg: "114px 0px 200px 0px", xl: "114px 0px 346px 0px" },
         }}
       >
-        <Grid item lg={4} xs={12} sm={6}>
+        <Grid item xl={4} lg={4} xs={12} sm={6}>
           {" "}
           {managePage[0]?.data.bottom_left_image && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -977,13 +1339,14 @@ const ManagePerLaCare: React.FC = () => {
         </Grid>
         <Grid
           item
+          xl={4}
           lg={4}
           xs={12}
           sm={6}
           sx={{
             alignContent: "center",
-            fontSize: { xs: "18px", sm: "22px", lg: "25px" },
-            lineHeight: { xs: "20px", sm: "30px", lg: "40px" },
+            fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "25px" },
+            lineHeight: { xs: "20px", sm: "30px", lg: "40px", xl: "40px" },
             fontWeight: 400,
             textAlign: "left",
             color: "#24535C",
