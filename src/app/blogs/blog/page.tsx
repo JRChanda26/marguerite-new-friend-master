@@ -1,6 +1,12 @@
 "use client";
 import { createClient } from "@/prismicio";
-import { Grid, IconButton, TextField, Typography, useMediaQuery } from "@mui/material";
+import {
+  Grid,
+  IconButton,
+  TextField,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
@@ -11,14 +17,11 @@ import Header from "@/app/mainpage/Header";
 import { client } from "../../../../prismic-configuration";
 
 export default function Blogs() {
-
   const [blogPage, setBlogPage] = useState<any[]>([]);
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const response: any = await client.getAllByType(
-        "blogs" as any
-      );
+      const response: any = await client.getAllByType("blogs" as any);
       setBlogPage(response);
     };
 
@@ -52,19 +55,19 @@ export default function Blogs() {
     color: "#161C2D",
     fontSize: "21.27px",
     fontWeight: 700,
-    fontFamily:'Mulish',
-    lineHeight:'120%',
-    letterSpacing:'0%'
+    fontFamily: "Mulish",
+    lineHeight: "120%",
+    letterSpacing: "0%",
   };
 
   const description: React.CSSProperties = {
     color: "#161C2D",
     fontSize: "18.61px",
     fontWeight: 400,
-    opacity:'72%',
-    fontFamily:'Mulish',
-    lineHeight:'160%',
-    letterSpacing:'0%'
+    opacity: "72%",
+    fontFamily: "Mulish",
+    lineHeight: "160%",
+    letterSpacing: "0%",
   };
 
   const profileStyle: React.CSSProperties = {
@@ -188,7 +191,8 @@ export default function Blogs() {
     };
   };
 
-  const isLg = useMediaQuery("(max-width:1200px)");
+  const isXl = useMediaQuery("(max-width:1920px)");
+  const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
   const isSm = useMediaQuery("(max-width:768px)");
   const isXs = useMediaQuery("(max-width:576px)");
@@ -197,12 +201,13 @@ export default function Blogs() {
     if (isXs) return { width: "100%", height: "auto" };
     if (isSm) return { width: "100%", height: "auto" };
     if (isMd) return { width: "100%", height: "auto" };
-    if (isLg) return { width: "100%", height: "auto" };
+    if (isLg) return { width: "50%", height: "auto" };
+    if (isXl) return { width: "50%", height: "auto" };
     return { width: "50%", height: "auto" }; // Default for larger screens
   };
 
   const dimensions = getDimensions();
-  
+
   return (
     <div>
       <Header />
@@ -219,8 +224,12 @@ export default function Blogs() {
             justifyContent: "center",
             flexDirection: "column",
             alignItems: "center",
-            // paddingTop: "250.67px",
-            paddingTop: { xs: "250.67px", sm: "250.67px", lg: "352px" },
+            padding: {
+              xs: "250.67px 0px 0px 0px",
+              sm: "250.67px 150px 0px 150px",
+              lg: "250px 150px 0px 150px",
+              xl: "352px 441px 0px 441px",
+            },
           }}
         >
           <Grid
@@ -236,6 +245,7 @@ export default function Blogs() {
                 xs: "2% 5%",
                 sm: "2% 5%",
                 lg: "41px 152px 74px 152px",
+                xl: "41px 152px 74px 152px",
               },
             }}
           >
@@ -245,9 +255,9 @@ export default function Blogs() {
                 color: "#292F36",
                 fontWeight: 700,
                 // fontSize: "50px",
-                fontSize: { xs: "25px", sm: "40px", lg: "50px" },
+                fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
                 // lineHeight: "62.5px",
-                lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+                lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
                 letterSpacing: "0%",
               }}
             >
@@ -259,9 +269,9 @@ export default function Blogs() {
                 color: "#4D5053",
                 fontWeight: 400,
                 // fontSize: "22px",
-                fontSize: { xs: "12px", sm: "18px", lg: "22px" },
+                fontSize: { xs: "12px", sm: "18px", lg: "22px", xl: "22px" },
                 // lineHeight: "33px",
-                lineHeight: { xs: "20px", sm: "28px", lg: "150%" },
+                lineHeight: { xs: "20px", sm: "28px", lg: "150%", xl: "150%" },
                 letterSpacing: "1%",
               }}
             >
@@ -276,18 +286,17 @@ export default function Blogs() {
           background: "#e1f5f2",
         }}
       >
-        <Grid item xs={12} sm={12} lg={12}>
+        <Grid item xs={12} sm={12} lg={12} xl={12}>
           <Typography
             sx={{
               color: "#292F36",
               // fontSize: "50px",
-              fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-              lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+              fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
+              lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
               fontWeight: 700,
               textAlign: "center",
-              marginTop: {lg:'233px'},
-              fontFamily:'Mulish',
-
+              marginTop: { lg: "100px", xl: "233px" },
+              fontFamily: "Mulish",
             }}
           >
             {blogPage[0]?.data.title1}
@@ -297,7 +306,10 @@ export default function Blogs() {
               borderRadius: "62px",
               border: "1px solid #E7E7E7",
               // margin: "5% 10%",
-              margin:{lg:'27px 252px 212px 252px'}
+              margin: {
+                lg: "27px 152px 100px 152px",
+                xl: "27px 252px 212px 252px",
+              },
             }}
           >
             {items
@@ -310,8 +322,13 @@ export default function Blogs() {
                   sx={{
                     display: "flex",
                     // flexDirection: "row",
-                    flexDirection: { xs: "column", sm: "column", lg: "row" },
-                    padding: {lg:'22px 130px'},
+                    flexDirection: {
+                      xs: "column",
+                      sm: "column",
+                      lg: "row",
+                      xl: "row",
+                    },
+                    padding: { lg: "22px 50px", xl: "22px 130px" },
                     gap: "50px",
                   }}
                   key={index}
@@ -332,7 +349,7 @@ export default function Blogs() {
                       display: "flex",
                       flexDirection: "column",
                       // justifyContent: "space-evenly",
-                      gap:'22px'
+                      gap: "22px",
                     }}
                   >
                     <Typography
@@ -340,10 +357,10 @@ export default function Blogs() {
                         color: "#292F36",
                         fontSize: "25px",
                         fontWeight: 700,
-                        fontFamily:'Mulish',
-                        lineHeight:'125%',
-                        letterSpacing:'2%',
-                        padding:{lg:'50px 50px 0px 0px'}
+                        fontFamily: "Mulish",
+                        lineHeight: "125%",
+                        letterSpacing: "2%",
+                        padding: { lg: "", xl: "50px 50px 0px 0px" },
                       }}
                     >
                       {/* {page * fixedRowsPerPage + index + 1}. */}
@@ -354,9 +371,9 @@ export default function Blogs() {
                         color: "#4D5053",
                         fontSize: "22px",
                         fontWeight: 400,
-                        fontFamily:'Mulish',
-                        lineHeight:'150%',
-                        letterSpacing:'1%',
+                        fontFamily: "Mulish",
+                        lineHeight: "150%",
+                        letterSpacing: "1%",
                         whiteSpace: "pre-line",
                       }}
                     >
@@ -367,10 +384,10 @@ export default function Blogs() {
                         color: "#4D5053",
                         fontSize: "16px",
                         fontWeight: 400,
-                        fontFamily:'Mulish',
-                        lineHeight:'150%',
-                        letterSpacing:'1%',
-                        marginTop:{lg:'41px'}
+                        fontFamily: "Mulish",
+                        lineHeight: "150%",
+                        letterSpacing: "1%",
+                        marginTop: { lg: "41px", xl: "41px" },
                       }}
                     >
                       {blogPage[0]?.data.testimonial_date}
@@ -435,15 +452,14 @@ export default function Blogs() {
       >
         <Typography
           sx={{
-            fontSize: { xs: "25px", sm: "40px", lg: "50px" },
-            lineHeight: { xs: "40px", sm: "48px", lg: "125%" },
+            fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
+            lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
             fontWeight: 700,
             color: "#292F36",
             textAlign: "center",
             // margin: "50px 0px",
-            fontFamily:'Mulish',
-            letterSpacing:'2%'
-
+            fontFamily: "Mulish",
+            letterSpacing: "2%",
           }}
         >
           {blogPage[0]?.data.title2}
@@ -553,6 +569,7 @@ export default function Blogs() {
           ))} */}
         <Grid
           item
+          xl={12}
           lg={12}
           xs={12}
           sm={12}
@@ -563,11 +580,17 @@ export default function Blogs() {
               xs: "repeat(1, 1fr)",
               sm: "repeat(2, 1fr)",
               lg: "repeat(3, 1fr)",
+              xl: "repeat(3, 1fr)",
             },
-            gap: "70px",
+            gap: { lg: "50px", xl: "70px" },
             justifyContent: "center",
             // padding: "3% 8%",
-            padding:{xs:'3% 8%',sm:'3% 8%',lg:'78px 162px 432px 162px'}
+            padding: {
+              xs: "3% 8%",
+              sm: "3% 8%",
+              lg: "78px 50px 200px 50px",
+              xl: "78px 162px 432px 162px",
+            },
           }}
         >
           {repeatedArticleItems
@@ -578,6 +601,7 @@ export default function Blogs() {
             .map((item, index) => (
               <Grid
                 item
+                xl={12}
                 lg={12}
                 xs={12}
                 sm={12}
@@ -607,8 +631,8 @@ export default function Blogs() {
                     }}
                   />
                 )}
-                <p style={title}>{item.subTitle}</p>
-                <p style={description}>{item.description}</p>
+                <Typography sx={title}>{item.subTitle}</Typography>
+                <Typography sx={description}>{item.description}</Typography>
               </Grid>
             ))}
         </Grid>

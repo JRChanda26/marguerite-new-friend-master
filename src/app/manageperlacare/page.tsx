@@ -376,11 +376,11 @@ const ManagePerLaCare: React.FC = () => {
                 justifyContent: "center",
                 flexDirection: "column",
                 alignItems: "center",
-                paddingTop: {
-                  xs: "250.67px",
-                  sm: "250.67px",
-                  lg: "300px",
-                  xl: "352px",
+                padding: {
+                  xs: "250.67px 0px 0px 0px",
+                  sm: "250.67px 150px 0px 150px",
+                  lg: "250px 150px 0px 150px",
+                  xl: "352px 441px 0px 441px",
                 },
               }}
             >
