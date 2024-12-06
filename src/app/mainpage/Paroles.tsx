@@ -58,7 +58,7 @@ export default function Paroles() {
               fontWeight: 400,
               fontSize: "44px",
               lineHeight: "auto",
-              letterSpacing:'0%',
+              letterSpacing: "0%",
               color: "#24535C",
             }}
           >
@@ -132,11 +132,16 @@ export default function Paroles() {
           sx={{
             color: "#0A1411",
             fontWeight: 700,
-            fontSize: { xs: "28px", sm: "45px", lg: "64px" },
-            lineHeight: { xs: "30px", sm: "50px", lg: "auto" },
-            padding: { xs: "2% 0%", sm: "5% 0%", lg: "140px 194px 100px 194px" },
+            fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
+            lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "auto" },
+            padding: {
+              xs: "2% 0%",
+              sm: "5% 0%",
+              lg: "100px",
+              xl: "140px 194px 100px 194px",
+            },
             fontFamily: "Mulish",
-            letterSpacing:'0%'
+            letterSpacing: "0%",
           }}
         >
           {parolesPage?.data.heading}
@@ -148,7 +153,7 @@ export default function Paroles() {
             flexDirection: "row",
             justifyContent: "flex-end",
             gap: "20px",
-            paddingTop:{lg:'30px'},
+            paddingTop: { lg: "30px", xl: "30px" },
           }}
         >
           <Button
@@ -211,11 +216,16 @@ export default function Paroles() {
           sx={{
             color: "#000000",
             fontWeight: 400,
-           fontFamily: "Mulish",
-            letterSpacing:'0%',
-            fontSize: { xs: "12px", sm: "16px", lg: "25px" },
-            lineHeight: { xs: "20px", sm: "20px", lg: "38.4px" },
-            padding: { xs: "2% 3%", sm: "2% 8%", lg: "0px 194px 0px 194px" },
+            fontFamily: "Mulish",
+            letterSpacing: "0%",
+            fontSize: { xs: "12px", sm: "16px", lg: "25px", xl: "25px" },
+            lineHeight: { xs: "20px", sm: "20px", lg: "38.4px", xl: "38.4px" },
+            padding: {
+              xs: "2% 3%",
+              sm: "2% 8%",
+              lg: "0px 70px 0px 70px",
+              xl: "0px 194px 0px 194px",
+            },
           }}
         >
           {formatText(description)}
@@ -252,7 +262,12 @@ export default function Paroles() {
             overflow: "hidden",
             display: "flex",
             justifyContent: "center",
-            padding: { xs: "20px", sm: "40px 0" ,lg:"117px 0px 128px 0px"},
+            padding: {
+              xs: "20px",
+              sm: "40px 0",
+              lg: "117px 0px 128px 0px",
+              xl: "117px 0px 128px 0px",
+            },
           }}
         >
           <Box
@@ -272,7 +287,12 @@ export default function Paroles() {
                 sx={{
                   borderRadius: "22.08px",
                   padding: "20px",
-                  minWidth: { xs: "250px", sm: "300px", lg: "529px" },
+                  minWidth: {
+                    xs: "250px",
+                    sm: "300px",
+                    lg: "450px",
+                    xl: "529px",
+                  },
                   background:
                     isCardHovered === item.id ||
                     playingVideoId === item.id ||
@@ -316,9 +336,24 @@ export default function Paroles() {
                     fontWeight: 700,
                     fontFamily: "Mulish",
                     textAlign: "center",
-                    padding: { xs: "0px", sm: "0px", lg: "10px 20px" },
-                    fontSize: { xs: "12px", sm: "16px", lg: "35.2px" },
-                    lineHeight: { xs: "20px", sm: "20px", lg: "25px" },
+                    padding: {
+                      xs: "0px",
+                      sm: "0px",
+                      lg: "10px 20px",
+                      xl: "10px 20px",
+                    },
+                    fontSize: {
+                      xs: "12px",
+                      sm: "16px",
+                      lg: "35.2px",
+                      xl: "35.2px",
+                    },
+                    lineHeight: {
+                      xs: "20px",
+                      sm: "20px",
+                      lg: "25px",
+                      xl: "25px",
+                    },
                   }}
                 >
                   {item.id}.{item.title}

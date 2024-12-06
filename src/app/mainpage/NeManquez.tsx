@@ -91,14 +91,21 @@ export default function NeManquez() {
   const backgroundImage = neManquezPage[0]?.data?.background_image?.url || "";
   console.log(backgroundImage);
   return (
-    <div style={{ background: "#FFFFFF", margin: "145px 178px" }}>
+    <Grid
+      sx={{ background: "#FFFFFF", margin: { lg: "100px", xl: "145px 178px" } }}
+    >
       <Grid container spacing={2}>
         <Grid
           item
           lg={12}
           sx={{
             backgroundImage: `url(${backgroundImage}), linear-gradient(to bottom, #F6C09E, #F29B64)`,
-            backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
+            backgroundSize: {
+              xs: "contain",
+              sm: "contain",
+              lg: "contain",
+              xl: "contain",
+            },
             backgroundRepeat: "no-repeat",
             backgroundPosition: "right",
             display: "flex",
@@ -106,22 +113,23 @@ export default function NeManquez() {
             flexDirection: { xs: "column", sm: "row" },
             alignItems: "center",
             // padding: "5%",
-            borderRadius: "110px",
+            borderRadius: { lg: "112px", xl: "110px" },
           }}
         >
           <Grid
             item
             lg={4}
+            xl={4}
             sx={{
-              padding: { lg: "103px 0px 0px 114px" },
+              padding: { lg: "50px 0px 0px 50px", xl: "103px 0px 0px 114px" },
             }}
           >
             <Typography
               sx={{
                 color: "#24535C",
                 fontFamily: "Mulish",
-                fontSize: { xs: "27px", sm: "35px", lg: "41.81px" },
-                lineHeight: { xs: "28px", sm: "38px", lg: "auto" },
+                fontSize: { xs: "27px", sm: "35px", lg: "35px", xl: "41.81px" },
+                lineHeight: { xs: "28px", sm: "38px", lg: "auto", xl: "auto" },
                 fontWeight: 700,
               }}
             >
@@ -131,10 +139,10 @@ export default function NeManquez() {
               sx={{
                 color: "#24535C",
                 fontFamily: "Mulish",
-                fontSize: { xs: "14px", sm: "18px", lg: "23.52px" },
+                fontSize: { xs: "14px", sm: "18px", lg: "18px", xl: "23.52px" },
                 lineHeight: { xs: "18px", sm: "28px", lg: "160%" },
                 fontWeight: 400,
-                padding: { lg: "15px 0px 120px 0px" },
+                padding: { lg: "15px 0px 100px 0px", xl: "15px 0px 120px 0px" },
               }}
             >
               {neManquezPage[0]?.data.description}
@@ -163,8 +171,8 @@ export default function NeManquez() {
               padding: "5px 10px",
               alignItems: "center",
               boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
-              height: { lg: "86.58px" },
-              width: { lg: "786px" },
+              height: { lg: "70px", xl: "86.58px" },
+              width: { lg: "0px", xl: "786px" },
             }}
           >
             <TextField
@@ -209,7 +217,12 @@ export default function NeManquez() {
                 textTransform: "none",
                 color: "#FFFFFF",
                 fontFamily: "Mulish",
-                fontSize: { xs: "10px", sm: "15px", lg: "19.25px" },
+                fontSize: {
+                  xs: "10px",
+                  sm: "15px",
+                  lg: "19.25px",
+                  xl: "19.25px",
+                },
                 fontWeight: 400,
                 padding: "2.5%",
                 "&:hover": {
@@ -243,6 +256,6 @@ export default function NeManquez() {
           )}
         </div>
       </Grid>
-    </div>
+    </Grid>
   );
 }
