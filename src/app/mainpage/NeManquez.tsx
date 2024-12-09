@@ -7,22 +7,21 @@ import {
   Snackbar,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { client } from "../../../prismic-configuration";
 
 export default function NeManquez() {
-  // const client = createClient();
-  // const settings = await client.getSingle("liberez");
+  const [neManquezPage, setNeManquezPage] = useState<any[]>([]);
 
-  const [neManquezPage, setNeManquezPage] = useState<any>("");
-  useState(() => {
-    const fetchPosts = async () => {
+  useEffect(() => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("ne_manquez" as any);
       setNeManquezPage(response);
     };
-    fetchPosts();
-  });
+    fetchData();
+  }, []);
 
   const [emailValue, setEmailValue] = useState("");
 
@@ -89,12 +88,23 @@ export default function NeManquez() {
   };
 
   const backgroundImage = neManquezPage[0]?.data?.background_image?.url || "";
-  console.log(backgroundImage);
+ 
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  
+  const placeholderFontSize = {
+    fontSize: isSmallScreen ? "8px" : "19.25px",
+  };
+
   return (
     <Grid
       sx={{
         background: "#FFFFFF",
-        margin: { xs: "", sm: "100px", lg: "100px", xl: "145px 178px" },
+        margin: {
+          xs: "50px 30px 50px 50px",
+          sm: "100px",
+          lg: "100px",
+          xl: "145px 178px",
+        },
       }}
     >
       <Grid container spacing={2}>
@@ -113,19 +123,21 @@ export default function NeManquez() {
             backgroundPosition: "right",
             display: "flex",
             justifyContent: "space-evenly",
-            flexDirection: { xs: "column", sm: "row" },
+            flexDirection: { xs: "row", sm: "row" },
             alignItems: "center",
             // padding: "5%",
-            borderRadius: { sm: "50px", lg: "90px", xl: "110px" },
+            borderRadius: { xs: "25px", sm: "50px", lg: "90px", xl: "110px" },
           }}
         >
           <Grid
             item
+            xs={5}
             sm={5}
             lg={4}
             xl={4}
             sx={{
               padding: {
+                xs: "0px 0px 0px 0px",
                 sm: "0px 0px 0px 20px",
                 lg: "50px 0px 0px 50px",
                 xl: "103px 0px 0px 114px",
@@ -136,8 +148,8 @@ export default function NeManquez() {
               sx={{
                 color: "#24535C",
                 fontFamily: "Mulish",
-                fontSize: { xs: "27px", sm: "22px", lg: "38px", xl: "41.81px" },
-                lineHeight: { xs: "28px", sm: "28px", lg: "auto", xl: "auto" },
+                fontSize: { xs: "15px", sm: "22px", lg: "38px", xl: "41.81px" },
+                lineHeight: { xs: "15px", sm: "28px", lg: "auto", xl: "auto" },
                 fontWeight: 700,
               }}
             >
@@ -147,10 +159,11 @@ export default function NeManquez() {
               sx={{
                 color: "#24535C",
                 fontFamily: "Mulish",
-                fontSize: { xs: "14px", sm: "14px", lg: "18px", xl: "23.52px" },
-                lineHeight: { xs: "18px", sm: "28px", lg: "160%", xl: "160%" },
+                fontSize: { xs: "10px", sm: "14px", lg: "18px", xl: "23.52px" },
+                lineHeight: { xs: "12px", sm: "28px", lg: "160%", xl: "160%" },
                 fontWeight: 400,
                 padding: {
+                  xs: "0px 0px 8px 0px",
                   sm: "0px 0px 20px 0px",
                   lg: "15px 0px 100px 0px",
                   xl: "15px 0px 120px 0px",
@@ -173,19 +186,20 @@ export default function NeManquez() {
           </Grid>
           <Grid
             item
+            xs={6}
             sm={6}
             lg={6}
             sx={{
               background: "#FFFFFF",
               borderRadius: "50px",
               display: "flex",
-              flexDirection: { xs: "column", sm: "row" },
+              flexDirection: { xs: "row", sm: "row" },
               justifyContent: "space-between",
               padding: "5px 10px",
               alignItems: "center",
               boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
-              height: { sm: "50px", lg: "70px", xl: "86.58px" },
-              width: { sm: "100%", lg: "0px", xl: "786px" },
+              height: { xs: "25px", sm: "50px", lg: "70px", xl: "86.58px" },
+              width: { xs: "100%", sm: "100%", lg: "0px", xl: "786px" },
             }}
           >
             <TextField
@@ -196,6 +210,9 @@ export default function NeManquez() {
                 if (e.key === "Enter") {
                   handleSubmit(e);
                 }
+              }}
+              InputProps={{
+                style: placeholderFontSize,
               }}
               placeholder="Entrez votre adresse email"
               variant="outlined"
@@ -231,13 +248,13 @@ export default function NeManquez() {
                 color: "#FFFFFF",
                 fontFamily: "Mulish",
                 fontSize: {
-                  xs: "10px",
+                  xs: "5px",
                   sm: "8px",
                   lg: "19.25px",
                   xl: "19.25px",
                 },
                 fontWeight: 400,
-                padding: "2.5%",
+                padding: {xs:"2.5% 0% 2.5% 0%",sm:"2.5%",lg:"2.5%",xl:"2.5%"},
                 "&:hover": {
                   background: "#24535C",
                   boxShadow: "none",

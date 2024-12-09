@@ -9,21 +9,22 @@ const Footer: React.FC = () => {
   const [footerPage, setFooterPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType("footer");
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("footer" as any);
       setFooterPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [socialLinkPage, setSocialLinkPage] = useState<any[]>([]);
+  
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("contact" as any);
       setSocialLinkPage(response);
     };
-    fetchPosts();
+    fetchData();
   }, []);
 
   const allLinkText = [

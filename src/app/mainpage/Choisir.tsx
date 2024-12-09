@@ -8,12 +8,12 @@ const Choisir: React.FC = () => {
   const [choisirPage, setChoisirPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType("choisir");
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("choisir" as any);
       setChoisirPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [isHovered, setIsHovered] = useState<number | null>(null);

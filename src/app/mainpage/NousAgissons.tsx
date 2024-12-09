@@ -6,15 +6,15 @@ import { Box, Button, Grid, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 
 const NousAgissons: React.FC = () => {
-  const [nousPage, setNousPage] = useState<[]>([]);
+  const [nousPage, setNousPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType("nous_agissons");
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("nous_agissons" as any);
       setNousPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [isVisible, setIsVisible] = useState(false);

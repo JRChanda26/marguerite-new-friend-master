@@ -14,38 +14,38 @@ import React, { useEffect, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { useRouter } from "next/navigation";
+import { client } from "../../../prismic-configuration";
 
 export default function Questions() {
   // const client = createClient();
   // const settings = await client.getSingle("questions");
 
-  const [questionPage, setQuestionPage] = useState<any>(null);
+  const [questionPage, setQuestionPage] = useState<any[]>([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const client = createClient();
-      const data = await client.getSingle("questions");
-      setQuestionPage(data);
-    }
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("questions" as any);
+      setQuestionPage(response);
+    };
     fetchData();
   }, []);
 
   const faqs = [
     {
-      question: questionPage?.data.question1,
-      answer: questionPage?.data.answer1,
+      question: questionPage[0]?.data.question1,
+      answer: questionPage[0]?.data.answer1,
     },
     {
-      question: questionPage?.data.question2,
-      answer: questionPage?.data.answer2,
+      question: questionPage[0]?.data.question2,
+      answer: questionPage[0]?.data.answer2,
     },
     {
-      question: questionPage?.data.question3,
-      answer: questionPage?.data.answer3,
+      question: questionPage[0]?.data.question3,
+      answer: questionPage[0]?.data.answer3,
     },
     {
-      question: questionPage?.data.question4,
-      answer: questionPage?.data.answer4,
+      question: questionPage[0]?.data.question4,
+      answer: questionPage[0]?.data.answer4,
     },
   ];
 
@@ -101,7 +101,7 @@ export default function Questions() {
                 },
               }}
             >
-              {questionPage?.data.heading}
+              {questionPage[0]?.data.heading}
             </Typography>
             <Typography
               sx={{
@@ -120,7 +120,7 @@ export default function Questions() {
                 },
               }}
             >
-              {questionPage?.data.description}
+              {questionPage[0]?.data.description}
             </Typography>
             <Button
               sx={{
@@ -152,13 +152,13 @@ export default function Questions() {
               }}
               onClick={handleNavigation}
             >
-              {questionPage?.data.button_text}
+              {questionPage[0]?.data.button_text}
             </Button>
-            {questionPage?.data.image && (
+            {questionPage[0]?.data.image && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={questionPage?.data.image.url || undefined}
-                alt={questionPage?.data.image.alt || "Image"}
+                src={questionPage[0]?.data.image.url || undefined}
+                alt={questionPage[0]?.data.image.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",

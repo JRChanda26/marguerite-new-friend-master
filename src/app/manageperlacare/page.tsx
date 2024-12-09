@@ -24,25 +24,25 @@ const ManagePerLaCare: React.FC = () => {
   const [managePage, setManagePage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("manage_per_la" as any);
       setManagePage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [modulesPage, setModulesPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType(
         "interactive_learning_modules" as any
       );
       setModulesPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const headerBackground = managePage[0]?.data?.header_background?.url || "";
