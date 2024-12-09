@@ -17,24 +17,25 @@ import { client } from "../../../../prismic-configuration";
 import { useRouter } from "next/navigation";
 
 export default function BlogsNews() {
-  const [blogNewsPage, setBlogNewsPage] = useState<any>(null);
+  const [blogNewsPage, setBlogNewsPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getSingle("blogs_news" as any);
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("blogs_news" as any);
       setBlogNewsPage(response);
     };
-    fetchPosts();
+
+    fetchData();
   }, []);
 
   const [contactPage, setContactPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("contact" as any);
       setContactPage(response);
     };
-    fetchPosts();
+    fetchData();
   }, []);
 
   console.log("bbbbbbbb", blogNewsPage);
@@ -46,7 +47,7 @@ export default function BlogsNews() {
     borderRadius: "20px",
   };
 
-  const tabs = [blogNewsPage?.data.tags_tab1, blogNewsPage?.data.tags_tab2];
+  const tabs = [blogNewsPage[0]?.data.tags_tab1, blogNewsPage[0]?.data.tags_tab2];
 
   const [selectedTab, setSelectedTab] = useState<number | null>(0);
 
@@ -84,7 +85,7 @@ export default function BlogsNews() {
   const [searchInputValue, setSearchInputValue] = useState("");
 
   const squareBrackets =
-    blogNewsPage?.data?.square_brackets_background?.url || "";
+    blogNewsPage[0]?.data?.square_brackets_background?.url || "";
 
   const router = useRouter();
 
@@ -120,7 +121,7 @@ export default function BlogsNews() {
       <Header />
       <Grid
         sx={{
-          backgroundImage: `url(${blogNewsPage?.data?.header_background?.url || ""})`,
+          backgroundImage: `url(${blogNewsPage[0]?.data?.header_background?.url || ""})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           display: "flex",
@@ -158,14 +159,14 @@ export default function BlogsNews() {
                 color: "#292F36",
               }}
             >
-              {blogNewsPage?.data.top_heading}
+              {blogNewsPage[0]?.data.top_heading}
             </Typography>
             <div style={{ paddingTop: "21px" }}>
-              {blogNewsPage?.data.top_image && (
+              {blogNewsPage[0]?.data.top_image && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={blogNewsPage?.data.top_image.url || undefined}
-                  alt={blogNewsPage?.data.top_image.alt || "Image"}
+                  src={blogNewsPage[0]?.data.top_image.url || undefined}
+                  alt={blogNewsPage[0]?.data.top_image.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -227,7 +228,7 @@ export default function BlogsNews() {
                   fontFamily: "Mulish",
                 }}
               >
-                {blogNewsPage?.data.date_text}
+                {blogNewsPage[0]?.data.date_text}
               </Typography>
               <Typography
                 sx={{
@@ -243,7 +244,7 @@ export default function BlogsNews() {
                   fontFamily: "Mulish",
                 }}
               >
-                {blogNewsPage?.data.about}
+                {blogNewsPage[0]?.data.about}
               </Typography>
             </Grid>
             <Typography
@@ -262,7 +263,7 @@ export default function BlogsNews() {
                 },
               }}
             >
-              {blogNewsPage?.data.top_description}
+              {blogNewsPage[0]?.data.top_description}
             </Typography>
             {/* <div
               style={{
@@ -331,11 +332,11 @@ export default function BlogsNews() {
                       },
                     }}
                   >
-                    {blogNewsPage?.data.quote_image && (
+                    {blogNewsPage[0]?.data.quote_image && (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img
-                        src={blogNewsPage?.data.quote_image.url || undefined}
-                        alt={blogNewsPage?.data.quote_image.alt || "Image"}
+                        src={blogNewsPage[0]?.data.quote_image.url || undefined}
+                        alt={blogNewsPage[0]?.data.quote_image.alt || "Image"}
                         width="50%"
                         height="auto"
                       />
@@ -371,7 +372,7 @@ export default function BlogsNews() {
                         },
                       }}
                     >
-                      {blogNewsPage?.data.quote_text}
+                      {blogNewsPage[0]?.data.quote_text}
                     </Typography>
                   </div>
                 </>
@@ -427,7 +428,7 @@ export default function BlogsNews() {
               }}
             >
               <Typography style={{ ...heading, marginBottom: "30px" }}>
-                {blogNewsPage?.data.card_heading}
+                {blogNewsPage[0]?.data.card_heading}
               </Typography>
               {Array(3)
                 .fill(null)
@@ -439,7 +440,7 @@ export default function BlogsNews() {
                       }}
                     >
                       <Typography sx={list}>
-                        {blogNewsPage?.data.card_title_lists}
+                        {blogNewsPage[0]?.data.card_title_lists}
                       </Typography>
                       <Typography
                         sx={{
@@ -452,7 +453,7 @@ export default function BlogsNews() {
                           color: "#4D5053",
                         }}
                       >
-                        {blogNewsPage?.data.card_date_lists}
+                        {blogNewsPage[0]?.data.card_date_lists}
                       </Typography>
                     </Grid>
                     <hr style={{ border: "1px solid #24535C" }} />
@@ -531,7 +532,7 @@ export default function BlogsNews() {
               paddingRight: { lg: "300px",xl: "500px", },
             }}
           >
-            {blogNewsPage?.data.bottom_heading}
+            {blogNewsPage[0]?.data.bottom_heading}
           </Typography>
           <Typography
             sx={{
@@ -543,7 +544,7 @@ export default function BlogsNews() {
               letterSpacing: "1%",
             }}
           >
-            {blogNewsPage?.data.bottom_description1}
+            {blogNewsPage[0]?.data.bottom_description1}
           </Typography>
           <div>
             {Array(3)
@@ -561,17 +562,17 @@ export default function BlogsNews() {
                       paddingRight: { lg: "100px",xl: "300px" },
                     }}
                   >
-                    {index + 1}.{blogNewsPage?.data.bottom_points}
+                    {index + 1}.{blogNewsPage[0]?.data.bottom_points}
                   </Typography>
                 </div>
               ))}
           </div>
           <div style={{ margin: "40px 0px 40px 0px" }}>
-            {blogNewsPage?.data.bottom_image && (
+            {blogNewsPage[0]?.data.bottom_image && (
               // eslint-disable-next-line @next/next/no-img-element
               <img
-                src={blogNewsPage?.data.bottom_image.url || undefined}
-                alt={blogNewsPage?.data.bottom_image.alt || "Image"}
+                src={blogNewsPage[0]?.data.bottom_image.url || undefined}
+                alt={blogNewsPage[0]?.data.bottom_image.alt || "Image"}
                 style={{
                   width: "100%",
                   height: "auto",
@@ -588,7 +589,7 @@ export default function BlogsNews() {
               letterSpacing: "1%",
             }}
           >
-            {blogNewsPage?.data.bottom_description2}
+            {blogNewsPage[0]?.data.bottom_description2}
           </Typography>
           <div
             style={{
@@ -623,13 +624,13 @@ export default function BlogsNews() {
                   color: "#FFFFFF",
                 }}
               >
-                {blogNewsPage?.data.button_text}
+                {blogNewsPage[0]?.data.button_text}
               </Typography>
-              {blogNewsPage?.data.button_icon && (
+              {blogNewsPage[0]?.data.button_icon && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={blogNewsPage?.data.button_icon.url || undefined}
-                  alt={blogNewsPage?.data.button_icon.alt || "Image"}
+                  src={blogNewsPage[0]?.data.button_icon.url || undefined}
+                  alt={blogNewsPage[0]?.data.button_icon.alt || "Image"}
                   style={{
                     width: "20%",
                     height: "auto",
@@ -648,7 +649,7 @@ export default function BlogsNews() {
               letterSpacing: "1%",
             }}
           >
-            {blogNewsPage?.data.bottom_title}
+            {blogNewsPage[0]?.data.bottom_title}
           </Typography>
           <hr style={{ border: "1px solid #E5E5E5" }} />
           <Grid
@@ -671,7 +672,7 @@ export default function BlogsNews() {
                 letterSpacing: "0%",
               }}
             >
-              {blogNewsPage?.data.tags}
+              {blogNewsPage[0]?.data.tags}
             </div>
             {tabs.slice(0, 5).map((label: string, index: number) => (
               <Button

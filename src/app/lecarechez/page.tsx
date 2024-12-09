@@ -21,24 +21,24 @@ const LecarechezMargueriteServices: React.FC = () => {
   const [leCarePage, setLeCarePage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("le_care_chez" as any);
       setLeCarePage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [modulesPage, setModulesPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType(
         "interactive_learning_modules" as any
       );
       setModulesPage(response);
     };
-    fetchPosts();
+    fetchData();
   }, []);
 
   const headerBackground = leCarePage[0]?.data?.header_background?.url || "";

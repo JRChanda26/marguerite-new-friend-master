@@ -2,19 +2,19 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
 import { Grid, Typography } from "@mui/material";
+import { client } from "../../../prismic-configuration";
 
 export default function NotreProcessus() {
   // const client = createClient();
   // const settings = await client.getSingle("notre_processus");
 
-  const [notrePage, setNotrePage] = useState<any>(null);
+  const [notrePage, setNotrePage] = useState<any[]>([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const client = createClient();
-      const data = await client.getSingle("notre_processus" as any);
-      setNotrePage(data);
-    }
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("notre_processus" as any);
+      setNotrePage(response);
+    };
     fetchData();
   }, []);
 
@@ -84,7 +84,7 @@ export default function NotreProcessus() {
               },
             }}
           >
-            {notrePage?.data.heading}
+            {notrePage[0]?.data.heading}
           </Typography>
           <Typography
             sx={{
@@ -108,7 +108,7 @@ export default function NotreProcessus() {
               fontFamily: "Mulish",
             }}
           >
-            {notrePage?.data.description}
+            {notrePage[0]?.data.description}
           </Typography>
         </Grid>
         <Grid
@@ -141,11 +141,11 @@ export default function NotreProcessus() {
             }}
           >
             <div>
-              {notrePage?.data.card_image1 && (
+              {notrePage[0]?.data.card_image1 && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={notrePage.data.card_image1.url || undefined}
-                  alt={notrePage.data.card_image1.alt || "Image"}
+                  src={notrePage[0]?.data.card_image1.url || undefined}
+                  alt={notrePage[0]?.data.card_image1.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -173,7 +173,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_heading1}
+                {notrePage[0]?.data.card_heading1}
               </Typography>
               <Typography
                 sx={{
@@ -187,7 +187,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_title1}
+                {notrePage[0]?.data.card_title1}
               </Typography>
               <Typography
                 sx={{
@@ -201,7 +201,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_description1}
+                {notrePage[0]?.data.card_description1}
               </Typography>
               <Typography
                 style={{
@@ -212,12 +212,12 @@ export default function NotreProcessus() {
                 onMouseEnter={() => setIsHovered(1)}
                 onMouseLeave={() => setIsHovered(null)}
               >
-                {notrePage?.data.link_text}
-                {notrePage?.data.link_icon && (
+                {notrePage[0]?.data.link_text}
+                {notrePage[0]?.data.link_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={notrePage.data.link_icon.url || undefined}
-                    alt={notrePage.data.link_icon.alt || "Image"}
+                    src={notrePage[0]?.data.link_icon.url || undefined}
+                    alt={notrePage[0]?.data.link_icon.alt || "Image"}
                     style={{
                       width: "50px",
                       height: "auto",
@@ -264,7 +264,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_heading2}
+                {notrePage[0]?.data.card_heading2}
               </Typography>
               <Typography
                 sx={{
@@ -278,7 +278,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_title2}
+                {notrePage[0]?.data.card_title2}
               </Typography>
               <Typography
                 sx={{
@@ -292,7 +292,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_description2}
+                {notrePage[0]?.data.card_description2}
               </Typography>
               <Typography
                 style={{
@@ -303,12 +303,12 @@ export default function NotreProcessus() {
                 onMouseEnter={() => setIsHovered(2)}
                 onMouseLeave={() => setIsHovered(null)}
               >
-                {notrePage?.data.link_text}
-                {notrePage?.data.link_icon && (
+                {notrePage[0]?.data.link_text}
+                {notrePage[0]?.data.link_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={notrePage.data.link_icon.url || undefined}
-                    alt={notrePage.data.link_icon.alt || "Image"}
+                    src={notrePage[0]?.data.link_icon.url || undefined}
+                    alt={notrePage[0]?.data.link_icon.alt || "Image"}
                     style={{
                       width: "50px",
                       height: "auto",
@@ -318,11 +318,11 @@ export default function NotreProcessus() {
               </Typography>
             </Grid>
             <div>
-              {notrePage?.data.card_image2 && (
+              {notrePage[0]?.data.card_image2 && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={notrePage.data.card_image2.url || undefined}
-                  alt={notrePage.data.card_image2.alt || "Image"}
+                  src={notrePage[0]?.data.card_image2.url || undefined}
+                  alt={notrePage[0]?.data.card_image2.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -346,11 +346,11 @@ export default function NotreProcessus() {
             }}
           >
             <div>
-              {notrePage?.data.card_image3 && (
+              {notrePage[0]?.data.card_image3 && (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
-                  src={notrePage.data.card_image3.url || undefined}
-                  alt={notrePage.data.card_image3.alt || "Image"}
+                  src={notrePage[0]?.data.card_image3.url || undefined}
+                  alt={notrePage[0]?.data.card_image3.alt || "Image"}
                   style={{
                     width: "100%",
                     height: "auto",
@@ -378,7 +378,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_heading3}
+                {notrePage[0]?.data.card_heading3}
               </Typography>
               <Typography
                 sx={{
@@ -392,7 +392,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_title3}
+                {notrePage[0]?.data.card_title3}
               </Typography>
               <Typography
                 sx={{
@@ -406,7 +406,7 @@ export default function NotreProcessus() {
                   },
                 }}
               >
-                {notrePage?.data.card_description3}
+                {notrePage[0]?.data.card_description3}
               </Typography>
               <Typography
                 style={{
@@ -417,12 +417,12 @@ export default function NotreProcessus() {
                 onMouseEnter={() => setIsHovered(3)}
                 onMouseLeave={() => setIsHovered(null)}
               >
-                {notrePage?.data.link_text}
-                {notrePage?.data.link_icon && (
+                {notrePage[0]?.data.link_text}
+                {notrePage[0]?.data.link_icon && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
-                    src={notrePage.data.link_icon.url || undefined}
-                    alt={notrePage.data.link_icon.alt || "Image"}
+                    src={notrePage[0]?.data.link_icon.url || undefined}
+                    alt={notrePage[0]?.data.link_icon.alt || "Image"}
                     style={{
                       width: "50px",
                       height: "auto",

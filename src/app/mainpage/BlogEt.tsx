@@ -1,22 +1,17 @@
 "use client";
-import { createClient } from "@/prismicio";
 import { Grid, Typography } from "@mui/material";
-import { PrismicRichText } from "@prismicio/react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { client } from "../../../prismic-configuration";
 
 export default function BlogEt() {
-  // const client = createClient();
-  // const settings = await client.getSingle("nos_actes");
-
-  const [blogPage, setBlogPage] = useState<any>(null);
+  const [blogPage, setBlogPage] = useState<any[]>([]);
 
   useEffect(() => {
-    async function fetchData() {
-      const client = createClient();
-      const data = await client.getSingle("blog_et" as any);
-      setBlogPage(data);
-    }
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("blog_et" as any);
+      setBlogPage(response);
+    };
     fetchData();
   }, []);
 
@@ -38,9 +33,9 @@ export default function BlogEt() {
 
   const items = [
     {
-      image: blogPage?.data.card_image,
-      title: blogPage?.data.card_title,
-      description: blogPage?.data.card_description,
+      image: blogPage[0]?.data.card_image,
+      title: blogPage[0]?.data.card_title,
+      description: blogPage[0]?.data.card_description,
     },
   ];
 
@@ -79,7 +74,7 @@ export default function BlogEt() {
               },
             }}
           >
-            {blogPage?.data.heading}
+            {blogPage[0]?.data.heading}
           </Typography>
         </Grid>
 
@@ -203,13 +198,13 @@ export default function BlogEt() {
                       lineHeight: "25.9px",
                     }}
                   >
-                    {blogPage?.data.link_text}
+                    {blogPage[0]?.data.link_text}
                   </Typography>
-                  {blogPage?.data.link_icon && (
+                  {blogPage[0]?.data.link_icon && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={blogPage.data.link_icon.url || undefined}
-                      alt={blogPage.data.link_icon.alt || "Image"}
+                      src={blogPage[0]?.data.link_icon.url || undefined}
+                      alt={blogPage[0]?.data.link_icon.alt || "Image"}
                       style={{
                         width: "48px",
                         height: "24px",
@@ -236,7 +231,7 @@ export default function BlogEt() {
               margin: { lg: "50px 0px  100px 0px", xl: "0px 0px  159px 0px" },
             }}
           >
-            {blogPage?.data.footer_text}
+            {blogPage[0]?.data.footer_text}
           </Typography>
         </Link>
       </Grid>

@@ -1,16 +1,13 @@
 "use client";
-import { createClient } from "@/prismicio";
 import {
   Grid,
   IconButton,
-  TextField,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
-import { PrismicRichText } from "@prismicio/react";
 import Liberez from "@/app/mainpage/NeManquez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
@@ -20,12 +17,12 @@ export default function Blogs() {
   const [blogPage, setBlogPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("blogs" as any);
       setBlogPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [page, setPage] = useState(0);
@@ -70,18 +67,6 @@ export default function Blogs() {
     letterSpacing: "0%",
   };
 
-  const profileStyle: React.CSSProperties = {
-    fontSize: "18.61px",
-    fontWeight: 700,
-    color: "#161C2D",
-  };
-
-  const dateStyle: React.CSSProperties = {
-    fontSize: "18.61px",
-    fontWeight: 400,
-    color: "#161C2DB8",
-  };
-
   // const articleItems = Array.from({ length: 30 });
 
   const articleItems = [
@@ -123,49 +108,6 @@ export default function Blogs() {
     setArticlePage((prevPage) => Math.min(prevPage + 1, totalArticlePages - 1));
   };
 
-  const containerStyle: React.CSSProperties = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "20px",
-    borderRadius: "60px",
-    background: "linear-gradient(to right, #F6C09E 60%, #24535C 40%)",
-    margin: "auto",
-  };
-
-  const leftSectionStyle: React.CSSProperties = {
-    flex: 1,
-    color: "#161C2D",
-    padding: "10px",
-  };
-
-  const rightSectionStyle: React.CSSProperties = {
-    flex: 1,
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "10px",
-  };
-
-  const inputStyle: React.CSSProperties = {
-    width: "100%",
-    backgroundColor: "#FFFFFF",
-    borderRadius: "50px",
-  };
-
-  const titleStyle: React.CSSProperties = {
-    color: "#24535C",
-    fontSize: "41.81px",
-    fontWeight: 700,
-    lineHeight: "52.47px",
-  };
-
-  const descriptionStyle: React.CSSProperties = {
-    color: "#24535C",
-    fontSize: "23.52px",
-    fontWeight: 400,
-    lineHeight: "37.63px",
-  };
 
   const [inputValue, setInputValue] = useState("");
 

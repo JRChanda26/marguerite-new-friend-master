@@ -8,11 +8,11 @@ const NosExperiences: React.FC = () => {
   const [nosPage, setNosPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType("nos_experiences");
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("nos_experiences" as any);
       setNosPage(response);
     };
-    fetchPosts();
+    fetchData();
   }, []);
 
   const backgroundImage = nosPage[0]?.data?.background_image?.url || "";

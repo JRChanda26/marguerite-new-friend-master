@@ -19,17 +19,16 @@ import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 
 const Header: React.FC = () => {
-  const [headerPage, setHeaderPage] = useState<[]>([]);
+  const [headerPage, setHeaderPage] = useState<any[]>([]);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   useEffect(() => {
-    const fetchPosts = async () => {
-      const response: any = await client.getAllByType("header");
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("header" as any);
       setHeaderPage(response);
     };
-
-    fetchPosts();
+    fetchData();
   }, []);
 
   const router = useRouter();

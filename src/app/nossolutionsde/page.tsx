@@ -21,28 +21,28 @@ const NosSolutionsDe: React.FC = () => {
   const [nosPage, setNosPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType(
         "nos_solutions_de" as any
       );
       setNosPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
   const backgroundImage = nosPage[0]?.data?.header_background?.url || "";
 
   const [modulesPage, setModulesPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType(
         "interactive_learning_modules" as any
       );
       setModulesPage(response);
     };
 
-    fetchPosts();
+    fetchData();
   }, []);
 
   console.log(modulesPage);

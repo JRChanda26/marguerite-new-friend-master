@@ -37,11 +37,11 @@ export default function Contact() {
   const [contactPage, setContactPage] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchPosts = async () => {
+    const fetchData = async () => {
       const response: any = await client.getAllByType("contact" as any);
       setContactPage(response);
     };
-    fetchPosts();
+    fetchData();
   }, []);
 
   const [pinIcon, setPinIcon] = useState(null);
