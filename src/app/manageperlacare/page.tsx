@@ -174,7 +174,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     topLeft: {
       top: isExtraSmall
-        ? "10%"
+        ? "5%"
         : isSmall
           ? "5%"
           : isLarge
@@ -183,16 +183,16 @@ const ManagePerLaCare: React.FC = () => {
               ? "0%"
               : "0%",
       left: isExtraSmall
-        ? "5%"
+        ? "3%"
         : isSmall
-          ? "5%"
+          ? "7%"
           : isLarge
             ? "0%"
             : isExtraLarge
               ? "5%"
               : "5%",
       width: isExtraSmall
-        ? "90%"
+        ? "80%"
         : isSmall
           ? "80%"
           : isLarge
@@ -203,25 +203,25 @@ const ManagePerLaCare: React.FC = () => {
     },
     topRight: {
       top: isExtraSmall
-        ? "25%"
+        ? "35%"
         : isSmall
-          ? "20%"
+          ? "25%"
           : isLarge
             ? "35%"
             : isExtraLarge
               ? "30%"
               : "30%",
       right: isExtraSmall
-        ? "5%"
+        ? "3%"
         : isSmall
-          ? "5%"
+          ? "7%"
           : isLarge
             ? "0%"
             : isExtraLarge
               ? "5%"
               : "5%",
       width: isExtraSmall
-        ? "90%"
+        ? "80%"
         : isSmall
           ? "80%"
           : isLarge
@@ -232,25 +232,25 @@ const ManagePerLaCare: React.FC = () => {
     },
     bottomLeft: {
       top: isExtraSmall
-        ? "55%"
+        ? "58%"
         : isSmall
-          ? "50%"
+          ? "45%"
           : isLarge
             ? "65%"
             : isExtraLarge
               ? "60%"
               : "60%",
       left: isExtraSmall
-        ? "5%"
+        ? "3%"
         : isSmall
-          ? "5%"
+          ? "7%"
           : isLarge
             ? "0%"
             : isExtraLarge
               ? "5%"
               : "5%",
       width: isExtraSmall
-        ? "90%"
+        ? "80%"
         : isSmall
           ? "80%"
           : isLarge
@@ -261,25 +261,25 @@ const ManagePerLaCare: React.FC = () => {
     },
     bottomRight: {
       top: isExtraSmall
-        ? "75%"
+        ? "85%"
         : isSmall
-          ? "70%"
+          ? "65%"
           : isLarge
             ? "100%"
             : isExtraLarge
               ? "90%"
               : "90%",
       right: isExtraSmall
-        ? "5%"
+        ? "3%"
         : isSmall
-          ? "5%"
+          ? "7%"
           : isLarge
             ? "0%"
             : isExtraLarge
               ? "5%"
               : "5%",
       width: isExtraSmall
-        ? "90%"
+        ? "80%"
         : isSmall
           ? "80%"
           : isLarge
@@ -1199,7 +1199,7 @@ const ManagePerLaCare: React.FC = () => {
             alignItems: "center",
             // marginTop: "10%",
             margin: {
-              xs: "10%",
+              xs: "5%",
               sm: "10%",
               lg: "107px 522px",
               xl: "107px 522px",
@@ -1212,6 +1212,8 @@ const ManagePerLaCare: React.FC = () => {
               <Grid
                 sx={{
                   padding: {
+                    xs: "0px 0px 27px 0px",
+                    sm: "20px 0px 27px 0px",
                     lg: "100px 0px 27px 0px",
                     xl: "67px 0px 27px 0px",
                   },
@@ -1247,8 +1249,8 @@ const ManagePerLaCare: React.FC = () => {
                     },
                     textAlign: "center",
                     padding: {
-                      xs: "12%",
-                      sm: "12%",
+                      xs: "0px 20px 0px 20px",
+                      sm: "0px 82px 34px 82px",
                       lg: "0px 82px 34px 82px",
                       xl: "0px 82px 34px 82px",
                     },
@@ -1342,7 +1344,7 @@ const ManagePerLaCare: React.FC = () => {
           xl={4}
           lg={4}
           xs={12}
-          sm={6}
+          sm={4}
           sx={{
             alignContent: "center",
             fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "25px" },

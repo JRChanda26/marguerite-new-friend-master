@@ -294,7 +294,7 @@ export default function Contact() {
               // padding: "41px 152px 42px 152px",
               padding: {
                 xs: "2% 5%",
-                sm: "2% 5%",
+                sm: "30px 70px",
                 lg: "41px 152px 41px 152px",
                 xl: "41px 152px 41px 152px",
               },
@@ -338,7 +338,7 @@ export default function Contact() {
         sx={{
           padding: {
             xs: "6%",
-            sm: "5% 15%",
+            sm: "5% 10%",
             lg: "50px 120px 287px 120px",
             xl: "135px 356px 287px 356px",
           },
@@ -352,6 +352,7 @@ export default function Contact() {
               fontWeight: 700,
               textAlign: "center",
               padding: {
+                sm: "0px",
                 lg: "0px 196px 80px 196px",
                 xl: "0px 196px 80px 196px",
               },
@@ -389,7 +390,12 @@ export default function Contact() {
             sx={{
               background: "#BBDDD9",
               borderRadius: "50px",
-              padding: { lg: "76px 32px", xl: "76px 32px" },
+              padding: {
+                xs: "50px 32px",
+                sm: "50px 32px",
+                lg: "76px 32px",
+                xl: "76px 32px",
+              },
               display: "flex",
               flexDirection: "column",
               gap: "42px",

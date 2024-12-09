@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { createClient } from "@/prismicio";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
 
 export default function Paroles() {
   const [parolesPage, setParolesPage] = useState<any>(null);
@@ -22,6 +22,23 @@ export default function Paroles() {
     fetchData();
   }, []);
 
+  const isXl = useMediaQuery("(max-width:1920px)");
+  const isLg = useMediaQuery("(max-width:1360px)");
+  const isMd = useMediaQuery("(max-width:992px)");
+  const isSm = useMediaQuery("(max-width:768px)");
+  const isXs = useMediaQuery("(max-width:576px)");
+
+  const getFontSize = () => {
+    if (isXs) return { fontSize: "20px" };
+    if (isSm) return { fontSize: "28px" }; 
+    if (isMd) return { fontSize: "32px" };
+    if (isLg) return { fontSize: "38px" };
+    if (isXl) return { fontSize: "44px" }; 
+    return { fontSize: "44px" };
+  };
+  
+  const  fontSize  = getFontSize();
+  
   if (!parolesPage) {
     return;
   }
@@ -56,7 +73,7 @@ export default function Paroles() {
             style={{
               fontFamily: fontMap[part as HighlightWord].fontFamily,
               fontWeight: 400,
-              fontSize: "44px",
+              fontSize: fontSize.fontSize,
               lineHeight: "auto",
               letterSpacing: "0%",
               color: "#24535C",

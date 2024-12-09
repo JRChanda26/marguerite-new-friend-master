@@ -228,14 +228,21 @@ const LecarechezMargueriteServices: React.FC = () => {
 
   const dimensions = getDimensions();
 
-  const getHeight = () => {
-    if (isXs) return { height: "0%" };
-    if (isSm) return { height: "0%" };
-    if (isMd) return { height: "0%" };
-    if (isLg) return { height: "52%" };
+  const getRightImageHeight = () => {
+    if (isXs) return { height: "100%" };
+    if (isSm) return { height: "100%" };
+    if (isLg) return { height: "51%" };
     if (isXl) return { height: "62%" };
   };
-  const heights = getHeight();
+  const rightImageHeight = getRightImageHeight();
+
+  const getMiddleImageHeight = () => {
+    if (isXs) return { height: "100%" };
+    if (isSm) return { height: "100%" };
+    if (isLg) return { height: "88%" };
+    if (isXl) return { height: "auto" };
+  };
+  const middleImageHeight = getMiddleImageHeight();
 
   return (
     <Box>
@@ -340,6 +347,8 @@ const LecarechezMargueriteServices: React.FC = () => {
         sx={{
           textAlign: "center",
           padding: {
+            xs: "20px",
+            sm: "70px",
             lg: "92px 100px 50px 100px",
             xl: "92px 254px 168px 254px",
           },
@@ -385,7 +394,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             alignItems: "center",
             // marginTop: "10%",
             margin: {
-              xs: "10%",
+              xs: "5%",
               sm: "10%",
               lg: "50px 300px",
               xl: "107px 525px",
@@ -397,7 +406,12 @@ const LecarechezMargueriteServices: React.FC = () => {
             <>
               <Grid
                 sx={{
-                  padding: { lg: "67px 0px 27px 0px", xl: "67px 0px 27px 0px" },
+                  padding: {
+                    xs: "80px 0px 0px 0px",
+                    sm: "80px 0px 0px 0px",
+                    lg: "67px 0px 27px 0px",
+                    xl: "67px 0px 27px 0px",
+                  },
                 }}
               >
                 {leCarePage[0]?.data.quote_image && (
@@ -430,7 +444,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     },
                     textAlign: "center",
                     padding: {
-                      xs: "12%",
+                      xs: "10px 20px 10px 20px",
                       sm: "12%",
                       lg: "27px 62px 34px 62px",
                       xl: "27px 62px 34px 62px",
@@ -462,6 +476,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                     textAlign: "center",
                     letterSpacing: "1%",
                     padding: {
+                      xs: "0px 0px 100px 0px",
+                      sm: "0px 100px 80px 100px",
                       lg: "0px 195px 80px 195px",
                       xl: "0px 195px 168px 195px",
                     },
@@ -498,7 +514,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   xl: "row",
                 },
                 justifyContent: "center",
-                gap: "206px",
+                gap: { xs: "50px", sm: "50px", lg: "206px", xl: "206px" },
                 alignItems: "center",
               }}
             >
@@ -729,7 +745,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             fontFamily: "Mulish",
             fontWeight: 700,
             color: "1D1D1D",
-            // paddingTop: "5%",
+            padding: {xs:"15% 0% 5% 0%"},
           }}
         >
           <div>{leCarePage[0]?.data.mission_title}</div>
@@ -745,6 +761,7 @@ const LecarechezMargueriteServices: React.FC = () => {
             color: "1D1D1D",
             // padding: "5% 10%",
             padding: {
+              xs: "0px 30px 50px 30px",
               lg: "20px 257px 143px 257px",
               xl: "20px 457px 143px 457px",
             },
@@ -774,7 +791,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                 item
                 lg={4}
                 xs={12}
-                sm={3.5}
+                sm={4}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -817,6 +834,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       lineHeight: "125%",
                       letterSpacing: "0%",
                       padding: {
+                        xs: "25px 30px 0px 30px",
                         lg: "25px 18px 0px 18px",
                         xl: "85px 49px 24px 49px",
                       },
@@ -838,6 +856,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                       lineHeight: "30px",
                       letterSpacing: "0%",
                       padding: {
+                        xs: "0px 30px 20px 30px",
                         lg: "0px 18px 20px 18px",
                         xl: "0px 49px 80px 49px",
                       },
@@ -851,7 +870,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                 item
                 lg={4}
                 xs={12}
-                sm={3.5}
+                sm={4}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -868,8 +887,10 @@ const LecarechezMargueriteServices: React.FC = () => {
                     alt={
                       leCarePage[0]?.data.mission_middle_image.alt || "Image"
                     }
-                    width="100%"
-                    height="auto"
+                    style={{
+                      width: "100%",
+                      height: middleImageHeight?.height,
+                    }}
                   />
                 )}
               </Grid>
@@ -877,7 +898,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                 item
                 lg={4}
                 xs={12}
-                sm={3.5}
+                sm={4}
                 style={{
                   display: "flex",
                   flexDirection: "column",
@@ -948,7 +969,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                     alt={leCarePage[0]?.data.mission_right_image.alt || "Image"}
                     style={{
                       width: "100%",
-                      height: heights?.height,
+                      height: rightImageHeight?.height,
                     }}
                   />
                 )}
@@ -974,13 +995,18 @@ const LecarechezMargueriteServices: React.FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Mulish",
-                  fontSize: { xs: "38px", sm: "52px", lg: "64px",xl: "64px" },
+                  fontSize: { xs: "28px", sm: "52px", lg: "64px", xl: "64px" },
                   fontWeight: 700,
-                  lineHeight: { xs: "45px", sm: "65px", lg: "auto",xl: "auto" },
+                  lineHeight: {
+                    xs: "30px",
+                    sm: "65px",
+                    lg: "auto",
+                    xl: "auto",
+                  },
                   textAlign: "center",
                   color: "#0A1411",
                   padding: {
-                    xs: "8% 10% 0% 10%",
+                    xs: "5% 0% 0% 0%",
                     sm: "8% 10% 0% 10%",
                     lg: "100px 100px 40px 100px",
                     xl: "187px 289px 40px 289px",
@@ -992,13 +1018,13 @@ const LecarechezMargueriteServices: React.FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Mulish",
-                  fontSize: { xs: "14px", sm: "18px", lg: "22px" },
+                  fontSize: { xs: "14px", sm: "18px", lg: "22px",xl: "22px" },
                   fontWeight: 400,
-                  lineHeight: { xs: "18px", sm: "25px", lg: "33px" },
+                  lineHeight: { xs: "16px", sm: "25px", lg: "33px",xl: "33px" },
                   textAlign: "center",
                   color: "#4D5053",
                   padding: {
-                    xs: "2% 10%",
+                    xs: "2% 5%",
                     sm: "2% 10%",
                     lg: "0px 100px 30px 100px",
                     xl: "0px 280px 30px 280px",
@@ -1186,7 +1212,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   fontWeight: 700,
                   // lineHeight: "80.32px",
                   lineHeight: {
-                    xs: "50px",
+                    xs: "40px",
                     sm: "64px",
                     lg: "auto",
                     xl: "auto",
@@ -1195,8 +1221,8 @@ const LecarechezMargueriteServices: React.FC = () => {
                   color: "#0A1411",
                   // padding: "10% 10% 0% 10%",
                   margin: {
-                    xs: "600px",
-                    sm: "0px",
+                    xs: "600px 0px 0px 0px",
+                    sm: "100px 0px 0px 0px",
                     lg: "100px 150px 8px 150px",
                     xl: "0px 300px 8px 300px",
                   },
@@ -1221,7 +1247,7 @@ const LecarechezMargueriteServices: React.FC = () => {
                   color: "#4D5053",
                   // padding: "5% 10%",
                   margin: {
-                    xs: "5% 10%",
+                    xs: "5%",
                     sm: "5% 10%",
                     lg: "20px 80px 157px 80px",
                     xl: "0px 480px 157px 480px",

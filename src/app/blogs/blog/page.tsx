@@ -1,10 +1,5 @@
 "use client";
-import {
-  Grid,
-  IconButton,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { Grid, IconButton, Typography, useMediaQuery } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
@@ -108,7 +103,6 @@ export default function Blogs() {
     setArticlePage((prevPage) => Math.min(prevPage + 1, totalArticlePages - 1));
   };
 
-
   const [inputValue, setInputValue] = useState("");
 
   const [mouseHover, setMouseHover] = useState<number | null>(null);
@@ -184,8 +178,8 @@ export default function Blogs() {
               borderRadius: "37px 37px 0px 0px",
               // padding: "41px 152px 41px 152px",
               padding: {
-                xs: "2% 5%",
-                sm: "2% 5%",
+                xs: "2% 7%",
+                sm: "30px 70px",
                 lg: "41px 152px 74px 152px",
                 xl: "41px 152px 74px 152px",
               },
@@ -237,7 +231,7 @@ export default function Blogs() {
               lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
               fontWeight: 700,
               textAlign: "center",
-              marginTop: { lg: "100px", xl: "233px" },
+              marginTop: { xs: "50px", sm: "50px", lg: "100px", xl: "233px" },
               fontFamily: "Mulish",
             }}
           >
@@ -249,6 +243,8 @@ export default function Blogs() {
               border: "1px solid #E7E7E7",
               // margin: "5% 10%",
               margin: {
+                xs: "27px 30px 50px 30px",
+                sm: "27px 80px 100px 80px",
                 lg: "27px 152px 100px 152px",
                 xl: "27px 252px 212px 252px",
               },
@@ -270,7 +266,12 @@ export default function Blogs() {
                       lg: "row",
                       xl: "row",
                     },
-                    padding: { lg: "22px 50px", xl: "22px 130px" },
+                    padding: {
+                      xs: "22px",
+                      sm: "22px",
+                      lg: "22px 50px",
+                      xl: "22px 130px",
+                    },
                     gap: "50px",
                   }}
                   key={index}
@@ -524,12 +525,12 @@ export default function Blogs() {
               lg: "repeat(3, 1fr)",
               xl: "repeat(3, 1fr)",
             },
-            gap: { lg: "50px", xl: "70px" },
+            gap: {xs: "30px",sm: "30px", lg: "50px", xl: "70px" },
             justifyContent: "center",
             // padding: "3% 8%",
             padding: {
-              xs: "3% 8%",
-              sm: "3% 8%",
+              xs: "3% 5%",
+              sm: "3% 5%",
               lg: "78px 50px 200px 50px",
               xl: "78px 162px 432px 162px",
             },
@@ -578,13 +579,13 @@ export default function Blogs() {
               </Grid>
             ))}
         </Grid>
-        <div
-          style={{
+        <Grid
+          sx={{
             display: "flex",
             flexDirection: "row",
             justifyContent: "flex-end",
             gap: "20px",
-            paddingRight: "50px",
+            paddingRight: {lg:"50px",xl:"50px"},
             paddingBottom: "10px",
             marginTop: "50px",
           }}
@@ -680,7 +681,7 @@ export default function Blogs() {
           >
             <KeyboardArrowRightIcon />
           </IconButton>
-        </div>
+        </Grid>
       </Grid>
       <Liberez />
       <Footer />

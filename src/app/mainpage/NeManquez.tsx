@@ -101,7 +101,7 @@ export default function NeManquez() {
         background: "#FFFFFF",
         margin: {
           xs: "50px 30px 50px 50px",
-          sm: "100px",
+          sm: "80px 30px 80px 50px",
           lg: "100px",
           xl: "145px 178px",
         },
@@ -125,20 +125,20 @@ export default function NeManquez() {
             justifyContent: "space-evenly",
             flexDirection: { xs: "row", sm: "row" },
             alignItems: "center",
-            // padding: "5%",
+            padding: {xs:"3%"},
             borderRadius: { xs: "25px", sm: "50px", lg: "90px", xl: "110px" },
           }}
         >
           <Grid
             item
-            xs={5}
+            xs={6}
             sm={5}
             lg={4}
             xl={4}
             sx={{
               padding: {
                 xs: "0px 0px 0px 0px",
-                sm: "0px 0px 0px 20px",
+                sm: "30px 0px 0px 20px",
                 lg: "50px 0px 0px 50px",
                 xl: "103px 0px 0px 114px",
               },
@@ -164,7 +164,7 @@ export default function NeManquez() {
                 fontWeight: 400,
                 padding: {
                   xs: "0px 0px 8px 0px",
-                  sm: "0px 0px 20px 0px",
+                  sm: "0px 0px 40px 0px",
                   lg: "15px 0px 100px 0px",
                   xl: "15px 0px 120px 0px",
                 },
@@ -195,7 +195,7 @@ export default function NeManquez() {
               display: "flex",
               flexDirection: { xs: "row", sm: "row" },
               justifyContent: "space-between",
-              padding: "5px 10px",
+              padding: {xs:"7px",sm:"5px 10px",lg:"5px 10px",xl:"5px 10px"},
               alignItems: "center",
               boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
               height: { xs: "25px", sm: "50px", lg: "70px", xl: "86.58px" },
@@ -254,7 +254,7 @@ export default function NeManquez() {
                   xl: "19.25px",
                 },
                 fontWeight: 400,
-                padding: {xs:"2.5% 0% 2.5% 0%",sm:"2.5%",lg:"2.5%",xl:"2.5%"},
+                padding: {xs:"2.5% 1% 2.5% 1%",sm:"2% 2.5%",lg:"2.5%",xl:"2.5%"},
                 "&:hover": {
                   background: "#24535C",
                   boxShadow: "none",
