@@ -124,8 +124,8 @@ const NosExperiences: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 padding: {
-                  xs: "20px",
-                  md: "40px 0",
+                  xs: "20px 0px 70px 0px",
+                  sm: "50px 0px 80px 0px",
                   lg: "179px 0px 231px 0px",
                   xl: "179px 0px 231px 0px",
                 },

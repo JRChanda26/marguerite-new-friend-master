@@ -69,6 +69,8 @@ export default function BlogEt() {
               // padding: "5%",
               fontFamily: "Mulish",
               padding: {
+                xs: "20px 0px",
+                sm: "50px 0px",
                 lg: "100px 448px 79px 448px",
                 xl: "159px 448px 79px 448px",
               },
@@ -87,8 +89,13 @@ export default function BlogEt() {
             display: "flex",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
-            gap: { lg: "20px", xl: "90px" },
-            margin: { lg: "", xl: "0px 161px 79px 161px" },
+            gap: { xs: "30px", sm: "30px", lg: "20px", xl: "90px" },
+            margin: {
+              xs: "0px 30px 50px 30px",
+              sm: "",
+              lg: "",
+              xl: "0px 161px 79px 161px",
+            },
           }}
         >
           {repeatItems.map((item, index: any) => (
@@ -161,7 +168,7 @@ export default function BlogEt() {
                   },
                   lineHeight: {
                     xs: "15px",
-                    sm: "25px",
+                    sm: "20px",
                     lg: "160%",
                     xl: "160%",
                   },
@@ -222,13 +229,18 @@ export default function BlogEt() {
               // fontFamily: "Jenna Sue",
               fontFamily: "Mulish",
               color: "#FFFFFF",
-              fontSize: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
+              fontSize: { xs: "14px", sm: "25px", lg: "30px", xl: "30px" },
               textAlign: "center",
               // textDecoration: "underline",
               borderRadius: "12px",
               padding: "8px 15px",
               background: "#24535C",
-              margin: { lg: "50px 0px  100px 0px", xl: "0px 0px  159px 0px" },
+              margin: {
+                xs: "0px 0px  50px 0px",
+                sm: "20px 0px  50px 0px",
+                lg: "50px 0px  100px 0px",
+                xl: "0px 0px  159px 0px",
+              },
             }}
           >
             {blogPage[0]?.data.footer_text}

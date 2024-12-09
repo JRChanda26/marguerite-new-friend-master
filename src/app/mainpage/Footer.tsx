@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
   }, []);
 
   const [socialLinkPage, setSocialLinkPage] = useState<any[]>([]);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       const response: any = await client.getAllByType("contact" as any);
@@ -59,8 +59,9 @@ const Footer: React.FC = () => {
         <Grid
           item
           xs={12}
-          sm={6}
+          sm={5}
           lg={4}
+          xl={4}
           textAlign={{ xs: "center", sm: "left" }}
         >
           {footerPage.map((post, postIndex) => (
@@ -81,7 +82,12 @@ const Footer: React.FC = () => {
                   fontFamily: "Mulish",
                   color: "#FFFFFF",
                   fontWeight: 400,
-                  fontSize: { xs: "16px", sm: "18px", md: "19.84px" },
+                  fontSize: {
+                    xs: "16px",
+                    sm: "14px",
+                    lg: "19.84px",
+                    xl: "19.84px",
+                  },
                   lineHeight: "auto",
                   paddingTop: "10px",
                   textAlign: { xs: "center", sm: "left" },
@@ -93,7 +99,7 @@ const Footer: React.FC = () => {
                 sx={{
                   display: "flex",
                   justifyContent: { xs: "center", sm: "flex-start" },
-                  mt: 2,
+                  marginTop: "10px",
                   gap: "20px",
                 }}
               >
@@ -121,7 +127,7 @@ const Footer: React.FC = () => {
             </div>
           ))}
         </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
+        <Grid item xs={12} sm={3} lg={3} xl={3}>
           {allLinkText.slice(0, 4).map((text: any, index: number) => (
             <Typography
               key={index}
@@ -129,7 +135,12 @@ const Footer: React.FC = () => {
                 fontFamily: "Mulish",
                 color: "#D3DDDE",
                 fontWeight: 400,
-                fontSize: { xs: "18px", md: "24.8px", lg: "24.8px" },
+                fontSize: {
+                  xs: "18px",
+                  sm: "18px",
+                  lg: "24.8px",
+                  xl: "24.8px",
+                },
                 lineHeight: "auto",
                 paddingBottom: "19.84px",
                 textAlign: { xs: "center", sm: "left" },
@@ -139,7 +150,7 @@ const Footer: React.FC = () => {
             </Typography>
           ))}
         </Grid>
-        <Grid item xs={12} sm={6} lg={3}>
+        <Grid item xs={12} sm={3} lg={3} xl={3}>
           {allLinkText.slice(4).map((text: any, index: number) => (
             <Typography
               key={index}
@@ -147,7 +158,12 @@ const Footer: React.FC = () => {
                 fontFamily: "Mulish",
                 color: "#D3DDDE",
                 fontWeight: 400,
-                fontSize: { xs: "18px", md: "24.8px", lg: "24.8px" },
+                fontSize: {
+                  xs: "18px",
+                  sm: "18px",
+                  lg: "24.8px",
+                  xl: "24.8px",
+                },
                 lineHeight: "auto",
                 paddingBottom: "19.84px",
                 textAlign: { xs: "center", sm: "left" },
