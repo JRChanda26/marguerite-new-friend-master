@@ -218,7 +218,7 @@ const Header: React.FC = () => {
                         fontWeight: 400,
                         lineHeight: {
                           xs: "18px",
-                          sm: "25px",
+                          sm: "20px",
                           lg: "33px",
                           xl: "33px",
                         },
@@ -241,7 +241,7 @@ const Header: React.FC = () => {
                         fontWeight: 400,
                         lineHeight: {
                           xs: "18px",
-                          sm: "25px",
+                          sm: "20px",
                           lg: "33px",
                           xl: "33px",
                         },
@@ -267,7 +267,7 @@ const Header: React.FC = () => {
                         fontWeight: 400,
                         lineHeight: {
                           xs: "18px",
-                          sm: "25px",
+                          sm: "20px",
                           lg: "33px",
                           xl: "33px",
                         },

@@ -28,8 +28,8 @@ const Choisir: React.FC = () => {
         background: "#BBDDD999",
         backgroundImage: `url(${bottomBackground})`,
         backgroundSize: {
-          xs: "contain",
-          sm: "contain",
+          xs: "300px",
+          sm: "500px",
           lg: "600px",
           xl: "842.34px",
         },
@@ -53,14 +53,13 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish",
                   color: "#0A1411",
                   fontWeight: 700,
-                  fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
+                  fontSize: { xs: "28px", sm: "40px", lg: "64px", xl: "64px" },
                   lineHeight: {
                     xs: "30px",
-                    sm: "50px",
+                    sm: "40px",
                     lg: "80px",
                     xl: "80px",
                   },
-                  // padding: { xs: "8% 5% 2% 5%", sm: "5% 5% 2% 5%", lg: "5% 15% 2% 15%" },
                   padding: {
                     xs: "8% 5% 2% 5%",
                     sm: "5% 5% 2% 5%",
@@ -79,7 +78,7 @@ const Choisir: React.FC = () => {
                   fontFamily: "Mulish",
                   color: "#565656",
                   fontWeight: 400,
-                  fontSize: { xs: "12px", sm: "16px", lg: "24px", xl: "24px" },
+                  fontSize: { xs: "12px", sm: "18px", lg: "24px", xl: "24px" },
                   lineHeight: {
                     xs: "20px",
                     sm: "20px",
@@ -141,8 +140,14 @@ const Choisir: React.FC = () => {
         sx={{
           display: "flex",
           justifyContent: "center",
+          flexDirection: { xs: "column", sm: "column", lg: "row", xl: "row" },
           gap: "51px",
-          padding: { xs: "", sm: "", lg: "20px 0px 80px 0px", xl: "69px 0px" },
+          padding: {
+            xs: "30px 0px 30px 0px",
+            sm: "30px 0px 50px 0px",
+            lg: "20px 0px 80px 0px",
+            xl: "69px 0px",
+          },
           alignItems: "center",
         }}
       >
@@ -150,16 +155,16 @@ const Choisir: React.FC = () => {
           sx={{
             // height: isCardHovered === 1 ? "520px" : "500px",
             height: {
-              xs: isCardHovered === 1 ? "400px" : "380px", // Mobile
-              sm: isCardHovered === 1 ? "450px" : "430px", // Tablet
+              xs: isCardHovered === 1 ? "340px" : "320px", // Mobile
+              sm: isCardHovered === 1 ? "380px" : "360px", // Tablet
               // lg: isCardHovered === 1 ? "520px" : "500px", // Desktop
               lg: isCardHovered === 1 ? "600px" : "480px",
               xl: isCardHovered === 1 ? "629.52px" : "476px",
             },
             // width: isCardHovered === 1 ? "400px" : "380px",
             width: {
-              xs: isCardHovered === 1 ? "320px" : "300px", // Mobile
-              sm: isCardHovered === 1 ? "340px" : "320px", // Tablet
+              xs: isCardHovered === 1 ? "300px" : "280px", // Mobile
+              sm: isCardHovered === 1 ? "320px" : "300px", // Tablet
               // lg: isCardHovered === 1 ? "400px" : "380px", // Desktop
               lg: isCardHovered === 1 ? "420px" : "380px",
               xl: isCardHovered === 1 ? "486px" : "402px",
@@ -301,9 +306,9 @@ const Choisir: React.FC = () => {
             //   isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
             height: {
               xs:
-                isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
+                isCardHovered === 1 || isCardHovered === 2 ? "320px" : "340px",
               sm:
-                isCardHovered === 1 || isCardHovered === 2 ? "430px" : "450px",
+                isCardHovered === 1 || isCardHovered === 2 ? "360px" : "380px",
               // lg: isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
               lg:
                 isCardHovered === 1 || isCardHovered === 2 ? "480px" : "600px",
@@ -316,9 +321,9 @@ const Choisir: React.FC = () => {
             //   isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
             width: {
               xs:
-                isCardHovered === 1 || isCardHovered === 2 ? "300px" : "320px",
+                isCardHovered === 1 || isCardHovered === 2 ? "280px" : "300px",
               sm:
-                isCardHovered === 1 || isCardHovered === 2 ? "320px" : "340px",
+                isCardHovered === 1 || isCardHovered === 2 ? "300px" : "320px",
               // lg: isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
               lg:
                 isCardHovered === 1 || isCardHovered === 2 ? "380px" : "420px",
@@ -524,16 +529,16 @@ const Choisir: React.FC = () => {
           sx={{
             // height: isCardHovered === 2 ? "520px" : "500px",
             height: {
-              xs: isCardHovered === 2 ? "400px" : "380px", // Mobile
-              sm: isCardHovered === 2 ? "450px" : "430px", // Tablet
+              xs: isCardHovered === 2 ? "340px" : "320px", // Mobile
+              sm: isCardHovered === 2 ? "380px" : "360px", // Tablet
               // lg: isCardHovered === 2 ? "520px" : "500px", // Desktop
               lg: isCardHovered === 2 ? "600px" : "480px",
               xl: isCardHovered === 2 ? "629.52px" : "476px",
             },
             // width: isCardHovered === 2 ? "400px" : "380px",
             width: {
-              xs: isCardHovered === 2 ? "320px" : "300px", // Mobile
-              sm: isCardHovered === 2 ? "340px" : "320px", // Tablet
+              xs: isCardHovered === 2 ? "300px" : "280px", // Mobile
+              sm: isCardHovered === 2 ? "320px" : "300px", // Tablet
               // lg: isCardHovered === 2 ? "400px" : "380px", // Desktop
               lg: isCardHovered === 2 ? "420px" : "380px",
               xl: isCardHovered === 2 ? "486px" : "402px",

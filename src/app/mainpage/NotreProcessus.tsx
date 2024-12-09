@@ -72,13 +72,13 @@ export default function NotreProcessus() {
               // fontSize: "64px",
               fontWeight: 700,
               // lineHeight: "80.32px",
-              fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
+              fontSize: { xs: "28px", sm: "40px", lg: "64px", xl: "64px" },
               lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "auto" },
               color: "#0A1411",
               fontFamily: "Mulish",
               margin: {
-                xs: "10%",
-                sm: "10%",
+                xs: "5% 10% 2% 10%",
+                sm: "5% 10% 2% 10%",
                 lg: "5% 10%",
                 xl: "225.32px 273px 31px 379px",
               },
@@ -93,15 +93,15 @@ export default function NotreProcessus() {
               // lineHeight: "38.04px",
               fontSize: { xs: "12px", sm: "16px", lg: "24px", xl: "24px" },
               lineHeight: {
-                xs: "20px",
+                xs: "15px",
                 sm: "20px",
                 lg: "38.4px",
                 xl: "38.4px",
               },
               color: "#565656",
               margin: {
-                xs: "1% 3%",
-                sm: "1% 8%",
+                xs: "0% 10%",
+                sm: "0% 15%",
                 lg: "0px 225px 196px 225px",
                 xl: "0px 425px 196px 425px",
               },
@@ -114,7 +114,7 @@ export default function NotreProcessus() {
         <Grid
           sx={{
             margin: {
-              xs: "5%",
+              xs: "0% 0% 0% 5%",
               sm: "5%",
               lg: "0px 100px 200px 100px",
               xl: "0px 249px 349px 237px",
@@ -132,12 +132,12 @@ export default function NotreProcessus() {
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               justifyContent: "space-evenly",
               margin: {
-                xs: "",
-                sm: "",
+                xs: "0px 0px 20px 0px",
+                sm: "0px",
                 lg: "",
                 xl: "0px 42px 0px 0px",
               },
-              gap: { xs: "", sm: "", lg: "124px", xl: "124px" },
+              gap: { xs: "0px", sm: "0px", lg: "124px", xl: "124px" },
             }}
           >
             <div>
