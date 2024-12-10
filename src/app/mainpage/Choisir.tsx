@@ -85,7 +85,6 @@ const Choisir: React.FC = () => {
                     lg: "38.4px",
                     xl: "38.4px",
                   },
-                  // padding: { xs: "0% 3%", sm: "0% 8%", lg: "0% 15%" },
                   padding: {
                     xs: "0% 3%",
                     sm: "0% 8%",
@@ -102,45 +101,12 @@ const Choisir: React.FC = () => {
         ))}
       </div>
 
-      {/* <Grid
-      sx={{
-        backgroundImage: `url(${bottomBackground})`,
-        backgroundSize: { xs: "contain", sm: "contain", lg: "contain" },
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-        width: "100%",
-        height: "auto",
-        display: "flex",
-        justifyContent: "flex-end",
-        alignItems: "center",
-        flexDirection: "column",
-        position: "absolute",
-      }}
-      >
-        {choisirPage.map((post: any) => (
-          <div key={post}>
-            {post?.data.bottom_background && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={post.data.bottom_background.url || undefined}
-                alt={post.data.bottom_background.alt || "Image"}
-                style={{
-                  width: "100%",
-                  height: "auto",
-                }}
-              />
-            )}
-          </div>
-        ))}
-      </Grid> */}
-
       <Grid
         container
-        // spacing={1}
         sx={{
           display: "flex",
           justifyContent: "center",
-          flexDirection: { xs: "column", sm: "column", lg: "row", xl: "row" },
+          flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
           gap: "51px",
           padding: {
             xs: "30px 0px 30px 0px",
@@ -153,19 +119,15 @@ const Choisir: React.FC = () => {
       >
         <Grid
           sx={{
-            // height: isCardHovered === 1 ? "520px" : "500px",
             height: {
-              xs: isCardHovered === 1 ? "340px" : "320px", // Mobile
-              sm: isCardHovered === 1 ? "380px" : "360px", // Tablet
-              // lg: isCardHovered === 1 ? "520px" : "500px", // Desktop
+              xs: isCardHovered === 1 ? "340px" : "320px", 
+              sm: isCardHovered === 1 ? "380px" : "360px", 
               lg: isCardHovered === 1 ? "600px" : "480px",
               xl: isCardHovered === 1 ? "629.52px" : "476px",
             },
-            // width: isCardHovered === 1 ? "400px" : "380px",
             width: {
-              xs: isCardHovered === 1 ? "300px" : "280px", // Mobile
-              sm: isCardHovered === 1 ? "320px" : "300px", // Tablet
-              // lg: isCardHovered === 1 ? "400px" : "380px", // Desktop
+              xs: isCardHovered === 1 ? "300px" : "280px", 
+              sm: isCardHovered === 1 ? "320px" : "300px", 
               lg: isCardHovered === 1 ? "420px" : "380px",
               xl: isCardHovered === 1 ? "486px" : "402px",
             },
@@ -199,11 +161,10 @@ const Choisir: React.FC = () => {
                   color: "#1E1E1E",
                   fontWeight: 400,
                   opacity: "90%",
-                  // fontSize: isCardHovered === 1 ? "28px" : "24px",
                   fontSize: {
-                    xs: isCardHovered === 1 ? "20px" : "18px", // Mobile
-                    sm: isCardHovered === 1 ? "24px" : "22px", // Tablet
-                    lg: isCardHovered === 1 ? "29.3px" : "24px", // Desktop
+                    xs: isCardHovered === 1 ? "20px" : "18px", 
+                    sm: isCardHovered === 1 ? "24px" : "22px", 
+                    lg: isCardHovered === 1 ? "29.3px" : "24px",
                     xl: isCardHovered === 1 ? "29.3px" : "24px",
                   },
                   lineHeight: {
@@ -212,7 +173,6 @@ const Choisir: React.FC = () => {
                     lg: "auto",
                     xl: "auto",
                   },
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg: isCardHovered === 1 ? "34px" : "18.25px",
                   },
@@ -227,11 +187,10 @@ const Choisir: React.FC = () => {
                   fontWeight: 400,
                   opacity: "80%",
                   fontStyle: "italic",
-                  // fontSize: isCardHovered === 1 ? "18px" : "16px",
                   fontSize: {
-                    xs: isCardHovered === 1 ? "14px" : "12px", // Mobile
-                    sm: isCardHovered === 1 ? "16px" : "14px", // Tablet
-                    lg: isCardHovered === 1 ? "19.36px" : "16px", // Desktop
+                    xs: isCardHovered === 1 ? "14px" : "12px", 
+                    sm: isCardHovered === 1 ? "16px" : "14px", 
+                    lg: isCardHovered === 1 ? "19.36px" : "16px", 
                     xl: isCardHovered === 1 ? "19.36px" : "16px",
                   },
                   lineHeight: {
@@ -242,7 +201,6 @@ const Choisir: React.FC = () => {
                   },
                   letterSpacing: "0%",
                   textAlign: "left",
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg: isCardHovered === 1 ? "44.76px" : "21px",
                   },
@@ -255,7 +213,6 @@ const Choisir: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg: isCardHovered === 1 ? "44.76px" : "21px",
                   },
@@ -270,12 +227,11 @@ const Choisir: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "#24535C",
                     fontWeight: 400,
-                    // fontSize: "14px",
                     fontStyle: "italic",
                     fontSize: {
-                      xs: isCardHovered === 1 ? "14px" : "12px", // Mobile
-                      sm: isCardHovered === 1 ? "16px" : "14px", // Tablet
-                      lg: isCardHovered === 1 ? "16.94px" : "14px", // Desktop
+                      xs: isCardHovered === 1 ? "14px" : "12px", 
+                      sm: isCardHovered === 1 ? "16px" : "14px", 
+                      lg: isCardHovered === 1 ? "16.94px" : "14px", 
                       xl: isCardHovered === 1 ? "16.94px" : "14px",
                     },
                     lineHeight: "185%",
@@ -302,14 +258,11 @@ const Choisir: React.FC = () => {
 
         <Grid
           sx={{
-            // height:
-            //   isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
             height: {
               xs:
                 isCardHovered === 1 || isCardHovered === 2 ? "320px" : "340px",
               sm:
                 isCardHovered === 1 || isCardHovered === 2 ? "360px" : "380px",
-              // lg: isCardHovered === 1 || isCardHovered === 2 ? "500px" : "520px",
               lg:
                 isCardHovered === 1 || isCardHovered === 2 ? "480px" : "600px",
               xl:
@@ -317,14 +270,11 @@ const Choisir: React.FC = () => {
                   ? "476px"
                   : "629.52px",
             },
-            // width:
-            //   isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
             width: {
               xs:
                 isCardHovered === 1 || isCardHovered === 2 ? "280px" : "300px",
               sm:
                 isCardHovered === 1 || isCardHovered === 2 ? "300px" : "320px",
-              // lg: isCardHovered === 1 || isCardHovered === 2 ? "380px" : "400px",
               lg:
                 isCardHovered === 1 || isCardHovered === 2 ? "380px" : "420px",
               xl:
@@ -361,23 +311,19 @@ const Choisir: React.FC = () => {
                   color: "#1E1E1E",
                   fontWeight: 400,
                   opacity: "90%",
-                  // fontSize:
-                  //   isCardHovered === 1 || isCardHovered === 2
-                  //     ? "24px"
-                  //     : "28px",
                   fontSize: {
                     xs:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "18px"
-                        : "20px", // Mobile
+                        : "20px", 
                     sm:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "22px"
-                        : "24px", // Tablet
+                        : "24px", 
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "24px"
-                        : "29.3px", // Desktop
+                        : "29.3px", 
                     xl:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "24px"
@@ -389,7 +335,6 @@ const Choisir: React.FC = () => {
                     lg: "auto",
                     xl: "auto",
                   },
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
@@ -411,29 +356,24 @@ const Choisir: React.FC = () => {
                   fontWeight: 400,
                   opacity: "80%",
                   fontStyle: "italic",
-                  // fontSize:
-                  //   isCardHovered === 1 || isCardHovered === 2
-                  //     ? "16px"
-                  //     : "18px",
                   fontSize: {
                     xs:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "12px"
-                        : "14px", // Mobile
+                        : "14px",
                     sm:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "14px"
-                        : "16px", // Tablet
+                        : "16px", 
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "16px"
-                        : "19.3px", // Desktop
+                        : "19.3px",
                     xl:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "16px"
                         : "19.3px",
                   },
-                  // lineHeight: "29.6px",
                   lineHeight: {
                     xs: "22px",
                     sm: "22px",
@@ -441,7 +381,6 @@ const Choisir: React.FC = () => {
                     xl: "185%",
                   },
                   textAlign: "left",
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
@@ -461,7 +400,6 @@ const Choisir: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
@@ -483,21 +421,20 @@ const Choisir: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "#24535C",
                     fontWeight: 400,
-                    // fontSize: "14px",
                     fontStyle: "italic",
                     fontSize: {
                       xs:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "12px"
-                          : "14px", // Mobile
+                          : "14px", 
                       sm:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "14px"
-                          : "16px", // Tablet
+                          : "16px", 
                       lg:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "14px"
-                          : "16.94px", // Desktop
+                          : "16.94px", 
                       xl:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "14px"
@@ -527,19 +464,15 @@ const Choisir: React.FC = () => {
 
         <Grid
           sx={{
-            // height: isCardHovered === 2 ? "520px" : "500px",
             height: {
-              xs: isCardHovered === 2 ? "340px" : "320px", // Mobile
-              sm: isCardHovered === 2 ? "380px" : "360px", // Tablet
-              // lg: isCardHovered === 2 ? "520px" : "500px", // Desktop
+              xs: isCardHovered === 2 ? "340px" : "320px",
+              sm: isCardHovered === 2 ? "380px" : "360px", 
               lg: isCardHovered === 2 ? "600px" : "480px",
               xl: isCardHovered === 2 ? "629.52px" : "476px",
             },
-            // width: isCardHovered === 2 ? "400px" : "380px",
             width: {
-              xs: isCardHovered === 2 ? "300px" : "280px", // Mobile
-              sm: isCardHovered === 2 ? "320px" : "300px", // Tablet
-              // lg: isCardHovered === 2 ? "400px" : "380px", // Desktop
+              xs: isCardHovered === 2 ? "300px" : "280px", 
+              sm: isCardHovered === 2 ? "320px" : "300px", 
               lg: isCardHovered === 2 ? "420px" : "380px",
               xl: isCardHovered === 2 ? "486px" : "402px",
             },
@@ -573,15 +506,13 @@ const Choisir: React.FC = () => {
                   color: "#1E1E1E",
                   fontWeight: 400,
                   opacity: "90%",
-                  // fontSize: isCardHovered === 2 ? "28px" : "24px",
                   fontSize: {
-                    xs: isCardHovered === 2 ? "20px" : "18px", // Mobile
-                    sm: isCardHovered === 2 ? "24px" : "22px", // Tablet
-                    lg: isCardHovered === 2 ? "29.3px" : "24px", // Desktop
+                    xs: isCardHovered === 2 ? "20px" : "18px", 
+                    sm: isCardHovered === 2 ? "24px" : "22px", 
+                    lg: isCardHovered === 2 ? "29.3px" : "24px", 
                     xl: isCardHovered === 2 ? "29.3px" : "24px",
                   },
                   lineHeight: { xs: "25px", sm: "32px", lg: "auto" },
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg: isCardHovered === 2 ? "34px" : "18.25px",
                     xl: isCardHovered === 2 ? "34px" : "18.25px",
@@ -597,11 +528,10 @@ const Choisir: React.FC = () => {
                   fontWeight: 400,
                   opacity: "80%",
                   fontStyle: "italic",
-                  // fontSize: isCardHovered === 2 ? "18px" : "16px",
                   fontSize: {
-                    xs: isCardHovered === 2 ? "14px" : "12px", // Mobile
-                    sm: isCardHovered === 2 ? "16px" : "14px", // Tablet
-                    lg: isCardHovered === 2 ? "19.36px" : "16px", // Desktop
+                    xs: isCardHovered === 2 ? "14px" : "12px", 
+                    sm: isCardHovered === 2 ? "16px" : "14px", 
+                    lg: isCardHovered === 2 ? "19.36px" : "16px", 
                     xl: isCardHovered === 2 ? "19.36px" : "16px",
                   },
                   lineHeight: {
@@ -612,7 +542,6 @@ const Choisir: React.FC = () => {
                   },
                   letterSpacing: "0%",
                   textAlign: "left",
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg: isCardHovered === 2 ? "44.76px" : "21px",
                     xl: isCardHovered === 2 ? "44.76px" : "21px",
@@ -626,7 +555,6 @@ const Choisir: React.FC = () => {
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
-                  // paddingTop: "5%",
                   paddingTop: {
                     lg: isCardHovered === 3 ? "44.76px" : "21px",
                   },
@@ -641,12 +569,11 @@ const Choisir: React.FC = () => {
                     fontFamily: "Mulish",
                     color: "#24535C",
                     fontWeight: 400,
-                    // fontSize: "14px",
                     fontStyle: "italic",
                     fontSize: {
-                      xs: isCardHovered === 2 ? "14px" : "12px", // Mobile
-                      sm: isCardHovered === 2 ? "16px" : "14px", // Tablet
-                      lg: isCardHovered === 2 ? "16.94px" : "14px", // Desktop
+                      xs: isCardHovered === 2 ? "14px" : "12px", 
+                      sm: isCardHovered === 2 ? "16px" : "14px", 
+                      lg: isCardHovered === 2 ? "16.94px" : "14px", 
                       xl: isCardHovered === 2 ? "16.94px" : "14px",
                     },
                     lineHeight: "185%",

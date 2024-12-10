@@ -179,6 +179,7 @@ const Header: React.FC = () => {
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
+                  gap:{sm:'80px'}
                 }}
               >
                 {post?.data.marguerite_logo && (

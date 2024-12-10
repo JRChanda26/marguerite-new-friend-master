@@ -10,6 +10,7 @@ import {
   Button,
   Grid,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import Liberez from "../mainpage/NeManquez";
 import Footer from "../mainpage/Footer";
@@ -134,13 +135,29 @@ const NosSolutionsDe: React.FC = () => {
     router.push("/contact");
   };
 
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+
+  const headingFontSize = {
+    fontSize: isSmallScreen ? "14px" : "18.98px",
+  };
+
+  const pointsFontSize = {
+    fontSize: isSmallScreen ? "18px" : "22px",
+  };
+  
   return (
     <Box>
       <Header />
-      <div
-        style={{
+      <Grid
+        sx={{
           backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: "cover",
+          // backgroundSize: "cover",
+          backgroundSize: {
+            xs: "cover",
+            sm: "cover",
+            lg: "cover",
+            xl: "cover",
+          },
           backgroundRepeat: "no-repeat",
           // width: "100%",
           // height: "auto",
@@ -155,8 +172,8 @@ const NosSolutionsDe: React.FC = () => {
                 flexDirection: "column",
                 alignItems: "center",
                 padding: {
-                  xs: "250.67px 0px 0px 0px",
-                  sm: "250.67px 150px 0px 150px",
+                  xs: "70px 50px 0px 50px",
+                  sm: "100px 150px 0px 150px",
                   lg: "250px 150px 0px 150px",
                   xl: "352px 441px 0px 441px",
                 },
@@ -169,10 +186,15 @@ const NosSolutionsDe: React.FC = () => {
                   justifyContent: "center",
                   flexDirection: "column",
                   textAlign: "center",
-                  borderRadius: "37px 37px 0px 0px",
+                  borderRadius: {
+                    xs: "20px 20px 0px 0px",
+                    sm: "37px 37px 0px 0px",
+                    lg: "37px 37px 0px 0px",
+                    xl: "37px 37px 0px 0px",
+                  },
                   padding: {
-                    xs: "2% 5%",
-                    sm: "2% 5%",
+                    xs: "0% 5% 0% 5%",
+                    sm: "3% 8%",
                     lg: "41px 82px 42px 82px",
                     xl: "41px 82px 42px 82px",
                   },
@@ -185,7 +207,7 @@ const NosSolutionsDe: React.FC = () => {
                     fontWeight: 700,
                     // fontSize: "50px",
                     fontSize: {
-                      xs: "25px",
+                      xs: "16px",
                       sm: "40px",
                       lg: "50px",
                       xl: "50px",
@@ -209,7 +231,7 @@ const NosSolutionsDe: React.FC = () => {
                     fontWeight: 400,
                     // fontSize: "22px",
                     fontSize: {
-                      xs: "12px",
+                      xs: "10px",
                       sm: "18px",
                       lg: "22px",
                       xl: "22px",
@@ -230,7 +252,7 @@ const NosSolutionsDe: React.FC = () => {
             </Grid>
           </>
         ))}
-      </div>
+      </Grid>
 
       <Grid
         sx={{
@@ -587,7 +609,7 @@ const NosSolutionsDe: React.FC = () => {
                 width: "70%",
                 textAlign: "center",
                 fontFamily: "Mulish",
-                fontSize: "18.98px",
+                fontSize: headingFontSize.fontSize,
                 lineHeight: "125%",
                 letterSpacing: "2%",
                 color: "#000000",
@@ -598,17 +620,17 @@ const NosSolutionsDe: React.FC = () => {
             <ul>
               {item.points.map((point, idx) => (
                 <li key={idx}>
-                  <span
-                    style={{
+                  <Typography
+                    sx={{
                       color: "#4D5053",
                       fontFamily: "Mulish",
-                      fontSize: "22px",
+                      fontSize: pointsFontSize.fontSize,
                       lineHeight: "150%",
                       letterSpacing: "1%",
                     }}
                   >
                     {point}
-                  </span>
+                  </Typography>
                 </li>
               ))}
             </ul>

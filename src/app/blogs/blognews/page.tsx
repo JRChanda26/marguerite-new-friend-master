@@ -125,13 +125,19 @@ export default function BlogsNews() {
       <Grid
         sx={{
           backgroundImage: `url(${blogNewsPage[0]?.data?.header_background?.url || ""})`,
-          backgroundSize: "cover",
+          // backgroundSize: "cover",
+          backgroundSize: {
+            xs: "cover",
+            sm: "cover",
+            lg: "cover",
+            xl: "cover",
+          },
           backgroundRepeat: "no-repeat",
           display: "flex",
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          paddingTop: {xs: "100px", sm: "300px", lg: "400px", xl: "614px" },
+          paddingTop: {xs: "150px", sm: "250px", lg: "400px", xl: "614px" },
         }}
       />
       <Grid container>

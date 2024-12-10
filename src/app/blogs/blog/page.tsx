@@ -147,10 +147,16 @@ export default function Blogs() {
   return (
     <div>
       <Header />
-      <div
-        style={{
+      <Grid
+        sx={{
           backgroundImage: `url(${blogPage[0]?.data?.header_background?.url || ""})`,
-          backgroundSize: "cover",
+          // backgroundSize: "cover",
+          backgroundSize: {
+            xs: "cover",
+            sm: "cover",
+            lg: "cover",
+            xl: "cover",
+          },
           backgroundRepeat: "no-repeat",
         }}
       >
@@ -161,8 +167,8 @@ export default function Blogs() {
             flexDirection: "column",
             alignItems: "center",
             padding: {
-              xs: "250.67px 0px 0px 0px",
-              sm: "250.67px 150px 0px 150px",
+              xs: "70px 50px 0px 50px",
+              sm: "150.67px 150px 0px 150px",
               lg: "250px 150px 0px 150px",
               xl: "352px 441px 0px 441px",
             },
@@ -175,11 +181,16 @@ export default function Blogs() {
               justifyContent: "center",
               flexDirection: "column",
               alignItems: "center",
-              borderRadius: "37px 37px 0px 0px",
+              borderRadius: {
+                xs: "20px 20px 0px 0px",
+                sm: "37px 37px 0px 0px",
+                lg: "37px 37px 0px 0px",
+                xl: "37px 37px 0px 0px",
+              },
               // padding: "41px 152px 41px 152px",
               padding: {
-                xs: "2% 7%",
-                sm: "30px 70px",
+                xs: "0% 5% 0% 5%",
+                sm: "3% 8%",
                 lg: "41px 152px 74px 152px",
                 xl: "41px 152px 74px 152px",
               },
@@ -191,7 +202,7 @@ export default function Blogs() {
                 color: "#292F36",
                 fontWeight: 700,
                 // fontSize: "50px",
-                fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
+                fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                 // lineHeight: "62.5px",
                 lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
                 letterSpacing: "0%",
@@ -205,7 +216,7 @@ export default function Blogs() {
                 color: "#4D5053",
                 fontWeight: 400,
                 // fontSize: "22px",
-                fontSize: { xs: "12px", sm: "18px", lg: "22px", xl: "22px" },
+                fontSize: { xs: "10px", sm: "18px", lg: "22px", xl: "22px" },
                 // lineHeight: "33px",
                 lineHeight: { xs: "20px", sm: "28px", lg: "150%", xl: "150%" },
                 letterSpacing: "1%",
@@ -215,7 +226,7 @@ export default function Blogs() {
             </Typography>
           </Grid>
         </Grid>
-      </div>
+      </Grid>
       <Grid
         container
         style={{
