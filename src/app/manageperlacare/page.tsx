@@ -873,7 +873,7 @@ const ManagePerLaCare: React.FC = () => {
         <Grid
           sx={{
             margin: {
-              xs: "0px",
+              xs: "100px 0px 0px 0px",
               sm: "0px",
               lg: "150px 100px 153px 100px",
               xl: "90px 359px 153px 359px",
@@ -887,7 +887,6 @@ const ManagePerLaCare: React.FC = () => {
               display: "flex",
               flexDirection: "column",
               textAlign: "center",
-              // marginTop: "100px",
             }}
           >
             <Typography
