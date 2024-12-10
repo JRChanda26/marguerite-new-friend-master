@@ -132,7 +132,7 @@ export default function NotreProcessus() {
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               justifyContent: "space-evenly",
               margin: {
-                xs: "0px 0px 20px 0px",
+                xs: "0px 0px 30px 0px",
                 sm: "0px",
                 lg: "",
                 xl: "0px 42px 0px 0px",
@@ -158,7 +158,8 @@ export default function NotreProcessus() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: { xs: "2%", sm: "2%", lg: "18px", xl: "18px" },
+                gap: { xs: "5px", sm: "0%", lg: "18px", xl: "18px" },
+                paddingLeft:{xs:'20px'}
               }}
             >
               <Typography
@@ -238,6 +239,8 @@ export default function NotreProcessus() {
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               justifyContent: "space-evenly",
               margin: {
+                xs: "0px 0px 0px 0px",
+                sm: "0px",
                 lg: "100px 0px 100px 60px",
                 xl: "128px 42px 128px 0px",
               },
@@ -249,7 +252,8 @@ export default function NotreProcessus() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: { xs: "2%", sm: "2%", lg: "18px", xl: "18px" },
+                gap: { xs: "5px", sm: "2%", lg: "18px", xl: "18px" },
+                paddingLeft:{xs:'20px'}
               }}
             >
               <Typography
@@ -341,7 +345,7 @@ export default function NotreProcessus() {
               display: "flex",
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               justifyContent: "space-evenly",
-              margin: { lg: "", xl: "0px 42px 0px 0px" },
+              margin: {xs:"0px 0px 30px 0px", lg: "", xl: "0px 42px 0px 0px" },
               gap: { lg: "111px", xl: "111px" },
             }}
           >
@@ -363,7 +367,8 @@ export default function NotreProcessus() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: { xs: "2%", sm: "2%", lg: "18px", xl: "18px" },
+                gap: { xs: "5px", sm: "2%", lg: "18px", xl: "18px" },
+                paddingLeft:{xs:'20px'}
               }}
             >
               <Typography
