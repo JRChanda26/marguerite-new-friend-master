@@ -103,7 +103,7 @@ export default function BlogEt() {
               item
               key={index}
               xs={12}
-              sm={6}
+              sm={5.5}
               md={4}
               lg={3.5}
               xl={3.5}
@@ -134,7 +134,7 @@ export default function BlogEt() {
                     width: "100%",
                     height: "auto",
                     borderRadius: "8px",
-                    marginBottom: "10px",
+                    // marginBottom: "10px",
                   }}
                 />
               )}
