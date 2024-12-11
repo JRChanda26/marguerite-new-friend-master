@@ -151,7 +151,6 @@ const NosSolutionsDe: React.FC = () => {
       <Grid
         sx={{
           backgroundImage: `url(${backgroundImage})`,
-          // backgroundSize: "cover",
           backgroundSize: {
             xs: "cover",
             sm: "cover",
@@ -159,11 +158,9 @@ const NosSolutionsDe: React.FC = () => {
             xl: "cover",
           },
           backgroundRepeat: "no-repeat",
-          // width: "100%",
-          // height: "auto",
         }}
       >
-        {nosPage.map((post: any, postIndex: number) => (
+        {nosPage.map((post: any) => (
           <>
             <Grid
               sx={{
@@ -205,14 +202,12 @@ const NosSolutionsDe: React.FC = () => {
                     fontFamily: "DM Serif Display",
                     color: "#292F36",
                     fontWeight: 700,
-                    // fontSize: "50px",
                     fontSize: {
                       xs: "16px",
                       sm: "40px",
                       lg: "50px",
                       xl: "50px",
                     },
-                    // lineHeight: "62.5px",
                     lineHeight: {
                       xs: "40px",
                       sm: "48px",
@@ -229,14 +224,12 @@ const NosSolutionsDe: React.FC = () => {
                     fontFamily: "Jost",
                     color: "#4D5053",
                     fontWeight: 400,
-                    // fontSize: "22px",
                     fontSize: {
                       xs: "10px",
                       sm: "18px",
                       lg: "22px",
                       xl: "22px",
                     },
-                    // lineHeight: "33px",
                     lineHeight: {
                       xs: "20px",
                       sm: "28px",
@@ -445,7 +438,6 @@ const NosSolutionsDe: React.FC = () => {
             sx={{
               textAlign: "center",
               color: "#292F36",
-              // fontSize: "50px",
               fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
               fontWeight: 400,
               marginTop: "50px",
@@ -471,7 +463,6 @@ const NosSolutionsDe: React.FC = () => {
               sm={5}
               lg={6}
               xl={6}
-              // sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
             >
               {/* {videoUrl ? (
                 <video
@@ -552,7 +543,6 @@ const NosSolutionsDe: React.FC = () => {
                       <Typography
                         sx={{
                           color: "#4D5053",
-                          // fontSize: "22px",
                           fontSize: {
                             xs: "14px",
                             sm: "18px",

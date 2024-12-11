@@ -141,7 +141,6 @@ export default function Paroles() {
         display: "flex",
         flexDirection: "column",
         textAlign: "center",
-        // paddingTop: "5%",
       }}
     >
       <Grid container alignItems="center" justifyContent="center" gap="20px">
@@ -155,7 +154,7 @@ export default function Paroles() {
               xs: "2% 0%",
               sm: "5% 0%",
               lg: "100px",
-              xl: "140px 194px 100px 194px",
+              xl: "0px 194px 100px 194px",
             },
             fontFamily: "Mulish",
             letterSpacing: "0%",

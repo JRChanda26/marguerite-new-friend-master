@@ -3112,6 +3112,28 @@ interface LeCareChezDocumentData {
   instagram_icon: prismic.ImageField<never>;
 
   /**
+   * Button Text field in *Le Care Chez*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.button_text
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  button_text: prismic.KeyTextField;
+
+  /**
+   * Button Icon field in *Le Care Chez*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: le_care_chez.button_icon
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  button_icon: prismic.ImageField<never>;
+
+  /**
    * Slice Zone field in *Le Care Chez*
    *
    * - **Field Type**: Slice Zone

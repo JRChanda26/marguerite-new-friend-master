@@ -38,7 +38,6 @@ const NosExperiences: React.FC = () => {
         backgroundSize: { xs: "cover", sm: "cover", lg: "cover", xl: "cover" },
         backgroundRepeat: "no-repeat",
         width: "100%",
-        // paddingBottom: "100px",
         display: "flex",
         justifyContent: "center",
       }}
@@ -46,9 +45,6 @@ const NosExperiences: React.FC = () => {
       <Grid
         container
         spacing={3}
-        // sx={{
-        //   padding: "0px",
-        // }}
       >
         {nosPage.map((post: any, postIndex: number) => (
           <Grid
@@ -97,7 +93,6 @@ const NosExperiences: React.FC = () => {
                   lg: "0px 0px 0px 0px",
                   xl: "0px 0px 0px 0px",
                 },
-                // maxWidth: "800px",
               }}
             >
               {post.data.description}

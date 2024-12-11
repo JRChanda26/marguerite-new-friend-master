@@ -957,6 +957,21 @@
           "thumbnails": []
         }
       },
+      "button_text": {
+        "type": "Text",
+        "config": {
+          "label": "Button Text",
+          "placeholder": ""
+        }
+      },
+      "button_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Button Icon",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
