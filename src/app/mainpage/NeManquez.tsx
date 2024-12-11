@@ -10,7 +10,7 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { client } from "../../../prismic-configuration";
+import { client } from "../../../lib/prismic-configuration";
 
 export default function NeManquez() {
   const [neManquezPage, setNeManquezPage] = useState<any[]>([]);

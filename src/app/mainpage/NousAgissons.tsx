@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { client } from "../../../prismic-configuration";
+import { client } from "../../../lib/prismic-configuration";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 

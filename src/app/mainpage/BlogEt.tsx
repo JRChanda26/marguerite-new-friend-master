@@ -2,7 +2,7 @@
 import { Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { client } from "../../../prismic-configuration";
+import { client } from "../../../lib/prismic-configuration";
 
 export default function BlogEt() {
   const [blogPage, setBlogPage] = useState<any[]>([]);

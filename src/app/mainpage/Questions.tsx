@@ -14,7 +14,7 @@ import React, { useEffect, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { useRouter } from "next/navigation";
-import { client } from "../../../prismic-configuration";
+import { client } from "../../../lib/prismic-configuration";
 
 export default function Questions() {
   // const client = createClient();
