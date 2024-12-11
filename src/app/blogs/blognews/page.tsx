@@ -13,7 +13,7 @@ import Liberez from "@/app/mainpage/NeManquez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
 import { PrismicNextLink } from "@prismicio/next";
-import { client } from "../../../../prismic-configuration";
+import { client } from "../../../../lib/prismic-configuration";
 import { useRouter } from "next/navigation";
 
 export default function BlogsNews() {

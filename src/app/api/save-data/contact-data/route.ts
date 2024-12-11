@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mysqlDB from '../../../lib/mysqlDB';
+import mysqlConfiguration from '../../../../../lib/mysql-configuration';
 
 export async function POST(req: NextRequest) {
   const { nom, email, sujet, telephone, bonjour } = await req.json();
@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     `;
     const values = [nom, email, sujet, telephone, bonjour];
 
-    await mysqlDB.execute(query, values);
+    await mysqlConfiguration.execute(query, values);
 
     return NextResponse.json({ message: 'Contact envoyé avec succès' }, { status: 200 });
   } catch (error) {

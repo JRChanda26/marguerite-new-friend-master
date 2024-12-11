@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
 import { Grid, Typography } from "@mui/material";
-import { client } from "../../../prismic-configuration";
+import { client } from "../../../lib/prismic-configuration";
 
 export default function NotreProcessus() {
   // const client = createClient();

@@ -6,7 +6,7 @@ import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import Liberez from "@/app/mainpage/NeManquez";
 import Footer from "@/app/mainpage/Footer";
 import Header from "@/app/mainpage/Header";
-import { client } from "../../../../prismic-configuration";
+import { client } from "../../../../lib/prismic-configuration";
 
 export default function Blogs() {
   const [blogPage, setBlogPage] = useState<any[]>([]);

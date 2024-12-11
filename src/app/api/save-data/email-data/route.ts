@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import mysqlDB from '../../../lib/mysqlDB';
+import mysqlConfiguration from '../../../../../lib/mysql-configuration';
 
 export async function POST(req: NextRequest) {
   const { email} = await req.json();
@@ -11,7 +11,7 @@ export async function POST(req: NextRequest) {
     `;
     const values = [email];
 
-    await mysqlDB.execute(query, values);
+    await mysqlConfiguration.execute(query, values);
 
     return NextResponse.json({ message: 'Votre email a été soumis' }, { status: 200 });
   } catch (error) {

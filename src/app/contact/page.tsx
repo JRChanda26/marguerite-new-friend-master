@@ -11,7 +11,7 @@ import {
 import { PrismicNextLink } from "@prismicio/next";
 import React, { useEffect, useState } from "react";
 import EastIcon from "@mui/icons-material/East";
-import { client } from "../../../prismic-configuration";
+import { client } from "../../../lib/prismic-configuration";
 // import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import dynamic from "next/dynamic";
 import "leaflet/dist/leaflet.css";
