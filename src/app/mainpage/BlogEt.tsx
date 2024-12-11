@@ -50,8 +50,6 @@ export default function BlogEt() {
         justifyContent="center"
         style={{
           background: "#BBDDD9",
-          // padding: "20px",
-          // marginTop: "10px",
         }}
       >
         <Grid item xs={12} style={{ textAlign: "center" }}>
@@ -66,7 +64,6 @@ export default function BlogEt() {
               },
               lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "120%" },
               color: "#161C2D",
-              // padding: "5%",
               fontFamily: "Mulish",
               padding: {
                 xs: "20px 0px",
@@ -226,12 +223,10 @@ export default function BlogEt() {
         <Link href="/blogs/blog" style={{ textDecoration: "none" }}>
           <Typography
             sx={{
-              // fontFamily: "Jenna Sue",
               fontFamily: "Mulish",
               color: "#FFFFFF",
               fontSize: { xs: "14px", sm: "25px", lg: "30px", xl: "30px" },
               textAlign: "center",
-              // textDecoration: "underline",
               borderRadius: "12px",
               padding: "8px 15px",
               background: "#24535C",

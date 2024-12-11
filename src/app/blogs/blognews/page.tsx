@@ -38,7 +38,6 @@ export default function BlogsNews() {
     fetchData();
   }, []);
 
-  console.log("bbbbbbbb", blogNewsPage);
   const searchInputStyle: React.CSSProperties = {
     display: "flex",
     justifyContent: "center",
@@ -125,7 +124,6 @@ export default function BlogsNews() {
       <Grid
         sx={{
           backgroundImage: `url(${blogNewsPage[0]?.data?.header_background?.url || ""})`,
-          // backgroundSize: "cover",
           backgroundSize: {
             xs: "cover",
             sm: "cover",
@@ -146,10 +144,8 @@ export default function BlogsNews() {
           lg={12}
           sx={{
             display: "flex",
-            // flexDirection: "row",
             flexDirection: { xs: "column", sm: "column", lg: "row", xl: "row" },
             justifyContent: "space-evenly",
-            // margin: "5%",
             margin: {
               xs: "5%",
               sm: "5%",
@@ -189,7 +185,6 @@ export default function BlogsNews() {
                 justifyContent: "flex-start",
                 flexDirection: "row",
                 gap: "50px",
-                // padding: "2%",
                 padding: {
                   xs: "20px 0px",
                   sm: "20px 0px",
@@ -215,7 +210,6 @@ export default function BlogsNews() {
                 fontSize: "16px",
                 fontWeight: 400,
                 display: "flex",
-                // flexDirection: "row",
                 flexDirection: {
                   xs: "column",
                   sm: "row",
@@ -364,14 +358,12 @@ export default function BlogsNews() {
                         fontFamily: "Jenna Sue",
                         color: "#24535C",
                         fontWeight: 400,
-                        // fontSize: "48px",
                         fontSize: {
                           xs: "28px",
                           sm: "38px",
                           lg: "48px",
                           xl: "48px",
                         },
-                        // lineHeight: "60px",
                         lineHeight: {
                           xs: "30px",
                           sm: "45px",
@@ -405,7 +397,6 @@ export default function BlogsNews() {
           >
             <div>
               <TextField
-                // value={blogs?.data.text_field}
                 value={searchInputValue}
                 onChange={(e) => setSearchInputValue(e.target.value)}
                 placeholder="Search"
@@ -414,13 +405,13 @@ export default function BlogsNews() {
                   ...searchInputStyle,
                   "& .MuiOutlinedInput-root": {
                     "& fieldset": {
-                      borderColor: "transparent", // Initial border color
+                      borderColor: "transparent",
                     },
                     "&:hover fieldset": {
-                      borderColor: "transparent", // Hover border color
+                      borderColor: "transparent", 
                     },
                     "&.Mui-focused fieldset": {
-                      borderColor: "transparent", // Focused border color
+                      borderColor: "transparent", 
                     },
                   },
                   height: { lg: "101px", xl: "101px" },
@@ -711,7 +702,6 @@ export default function BlogsNews() {
           <Grid
             sx={{
               display: "flex",
-              // flexDirection: "row",
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               padding: {
                 xs: "5% 0%",

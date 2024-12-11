@@ -89,57 +89,6 @@ const ManagePerLaCare: React.FC = () => {
     },
   ];
 
-  // const styles: {
-  //   container: React.CSSProperties;
-  //   card: React.CSSProperties;
-  //   topLeft: React.CSSProperties;
-  //   topRight: React.CSSProperties;
-  //   bottomLeft: React.CSSProperties;
-  //   bottomRight: React.CSSProperties;
-  // } = {
-  //   container: {
-  //     position: "relative",
-  //     width: "100%",
-  //     height: "100vh",
-  //     display: "flex",
-  //     alignItems: "center",
-  //     justifyContent: "center",
-  //   },
-  //   card: {
-  //     position: "absolute",
-  //     // width: "200px",
-  //     padding: "25px",
-  //     borderRadius: "8px",
-  //     boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
-  //     backgroundColor: "#fff",
-  //     // textAlign: "center",
-  //   },
-  //   topLeft: {
-  //     top: "0%",
-  //     left: "5%",
-  //     transform: "rotate(0deg)",
-  //     width: "50%",
-  //   },
-  //   topRight: {
-  //     top: "30%",
-  //     right: "5%",
-  //     transform: "rotate(0deg)",
-  //     width: "50%",
-  //   },
-  //   bottomLeft: {
-  //     top: "60%",
-  //     left: "5%",
-  //     transform: "rotate(0deg)",
-  //     width: "50%",
-  //   },
-  //   bottomRight: {
-  //     top: "90%",
-  //     right: "5%",
-  //     transform: "rotate(0deg)",
-  //     width: "50%",
-  //   },
-  // };
-
   const theme = useTheme();
 
   // Media queries for breakpoints
@@ -304,11 +253,11 @@ const ManagePerLaCare: React.FC = () => {
     return {
       ...baseStyle,
       transition: "transform 0.3s ease, box-shadow 0.3s ease",
-      transform: hoveredCard === index ? "scale(1.05)" : "scale(1)", // Zoom effect
+      transform: hoveredCard === index ? "scale(1.05)" : "scale(1)", 
       boxShadow:
         hoveredCard === index
-          ? "0px 8px 20px rgba(35, 107, 121, 0.2)" // Enhance shadow on hover with #236B79 color
-          : "0px 4px 12px rgba(35, 107, 121, 0.1)", // Default shadow with #236B79 color
+          ? "0px 8px 20px rgba(35, 107, 121, 0.2)" 
+          : "0px 4px 12px rgba(35, 107, 121, 0.1)", 
     };
   };
 
@@ -343,7 +292,7 @@ const ManagePerLaCare: React.FC = () => {
           <span
             key={index}
             style={{
-              display: "block", // Ensures the heading is on its own line
+              display: "block", 
               fontWeight: fontMap[part as HighlightWord].fontWeight,
               marginBottom: fontMap[part as HighlightWord].marginBottom,
             }}
@@ -369,11 +318,9 @@ const ManagePerLaCare: React.FC = () => {
             xl: "cover",
           },
           backgroundRepeat: "no-repeat",
-          // width: "100%",
-          // height: "auto",
         }}
       >
-        {managePage.map((post: any, postIndex: number) => (
+        {managePage.map((post: any) => (
           <>
             <Grid
               sx={{
@@ -645,17 +592,13 @@ const ManagePerLaCare: React.FC = () => {
               color: "#24535C",
               fontFamily: "Mulish",
               fontWeight: 800,
-              // fontSize: "64px",
               fontSize: { xs: "30px", sm: "50px", lg: "64px", xl: "64px" },
-              // lineHeight: "80.32px",
               lineHeight: {
                 xs: "50px",
                 sm: "65px",
                 lg: "80.32px",
                 xl: "80.32px",
               },
-              // padding: "100px",
-              // padding: "8%",
               textAlign: "center",
               justifyContent: "center",
               display: "flex",
@@ -671,7 +614,6 @@ const ManagePerLaCare: React.FC = () => {
               height: "auto",
               width: "100%",
               backgroundPosition: "center",
-              // backgroundSize: "cover",
               backgroundSize: {
                 xs: "contain",
                 sm: "contain",
@@ -684,7 +626,6 @@ const ManagePerLaCare: React.FC = () => {
           >
             <div style={styles.container}>
               <Card
-                // style={{ ...styles.card, ...styles.topLeft }}
                 style={getCardStyle({ ...styles.card, ...styles.topLeft }, 0)}
                 onMouseEnter={() => handleMouseEnter(0)}
                 onMouseLeave={handleMouseLeave}
@@ -729,7 +670,6 @@ const ManagePerLaCare: React.FC = () => {
                 </Typography>
               </Card>
               <Card
-                // style={{ ...styles.card, ...styles.topRight }}
                 style={getCardStyle({ ...styles.card, ...styles.topRight }, 1)}
                 onMouseEnter={() => handleMouseEnter(1)}
                 onMouseLeave={handleMouseLeave}
@@ -774,7 +714,6 @@ const ManagePerLaCare: React.FC = () => {
                 </Typography>
               </Card>
               <Card
-                // style={{ ...styles.card, ...styles.bottomLeft }}
                 style={getCardStyle(
                   { ...styles.card, ...styles.bottomLeft },
                   2
@@ -822,7 +761,6 @@ const ManagePerLaCare: React.FC = () => {
                 </Typography>
               </Card>
               <Card
-                // style={{ ...styles.card, ...styles.bottomRight }}
                 style={getCardStyle(
                   { ...styles.card, ...styles.bottomRight },
                   3
@@ -916,7 +854,6 @@ const ManagePerLaCare: React.FC = () => {
               sx={{
                 textAlign: "center",
                 color: "#292F36",
-                // fontSize: "50px",
                 fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
                 fontWeight: 400,
                 letterSpacing: "1%",
@@ -997,7 +934,6 @@ const ManagePerLaCare: React.FC = () => {
                         <Typography
                           sx={{
                             color: "#4D5053",
-                            // fontSize: "22px",
                             fontSize: {
                               xs: "14px",
                               sm: "18px",
@@ -1036,7 +972,6 @@ const ManagePerLaCare: React.FC = () => {
               sx={{
                 textAlign: "center",
                 color: "#292F36",
-                // fontSize: "50px",
                 fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
                 fontWeight: 400,
                 marginTop: { xs: "50px", sm: "50px", lg: "150px", xl: "269px" },
@@ -1070,7 +1005,6 @@ const ManagePerLaCare: React.FC = () => {
                 sm={5}
                 lg={6}
                 xl={6}
-                // sx={{ marginTop: { xs: "0px", sm: "80px", lg: "20px" } }}
               >
                 {/* {videoUrl ? (
                   <video
@@ -1151,7 +1085,6 @@ const ManagePerLaCare: React.FC = () => {
                         <Typography
                           sx={{
                             color: "#4D5053",
-                            // fontSize: "22px",
                             fontSize: {
                               xs: "14px",
                               sm: "18px",
@@ -1187,7 +1120,6 @@ const ManagePerLaCare: React.FC = () => {
         <Grid
           sx={{
             backgroundImage: `url(${contentbackground})`,
-            // backgroundSize: "cover",
             backgroundSize: {
               xs: "contain",
               sm: "contain",
@@ -1201,7 +1133,6 @@ const ManagePerLaCare: React.FC = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            // marginTop: "10%",
             margin: {
               xs: "5%",
               sm: "10%",
@@ -1304,7 +1235,6 @@ const ManagePerLaCare: React.FC = () => {
           fontWeight: 700,
           lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "auto" },
           textAlign: "center",
-          // padding: "10% 10% 0% 10%",
           padding: {
             xs: "10% 10% 0% 10%",
             sm: "10% 10% 0% 10%",
@@ -1318,16 +1248,12 @@ const ManagePerLaCare: React.FC = () => {
       </Typography>
 
       <Grid
-        // item
-        // lg={12}
         container
         sx={{
           display: "flex",
           justifyContent: "space-evenly",
           flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
           textAlign: "center",
-          // padding: "5%",
-          // gap: "50px",
           margin: { lg: "114px 0px 200px 0px", xl: "114px 0px 346px 0px" },
         }}
       >
