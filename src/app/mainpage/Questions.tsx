@@ -94,7 +94,8 @@ export default function Questions() {
                 color: "#14292D",
                 // fontSize: "64px",
                 fontWeight: 700,
-                fontFamily: "Mulish",
+                // fontFamily: "Mulish",
+                fontFamily: 'Helvetica, sans-serif',
                 // lineHeight: "76.8px",
                 fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
                 lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "120%" },
@@ -113,7 +114,8 @@ export default function Questions() {
                 color: "#565656",
                 // fontSize: "34px",
                 fontWeight: 400,
-                fontFamily: "Mulish",
+                // fontFamily: "Mulish",
+                fontFamily: 'Helvetica, sans-serif',
                 // lineHeight: "36.8px",
                 fontSize: { xs: "12px", sm: "20px", lg: "24px", xl: "24px" },
                 lineHeight: { xs: "20px", sm: "20px", lg: "160%", xl: "160%" },
@@ -203,7 +205,10 @@ export default function Questions() {
                     sx={{
                       color: "#161C2D",
                       fontWeight: 700,
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish",
+                      fontFamily: 'Helvetica, sans-serif',
+
+                      
                       fontSize: {
                         xs: "14px",
                         sm: "18px",
@@ -227,7 +232,8 @@ export default function Questions() {
                       color: "#161C2D",
                       opacity: "72%",
                       fontWeight: 400,
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish",
+                      fontFamily: 'Helvetica, sans-serif',
                       fontSize: {
                         xs: "14px",
                         sm: "16px",

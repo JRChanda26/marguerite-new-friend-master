@@ -92,6 +92,8 @@ const Choisir: React.FC = () => {
                     xl: "41px 348px 69px 348px",
                   },
                   textAlign: "center",
+                  maxWidth: "75%", 
+                  margin: "0 auto", 
                 }}
               >
                 {post.data.description}
