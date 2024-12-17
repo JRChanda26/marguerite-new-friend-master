@@ -54,9 +54,13 @@ export default function Paroles() {
 
   type HighlightWord = (typeof highlightWords)[number];
 
+  // const fontMap: Record<HighlightWord, { fontFamily: string }> = {
+  //   "Marguerite Services,": { fontFamily: "Jenna Sue" },
+  //   "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Arial" },
+  // };
   const fontMap: Record<HighlightWord, { fontFamily: string }> = {
-    "Marguerite Services,": { fontFamily: "Jenna Sue" },
-    "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Arial" },
+    "Marguerite Services,": { fontFamily: "Helvetica" },
+    "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Helvetica" },
   };
 
   const escapeRegExp = (string: string) => {
@@ -156,7 +160,8 @@ export default function Paroles() {
               lg: "100px",
               xl: "0px 194px 100px 194px",
             },
-            fontFamily: "Mulish",
+            // fontFamily: "Mulish",
+           fontFamily: 'Helvetica, sans-serif',
             letterSpacing: "0%",
           }}
         >
@@ -232,7 +237,8 @@ export default function Paroles() {
           sx={{
             color: "#000000",
             fontWeight: 400,
-            fontFamily: "Mulish",
+            // fontFamily: "Mulish",
+           fontFamily: 'Helvetica, sans-serif',
             letterSpacing: "0%",
             fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "25px" },
             lineHeight: { xs: "25px", sm: "30px", lg: "38.4px", xl: "38.4px" },
@@ -350,7 +356,8 @@ export default function Paroles() {
                   sx={{
                     color: "#000000",
                     fontWeight: 700,
-                    fontFamily: "Mulish",
+                    // fontFamily: "Mulish",
+                   fontFamily: 'Helvetica, sans-serif',
                     textAlign: "center",
                     padding: {
                       xs: "0px",
