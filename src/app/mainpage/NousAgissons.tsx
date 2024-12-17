@@ -49,7 +49,8 @@ const NousAgissons: React.FC = () => {
               <div>
                 <Typography
                   sx={{
-                    fontFamily: "Jenna Sue",
+                    // fontFamily: "Jenna Sue",
+                    fontFamily:'sans-serif',
                     fontWeight: 400,
                     fontSize: {
                       xs: "20px",
@@ -60,8 +61,8 @@ const NousAgissons: React.FC = () => {
                     lineHeight: {
                       xs: "15px",
                       sm: "30px",
-                      lg: "120%",
-                      xl: "120%",
+                      lg: "100%",
+                      xl: "100%", //120% i removed
                     },
                     color: "#24535C",
                     letterSpacing: "0%",
@@ -71,7 +72,8 @@ const NousAgissons: React.FC = () => {
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    // fontFamily: "Mulish",
+                    fontFamily:'sans-serif',
                     color: "#24535C",
                     fontWeight: 700,
                     fontSize: {
@@ -83,8 +85,8 @@ const NousAgissons: React.FC = () => {
                     lineHeight: {
                       xs: "12px",
                       sm: "30px",
-                      lg: "120%",
-                      xl: "120%",
+                      lg: "100%",
+                      xl: "100%",
                     },
                     letterSpacing: "0%",
                   }}
@@ -112,7 +114,8 @@ const NousAgissons: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "Mulish",
+                      // fontFamily: "Mulish",
+                      fontFamily:'sans-serif',
                       fontWeight: 400,
                       fontSize: {
                         xs: "8px",
