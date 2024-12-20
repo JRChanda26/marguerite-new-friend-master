@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
+import Link from "next/link";
 
 const Choisir: React.FC = () => {
   const [choisirPage, setChoisirPage] = useState<any[]>([]);
@@ -21,6 +22,7 @@ const Choisir: React.FC = () => {
   const [isCardHovered, setIsCardHovered] = useState<number | null>(null);
 
   const bottomBackground = choisirPage[0]?.data?.bottom_background?.url || "";
+  
 
   return (
     <Box
@@ -210,11 +212,16 @@ const Choisir: React.FC = () => {
               >
                 {post.data.card_description1}
               </Typography>
+              <Link
+                          href={"/lecarechez"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
               <Grid
                 sx={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
+                  alignItems: "center",
                   paddingTop: {
                     lg: isCardHovered === 1 ? "44.76px" : "21px",
                   },
@@ -224,6 +231,7 @@ const Choisir: React.FC = () => {
                 onMouseEnter={() => setIsHovered(1)}
                 onMouseLeave={() => setIsHovered(null)}
               >
+                
                 <Typography
                   sx={{
                     fontFamily: "Mulish",
@@ -236,8 +244,9 @@ const Choisir: React.FC = () => {
                       lg: isCardHovered === 1 ? "16.94px" : "14px", 
                       xl: isCardHovered === 1 ? "16.94px" : "14px",
                     },
-                    lineHeight: "185%",
-                    paddingRight: "12px",
+                    // lineHeight: "185%",
+                    lineHeight: "31.3px",
+                    paddingRight: "14.3px",
                   }}
                 >
                   {post.data.link_text}
@@ -254,6 +263,7 @@ const Choisir: React.FC = () => {
                   />
                 )}
               </Grid>
+              </Link>
             </div>
           ))}
         </Grid>
@@ -397,11 +407,16 @@ const Choisir: React.FC = () => {
               >
                 {post.data.card_description2}
               </Typography>
+              <Link
+                          href={"/lecarechez"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
               <Grid
                 sx={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
+                  alignItems: "center",
                   paddingTop: {
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
@@ -442,8 +457,9 @@ const Choisir: React.FC = () => {
                           ? "14px"
                           : "16.94px",
                     },
-                    lineHeight: "185%",
-                    paddingRight: "12px",
+                    // lineHeight: "185%",
+                    lineHeight: "31.3px",
+                    paddingRight: "14.3px",
                   }}
                 >
                   {post.data.link_text}
@@ -459,7 +475,7 @@ const Choisir: React.FC = () => {
                     }}
                   />
                 )}
-              </Grid>
+              </Grid></Link>
             </div>
           ))}
         </Grid>
@@ -552,11 +568,16 @@ const Choisir: React.FC = () => {
               >
                 {post.data.card_description3}
               </Typography>
+              <Link
+                          href={"/lecarechez"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
               <Grid
                 sx={{
                   display: "flex",
                   flexDirection: "row",
                   justifyContent: "center",
+                  alignItems: "center",
                   paddingTop: {
                     lg: isCardHovered === 3 ? "44.76px" : "21px",
                   },
@@ -566,6 +587,7 @@ const Choisir: React.FC = () => {
                 onMouseEnter={() => setIsHovered(3)}
                 onMouseLeave={() => setIsHovered(null)}
               >
+                
                 <Typography
                   sx={{
                     fontFamily: "Mulish",
@@ -578,8 +600,9 @@ const Choisir: React.FC = () => {
                       lg: isCardHovered === 2 ? "16.94px" : "14px", 
                       xl: isCardHovered === 2 ? "16.94px" : "14px",
                     },
-                    lineHeight: "185%",
-                    paddingRight: "12px",
+                    // lineHeight: "185%",
+                    lineHeight: "31.3px",
+                    paddingRight: "14.3px",
                   }}
                 >
                   {post.data.link_text}
@@ -595,7 +618,7 @@ const Choisir: React.FC = () => {
                     }}
                   />
                 )}
-              </Grid>
+              </Grid></Link>
             </div>
           ))}
         </Grid>

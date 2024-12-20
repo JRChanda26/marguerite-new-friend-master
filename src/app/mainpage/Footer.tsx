@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import { Box, Grid, Typography } from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
+import Link from "next/link";
 
 const Footer: React.FC = () => {
   const [footerPage, setFooterPage] = useState<any[]>([]);
@@ -150,7 +151,7 @@ const Footer: React.FC = () => {
             </Typography>
           ))}
         </Grid>
-        <Grid item xs={12} sm={3} lg={3} xl={3}>
+        {/* <Grid item xs={12} sm={3} lg={3} xl={3}>
           {allLinkText.slice(4).map((text: any, index: number) => (
             <Typography
               key={index}
@@ -169,8 +170,90 @@ const Footer: React.FC = () => {
                 textAlign: { xs: "center", sm: "left" },
               }}
             >
+              
               {text}
             </Typography>
+          ))}
+        </Grid> */}
+        <Grid item xs={12} sm={3} lg={3} xl={3}>
+          {allLinkText.slice(4).map((text: any, index: number) => (
+            <React.Fragment key={index}>
+              {index === 1 ? (
+                <Link
+                  href={"/blogs/blog"}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    textDecoration: "none",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontFamily: "Mulish",
+                      color: "#D3DDDE",
+                      fontWeight: 400,
+                      fontSize: {
+                        xs: "18px",
+                        sm: "18px",
+                        lg: "24.8px",
+                        xl: "24.8px",
+                      },
+                      lineHeight: "auto",
+                      paddingBottom: "19.84px",
+                      textAlign: { xs: "center", sm: "left" },
+                    }}
+                  >
+                    {text}
+                  </Typography>
+                </Link>
+              ) : index === 2 ? (
+                <Link
+                  href={"/contact"}
+                  style={{
+                    textDecoration: "none",
+                    width: "100%",
+                  }}
+                >
+                  <Typography
+                    sx={{
+                      fontFamily: "Mulish",
+                      color: "#D3DDDE",
+                      fontWeight: 400,
+                      fontSize: {
+                        xs: "18px",
+                        sm: "18px",
+                        lg: "24.8px",
+                        xl: "24.8px",
+                      },
+                      lineHeight: "auto",
+                      paddingBottom: "19.84px",
+                      textAlign: { xs: "center", sm: "left" },
+                    }}
+                  >
+                    {text}
+                  </Typography>
+                </Link>
+              ) : (
+                <Typography
+                  sx={{
+                    fontFamily: "Mulish",
+                    color: "#D3DDDE",
+                    fontWeight: 400,
+                    fontSize: {
+                      xs: "18px",
+                      sm: "18px",
+                      lg: "24.8px",
+                      xl: "24.8px",
+                    },
+                    lineHeight: "auto",
+                    paddingBottom: "19.84px",
+                    textAlign: { xs: "center", sm: "left" },
+                  }}
+                >
+                  {text}
+                </Typography>
+              )}
+            </React.Fragment>
           ))}
         </Grid>
       </Grid>
