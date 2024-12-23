@@ -149,7 +149,7 @@ export default function NeManquez() {
                 color: "#24535C",
                 fontFamily: "Mulish",
                 fontSize: { xs: "15px", sm: "22px", lg: "38px", xl: "41.81px" },
-                lineHeight: { xs: "15px", sm: "28px", lg: "auto", xl: "auto" },
+                lineHeight: { xs: "25px", sm: "28px", lg: "52.47px", xl: "52.47px" },
                 fontWeight: 700,
               }}
             >
