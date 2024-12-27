@@ -1486,6 +1486,105 @@ interface HeaderDocumentData {
   contact_icon: prismic.ImageField<never>;
 
   /**
+   * Contact field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.contact
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  contact: prismic.KeyTextField;
+
+  /**
+   * Mission1 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.mission1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission1: prismic.KeyTextField;
+
+  /**
+   * Mission2 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.mission2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission2: prismic.KeyTextField;
+
+  /**
+   * Mission3 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.mission3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  mission3: prismic.KeyTextField;
+
+  /**
+   * Advantages1 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.advantages1
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advantages1: prismic.KeyTextField;
+
+  /**
+   * Advantages2 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.advantages2
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advantages2: prismic.KeyTextField;
+
+  /**
+   * Advantages3 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.advantages3
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advantages3: prismic.KeyTextField;
+
+  /**
+   * Advantages4 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.advantages4
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advantages4: prismic.KeyTextField;
+
+  /**
+   * Advantages5 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.advantages5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  advantages5: prismic.KeyTextField;
+
+  /**
    * Slice Zone field in *Header*
    *
    * - **Field Type**: Slice Zone
