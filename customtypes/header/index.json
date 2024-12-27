@@ -43,6 +43,69 @@
           "thumbnails": []
         }
       },
+      "contact": {
+        "type": "Text",
+        "config": {
+          "label": "Contact",
+          "placeholder": ""
+        }
+      },
+      "mission1": {
+        "type": "Text",
+        "config": {
+          "label": "Mission1",
+          "placeholder": ""
+        }
+      },
+      "mission2": {
+        "type": "Text",
+        "config": {
+          "label": "Mission2",
+          "placeholder": ""
+        }
+      },
+      "mission3": {
+        "type": "Text",
+        "config": {
+          "label": "Mission3",
+          "placeholder": ""
+        }
+      },
+      "advantages1": {
+        "type": "Text",
+        "config": {
+          "label": "Advantages1",
+          "placeholder": ""
+        }
+      },
+      "advantages2": {
+        "type": "Text",
+        "config": {
+          "label": "Advantages2",
+          "placeholder": ""
+        }
+      },
+      "advantages3": {
+        "type": "Text",
+        "config": {
+          "label": "Advantages3",
+          "placeholder": ""
+        }
+      },
+      "advantages4": {
+        "type": "Text",
+        "config": {
+          "label": "Advantages4",
+          "placeholder": ""
+        }
+      },
+      "advantages5": {
+        "type": "Text",
+        "config": {
+          "label": "Advantages5",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
