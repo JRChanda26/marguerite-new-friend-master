@@ -678,6 +678,9 @@ const Header: React.FC = () => {
                   borderRadius: "100px",
                   textTransform: "none",
                   fontFamily:'Sans Serif Collection',
+                  fontSize: '18px',
+        fontWeight: 400,
+        // lineHeight: '44.26px',
                   '&:hover': {
   background: "#236B79",
   color: "#FFFFFF",
