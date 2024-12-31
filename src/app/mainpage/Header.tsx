@@ -91,6 +91,10 @@ const Header: React.FC = () => {
     lineHeight: "44.26px",
     textAlign: "left",
     color: "#111111",
+    '@media (max-width:600px)': { 
+    fontSize: "10px", 
+    lineHeight: "30px", 
+  },
   };
   return (
     <Box>
@@ -250,7 +254,7 @@ const Header: React.FC = () => {
                           > <Typography sx={menustyle}>{post.data.mission1} </Typography></Link>
                           
                           <Link
-                            href={"/lecarechez"}
+                            href={"/ourexpert"}
                             style={{ textDecoration: "none" }}
                           >
                             <Typography sx={menustyle}>
@@ -258,7 +262,7 @@ const Header: React.FC = () => {
                             </Typography>
                           </Link>
                           <Link
-                            href={"/nossolutionsde"}
+                            href={"/benifits"}
                             style={{ textDecoration: "none" }}
                           >
                             {" "}
@@ -565,13 +569,13 @@ const Header: React.FC = () => {
                       <Typography sx={menustyle}>{post.data.mission1} </Typography>
                     </Link>{" "}
                     <Link
-                      href={"/lecarechez"}
+                      href={"/ourexpert"}
                       style={{ textDecoration: "none" }}
                     >
                       <Typography sx={menustyle}>{post.data.mission2} </Typography>
                     </Link>
                     <Link
-                      href={"/nossolutionsde"}
+                      href={"/benifits"}
                       style={{ textDecoration: "none" }}
                     >
                       {" "}
