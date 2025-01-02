@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
+import Link from "next/link";
 
 const NousAgissons: React.FC = () => {
   const [nousPage, setNousPage] = useState<any[]>([]);
@@ -58,6 +59,9 @@ const NousAgissons: React.FC = () => {
               //   lg: "10% 65% 0% 0%",
               //   xl: "10% 65% 0% 0%",
               // },
+              display: "flex",
+              justifyContent: "center", // Centers horizontally
+              alignItems: "center",
               backgroundColor: "#F6C09E",
               padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
@@ -67,10 +71,23 @@ const NousAgissons: React.FC = () => {
           >
             <Box
               sx={{
-                height: "100%", // Ensure the Box takes the full height of the parent Grid item
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
+                // height: "100%", // Ensure the Box takes the full height of the parent Grid item
+                // display: "flex",
+                // flexDirection: "column",
+                // justifyContent: "center",
+                width: "700px",
+      height: "510px",
+      // top: "285px",
+      // left: "52px",
+      gap: "0px",
+      opacity: "0px",
+      backgroundColor: "#F6C09E",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "center",
+      alignItems: "center",
+      // textAlign: "center",
+      // padding: "20px",
               }}
             >
               <Typography
@@ -80,14 +97,15 @@ const NousAgissons: React.FC = () => {
                   fontSize: {
                     xs: "20px",
                     sm: "30px",
-                    lg: "50px",
+                    lg: "45px",
                     xl: "64px",
                   },
+                 
                   lineHeight: {
                     xs: "15px",
                     sm: "30px",
-                    lg: "76.8px",
-                    xl: "76.8px",
+                    lg: "40px",
+                    xl: "50px",
                   },
                   color: "#24535C",
                   textAlign: "left",
@@ -100,23 +118,29 @@ const NousAgissons: React.FC = () => {
                   fontFamily: 'Helvetica, sans-serif',
                   color: "#24535C",
                   fontWeight: 700,
+                  paddingTop:'33px',
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
-                    lg: "45px",
-                    xl: "50px",
+                    lg: "40px",
+                    xl: "58px",
                   },
+               
                   lineHeight: {
                     xs: "12px",
                     sm: "30px",
-                    lg: "69.6px",
-                    xl: "69.6px",
+                    lg: "40px",
+                    xl: "50px",
                   },
-                  // letterSpacing: "0%",
+                  letterSpacing: "0%",//
                 }}
               >
                 {post.data.title}
               </Typography>
+              <Link
+                          href={"/contact"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
               <Button
                 sx={{
                   display: "flex",
@@ -174,6 +198,7 @@ const NousAgissons: React.FC = () => {
                   />
                 )}
               </Button>
+              </Link>
             </Box>
           </Grid>
 
