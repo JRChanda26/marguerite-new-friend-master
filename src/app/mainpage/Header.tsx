@@ -20,7 +20,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import KeyboardArrowDownSharpIcon from "@mui/icons-material/KeyboardArrowDownSharp";
 import KeyboardArrowUpSharpIcon from "@mui/icons-material/KeyboardArrowUpSharp";
- 
+
 const Header: React.FC = () => {
   const [headerPage, setHeaderPage] = useState<any[]>([]);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -91,191 +91,182 @@ const Header: React.FC = () => {
     lineHeight: "44.26px",
     textAlign: "left",
     color: "#111111",
-    '@media (max-width:600px)': { 
-    fontSize: "10px", 
-    lineHeight: "30px", 
-  },
+    "@media (max-width:600px)": {
+      fontSize: "10px",
+      lineHeight: "30px",
+    },
   };
   return (
     <Box>
-    <div>
-    {headerPage.map((post: any) => (
-      <Grid
-        container
-        spacing={0}
-        key={post.id}
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          zIndex: 1,
-          display: "flex",
-          flexDirection: "row",
-          boxShadow: "0px 0px 51.7px 0px rgba(36, 83, 92, 0.1)",
-          background: "rgba(255, 255, 255, 0.7)",
-          width: "100%",
-          borderBottomLeftRadius: "30px",
-          borderBottomRightRadius: "30px",
-          boxSizing: "border-box",
-          justifyContent: "space-between",
-          padding: "10px 20px",
-          backdropFilter: "blur(58.1px)",
-        }}
-      >
-        {isSmallScreen ? (
-          <>
-            {post?.data.marguerite_logo && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={post.data.marguerite_logo.url || undefined}
-                alt={post.data.marguerite_logo.alt || "Image"}
-                style={{
-                  width: "20%",
-                  height: "auto",
-                  cursor: "pointer",
-                }}
-                onClick={handleNavigation}
-              />
-            )}
-            <IconButton
-              onClick={toggleDrawer(true)}
-              sx={{
-                color: "#24535C",
-              }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor="right"
-              open={isDrawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              <Box
-                sx={{ width: 250 }}
-                role="presentation"
-                // onClick={toggleDrawer(false)}
-              >
-                <List>
-                  <ListItem>
-                    <Link
-                      href={"/manageperlacare"}
-                      style={{ textDecoration: "none", width: "100%" }}
-                    >
-                      <ListItemText
-                        primary={post.data.page1}
-                        sx={{
-                          fontFamily: "Mulish",
-                          color: "#24535C",
-                          fontSize: "18px",
-                          fontWeight: 400,
-                        }}
-                      />
-                    </Link>
-                  </ListItem>
-                  {/* <ListItem>
-                    <Link
-                      href={"/lecarechez"}
-                      style={{ textDecoration: "none", width: "100%" }}
-                    >
-                      <ListItemText
-                        primary={post.data.page2}
-                        sx={{
-                          fontFamily: "Mulish",
-                          color: "#24535C",
-                          fontSize: "18px",
-                          fontWeight: 400,
-                        }}
-                      />
-                    </Link>
-                  </ListItem> */}
-                  <ListItem>
-                    <Box sx={{}}>
-                      {/* <Link
+      <div>
+        {headerPage.map((post: any) => (
+          <Grid
+            container
+            spacing={0}
+            key={post.id}
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              zIndex: 1,
+              display: "flex",
+              flexDirection: "row",
+              boxShadow: "0px 0px 51.7px 0px rgba(36, 83, 92, 0.1)",
+              background: "rgba(255, 255, 255, 0.7)",
+              width: "100%",
+              borderBottomLeftRadius: "30px",
+              borderBottomRightRadius: "30px",
+              boxSizing: "border-box",
+              justifyContent: "space-between",
+              padding: "10px 20px",
+              backdropFilter: "blur(58.1px)",
+            }}
+          >
+            {isSmallScreen ? (
+              <>
+                {post?.data.marguerite_logo && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.marguerite_logo.url || undefined}
+                    alt={post.data.marguerite_logo.alt || "Image"}
+                    style={{
+                      width: "20%",
+                      height: "auto",
+                      cursor: "pointer",
+                    }}
+                    onClick={handleNavigation}
+                  />
+                )}
+                <IconButton
+                  onClick={toggleDrawer(true)}
+                  sx={{
+                    color: "#24535C",
+                  }}
+                >
+                  <MenuIcon />
+                </IconButton>
+                <Drawer
+                  anchor="right"
+                  open={isDrawerOpen}
+                  onClose={toggleDrawer(false)}
+                >
+                  <Box
+                    sx={{ width: 250 }}
+                    role="presentation"
+                    // onClick={toggleDrawer(false)}
+                  >
+                    <List>
+                      <ListItem>
+                        <Link
+                          href={"/manageperlacare"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
+                          <ListItemText
+                            primary={post.data.page1}
+                            sx={{
+                              fontFamily: "Mulish",
+                              color: "#24535C",
+                              fontSize: "18px",
+                              fontWeight: 400,
+                            }}
+                          />
+                        </Link>
+                      </ListItem>
+                      <ListItem>
+                        <Link
+                          href={"/lecarechez"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
+                          <ListItemText
+                            primary={post.data.page2}
+                            sx={{
+                              fontFamily: "Mulish",
+                              color: "#24535C",
+                              fontSize: "18px",
+                              fontWeight: 400,
+                            }}
+                          />
+                        </Link>
+                      </ListItem>
+                      <ListItem>
+                        <Box sx={{}}>
+                          {/* <Link
                   // href={"/nossolutionsde"}
                   style={{ textDecoration: "none" }}
                 > */}
-                      <Typography
-                        sx={{
-                          fontFamily: "Mulish",
-                          color: "#24535C",
-                          fontSize: {
-                            xs: "12px",
-                            sm: "18px",
-                            lg: "26.49px",
-                            xl: "26.49px",
-                          },
-                          fontWeight: 400,
-                          lineHeight: {
-                            xs: "18px",
-                            sm: "20px",
-                            lg: "33px",
-                            xl: "33px",
-                          },
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "8px",
-                        }}
-                        onClick={toggleDropdown1}
-                      >
-                        {post.data.page2}
-                        
-                        {dropdownVisible1 ? (
-                          <KeyboardArrowUpSharpIcon
-                            sx={{ fontSize: "inherit" }}
-                          />
-                        ) : (
-                          <KeyboardArrowDownSharpIcon
-                            sx={{ fontSize: "inherit" }}
-                          />
-                        )}
-                      </Typography>
-                      {/* </Link> */}
-                      {dropdownVisible1 && (
-                        <Box
-                          ref={dropdownRef1}
-                          sx={{
-                            marginTop: "5px",
-                            background: "#fff",
-                            border: "1px solid #ddd",
-                            borderRadius: "8px",
-                            width: "218px",
-                            height: "auto",
-                            boxShadow: "0px 0px 51.7px 0px #24535C1A",
-                            zIndex: 1000,
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            paddingBottom: "10px",
-                          }}
-                        >
-                          <Link
-                            href={"/nossolutionsde"}
-                            style={{ textDecoration: "none" }}
-                          > <Typography sx={menustyle}>{post.data.mission1} </Typography></Link>
-                          
-                          <Link
-                            href={"/ourexpert"}
-                            style={{ textDecoration: "none" }}
+                          <Typography
+                            sx={{
+                              fontFamily: "Mulish",
+                              color: "#24535C",
+                              fontSize: "18px",
+                              fontWeight: 400,
+                            }}
+                            onClick={toggleDropdown1}
                           >
-                            <Typography sx={menustyle}>
-                            {post.data.mission2}
-                            </Typography>
-                          </Link>
-                          <Link
-                            href={"/benifits"}
-                            style={{ textDecoration: "none" }}
-                          >
-                            {" "}
-                            <Typography sx={menustyle}>
-                            {post.data.mission3}
-                            </Typography>
-                          </Link>
-                        </Box>
-                      )}
-                    </Box>{" "}
-                  </ListItem>
-                  <ListItem>
-                    {/* <Link
+                            {/* {post.data.page2} */}
+                            Nos Solution
+                            {dropdownVisible1 ? (
+                              <KeyboardArrowUpSharpIcon
+                                sx={{ fontSize: "inherit" }}
+                              />
+                            ) : (
+                              <KeyboardArrowDownSharpIcon
+                                sx={{ fontSize: "inherit" }}
+                              />
+                            )}
+                          </Typography>
+                          {/* </Link> */}
+                          {dropdownVisible1 && (
+                            <Box
+                              ref={dropdownRef1}
+                              sx={{
+                                marginTop: "5px",
+                                background: "#fff",
+                                border: "1px solid #ddd",
+                                borderRadius: "8px",
+                                width: "218px",
+                                height: "auto",
+                                boxShadow: "0px 0px 51.7px 0px #24535C1A",
+                                zIndex: 1000,
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              <Link
+                                href={"/nossolutionsde"}
+                                style={{ textDecoration: "none" }}
+                              >
+                                {" "}
+                                <Typography sx={menustyle}>
+                                  {post.data.mission1}{" "}
+                                </Typography>
+                              </Link>
+
+                              <Link
+                                href={"/ourexpert"}
+                                style={{ textDecoration: "none" }}
+                              >
+                                <Typography sx={menustyle}>
+                                  {post.data.mission2}
+                                </Typography>
+                              </Link>
+                              <Link
+                                href={"/benifits"}
+                                style={{ textDecoration: "none" }}
+                              >
+                                {" "}
+                                <Typography sx={menustyle}>
+                                  {post.data.mission3}
+                                </Typography>
+                              </Link>
+                            </Box>
+                          )}
+                        </Box>{" "}
+                      </ListItem>
+                      <ListItem>
+                        {/* <Link
                       href={"/nossolutionsde"}
                       style={{ textDecoration: "none", width: "100%" }}
                     >
@@ -289,120 +280,114 @@ const Header: React.FC = () => {
                         }}
                       />
                     </Link> */}
-                    <Box
-                      sx={
-                        {
-                          // position: "relative",
-                          // cursor: "pointer",
-                          // display: "flex",
-                          // alignItems: "center",
-                          // gap: "20px",
-                        }
-                      }
-                    >
-                      {/* <Link
+                        <Box
+                          sx={
+                            {
+                              // position: "relative",
+                              // cursor: "pointer",
+                              // display: "flex",
+                              // alignItems: "center",
+                              // gap: "20px",
+                            }
+                          }
+                        >
+                          {/* <Link
                   href={"/"}
                   style={{ textDecoration: "none" }}
                 > */}
-                      <Typography
-                        sx={{
-                          fontFamily: "Mulish",
-                          color: "#24535C",
-                          fontSize: {
-                            xs: "12px",
-                            sm: "18px",
-                            lg: "26.49px",
-                            xl: "26.49px",
-                          },
-                          fontWeight: 400,
-                          lineHeight: {
-                            xs: "18px",
-                            sm: "20px",
-                            lg: "33px",
-                            xl: "33px",
-                          },
-                          display: "inline-flex",
-                          alignItems: "center",
-                          gap: "8px",
-                        }}
-                        onClick={toggleDropdown2}
-                      >
-                        {/* Your Benefits */}
-                        {post.data.page3}
-                        {dropdownVisible2 ? (
-                          <KeyboardArrowUpSharpIcon
-                            sx={{ fontSize: "inherit" }}
-                          />
-                        ) : (
-                          <KeyboardArrowDownSharpIcon
-                            sx={{ fontSize: "inherit" }}
-                          />
-                        )}
-                      </Typography>
-                      {/* </Link> */}
-                      {dropdownVisible2 && (
-                        <Box
-                          ref={dropdownRef2}
-                          sx={{
-                            marginTop: "5px",
-                            background: "#fff",
-                            border: "1px solid #ddd",
-                            borderRadius: "8px",
-                            width: "218px",
-                            height: "auto",
-                            boxShadow: "0px 0px 51.7px 0px #24535C1A",
-                            zIndex: 1000,
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            paddingBottom: "10px",
-                          }}
-                        >
-                          <Typography sx={menustyle}>
-                          {post.data.advantages1}
+                          <Typography
+                            sx={{
+                              fontFamily: "Mulish",
+                              color: "#24535C",
+                              fontSize: "18px",
+                              fontWeight: 400,
+                            }}
+                            onClick={toggleDropdown2}
+                          >
+                            {/* Your Benefits */}
+                            {post.data.page3}
+                            {dropdownVisible2 ? (
+                              <KeyboardArrowUpSharpIcon
+                                sx={{ fontSize: "inherit" }}
+                              />
+                            ) : (
+                              <KeyboardArrowDownSharpIcon
+                                sx={{ fontSize: "inherit" }}
+                              />
+                            )}
                           </Typography>
-                          <Typography sx={menustyle}>
-                          {post.data.advantages2}
-                          </Typography>
-                          <Typography sx={menustyle}>
-                          {post.data.advantages3}
-                          </Typography>
-                          <Typography sx={menustyle}>
-                          {post.data.advantages4}
-                          </Typography>
-                          <Link
-                          style={{textDecoration:'none'}}
-                      href={"/blogs/blognews"}
-                     
-                    >
-                           <Typography sx={menustyle}>
-                           {post.data.advantages5}
-                          </Typography></Link>
+                          {/* </Link> */}
+                          {dropdownVisible2 && (
+                            <Box
+                              ref={dropdownRef2}
+                              sx={{
+                                marginTop: "5px",
+                                background: "#fff",
+                                border: "1px solid #ddd",
+                                borderRadius: "8px",
+                                width: "218px",
+                                height: "auto",
+                                boxShadow: "0px 0px 51.7px 0px #24535C1A",
+                                zIndex: 1000,
+                                display: "flex",
+                                flexDirection: "column",
+                                alignItems: "center",
+                                paddingBottom: "10px",
+                              }}
+                            >
+                              <Typography sx={menustyle}>
+                                {post.data.advantages1}
+                              </Typography>
+                              <Typography sx={menustyle}>
+                                {post.data.advantages2}
+                              </Typography>
+                              <Typography sx={menustyle}>
+                                {post.data.advantages3}
+                              </Typography>
+                              <Typography sx={menustyle}>
+                                {post.data.advantages4}
+                              </Typography>
+                            </Box>
+                          )}
                         </Box>
-                      )}
-                    </Box>
-                  </ListItem>
+                      </ListItem>
 
-                  <ListItem onClick={handleContactNavigation}>
-                  <Button
-                sx={{
-                  background: "#236B79",
-                  color: "#FFFFFF",
-                  padding: "8px 18px 8px 18px",
-                  fontFamily:'Sans Serif Collection',
-                  borderRadius: "100px",
-                  textTransform: "none",
-                  '&:hover': {
-  background: "#236B79",
-  color: "#FFFFFF",
-}
-                }}
-                onClick={handleContactNavigation}
-              >
-                {" "}
-                {post.data.contact}
-              </Button>
-                    {/* <MailOutlineIcon
+                      <ListItem>
+                        <Link
+                          href={"/blogs/blognews"}
+                          style={{ textDecoration: "none", width: "100%" }}
+                        >
+                          <ListItemText
+                            primary={post.data.advantages5}
+                            sx={{
+                              fontFamily: "Mulish",
+                              color: "#24535C",
+                              fontSize: "18px",
+                              fontWeight: 400,
+                            }}
+                          />
+                        </Link>
+                      </ListItem>
+                      <ListItem onClick={handleContactNavigation}>
+                        <Button
+                          sx={{
+                            background: "#236B79",
+                            color: "#FFFFFF",
+                            padding: "8px 18px 8px 18px",
+                            fontFamily: "Sans Serif Collection",
+                            borderRadius: "100px",
+                            textTransform: "none",
+                            "&:hover": {
+                              background: "#236B79",
+                              color: "#FFFFFF",
+                            },
+                          }}
+                          onClick={handleContactNavigation}
+                        >
+                          {" "}
+                          {post.data.contact}
+                        </Button>
+                        {/* <MailOutlineIcon
                       sx={{
                         background: "#236B79",
                         color: "#FFFFFF",
@@ -411,261 +396,298 @@ const Header: React.FC = () => {
                         marginRight: "10px",
                       }}
                     /> */}
-                  </ListItem>
-                </List>
-              </Box>
-            </Drawer>
-          </>
-        ) : (
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            lg={12}
-            xl={12}
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-around",
-              alignItems: "center",
-              gap: { sm: "80px" },
-            }}
-          >
-            {post?.data.marguerite_logo && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={post.data.marguerite_logo.url || undefined}
-                alt={post.data.marguerite_logo.alt || "Image"}
-                style={{
-                  width: "8%",
-                  height: "auto",
-                  cursor: "pointer",
+                      </ListItem>
+                    </List>
+                  </Box>
+                </Drawer>
+              </>
+            ) : (
+              <Grid
+                item
+                xs={12}
+                sm={12}
+                lg={12}
+                xl={12}
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                  alignItems: "center",
+                  gap: { sm: "80px" },
                 }}
-                onClick={handleNavigation}
-              />
-            )}
-            <Grid
-              sx={{
-                display: "flex",
-                flexDirection: "row",
-                gap: "45px",
-              }}
-            >
-              <Link
-                href={"/manageperlacare"}
-                style={{ textDecoration: "none" }}
               >
-                <Typography
+                {post?.data.marguerite_logo && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.marguerite_logo.url || undefined}
+                    alt={post.data.marguerite_logo.alt || "Image"}
+                    style={{
+                      width: "8%",
+                      height: "auto",
+                      cursor: "pointer",
+                    }}
+                    onClick={handleNavigation}
+                  />
+                )}
+                <Grid
                   sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontSize: {
-                      xs: "12px",
-                      sm: "18px",
-                      lg: "26.49px",
-                      xl: "26.49px",
-                    },
-                    fontWeight: 400,
-                    lineHeight: {
-                      xs: "18px",
-                      sm: "20px",
-                      lg: "33px",
-                      xl: "33px",
-                    },
+                    display: "flex",
+                    flexDirection: "row",
+                    gap: "45px",
                   }}
                 >
-                  {post.data.page1}
-                </Typography>
-              </Link>
-              {/* <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontSize: {
-                      xs: "12px",
-                      sm: "18px",
-                      lg: "26.49px",
-                      xl: "26.49px",
-                    },
-                    fontWeight: 400,
-                    lineHeight: {
-                      xs: "18px",
-                      sm: "20px",
-                      lg: "33px",
-                      xl: "33px",
-                    },
-                  }}
-                >
-                  {post.data.page2}
-                </Typography>
-              </Link> */}
-              <Box sx={{ position: "relative", cursor: "pointer" }}>
-                {/* <Link
+                  <Link
+                    href={"/manageperlacare"}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        color: "#24535C",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "18px",
+                          lg: "26.49px",
+                          xl: "26.49px",
+                        },
+                        fontWeight: 400,
+                        lineHeight: {
+                          xs: "18px",
+                          sm: "20px",
+                          lg: "33px",
+                          xl: "33px",
+                        },
+                      }}
+                    >
+                      {post.data.page1}
+                    </Typography>
+                  </Link>
+                  <Link href={"/lecarechez"} style={{ textDecoration: "none" }}>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        color: "#24535C",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "18px",
+                          lg: "26.49px",
+                          xl: "26.49px",
+                        },
+                        fontWeight: 400,
+                        lineHeight: {
+                          xs: "18px",
+                          sm: "20px",
+                          lg: "33px",
+                          xl: "33px",
+                        },
+                      }}
+                    >
+                      {post.data.page2}
+                    </Typography>
+                  </Link>
+                  <Box sx={{ position: "relative", cursor: "pointer" }}>
+                    {/* <Link
                   // href={"/nossolutionsde"}
                   style={{ textDecoration: "none" }}
                 > */}
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontSize: {
-                      xs: "12px",
-                      sm: "18px",
-                      lg: "26.49px",
-                      xl: "26.49px",
-                    },
-                    fontWeight: 400,
-                    lineHeight: {
-                      xs: "18px",
-                      sm: "20px",
-                      lg: "33px",
-                      xl: "33px",
-                    },
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                  }}
-                  onClick={toggleDropdown1}
-                >
-                  {/* {post.data.page3} */}
-                  {post.data.page2}
-                  {dropdownVisible1 ? (
-                    <KeyboardArrowUpSharpIcon
-                      sx={{ fontSize: "inherit" }}
-                    />
-                  ) : (
-                    <KeyboardArrowDownSharpIcon
-                      sx={{ fontSize: "inherit" }}
-                    />
-                  )}
-                </Typography>
-                {/* </Link> */}
-                {dropdownVisible1 && (
-                  <Box
-                    ref={dropdownRef1}
-                    sx={{
-                      position: "absolute",
-                      top: "70px",
-                      // right: "-70px",
-                      marginTop: "5px",
-                      background: "#fff",
-                      border: "1px solid #ddd",
-                      borderRadius: "8px",
-                      width: "218px",
-                      height: "auto",
-                      boxShadow: "0px 0px 51.7px 0px #24535C1A",
-                      zIndex: 1000,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      paddingBottom: "10px",
-                    }}
-                  >
-                    <Link
-                      href={"/nossolutionsde"}
-                      style={{ textDecoration: "none" }}
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        color: "#24535C",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "18px",
+                          lg: "26.49px",
+                          xl: "26.49px",
+                        },
+                        fontWeight: 400,
+                        lineHeight: {
+                          xs: "18px",
+                          sm: "20px",
+                          lg: "33px",
+                          xl: "33px",
+                        },
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                      onClick={toggleDropdown1}
                     >
-                      <Typography sx={menustyle}>{post.data.mission1} </Typography>
-                    </Link>{" "}
-                    <Link
-                      href={"/ourexpert"}
-                      style={{ textDecoration: "none" }}
-                    >
-                      <Typography sx={menustyle}>{post.data.mission2} </Typography>
-                    </Link>
-                    <Link
-                      href={"/benifits"}
-                      style={{ textDecoration: "none" }}
-                    >
-                      {" "}
-                      <Typography sx={menustyle}>{post.data.mission3}</Typography>
-                    </Link>
-                  </Box>
-                )}
-              </Box>{" "}
-              <Box
-                sx={{
-                  position: "relative",
-                  cursor: "pointer",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "20px",
-                }}
-              >
-             
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontSize: {
-                      xs: "12px",
-                      sm: "18px",
-                      lg: "26.49px",
-                      xl: "26.49px",
-                    },
-                    fontWeight: 400,
-                    lineHeight: {
-                      xs: "18px",
-                      sm: "20px",
-                      lg: "33px",
-                      xl: "33px",
-                    },
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "8px",
-                  }}
-                  onClick={toggleDropdown2}
-                >
-                  {post.data.page3}
-                  {/* {post.data.page3} */}
-                  {dropdownVisible2 ? (
-                    <KeyboardArrowUpSharpIcon
-                      sx={{ fontSize: "inherit" }}
-                    />
-                  ) : (
-                    <KeyboardArrowDownSharpIcon
-                      sx={{ fontSize: "inherit" }}
-                    />
-                  )}
-                </Typography>
-                {/* </Link> */}
-                {dropdownVisible2 && (
-                  <Box
-                    ref={dropdownRef2}
-                    sx={{
-                      position: "absolute",
-                      top: "70px",
-                      // right: "-70px",
-                      marginTop: "5px",
-                      background: "#fff",
-                      border: "1px solid #ddd",
-                      borderRadius: "8px",
-                      width: "218px",
-                      height: "auto",
-                      boxShadow: "0px 0px 51.7px 0px #24535C1A",
-                      zIndex: 1000,
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                      paddingBottom: "10px",
-                    }}
-                  >
-                    <Typography sx={menustyle}>{post.data.advantages1} </Typography>
-                    <Typography sx={menustyle}> {post.data.advantages2} </Typography>
-                    <Typography sx={menustyle}>
-                      {post.data.advantages3}
+                      {/* {post.data.page3} */}
+                      Nos Solution
+                      {dropdownVisible1 ? (
+                        <KeyboardArrowUpSharpIcon
+                          sx={{ fontSize: "inherit" }}
+                        />
+                      ) : (
+                        <KeyboardArrowDownSharpIcon
+                          sx={{ fontSize: "inherit" }}
+                        />
+                      )}
                     </Typography>
-                    <Typography sx={menustyle}>{post.data.advantages4}s</Typography>
-                    <Link
-                     style={{textDecoration:'none'}} href={"/blogs/blognews"}
-                    
-                    ><Typography sx={menustyle}>{post.data.advantages5}</Typography></Link>
+                    {/* </Link> */}
+                    {dropdownVisible1 && (
+                      <Box
+                        ref={dropdownRef1}
+                        sx={{
+                          position: "absolute",
+                          top: "70px",
+                          // right: "-70px",
+                          marginTop: "5px",
+                          background: "#fff",
+                          border: "1px solid #ddd",
+                          borderRadius: "8px",
+                          width: "218px",
+                          height: "auto",
+                          boxShadow: "0px 0px 51.7px 0px #24535C1A",
+                          zIndex: 1000,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          paddingBottom: "10px",
+                        }}
+                      >
+                        <Link
+                          href={"/nossolutionsde"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography sx={menustyle}>
+                            {post.data.mission1}{" "}
+                          </Typography>
+                        </Link>{" "}
+                        <Link
+                          href={"/ourexpert"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          <Typography sx={menustyle}>
+                            {post.data.mission2}{" "}
+                          </Typography>
+                        </Link>
+                        <Link
+                          href={"/benifits"}
+                          style={{ textDecoration: "none" }}
+                        >
+                          {" "}
+                          <Typography sx={menustyle}>
+                            {post.data.mission3}
+                          </Typography>
+                        </Link>
+                      </Box>
+                    )}
+                  </Box>{" "}
+                  <Box
+                    sx={{
+                      position: "relative",
+                      cursor: "pointer",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "20px",
+                    }}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        color: "#24535C",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "18px",
+                          lg: "26.49px",
+                          xl: "26.49px",
+                        },
+                        fontWeight: 400,
+                        lineHeight: {
+                          xs: "18px",
+                          sm: "20px",
+                          lg: "33px",
+                          xl: "33px",
+                        },
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                      onClick={toggleDropdown2}
+                    >
+                      {post.data.page3}
+                      {/* {post.data.page3} */}
+                      {dropdownVisible2 ? (
+                        <KeyboardArrowUpSharpIcon
+                          sx={{ fontSize: "inherit" }}
+                        />
+                      ) : (
+                        <KeyboardArrowDownSharpIcon
+                          sx={{ fontSize: "inherit" }}
+                        />
+                      )}
+                    </Typography>
+                    {/* </Link> */}
+                    {dropdownVisible2 && (
+                      <Box
+                        ref={dropdownRef2}
+                        sx={{
+                          position: "absolute",
+                          top: "70px",
+                          // right: "-70px",
+                          marginTop: "5px",
+                          background: "#fff",
+                          border: "1px solid #ddd",
+                          borderRadius: "8px",
+                          width: "218px",
+                          height: "auto",
+                          boxShadow: "0px 0px 51.7px 0px #24535C1A",
+                          zIndex: 1000,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          paddingBottom: "10px",
+                        }}
+                      >
+                        <Typography sx={menustyle}>
+                          {post.data.advantages1}{" "}
+                        </Typography>
+                        <Typography sx={menustyle}>
+                          {" "}
+                          {post.data.advantages2}{" "}
+                        </Typography>
+                        <Typography sx={menustyle}>
+                          {post.data.advantages3}
+                        </Typography>
+                        <Typography sx={menustyle}>
+                          {post.data.advantages4}s
+                        </Typography>
+                      </Box>
+                    )}
                   </Box>
-                )}
-              </Box>
-              </Grid>
-              {/* <MailOutlineIcon
+                  <Link
+                    style={{ textDecoration: "none" }}
+                    href={"/blogs/blognews"}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        color: "#24535C",
+                        fontSize: {
+                          xs: "12px",
+                          sm: "18px",
+                          lg: "26.49px",
+                          xl: "26.49px",
+                        },
+                        fontWeight: 400,
+                        lineHeight: {
+                          xs: "18px",
+                          sm: "20px",
+                          lg: "33px",
+                          xl: "33px",
+                        },
+                        display: "inline-flex",
+                        alignItems: "center",
+                        gap: "8px",
+                      }}
+                    >
+                      {post.data.advantages5}
+                    </Typography>
+                  </Link>
+                </Grid>
+                {/* <MailOutlineIcon
                 sx={{
                   background: "#236B79",
                   color: "#FFFFFF",
@@ -674,34 +696,33 @@ const Header: React.FC = () => {
                 }}
                 onClick={handleContactNavigation}
               /> */}
-              <Button
-                sx={{
-                  background: "#236B79",
-                  color: "#FFFFFF",
-                  padding: "13px 28px 13px 28px",
-                  borderRadius: "100px",
-                  textTransform: "none",
-                  fontFamily:'Sans Serif Collection',
-                  fontSize: '18px',
-        fontWeight: 400,
-        // lineHeight: '44.26px',
-                  '&:hover': {
-  background: "#236B79",
-  color: "#FFFFFF",
-}
-                }}
-                onClick={handleContactNavigation}
-              >
-                {" "}
-                {post.data.contact}
-              </Button>
-           
+                <Button
+                  sx={{
+                    background: "#236B79",
+                    color: "#FFFFFF",
+                    padding: "13px 28px 13px 28px",
+                    borderRadius: "100px",
+                    textTransform: "none",
+                    fontFamily: "Sans Serif Collection",
+                    fontSize: "18px",
+                    fontWeight: 400,
+                    // lineHeight: '44.26px',
+                    "&:hover": {
+                      background: "#236B79",
+                      color: "#FFFFFF",
+                    },
+                  }}
+                  onClick={handleContactNavigation}
+                >
+                  {" "}
+                  {post.data.contact}
+                </Button>
+              </Grid>
+            )}
           </Grid>
-        )}
-      </Grid>
-    ))}
-  </div>
-  </Box>
+        ))}
+      </div>
+    </Box>
   );
 };
 
