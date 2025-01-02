@@ -173,20 +173,20 @@ const Header: React.FC = () => {
                         </Link>
                       </ListItem>
                       <ListItem>
-                        <Link
-                          href={"/nossolutionsde"}
+                        {/* <Link
+                          href={"/lecarechez"}
                           style={{ textDecoration: "none", width: "100%" }}
-                        >
+                        > */}
                           <ListItemText
-                            // primary={post.data.page2}
+                            primary={post.data.page2}
                             sx={{
                               fontFamily: "Mulish",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
                             }}
-                          >     Nos Solution</ListItemText>
-                        </Link>
+                          />
+                        {/* </Link> */}
                       </ListItem>
                       <ListItem>
                         <Box sx={{}}>
@@ -203,8 +203,8 @@ const Header: React.FC = () => {
                             }}
                             onClick={toggleDropdown1}
                           >
-                            {post.data.page2}
-                       
+                            {/* {post.data.page2} */}
+                            Nos Solution
                             {dropdownVisible1 ? (
                               <KeyboardArrowUpSharpIcon
                                 sx={{ fontSize: "inherit" }}
@@ -234,7 +234,7 @@ const Header: React.FC = () => {
                                 paddingBottom: "10px",
                               }}
                             >
-                              {/* <Link
+                              <Link
                                 href={"/nossolutionsde"}
                                 style={{ textDecoration: "none" }}
                               >
@@ -242,7 +242,7 @@ const Header: React.FC = () => {
                                 <Typography sx={menustyle}>
                                   {post.data.mission1}{" "}
                                 </Typography>
-                              </Link> */}
+                              </Link>
 
                               <Link
                                 href={"/ourexpert"}
@@ -462,7 +462,7 @@ const Header: React.FC = () => {
                       {post.data.page1}
                     </Typography>
                   </Link>
-                  <Link href={"/nossolutionsde"} style={{ textDecoration: "none" }}>
+                  {/* <Link href={"/lecarechez"} style={{ textDecoration: "none" }}> */}
                     <Typography
                       sx={{
                         fontFamily: "Mulish",
@@ -482,9 +482,9 @@ const Header: React.FC = () => {
                         },
                       }}
                     >
-                     Nos Solution
+                      {post.data.page2}
                     </Typography>
-                  </Link>
+                  {/* </Link> */}
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
                     {/* <Link
                   // href={"/nossolutionsde"}
@@ -513,8 +513,8 @@ const Header: React.FC = () => {
                       }}
                       onClick={toggleDropdown1}
                     >
-                    {post.data.page2}
-                     
+                      {/* {post.data.page3} */}
+                      Nos Solution
                       {dropdownVisible1 ? (
                         <KeyboardArrowUpSharpIcon
                           sx={{ fontSize: "inherit" }}
@@ -547,14 +547,14 @@ const Header: React.FC = () => {
                           paddingBottom: "10px",
                         }}
                       >
-                        {/* <Link
+                        <Link
                           href={"/nossolutionsde"}
                           style={{ textDecoration: "none" }}
                         >
                           <Typography sx={menustyle}>
                             {post.data.mission1}{" "}
                           </Typography>
-                        </Link>{" "} */}
+                        </Link>{" "}
                         <Link
                           href={"/ourexpert"}
                           style={{ textDecoration: "none" }}
