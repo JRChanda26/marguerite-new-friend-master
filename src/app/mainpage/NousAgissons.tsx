@@ -63,7 +63,11 @@ const NousAgissons: React.FC = () => {
               justifyContent: "center", // Centers horizontally
               alignItems: "center",
               backgroundColor: "#F6C09E",
-              padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
+              paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
+              paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
+              paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
+              paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
+              // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
               transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
               transition: "opacity 2s ease-in-out, transform 2s ease-in-out",
