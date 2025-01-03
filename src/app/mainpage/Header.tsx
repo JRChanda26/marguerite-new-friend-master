@@ -699,14 +699,17 @@ const Header: React.FC = () => {
                 <Button
                   sx={{
                     background: "#236B79",
+                    width:'121px',
+                    height:'40px',
                     color: "#FFFFFF",
+                    textAlign:'center',
                     padding: "13px 28px 13px 28px",
                     borderRadius: "100px",
                     textTransform: "none",
                     fontFamily: "Sans Serif Collection",
                     fontSize: "18px",
                     fontWeight: 400,
-                    // lineHeight: '44.26px',
+                    lineHeight: '44.26px',
                     "&:hover": {
                       background: "#236B79",
                       color: "#FFFFFF",
