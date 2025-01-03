@@ -203,8 +203,8 @@ const Header: React.FC = () => {
                             }}
                             onClick={toggleDropdown1}
                           >
-                            {/* {post.data.page2} */}
-                            Nos Solution
+                            {post.data.page4}
+                           
                             {dropdownVisible1 ? (
                               <KeyboardArrowUpSharpIcon
                                 sx={{ fontSize: "inherit" }}
@@ -358,7 +358,7 @@ const Header: React.FC = () => {
                           style={{ textDecoration: "none", width: "100%" }}
                         >
                           <ListItemText
-                            primary={post.data.advantages5}
+                            primary= {post.data.page5 }
                             sx={{
                               fontFamily: "Mulish",
                               color: "#24535C",
@@ -513,8 +513,8 @@ const Header: React.FC = () => {
                       }}
                       onClick={toggleDropdown1}
                     >
-                      {/* {post.data.page3} */}
-                      Nos Solution
+                      {post.data.page4}
+                     
                       {dropdownVisible1 ? (
                         <KeyboardArrowUpSharpIcon
                           sx={{ fontSize: "inherit" }}
@@ -683,7 +683,7 @@ const Header: React.FC = () => {
                         gap: "8px",
                       }}
                     >
-                      {post.data.advantages5}
+                       {post.data.page5}
                     </Typography>
                   </Link>
                 </Grid>

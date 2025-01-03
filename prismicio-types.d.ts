@@ -1574,15 +1574,26 @@ interface HeaderDocumentData {
   advantages4: prismic.KeyTextField;
 
   /**
-   * Advantages5 field in *Header*
+   * Page4 field in *Header*
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: header.advantages5
+   * - **API ID Path**: header.page4
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  advantages5: prismic.KeyTextField;
+  page4: prismic.KeyTextField;
+
+  /**
+   * Page5 field in *Header*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: header.page5
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  page5: prismic.KeyTextField;
 
   /**
    * Slice Zone field in *Header*
