@@ -99,10 +99,17 @@
           "placeholder": ""
         }
       },
-      "advantages5": {
+      "page4": {
         "type": "Text",
         "config": {
-          "label": "Advantages5",
+          "label": "Page4",
+          "placeholder": ""
+        }
+      },
+      "page5": {
+        "type": "Text",
+        "config": {
+          "label": "Page5",
           "placeholder": ""
         }
       },
