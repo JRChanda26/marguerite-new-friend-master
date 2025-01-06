@@ -164,7 +164,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary={post.data.page1}
                             sx={{
-                              fontFamily: "Mulish",
+                              // fontFamily: "Mulish",
+                              fontFamily: 'Helvetica, sans-serif',
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -180,7 +181,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary={post.data.page2}
                             sx={{
-                              fontFamily: "Mulish",
+                              // fontFamily: "Mulish",
+                              fontFamily: 'Helvetica, sans-serif',
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -196,7 +198,8 @@ const Header: React.FC = () => {
                 > */}
                           <Typography
                             sx={{
-                              fontFamily: "Mulish",
+                              // fontFamily: "Mulish",
+                              fontFamily: 'Helvetica, sans-serif',
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -297,7 +300,8 @@ const Header: React.FC = () => {
                 > */}
                           <Typography
                             sx={{
-                              fontFamily: "Mulish",
+                              // fontFamily: "Mulish",
+                              fontFamily: 'Helvetica, sans-serif',
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -360,7 +364,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary= {post.data.page5 }
                             sx={{
-                              fontFamily: "Mulish",
+                              // fontFamily: "Mulish",
+                              fontFamily: 'Helvetica, sans-serif',
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -442,7 +447,8 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Mulish",
+                        // fontFamily: "Mulish",
+                        fontFamily: 'Helvetica, sans-serif',
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -465,7 +471,8 @@ const Header: React.FC = () => {
                   {/* <Link href={"/lecarechez"} style={{ textDecoration: "none" }}> */}
                     <Typography
                       sx={{
-                        fontFamily: "Mulish",
+                        // fontFamily: "Mulish",
+                        fontFamily: 'Helvetica, sans-serif',
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -492,7 +499,8 @@ const Header: React.FC = () => {
                 > */}
                     <Typography
                       sx={{
-                        fontFamily: "Mulish",
+                        // fontFamily: "Mulish",
+                        fontFamily: 'Helvetica, sans-serif',
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -587,7 +595,8 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Mulish",
+                        // fontFamily: "Mulish",
+                        fontFamily: 'Helvetica, sans-serif',
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -664,7 +673,8 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Mulish",
+                        // fontFamily: "Mulish",
+                        fontFamily: 'Helvetica, sans-serif',
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
