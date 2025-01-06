@@ -544,7 +544,8 @@ const Header: React.FC = () => {
                           display: "flex",
                           flexDirection: "column",
                           alignItems: "center",
-                          paddingBottom: "10px",
+                          paddingTop:'20px',
+                          paddingBottom: "20px",
                         }}
                       >
                         <Link
@@ -637,8 +638,8 @@ const Header: React.FC = () => {
                           zIndex: 1000,
                           display: "flex",
                           flexDirection: "column",
-                          alignItems: "center",
-                          paddingBottom: "10px",
+                          alignItems: "stretch",
+                          padding: "20px 5px 20px 40px",
                         }}
                       >
                         <Typography sx={menustyle}>
@@ -652,7 +653,7 @@ const Header: React.FC = () => {
                           {post.data.advantages3}
                         </Typography>
                         <Typography sx={menustyle}>
-                          {post.data.advantages4}s
+                          {post.data.advantages4}
                         </Typography>
                       </Box>
                     )}
