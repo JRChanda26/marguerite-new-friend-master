@@ -436,9 +436,15 @@ const Header: React.FC = () => {
                 )}
                 <Grid
                   sx={{
+                    // display: "flex",
+                    // flexDirection: "row",
+                    // gap: "45px",
+
                     display: "flex",
                     flexDirection: "row",
-                    gap: "45px",
+                    gap: "35px",
+                    flexWrap: "nowrap",
+                  
                   }}
                 >
                   <Link
@@ -463,6 +469,9 @@ const Header: React.FC = () => {
                           lg: "33px",
                           xl: "33px",
                         },
+                        whiteSpace: "nowrap",
+                        overflow: "hidden",   
+                        textOverflow: "ellipsis",
                       }}
                     >
                       {post.data.page1}
@@ -487,6 +496,9 @@ const Header: React.FC = () => {
                           lg: "33px",
                           xl: "33px",
                         },
+                        whiteSpace: "nowrap",
+                        // overflow: "hidden",   
+                        // textOverflow: "ellipsis",
                       }}
                     >
                       {post.data.page2}
@@ -518,6 +530,8 @@ const Header: React.FC = () => {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "8px",
+                        whiteSpace: "nowrap",
+                        
                       }}
                       onClick={toggleDropdown1}
                     >
@@ -614,6 +628,7 @@ const Header: React.FC = () => {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "8px",
+                        whiteSpace: "nowrap",
                       }}
                       onClick={toggleDropdown2}
                     >
@@ -692,6 +707,7 @@ const Header: React.FC = () => {
                         display: "inline-flex",
                         alignItems: "center",
                         gap: "8px",
+                        whiteSpace: "nowrap",
                       }}
                     >
                        {post.data.page5}
@@ -714,7 +730,7 @@ const Header: React.FC = () => {
                     height:'40px',
                     color: "#FFFFFF",
                     textAlign:'center',
-                    padding: "13px 28px 13px 28px",
+                    padding: "13px 38px 13px 38px",
                     borderRadius: "100px",
                     textTransform: "none",
                     fontFamily: "Sans Serif Collection",
