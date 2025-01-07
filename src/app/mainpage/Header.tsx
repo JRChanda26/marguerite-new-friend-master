@@ -714,39 +714,17 @@ const Header: React.FC = () => {
                     </Typography>
                   </Link>
                 </Grid>
-                {/* <MailOutlineIcon
+                <MailOutlineIcon
                 sx={{
                   background: "#236B79",
                   color: "#FFFFFF",
                   padding: "10px",
                   borderRadius: "30px",
+                  cursor: "pointer",
                 }}
                 onClick={handleContactNavigation}
-              /> */}
-                <Button
-                  sx={{
-                    background: "#236B79",
-                    width:'121px',
-                    height:'40px',
-                    color: "#FFFFFF",
-                    textAlign:'center',
-                    padding: "13px 38px 13px 38px",
-                    borderRadius: "100px",
-                    textTransform: "none",
-                    fontFamily: "Sans Serif Collection",
-                    fontSize: "18px",
-                    fontWeight: 400,
-                    lineHeight: '44.26px',
-                    "&:hover": {
-                      background: "#236B79",
-                      color: "#FFFFFF",
-                    },
-                  }}
-                  onClick={handleContactNavigation}
-                >
-                  {" "}
-                  {post.data.contact}
-                </Button>
+              />
+               
               </Grid>
             )}
           </Grid>
