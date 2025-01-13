@@ -148,8 +148,8 @@ export default function NeManquez() {
               sx={{
                 color: "#24535C",
                 fontFamily: "Mulish",
-                fontSize: { xs: "15px", sm: "22px", lg: "38px", xl: "41.81px" },
-                lineHeight: { xs: "25px", sm: "28px", lg: "52.47px", xl: "52.47px" },
+                fontSize: { xs: "14px", sm: "22px", lg: "38px", xl: "41.81px" },
+                lineHeight: { xs: "15px", sm: "28px", lg: "52.47px", xl: "52.47px" },
                 fontWeight: 700,
               }}
             >
@@ -160,10 +160,10 @@ export default function NeManquez() {
                 color: "#24535C",
                 fontFamily: "Mulish",
                 fontSize: { xs: "10px", sm: "14px", lg: "18px", xl: "23.52px" },
-                lineHeight: { xs: "12px", sm: "28px", lg: "160%", xl: "160%" },
+                lineHeight: { xs: "0px", sm: "28px", lg: "160%", xl: "160%" },
                 fontWeight: 400,
                 padding: {
-                  xs: "0px 0px 8px 0px",
+                  xs: "5px 0px 15px 0px",
                   sm: "0px 0px 40px 0px",
                   lg: "15px 0px 100px 0px",
                   xl: "15px 0px 120px 0px",
@@ -195,10 +195,10 @@ export default function NeManquez() {
               display: "flex",
               flexDirection: { xs: "row", sm: "row" },
               justifyContent: "space-between",
-              padding: {xs:"7px",sm:"5px 10px",lg:"5px 10px",xl:"5px 10px"},
+              padding: {xs:"0px 2px",sm:"5px 10px",lg:"5px 10px",xl:"5px 10px"},
               alignItems: "center",
               boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
-              height: { xs: "25px", sm: "50px", lg: "70px", xl: "86.58px" },
+              height: { xs: "20px", sm: "50px", lg: "70px", xl: "86.58px" },
               width: { xs: "100%", sm: "100%", lg: "0px", xl: "786px" },
             }}
           >
