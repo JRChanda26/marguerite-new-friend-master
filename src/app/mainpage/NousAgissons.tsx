@@ -79,24 +79,24 @@ const NousAgissons: React.FC = () => {
                 // display: "flex",
                 // flexDirection: "column",
                 // justifyContent: "center",
-                width: "700px",
-      height: "510px",
-      // top: "285px",
-      // left: "52px",
-      gap: "0px",
-      opacity: "0px",
-      backgroundColor: "#F6C09E",
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      // textAlign: "center",
-      // padding: "20px",
+                // width: "700px",
+                // height: "510px",
+                // top: "285px",
+                // left: "52px",
+                gap: "0px",
+                opacity: "0px",
+                backgroundColor: "#F6C09E",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                // textAlign: "center",
+                // padding: "20px",
               }}
             >
               <Typography
                 sx={{
-                  fontFamily: 'Helvetica, sans-serif',
+                  fontFamily: "Helvetica, sans-serif",
                   fontWeight: 400,
                   fontSize: {
                     xs: "20px",
@@ -104,9 +104,9 @@ const NousAgissons: React.FC = () => {
                     lg: "45px",
                     xl: "64px",
                   },
-                 
+
                   lineHeight: {
-                    xs: "15px",
+                    xs: "18px",
                     sm: "30px",
                     lg: "40px",
                     xl: "50px",
@@ -119,89 +119,90 @@ const NousAgissons: React.FC = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontFamily: 'Helvetica, sans-serif',
+                  fontFamily: "Sans Serif Collection",
                   color: "#24535C",
-                  fontWeight: 700,
-                  paddingTop:'33px',
+                  fontWeight: 400,
+                  paddingTop: {xs:'8px',sm:'25px',lg:'33px',xl:'33px'},
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
                     lg: "40px",
                     xl: "58px",
                   },
-               
+
                   lineHeight: {
                     xs: "12px",
                     sm: "30px",
                     lg: "40px",
-                    xl: "50px",
+                    xl: "69.6px",
                   },
-                  letterSpacing: "0%",//
+                  letterSpacing: "0%",
                 }}
               >
                 {post.data.title}
               </Typography>
               <Link
-                          href={"/contact"}
-                          style={{ textDecoration: "none", width: "100%" }}
-                        >
-              <Button
-                sx={{
-                  display: "flex",
-                  flexDirection: "row",
-                  background: "#24535C",
-                  borderRadius: "82px",
-                  top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
-                  height: { xs: "25px", sm: "40px", lg: "66px", xl: "66px" },
-                  width: {
-                    xs: "80px",
-                    sm: "150px",
-                    lg: "203.85px",
-                    xl: "203.85px",
-                  },
-                  justifyContent: "space-around",
-                  "&:focus": {
-                    background: "#24535C",
-                  },
-                  "&:hover": {
-                    background: "#24535C",
-                  },
-                }}
+                href={"/contact"}
+                style={{ textDecoration: "none", width: "100%" }}
               >
-                <Typography
+                <Button
                   sx={{
-                    fontFamily: 'Helvetica, sans-serif',
-                    fontWeight: 400,
-                    fontSize: {
-                      xs: "8px",
-                      sm: "12px",
-                      lg: "15.2px",
-                      xl: "15.2px",
+                    display: "flex",
+                    flexDirection: "row",
+                    background: "#24535C",
+                    borderRadius: "82px",
+                    top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
+                    height: { xs: "22px", sm: "40px", lg: "66px", xl: "66px" },
+                    width: {
+                      xs: "80px",
+                      sm: "150px",
+                      lg: "203.85px",
+                      xl: "203.85px",
                     },
-                    lineHeight: {
-                      xs: "10px",
-                      sm: "12px",
-                      lg: "50px",
-                      xl: "50px",
+                    justifyContent: "space-around",
+                    "&:focus": {
+                      background: "#24535C",
                     },
-                    letterSpacing: "0%",
-                    color: "#FFFFFF",
-                    textTransform: "none",
+                    "&:hover": {
+                      background: "#24535C",
+                    },
                   }}
                 >
-                  {post.data.button_text}
-                </Typography>
-                {post?.data.button_icon && (
-                  <img
-                    src={post.data.button_icon.url || ""}
-                    alt={post.data.button_icon}
-                    style={{
-                      width: "20%",
-                      height: "auto",
+                  <Typography
+                    sx={{
+                      fontFamily: "Helvetica, sans-serif",
+                      fontWeight: 400,
+                      fontSize: {
+                        xs: "7px",
+                        sm: "12px",
+                        lg: "15.2px",
+                        xl: "15.2px",
+                      },
+                      lineHeight: {
+                        xs: "0px",
+                        sm: "12px",
+                        lg: "50px",
+                        xl: "50px",
+                      },
+                      letterSpacing: "0%",
+                      color: "#FFFFFF",
+                      textTransform: "none",
                     }}
-                  />
-                )}
-              </Button>
+                  >
+                    {post.data.button_text}
+                  </Typography>
+                  {post?.data.button_icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.button_icon.url || ""}
+                      alt={post.data.button_icon}
+                      style={{
+                        width: "20%",
+                        height: "auto",
+                      }}
+                    />
+                  )}
+                </Button>
               </Link>
             </Box>
           </Grid>
@@ -220,6 +221,7 @@ const NousAgissons: React.FC = () => {
             }}
           >
             {post?.data.background_image && (
+              // eslint-disable-next-line @next/next/no-img-element
               <img
                 src={post.data.background_image.url || ""}
                 alt={post.data.background_image.alt || "Background"}
