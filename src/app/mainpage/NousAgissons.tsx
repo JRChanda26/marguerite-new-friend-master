@@ -5,6 +5,7 @@ import { client } from "../../../lib/prismic-configuration";
 import { Box, Button, Grid, Typography } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const NousAgissons: React.FC = () => {
   const [nousPage, setNousPage] = useState<any[]>([]);
@@ -26,6 +27,12 @@ const NousAgissons: React.FC = () => {
     }, 500);
   }, []);
 
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/contact");
+  };
+  
   return (
     <div>
       {nousPage.map((post: any) => (
@@ -37,8 +44,10 @@ const NousAgissons: React.FC = () => {
             marginTop: {
               xs: "20px",
               sm: "-25px",
-              lg: "-90px",
-              xl: "-100px",
+              // lg: "-90px",
+              lg: "0px",
+              // xl: "-100px",
+              xl: "0px",
             },
             backgroundColor: "#F6C09E",
             alignItems: "stretch",
@@ -52,7 +61,8 @@ const NousAgissons: React.FC = () => {
             lg={4.5}
             xl={4.5}
             sx={{
-              marginTop: "11%",
+              // marginTop:"11%",
+              marginTop: { xs: "11%", sm: "11%", lg: "3%", xl: "4%" },
               // margin: {
               //   xs: "10% 60% 0% 0%",
               //   sm: "13% 65% 0% 0%",
@@ -89,7 +99,7 @@ const NousAgissons: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center",
+                // alignItems: "center",
                 // textAlign: "center",
                 // padding: "20px",
               }}
@@ -122,7 +132,7 @@ const NousAgissons: React.FC = () => {
                   fontFamily: "Sans Serif Collection",
                   color: "#24535C",
                   fontWeight: 400,
-                  paddingTop: {xs:'8px',sm:'25px',lg:'33px',xl:'33px'},
+                  paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
@@ -141,10 +151,6 @@ const NousAgissons: React.FC = () => {
               >
                 {post.data.title}
               </Typography>
-              <Link
-                href={"/contact"}
-                style={{ textDecoration: "none", width: "100%" }}
-              >
                 <Button
                   sx={{
                     display: "flex",
@@ -167,6 +173,7 @@ const NousAgissons: React.FC = () => {
                       background: "#24535C",
                     },
                   }}
+                  onClick={handleNavigation}
                 >
                   <Typography
                     sx={{
@@ -203,7 +210,6 @@ const NousAgissons: React.FC = () => {
                     />
                   )}
                 </Button>
-              </Link>
             </Box>
           </Grid>
 
