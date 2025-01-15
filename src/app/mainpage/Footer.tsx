@@ -151,7 +151,7 @@ const Footer: React.FC = () => {
             </Typography>
           ))}
         </Grid>
-        {/* <Grid item xs={12} sm={3} lg={3} xl={3}>
+         <Grid item xs={12} sm={3} lg={3} xl={3}>
           {allLinkText.slice(4).map((text: any, index: number) => (
             <Typography
               key={index}
@@ -174,8 +174,8 @@ const Footer: React.FC = () => {
               {text}
             </Typography>
           ))}
-        </Grid> */}
-        <Grid item xs={12} sm={3} lg={3} xl={3}>
+        </Grid> 
+        {/* <Grid item xs={12} sm={3} lg={3} xl={3}>
           {allLinkText.slice(4).map((text: any, index: number) => (
             <React.Fragment key={index}>
               {index === 1 ? (
@@ -255,7 +255,7 @@ const Footer: React.FC = () => {
               )}
             </React.Fragment>
           ))}
-        </Grid>
+        </Grid> */}
       </Grid>
     </Box>
   );
