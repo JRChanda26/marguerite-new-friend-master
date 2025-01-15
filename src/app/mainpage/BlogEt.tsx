@@ -1,8 +1,9 @@
 "use client";
-import { Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography } from "@mui/material";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
+import { useRouter } from "next/navigation";
 
 export default function BlogEt() {
   const [blogPage, setBlogPage] = useState<any[]>([]);
@@ -21,7 +22,7 @@ export default function BlogEt() {
     textAlign: "left",
     paddingTop: "31.9px",
     // fontFamily: "Mulish",
-    fontFamily: 'Helvetica, sans-serif',
+    fontFamily: "Helvetica, sans-serif",
   };
 
   const description: React.CSSProperties = {
@@ -30,7 +31,7 @@ export default function BlogEt() {
     textAlign: "left",
     paddingTop: "21.27px",
     // fontFamily: "Mulish",
-    fontFamily: 'Helvetica, sans-serif',
+    fontFamily: "Helvetica, sans-serif",
   };
 
   const items = [
@@ -44,6 +45,12 @@ export default function BlogEt() {
   const repeatItems = Array.from({ length: 3 }, () => items[0]);
 
   const [isHovered, setIsHovered] = useState(null);
+
+  const router = useRouter();
+
+  const handleNavigation = () => {
+    router.push("/blogs/blog");
+  };
 
   return (
     <div>
@@ -67,7 +74,7 @@ export default function BlogEt() {
               lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "120%" },
               color: "#161C2D",
               // fontFamily: "Mulish",
-              fontFamily: 'Helvetica, sans-serif',
+              fontFamily: "Helvetica, sans-serif",
               padding: {
                 xs: "20px 0px",
                 sm: "50px 0px",
@@ -223,28 +230,34 @@ export default function BlogEt() {
             </Grid>
           ))}
         </Grid>
-        <Link href="/blogs/blog" style={{ textDecoration: "none" }}>
-          <Typography
-            sx={{
-              // fontFamily: "Mulish",
-              fontFamily: 'Helvetica, sans-serif',
-              color: "#FFFFFF",
-              fontSize: { xs: "14px", sm: "25px", lg: "30px", xl: "30px" },
-              textAlign: "center",
-              borderRadius: "12px",
-              padding: "8px 15px",
+        <Button
+          sx={{
+            // fontFamily: "Mulish",
+            fontFamily: "Helvetica, sans-serif",
+            color: "#FFFFFF",
+            fontSize: { xs: "14px", sm: "25px", lg: "30px", xl: "30px" },
+            textAlign: "center",
+            borderRadius: "12px",
+            padding: "8px 15px",
+            background: "#24535C",
+            margin: {
+              xs: "0px 0px  50px 0px",
+              sm: "20px 0px  50px 0px",
+              lg: "50px 0px  100px 0px",
+              xl: "0px 0px  159px 0px",
+            },
+            textTransform: "none",
+            "&:focus": {
               background: "#24535C",
-              margin: {
-                xs: "0px 0px  50px 0px",
-                sm: "20px 0px  50px 0px",
-                lg: "50px 0px  100px 0px",
-                xl: "0px 0px  159px 0px",
-              },
-            }}
-          >
-            {blogPage[0]?.data.footer_text}
-          </Typography>
-        </Link>
+            },
+            "&:hover": {
+              background: "#24535C",
+            },
+          }}
+          onClick={handleNavigation}
+        >
+          {blogPage[0]?.data.footer_text}
+        </Button>
       </Grid>
     </div>
   );

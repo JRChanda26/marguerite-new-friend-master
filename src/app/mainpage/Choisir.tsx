@@ -22,7 +22,6 @@ const Choisir: React.FC = () => {
   const [isCardHovered, setIsCardHovered] = useState<number | null>(null);
 
   const bottomBackground = choisirPage[0]?.data?.bottom_background?.url || "";
-  
 
   return (
     <Box
@@ -94,8 +93,8 @@ const Choisir: React.FC = () => {
                     xl: "41px 348px 69px 348px",
                   },
                   textAlign: "center",
-                  maxWidth: "75%", 
-                  margin: "0 auto", 
+                  maxWidth: "75%",
+                  margin: "0 auto",
                 }}
               >
                 {post.data.description}
@@ -124,14 +123,14 @@ const Choisir: React.FC = () => {
         <Grid
           sx={{
             height: {
-              xs: isCardHovered === 1 ? "340px" : "320px", 
-              sm: isCardHovered === 1 ? "380px" : "360px", 
+              xs: isCardHovered === 1 ? "340px" : "320px",
+              sm: isCardHovered === 1 ? "380px" : "360px",
               lg: isCardHovered === 1 ? "600px" : "480px",
               xl: isCardHovered === 1 ? "629.52px" : "476px",
             },
             width: {
-              xs: isCardHovered === 1 ? "300px" : "280px", 
-              sm: isCardHovered === 1 ? "320px" : "300px", 
+              xs: isCardHovered === 1 ? "300px" : "280px",
+              sm: isCardHovered === 1 ? "320px" : "300px",
               lg: isCardHovered === 1 ? "420px" : "380px",
               xl: isCardHovered === 1 ? "486px" : "402px",
             },
@@ -166,8 +165,8 @@ const Choisir: React.FC = () => {
                   fontWeight: 400,
                   opacity: "90%",
                   fontSize: {
-                    xs: isCardHovered === 1 ? "20px" : "18px", 
-                    sm: isCardHovered === 1 ? "24px" : "22px", 
+                    xs: isCardHovered === 1 ? "20px" : "18px",
+                    sm: isCardHovered === 1 ? "24px" : "22px",
                     lg: isCardHovered === 1 ? "29.3px" : "24px",
                     xl: isCardHovered === 1 ? "29.3px" : "24px",
                   },
@@ -192,9 +191,9 @@ const Choisir: React.FC = () => {
                   opacity: "80%",
                   fontStyle: "italic",
                   fontSize: {
-                    xs: isCardHovered === 1 ? "14px" : "12px", 
-                    sm: isCardHovered === 1 ? "16px" : "14px", 
-                    lg: isCardHovered === 1 ? "19.36px" : "16px", 
+                    xs: isCardHovered === 1 ? "14px" : "12px",
+                    sm: isCardHovered === 1 ? "16px" : "14px",
+                    lg: isCardHovered === 1 ? "19.36px" : "16px",
                     xl: isCardHovered === 1 ? "19.36px" : "16px",
                   },
                   lineHeight: {
@@ -212,10 +211,6 @@ const Choisir: React.FC = () => {
               >
                 {post.data.card_description1}
               </Typography>
-              <Link
-                          href={"/lecarechez"}
-                          style={{ textDecoration: "none", width: "100%" }}
-                        >
               <Grid
                 sx={{
                   display: "flex",
@@ -231,39 +226,46 @@ const Choisir: React.FC = () => {
                 onMouseEnter={() => setIsHovered(1)}
                 onMouseLeave={() => setIsHovered(null)}
               >
-                
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: {
-                      xs: isCardHovered === 1 ? "14px" : "12px", 
-                      sm: isCardHovered === 1 ? "16px" : "14px", 
-                      lg: isCardHovered === 1 ? "16.94px" : "14px", 
-                      xl: isCardHovered === 1 ? "16.94px" : "14px",
-                    },
-                    // lineHeight: "185%",
-                    lineHeight: "31.3px",
-                    paddingRight: "14.3px",
+                <Link
+                  href={"/lecarechez"}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    textDecoration: "none",
                   }}
                 >
-                  {post.data.link_text}
-                </Typography>
-                {post?.data.link_icon && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post.data.link_icon.url || undefined}
-                    alt={post.data.link_icon.alt || "Image"}
-                    style={{
-                      width: "48px",
-                      height: "24px",
+                  <Typography
+                    sx={{
+                      fontFamily: "Mulish",
+                      color: "#24535C",
+                      fontWeight: 400,
+                      fontStyle: "italic",
+                      fontSize: {
+                        xs: isCardHovered === 1 ? "14px" : "12px",
+                        sm: isCardHovered === 1 ? "16px" : "14px",
+                        lg: isCardHovered === 1 ? "16.94px" : "14px",
+                        xl: isCardHovered === 1 ? "16.94px" : "14px",
+                      },
+                      // lineHeight: "185%",
+                      lineHeight: "31.3px",
+                      paddingRight: "14.3px",
                     }}
-                  />
-                )}
+                  >
+                    {post.data.link_text}
+                  </Typography>
+                  {post?.data.link_icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.link_icon.url || undefined}
+                      alt={post.data.link_icon.alt || "Image"}
+                      style={{
+                        width: "48px",
+                        height: "30px",
+                      }}
+                    />
+                  )}
+                </Link>
               </Grid>
-              </Link>
             </div>
           ))}
         </Grid>
@@ -327,15 +329,15 @@ const Choisir: React.FC = () => {
                     xs:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "18px"
-                        : "20px", 
+                        : "20px",
                     sm:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "22px"
-                        : "24px", 
+                        : "24px",
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "24px"
-                        : "29.3px", 
+                        : "29.3px",
                     xl:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "24px"
@@ -376,7 +378,7 @@ const Choisir: React.FC = () => {
                     sm:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "14px"
-                        : "16px", 
+                        : "16px",
                     lg:
                       isCardHovered === 1 || isCardHovered === 2
                         ? "16px"
@@ -407,10 +409,6 @@ const Choisir: React.FC = () => {
               >
                 {post.data.card_description2}
               </Typography>
-              <Link
-                          href={"/lecarechez"}
-                          style={{ textDecoration: "none", width: "100%" }}
-                        >
               <Grid
                 sx={{
                   display: "flex",
@@ -433,49 +431,58 @@ const Choisir: React.FC = () => {
                 onMouseEnter={() => setIsHovered(2)}
                 onMouseLeave={() => setIsHovered(null)}
               >
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: {
-                      xs:
-                        isCardHovered === 1 || isCardHovered === 2
-                          ? "12px"
-                          : "14px", 
-                      sm:
-                        isCardHovered === 1 || isCardHovered === 2
-                          ? "14px"
-                          : "16px", 
-                      lg:
-                        isCardHovered === 1 || isCardHovered === 2
-                          ? "14px"
-                          : "16.94px", 
-                      xl:
-                        isCardHovered === 1 || isCardHovered === 2
-                          ? "14px"
-                          : "16.94px",
-                    },
-                    // lineHeight: "185%",
-                    lineHeight: "31.3px",
-                    paddingRight: "14.3px",
+                <Link
+                  href={"/lecarechez"}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    textDecoration: "none",
                   }}
                 >
-                  {post.data.link_text}
-                </Typography>
-                {post?.data.link_icon && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post.data.link_icon.url || undefined}
-                    alt={post.data.link_icon.alt || "Image"}
-                    style={{
-                      width: "48px",
-                      height: "24px",
+                  <Typography
+                    sx={{
+                      fontFamily: "Mulish",
+                      color: "#24535C",
+                      fontWeight: 400,
+                      fontStyle: "italic",
+                      fontSize: {
+                        xs:
+                          isCardHovered === 1 || isCardHovered === 2
+                            ? "12px"
+                            : "14px",
+                        sm:
+                          isCardHovered === 1 || isCardHovered === 2
+                            ? "14px"
+                            : "16px",
+                        lg:
+                          isCardHovered === 1 || isCardHovered === 2
+                            ? "14px"
+                            : "16.94px",
+                        xl:
+                          isCardHovered === 1 || isCardHovered === 2
+                            ? "14px"
+                            : "16.94px",
+                      },
+                      // lineHeight: "185%",
+                      lineHeight: "31.3px",
+                      paddingRight: "14.3px",
                     }}
-                  />
-                )}
-              </Grid></Link>
+                  >
+                    {post.data.link_text}
+                  </Typography>
+                  {post?.data.link_icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.link_icon.url || undefined}
+                      alt={post.data.link_icon.alt || "Image"}
+                      style={{
+                        width: "48px",
+                        height: "30px",
+                      }}
+                    />
+                  )}
+                </Link>
+              </Grid>
             </div>
           ))}
         </Grid>
@@ -484,13 +491,13 @@ const Choisir: React.FC = () => {
           sx={{
             height: {
               xs: isCardHovered === 2 ? "340px" : "320px",
-              sm: isCardHovered === 2 ? "380px" : "360px", 
+              sm: isCardHovered === 2 ? "380px" : "360px",
               lg: isCardHovered === 2 ? "600px" : "480px",
               xl: isCardHovered === 2 ? "629.52px" : "476px",
             },
             width: {
-              xs: isCardHovered === 2 ? "300px" : "280px", 
-              sm: isCardHovered === 2 ? "320px" : "300px", 
+              xs: isCardHovered === 2 ? "300px" : "280px",
+              sm: isCardHovered === 2 ? "320px" : "300px",
               lg: isCardHovered === 2 ? "420px" : "380px",
               xl: isCardHovered === 2 ? "486px" : "402px",
             },
@@ -525,9 +532,9 @@ const Choisir: React.FC = () => {
                   fontWeight: 400,
                   opacity: "90%",
                   fontSize: {
-                    xs: isCardHovered === 2 ? "20px" : "18px", 
-                    sm: isCardHovered === 2 ? "24px" : "22px", 
-                    lg: isCardHovered === 2 ? "29.3px" : "24px", 
+                    xs: isCardHovered === 2 ? "20px" : "18px",
+                    sm: isCardHovered === 2 ? "24px" : "22px",
+                    lg: isCardHovered === 2 ? "29.3px" : "24px",
                     xl: isCardHovered === 2 ? "29.3px" : "24px",
                   },
                   lineHeight: { xs: "25px", sm: "32px", lg: "auto" },
@@ -547,9 +554,9 @@ const Choisir: React.FC = () => {
                   opacity: "80%",
                   fontStyle: "italic",
                   fontSize: {
-                    xs: isCardHovered === 2 ? "14px" : "12px", 
-                    sm: isCardHovered === 2 ? "16px" : "14px", 
-                    lg: isCardHovered === 2 ? "19.36px" : "16px", 
+                    xs: isCardHovered === 2 ? "14px" : "12px",
+                    sm: isCardHovered === 2 ? "16px" : "14px",
+                    lg: isCardHovered === 2 ? "19.36px" : "16px",
                     xl: isCardHovered === 2 ? "19.36px" : "16px",
                   },
                   lineHeight: {
@@ -568,10 +575,6 @@ const Choisir: React.FC = () => {
               >
                 {post.data.card_description3}
               </Typography>
-              <Link
-                          href={"/lecarechez"}
-                          style={{ textDecoration: "none", width: "100%" }}
-                        >
               <Grid
                 sx={{
                   display: "flex",
@@ -587,38 +590,46 @@ const Choisir: React.FC = () => {
                 onMouseEnter={() => setIsHovered(3)}
                 onMouseLeave={() => setIsHovered(null)}
               >
-                
-                <Typography
-                  sx={{
-                    fontFamily: "Mulish",
-                    color: "#24535C",
-                    fontWeight: 400,
-                    fontStyle: "italic",
-                    fontSize: {
-                      xs: isCardHovered === 2 ? "14px" : "12px", 
-                      sm: isCardHovered === 2 ? "16px" : "14px", 
-                      lg: isCardHovered === 2 ? "16.94px" : "14px", 
-                      xl: isCardHovered === 2 ? "16.94px" : "14px",
-                    },
-                    // lineHeight: "185%",
-                    lineHeight: "31.3px",
-                    paddingRight: "14.3px",
+                <Link
+                  href={"/lecarechez"}
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    textDecoration: "none",
                   }}
                 >
-                  {post.data.link_text}
-                </Typography>
-                {post?.data.link_icon && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post.data.link_icon.url || undefined}
-                    alt={post.data.link_icon.alt || "Image"}
-                    style={{
-                      width: "48px",
-                      height: "24px",
+                  <Typography
+                    sx={{
+                      fontFamily: "Mulish",
+                      color: "#24535C",
+                      fontWeight: 400,
+                      fontStyle: "italic",
+                      fontSize: {
+                        xs: isCardHovered === 2 ? "14px" : "12px",
+                        sm: isCardHovered === 2 ? "16px" : "14px",
+                        lg: isCardHovered === 2 ? "16.94px" : "14px",
+                        xl: isCardHovered === 2 ? "16.94px" : "14px",
+                      },
+                      // lineHeight: "185%",
+                      lineHeight: "31.3px",
+                      paddingRight: "14.3px",
                     }}
-                  />
-                )}
-              </Grid></Link>
+                  >
+                    {post.data.link_text}
+                  </Typography>
+                  {post?.data.link_icon && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.link_icon.url || undefined}
+                      alt={post.data.link_icon.alt || "Image"}
+                      style={{
+                        width: "48px",
+                        height: "30px",
+                      }}
+                    />
+                  )}
+                </Link>
+              </Grid>
             </div>
           ))}
         </Grid>
