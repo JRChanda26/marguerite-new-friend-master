@@ -165,7 +165,7 @@ const Header: React.FC = () => {
                             primary={post.data.page1}
                             sx={{
                               // fontFamily: "Mulish",
-                              fontFamily: 'Helvetica, sans-serif',
+                              fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -178,16 +178,16 @@ const Header: React.FC = () => {
                           href={"/lecarechez"}
                           style={{ textDecoration: "none", width: "100%" }}
                         > */}
-                          <ListItemText
-                            primary={post.data.page2}
-                            sx={{
-                              // fontFamily: "Mulish",
-                              fontFamily: 'Helvetica, sans-serif',
-                              color: "#24535C",
-                              fontSize: "18px",
-                              fontWeight: 400,
-                            }}
-                          />
+                        <ListItemText
+                          primary={post.data.page2}
+                          sx={{
+                            // fontFamily: "Mulish",
+                            fontFamily: "Helvetica, sans-serif",
+                            color: "#24535C",
+                            fontSize: "18px",
+                            fontWeight: 400,
+                          }}
+                        />
                         {/* </Link> */}
                       </ListItem>
                       <ListItem>
@@ -199,7 +199,7 @@ const Header: React.FC = () => {
                           <Typography
                             sx={{
                               // fontFamily: "Mulish",
-                              fontFamily: 'Helvetica, sans-serif',
+                              fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -207,7 +207,7 @@ const Header: React.FC = () => {
                             onClick={toggleDropdown1}
                           >
                             {post.data.page4}
-                           
+
                             {dropdownVisible1 ? (
                               <KeyboardArrowUpSharpIcon
                                 sx={{ fontSize: "inherit" }}
@@ -301,7 +301,7 @@ const Header: React.FC = () => {
                           <Typography
                             sx={{
                               // fontFamily: "Mulish",
-                              fontFamily: 'Helvetica, sans-serif',
+                              fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -362,10 +362,10 @@ const Header: React.FC = () => {
                           style={{ textDecoration: "none", width: "100%" }}
                         >
                           <ListItemText
-                            primary= {post.data.page5 }
+                            primary={post.data.page5}
                             sx={{
                               // fontFamily: "Mulish",
-                              fontFamily: 'Helvetica, sans-serif',
+                              fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -374,33 +374,15 @@ const Header: React.FC = () => {
                         </Link>
                       </ListItem>
                       <ListItem onClick={handleContactNavigation}>
-                        <Button
+                        <MailOutlineIcon
                           sx={{
                             background: "#236B79",
                             color: "#FFFFFF",
-                            padding: "8px 18px 8px 18px",
-                            fontFamily: "Sans Serif Collection",
-                            borderRadius: "100px",
-                            textTransform: "none",
-                            "&:hover": {
-                              background: "#236B79",
-                              color: "#FFFFFF",
-                            },
+                            padding: "10px",
+                            borderRadius: "30px",
+                            marginRight: "10px",
                           }}
-                          onClick={handleContactNavigation}
-                        >
-                          {" "}
-                          {post.data.contact}
-                        </Button>
-                        {/* <MailOutlineIcon
-                      sx={{
-                        background: "#236B79",
-                        color: "#FFFFFF",
-                        padding: "10px",
-                        borderRadius: "30px",
-                        marginRight: "10px",
-                      }}
-                    /> */}
+                        />
                       </ListItem>
                     </List>
                   </Box>
@@ -444,7 +426,6 @@ const Header: React.FC = () => {
                     flexDirection: "row",
                     gap: "35px",
                     flexWrap: "nowrap",
-                  
                   }}
                 >
                   <Link
@@ -454,7 +435,7 @@ const Header: React.FC = () => {
                     <Typography
                       sx={{
                         // fontFamily: "Mulish",
-                        fontFamily: 'Helvetica, sans-serif',
+                        fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -470,7 +451,7 @@ const Header: React.FC = () => {
                           xl: "33px",
                         },
                         whiteSpace: "nowrap",
-                        overflow: "hidden",   
+                        overflow: "hidden",
                         textOverflow: "ellipsis",
                       }}
                     >
@@ -478,31 +459,31 @@ const Header: React.FC = () => {
                     </Typography>
                   </Link>
                   {/* <Link href={"/lecarechez"} style={{ textDecoration: "none" }}> */}
-                    <Typography
-                      sx={{
-                        // fontFamily: "Mulish",
-                        fontFamily: 'Helvetica, sans-serif',
-                        color: "#24535C",
-                        fontSize: {
-                          xs: "12px",
-                          sm: "18px",
-                          lg: "26.49px",
-                          xl: "26.49px",
-                        },
-                        fontWeight: 400,
-                        lineHeight: {
-                          xs: "18px",
-                          sm: "20px",
-                          lg: "33px",
-                          xl: "33px",
-                        },
-                        whiteSpace: "nowrap",
-                        // overflow: "hidden",   
-                        // textOverflow: "ellipsis",
-                      }}
-                    >
-                      {post.data.page2}
-                    </Typography>
+                  <Typography
+                    sx={{
+                      // fontFamily: "Mulish",
+                      fontFamily: "Helvetica, sans-serif",
+                      color: "#24535C",
+                      fontSize: {
+                        xs: "12px",
+                        sm: "18px",
+                        lg: "26.49px",
+                        xl: "26.49px",
+                      },
+                      fontWeight: 400,
+                      lineHeight: {
+                        xs: "18px",
+                        sm: "20px",
+                        lg: "33px",
+                        xl: "33px",
+                      },
+                      whiteSpace: "nowrap",
+                      // overflow: "hidden",
+                      // textOverflow: "ellipsis",
+                    }}
+                  >
+                    {post.data.page2}
+                  </Typography>
                   {/* </Link> */}
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
                     {/* <Link
@@ -512,7 +493,7 @@ const Header: React.FC = () => {
                     <Typography
                       sx={{
                         // fontFamily: "Mulish",
-                        fontFamily: 'Helvetica, sans-serif',
+                        fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -531,12 +512,11 @@ const Header: React.FC = () => {
                         alignItems: "center",
                         gap: "8px",
                         whiteSpace: "nowrap",
-                        
                       }}
                       onClick={toggleDropdown1}
                     >
                       {post.data.page4}
-                     
+
                       {dropdownVisible1 ? (
                         <KeyboardArrowUpSharpIcon
                           sx={{ fontSize: "inherit" }}
@@ -566,7 +546,7 @@ const Header: React.FC = () => {
                           display: "flex",
                           flexDirection: "column",
                           alignItems: "center",
-                          paddingTop:'20px',
+                          paddingTop: "20px",
                           paddingBottom: "20px",
                         }}
                       >
@@ -610,7 +590,7 @@ const Header: React.FC = () => {
                     <Typography
                       sx={{
                         // fontFamily: "Mulish",
-                        fontFamily: 'Helvetica, sans-serif',
+                        fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -689,7 +669,7 @@ const Header: React.FC = () => {
                     <Typography
                       sx={{
                         // fontFamily: "Mulish",
-                        fontFamily: 'Helvetica, sans-serif',
+                        fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -710,21 +690,20 @@ const Header: React.FC = () => {
                         whiteSpace: "nowrap",
                       }}
                     >
-                       {post.data.page5}
+                      {post.data.page5}
                     </Typography>
                   </Link>
                 </Grid>
                 <MailOutlineIcon
-                sx={{
-                  background: "#236B79",
-                  color: "#FFFFFF",
-                  padding: "10px",
-                  borderRadius: "30px",
-                  cursor: "pointer",
-                }}
-                onClick={handleContactNavigation}
-              />
-               
+                  sx={{
+                    background: "#236B79",
+                    color: "#FFFFFF",
+                    padding: "10px",
+                    borderRadius: "30px",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleContactNavigation}
+                />
               </Grid>
             )}
           </Grid>
