@@ -123,7 +123,7 @@ const Choisir: React.FC = () => {
         <Grid
           sx={{
             height: {
-              xs: isCardHovered === 1 ? "340px" : "320px",
+              xs: isCardHovered === 1 ? "360px" : "340px",
               sm: isCardHovered === 1 ? "380px" : "360px",
               lg: isCardHovered === 1 ? "600px" : "480px",
               xl: isCardHovered === 1 ? "629.52px" : "476px",
@@ -274,7 +274,7 @@ const Choisir: React.FC = () => {
           sx={{
             height: {
               xs:
-                isCardHovered === 1 || isCardHovered === 2 ? "320px" : "340px",
+                isCardHovered === 1 || isCardHovered === 2 ? "340px" : "360px",
               sm:
                 isCardHovered === 1 || isCardHovered === 2 ? "360px" : "380px",
               lg:
@@ -490,7 +490,7 @@ const Choisir: React.FC = () => {
         <Grid
           sx={{
             height: {
-              xs: isCardHovered === 2 ? "340px" : "320px",
+              xs: isCardHovered === 2 ? "360px" : "340px",
               sm: isCardHovered === 2 ? "380px" : "360px",
               lg: isCardHovered === 2 ? "600px" : "480px",
               xl: isCardHovered === 2 ? "629.52px" : "476px",
