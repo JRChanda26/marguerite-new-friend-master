@@ -42,12 +42,10 @@ const NousAgissons: React.FC = () => {
           key={post.id}
           sx={{
             marginTop: {
-              xs: "20px",
-              sm: "-25px",
-              // lg: "-90px",
-              lg: "0px",
-              // xl: "-100px",
-              xl: "0px",
+              xs: "50px",
+              sm: "50px",
+              lg: "70px",
+              xl: "100px",
             },
             backgroundColor: "#F6C09E",
             alignItems: "stretch",
@@ -61,14 +59,7 @@ const NousAgissons: React.FC = () => {
             lg={4.5}
             xl={4.5}
             sx={{
-              // marginTop:"11%",
-              marginTop: { xs: "11%", sm: "11%", lg: "3%", xl: "4%" },
-              // margin: {
-              //   xs: "10% 60% 0% 0%",
-              //   sm: "13% 65% 0% 0%",
-              //   lg: "10% 65% 0% 0%",
-              //   xl: "10% 65% 0% 0%",
-              // },
+              marginTop: "0%",
               display: "flex",
               justifyContent: "center", // Centers horizontally
               alignItems: "center",
