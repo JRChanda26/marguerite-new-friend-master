@@ -54,9 +54,7 @@ const Header: React.FC = () => {
   const dropdownRef2 = useRef<HTMLDivElement>(null);
 
   const toggleDropdown1 = () => {
-    // Close dropdown 2 if it's open
     setDropdownVisible2(false);
-    // Toggle dropdown 1
     setDropdownVisible1(!dropdownVisible1);
   };
   const toggleDropdown2 = () => {
@@ -84,15 +82,27 @@ const Header: React.FC = () => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  const missionLinks = [
+    { href: "/nossolutionsde", text: headerPage[0]?.data.mission1 },
+    { href: "/ourexpert", text: headerPage[0]?.data.mission2 },
+    { href: "/benifits", text: headerPage[0]?.data.mission3 },
+  ];
+
+  const advantageLinks = [
+    { href: "", text: headerPage[0]?.data.advantages1 },
+    { href: "", text: headerPage[0]?.data.advantages2 },
+    { href: "", text: headerPage[0]?.data.advantages3 },
+    { href: "", text: headerPage[0]?.data.advantages4 },
+  ];
+
   const menustyle = {
     fontFamily: "Sans Serif Collection",
     fontSize: "18px",
     fontWeight: 400,
     lineHeight: "44.26px",
-    textAlign: "left",
     color: "#111111",
     "@media (max-width:600px)": {
-      fontSize: "10px",
+      fontSize: "12px",
       lineHeight: "30px",
     },
   };
@@ -164,7 +174,6 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary={post.data.page1}
                             sx={{
-                              // fontFamily: "Mulish",
                               fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
@@ -174,31 +183,21 @@ const Header: React.FC = () => {
                         </Link>
                       </ListItem>
                       <ListItem>
-                        {/* <Link
-                          href={"/lecarechez"}
-                          style={{ textDecoration: "none", width: "100%" }}
-                        > */}
                         <ListItemText
                           primary={post.data.page2}
                           sx={{
-                            // fontFamily: "Mulish",
                             fontFamily: "Helvetica, sans-serif",
                             color: "#24535C",
                             fontSize: "18px",
                             fontWeight: 400,
                           }}
                         />
-                        {/* </Link> */}
                       </ListItem>
                       <ListItem>
-                        <Box sx={{}}>
-                          {/* <Link
-                  // href={"/nossolutionsde"}
-                  style={{ textDecoration: "none" }}
-                > */}
-                          <Typography
+                        <Box>
+                          <ListItemText
+                            // primary={post.data.page3}
                             sx={{
-                              // fontFamily: "Mulish",
                               fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
@@ -206,8 +205,7 @@ const Header: React.FC = () => {
                             }}
                             onClick={toggleDropdown1}
                           >
-                            {post.data.page4}
-
+                            {post.data.page3}
                             {dropdownVisible1 ? (
                               <KeyboardArrowUpSharpIcon
                                 sx={{ fontSize: "inherit" }}
@@ -217,15 +215,14 @@ const Header: React.FC = () => {
                                 sx={{ fontSize: "inherit" }}
                               />
                             )}
-                          </Typography>
-                          {/* </Link> */}
+                          </ListItemText>
                           {dropdownVisible1 && (
                             <Box
                               ref={dropdownRef1}
                               sx={{
                                 marginTop: "5px",
                                 background: "#fff",
-                                border: "1px solid #ddd",
+                                // border: "1px solid #ddd",
                                 borderRadius: "8px",
                                 width: "218px",
                                 height: "auto",
@@ -234,73 +231,29 @@ const Header: React.FC = () => {
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
-                                paddingBottom: "10px",
+                                padding: "10px 0px",
                               }}
                             >
-                              <Link
-                                href={"/nossolutionsde"}
-                                style={{ textDecoration: "none" }}
-                              >
-                                {" "}
-                                <Typography sx={menustyle}>
-                                  {post.data.mission1}{" "}
-                                </Typography>
-                              </Link>
-
-                              <Link
-                                href={"/ourexpert"}
-                                style={{ textDecoration: "none" }}
-                              >
-                                <Typography sx={menustyle}>
-                                  {post.data.mission2}
-                                </Typography>
-                              </Link>
-                              <Link
-                                href={"/benifits"}
-                                style={{ textDecoration: "none" }}
-                              >
-                                {" "}
-                                <Typography sx={menustyle}>
-                                  {post.data.mission3}
-                                </Typography>
-                              </Link>
+                              {missionLinks.map((link, index) => (
+                                <Link
+                                  key={index}
+                                  href={link.href}
+                                  style={{ textDecoration: "none" }}
+                                >
+                                  <Typography sx={menustyle}>
+                                    {link.text}
+                                  </Typography>
+                                </Link>
+                              ))}
                             </Box>
                           )}
                         </Box>{" "}
                       </ListItem>
                       <ListItem>
-                        {/* <Link
-                      href={"/nossolutionsde"}
-                      style={{ textDecoration: "none", width: "100%" }}
-                    >
-                      <ListItemText
-                        primary={post.data.page3}
-                        sx={{
-                          fontFamily: "Mulish",
-                          color: "#24535C",
-                          fontSize: "18px",
-                          fontWeight: 400,
-                        }}
-                      />
-                    </Link> */}
-                        <Box
-                          sx={
-                            {
-                              // position: "relative",
-                              // cursor: "pointer",
-                              // display: "flex",
-                              // alignItems: "center",
-                              // gap: "20px",
-                            }
-                          }
-                        >
-                          {/* <Link
-                  href={"/"}
-                  style={{ textDecoration: "none" }}
-                > */}
-                          <Typography
+                        <Box>
+                          <ListItemText
+                            // primary={post.data.page4}
                             sx={{
-                              // fontFamily: "Mulish",
                               fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
@@ -308,8 +261,7 @@ const Header: React.FC = () => {
                             }}
                             onClick={toggleDropdown2}
                           >
-                            {/* Your Benefits */}
-                            {post.data.page3}
+                            {post.data.page4}
                             {dropdownVisible2 ? (
                               <KeyboardArrowUpSharpIcon
                                 sx={{ fontSize: "inherit" }}
@@ -319,15 +271,14 @@ const Header: React.FC = () => {
                                 sx={{ fontSize: "inherit" }}
                               />
                             )}
-                          </Typography>
-                          {/* </Link> */}
+                          </ListItemText>
                           {dropdownVisible2 && (
                             <Box
                               ref={dropdownRef2}
                               sx={{
                                 marginTop: "5px",
                                 background: "#fff",
-                                border: "1px solid #ddd",
+                                // border: "1px solid #ddd",
                                 borderRadius: "8px",
                                 width: "218px",
                                 height: "auto",
@@ -336,26 +287,24 @@ const Header: React.FC = () => {
                                 display: "flex",
                                 flexDirection: "column",
                                 alignItems: "center",
-                                paddingBottom: "10px",
+                                padding: "10px 0px",
                               }}
                             >
-                              <Typography sx={menustyle}>
-                                {post.data.advantages1}
-                              </Typography>
-                              <Typography sx={menustyle}>
-                                {post.data.advantages2}
-                              </Typography>
-                              <Typography sx={menustyle}>
-                                {post.data.advantages3}
-                              </Typography>
-                              <Typography sx={menustyle}>
-                                {post.data.advantages4}
-                              </Typography>
+                              {advantageLinks.map((link, index) => (
+                                <Link
+                                  key={index}
+                                  href={link.href}
+                                  style={{ textDecoration: "none" }}
+                                >
+                                  <Typography sx={menustyle}>
+                                    {link.text}
+                                  </Typography>
+                                </Link>
+                              ))}
                             </Box>
                           )}
                         </Box>
                       </ListItem>
-
                       <ListItem>
                         <Link
                           href={"/blogs/blognews"}
@@ -364,7 +313,6 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary={post.data.page5}
                             sx={{
-                              // fontFamily: "Mulish",
                               fontFamily: "Helvetica, sans-serif",
                               color: "#24535C",
                               fontSize: "18px",
@@ -418,10 +366,6 @@ const Header: React.FC = () => {
                 )}
                 <Grid
                   sx={{
-                    // display: "flex",
-                    // flexDirection: "row",
-                    // gap: "45px",
-
                     display: "flex",
                     flexDirection: "row",
                     gap: "35px",
@@ -434,7 +378,6 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        // fontFamily: "Mulish",
                         fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
@@ -458,10 +401,8 @@ const Header: React.FC = () => {
                       {post.data.page1}
                     </Typography>
                   </Link>
-                  {/* <Link href={"/lecarechez"} style={{ textDecoration: "none" }}> */}
                   <Typography
                     sx={{
-                      // fontFamily: "Mulish",
                       fontFamily: "Helvetica, sans-serif",
                       color: "#24535C",
                       fontSize: {
@@ -484,15 +425,9 @@ const Header: React.FC = () => {
                   >
                     {post.data.page2}
                   </Typography>
-                  {/* </Link> */}
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
-                    {/* <Link
-                  // href={"/nossolutionsde"}
-                  style={{ textDecoration: "none" }}
-                > */}
                     <Typography
                       sx={{
-                        // fontFamily: "Mulish",
                         fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
@@ -515,8 +450,7 @@ const Header: React.FC = () => {
                       }}
                       onClick={toggleDropdown1}
                     >
-                      {post.data.page4}
-
+                      {post.data.page3}
                       {dropdownVisible1 ? (
                         <KeyboardArrowUpSharpIcon
                           sx={{ fontSize: "inherit" }}
@@ -527,17 +461,15 @@ const Header: React.FC = () => {
                         />
                       )}
                     </Typography>
-                    {/* </Link> */}
                     {dropdownVisible1 && (
                       <Box
                         ref={dropdownRef1}
                         sx={{
                           position: "absolute",
                           top: "70px",
-                          // right: "-70px",
                           marginTop: "5px",
                           background: "#fff",
-                          border: "1px solid #ddd",
+                          // border: "1px solid #ddd",
                           borderRadius: "8px",
                           width: "218px",
                           height: "auto",
@@ -545,51 +477,26 @@ const Header: React.FC = () => {
                           zIndex: 1000,
                           display: "flex",
                           flexDirection: "column",
-                          alignItems: "center",
-                          paddingTop: "20px",
-                          paddingBottom: "20px",
+                          alignItems: "flex-start",
+                          padding: "20px 0px 20px 40px",
                         }}
                       >
-                        <Link
-                          href={"/nossolutionsde"}
-                          style={{ textDecoration: "none" }}
-                        >
-                          <Typography sx={menustyle}>
-                            {post.data.mission1}{" "}
-                          </Typography>
-                        </Link>{" "}
-                        <Link
-                          href={"/ourexpert"}
-                          style={{ textDecoration: "none" }}
-                        >
-                          <Typography sx={menustyle}>
-                            {post.data.mission2}{" "}
-                          </Typography>
-                        </Link>
-                        <Link
-                          href={"/benifits"}
-                          style={{ textDecoration: "none" }}
-                        >
-                          {" "}
-                          <Typography sx={menustyle}>
-                            {post.data.mission3}
-                          </Typography>
-                        </Link>
+                        {missionLinks.map((link, index) => (
+                          <Link
+                            key={index}
+                            href={link.href}
+                            style={{ textDecoration: "none" }}
+                          >
+                            <Typography sx={menustyle}>{link.text}</Typography>
+                          </Link>
+                        ))}
                       </Box>
                     )}
                   </Box>{" "}
-                  <Box
-                    sx={{
-                      position: "relative",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "20px",
-                    }}
+                  <Box sx={{ position: "relative",cursor: "pointer"}}
                   >
                     <Typography
                       sx={{
-                        // fontFamily: "Mulish",
                         fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
@@ -612,8 +519,7 @@ const Header: React.FC = () => {
                       }}
                       onClick={toggleDropdown2}
                     >
-                      {post.data.page3}
-                      {/* {post.data.page3} */}
+                      {post.data.page4}
                       {dropdownVisible2 ? (
                         <KeyboardArrowUpSharpIcon
                           sx={{ fontSize: "inherit" }}
@@ -624,17 +530,15 @@ const Header: React.FC = () => {
                         />
                       )}
                     </Typography>
-                    {/* </Link> */}
                     {dropdownVisible2 && (
                       <Box
                         ref={dropdownRef2}
                         sx={{
                           position: "absolute",
                           top: "70px",
-                          // right: "-70px",
                           marginTop: "5px",
                           background: "#fff",
-                          border: "1px solid #ddd",
+                          // border: "1px solid #ddd",
                           borderRadius: "8px",
                           width: "218px",
                           height: "auto",
@@ -642,23 +546,19 @@ const Header: React.FC = () => {
                           zIndex: 1000,
                           display: "flex",
                           flexDirection: "column",
-                          alignItems: "stretch",
-                          padding: "20px 5px 20px 40px",
+                          alignItems: "flex-start",
+                          padding: "20px 0px 20px 40px",
                         }}
                       >
-                        <Typography sx={menustyle}>
-                          {post.data.advantages1}{" "}
-                        </Typography>
-                        <Typography sx={menustyle}>
-                          {" "}
-                          {post.data.advantages2}{" "}
-                        </Typography>
-                        <Typography sx={menustyle}>
-                          {post.data.advantages3}
-                        </Typography>
-                        <Typography sx={menustyle}>
-                          {post.data.advantages4}
-                        </Typography>
+                        {advantageLinks.map((link, index) => (
+                          <Link
+                            key={index}
+                            href={link.href}
+                            style={{ textDecoration: "none" }}
+                          >
+                            <Typography sx={menustyle}>{link.text}</Typography>
+                          </Link>
+                        ))}
                       </Box>
                     )}
                   </Box>
@@ -668,7 +568,6 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        // fontFamily: "Mulish",
                         fontFamily: "Helvetica, sans-serif",
                         color: "#24535C",
                         fontSize: {
