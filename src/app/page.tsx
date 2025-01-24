@@ -8,7 +8,6 @@ import Paroles from "./mainpage/Paroles";
 import NosExperiences from "./mainpage/NosExperiences";
 import BlogEt from "./mainpage/BlogEt";
 import NeManquez from "./mainpage/NeManquez";
-// import SiteTree from "./mainpage/SiteTree";
 
 
 
@@ -21,7 +20,6 @@ export default function Home() {
       <NotreProcessus />
       <Paroles/>
       <NosExperiences/>
-      {/* <SiteTree/> */}
       <Questions />
       <BlogEt/>
       <NeManquez/>
