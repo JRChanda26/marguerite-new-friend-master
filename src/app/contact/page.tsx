@@ -261,7 +261,7 @@ export default function Contact() {
             xs: "cover",
             sm: "cover",
             lg: "cover",
-            xl: "cover",
+            xl: "contain",
           },
         }}
       >
@@ -275,7 +275,7 @@ export default function Contact() {
               xs: "70px 50px 0px 50px",
               sm: "150.67px 150px 0px 150px",
               lg: "250px 150px 0px 150px",
-              xl: "352px 441px 0px 441px",
+              xl: "320px 441px 0px 441px",
             },
           }}
         >
@@ -297,7 +297,7 @@ export default function Contact() {
                 xs: "0% 5% 0% 5%",
                 sm: "3% 8%",
                 lg: "41px 152px 41px 152px",
-                xl: "41px 152px 41px 152px",
+                xl: "21px 100px 21px 100px",
               },
             }}
           >
@@ -341,7 +341,8 @@ export default function Contact() {
             xs: "6%",
             sm: "5% 10%",
             lg: "50px 120px 287px 120px",
-            xl: "135px 356px 287px 356px",
+            md: "50px 150px 287px 150px",
+            xl: "135px 200px 287px 200px",
           },
         }}
       >
@@ -355,6 +356,7 @@ export default function Contact() {
               padding: {
                 sm: "0px",
                 lg: "0px 196px 80px 196px",
+                md: "0px 50px 0px 50px",
                 xl: "0px 196px 80px 196px",
               },
               fontFamily: "Mulish",
@@ -387,6 +389,7 @@ export default function Contact() {
             xs={12}
             sm={7}
             lg={4}
+            md={5}
             xl={4}
             sx={{
               background: "#BBDDD9",
@@ -471,6 +474,7 @@ export default function Contact() {
             xs={12}
             sm={8}
             lg={7}
+            md={6}
             xl={7}
             sx={{
               display: "flex",
@@ -581,7 +585,7 @@ export default function Contact() {
         <Grid
           item
           xs={12}
-          sx={{ textAlign: { xs: "center", lg: "right", xl: "right" } }}
+          sx={{ textAlign: { xs: "center",md: "right", lg: "right", xl: "right" } }}
         >
           <Button
             variant="contained"

@@ -94,6 +94,7 @@ const ManagePerLaCare: React.FC = () => {
   // Media queries for breakpoints
   const isExtraSmall = useMediaQuery(theme.breakpoints.only("xs")); // 'xs' (0px - 600px)
   const isSmall = useMediaQuery(theme.breakpoints.only("sm")); // 'sm' (600px - 960px)
+  const isMedium = useMediaQuery(theme.breakpoints.only("md"));// 'md' (960px - 1280px)
   const isLarge = useMediaQuery(theme.breakpoints.only("lg")); // 'lg' (1280px - 1920px)
   const isExtraLarge = useMediaQuery(theme.breakpoints.up("xl")); // 'xl' (1920px and above)
 
@@ -126,6 +127,8 @@ const ManagePerLaCare: React.FC = () => {
         ? "5%"
         : isSmall
           ? "10%"
+          :isMedium?
+          "5%"
           : isLarge
             ? "0%"
             : isExtraLarge
@@ -135,19 +138,23 @@ const ManagePerLaCare: React.FC = () => {
         ? "3%"
         : isSmall
           ? "10%"
+           :isMedium?
+          "5%"
           : isLarge
             ? "0%"
             : isExtraLarge
-              ? "5%"
-              : "5%",
+              ? "0%"
+              : "0%",
       width: isExtraSmall
         ? "80%"
         : isSmall
           ? "50%"
+           :isMedium?
+          "55%"
           : isLarge
             ? "70%"
             : isExtraLarge
-              ? "50%"
+              ? "65%"
               : "50%",
     },
     topRight: {
@@ -155,15 +162,19 @@ const ManagePerLaCare: React.FC = () => {
         ? "32%"
         : isSmall
           ? "33%"
+           :isMedium?
+          "38%"
           : isLarge
             ? "35%"
             : isExtraLarge
-              ? "30%"
-              : "30%",
+              ? "35%"
+              : "35%",
       right: isExtraSmall
         ? "3%"
         : isSmall
           ? "10%"
+           :isMedium?
+          "5%"
           : isLarge
             ? "0%"
             : isExtraLarge
@@ -173,69 +184,83 @@ const ManagePerLaCare: React.FC = () => {
         ? "80%"
         : isSmall
           ? "50%"
+           :isMedium?
+          "55%"
           : isLarge
             ? "70%"
             : isExtraLarge
-              ? "50%"
-              : "50%",
+              ? "65%"
+              : "65%",
     },
     bottomLeft: {
       top: isExtraSmall
         ? "53%"
         : isSmall
           ? "50%"
+           :isMedium?
+          "70%"
           : isLarge
             ? "65%"
             : isExtraLarge
-              ? "60%"
-              : "60%",
+              ? "65%"
+              : "65%",
       left: isExtraSmall
         ? "3%"
         : isSmall
           ? "10%"
+           :isMedium?
+          "5%"
           : isLarge
             ? "0%"
             : isExtraLarge
-              ? "5%"
-              : "5%",
+              ? "0%"
+              : "0%",
       width: isExtraSmall
         ? "80%"
         : isSmall
           ? "50%"
+           :isMedium?
+          "55%"
           : isLarge
             ? "70%"
             : isExtraLarge
-              ? "50%"
-              : "50%",
+              ? "65%"
+              : "65%",
     },
     bottomRight: {
       top: isExtraSmall
         ? "78%"
         : isSmall
           ? "70%"
+           :isMedium?
+          "102%"
           : isLarge
             ? "100%"
             : isExtraLarge
-              ? "90%"
-              : "90%",
+              ? "100%"
+              : "100%",
       right: isExtraSmall
         ? "3%"
         : isSmall
           ? "10%"
+           :isMedium?
+          "5%"
           : isLarge
             ? "0%"
             : isExtraLarge
-              ? "5%"
-              : "5%",
+              ? "0%"
+              : "0%",
       width: isExtraSmall
         ? "80%"
         : isSmall
           ? "50%"
+           :isMedium?
+          "55%"
           : isLarge
             ? "70%"
             : isExtraLarge
-              ? "50%"
-              : "50%",
+              ? "65%"
+              : "65%",
     },
   };
 
@@ -253,11 +278,11 @@ const ManagePerLaCare: React.FC = () => {
     return {
       ...baseStyle,
       transition: "transform 0.3s ease, box-shadow 0.3s ease",
-      transform: hoveredCard === index ? "scale(1.05)" : "scale(1)", 
+      transform: hoveredCard === index ? "scale(1.05)" : "scale(1)",
       boxShadow:
         hoveredCard === index
-          ? "0px 8px 20px rgba(35, 107, 121, 0.2)" 
-          : "0px 4px 12px rgba(35, 107, 121, 0.1)", 
+          ? "0px 8px 20px rgba(35, 107, 121, 0.2)"
+          : "0px 4px 12px rgba(35, 107, 121, 0.1)",
     };
   };
 
@@ -292,7 +317,7 @@ const ManagePerLaCare: React.FC = () => {
           <span
             key={index}
             style={{
-              display: "block", 
+              display: "block",
               fontWeight: fontMap[part as HighlightWord].fontWeight,
               marginBottom: fontMap[part as HighlightWord].marginBottom,
             }}
@@ -315,7 +340,8 @@ const ManagePerLaCare: React.FC = () => {
             xs: "cover",
             sm: "cover",
             lg: "cover",
-            xl: "cover",
+            md: "cover",
+            xl: "contain",
           },
           backgroundRepeat: "no-repeat",
         }}
@@ -331,8 +357,8 @@ const ManagePerLaCare: React.FC = () => {
                 padding: {
                   xs: "70px 50px 0px 50px",
                   sm: "150.67px 150px 0px 150px",
-                  lg: "250px 150px 0px 150px",
-                  xl: "400px 441px 0px 441px",
+                  lg: "350px 150px 0px 150px",
+                  xl: "350px 300px 0px 300px",
                 },
               }}
             >
@@ -343,12 +369,17 @@ const ManagePerLaCare: React.FC = () => {
                   justifyContent: "center",
                   flexDirection: "column",
                   alignItems: "center",
-                  borderRadius: {xs:"20px 20px 0px 0px",sm:"37px 37px 0px 0px",lg:"37px 37px 0px 0px",xl:"37px 37px 0px 0px"},
+                  borderRadius: {
+                    xs: "20px 20px 0px 0px",
+                    sm: "37px 37px 0px 0px",
+                    lg: "37px 37px 0px 0px",
+                    xl: "37px 37px 0px 0px",
+                  },
                   padding: {
                     xs: "0% 5% 0% 5%",
                     sm: "3% 8%",
                     lg: "41px 152px 74px 152px",
-                    xl: "41px 152px 74px 152px",
+                    xl: "20px 152px 74px 152px",
                   },
                 }}
               >
@@ -403,7 +434,7 @@ const ManagePerLaCare: React.FC = () => {
       </Grid>
 
       <Grid
-        sx={{ padding: { xs: "5%", sm: "5%", lg: "80px", xl: "123px 116px" } }}
+        sx={{ padding: { xs: "5%", sm: "5%", lg: "80px", xl: "123px 80px" } }}
       >
         {managePage.map((post: any) => (
           <Grid container spacing={0} key={post.id}>
@@ -419,7 +450,7 @@ const ManagePerLaCare: React.FC = () => {
                   lg: "row",
                   xl: "row",
                 },
-                gap: { xs: "20px", sm: "20px", lg: "50px", xl: "133px" },
+                gap: { xs: "20px", sm: "20px", lg: "50px", xl: "80px" },
               }}
             >
               <Grid item xl={7} lg={7} xs={12} sm={7}>
@@ -472,7 +503,7 @@ const ManagePerLaCare: React.FC = () => {
                   {/* {post.data.top_left_description} */}
                   {formatText(description)}
                 </Typography>
-                <Grid sx={{ paddingTop: {lg:"50px",xl:"50px"} }}>
+                <Grid sx={{ paddingTop: { lg: "50px", xl: "50px" } }}>
                   {managePage.map((post: any) => (
                     <Button
                       key={post}
@@ -492,6 +523,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "50%",
                           sm: "70%",
                           lg: "220.47px",
+                          md: "220.47px",
                           xl: "220.47px",
                         },
                         height: {
@@ -819,7 +851,8 @@ const ManagePerLaCare: React.FC = () => {
               xs: "100px 0px 0px 0px",
               sm: "0px",
               lg: "150px 100px 153px 100px",
-              xl: "90px 359px 153px 359px",
+              md: "180px 50px 153px 50px",
+              xl: "300px 200px 153px 200px",
             },
           }}
         >
@@ -887,7 +920,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "390px", lg: "490px", xl: "490px" },
+                  height: { xs: "0px", sm: "390px",md: "470px", lg: "490px", xl: "490px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -920,6 +953,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "18px",
                               sm: "22px",
                               lg: "25px",
+                              md: "20px",
                               xl: "25px",
                             },
                             fontWeight: 500,
@@ -938,6 +972,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "14px",
                               sm: "18px",
                               lg: "22px",
+                              md: "18px",
                               xl: "22px",
                             },
                             fontWeight: 400,
@@ -999,13 +1034,7 @@ const ManagePerLaCare: React.FC = () => {
                 gap: { lg: "60px", xl: "60px" },
               }}
             >
-              <Grid
-                item
-                xs={12}
-                sm={5}
-                lg={6}
-                xl={6}
-              >
+              <Grid item xs={12} sm={5} lg={6} xl={6}>
                 {/* {videoUrl ? (
                   <video
                     width="100%"
@@ -1038,7 +1067,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "400px", lg: "450px", xl: "450px" },
+                  height: { xs: "0px", sm: "400px",md: "450px", lg: "450px", xl: "450px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -1071,6 +1100,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "18px",
                               sm: "22px",
                               lg: "25px",
+                              md: "20px",
                               xl: "25px",
                             },
                             fontWeight: 500,
@@ -1089,6 +1119,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "14px",
                               sm: "18px",
                               lg: "22px",
+                              md: "18px",
                               xl: "22px",
                             },
                             fontWeight: 400,
@@ -1124,6 +1155,7 @@ const ManagePerLaCare: React.FC = () => {
               xs: "contain",
               sm: "contain",
               lg: "contain",
+              md: "contain",
               xl: "contain",
             },
             backgroundRepeat: "no-repeat",
@@ -1137,7 +1169,8 @@ const ManagePerLaCare: React.FC = () => {
               xs: "5%",
               sm: "10%",
               lg: "107px 522px",
-              xl: "107px 522px",
+              md: "107px 220px",
+              xl: "107px 330px",
             },
             flexDirection: "column",
           }}
@@ -1239,7 +1272,7 @@ const ManagePerLaCare: React.FC = () => {
             xs: "10% 10% 0% 10%",
             sm: "10% 10% 0% 10%",
             lg: "100px 200px 0px 200px",
-            xl: "187px 414px 0px 414px",
+            // xl: "187px 414px 0px 414px",
           },
           color: "#0A1411",
         }}

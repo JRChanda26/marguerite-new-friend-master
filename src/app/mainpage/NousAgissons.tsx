@@ -45,7 +45,7 @@ const NousAgissons: React.FC = () => {
               xs: "50px",
               sm: "50px",
               lg: "70px",
-              xl: "100px",
+              xl: "80px",
             },
             backgroundColor: "#F6C09E",
             alignItems: "stretch",
@@ -57,15 +57,15 @@ const NousAgissons: React.FC = () => {
             xs={4.5}
             sm={4.5}
             lg={4.5}
-            xl={4.5}
+            xl={5}
             sx={{
               marginTop: "0%",
               display: "flex",
               justifyContent: "center", // Centers horizontally
               alignItems: "center",
               backgroundColor: "#F6C09E",
-              paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
-              paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
+              paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
+              paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
               paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
               paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
               // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
@@ -76,23 +76,12 @@ const NousAgissons: React.FC = () => {
           >
             <Box
               sx={{
-                // height: "100%", // Ensure the Box takes the full height of the parent Grid item
-                // display: "flex",
-                // flexDirection: "column",
-                // justifyContent: "center",
-                // width: "700px",
-                // height: "510px",
-                // top: "285px",
-                // left: "52px",
                 gap: "0px",
                 opacity: "0px",
                 backgroundColor: "#F6C09E",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                // alignItems: "center",
-                // textAlign: "center",
-                // padding: "20px",
               }}
             >
               <Typography
@@ -210,7 +199,7 @@ const NousAgissons: React.FC = () => {
             xs={7.5}
             sm={7.5}
             lg={7.5}
-            xl={7.5}
+            xl={7}
             sx={{
               display: "flex",
               alignItems: "center",

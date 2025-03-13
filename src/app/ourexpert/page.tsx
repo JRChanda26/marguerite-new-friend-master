@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import {
-
   Box,
   Button,
   Card,
@@ -19,20 +18,20 @@ import Header from "../mainpage/Header";
 import Footer from "../mainpage/Footer";
 import Liberez from "../mainpage/NeManquez";
 const OurExperts: React.FC = () => {
-   const [leCarePage, setLeCarePage] = useState<any[]>([]);
-  
-    useEffect(() => {
-      const fetchData = async () => {
-        const response: any = await client.getAllByType("le_care_chez" as any);
-        setLeCarePage(response);
-      };
-  
-      fetchData();
-    }, []);
-  
-    const [modulesPage, setModulesPage] = useState<any[]>([]);
-  
- useEffect(() => {
+  const [leCarePage, setLeCarePage] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response: any = await client.getAllByType("le_care_chez" as any);
+      setLeCarePage(response);
+    };
+
+    fetchData();
+  }, []);
+
+  const [modulesPage, setModulesPage] = useState<any[]>([]);
+
+  useEffect(() => {
     const fetchData = async () => {
       const response: any = await client.getAllByType(
         "interactive_learning_modules" as any
@@ -42,7 +41,6 @@ const OurExperts: React.FC = () => {
     fetchData();
   }, []);
 
-  
   const personCards = [
     {
       id: 1,
@@ -152,12 +150,7 @@ const OurExperts: React.FC = () => {
     );
   };
 
-
-
- 
   const middleBackground = leCarePage[0]?.data?.middle_background?.url || "";
-
- 
 
   const designerNameStyle: React.CSSProperties = {
     fontFamily: "DM Serif Display",
@@ -215,266 +208,265 @@ const OurExperts: React.FC = () => {
   const profileDetailsFontSize = {
     fontSize: isXs ? "12px" : "18px",
   };
- 
 
   return (
     <Box sx={{}}>
-    
-    <Header />
+      <Header />
 
-   
-
-         <div
-             style={{
-               backgroundImage: `url(${middleBackground})`,
-               backgroundRepeat: "no-repeat",
-               backgroundSize: "contain",
-               width: "100%",
-               height: "auto",
-               marginTop: "4%",
-             }}
-           >
-             {leCarePage.map((post: any, postIndex: number) => (
-               <React.Fragment key={postIndex}>
-                 <div>
-                   <Typography
-                     sx={{
-                       fontFamily: "Mulish",
-                       fontSize: { xs: "28px", sm: "52px", lg: "64px", xl: "64px" },
-                       fontWeight: 700,
-                       lineHeight: {
-                         xs: "30px",
-                         sm: "65px",
-                         lg: "auto",
-                         xl: "auto",
-                       },
-                       textAlign: "center",
-                       color: "#0A1411",
-                       padding: {
-                         xs: "5% 0% 0% 0%",
-                         sm: "8% 10% 0% 10%",
-                         lg: "100px 100px 40px 100px",
-                         xl: "187px 289px 40px 289px",
-                       },
-                     }}
-                   >
-                     {post.data.profile_title}
-                   </Typography>
-                   <Typography
-                     sx={{
-                       fontFamily: "Mulish",
-                       fontSize: { xs: "14px", sm: "18px", lg: "22px", xl: "22px" },
-                       fontWeight: 400,
-                       lineHeight: {
-                         xs: "16px",
-                         sm: "25px",
-                         lg: "33px",
-                         xl: "33px",
-                       },
-                       textAlign: "center",
-                       color: "#4D5053",
-                       padding: {
-                         xs: "2% 5%",
-                         sm: "2% 10%",
-                         lg: "0px 100px 30px 100px",
-                         xl: "0px 280px 30px 280px",
-                       },
-                     }}
-                   >
-                     {post.data.profile_description}
-                   </Typography>
-                 </div>
-                 <Grid container spacing={2}>
-                   <Grid
-                     item
-                     xl={12}
-                     lg={12}
-                     xs={12}
-                     sm={12}
-                     sx={{
-                       display: "grid",
-                       gridTemplateColumns: {
-                         xs: "repeat(2, 1fr)",
-                         sm: "repeat(3, 1fr)",
-                         md: "repeat(3, 1fr)",
-                         lg: "repeat(4, 1fr)",
-                         xl: "repeat(4, 1fr)",
-                       },
-                       textAlign: "center",
-                       gap: "3%",
-                       margin: {
-                         xs: "0%",
-                         sm: "0%",
-                         lg: "",
-                         xl: "0px 360px 150px 360px",
-                       },
-                     }}
-                   >
-                     {personCards.map((person, index) => (
-                       <Grid
-                         key={person.id}
-                         sx={{
-                           display: "flex",
-                           justifyContent: "center",
-                         }}
-                       >
-                         {flippedStates[index] ? (
-                           <Grid
-                             sx={{
-                               background: "#FFFFFF",
-                               width: dimensions.width,
-                               height: dimensions.height,
-                               borderRadius: "25px",
-                             }}
-                             onClick={() => handleFlipCard(index)}
-                           >
-                             <div>
-                               <Typography
-                                 sx={{
-                                   ...designerNameStyle,
-                                   fontSize: profileNameFontSize.fontSize,
-                                   paddingTop: {
-                                     xs: "50px",
-                                     sm: "70px",
-                                     lg: "70px",
-                                     xl: "70px",
-                                   },
-                                 }}
-                               >
-                                 {person.name}
-                               </Typography>
-                               <Typography
-                                 sx={{
-                                   ...designerDetailsStyle,
-                                   fontSize: profileDetailsFontSize.fontSize,
-                                 }}
-                               >
-                                 {person.details}
-                               </Typography>
-                               <Grid
-                                 sx={{
-                                   display: "flex",
-                                   flexDirection: "row",
-                                   paddingTop: {
-                                     xs: "20px",
-                                     sm: "30px",
-                                     lg: "65px",
-                                     xl: "65px",
-                                   },
-                                   justifyContent: "space-evenly",
-                                 }}
-                               >
-                                 <PrismicNextLink field={person.facebookLink}>
-                                   {leCarePage[0]?.data.facebook_icon && (
-                                     // eslint-disable-next-line @next/next/no-img-element
-                                     <img
-                                       src={
-                                         leCarePage[0]?.data.facebook_icon.url ||
-                                         undefined
-                                       }
-                                       alt={
-                                         leCarePage[0]?.data.facebook_icon.alt ||
-                                         "Image"
-                                       }
-                                     />
-                                   )}
-                                 </PrismicNextLink>
-                                 <PrismicNextLink field={person.twitterLink}>
-                                   {leCarePage[0]?.data.twitter_icon && (
-                                     // eslint-disable-next-line @next/next/no-img-element
-                                     <img
-                                       src={
-                                         leCarePage[0]?.data.twitter_icon.url ||
-                                         undefined
-                                       }
-                                       alt={
-                                         leCarePage[0]?.data.twitter_icon.alt ||
-                                         "Image"
-                                       }
-                                     />
-                                   )}
-                                 </PrismicNextLink>
-                                 <PrismicNextLink field={person.linkedinLink}>
-                                   {leCarePage[0]?.data.linkedin_icon && (
-                                     // eslint-disable-next-line @next/next/no-img-element
-                                     <img
-                                       src={
-                                         leCarePage[0]?.data.linkedin_icon.url ||
-                                         undefined
-                                       }
-                                       alt={
-                                         leCarePage[0]?.data.linkedin_icon.alt ||
-                                         "Image"
-                                       }
-                                     />
-                                   )}
-                                 </PrismicNextLink>
-                                 <PrismicNextLink field={person.instagramLink}>
-                                   {leCarePage[0]?.data.instagram_icon && (
-                                     // eslint-disable-next-line @next/next/no-img-element
-                                     <img
-                                       src={
-                                         leCarePage[0]?.data.instagram_icon.url ||
-                                         undefined
-                                       }
-                                       alt={
-                                         leCarePage[0]?.data.instagram_icon.alt ||
-                                         "Image"
-                                       }
-                                     />
-                                   )}
-                                 </PrismicNextLink>
-                               </Grid>
-                               <Typography
-                                 sx={{
-                                   ...designerDetailsStyle,
-                                   fontSize: profileDetailsFontSize.fontSize,
-                                   paddingTop: {
-                                     xs: "20px",
-                                     sm: "30px",
-                                     lg: "65px",
-                                     xl: "65px",
-                                   },
-                                 }}
-                               >
-                                 {person.phone}
-                               </Typography>
-                               <Typography
-                                 sx={{
-                                   ...designerDetailsStyle,
-                                   fontSize: profileDetailsFontSize.fontSize,
-                                 }}
-                               >
-                                 {person.email}
-                               </Typography>
-                             </div>
-                           </Grid>
-                         ) : (
-                           // eslint-disable-next-line @next/next/no-img-element
-                           <img
-                             src={person.profile || undefined}
-                             alt={person.name || "Image"}
-                             style={{
-                               width: dimensions.width,
-                               height: dimensions.height,
-                             }}
-                             onClick={() => handleFlipCard(index)}
-                           />
-                         )}
-                       </Grid>
-                     ))}
-                   </Grid>
-                 </Grid>
-               </React.Fragment>
-             ))}
-           </div>
-  
-   
-     
-  <Liberez />
+      <div
+        style={{
+          backgroundImage: `url(${middleBackground})`,
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "contain",
+          width: "100%",
+          height: "auto",
+          marginTop: "4%",
+        }}
+      >
+        {leCarePage.map((post: any, postIndex: number) => (
+          <React.Fragment key={postIndex}>
+            <div>
+              <Typography
+                sx={{
+                  fontFamily: "Mulish",
+                  fontSize: { xs: "28px", sm: "52px", lg: "64px", xl: "64px" },
+                  fontWeight: 700,
+                  lineHeight: {
+                    xs: "30px",
+                    sm: "65px",
+                    lg: "auto",
+                    xl: "auto",
+                  },
+                  textAlign: "center",
+                  color: "#0A1411",
+                  padding: {
+                    xs: "5% 0% 0% 0%",
+                    sm: "8% 10% 0% 10%",
+                    lg: "100px 100px 40px 100px",
+                    md: "50px 20px 0px 20px",
+                    xl: "187px 100px 40px 100px",
+                  },
+                }}
+              >
+                {post.data.profile_title}
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: "Mulish",
+                  fontSize: {
+                    xs: "14px",
+                    sm: "18px",
+                    md: "22px",
+                    lg: "22px",
+                    xl: "22px",
+                  },
+                  fontWeight: 400,
+                  lineHeight: {
+                    xs: "16px",
+                    sm: "25px",
+                    lg: "33px",
+                    xl: "33px",
+                  },
+                  textAlign: "center",
+                  color: "#4D5053",
+                  padding: {
+                    xs: "2% 5%",
+                    sm: "2% 10%",
+                    lg: "0px 100px 30px 100px",
+                    xl: "0px 150px 30px 150px",
+                  },
+                }}
+              >
+                {post.data.profile_description}
+              </Typography>
+            </div>
+            <Grid container spacing={2}>
+              <Grid
+                item
+                xl={12}
+                lg={12}
+                xs={12}
+                sm={12}
+                sx={{
+                  display: "grid",
+                  gridTemplateColumns: {
+                    xs: "repeat(2, 1fr)",
+                    sm: "repeat(3, 1fr)",
+                    md: "repeat(3, 1fr)",
+                    lg: "repeat(4, 1fr)",
+                    xl: "repeat(4, 1fr)",
+                  },
+                  textAlign: "center",
+                  gap: "3%",
+                  margin: {
+                    xs: "0%",
+                    sm: "0%",
+                    lg: "",
+                    md: "0px 0px 80px 0px",
+                    xl: "0px 150px 150px 150px",
+                  },
+                }}
+              >
+                {personCards.map((person, index) => (
+                  <Grid
+                    key={person.id}
+                    sx={{
+                      display: "flex",
+                      justifyContent: "center",
+                    }}
+                  >
+                    {flippedStates[index] ? (
+                      <Grid
+                        sx={{
+                          background: "#FFFFFF",
+                          width: dimensions.width,
+                          height: dimensions.height,
+                          borderRadius: "25px",
+                        }}
+                        onClick={() => handleFlipCard(index)}
+                      >
+                        <div>
+                          <Typography
+                            sx={{
+                              ...designerNameStyle,
+                              fontSize: profileNameFontSize.fontSize,
+                              paddingTop: {
+                                xs: "50px",
+                                sm: "70px",
+                                lg: "70px",
+                                xl: "70px",
+                              },
+                            }}
+                          >
+                            {person.name}
+                          </Typography>
+                          <Typography
+                            sx={{
+                              ...designerDetailsStyle,
+                              fontSize: profileDetailsFontSize.fontSize,
+                            }}
+                          >
+                            {person.details}
+                          </Typography>
+                          <Grid
+                            sx={{
+                              display: "flex",
+                              flexDirection: "row",
+                              paddingTop: {
+                                xs: "20px",
+                                sm: "30px",
+                                lg: "65px",
+                                xl: "65px",
+                              },
+                              justifyContent: "space-evenly",
+                            }}
+                          >
+                            <PrismicNextLink field={person.facebookLink}>
+                              {leCarePage[0]?.data.facebook_icon && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                  src={
+                                    leCarePage[0]?.data.facebook_icon.url ||
+                                    undefined
+                                  }
+                                  alt={
+                                    leCarePage[0]?.data.facebook_icon.alt ||
+                                    "Image"
+                                  }
+                                />
+                              )}
+                            </PrismicNextLink>
+                            <PrismicNextLink field={person.twitterLink}>
+                              {leCarePage[0]?.data.twitter_icon && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                  src={
+                                    leCarePage[0]?.data.twitter_icon.url ||
+                                    undefined
+                                  }
+                                  alt={
+                                    leCarePage[0]?.data.twitter_icon.alt ||
+                                    "Image"
+                                  }
+                                />
+                              )}
+                            </PrismicNextLink>
+                            <PrismicNextLink field={person.linkedinLink}>
+                              {leCarePage[0]?.data.linkedin_icon && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                  src={
+                                    leCarePage[0]?.data.linkedin_icon.url ||
+                                    undefined
+                                  }
+                                  alt={
+                                    leCarePage[0]?.data.linkedin_icon.alt ||
+                                    "Image"
+                                  }
+                                />
+                              )}
+                            </PrismicNextLink>
+                            <PrismicNextLink field={person.instagramLink}>
+                              {leCarePage[0]?.data.instagram_icon && (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                  src={
+                                    leCarePage[0]?.data.instagram_icon.url ||
+                                    undefined
+                                  }
+                                  alt={
+                                    leCarePage[0]?.data.instagram_icon.alt ||
+                                    "Image"
+                                  }
+                                />
+                              )}
+                            </PrismicNextLink>
+                          </Grid>
+                          <Typography
+                            sx={{
+                              ...designerDetailsStyle,
+                              fontSize: profileDetailsFontSize.fontSize,
+                              paddingTop: {
+                                xs: "20px",
+                                sm: "30px",
+                                lg: "65px",
+                                xl: "65px",
+                              },
+                            }}
+                          >
+                            {person.phone}
+                          </Typography>
+                          <Typography
+                            sx={{
+                              ...designerDetailsStyle,
+                              fontSize: profileDetailsFontSize.fontSize,
+                            }}
+                          >
+                            {person.email}
+                          </Typography>
+                        </div>
+                      </Grid>
+                    ) : (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={person.profile || undefined}
+                        alt={person.name || "Image"}
+                        style={{
+                          width: dimensions.width,
+                          height: dimensions.height,
+                        }}
+                        onClick={() => handleFlipCard(index)}
+                      />
+                    )}
+                  </Grid>
+                ))}
+              </Grid>
+            </Grid>
+          </React.Fragment>
+        ))}
+      </div>
+      <Liberez />
       <Footer />
-      
-    
     </Box>
   );
 };

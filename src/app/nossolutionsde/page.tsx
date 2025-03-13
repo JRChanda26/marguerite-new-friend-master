@@ -172,7 +172,7 @@ const NosSolutionsDe: React.FC = () => {
                   xs: "70px 50px 0px 50px",
                   sm: "100px 150px 0px 150px",
                   lg: "250px 150px 0px 150px",
-                  xl: "352px 441px 0px 441px",
+                  xl: "300px 300px 0px 300px",
                 },
               }}
             >
@@ -193,7 +193,7 @@ const NosSolutionsDe: React.FC = () => {
                     xs: "0% 5% 0% 5%",
                     sm: "3% 8%",
                     lg: "41px 82px 42px 82px",
-                    xl: "41px 82px 42px 82px",
+                    xl: "21px 82px 21px 82px",
                   },
                 }}
               >
@@ -343,6 +343,7 @@ const NosSolutionsDe: React.FC = () => {
                           xs: "50%",
                           sm: "70%",
                           lg: "220.47px",
+                          md: "220.47px",
                           xl: "220.47px",
                         },
                         height: {
@@ -430,7 +431,7 @@ const NosSolutionsDe: React.FC = () => {
         justifyContent="center"
         alignItems="center"
         sx={{
-          padding: { lg: "0px 100px 0px 100px", xl: "0px 363px 0px 363px" },
+          padding: { lg: "0px 100px 0px 100px", xl: "0px 200px 0px 200px" },
         }}
       >
         <Grid item lg={12}>
@@ -462,6 +463,7 @@ const NosSolutionsDe: React.FC = () => {
               xs={12}
               sm={5}
               lg={6}
+              md={5}
               xl={6}
             >
               {/* {videoUrl ? (
@@ -494,9 +496,10 @@ const NosSolutionsDe: React.FC = () => {
               xs={12}
               sm={5}
               lg={6}
+              md={5}
               xl={6}
               sx={{
-                height: { xs: "0px", sm: "400px", lg: "450px", xl: "450px" },
+                height: { xs: "0px", sm: "400px",md: "450px", lg: "450px", xl: "450px" },
                 overflowY: "auto",
                 scrollbarWidth: "thin",
               }}
@@ -529,6 +532,7 @@ const NosSolutionsDe: React.FC = () => {
                             xs: "18px",
                             sm: "22px",
                             lg: "25px",
+                            md: "20px",
                             xl: "25px",
                           },
                           fontWeight: 500,
@@ -547,6 +551,7 @@ const NosSolutionsDe: React.FC = () => {
                             xs: "14px",
                             sm: "18px",
                             lg: "22px",
+                            md: "18px",
                             xl: "22px",
                           },
                           fontWeight: 400,
@@ -584,7 +589,7 @@ const NosSolutionsDe: React.FC = () => {
             item
             xl={3}
             lg={3}
-            md={6}
+            md={3}
             sm={6}
             style={{
               display: "flex",

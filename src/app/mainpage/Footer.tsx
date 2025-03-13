@@ -45,7 +45,7 @@ const Footer: React.FC = () => {
           xs: "5%",
           sm: "5%",
           lg: "120px 80px 100px 80px",
-          xl: "167px 152px 164px 121px",
+          // xl: "167px 152px 164px 121px",
         },
         // mt: 4,
       }}
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
           xs={12}
           sm={5}
           lg={4}
-          xl={4}
+          xl={4.1}
           textAlign={{ xs: "center", sm: "left" }}
         >
           {footerPage.map((post, postIndex) => (
