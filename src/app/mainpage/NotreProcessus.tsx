@@ -108,7 +108,7 @@ export default function NotreProcessus() {
                 xs: "0% 10%",
                 sm: "0% 15%",
                 lg: "0px 225px 196px 225px",
-                xl: "0px 425px 196px 425px",
+                xl: "0px 225px 196px 225px",
               },
               // fontFamily: "Mulish",
               fontFamily: 'Helvetica, sans-serif',
@@ -123,7 +123,7 @@ export default function NotreProcessus() {
               xs: "0% 0% 0% 5%",
               sm: "5%",
               lg: "0px 100px 200px 100px",
-              xl: "0px 249px 349px 237px",
+              xl: "0px 100px 349px 180px",
             },
           }}
         >
@@ -143,7 +143,7 @@ export default function NotreProcessus() {
                 lg: "",
                 xl: "0px 42px 0px 0px",
               },
-              gap: { xs: "0px", sm: "0px", lg: "124px", xl: "124px" },
+              gap: { xs: "0px", sm: "0px", lg: "124px", xl: "80px" },
             }}
           >
             <div>
@@ -248,9 +248,9 @@ export default function NotreProcessus() {
                 xs: "0px 0px 0px 0px",
                 sm: "0px",
                 lg: "100px 0px 100px 60px",
-                xl: "128px 42px 128px 0px",
+                xl: "128px 42px 128px 20px",
               },
-              gap: { lg: "50px", xl: "154px" },
+              gap: { lg: "50px", xl: "104px" },
             }}
           >
             <Grid

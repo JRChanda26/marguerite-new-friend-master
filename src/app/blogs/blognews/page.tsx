@@ -144,17 +144,17 @@ export default function BlogsNews() {
           lg={12}
           sx={{
             display: "flex",
-            flexDirection: { xs: "column", sm: "column", lg: "row", xl: "row" },
+            flexDirection: { xs: "column", sm: "column",md: "row", lg: "row", xl: "row" },
             justifyContent: "space-evenly",
             margin: {
               xs: "5%",
               sm: "5%",
               lg: "150px 100px 0px 100px",
-              xl: "283px 194px 0px 194px",
+              // xl: "283px 194px 0px 194px",
             },
           }}
         >
-          <Grid item lg={7}>
+          <Grid item lg={7} md={7}>
             <Typography
               sx={{
                 fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
@@ -376,7 +376,7 @@ export default function BlogsNews() {
                           xs: "0px 20px 67px 20px",
                           sm: "0px 150px 67px 150px",
                           lg: "2px 150px 67px 150px",
-                          xl: "2px 233px 67px 233px",
+                          xl: "2px 200px 67px 200px",
                         },
                       }}
                     >
@@ -390,7 +390,8 @@ export default function BlogsNews() {
           <Grid
             item
             lg={4}
-            xl={3}
+            md={4}
+            xl={3.5}
             style={{
               marginTop: "20px",
             }}
@@ -433,13 +434,13 @@ export default function BlogsNews() {
                   xs: "30px 40px",
                   sm: "30px 40px",
                   lg: "15px",
-                  xl: "30px 40px",
+                  xl: "20px 50px",
                 },
                 borderRadius: "20px",
                 marginTop: "20px",
               }}
             >
-              <Typography style={{ ...heading, marginBottom: "30px" }}>
+              <Typography style={{ ...heading, marginBottom: "0px" }}>
                 {blogNewsPage[0]?.data.card_heading}
               </Typography>
               {Array(3)
@@ -533,6 +534,7 @@ export default function BlogsNews() {
           item
           xl={6}
           lg={6}
+          md={6}
           xs={12}
           sm={12}
           sx={{
@@ -540,7 +542,8 @@ export default function BlogsNews() {
               xs: "2% 7%",
               sm: "5%",
               lg: "100px 0px 108px 140px",
-              xl: "100px 0px 108px 280px",
+              md: "50px 0px 50px 140px",
+              xl: "100px 0px 108px 140px",
             },
           }}
         >
@@ -551,7 +554,7 @@ export default function BlogsNews() {
               fontFamily: "Mulish",
               letterSpacing: "2%",
               color: "#292F36",
-              paddingRight: { lg: "300px", xl: "500px" },
+              paddingRight: { lg: "300px", xl: "300px" },
             }}
           >
             {blogNewsPage[0]?.data.bottom_heading}
@@ -591,7 +594,7 @@ export default function BlogsNews() {
                       color: "#4D5053",
                       fontFamily: "Mulish",
                       letterSpacing: "1%",
-                      paddingRight: { lg: "100px", xl: "300px" },
+                      paddingRight: { lg: "100px", xl: "0px" },
                     }}
                   >
                     {index + 1}.{blogNewsPage[0]?.data.bottom_points}
@@ -660,6 +663,7 @@ export default function BlogsNews() {
                     xs: "12px",
                     sm: "18px",
                     lg: "15.2px",
+                    md: "12px",
                     xl: "15.2px",
                   },
                   lineHeight: {
@@ -688,7 +692,7 @@ export default function BlogsNews() {
           </div>
           <Typography
             sx={{
-              fontSize: { xs: "24px", sm: "30px", lg: "32px", xl: "32px" },
+              fontSize: { xs: "24px", sm: "30px", lg: "32px", xl: "30px" },
               lineHeight: { xs: "30px", sm: "40px", lg: "150%", xl: "150%" },
               marginBottom: "62px",
               color: "#4D5053",

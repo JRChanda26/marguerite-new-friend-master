@@ -74,21 +74,23 @@ export default function Questions() {
           xs={12}
           sm={12}
           lg={12}
+          md={12}
           xl={12}
           sx={{
             display: "flex",
             // flexDirection: "row",
-            flexDirection: { xs: "column", sm: "column", lg: "row", xl: "row" },
+            flexDirection: { xs: "column", sm: "column",md: "row", lg: "row", xl: "row" },
             justifyContent: "space-between",
             margin: {
               xs: "30px 0px 30px 0px",
               sm: "50px 0px 50px 0px",
               lg: "100px 50px 51px 0px",
-              xl: "164px 132px 51px 0px",
+              md: "100px 50px 51px 0px",
+              xl: "164px 80px 51px 0px",
             },
           }}
         >
-          <Grid item lg={6}>
+          <Grid item lg={6} md={6}>
             <Typography
               sx={{
                 color: "#14292D",
@@ -97,13 +99,14 @@ export default function Questions() {
                 // fontFamily: "Mulish",
                 fontFamily: 'Helvetica, sans-serif',
                 // lineHeight: "76.8px",
-                fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
-                lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "120%" },
+                fontSize: { xs: "28px", sm: "45px",md: "45px", lg: "64px", xl: "64px" },
+                lineHeight: { xs: "30px", sm: "50px",md: "120%", lg: "120%", xl: "120%" },
                 margin: {
                   xs: "0% 0% 0% 10%",
                   sm: "0% 0% 0% 5%",
                   lg: "0px 30px 0px 176px",
-                  xl: "0px 150px 0px 176px",
+                  md: "0px 30px 0px 80px",
+                  xl: "0px 50px 0px 136px",
                 },
               }}
             >
@@ -117,13 +120,14 @@ export default function Questions() {
                 // fontFamily: "Mulish",
                 fontFamily: 'Helvetica, sans-serif',
                 // lineHeight: "36.8px",
-                fontSize: { xs: "12px", sm: "20px", lg: "24px", xl: "24px" },
-                lineHeight: { xs: "20px", sm: "20px", lg: "160%", xl: "160%" },
+                fontSize: { xs: "12px", sm: "20px",md: "20px", lg: "24px", xl: "24px" },
+                lineHeight: { xs: "20px", sm: "20px",md: "160%", lg: "160%", xl: "160%" },
                 margin: {
                   xs: "1% 0% 0% 10%",
                   sm: "3% 0% 0% 5%",
                   lg: "63px 0px 0px 176px",
-                  xl: "63px 0px 0px 176px",
+                  md: "40px 30px 0px 80px",
+                  xl: "63px 0px 0px 136px",
                 },
               }}
             >
@@ -135,7 +139,7 @@ export default function Questions() {
                 border: "1px solid #24535C",
                 color: "#24535C",
                 // padding: "15px 25px",
-                padding: { xs: "1% 3%", sm: "2% 5%", lg: "2% 5%", xl: "2% 5%" },
+                padding: { xs: "1% 3%", sm: "2% 5%",md: "2% 5%", lg: "2% 5%", xl: "2% 5%" },
                 borderRadius: "10px",
                 // marginLeft: "20%",
                 // marginTop: "10%",
@@ -143,16 +147,18 @@ export default function Questions() {
                   xs: "5% 0% 0% 10%",
                   sm: "5% 0% 0% 5%",
                   lg: "63px 0px 0px 176px",
-                  xl: "63px 0px 0px 176px",
+                  md: "40px 30px 0px 80px",
+                  xl: "63px 0px 0px 136px",
                 },
                 // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "26px",
                 // fontSize: "21.67px",
-                fontSize: { xs: "12px", sm: "20px", lg: "25px", xl: "25px" },
+                fontSize: { xs: "12px", sm: "20px",md: "20px", lg: "25px", xl: "25px" },
                 lineHeight: {
                   xs: "20px",
                   sm: "20px",
                   lg: "38.4px",
+                  md: "28.4px",
                   xl: "38.4px",
                 },
                 textTransform: "none",
@@ -182,8 +188,8 @@ export default function Questions() {
             xs={12}
             sm={12}
             sx={{
-              paddingRight: { xs: "0%", sm: "0%", lg: "30px", xl: "50px" },
-              paddingLeft: { xs: "0%", sm: "0%", lg: "50px", xl: "310px" },
+              paddingRight: { xs: "0%", sm: "0%",md: "30px", lg: "30px", xl: "50px" },
+              paddingLeft: { xs: "0%", sm: "0%",md: "20px", lg: "50px", xl: "100px" },
             }}
           >
             {faqs.map((faq, index) => (
@@ -213,6 +219,7 @@ export default function Questions() {
                         xs: "14px",
                         sm: "18px",
                         lg: "18px",
+                        md: "14px",
                         xl: "18px",
                       },
                       lineHeight: {
@@ -238,6 +245,7 @@ export default function Questions() {
                         xs: "14px",
                         sm: "16px",
                         lg: "16px",
+                        md: "12px",
                         xl: "16px",
                       },
                       lineHeight: {

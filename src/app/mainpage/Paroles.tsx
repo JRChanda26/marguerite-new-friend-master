@@ -30,15 +30,15 @@ export default function Paroles() {
 
   const getFontSize = () => {
     if (isXs) return { fontSize: "20px" };
-    if (isSm) return { fontSize: "28px" }; 
+    if (isSm) return { fontSize: "28px" };
     if (isMd) return { fontSize: "32px" };
     if (isLg) return { fontSize: "38px" };
-    if (isXl) return { fontSize: "44px" }; 
+    if (isXl) return { fontSize: "44px" };
     return { fontSize: "44px" };
   };
-  
-  const  fontSize  = getFontSize();
-  
+
+  const fontSize = getFontSize();
+
   if (!parolesPage) {
     return;
   }
@@ -60,7 +60,9 @@ export default function Paroles() {
   // };
   const fontMap: Record<HighlightWord, { fontFamily: string }> = {
     "Marguerite Services,": { fontFamily: "Helvetica" },
-    "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Helvetica" },
+    "Responsabilité Sociétale des Entreprises (RSE)": {
+      fontFamily: "Helvetica",
+    },
   };
 
   const escapeRegExp = (string: string) => {
@@ -161,13 +163,77 @@ export default function Paroles() {
               xl: "0px 194px 100px 194px",
             },
             // fontFamily: "Mulish",
-           fontFamily: 'Helvetica, sans-serif',
+            fontFamily: "Helvetica, sans-serif",
             letterSpacing: "0%",
+            display: "flex",
+            flexDirection: "row",
+            gap: "80px",
           }}
         >
           {parolesPage?.data.heading}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              gap: "30px",
+            }}
+          >
+            {" "}
+            <Button
+              onClick={handlePrevious}
+              aria-label="previous page"
+              sx={{
+                fontSize: "16px",
+                color: "#000000",
+                background: "#FFFFFF",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                padding: "20px",
+                "&:hover": {
+                  background: "inherit",
+                },
+              }}
+            >
+              {parolesPage?.data.left_arrow_icon && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={parolesPage.data.left_arrow_icon.url || ""}
+                  alt={parolesPage.data.left_arrow_icon}
+                  style={{
+                    width: "30px",
+                    height: "auto",
+                  }}
+                />
+              )}
+            </Button>
+            <Button
+              onClick={handleNext}
+              aria-label="next page"
+              sx={{
+                fontSize: "16px",
+                color: "#000000",
+                background: "#FFFFFF",
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                padding: "20px",
+                "&:hover": {
+                  background: "inherit",
+                },
+              }}
+            >
+              {parolesPage?.data.right_arrow_icon && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={parolesPage.data.right_arrow_icon.url || ""}
+                  alt={parolesPage.data.right_arrow_icon}
+                  style={{
+                    width: "30px",
+                    height: "auto",
+                  }}
+                />
+              )}
+            </Button>
+          </div>
         </Typography>
-        <Grid
+        {/* <Grid
           item
           sx={{
             display: "flex",
@@ -229,7 +295,7 @@ export default function Paroles() {
               />
             )}
           </Button>
-        </Grid>
+        </Grid> */}
       </Grid>
 
       <Grid item lg={12}>
@@ -238,7 +304,7 @@ export default function Paroles() {
             color: "#000000",
             fontWeight: 400,
             // fontFamily: "Mulish",
-           fontFamily: 'Helvetica, sans-serif',
+            fontFamily: "Helvetica, sans-serif",
             letterSpacing: "0%",
             fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "25px" },
             lineHeight: { xs: "25px", sm: "30px", lg: "38.4px", xl: "38.4px" },
@@ -246,7 +312,7 @@ export default function Paroles() {
               xs: "5%",
               sm: "2%",
               lg: "0px 70px 0px 70px",
-              xl: "0px 194px 0px 194px",
+              xl: "0px 110px 0px 110px",
             },
           }}
         >
@@ -357,7 +423,7 @@ export default function Paroles() {
                     color: "#000000",
                     fontWeight: 700,
                     // fontFamily: "Mulish",
-                   fontFamily: 'Helvetica, sans-serif',
+                    fontFamily: "Helvetica, sans-serif",
                     textAlign: "center",
                     padding: {
                       xs: "0px",

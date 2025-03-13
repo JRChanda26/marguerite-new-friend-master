@@ -192,7 +192,7 @@ export default function Blogs() {
                 xs: "0% 5% 0% 5%",
                 sm: "3% 8%",
                 lg: "41px 152px 74px 152px",
-                xl: "41px 152px 74px 152px",
+                xl: "21px 152px 21px 152px",
               },
             }}
           >
@@ -233,7 +233,7 @@ export default function Blogs() {
           background: "#e1f5f2",
         }}
       >
-        <Grid item xs={12} sm={12} lg={12} xl={12}>
+        <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
           <Typography
             sx={{
               color: "#292F36",
@@ -257,7 +257,7 @@ export default function Blogs() {
                 xs: "27px 30px 50px 30px",
                 sm: "27px 80px 100px 80px",
                 lg: "27px 152px 100px 152px",
-                xl: "27px 252px 212px 252px",
+                xl: "27px 152px 212px 152px",
               },
             }}
           >
@@ -275,6 +275,7 @@ export default function Blogs() {
                       xs: "column",
                       sm: "column",
                       lg: "row",
+                      md: "row",
                       xl: "row",
                     },
                     padding: {
@@ -527,12 +528,14 @@ export default function Blogs() {
           lg={12}
           xs={12}
           sm={12}
+          md={12}
           sx={{
             display: "grid",
             // gridTemplateColumns: "repeat(3, 1fr)",
             gridTemplateColumns: {
               xs: "repeat(1, 1fr)",
               sm: "repeat(2, 1fr)",
+              md: "repeat(3, 1fr)",
               lg: "repeat(3, 1fr)",
               xl: "repeat(3, 1fr)",
             },
@@ -543,7 +546,7 @@ export default function Blogs() {
               xs: "3% 5%",
               sm: "3% 5%",
               lg: "78px 50px 200px 50px",
-              xl: "78px 162px 432px 162px",
+              xl: "78px 100px 350px 100px",
             },
           }}
         >

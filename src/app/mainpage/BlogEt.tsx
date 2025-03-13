@@ -96,12 +96,13 @@ export default function BlogEt() {
             display: "flex",
             justifyContent: "space-evenly",
             flexWrap: "wrap",
-            gap: { xs: "30px", sm: "30px", lg: "20px", xl: "90px" },
+            gap: { xs: "30px", sm: "30px", lg: "20px", xl: "50px" },
             margin: {
               xs: "0px 30px 50px 30px",
               sm: "",
               lg: "",
-              xl: "0px 161px 79px 161px",
+              // xl: "0px 161px 79px 161px",
+              xl: "0px 100px 79px 100px",
             },
           }}
         >
@@ -111,8 +112,8 @@ export default function BlogEt() {
               key={index}
               xs={12}
               sm={5.5}
-              md={4}
               lg={3.5}
+              md={3.5}
               xl={3.5}
               onMouseEnter={() => setIsHovered(index)}
               onMouseLeave={() => setIsHovered(null)}
