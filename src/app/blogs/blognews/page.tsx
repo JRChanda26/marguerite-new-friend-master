@@ -135,7 +135,7 @@ export default function BlogsNews() {
           justifyContent: "center",
           flexDirection: "column",
           alignItems: "center",
-          paddingTop: {xs: "150px", sm: "250px", lg: "400px", xl: "614px" },
+          paddingTop: {xs: "150px", sm: "250px", lg: "400px",md:"350px", xl: "450px" },
         }}
       />
       <Grid container>
