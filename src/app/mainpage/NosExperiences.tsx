@@ -173,6 +173,7 @@ const NosExperiences: React.FC = () => {
                           lg: "160%",
                           xl: "160%",
                         },
+                        textAlign:'justify'
                       }}
                     >
                       {testimonial}

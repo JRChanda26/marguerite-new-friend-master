@@ -106,7 +106,7 @@ export default function Questions() {
                   sm: "0% 0% 0% 5%",
                   lg: "0px 30px 0px 176px",
                   md: "0px 30px 0px 80px",
-                  xl: "0px 50px 0px 136px",
+                  xl: "0px 130px 0px 136px",
                 },
               }}
             >
@@ -213,8 +213,6 @@ export default function Questions() {
                       fontWeight: 700,
                       // fontFamily: "Mulish",
                       fontFamily: 'Helvetica, sans-serif',
-
-                      
                       fontSize: {
                         xs: "14px",
                         sm: "18px",

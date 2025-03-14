@@ -312,7 +312,7 @@ export default function Paroles() {
               xs: "5%",
               sm: "2%",
               lg: "0px 70px 0px 70px",
-              xl: "0px 110px 0px 110px",
+              xl: "0px 300px 0px 300px",
             },
           }}
         >

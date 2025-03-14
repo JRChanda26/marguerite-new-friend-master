@@ -358,7 +358,7 @@ export default function Contact() {
                 sm: "0px",
                 lg: "0px 196px 80px 196px",
                 md: "0px 50px 0px 50px",
-                xl: "0px 196px 80px 196px",
+                xl: "0px 350px 80px 350px",
               },
               fontFamily: "Mulish",
               lineHeight: "150%",

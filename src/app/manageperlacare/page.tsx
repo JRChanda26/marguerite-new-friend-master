@@ -128,7 +128,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "10%"
           :isMedium?
-          "5%"
+          "0%"
           : isLarge
             ? "0%"
             : isExtraLarge
@@ -233,9 +233,9 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "70%"
            :isMedium?
-          "115%"
+          "116%"
           : isLarge
-            ? "115%"
+            ? "116%"
             : isExtraLarge
               ? "100%"
               : "100%",
@@ -858,7 +858,7 @@ const ManagePerLaCare: React.FC = () => {
             margin: {
               xs: "100px 0px 0px 0px",
               sm: "0px",
-              lg: "150px 100px 153px 100px",
+              lg: "280px 100px 153px 100px",
               md: "280px 50px 153px 50px",
               xl: "300px 200px 153px 200px",
             },

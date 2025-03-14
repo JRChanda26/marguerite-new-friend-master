@@ -90,7 +90,7 @@ const Choisir: React.FC = () => {
                     xs: "0% 3%",
                     sm: "0% 8%",
                     lg: "21px 148px 69px 148px",
-                    xl: "41px 250px 69px 250px",
+                    xl: "41px 400px 69px 400px",
                   },
                   textAlign: "center",
                   maxWidth: "75%",
@@ -212,7 +212,8 @@ const Choisir: React.FC = () => {
                     xl: "185%",
                   },
                   letterSpacing: "0%",
-                  textAlign: "left",
+                  // textAlign: "left",
+                  textAlign: "justify",
                   paddingTop: {
                     xs: isCardHovered === 1 ? "12px" : "10px",
                     sm: isCardHovered === 1 ? "14px" : "12px",
@@ -419,7 +420,8 @@ const Choisir: React.FC = () => {
                     lg: "185%",
                     xl: "185%",
                   },
-                  textAlign: "left",
+                  // textAlign: "left",
+                  textAlign: "justify",
                   paddingTop: {
                     xs:
                       isCardHovered === 1 || isCardHovered === 2
@@ -611,7 +613,8 @@ const Choisir: React.FC = () => {
                     xl: "185%",
                   },
                   letterSpacing: "0%",
-                  textAlign: "left",
+                  // textAlign: "left",
+                  textAlign: "justify",
                   paddingTop: {
                     xs: isCardHovered === 2 ? "12px" : "10px",
                     sm: isCardHovered === 2 ? "14px" : "12px",
