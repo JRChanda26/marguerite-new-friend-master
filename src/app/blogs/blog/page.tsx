@@ -170,7 +170,8 @@ export default function Blogs() {
               xs: "70px 50px 0px 50px",
               sm: "150.67px 150px 0px 150px",
               lg: "250px 150px 0px 150px",
-              xl: "352px 441px 0px 441px",
+              md: "250px 100px 0px 100px",
+              xl: "320px 300px 0px 300px",
             },
           }}
         >
@@ -192,7 +193,7 @@ export default function Blogs() {
                 xs: "0% 5% 0% 5%",
                 sm: "3% 8%",
                 lg: "41px 152px 74px 152px",
-                xl: "21px 152px 21px 152px",
+                xl: "21px 82px 21px 82px",
               },
             }}
           >

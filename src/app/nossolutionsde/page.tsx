@@ -155,7 +155,7 @@ const NosSolutionsDe: React.FC = () => {
             xs: "cover",
             sm: "cover",
             lg: "cover",
-            xl: "cover",
+            xl: "cover", 
           },
           backgroundRepeat: "no-repeat",
         }}
@@ -172,7 +172,8 @@ const NosSolutionsDe: React.FC = () => {
                   xs: "70px 50px 0px 50px",
                   sm: "100px 150px 0px 150px",
                   lg: "250px 150px 0px 150px",
-                  xl: "300px 300px 0px 300px",
+                  md: "250px 100px 0px 100px",
+                  xl: "320px 300px 0px 300px",
                 },
               }}
             >

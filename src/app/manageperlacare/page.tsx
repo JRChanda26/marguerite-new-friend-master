@@ -163,9 +163,9 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "33%"
            :isMedium?
-          "38%"
+          "40%"
           : isLarge
-            ? "35%"
+            ? "40%"
             : isExtraLarge
               ? "35%"
               : "35%",
@@ -198,9 +198,9 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "50%"
            :isMedium?
-          "70%"
+          "75%"
           : isLarge
-            ? "65%"
+            ? "75%"
             : isExtraLarge
               ? "65%"
               : "65%",
@@ -233,9 +233,9 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "70%"
            :isMedium?
-          "102%"
+          "110%"
           : isLarge
-            ? "100%"
+            ? "110%"
             : isExtraLarge
               ? "100%"
               : "100%",
@@ -357,7 +357,8 @@ const ManagePerLaCare: React.FC = () => {
                   xs: "70px 50px 0px 50px",
                   sm: "150.67px 150px 0px 150px",
                   lg: "350px 150px 0px 150px",
-                  xl: "300px 300px 0px 300px",
+                  md: "250px 100px 0px 100px",
+                  xl: "320px 300px 0px 300px",
                 },
               }}
             >
@@ -672,6 +673,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "16px",
                       sm: "20px",
                       lg: "32px",
+                      md: "20px",
                       xl: "32px",
                     },
                   }}
@@ -692,6 +694,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "10px",
                       sm: "14px",
                       lg: "19.5px",
+                      md: "14px",
                       xl: "19.5px",
                     },
                   }}
@@ -716,6 +719,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "16px",
                       sm: "20px",
                       lg: "32px",
+                      md: "20px",
                       xl: "32px",
                     },
                   }}
@@ -736,6 +740,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "10px",
                       sm: "14px",
                       lg: "19.5px",
+                      md: "14px",
                       xl: "19.5px",
                     },
                   }}
@@ -763,6 +768,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "16px",
                       sm: "20px",
                       lg: "32px",
+                      md: "20px",
                       xl: "32px",
                     },
                   }}
@@ -783,6 +789,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "10px",
                       sm: "14px",
                       lg: "19.5px",
+                      md: "14px",
                       xl: "19.5px",
                     },
                   }}
@@ -810,6 +817,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "16px",
                       sm: "20px",
                       lg: "32px",
+                      md: "20px",
                       xl: "32px",
                     },
                   }}
@@ -830,6 +838,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "10px",
                       sm: "14px",
                       lg: "19.5px",
+                      md: "14px",
                       xl: "19.5px",
                     },
                   }}
@@ -850,7 +859,7 @@ const ManagePerLaCare: React.FC = () => {
               xs: "100px 0px 0px 0px",
               sm: "0px",
               lg: "150px 100px 153px 100px",
-              md: "180px 50px 153px 50px",
+              md: "280px 50px 153px 50px",
               xl: "300px 200px 153px 200px",
             },
           }}
@@ -1169,7 +1178,7 @@ const ManagePerLaCare: React.FC = () => {
               sm: "10%",
               lg: "107px 522px",
               md: "107px 220px",
-              xl: "107px 330px",
+              xl: "107px 522px",
             },
             flexDirection: "column",
           }}
