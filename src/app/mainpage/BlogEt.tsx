@@ -19,7 +19,7 @@ export default function BlogEt() {
   const title: React.CSSProperties = {
     color: "#161C2D",
     fontWeight: 700,
-    textAlign: "left",
+    textAlign: "justify",
     paddingTop: "31.9px",
     // fontFamily: "Mulish",
     fontFamily: "Helvetica, sans-serif",
@@ -28,7 +28,7 @@ export default function BlogEt() {
   const description: React.CSSProperties = {
     color: "#161C2DB8",
     fontWeight: 400,
-    textAlign: "left",
+    textAlign: "justify",
     paddingTop: "21.27px",
     // fontFamily: "Mulish",
     fontFamily: "Helvetica, sans-serif",

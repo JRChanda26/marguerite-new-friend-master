@@ -391,7 +391,7 @@ export default function BlogsNews() {
             item
             lg={4}
             md={4}
-            xl={3.5}
+            xl={4}
             style={{
               marginTop: "20px",
             }}
@@ -416,7 +416,7 @@ export default function BlogsNews() {
                     },
                   },
                   height: { lg: "101px", xl: "101px" },
-                  width: { lg: "385px", xl: "385px" },
+                  width: { lg: "385px", xl: "490px" },
                 }}
                 InputProps={{
                   endAdornment: (
@@ -433,11 +433,11 @@ export default function BlogsNews() {
                 padding: {
                   xs: "30px 40px",
                   sm: "30px 40px",
-                  lg: "15px",
+                  lg: "25px",
                   xl: "20px 50px",
                 },
                 borderRadius: "20px",
-                marginTop: "20px",
+                marginTop: {xs:'20px',sm:'20px',md:'25px',lg:'25px',xl:'30px'},
               }}
             >
               <Typography style={{ ...heading, marginBottom: "0px" }}>

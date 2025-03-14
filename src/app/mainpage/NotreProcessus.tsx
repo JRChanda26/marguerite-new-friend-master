@@ -107,8 +107,8 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0% 10%",
                 sm: "0% 15%",
-                lg: "0px 225px 196px 225px",
-                xl: "0px 225px 196px 225px",
+                lg: "0px 155px 196px 155px",
+                xl: "0px 425px 196px 425px",
               },
               // fontFamily: "Mulish",
               fontFamily: 'Helvetica, sans-serif',

@@ -196,7 +196,7 @@ export default function NeManquez() {
             sm={6}
             md={7}
             lg={6}
-            xl={7}
+            xl={6}
             sx={{
               background: "#FFFFFF",
               borderRadius: "50px",
