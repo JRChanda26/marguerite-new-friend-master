@@ -302,7 +302,7 @@ const ManagePerLaCare: React.FC = () => {
     HighlightWord,
     { fontWeight: number; marginBottom: string }
   > = {
-    "UN BESOIN D'AIDE ACCRU-": { fontWeight: 700, marginBottom: "28px" },
+    "UN BESOIN D'AIDE ACCRU-": { fontWeight: 700, marginBottom: "0px" },
   };
 
   const escapeRegExp = (string: string) => {
@@ -463,7 +463,7 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "30px",
                         sm: "40px",
-                        lg: "50px",
+                        lg: "40px",
                         xl: "50px",
                       },
                       lineHeight: {
@@ -503,7 +503,7 @@ const ManagePerLaCare: React.FC = () => {
                   {/* {post.data.top_left_description} */}
                   {formatText(description)}
                 </Typography>
-                <Grid sx={{ paddingTop: { lg: "50px", xl: "50px" } }}>
+                <Grid sx={{ paddingTop: {lg: "20px", xl: "50px" } }}>
                   {managePage.map((post: any) => (
                     <Button
                       key={post}
@@ -1321,7 +1321,7 @@ const ManagePerLaCare: React.FC = () => {
             fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "25px" },
             lineHeight: { xs: "20px", sm: "30px", lg: "40px", xl: "40px" },
             fontWeight: 400,
-            textAlign: "left",
+            textAlign: "justify",
             color: "#24535C",
             fontFamily: "Mulish",
           }}

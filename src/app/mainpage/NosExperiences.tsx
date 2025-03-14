@@ -35,7 +35,7 @@ const NosExperiences: React.FC = () => {
     <Box
       sx={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: { xs: "cover", sm: "cover", lg: "cover", xl: "cover" },
+        backgroundSize: { xs: "cover", sm: "cover", lg: "contain", xl: "cover" },
         backgroundRepeat: "no-repeat",
         width: "100%",
         display: "flex",
@@ -74,7 +74,7 @@ const NosExperiences: React.FC = () => {
                 padding: {
                   xs: "12% 0% 2% 0%",
                   sm: "8% 0% 2% 0%",
-                  lg: "250px 0px 36px 0px",
+                  lg: "150px 0px 36px 0px",
                   xl: "250px 0px 36px 0px",
                 },
               }}
@@ -123,7 +123,7 @@ const NosExperiences: React.FC = () => {
                 padding: {
                   xs: "20px 0px 70px 0px",
                   sm: "50px 0px 80px 0px",
-                  lg: "179px 0px 231px 0px",
+                  lg: "100px 0px 231px 0px",
                   xl: "179px 0px 231px 0px",
                 },
               }}
@@ -164,7 +164,7 @@ const NosExperiences: React.FC = () => {
                         fontSize: {
                           xs: "12px",
                           sm: "16px",
-                          lg: "19.32px",
+                          lg: "18px",
                           xl: "19.32px",
                         },
                         lineHeight: {

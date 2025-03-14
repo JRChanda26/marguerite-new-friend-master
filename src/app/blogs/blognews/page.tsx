@@ -157,7 +157,7 @@ export default function BlogsNews() {
           <Grid item lg={7} md={7}>
             <Typography
               sx={{
-                fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
+                fontSize: { xs: "25px", sm: "40px", lg: "40px", xl: "50px" },
                 lineHeight: { xs: "30px", sm: "40px", lg: "125%", xl: "125%" },
                 letterSpacing: "2%",
                 fontFamily: "Mulish",
@@ -269,6 +269,7 @@ export default function BlogsNews() {
                   lg: "48px 0px 70px 0px",
                   xl: "48px 0px 70px 0px",
                 },
+                textAlign:'justify'
               }}
             >
               {blogNewsPage[0]?.data.top_description}
@@ -415,7 +416,7 @@ export default function BlogsNews() {
                       borderColor: "transparent", 
                     },
                   },
-                  height: { lg: "101px", xl: "101px" },
+                  height: { lg: "80px", xl: "101px" },
                   width: { lg: "385px", xl: "490px" },
                 }}
                 InputProps={{
@@ -567,6 +568,7 @@ export default function BlogsNews() {
               color: "#4D5053",
               fontFamily: "Mulish",
               letterSpacing: "1%",
+              textAlign:'justify'
             }}
           >
             {blogNewsPage[0]?.data.bottom_description1}
@@ -594,7 +596,8 @@ export default function BlogsNews() {
                       color: "#4D5053",
                       fontFamily: "Mulish",
                       letterSpacing: "1%",
-                      paddingRight: { lg: "100px", xl: "0px" },
+                      paddingRight: { lg: "0px", xl: "0px" },
+                      textAlign:'justify'
                     }}
                   >
                     {index + 1}.{blogNewsPage[0]?.data.bottom_points}
@@ -622,6 +625,7 @@ export default function BlogsNews() {
               color: "#4D5053",
               fontFamily: "Mulish",
               letterSpacing: "1%",
+              textAlign:'justify'
             }}
           >
             {blogNewsPage[0]?.data.bottom_description2}
@@ -692,7 +696,7 @@ export default function BlogsNews() {
           </div>
           <Typography
             sx={{
-              fontSize: { xs: "24px", sm: "30px", lg: "32px", xl: "30px" },
+              fontSize: { xs: "24px", sm: "30px", lg: "25px", xl: "30px" },
               lineHeight: { xs: "30px", sm: "40px", lg: "150%", xl: "150%" },
               marginBottom: "62px",
               color: "#4D5053",

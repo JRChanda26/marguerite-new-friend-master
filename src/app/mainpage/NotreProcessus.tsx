@@ -185,7 +185,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "42px", xl: "42px" },
+                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "42px" },
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
@@ -279,7 +279,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "42px", xl: "42px" },
+                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "42px" },
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
@@ -394,7 +394,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "42px", xl: "42px" },
+                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "42px" },
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",

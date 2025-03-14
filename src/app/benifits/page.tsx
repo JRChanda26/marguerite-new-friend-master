@@ -91,7 +91,7 @@ const Benifits: React.FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Mulish",
-                  fontSize: { xs: "35px", sm: "48px", lg: "64px", xl: "64px" },
+                  fontSize: { xs: "35px", sm: "48px", lg: "58px", xl: "64px" },
                   fontWeight: 700,
                   lineHeight: {
                     xs: "40px",
@@ -104,7 +104,7 @@ const Benifits: React.FC = () => {
                   margin: {
                     xs: "100px 0px 0px 0px",
                     sm: "100px 0px 0px 0px",
-                    lg: "150px 150px 8px 150px",
+                    lg: "150px 80px 8px 80px",
                     xl: "150px 150px 8px 150px",
                   },
                 }}
@@ -127,7 +127,7 @@ const Benifits: React.FC = () => {
                   margin: {
                     xs: "5%",
                     sm: "5% 10%",
-                    lg: "20px 80px 157px 80px",
+                    lg: "20px 150px 157px 150px",
                     xl: "0px 280px 157px 280px",
                   },
                 }}
@@ -212,7 +212,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "15px",
                               sm: "35px",
-                              lg: "36px",
+                              lg: "25px",
                               // xl: "36px",
                               md: "20px",
                               xl: "30px",
@@ -234,7 +234,7 @@ const Benifits: React.FC = () => {
                           fontSize: {
                             xs: "12px",
                             sm: "25px",
-                            lg: "24px",
+                            lg: "18px",
                             md: "16px",
                             xl: "24px",
                           },
@@ -311,7 +311,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "15px",
                               sm: "35px",
-                              lg: "36px",
+                              lg: "25px",
                               // xl: "36px",
                               md: "20px",
                               xl: "30px",
@@ -333,7 +333,7 @@ const Benifits: React.FC = () => {
                           fontSize: {
                             xs: "12px",
                             sm: "25px",
-                            lg: "24px",
+                            lg: "18px",
                             md: "16px",
                             xl: "24px",
                           },
@@ -428,7 +428,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "15px",
                               sm: "35px",
-                              lg: "36px",
+                              lg: "25px",
                               // xl: "36px",
                               md: "20px",
                               xl: "30px",
@@ -450,7 +450,7 @@ const Benifits: React.FC = () => {
                           fontSize: {
                             xs: "12px",
                             sm: "25px",
-                            lg: "24px",
+                            lg: "18px",
                             md: "16px",
                             xl: "24px",
                           },
@@ -527,7 +527,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "15px",
                               sm: "35px",
-                              lg: "36px",
+                              lg: "25px",
                               // xl: "36px",
                               md: "20px",
                               xl: "30px",
@@ -549,7 +549,7 @@ const Benifits: React.FC = () => {
                           fontSize: {
                             xs: "12px",
                             sm: "25px",
-                            lg: "24px",
+                            lg: "18px",
                             md: "16px",
                             xl: "24px",
                           },

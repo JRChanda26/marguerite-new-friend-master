@@ -45,7 +45,7 @@ export default function Blogs() {
 
   const title: React.CSSProperties = {
     color: "#161C2D",
-    fontSize: "21.27px",
+    // fontSize: "21.27px",
     fontWeight: 700,
     fontFamily: "Mulish",
     lineHeight: "120%",
@@ -54,7 +54,7 @@ export default function Blogs() {
 
   const description: React.CSSProperties = {
     color: "#161C2D",
-    fontSize: "18.61px",
+    // fontSize: "18.61px",
     fontWeight: 400,
     opacity: "72%",
     fontFamily: "Mulish",
@@ -540,7 +540,7 @@ export default function Blogs() {
               lg: "repeat(3, 1fr)",
               xl: "repeat(3, 1fr)",
             },
-            gap: {xs: "30px",sm: "30px", lg: "50px", xl: "70px" },
+            gap: { xs: "30px", sm: "30px", lg: "50px", xl: "70px" },
             justifyContent: "center",
             // padding: "3% 8%",
             padding: {
@@ -589,8 +589,22 @@ export default function Blogs() {
                     }}
                   />
                 )}
-                <Typography sx={title}>{item.subTitle}</Typography>
-                <Typography sx={description}>{item.description}</Typography>
+                <Typography sx={{
+                  ...title, fontSize: {
+                    xs: "14px",
+                    sm: "18px",
+                    lg: "17px",
+                    xl: "21.27px",
+                  },
+                }}>{item.subTitle}</Typography>
+                <Typography sx={{
+                  ...description, fontSize: {
+                    xs: "12px",
+                    sm: "14px",
+                    lg: "14px",
+                    xl: "18.61px",
+                  },
+                }}>{item.description}</Typography>
               </Grid>
             ))}
         </Grid>
@@ -600,7 +614,7 @@ export default function Blogs() {
             flexDirection: "row",
             justifyContent: "flex-end",
             gap: "20px",
-            paddingRight: {lg:"50px",xl:"50px"},
+            paddingRight: { lg: "50px", xl: "50px" },
             paddingBottom: "10px",
             marginTop: "50px",
           }}
@@ -626,7 +640,7 @@ export default function Blogs() {
             const startPage = Math.max(0, articlePage - 1);
             const endPage = Math.min(
               Math.ceil(repeatedArticleItems.length / fixedRowsPerArticlePage) -
-                1,
+              1,
               startPage + 2
             );
 
