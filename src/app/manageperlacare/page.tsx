@@ -340,8 +340,7 @@ const ManagePerLaCare: React.FC = () => {
             xs: "cover",
             sm: "cover",
             lg: "cover",
-            md: "cover",
-            xl: "contain",
+            xl: "cover", 
           },
           backgroundRepeat: "no-repeat",
         }}
@@ -358,7 +357,7 @@ const ManagePerLaCare: React.FC = () => {
                   xs: "70px 50px 0px 50px",
                   sm: "150.67px 150px 0px 150px",
                   lg: "350px 150px 0px 150px",
-                  xl: "350px 300px 0px 300px",
+                  xl: "300px 300px 0px 300px",
                 },
               }}
             >
@@ -379,7 +378,7 @@ const ManagePerLaCare: React.FC = () => {
                     xs: "0% 5% 0% 5%",
                     sm: "3% 8%",
                     lg: "41px 152px 74px 152px",
-                    xl: "20px 152px 74px 152px",
+                    xl: "21px 82px 21px 82px",
                   },
                 }}
               >
