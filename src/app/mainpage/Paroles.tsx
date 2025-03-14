@@ -434,7 +434,7 @@ export default function Paroles() {
                     fontSize: {
                       xs: "12px",
                       sm: "16px",
-                      lg: "35.2px",
+                      lg: "28px",
                       xl: "35.2px",
                     },
                     lineHeight: {

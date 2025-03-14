@@ -19,7 +19,7 @@ export default function BlogEt() {
   const title: React.CSSProperties = {
     color: "#161C2D",
     fontWeight: 700,
-    textAlign: "justify",
+    textAlign: "left",
     paddingTop: "31.9px",
     // fontFamily: "Mulish",
     fontFamily: "Helvetica, sans-serif",
@@ -28,7 +28,7 @@ export default function BlogEt() {
   const description: React.CSSProperties = {
     color: "#161C2DB8",
     fontWeight: 400,
-    textAlign: "justify",
+    textAlign: "left",
     paddingTop: "21.27px",
     // fontFamily: "Mulish",
     fontFamily: "Helvetica, sans-serif",
@@ -153,7 +153,7 @@ export default function BlogEt() {
                   fontSize: {
                     xs: "14px",
                     sm: "18px",
-                    lg: "21.27px",
+                    lg: "17px",
                     xl: "21.27px",
                   },
                   lineHeight: {
@@ -172,7 +172,7 @@ export default function BlogEt() {
                   fontSize: {
                     xs: "12px",
                     sm: "14px",
-                    lg: "18.61px",
+                    lg: "14px",
                     xl: "18.61px",
                   },
                   lineHeight: {

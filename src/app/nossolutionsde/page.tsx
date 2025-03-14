@@ -320,11 +320,12 @@ const NosSolutionsDe: React.FC = () => {
                     paddingTop: "23px",
                     fontFamily: "Jost",
                     color: "#4D5053",
+                    textAlign:'justify'
                   }}
                 >
                   {post.data.top_left_description}
                 </Typography>
-                <div style={{ paddingTop: "50px" }}>
+                <div style={{ paddingTop: "40px" }}>
                   {nosPage.map((post: any) => (
                     <Button
                       key={post}

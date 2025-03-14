@@ -102,8 +102,8 @@ export default function NeManquez() {
         margin: {
           xs: "50px 30px 50px 50px",
           sm: "80px 30px 80px 50px",
-          md: "70px 100px",
-          lg: "100px",
+          // md: "70px 100px",
+          // lg: "100px",
           // xl: "145px 178px",
         },
       }}
@@ -136,7 +136,7 @@ export default function NeManquez() {
             item
             xs={6}
             sm={5}
-            md={5}
+            md={4}
             lg={4}
             xl={4}
             sx={{
@@ -195,7 +195,7 @@ export default function NeManquez() {
             xs={6}
             sm={6}
             md={7}
-            lg={6}
+            lg={8}
             xl={6}
             sx={{
               background: "#FFFFFF",
@@ -206,7 +206,7 @@ export default function NeManquez() {
               padding: {xs:"0px 2px",sm:"5px 10px",md:"5px 10px",lg:"5px 10px",xl:"5px 10px"},
               alignItems: "center",
               boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
-              height: { xs: "20px", sm: "50px",md: "50px", lg: "70px", xl: "86.58px" },
+              height: { xs: "20px", sm: "50px",md: "50px", lg: "80px", xl: "86.58px" },
               width: { xs: "100%", sm: "100%",md: "0px", lg: "0px", xl: "786px" },
             }}
           >

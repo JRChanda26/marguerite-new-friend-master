@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
                   fontSize: {
                     xs: "16px",
                     sm: "14px",
-                    lg: "19.84px",
+                    lg: "16px",
                     xl: "19.84px",
                   },
                   lineHeight: "auto",
@@ -139,7 +139,7 @@ const Footer: React.FC = () => {
                 fontSize: {
                   xs: "18px",
                   sm: "18px",
-                  lg: "24.8px",
+                  lg: "20px",
                   xl: "24.8px",
                 },
                 lineHeight: "auto",
@@ -162,7 +162,7 @@ const Footer: React.FC = () => {
                 fontSize: {
                   xs: "18px",
                   sm: "18px",
-                  lg: "24.8px",
+                  lg: "20px",
                   xl: "24.8px",
                 },
                 lineHeight: "auto",
