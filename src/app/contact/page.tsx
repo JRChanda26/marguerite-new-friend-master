@@ -399,6 +399,7 @@ export default function Contact() {
                 xs: "50px 32px",
                 sm: "50px 32px",
                 lg: "76px 32px",
+                md: "36px 32px",
                 xl: "76px 32px",
               },
               display: "flex",
@@ -433,6 +434,7 @@ export default function Contact() {
                       xs: "16px",
                       sm: "20px",
                       lg: "20px",
+                      md: "18px",
                       xl: "20px",
                     },
                     display: "flex",
@@ -593,9 +595,9 @@ export default function Contact() {
             color="primary"
             sx={{
               textDecoration: "none",
-              padding: "10px 24px",
+              padding: {xs:"10px 24px",sm:"10px 24px",md:"3px 12px",lg:"10px 24px",xl:"10px 24px"},
               borderRadius: "10px",
-              fontSize: "14px",
+              fontSize: {xs:"14px",sm:"14px",md:"10px",lg:"14px",xl:"14px"},
               fontWeight: 600,
               background: "#292F36",
               color: "#FFFFFF",

@@ -68,7 +68,7 @@ export default function BlogsNews() {
 
   const heading: React.CSSProperties = {
     color: "#292F36",
-    fontSize: "25px",
+    // fontSize: "25px",
     fontWeight: 400,
     fontFamily: "Mulish",
     lineHeight: "125%",
@@ -77,7 +77,7 @@ export default function BlogsNews() {
 
   const list: React.CSSProperties = {
     color: "#292F36",
-    fontSize: "20px",
+    // fontSize: "20px",
     fontWeight: 400,
     fontFamily: "Mulish",
     lineHeight: "125%",
@@ -434,6 +434,7 @@ export default function BlogsNews() {
                 padding: {
                   xs: "30px 40px",
                   sm: "30px 40px",
+                  md: "15px",
                   lg: "25px",
                   xl: "20px 50px",
                 },
@@ -441,7 +442,7 @@ export default function BlogsNews() {
                 marginTop: {xs:'20px',sm:'20px',md:'25px',lg:'25px',xl:'30px'},
               }}
             >
-              <Typography style={{ ...heading, marginBottom: "0px" }}>
+              <Typography sx={{fontSize: {xs:'25px',sm:'25px',md:'20px',lg:'25px',xl:'25px'}, ...heading, marginBottom: "0px" }}>
                 {blogNewsPage[0]?.data.card_heading}
               </Typography>
               {Array(3)
@@ -453,18 +454,19 @@ export default function BlogsNews() {
                         padding: {
                           xs: "20px 0px",
                           sm: "20px 0px",
+                          md: "17px 0px",
                           lg: "20px 0px",
                           xl: "20px 0px",
                         },
                       }}
                     >
-                      <Typography sx={list}>
+                      <Typography sx={{fontSize: {xs:'20px',sm:'20px',md:'14px',lg:'20px',xl:'20px'},...list}}>
                         {blogNewsPage[0]?.data.card_title_lists}
                       </Typography>
                       <Typography
                         sx={{
                           float: "right",
-                          fontSize: "16px",
+                          fontSize: {xs:'16px',sm:'16px',md:'12px',lg:'16px',xl:'16px'},
                           fontWeight: 400,
                           fontFamily: "Mulish",
                           lineHeight: "150%",
@@ -543,7 +545,7 @@ export default function BlogsNews() {
               xs: "2% 7%",
               sm: "5%",
               lg: "100px 0px 108px 140px",
-              md: "50px 0px 50px 140px",
+              md: "50px 0px 50px 80px",
               xl: "100px 0px 108px 140px",
             },
           }}
@@ -555,7 +557,7 @@ export default function BlogsNews() {
               fontFamily: "Mulish",
               letterSpacing: "2%",
               color: "#292F36",
-              paddingRight: { lg: "300px", xl: "300px" },
+              paddingRight: {md:"200px", lg: "300px", xl: "300px" },
             }}
           >
             {blogNewsPage[0]?.data.bottom_heading}
