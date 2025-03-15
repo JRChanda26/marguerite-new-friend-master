@@ -134,7 +134,7 @@ export default function NeManquez() {
         >
           <Grid
             item
-            xs={5}
+            xs={4}
             sm={5}
             md={4}
             lg={4}
@@ -165,7 +165,7 @@ export default function NeManquez() {
                 color: "#24535C",
                 fontFamily: "Mulish",
                 fontSize: { xs: "8px", sm: "14px",md: "18px", lg: "18px", xl: "23.52px" },
-                lineHeight: { xs: "5px", sm: "28px",md: "160%", lg: "160%", xl: "160%" },
+                lineHeight: { xs: "8px", sm: "28px",md: "160%", lg: "160%", xl: "160%" },
                 fontWeight: 400,
                 padding: {
                   xs: "5px 0px 15px 0px",
@@ -192,7 +192,7 @@ export default function NeManquez() {
           </Grid>
           <Grid
             item
-            xs={7}
+            xs={6}
             sm={6}
             md={7}
             lg={8}
