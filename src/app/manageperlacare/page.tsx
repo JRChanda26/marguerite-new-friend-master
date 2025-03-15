@@ -128,7 +128,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "10%"
           :isMedium?
-          "0%"
+          "2%"
           : isLarge
             ? "0%"
             : isExtraLarge
@@ -625,10 +625,10 @@ const ManagePerLaCare: React.FC = () => {
               color: "#24535C",
               fontFamily: "Mulish",
               fontWeight: 800,
-              fontSize: { xs: "30px", sm: "50px", lg: "64px", xl: "64px" },
+              fontSize: { xs: "30px", sm: "40px", lg: "64px", xl: "64px" },
               lineHeight: {
                 xs: "50px",
-                sm: "65px",
+                sm: "50px",
                 lg: "80.32px",
                 xl: "80.32px",
               },
@@ -929,7 +929,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "390px",md: "470px", lg: "490px", xl: "600px" },
+                  height: { xs: "0px", sm: "390px",md: "400px", lg: "490px", xl: "600px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -962,7 +962,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "18px",
                               sm: "22px",
                               lg: "25px",
-                              md: "20px",
+                              md: "18px",
                               xl: "35px",
                             },
                             fontWeight: 500,
@@ -981,7 +981,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "14px",
                               sm: "18px",
                               lg: "22px",
-                              md: "18px",
+                              md: "14px",
                               xl: "28px",
                             },
                             fontWeight: 400,
@@ -1076,7 +1076,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "400px",md: "450px", lg: "450px", xl: "600px" },
+                  height: { xs: "0px", sm: "400px",md: "400px", lg: "450px", xl: "600px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -1109,7 +1109,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "18px",
                               sm: "22px",
                               lg: "25px",
-                              md: "20px",
+                              md: "18px",
                               xl: "35px",
                             },
                             fontWeight: 500,
@@ -1128,7 +1128,7 @@ const ManagePerLaCare: React.FC = () => {
                               xs: "14px",
                               sm: "18px",
                               lg: "22px",
-                              md: "18px",
+                              md: "14px",
                               xl: "28px",
                             },
                             fontWeight: 400,
