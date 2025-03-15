@@ -166,8 +166,8 @@ export default function Paroles() {
             fontFamily: "Helvetica, sans-serif",
             letterSpacing: "0%",
             display: "flex",
-            flexDirection: "row",
-            gap: "80px",
+            flexDirection: {xs:"colum",sm:"row",md:"row",lg:"row",xl:"row"},
+            gap: {xs:"30px",sm:"80px",md:"80px",lg:"80px",xl:"80px"},
           }}
         >
           {parolesPage?.data.heading}
@@ -176,6 +176,7 @@ export default function Paroles() {
               display: "flex",
               flexDirection: "row",
               gap: "30px",
+              paddingLeft:'30px'
             }}
           >
             {" "}

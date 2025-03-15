@@ -110,7 +110,7 @@ const Choisir: React.FC = () => {
           display: "flex",
           justifyContent: "center",
           flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
-          gap: "51px",
+          gap: { xs: "51px", sm: "20px",md:"20px", lg: "51px", xl: "51px" },
           padding: {
             xs: "30px 0px 30px 0px",
             sm: "30px 0px 50px 0px",

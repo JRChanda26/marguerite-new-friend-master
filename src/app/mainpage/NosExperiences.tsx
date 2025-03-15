@@ -35,7 +35,7 @@ const NosExperiences: React.FC = () => {
     <Box
       sx={{
         backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: { xs: "cover", sm: "cover", lg: "contain", xl: "cover" },
+        backgroundSize: { xs: "contain", sm: "cover", lg: "contain", xl: "cover" },
         backgroundRepeat: "no-repeat",
         width: "100%",
         display: "flex",
@@ -65,12 +65,12 @@ const NosExperiences: React.FC = () => {
                 color: "#FFFFFF",
                 fontWeight: 700,
                 fontSize: {
-                  xs: "36px",
+                  xs: "20px",
                   sm: "48px",
                   lg: "66.25px",
                   xl: "66.25px",
                 },
-                lineHeight: { xs: "44px", sm: "55px", lg: "120%", xl: "120%" },
+                lineHeight: { xs: "30px", sm: "55px", lg: "120%", xl: "120%" },
                 padding: {
                   xs: "12% 0% 2% 0%",
                   sm: "8% 0% 2% 0%",
@@ -87,10 +87,10 @@ const NosExperiences: React.FC = () => {
                 fontFamily: 'Helvetica, sans-serif',
                 color: "#FFFFFF",
                 fontWeight: 400,
-                fontSize: { xs: "14px", sm: "18px", lg: "24px", xl: "24px" },
-                lineHeight: { xs: "18px", sm: "25px", lg: "120%", xl: "120%" },
+                fontSize: { xs: "8px", sm: "18px", lg: "24px", xl: "24px" },
+                lineHeight: { xs: "10px", sm: "25px", lg: "120%", xl: "120%" },
                 padding: {
-                  xs: "5%",
+                  xs: "0% 2%",
                   sm: "2%",
                   lg: "0px 0px 0px 0px",
                   xl: "0px 0px 0px 0px",
@@ -121,7 +121,7 @@ const NosExperiences: React.FC = () => {
                 display: "flex",
                 justifyContent: "center",
                 padding: {
-                  xs: "20px 0px 70px 0px",
+                  xs: "5px 0px 50px 0px",
                   sm: "50px 0px 80px 0px",
                   lg: "100px 0px 231px 0px",
                   xl: "179px 0px 231px 0px",
@@ -145,7 +145,7 @@ const NosExperiences: React.FC = () => {
                     sx={{
                       background: "#FFFFFF",
                       borderRadius: "22.08px",
-                      padding: "20px",
+                      padding: {xs:"10px",sm:"20px",md:"20px",lg:"20px",xl:"20px"},
                       minWidth: {
                         xs: "250px",
                         sm: "300px",

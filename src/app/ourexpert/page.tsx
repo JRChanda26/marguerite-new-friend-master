@@ -229,7 +229,7 @@ const OurExperts: React.FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Mulish",
-                  fontSize: { xs: "28px", sm: "52px", lg: "58px", xl: "84px" },
+                  fontSize: { xs: "28px", sm: "42px",md:"42px", lg: "58px", xl: "84px" },
                   fontWeight: 700,
                   lineHeight: {
                     xs: "30px",
@@ -256,7 +256,7 @@ const OurExperts: React.FC = () => {
                   fontSize: {
                     xs: "14px",
                     sm: "18px",
-                    md: "22px",
+                    md: "18px",
                     lg: "22px",
                     xl: "28px",
                   },
@@ -299,10 +299,10 @@ const OurExperts: React.FC = () => {
                   textAlign: "center",
                   gap: "3%",
                   margin: {
-                    xs: "0%",
+                    xs: "0% 0% 30% 0%",
                     sm: "0%",
                     lg: "0px 150px",
-                    md: "0px 0px 80px 0px",
+                    md: "0px 80px 80px 80px",
                     xl: "0px 250px 150px 250px",
                   },
                 }}
