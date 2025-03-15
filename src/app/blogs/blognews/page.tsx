@@ -150,7 +150,7 @@ export default function BlogsNews() {
               xs: "5%",
               sm: "5%",
               lg: "150px 100px 0px 100px",
-              // xl: "283px 194px 0px 194px",
+              xl: "153px 100px 0px 100px",
             },
           }}
         >
@@ -162,6 +162,7 @@ export default function BlogsNews() {
                 letterSpacing: "2%",
                 fontFamily: "Mulish",
                 color: "#292F36",
+                paddingRight:{xl:'150px'}
               }}
             >
               {blogNewsPage[0]?.data.top_heading}
@@ -417,7 +418,7 @@ export default function BlogsNews() {
                     },
                   },
                   height: { lg: "80px", xl: "101px" },
-                  width: { lg: "385px", xl: "490px" },
+                  width: { lg: "385px", xl: "550px" },
                 }}
                 InputProps={{
                   endAdornment: (
@@ -435,14 +436,14 @@ export default function BlogsNews() {
                   xs: "30px 40px",
                   sm: "30px 40px",
                   md: "15px",
-                  lg: "25px",
+                  lg: "20px 50px",
                   xl: "20px 50px",
                 },
                 borderRadius: "20px",
-                marginTop: {xs:'20px',sm:'20px',md:'25px',lg:'25px',xl:'30px'},
+                marginTop: {xs:'20px',sm:'20px',md:'25px',lg:'20px',xl:'30px'},
               }}
             >
-              <Typography sx={{fontSize: {xs:'25px',sm:'25px',md:'20px',lg:'25px',xl:'25px'}, ...heading, marginBottom: "0px" }}>
+              <Typography sx={{fontSize: {xs:'25px',sm:'25px',md:'20px',lg:'22px',xl:'35px'}, ...heading, marginBottom: "0px" }}>
                 {blogNewsPage[0]?.data.card_heading}
               </Typography>
               {Array(3)
@@ -455,18 +456,18 @@ export default function BlogsNews() {
                           xs: "20px 0px",
                           sm: "20px 0px",
                           md: "17px 0px",
-                          lg: "20px 0px",
-                          xl: "20px 0px",
+                          lg: "13px 0px",
+                          xl: "22px 5px",
                         },
                       }}
                     >
-                      <Typography sx={{fontSize: {xs:'20px',sm:'20px',md:'14px',lg:'20px',xl:'20px'},...list}}>
+                      <Typography sx={{fontSize: {xs:'20px',sm:'20px',md:'14px',lg:'18px',xl:'30px'},...list}}>
                         {blogNewsPage[0]?.data.card_title_lists}
                       </Typography>
                       <Typography
                         sx={{
                           float: "right",
-                          fontSize: {xs:'16px',sm:'16px',md:'12px',lg:'16px',xl:'16px'},
+                          fontSize: {xs:'16px',sm:'16px',md:'12px',lg:'14px',xl:'20px'},
                           fontWeight: 400,
                           fontFamily: "Mulish",
                           lineHeight: "150%",

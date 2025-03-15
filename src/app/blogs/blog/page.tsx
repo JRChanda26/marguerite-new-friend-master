@@ -171,7 +171,7 @@ export default function Blogs() {
               sm: "150.67px 150px 0px 150px",
               lg: "250px 150px 0px 150px",
               md: "250px 100px 0px 100px",
-              xl: "320px 300px 0px 300px",
+              xl: "420px 300px 0px 300px",
             },
           }}
         >
@@ -311,7 +311,7 @@ export default function Blogs() {
                     <Typography
                       sx={{
                         color: "#292F36",
-                        fontSize: "25px",
+                        fontSize: {xl:"35px",lg:"25px",md:"25px",sm:"25px",xs:"25px"},
                         fontWeight: 700,
                         fontFamily: "Mulish",
                         lineHeight: "125%",
@@ -325,7 +325,7 @@ export default function Blogs() {
                     <Typography
                       sx={{
                         color: "#4D5053",
-                        fontSize: "22px",
+                        fontSize: {xl:"30px",lg:"22px",md:"22px",sm:"22px",xs:"22px"},
                         fontWeight: 400,
                         fontFamily: "Mulish",
                         lineHeight: "150%",
@@ -338,7 +338,7 @@ export default function Blogs() {
                     <Typography
                       sx={{
                         color: "#4D5053",
-                        fontSize: "16px",
+                        fontSize: {xl:"25px",lg:"16px",md:"16px",sm:"16px",xs:"16px"},
                         fontWeight: 400,
                         fontFamily: "Mulish",
                         lineHeight: "150%",

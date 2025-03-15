@@ -78,7 +78,7 @@ export default function BlogEt() {
               padding: {
                 xs: "20px 0px",
                 sm: "50px 0px",
-                lg: "100px 448px 79px 448px",
+                lg: "100px 200px 79px 200px",
                 md: "70px 100px 50px 100px",
                 xl: "159px 448px 79px 448px",
               },
