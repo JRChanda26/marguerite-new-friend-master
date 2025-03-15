@@ -123,7 +123,7 @@ export default function NotreProcessus() {
               xs: "0% 0% 0% 5%",
               sm: "5%",
               lg: "0px 100px 200px 100px",
-              xl: "0px 100px 349px 180px",
+              xl: "0px 100px 349px 250px",
             },
           }}
         >
@@ -141,9 +141,9 @@ export default function NotreProcessus() {
                 xs: "0px 0px 30px 0px",
                 sm: "0px",
                 lg: "",
-                xl: "0px 42px 0px 0px",
+                xl: "0px 52px 0px 0px",
               },
-              gap: { xs: "0px", sm: "0px", lg: "124px", xl: "80px" },
+              gap: { xs: "0px", sm: "0px", lg: "124px", xl: "100px" },
             }}
           >
             <div>
@@ -164,14 +164,14 @@ export default function NotreProcessus() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: { xs: "5px", sm: "0%", lg: "18px", xl: "18px" },
+                gap: { xs: "5px", sm: "0%", lg: "18px", xl: "28px" },
                 paddingLeft:{xs:'20px'}
               }}
             >
               <Typography
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "12px", sm: "14px", lg: "16px", xl: "18px" },
                   lineHeight: {
                     xs: "28px",
                     sm: "25px",
@@ -185,13 +185,14 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "42px" },
+                  fontSize: { xs: "25px", sm: "32px", lg: "35px", xl: "42px" },
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
                     lg: "auto",
                     xl: "auto",
                   },
+                  paddingRight:{xl:'150px'}
                 }}
               >
                 {notrePage[0]?.data.card_title1}
@@ -199,13 +200,14 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "18px" },
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
                     lg: "185%",
                     xl: "185%",
                   },
+                  paddingRight:{xl:'120px'}
                 }}
               >
                 {notrePage[0]?.data.card_description1}
@@ -248,9 +250,9 @@ export default function NotreProcessus() {
                 xs: "0px 0px 0px 0px",
                 sm: "0px",
                 lg: "100px 0px 100px 60px",
-                xl: "128px 42px 128px 20px",
+                xl: "128px 112px 128px 20px",
               },
-              gap: { lg: "50px", xl: "104px" },
+              gap: { lg: "50px", xl: "0px" },
             }}
           >
             <Grid
@@ -258,14 +260,14 @@ export default function NotreProcessus() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: { xs: "5px", sm: "2%", lg: "18px", xl: "18px" },
+                gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
                 paddingLeft:{xs:'20px'}
               }}
             >
               <Typography
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "12px", sm: "14px", lg: "16px", xl: "18px" },
                   lineHeight: {
                     xs: "28px",
                     sm: "25px",
@@ -279,13 +281,14 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "42px" },
+                  fontSize: { xs: "25px", sm: "32px", lg: "35px", xl: "42px" },
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
                     lg: "auto",
                     xl: "auto",
                   },
+                  paddingRight:{xl:'200px'}
                 }}
               >
                 {notrePage[0]?.data.card_title2}
@@ -293,13 +296,14 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "18px" },
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
                     lg: "185%",
                     xl: "185%",
                   },
+                  paddingRight:{xl:'150px'}
                 }}
               >
                 {notrePage[0]?.data.card_description2}
@@ -373,14 +377,14 @@ export default function NotreProcessus() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                gap: { xs: "5px", sm: "2%", lg: "18px", xl: "18px" },
+                gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
                 paddingLeft:{xs:'20px'}
               }}
             >
               <Typography
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "12px", sm: "14px", lg: "16px", xl: "18px" },
                   lineHeight: {
                     xs: "28px",
                     sm: "25px",
@@ -394,13 +398,14 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "42px" },
+                  fontSize: { xs: "25px", sm: "32px", lg: "35px", xl: "42px" },
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
                     lg: "auto",
                     xl: "auto",
                   },
+                  paddingRight:{xl:'150px'}
                 }}
               >
                 {notrePage[0]?.data.card_title3}
@@ -408,13 +413,14 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" },
+                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "18px" },
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
                     lg: "185%",
                     xl: "185%",
                   },
+                  paddingRight:{xl:'120px'}
                 }}
               >
                 {notrePage[0]?.data.card_description3}
