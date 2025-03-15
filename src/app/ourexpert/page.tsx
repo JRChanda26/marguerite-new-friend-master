@@ -180,7 +180,7 @@ const OurExperts: React.FC = () => {
     if (isXs) return { width: "150px", height: "250px" };
     if (isSm) return { width: "200px", height: "320px" };
     if (isMd) return { width: "250px", height: "400px" };
-    if (isLg) return { width: "283.55px", height: "433px" };
+    if (isLg) return { width: "220px", height: "333px" };
     if (isXl) return { width: "283.55px", height: "433px" };
     return { width: "283.55px", height: "433px" };
   };
@@ -229,7 +229,7 @@ const OurExperts: React.FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Mulish",
-                  fontSize: { xs: "28px", sm: "52px", lg: "58px", xl: "64px" },
+                  fontSize: { xs: "28px", sm: "52px", lg: "58px", xl: "84px" },
                   fontWeight: 700,
                   lineHeight: {
                     xs: "30px",
@@ -244,7 +244,7 @@ const OurExperts: React.FC = () => {
                     sm: "8% 10% 0% 10%",
                     lg: "100px 100px 40px 100px",
                     md: "50px 20px 0px 20px",
-                    xl: "187px 100px 40px 100px",
+                    xl: "157px 100px 40px 100px",
                   },
                 }}
               >
@@ -258,7 +258,7 @@ const OurExperts: React.FC = () => {
                     sm: "18px",
                     md: "22px",
                     lg: "22px",
-                    xl: "22px",
+                    xl: "28px",
                   },
                   fontWeight: 400,
                   lineHeight: {
@@ -273,7 +273,7 @@ const OurExperts: React.FC = () => {
                     xs: "2% 5%",
                     sm: "2% 10%",
                     lg: "0px 100px 30px 100px",
-                    xl: "0px 150px 30px 150px",
+                    xl: "0px 180px 50px 180px",
                   },
                 }}
               >
@@ -301,9 +301,9 @@ const OurExperts: React.FC = () => {
                   margin: {
                     xs: "0%",
                     sm: "0%",
-                    lg: "",
+                    lg: "0px 150px",
                     md: "0px 0px 80px 0px",
-                    xl: "0px 150px 150px 150px",
+                    xl: "0px 250px 150px 250px",
                   },
                 }}
               >

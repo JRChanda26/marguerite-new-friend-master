@@ -103,8 +103,8 @@ export default function NeManquez() {
           xs: "50px 30px 50px 50px",
           sm: "80px 30px 80px 50px",
           // md: "70px 100px",
-          // lg: "100px",
-          // xl: "145px 178px",
+          lg: "50px 100px",
+          xl: "145px 178px",
         },
       }}
     >
@@ -170,7 +170,7 @@ export default function NeManquez() {
                 padding: {
                   xs: "5px 0px 15px 0px",
                   sm: "0px 0px 40px 0px",
-                  lg: "15px 0px 100px 0px",
+                  lg: "15px 0px 50px 0px",
                   md: "15px 0px 20px 0px",
                   xl: "15px 0px 50px 0px",
                 },

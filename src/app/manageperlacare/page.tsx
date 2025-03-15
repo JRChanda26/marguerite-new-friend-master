@@ -358,7 +358,7 @@ const ManagePerLaCare: React.FC = () => {
                   sm: "150.67px 150px 0px 150px",
                   lg: "350px 150px 0px 150px",
                   md: "250px 100px 0px 100px",
-                  xl: "320px 300px 0px 300px",
+                  xl: "420px 300px 0px 300px",
                 },
               }}
             >
@@ -474,6 +474,7 @@ const ManagePerLaCare: React.FC = () => {
                       },
                       color: "#292F36",
                       letterSpacing: "2%",
+                      paddingRight:{xl:'100px'}
                     }}
                   >
                     {post.data.top_left_title}
@@ -503,7 +504,7 @@ const ManagePerLaCare: React.FC = () => {
                   {/* {post.data.top_left_description} */}
                   {formatText(description)}
                 </Typography>
-                <Grid sx={{ paddingTop: {lg: "20px", xl: "50px" } }}>
+                <Grid sx={{ paddingTop: {lg: "20px", xl: "0px" } }}>
                   {managePage.map((post: any) => (
                     <Button
                       key={post}
@@ -928,7 +929,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "390px",md: "470px", lg: "490px", xl: "490px" },
+                  height: { xs: "0px", sm: "390px",md: "470px", lg: "490px", xl: "600px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -962,7 +963,7 @@ const ManagePerLaCare: React.FC = () => {
                               sm: "22px",
                               lg: "25px",
                               md: "20px",
-                              xl: "25px",
+                              xl: "35px",
                             },
                             fontWeight: 500,
                             fontFamily: "Mulish",
@@ -981,7 +982,7 @@ const ManagePerLaCare: React.FC = () => {
                               sm: "18px",
                               lg: "22px",
                               md: "18px",
-                              xl: "22px",
+                              xl: "28px",
                             },
                             fontWeight: 400,
                             fontFamily: "Mulish",
@@ -1075,7 +1076,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={6}
                 xl={6}
                 sx={{
-                  height: { xs: "0px", sm: "400px",md: "450px", lg: "450px", xl: "450px" },
+                  height: { xs: "0px", sm: "400px",md: "450px", lg: "450px", xl: "600px" },
                   overflowY: "auto",
                   scrollbarWidth: "thin",
                 }}
@@ -1109,7 +1110,7 @@ const ManagePerLaCare: React.FC = () => {
                               sm: "22px",
                               lg: "25px",
                               md: "20px",
-                              xl: "25px",
+                              xl: "35px",
                             },
                             fontWeight: 500,
                             fontFamily: "Mulish",
@@ -1128,7 +1129,7 @@ const ManagePerLaCare: React.FC = () => {
                               sm: "18px",
                               lg: "22px",
                               md: "18px",
-                              xl: "22px",
+                              xl: "28px",
                             },
                             fontWeight: 400,
                             fontFamily: "Mulish",
@@ -1280,7 +1281,7 @@ const ManagePerLaCare: React.FC = () => {
             xs: "10% 10% 0% 10%",
             sm: "10% 10% 0% 10%",
             lg: "100px 200px 0px 200px",
-            // xl: "187px 414px 0px 414px",
+            xl: "187px 414px 0px 414px",
           },
           color: "#0A1411",
         }}
@@ -1318,7 +1319,7 @@ const ManagePerLaCare: React.FC = () => {
           sm={4}
           sx={{
             alignContent: "center",
-            fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "25px" },
+            fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "35px" },
             lineHeight: { xs: "20px", sm: "30px", lg: "40px", xl: "40px" },
             fontWeight: 400,
             textAlign: "justify",

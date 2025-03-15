@@ -276,7 +276,7 @@ export default function Contact() {
               sm: "150.67px 150px 0px 150px",
               lg: "250px 150px 0px 150px",
               md: "250px 100px 0px 100px",
-              xl: "320px 300px 0px 300px",
+              xl: "420px 300px 0px 300px",
             },
           }}
         >
@@ -400,7 +400,7 @@ export default function Contact() {
                 sm: "50px 32px",
                 lg: "76px 32px",
                 md: "36px 32px",
-                xl: "76px 32px",
+                xl: "100px 52px",
               },
               display: "flex",
               flexDirection: "column",
@@ -435,7 +435,7 @@ export default function Contact() {
                       sm: "20px",
                       lg: "20px",
                       md: "18px",
-                      xl: "20px",
+                      xl: "28px",
                     },
                     display: "flex",
                     alignItems: "center",
