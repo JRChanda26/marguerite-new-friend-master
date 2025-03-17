@@ -603,7 +603,7 @@ const NosSolutionsDe: React.FC = () => {
               sx={{
                 background: item.background,
                 borderRadius: "42.9px",
-                padding: "30px",
+                padding: "20px",
                 width: "70%",
                 height:'7vh',
                 textAlign: "center",
@@ -613,6 +613,9 @@ const NosSolutionsDe: React.FC = () => {
                 lineHeight: "125%",
                 letterSpacing: "2%",
                 color: "#000000",
+                display: "flex", 
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
               {item.heading}
