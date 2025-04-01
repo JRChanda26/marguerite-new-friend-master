@@ -244,7 +244,7 @@ const ManagePerLaCare: React.FC = () => {
               ? "116%"
               : isExtraLarge
                 ? isMax
-                  ? "80%"
+                  ? "75%"
                   : "100%"
                 : "100%",
       right: isExtraSmall
@@ -447,7 +447,14 @@ const ManagePerLaCare: React.FC = () => {
         </Grid>
 
         <Grid
-          sx={{ padding: { xs: "5%", sm: "5%", lg: "80px", xl: "123px 80px" } }}
+          sx={{
+            padding: {
+              xs: "5%",
+              sm: "5%",
+              lg: "80px",
+              xl: isMax ? "123px 0px" : "123px 80px",
+            },
+          }}
         >
           {managePage.map((post: any) => (
             <Grid container spacing={0} key={post.id}>
@@ -898,7 +905,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg: "280px 100px 153px 100px",
                 md: "280px 50px 153px 50px",
                 xl: isMax
-                  ? "100px 200px 153px 200px"
+                  ? "50px 200px 153px 200px"
                   : "300px 200px 153px 200px",
               },
             }}
@@ -931,7 +938,7 @@ const ManagePerLaCare: React.FC = () => {
                   xs: "30px",
                   sm: "30px",
                   lg: "100px",
-                  xl: isMax ? "80px" : "162px",
+                  xl: isMax ? "40px" : "162px",
                 },
               }}
             >
@@ -1241,7 +1248,7 @@ const ManagePerLaCare: React.FC = () => {
                 sm: "10%",
                 lg: "107px 522px",
                 md: "107px 220px",
-                xl: "107px 522px",
+                xl: isMax ? "50px 522px" : "107px 522px",
               },
               flexDirection: "column",
             }}
@@ -1321,7 +1328,9 @@ const ManagePerLaCare: React.FC = () => {
                       letterSpacing: "1%",
                       padding: {
                         lg: "0px 303px 78px 303px",
-                        xl: isMax? "0px 200px 78px 200px":"0px 303px 78px 303px",
+                        xl: isMax
+                          ? "0px 200px 78px 200px"
+                          : "0px 303px 78px 303px",
                       },
                     }}
                   >

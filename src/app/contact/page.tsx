@@ -7,6 +7,7 @@ import {
   Snackbar,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import { PrismicNextLink } from "@prismicio/next";
 import React, { useEffect, useState } from "react";
@@ -249,8 +250,14 @@ export default function Contact() {
     },
   ];
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
-    <div>
+    <div
+      style={{
+        padding: isMax ? "0px 350px" : "0px 0px",
+      }}
+    >
       <Header />
       <Grid
         sx={{
@@ -588,16 +595,30 @@ export default function Contact() {
         <Grid
           item
           xs={12}
-          sx={{ textAlign: { xs: "center",md: "right", lg: "right", xl: "right" } }}
+          sx={{
+            textAlign: { xs: "center", md: "right", lg: "right", xl: "right" },
+          }}
         >
           <Button
             variant="contained"
             color="primary"
             sx={{
               textDecoration: "none",
-              padding: {xs:"10px 24px",sm:"10px 24px",md:"3px 12px",lg:"10px 24px",xl:"10px 24px"},
+              padding: {
+                xs: "10px 24px",
+                sm: "10px 24px",
+                md: "3px 12px",
+                lg: "10px 24px",
+                xl: "10px 24px",
+              },
               borderRadius: "10px",
-              fontSize: {xs:"14px",sm:"14px",md:"10px",lg:"14px",xl:"14px"},
+              fontSize: {
+                xs: "14px",
+                sm: "14px",
+                md: "10px",
+                lg: "14px",
+                xl: "14px",
+              },
               fontWeight: 600,
               background: "#292F36",
               color: "#FFFFFF",
