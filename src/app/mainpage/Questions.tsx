@@ -131,7 +131,7 @@ export default function Questions() {
                   sm: "0% 0% 0% 5%",
                   lg: "0px 30px 0px 100px",
                   md: "0px 30px 0px 80px",
-                  xl: "0px 130px 0px 136px",
+                  xl: isMax ? "0px 130px 0px 0px" : "0px 130px 0px 136px",
                 },
               }}
             >
@@ -164,7 +164,7 @@ export default function Questions() {
                   sm: "3% 0% 0% 5%",
                   lg: "40px 0px 0px 100px",
                   md: "40px 30px 0px 80px",
-                  xl: "63px 0px 0px 136px",
+                  xl: isMax ? "20px 0px 0px 0px" : "63px 0px 0px 136px",
                 },
               }}
             >
@@ -191,7 +191,7 @@ export default function Questions() {
                   sm: "5% 0% 0% 5%",
                   lg: "40px 0px 0px 100px",
                   md: "40px 30px 0px 80px",
-                  xl: "63px 0px 0px 136px",
+                  xl: isMax ? "20px 0px 0px 0px" : "63px 0px 0px 136px",
                 },
                 // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "26px",

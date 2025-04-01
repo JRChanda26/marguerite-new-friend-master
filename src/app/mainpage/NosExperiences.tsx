@@ -34,9 +34,7 @@ const NosExperiences: React.FC = () => {
   const isMax = useMediaQuery("(min-width:1930px)");
   
   return (
-    <div   style={{
-      padding: isMax ? "0px 350px" : "0px 0px",
-    }}>
+    <div>
     <Box
       sx={{
         backgroundImage: `url(${backgroundImage})`,
@@ -50,6 +48,9 @@ const NosExperiences: React.FC = () => {
       <Grid
         container
         spacing={3}
+        style={{
+          padding: isMax ? "0px 350px" : "0px 0px",
+        }}
       >
         {nosPage.map((post: any, postIndex: number) => (
           <Grid

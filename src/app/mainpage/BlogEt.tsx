@@ -58,6 +58,7 @@ export default function BlogEt() {
     <div
       style={{
         padding: isMax ? "0px 350px" : "0px 0px",
+        background: isMax ? "#BBDDD9" : "#FFFFFF",
       }}
     >
       <Grid
