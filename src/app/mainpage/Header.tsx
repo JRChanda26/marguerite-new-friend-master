@@ -352,7 +352,7 @@ const Header: React.FC = () => {
                   justifyContent: "space-around",
                   alignItems: "center",
                   gap: { sm: "80px" },
-                  padding: isMax ? "0px 200px" : "0px 0px",
+                  padding: isMax ? "0px 100px" : "0px 0px",
                 }}
               >
                 {post?.data.marguerite_logo && (
