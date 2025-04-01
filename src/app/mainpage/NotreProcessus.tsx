@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { createClient } from "@/prismicio";
-import { Grid, Typography } from "@mui/material";
+import { Grid, Typography, useMediaQuery } from "@mui/material";
 import { client } from "../../../lib/prismic-configuration";
 
 export default function NotreProcessus() {
@@ -22,7 +22,7 @@ export default function NotreProcessus() {
     fontWeight: 400,
     color: "#1E1E1E",
     // fontFamily: "Mulish",
-    fontFamily: 'Helvetica, sans-serif',
+    fontFamily: "Helvetica, sans-serif",
     letterSpacing: "0%",
   };
 
@@ -32,14 +32,14 @@ export default function NotreProcessus() {
     fontWeight: 600,
     letterSpacing: "17.5%",
     // fontFamily: "Mulish",
-    fontFamily: 'Helvetica, sans-serif',
+    fontFamily: "Helvetica, sans-serif",
   };
 
   const description: React.CSSProperties = {
     color: "#1E1E1E",
     fontWeight: 400,
     // fontFamily: "Mulish",
-    fontFamily: 'Helvetica, sans-serif',
+    fontFamily: "Helvetica, sans-serif",
     fontStyle: "italic",
     letterSpacing: "0%",
   };
@@ -51,7 +51,7 @@ export default function NotreProcessus() {
     textDecoration: "none",
     display: "flex",
     flexDirection: "row",
-    fontFamily: 'Helvetica, sans-serif',
+    fontFamily: "Helvetica, sans-serif",
     // fontFamily: "Mulish",
     fontStyle: "italic",
     letterSpacing: "0%",
@@ -59,8 +59,14 @@ export default function NotreProcessus() {
 
   const [isHovered, setIsHovered] = useState<number | null>(null);
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
-    <div>
+    <div
+      style={{
+        padding: isMax ? "0px 200px" : "0px 0px",
+      }}
+    >
       <Grid container spacing={2}>
         <Grid
           item
@@ -80,7 +86,7 @@ export default function NotreProcessus() {
               lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "auto" },
               color: "#0A1411",
               // fontFamily: "Mulish",
-              fontFamily: 'Helvetica, sans-serif',
+              fontFamily: "Helvetica, sans-serif",
               margin: {
                 xs: "5% 10% 2% 10%",
                 sm: "5% 10% 2% 10%",
@@ -111,7 +117,7 @@ export default function NotreProcessus() {
                 xl: "0px 425px 196px 425px",
               },
               // fontFamily: "Mulish",
-              fontFamily: 'Helvetica, sans-serif',
+              fontFamily: "Helvetica, sans-serif",
             }}
           >
             {notrePage[0]?.data.description}
@@ -165,7 +171,7 @@ export default function NotreProcessus() {
                 flexDirection: "column",
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "0%", lg: "18px", xl: "28px" },
-                paddingLeft:{xs:'20px'}
+                paddingLeft: { xs: "20px" },
               }}
             >
               <Typography
@@ -192,7 +198,7 @@ export default function NotreProcessus() {
                     lg: "auto",
                     xl: "auto",
                   },
-                  paddingRight:{xl:'150px'}
+                  paddingRight: { xl: "150px" },
                 }}
               >
                 {notrePage[0]?.data.card_title1}
@@ -207,7 +213,7 @@ export default function NotreProcessus() {
                     lg: "185%",
                     xl: "185%",
                   },
-                  paddingRight:{xl:'120px'}
+                  paddingRight: { xl: "120px" },
                 }}
               >
                 {notrePage[0]?.data.card_description1}
@@ -261,7 +267,7 @@ export default function NotreProcessus() {
                 flexDirection: "column",
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
-                paddingLeft:{xs:'20px'}
+                paddingLeft: { xs: "20px" },
               }}
             >
               <Typography
@@ -288,7 +294,7 @@ export default function NotreProcessus() {
                     lg: "auto",
                     xl: "auto",
                   },
-                  paddingRight:{xl:'200px'}
+                  paddingRight: { xl: "200px" },
                 }}
               >
                 {notrePage[0]?.data.card_title2}
@@ -303,7 +309,7 @@ export default function NotreProcessus() {
                     lg: "185%",
                     xl: "185%",
                   },
-                  paddingRight:{xl:'150px'}
+                  paddingRight: { xl: "150px" },
                 }}
               >
                 {notrePage[0]?.data.card_description2}
@@ -355,7 +361,11 @@ export default function NotreProcessus() {
               display: "flex",
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               justifyContent: "space-evenly",
-              margin: {xs:"0px 0px 30px 0px", lg: "", xl: "0px 42px 0px 0px" },
+              margin: {
+                xs: "0px 0px 30px 0px",
+                lg: "",
+                xl: "0px 42px 0px 0px",
+              },
               gap: { lg: "111px", xl: "111px" },
             }}
           >
@@ -378,7 +388,7 @@ export default function NotreProcessus() {
                 flexDirection: "column",
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
-                paddingLeft:{xs:'20px'}
+                paddingLeft: { xs: "20px" },
               }}
             >
               <Typography
@@ -405,7 +415,7 @@ export default function NotreProcessus() {
                     lg: "auto",
                     xl: "auto",
                   },
-                  paddingRight:{xl:'150px'}
+                  paddingRight: { xl: "150px" },
                 }}
               >
                 {notrePage[0]?.data.card_title3}
@@ -420,7 +430,7 @@ export default function NotreProcessus() {
                     lg: "185%",
                     xl: "185%",
                   },
-                  paddingRight:{xl:'120px'}
+                  paddingRight: { xl: "120px" },
                 }}
               >
                 {notrePage[0]?.data.card_description3}
