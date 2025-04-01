@@ -352,6 +352,7 @@ const Header: React.FC = () => {
                   justifyContent: "space-around",
                   alignItems: "center",
                   gap: { sm: "80px" },
+                  padding: isMax ? "0px 200px" : "0px 0px",
                 }}
               >
                 {post?.data.marguerite_logo && (
@@ -373,7 +374,7 @@ const Header: React.FC = () => {
                     flexDirection: "row",
                     gap: "35px",
                     flexWrap: "nowrap",
-                    marginLeft: isMax? "500px":"0px"
+                    marginLeft: isMax? "400px":"0px"
                   }}
                 >
                   <Link
