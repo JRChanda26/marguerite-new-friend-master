@@ -73,7 +73,7 @@ const NousAgissons: React.FC = () => {
               backgroundColor: "#F6C09E",
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
-              paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
+              paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: isMax?"0px":"30px" },
               paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
               // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
