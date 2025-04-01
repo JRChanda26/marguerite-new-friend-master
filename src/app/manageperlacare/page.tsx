@@ -244,7 +244,7 @@ const ManagePerLaCare: React.FC = () => {
               ? "116%"
               : isExtraLarge
                 ? isMax
-                  ? "80%"
+                  ? "70%"
                   : "100%"
                 : "100%",
       right: isExtraSmall
@@ -256,8 +256,8 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "0%"
               : isExtraLarge
-                ? "0%"
-                : "0%",
+                ? "5%"
+                : "5%",
       width: isExtraSmall
         ? "80%"
         : isSmall
