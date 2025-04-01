@@ -6,6 +6,7 @@ import {
   InputAdornment,
   TextField,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
@@ -118,9 +119,14 @@ export default function BlogsNews() {
     },
   ];
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+  
   return (
     <div>
       <Header />
+      <div  style={{
+        padding: isMax ? "0px 350px" : "0px 0px",
+      }}>
       <Grid
         sx={{
           backgroundImage: `url(${blogNewsPage[0]?.data?.header_background?.url || ""})`,
@@ -763,6 +769,7 @@ export default function BlogsNews() {
           <hr style={{ border: "1px solid #E5E5E5" }} />
         </Grid>
       </Grid>
+      </div>
       <Liberez />
       <Footer />
     </div>
