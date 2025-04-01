@@ -897,7 +897,9 @@ const ManagePerLaCare: React.FC = () => {
                 sm: "0px",
                 lg: "280px 100px 153px 100px",
                 md: "280px 50px 153px 50px",
-                xl: "300px 200px 153px 200px",
+                xl: isMax
+                  ? "100px 200px 153px 200px"
+                  : "300px 200px 153px 200px",
               },
             }}
           >
@@ -925,7 +927,12 @@ const ManagePerLaCare: React.FC = () => {
               item
               lg={12}
               sx={{
-                marginTop: { xs: "30px", sm: "30px", lg: "100px", xl: "162px" },
+                marginTop: {
+                  xs: "30px",
+                  sm: "30px",
+                  lg: "100px",
+                  xl: isMax ? "80px" : "162px",
+                },
               }}
             >
               <Typography
@@ -1065,7 +1072,7 @@ const ManagePerLaCare: React.FC = () => {
                     xs: "50px",
                     sm: "50px",
                     lg: "150px",
-                    xl: "269px",
+                    xl: isMax ? "80px" : "269px",
                   },
                   letterSpacing: "1%",
                   fontFamily: "Mulish",
@@ -1314,7 +1321,7 @@ const ManagePerLaCare: React.FC = () => {
                       letterSpacing: "1%",
                       padding: {
                         lg: "0px 303px 78px 303px",
-                        xl: "0px 303px 78px 303px",
+                        xl: isMax? "0px 200px 78px 200px":"0px 303px 78px 303px",
                       },
                     }}
                   >
