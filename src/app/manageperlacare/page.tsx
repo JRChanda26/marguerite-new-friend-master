@@ -330,8 +330,12 @@ const ManagePerLaCare: React.FC = () => {
       );
   };
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
-    <Box sx={{}}>
+    <div  style={{
+      padding: isMax ? "0px 350px" : "0px 0px",
+    }}>
       <Header />
       <Grid
         sx={{
@@ -1332,7 +1336,7 @@ const ManagePerLaCare: React.FC = () => {
       </Grid>
       <Liberez />
       <Footer />
-    </Box>
+    </div>
   );
 };
 
