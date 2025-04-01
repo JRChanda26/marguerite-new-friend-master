@@ -36,7 +36,7 @@ const NousAgissons: React.FC = () => {
   const isMax = useMediaQuery("(min-width:1930px)");
 
   return (
-    <div style={{padding: isMax ? "0px 200px" : "0px 0px",}}>
+    <div>
       {nousPage.map((post: any) => (
         <Grid
           container
@@ -84,6 +84,7 @@ const NousAgissons: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
+                padding: isMax ? "0px 200px" : "0px 0px"
               }}
             >
               <Typography
