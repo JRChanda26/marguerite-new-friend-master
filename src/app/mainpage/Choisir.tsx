@@ -28,8 +28,8 @@ const Choisir: React.FC = () => {
   return (
     <div
       style={{
-        padding: isMax ? "0px 200px" : "0px 0px",
-        background: isMax ? "#BBDDD999" : "#FFFFFF",
+        padding: isMax ? "0px 350px" : "0px 0px",
+        background: isMax ? "#BBDDD9" : "#FFFFFF",
       }}
     >
       <Box
