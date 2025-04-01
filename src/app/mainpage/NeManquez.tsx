@@ -111,7 +111,7 @@ export default function NeManquez() {
             sm: "80px 30px 80px 50px",
             // md: "70px 100px",
             lg: "50px 100px",
-            xl: isMax ? "50px 0px" : "145px 178px",
+            xl: isMax ? "80px 100px" : "145px 178px",
           },
         }}
       >
