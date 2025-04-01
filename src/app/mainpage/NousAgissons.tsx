@@ -39,7 +39,7 @@ const NousAgissons: React.FC = () => {
     <div
       style={{
         padding: isMax ? "0px 200px" : "0px 0px",
-        background: isMax ? "#F6C09E" : "#FFFFFF",
+        background: isMax ? "linear-gradient(to right, #F6C09E 50%, #FFFFFF 50%)" : "#FFFFFF",
       }}
     >
       {nousPage.map((post: any) => (
