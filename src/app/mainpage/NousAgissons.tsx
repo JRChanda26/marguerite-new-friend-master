@@ -32,11 +32,16 @@ const NousAgissons: React.FC = () => {
   const handleNavigation = () => {
     router.push("/contact");
   };
-  
+
   const isMax = useMediaQuery("(min-width:1930px)");
 
   return (
-    <div>
+    <div
+      style={{
+        padding: isMax ? "0px 200px" : "0px 0px",
+        background: isMax ? "#F6C09E" : "#FFFFFF",
+      }}
+    >
       {nousPage.map((post: any) => (
         <Grid
           container
@@ -84,7 +89,6 @@ const NousAgissons: React.FC = () => {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
-                padding: isMax ? "0px 200px" : "0px 0px"
               }}
             >
               <Typography
@@ -134,65 +138,65 @@ const NousAgissons: React.FC = () => {
               >
                 {post.data.title}
               </Typography>
-                <Button
-                  sx={{
-                    display: "flex",
-                    flexDirection: "row",
+              <Button
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+                  background: "#24535C",
+                  borderRadius: "82px",
+                  top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
+                  height: { xs: "22px", sm: "40px", lg: "66px", xl: "66px" },
+                  width: {
+                    xs: "80px",
+                    sm: "150px",
+                    lg: "203.85px",
+                    xl: "203.85px",
+                  },
+                  justifyContent: "space-around",
+                  "&:focus": {
                     background: "#24535C",
-                    borderRadius: "82px",
-                    top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
-                    height: { xs: "22px", sm: "40px", lg: "66px", xl: "66px" },
-                    width: {
-                      xs: "80px",
-                      sm: "150px",
-                      lg: "203.85px",
-                      xl: "203.85px",
+                  },
+                  "&:hover": {
+                    background: "#24535C",
+                  },
+                }}
+                onClick={handleNavigation}
+              >
+                <Typography
+                  sx={{
+                    fontFamily: "Helvetica, sans-serif",
+                    fontWeight: 400,
+                    fontSize: {
+                      xs: "7px",
+                      sm: "12px",
+                      lg: "15.2px",
+                      xl: "15.2px",
                     },
-                    justifyContent: "space-around",
-                    "&:focus": {
-                      background: "#24535C",
+                    lineHeight: {
+                      xs: "0px",
+                      sm: "12px",
+                      lg: "50px",
+                      xl: "50px",
                     },
-                    "&:hover": {
-                      background: "#24535C",
-                    },
+                    letterSpacing: "0%",
+                    color: "#FFFFFF",
+                    textTransform: "none",
                   }}
-                  onClick={handleNavigation}
                 >
-                  <Typography
-                    sx={{
-                      fontFamily: "Helvetica, sans-serif",
-                      fontWeight: 400,
-                      fontSize: {
-                        xs: "7px",
-                        sm: "12px",
-                        lg: "15.2px",
-                        xl: "15.2px",
-                      },
-                      lineHeight: {
-                        xs: "0px",
-                        sm: "12px",
-                        lg: "50px",
-                        xl: "50px",
-                      },
-                      letterSpacing: "0%",
-                      color: "#FFFFFF",
-                      textTransform: "none",
+                  {post.data.button_text}
+                </Typography>
+                {post?.data.button_icon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={post.data.button_icon.url || ""}
+                    alt={post.data.button_icon}
+                    style={{
+                      width: "20%",
+                      height: "auto",
                     }}
-                  >
-                    {post.data.button_text}
-                  </Typography>
-                  {post?.data.button_icon && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={post.data.button_icon.url || ""}
-                      alt={post.data.button_icon}
-                      style={{
-                        width: "20%",
-                        height: "auto",
-                      }}
-                    />
-                  )}
-                </Button>
+                  />
+                )}
+              </Button>
             </Box>
           </Grid>
 
