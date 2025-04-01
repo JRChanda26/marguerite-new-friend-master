@@ -114,7 +114,7 @@ export default function NotreProcessus() {
                 xs: "0% 10%",
                 sm: "0% 15%",
                 lg: "0px 155px 196px 155px",
-                xl: "0px 425px 196px 425px",
+                xl:isMax? "0px 425px 50px 425px": "0px 425px 196px 425px",
               },
               // fontFamily: "Mulish",
               fontFamily: "Helvetica, sans-serif",
@@ -256,7 +256,7 @@ export default function NotreProcessus() {
                 xs: "0px 0px 0px 0px",
                 sm: "0px",
                 lg: "100px 0px 100px 60px",
-                xl: isMax?"50px 112px 50px 20px": "128px 112px 128px 20px",
+                xl: isMax ? "20px 112px 20px 20px" : "128px 112px 128px 20px",
               },
               gap: { lg: "50px", xl: "0px" },
             }}

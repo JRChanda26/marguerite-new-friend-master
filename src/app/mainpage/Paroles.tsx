@@ -22,6 +22,8 @@ export default function Paroles() {
     fetchData();
   }, []);
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+  
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
@@ -140,8 +142,12 @@ export default function Paroles() {
     setPlayingVideoId(null);
     setIsAnimationPlaying(false);
   };
-
+  
   return (
+    <div 
+    style={{
+      padding: isMax ? "0px 350px" : "0px 0px",}}
+      >
     <div
       style={{
         display: "flex",
@@ -454,5 +460,7 @@ export default function Paroles() {
         </Grid>
       </Grid>
     </div>
+  </div>
+
   );
 }
