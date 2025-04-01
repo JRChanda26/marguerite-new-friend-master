@@ -89,6 +89,8 @@ const ManagePerLaCare: React.FC = () => {
     },
   ];
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   const theme = useTheme();
 
   // Media queries for breakpoints
@@ -167,7 +169,9 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "40%"
               : isExtraLarge
-                ? "35%"
+                ? isMax
+                  ? "25%"
+                  : "35%"
                 : "35%",
       right: isExtraSmall
         ? "3%"
@@ -202,7 +206,9 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "75%"
               : isExtraLarge
-                ? "65%"
+                ? isMax
+                  ? "55%"
+                  : "65%"
                 : "65%",
       left: isExtraSmall
         ? "3%"
@@ -237,7 +243,9 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "116%"
               : isExtraLarge
-                ? "100%"
+                ? isMax
+                  ? "90%"
+                  : "100%"
                 : "100%",
       right: isExtraSmall
         ? "3%"
@@ -329,8 +337,6 @@ const ManagePerLaCare: React.FC = () => {
         )
       );
   };
-
-  const isMax = useMediaQuery("(min-width:1930px)");
 
   return (
     <div>
