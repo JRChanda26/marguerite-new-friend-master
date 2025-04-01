@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 
 const NosExperiences: React.FC = () => {
   const [nosPage, setNosPage] = useState<any[]>([]);
@@ -31,7 +31,12 @@ const NosExperiences: React.FC = () => {
   const handleMouseEnter = () => setAnimationSpeed(100);
   const handleMouseLeave = () => setAnimationSpeed(40);
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+  
   return (
+    <div   style={{
+      padding: isMax ? "0px 350px" : "0px 0px",
+    }}>
     <Box
       sx={{
         backgroundImage: `url(${backgroundImage})`,
@@ -186,6 +191,7 @@ const NosExperiences: React.FC = () => {
         ))}
       </Grid>
     </Box>
+    </div>
   );
 };
 
