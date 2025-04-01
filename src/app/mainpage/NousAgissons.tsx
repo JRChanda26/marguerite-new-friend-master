@@ -39,7 +39,7 @@ const NousAgissons: React.FC = () => {
     <div
       style={{
         padding: isMax ? "0px 200px" : "0px 0px",
-        background: isMax ? "linear-gradient(to right, #F6C09E 50%, #FFFFFF 50%)" : "#FFFFFF",
+        background: isMax ? "#F6C09E" : "#FFFFFF",
       }}
     >
       {nousPage.map((post: any) => (
@@ -211,6 +211,7 @@ const NousAgissons: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              padding:isMax?"50px 0px 20px 0px":"0px 0px"
             }}
           >
             {post?.data.background_image && (
