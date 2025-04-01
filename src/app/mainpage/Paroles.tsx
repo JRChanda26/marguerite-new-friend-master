@@ -23,7 +23,7 @@ export default function Paroles() {
   }, []);
 
   const isMax = useMediaQuery("(min-width:1930px)");
-  
+
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
@@ -142,105 +142,118 @@ export default function Paroles() {
     setPlayingVideoId(null);
     setIsAnimationPlaying(false);
   };
-  
+
   return (
-    <div 
-    style={{
-      padding: isMax ? "0px 350px" : "0px 0px",}}
-      >
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        textAlign: "center",
+        padding: isMax ? "0px 350px" : "0px 0px",
       }}
     >
-      <Grid container alignItems="center" justifyContent="center" gap="20px">
-        <Typography
-          sx={{
-            color: "#0A1411",
-            fontWeight: 700,
-            fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
-            lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "auto" },
-            padding: {
-              xs: "2% 0%",
-              sm: "5% 0%",
-              lg: "100px",
-              xl: "0px 194px 100px 194px",
-            },
-            // fontFamily: "Mulish",
-            fontFamily: "Helvetica, sans-serif",
-            letterSpacing: "0%",
-            display: "flex",
-            flexDirection: {xs:"colum",sm:"row",md:"row",lg:"row",xl:"row"},
-            gap: {xs:"30px",sm:"80px",md:"80px",lg:"80px",xl:"80px"},
-          }}
-        >
-          {parolesPage?.data.heading}
-          <div
-            style={{
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          textAlign: "center",
+        }}
+      >
+        <Grid container alignItems="center" justifyContent="center" gap="20px">
+          <Typography
+            sx={{
+              color: "#0A1411",
+              fontWeight: 700,
+              fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
+              lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "auto" },
+              padding: {
+                xs: "2% 0%",
+                sm: "5% 0%",
+                lg: "100px",
+                xl: isMax ? "0px 194px 50px 194px" : "0px 194px 100px 194px",
+              },
+              // fontFamily: "Mulish",
+              fontFamily: "Helvetica, sans-serif",
+              letterSpacing: "0%",
               display: "flex",
-              flexDirection: "row",
-              gap: "30px",
-              paddingLeft:'30px'
+              flexDirection: {
+                xs: "colum",
+                sm: "row",
+                md: "row",
+                lg: "row",
+                xl: "row",
+              },
+              gap: {
+                xs: "30px",
+                sm: "80px",
+                md: "80px",
+                lg: "80px",
+                xl: "80px",
+              },
             }}
           >
-            {" "}
-            <Button
-              onClick={handlePrevious}
-              aria-label="previous page"
-              sx={{
-                fontSize: "16px",
-                color: "#000000",
-                background: "#FFFFFF",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                padding: "20px",
-                "&:hover": {
-                  background: "inherit",
-                },
+            {parolesPage?.data.heading}
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                gap: "30px",
+                paddingLeft: "30px",
               }}
             >
-              {parolesPage?.data.left_arrow_icon && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={parolesPage.data.left_arrow_icon.url || ""}
-                  alt={parolesPage.data.left_arrow_icon}
-                  style={{
-                    width: "30px",
-                    height: "auto",
-                  }}
-                />
-              )}
-            </Button>
-            <Button
-              onClick={handleNext}
-              aria-label="next page"
-              sx={{
-                fontSize: "16px",
-                color: "#000000",
-                background: "#FFFFFF",
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                padding: "20px",
-                "&:hover": {
-                  background: "inherit",
-                },
-              }}
-            >
-              {parolesPage?.data.right_arrow_icon && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={parolesPage.data.right_arrow_icon.url || ""}
-                  alt={parolesPage.data.right_arrow_icon}
-                  style={{
-                    width: "30px",
-                    height: "auto",
-                  }}
-                />
-              )}
-            </Button>
-          </div>
-        </Typography>
-        {/* <Grid
+              {" "}
+              <Button
+                onClick={handlePrevious}
+                aria-label="previous page"
+                sx={{
+                  fontSize: "16px",
+                  color: "#000000",
+                  background: "#FFFFFF",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                  padding: "20px",
+                  "&:hover": {
+                    background: "inherit",
+                  },
+                }}
+              >
+                {parolesPage?.data.left_arrow_icon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={parolesPage.data.left_arrow_icon.url || ""}
+                    alt={parolesPage.data.left_arrow_icon}
+                    style={{
+                      width: "30px",
+                      height: "auto",
+                    }}
+                  />
+                )}
+              </Button>
+              <Button
+                onClick={handleNext}
+                aria-label="next page"
+                sx={{
+                  fontSize: "16px",
+                  color: "#000000",
+                  background: "#FFFFFF",
+                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
+                  padding: "20px",
+                  "&:hover": {
+                    background: "inherit",
+                  },
+                }}
+              >
+                {parolesPage?.data.right_arrow_icon && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={parolesPage.data.right_arrow_icon.url || ""}
+                    alt={parolesPage.data.right_arrow_icon}
+                    style={{
+                      width: "30px",
+                      height: "auto",
+                    }}
+                  />
+                )}
+              </Button>
+            </div>
+          </Typography>
+          {/* <Grid
           item
           sx={{
             display: "flex",
@@ -303,164 +316,169 @@ export default function Paroles() {
             )}
           </Button>
         </Grid> */}
-      </Grid>
+        </Grid>
 
-      <Grid item lg={12}>
-        <Typography
-          sx={{
-            color: "#000000",
-            fontWeight: 400,
-            // fontFamily: "Mulish",
-            fontFamily: "Helvetica, sans-serif",
-            letterSpacing: "0%",
-            fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "25px" },
-            lineHeight: { xs: "25px", sm: "30px", lg: "38.4px", xl: "38.4px" },
-            padding: {
-              xs: "5%",
-              sm: "2%",
-              lg: "0px 70px 0px 70px",
-              xl: "0px 300px 0px 300px",
-            },
-          }}
-        >
-          {formatText(description)}
-        </Typography>
-      </Grid>
-
-      <Grid
-        item
-        xs={12}
-        sx={{
-          textAlign: "center",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        {/* Cards Scrolling Section */}
-        <style jsx>{`
-          @keyframes slide {
-            0% {
-              transform: translateX(0);
-            }
-            100% {
-              transform: translateX(-100%);
-            }
-          }
-        `}</style>
+        <Grid item lg={12}>
+          <Typography
+            sx={{
+              color: "#000000",
+              fontWeight: 400,
+              // fontFamily: "Mulish",
+              fontFamily: "Helvetica, sans-serif",
+              letterSpacing: "0%",
+              fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "25px" },
+              lineHeight: {
+                xs: "25px",
+                sm: "30px",
+                lg: "38.4px",
+                xl: "38.4px",
+              },
+              padding: {
+                xs: "5%",
+                sm: "2%",
+                lg: "0px 70px 0px 70px",
+                xl: "0px 300px 0px 300px",
+              },
+            }}
+          >
+            {formatText(description)}
+          </Typography>
+        </Grid>
 
         <Grid
-          container
           item
           xs={12}
           sx={{
-            overflow: "hidden",
+            textAlign: "center",
             display: "flex",
-            justifyContent: "center",
-            padding: {
-              xs: "20px",
-              sm: "40px 0",
-              lg: "117px 0px 128px 0px",
-              xl: "117px 0px 128px 0px",
-            },
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          <Box
+          {/* Cards Scrolling Section */}
+          <style jsx>{`
+            @keyframes slide {
+              0% {
+                transform: translateX(0);
+              }
+              100% {
+                transform: translateX(-100%);
+              }
+            }
+          `}</style>
+
+          <Grid
+            container
+            item
+            xs={12}
             sx={{
+              overflow: "hidden",
               display: "flex",
-              gap: "50px",
-              animation: isAnimationPlaying
-                ? "none"
-                : "slide 40s linear infinite",
-              width: "100%",
-              maxWidth: "100vw",
+              justifyContent: "center",
+              padding: {
+                xs: "20px",
+                sm: "40px 0",
+                lg: "117px 0px 128px 0px",
+                xl: "117px 0px 128px 0px",
+              },
             }}
           >
-            {items.map((item) => (
-              <Box
-                key={item.id}
-                sx={{
-                  borderRadius: "22.08px",
-                  padding: "20px",
-                  minWidth: {
-                    xs: "200px",
-                    sm: "300px",
-                    lg: "450px",
-                    xl: "529px",
-                  },
-                  background:
-                    isCardHovered === item.id ||
-                    playingVideoId === item.id ||
-                    currentIndex === item.id
-                      ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
-                      : "#FFFFFF",
-                  boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
-                  transform:
-                    isCardHovered === item.id ||
-                    playingVideoId === item.id ||
-                    currentIndex === item.id
-                      ? "scale(1.1)"
-                      : "scale(1)",
-                  transition: "transform 0.3s ease, background-color 0.3s ease",
-                }}
-                onMouseEnter={() => setIsCardHovered(item.id)}
-                onMouseLeave={() => setIsCardHovered(null)}
-              >
-                {videoUrl ? (
-                  <video
-                    ref={(el) => {
-                      if (el) videoRefs.current[item.id] = el;
-                    }}
-                    width="100%"
-                    controls
-                    style={{
-                      borderRadius: "12px",
-                    }}
-                    onPlay={() => handleVideoPlay(item.id)}
-                    onPause={handleVideoPause}
-                    onEnded={handleVideoEnd}
-                  >
-                    <source src={videoUrl} type="video/mp4" />
-                  </video>
-                ) : (
-                  <p>Video not available</p>
-                )}
-                <Typography
+            <Box
+              sx={{
+                display: "flex",
+                gap: "50px",
+                animation: isAnimationPlaying
+                  ? "none"
+                  : "slide 40s linear infinite",
+                width: "100%",
+                maxWidth: "100vw",
+              }}
+            >
+              {items.map((item) => (
+                <Box
+                  key={item.id}
                   sx={{
-                    color: "#000000",
-                    fontWeight: 700,
-                    // fontFamily: "Mulish",
-                    fontFamily: "Helvetica, sans-serif",
-                    textAlign: "center",
-                    padding: {
-                      xs: "0px",
-                      sm: "0px",
-                      lg: "10px 20px",
-                      xl: "10px 20px",
+                    borderRadius: "22.08px",
+                    padding: "20px",
+                    minWidth: {
+                      xs: "200px",
+                      sm: "300px",
+                      lg: "450px",
+                      xl: "529px",
                     },
-                    fontSize: {
-                      xs: "12px",
-                      sm: "16px",
-                      lg: "28px",
-                      xl: "30.2px",
-                    },
-                    lineHeight: {
-                      xs: "20px",
-                      sm: "20px",
-                      lg: "25px",
-                      xl: "25px",
-                    },
+                    background:
+                      isCardHovered === item.id ||
+                      playingVideoId === item.id ||
+                      currentIndex === item.id
+                        ? "linear-gradient(0deg, #FFFFFF 5.39%, #FFB699 123.52%)"
+                        : "#FFFFFF",
+                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
+                    transform:
+                      isCardHovered === item.id ||
+                      playingVideoId === item.id ||
+                      currentIndex === item.id
+                        ? "scale(1.1)"
+                        : "scale(1)",
+                    transition:
+                      "transform 0.3s ease, background-color 0.3s ease",
                   }}
+                  onMouseEnter={() => setIsCardHovered(item.id)}
+                  onMouseLeave={() => setIsCardHovered(null)}
                 >
-                  {item.id}.{item.title}
-                </Typography>
-              </Box>
-            ))}
-          </Box>
+                  {videoUrl ? (
+                    <video
+                      ref={(el) => {
+                        if (el) videoRefs.current[item.id] = el;
+                      }}
+                      width="100%"
+                      controls
+                      style={{
+                        borderRadius: "12px",
+                      }}
+                      onPlay={() => handleVideoPlay(item.id)}
+                      onPause={handleVideoPause}
+                      onEnded={handleVideoEnd}
+                    >
+                      <source src={videoUrl} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <p>Video not available</p>
+                  )}
+                  <Typography
+                    sx={{
+                      color: "#000000",
+                      fontWeight: 700,
+                      // fontFamily: "Mulish",
+                      fontFamily: "Helvetica, sans-serif",
+                      textAlign: "center",
+                      padding: {
+                        xs: "0px",
+                        sm: "0px",
+                        lg: "10px 20px",
+                        xl: "10px 20px",
+                      },
+                      fontSize: {
+                        xs: "12px",
+                        sm: "16px",
+                        lg: "28px",
+                        xl: "30.2px",
+                      },
+                      lineHeight: {
+                        xs: "20px",
+                        sm: "20px",
+                        lg: "25px",
+                        xl: "25px",
+                      },
+                    }}
+                  >
+                    {item.id}.{item.title}
+                  </Typography>
+                </Box>
+              ))}
+            </Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </div>
     </div>
-  </div>
-
   );
 }
