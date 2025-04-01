@@ -211,7 +211,7 @@ const NousAgissons: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding:isMax?"50px 0px 20px 0px":"0px 0px"
+              padding:isMax?"90px 0px 40px 0px":"0px 0px"
             }}
           >
             {post?.data.background_image && (
