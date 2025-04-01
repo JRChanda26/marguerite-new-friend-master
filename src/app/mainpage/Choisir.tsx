@@ -78,7 +78,7 @@ const Choisir: React.FC = () => {
                       xs: "8% 5% 2% 5%",
                       sm: "5% 5% 2% 5%",
                       lg: "70px 77px 0px 77px",
-                      xl: "99px 77px 0px 77px",
+                      xl: isMax ? "100px 0px 0px 0px" : "99px 77px 0px 77px",
                     },
                     textAlign: "center",
                   }}
