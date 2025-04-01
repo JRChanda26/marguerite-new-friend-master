@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
 import EastIcon from "@mui/icons-material/East";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -33,8 +33,10 @@ const NousAgissons: React.FC = () => {
     router.push("/contact");
   };
   
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
-    <div>
+    <div style={{padding: isMax ? "0px 200px" : "0px 0px",}}>
       {nousPage.map((post: any) => (
         <Grid
           container
