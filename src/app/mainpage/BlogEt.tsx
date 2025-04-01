@@ -1,5 +1,5 @@
 "use client";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button, Grid, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
@@ -52,8 +52,14 @@ export default function BlogEt() {
     router.push("/blogs/blog");
   };
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
-    <div>
+    <div
+      style={{
+        padding: isMax ? "0px 350px" : "0px 0px",
+      }}
+    >
       <Grid
         container
         justifyContent="center"
