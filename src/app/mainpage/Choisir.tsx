@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery } from "@mui/material";
 import Link from "next/link";
 
 const Choisir: React.FC = () => {
@@ -23,6 +23,8 @@ const Choisir: React.FC = () => {
 
   const bottomBackground = choisirPage[0]?.data?.bottom_background?.url || "";
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+  
   return (
     <Box
       sx={{
@@ -43,6 +45,7 @@ const Choisir: React.FC = () => {
         alignItems: "center",
         flexDirection: "column",
         // position: "absolute",
+        padding: isMax ? "0px 200px" : "0px 0px",
       }}
     >
       <div style={{ display: "flex", justifyContent: "center" }}>
