@@ -106,6 +106,9 @@ const Header: React.FC = () => {
       lineHeight: "30px",
     },
   };
+
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
     <Box>
       <div>
@@ -370,6 +373,7 @@ const Header: React.FC = () => {
                     flexDirection: "row",
                     gap: "35px",
                     flexWrap: "nowrap",
+                    marginLeft: isMax? "500px":"0px"
                   }}
                 >
                   <Link
