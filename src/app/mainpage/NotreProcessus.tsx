@@ -256,7 +256,7 @@ export default function NotreProcessus() {
                 xs: "0px 0px 0px 0px",
                 sm: "0px",
                 lg: "100px 0px 100px 60px",
-                xl: "128px 112px 128px 20px",
+                xl: isMax?"50px 112px 50px 20px": "128px 112px 128px 20px",
               },
               gap: { lg: "50px", xl: "0px" },
             }}
