@@ -96,7 +96,7 @@ export default function NeManquez() {
   };
 
   const isMax = useMediaQuery("(min-width:1930px)");
-  
+
   return (
     <div
       style={{
@@ -111,7 +111,7 @@ export default function NeManquez() {
             sm: "80px 30px 80px 50px",
             // md: "70px 100px",
             lg: "50px 100px",
-            xl: "145px 178px",
+            xl: isMax ? "50px 0px" : "145px 178px",
           },
         }}
       >
