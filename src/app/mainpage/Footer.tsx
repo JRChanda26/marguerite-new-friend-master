@@ -56,7 +56,7 @@ const Footer: React.FC = () => {
       >
         <div
           style={{
-            padding: isMax ? "0px 350px" : "0px 0px",
+            padding: isMax ? "0px 250px 0px 350px" : "0px 0px",
           }}
         >
           <Grid
