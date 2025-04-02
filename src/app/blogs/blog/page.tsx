@@ -605,7 +605,7 @@ export default function Blogs() {
                   sm: "3% 5%",
                   lg: "78px 50px 200px 50px",
                   xl: isMax
-                    ? "78px 100px 150px 100px"
+                    ? "78px 100px 80px 100px"
                     : "78px 100px 350px 100px",
                 },
               }}

@@ -253,7 +253,7 @@ export default function BlogEt() {
               xs: "0px 0px  50px 0px",
               sm: "20px 0px  50px 0px",
               lg: "50px 0px  100px 0px",
-              xl: "0px 0px  159px 0px",
+              xl: isMax? "0px 0px  80px 0px" : "0px 0px  159px 0px",
             },
             textTransform: "none",
             "&:focus": {
