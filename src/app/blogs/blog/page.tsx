@@ -150,9 +150,9 @@ export default function Blogs() {
     <div>
       <Header />
       <div
-        // style={{
-        //   padding: isMax ? "0px 200px" : "0px 0px",
-        // }}
+      // style={{
+      //   padding: isMax ? "0px 200px" : "0px 0px",
+      // }}
       >
         <Grid
           sx={{
@@ -248,6 +248,7 @@ export default function Blogs() {
         <div
           style={{
             padding: isMax ? "0px 350px" : "0px 0px",
+            background: "#e1f5f2", //bg-color
           }}
         >
           <Grid
@@ -274,7 +275,7 @@ export default function Blogs() {
                     xs: "50px",
                     sm: "50px",
                     lg: "100px",
-                    xl: "233px",
+                    xl: isMax ? "100px" : "233px",
                   },
                   fontFamily: "Mulish",
                 }}
@@ -290,7 +291,9 @@ export default function Blogs() {
                     xs: "27px 30px 50px 30px",
                     sm: "27px 80px 100px 80px",
                     lg: "27px 152px 100px 152px",
-                    xl: "27px 152px 212px 152px",
+                    xl: isMax
+                      ? "27px 152px 100px 152px"
+                      : "27px 152px 212px 152px",
                   },
                 }}
               >
@@ -601,7 +604,9 @@ export default function Blogs() {
                   xs: "3% 5%",
                   sm: "3% 5%",
                   lg: "78px 50px 200px 50px",
-                  xl: "78px 100px 350px 100px",
+                  xl: isMax
+                    ? "78px 100px 150px 100px"
+                    : "78px 100px 350px 100px",
                 },
               }}
             >
