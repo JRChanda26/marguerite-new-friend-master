@@ -156,7 +156,7 @@ export default function BlogsNews() {
               xs: "5%",
               sm: "5%",
               lg: "150px 100px 0px 100px",
-              xl: "153px 100px 0px 100px",
+              xl: isMax? "100px 0px 0px 0px": "153px 100px 0px 100px",
             },
           }}
         >
@@ -424,7 +424,7 @@ export default function BlogsNews() {
                     },
                   },
                   height: { lg: "80px", xl: "101px" },
-                  width: { lg: "385px", xl: "550px" },
+                  width: { lg: "385px", xl: isMax? "100%": "550px" },
                 }}
                 InputProps={{
                   endAdornment: (
