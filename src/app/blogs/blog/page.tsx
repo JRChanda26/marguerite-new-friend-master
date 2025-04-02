@@ -144,284 +144,338 @@ export default function Blogs() {
 
   const dimensions = getDimensions();
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
     <div>
       <Header />
-      <Grid
-        sx={{
-          backgroundImage: `url(${blogPage[0]?.data?.header_background?.url || ""})`,
-          // backgroundSize: "cover",
-          backgroundSize: {
-            xs: "cover",
-            sm: "cover",
-            lg: "cover",
-            xl: "cover",
-          },
-          backgroundRepeat: "no-repeat",
+      <div
+        style={{
+          padding: isMax ? "0px 200px" : "0px 0px",
         }}
       >
         <Grid
           sx={{
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "column",
-            alignItems: "center",
-            padding: {
-              xs: "70px 50px 0px 50px",
-              sm: "150.67px 150px 0px 150px",
-              lg: "250px 150px 0px 150px",
-              md: "250px 100px 0px 100px",
-              xl: "420px 300px 0px 300px",
+            backgroundImage: `url(${blogPage[0]?.data?.header_background?.url || ""})`,
+            // backgroundSize: "cover",
+            backgroundSize: {
+              xs: "cover",
+              sm: "cover",
+              lg: "cover",
+              xl: "cover",
             },
+            backgroundRepeat: "no-repeat",
           }}
         >
           <Grid
             sx={{
-              background: "#fff",
               display: "flex",
               justifyContent: "center",
               flexDirection: "column",
               alignItems: "center",
-              borderRadius: {
-                xs: "20px 20px 0px 0px",
-                sm: "37px 37px 0px 0px",
-                lg: "37px 37px 0px 0px",
-                xl: "37px 37px 0px 0px",
-              },
-              // padding: "41px 152px 41px 152px",
               padding: {
-                xs: "0% 5% 0% 5%",
-                sm: "3% 8%",
-                lg: "41px 152px 74px 152px",
-                xl: "21px 82px 21px 82px",
+                xs: "70px 50px 0px 50px",
+                sm: "150.67px 150px 0px 150px",
+                lg: "250px 150px 0px 150px",
+                md: "250px 100px 0px 100px",
+                xl: "420px 300px 0px 300px",
               },
             }}
           >
-            <Typography
+            <Grid
               sx={{
-                fontFamily: "DM Serif Display",
-                color: "#292F36",
-                fontWeight: 700,
-                // fontSize: "50px",
-                fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
-                // lineHeight: "62.5px",
-                lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
-                letterSpacing: "0%",
-              }}
-            >
-              {blogPage[0]?.data.heading}
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: "Jost",
-                color: "#4D5053",
-                fontWeight: 400,
-                // fontSize: "22px",
-                fontSize: { xs: "10px", sm: "18px", lg: "22px", xl: "22px" },
-                // lineHeight: "33px",
-                lineHeight: { xs: "20px", sm: "28px", lg: "150%", xl: "150%" },
-                letterSpacing: "1%",
-              }}
-            >
-              {blogPage[0]?.data.sub_heading}
-            </Typography>
-          </Grid>
-        </Grid>
-      </Grid>
-      <Grid
-        container
-        style={{
-          background: "#e1f5f2",
-        }}
-      >
-        <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
-          <Typography
-            sx={{
-              color: "#292F36",
-              // fontSize: "50px",
-              fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
-              lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
-              fontWeight: 700,
-              textAlign: "center",
-              marginTop: { xs: "50px", sm: "50px", lg: "100px", xl: "233px" },
-              fontFamily: "Mulish",
-            }}
-          >
-            {blogPage[0]?.data.title1}
-          </Typography>
-          <Grid
-            sx={{
-              borderRadius: "62px",
-              border: "1px solid #E7E7E7",
-              // margin: "5% 10%",
-              margin: {
-                xs: "27px 30px 50px 30px",
-                sm: "27px 80px 100px 80px",
-                lg: "27px 152px 100px 152px",
-                xl: "27px 152px 212px 152px",
-              },
-            }}
-          >
-            {items
-              .slice(
-                page * fixedRowsPerPage,
-                page * fixedRowsPerPage + fixedRowsPerPage
-              )
-              .map((_, index) => (
-                <Grid
-                  sx={{
-                    display: "flex",
-                    // flexDirection: "row",
-                    flexDirection: {
-                      xs: "column",
-                      sm: "column",
-                      lg: "row",
-                      md: "row",
-                      xl: "row",
-                    },
-                    padding: {
-                      xs: "22px",
-                      sm: "22px",
-                      lg: "22px 50px",
-                      xl: "22px 130px",
-                    },
-                    gap: "50px",
-                  }}
-                  key={index}
-                >
-                  {blogPage[0]?.data.testimonial_image && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={blogPage[0]?.data.testimonial_image.url || undefined}
-                      alt={blogPage[0]?.data.testimonial_image.alt || "Image"}
-                      style={{
-                        height: dimensions.height,
-                        width: dimensions.width,
-                      }}
-                    />
-                  )}
-                  <div
-                    style={{
-                      display: "flex",
-                      flexDirection: "column",
-                      // justifyContent: "space-evenly",
-                      gap: "22px",
-                    }}
-                  >
-                    <Typography
-                      sx={{
-                        color: "#292F36",
-                        fontSize: {xl:"35px",lg:"25px",md:"25px",sm:"25px",xs:"25px"},
-                        fontWeight: 700,
-                        fontFamily: "Mulish",
-                        lineHeight: "125%",
-                        letterSpacing: "2%",
-                        padding: { lg: "", xl: "50px 50px 0px 0px" },
-                      }}
-                    >
-                      {/* {page * fixedRowsPerPage + index + 1}. */}
-                      {blogPage[0]?.data.testimonial_title}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        color: "#4D5053",
-                        fontSize: {xl:"30px",lg:"22px",md:"22px",sm:"22px",xs:"22px"},
-                        fontWeight: 400,
-                        fontFamily: "Mulish",
-                        lineHeight: "150%",
-                        letterSpacing: "1%",
-                        whiteSpace: "pre-line",
-                      }}
-                    >
-                      {blogPage[0]?.data.testimonial_description}
-                    </Typography>
-                    <Typography
-                      sx={{
-                        color: "#4D5053",
-                        fontSize: {xl:"25px",lg:"16px",md:"16px",sm:"16px",xs:"16px"},
-                        fontWeight: 400,
-                        fontFamily: "Mulish",
-                        lineHeight: "150%",
-                        letterSpacing: "1%",
-                        marginTop: { lg: "41px", xl: "41px" },
-                      }}
-                    >
-                      {blogPage[0]?.data.testimonial_date}
-                    </Typography>
-                  </div>
-                </Grid>
-              ))}
-            <div
-              style={{
+                background: "#fff",
                 display: "flex",
-                flexDirection: "row",
-                justifyContent: "flex-end",
-                gap: "20px",
-                paddingRight: "50px",
-                paddingBottom: "10px",
+                justifyContent: "center",
+                flexDirection: "column",
+                alignItems: "center",
+                borderRadius: {
+                  xs: "20px 20px 0px 0px",
+                  sm: "37px 37px 0px 0px",
+                  lg: "37px 37px 0px 0px",
+                  xl: "37px 37px 0px 0px",
+                },
+                // padding: "41px 152px 41px 152px",
+                padding: {
+                  xs: "0% 5% 0% 5%",
+                  sm: "3% 8%",
+                  lg: "41px 152px 74px 152px",
+                  xl: "21px 82px 21px 82px",
+                },
               }}
             >
-              <IconButton
-                onClick={handleBackButtonClick}
-                disabled={page === 0}
-                aria-label="previous page"
+              <Typography
                 sx={{
-                  // ...buttonStyle,
-                  ...getHoverStyle({ ...buttonStyle }, 1),
-                  "&:hover": {
-                    background: "#BEDFDB",
+                  fontFamily: "DM Serif Display",
+                  color: "#292F36",
+                  fontWeight: 700,
+                  // fontSize: "50px",
+                  fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
+                  // lineHeight: "62.5px",
+                  lineHeight: {
+                    xs: "40px",
+                    sm: "48px",
+                    lg: "125%",
+                    xl: "125%",
                   },
+                  letterSpacing: "0%",
                 }}
-                onMouseEnter={() => handleMouseEnter(1)}
-                onMouseLeave={handleMouseLeave}
               >
-                <KeyboardArrowLeftIcon />
-              </IconButton>
-              <IconButton
-                onClick={handleNextButtonClick}
-                disabled={page >= totalPages - 1}
-                aria-label="next page"
+                {blogPage[0]?.data.heading}
+              </Typography>
+              <Typography
                 sx={{
-                  // ...buttonStyle,
-                  ...getHoverStyle({ ...buttonStyle }, 2),
-                  "&:hover": {
-                    background: "#BEDFDB",
+                  fontFamily: "Jost",
+                  color: "#4D5053",
+                  fontWeight: 400,
+                  // fontSize: "22px",
+                  fontSize: { xs: "10px", sm: "18px", lg: "22px", xl: "22px" },
+                  // lineHeight: "33px",
+                  lineHeight: {
+                    xs: "20px",
+                    sm: "28px",
+                    lg: "150%",
+                    xl: "150%",
                   },
+                  letterSpacing: "1%",
                 }}
-                onMouseEnter={() => handleMouseEnter(2)}
-                onMouseLeave={handleMouseLeave}
               >
-                <KeyboardArrowRightIcon />
-              </IconButton>
-            </div>
+                {blogPage[0]?.data.sub_heading}
+              </Typography>
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
-
-      <Grid
-        container
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          background: "#e1f5f2",
-        }}
-      >
-        <Typography
-          sx={{
-            fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
-            lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
-            fontWeight: 700,
-            color: "#292F36",
-            textAlign: "center",
-            // margin: "50px 0px",
-            fontFamily: "Mulish",
-            letterSpacing: "2%",
+        <div
+          style={{
+            padding: isMax ? "0px 150px" : "0px 0px",
           }}
         >
-          {blogPage[0]?.data.title2}
-        </Typography>
+          <Grid
+            container
+            style={{
+              background: "#e1f5f2",
+            }}
+          >
+            <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
+              <Typography
+                sx={{
+                  color: "#292F36",
+                  // fontSize: "50px",
+                  fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
+                  lineHeight: {
+                    xs: "40px",
+                    sm: "48px",
+                    lg: "125%",
+                    xl: "125%",
+                  },
+                  fontWeight: 700,
+                  textAlign: "center",
+                  marginTop: {
+                    xs: "50px",
+                    sm: "50px",
+                    lg: "100px",
+                    xl: "233px",
+                  },
+                  fontFamily: "Mulish",
+                }}
+              >
+                {blogPage[0]?.data.title1}
+              </Typography>
+              <Grid
+                sx={{
+                  borderRadius: "62px",
+                  border: "1px solid #E7E7E7",
+                  // margin: "5% 10%",
+                  margin: {
+                    xs: "27px 30px 50px 30px",
+                    sm: "27px 80px 100px 80px",
+                    lg: "27px 152px 100px 152px",
+                    xl: "27px 152px 212px 152px",
+                  },
+                }}
+              >
+                {items
+                  .slice(
+                    page * fixedRowsPerPage,
+                    page * fixedRowsPerPage + fixedRowsPerPage
+                  )
+                  .map((_, index) => (
+                    <Grid
+                      sx={{
+                        display: "flex",
+                        // flexDirection: "row",
+                        flexDirection: {
+                          xs: "column",
+                          sm: "column",
+                          lg: "row",
+                          md: "row",
+                          xl: "row",
+                        },
+                        padding: {
+                          xs: "22px",
+                          sm: "22px",
+                          lg: "22px 50px",
+                          xl: "22px 130px",
+                        },
+                        gap: "50px",
+                      }}
+                      key={index}
+                    >
+                      {blogPage[0]?.data.testimonial_image && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={
+                            blogPage[0]?.data.testimonial_image.url || undefined
+                          }
+                          alt={
+                            blogPage[0]?.data.testimonial_image.alt || "Image"
+                          }
+                          style={{
+                            height: dimensions.height,
+                            width: dimensions.width,
+                          }}
+                        />
+                      )}
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          // justifyContent: "space-evenly",
+                          gap: "22px",
+                        }}
+                      >
+                        <Typography
+                          sx={{
+                            color: "#292F36",
+                            fontSize: {
+                              xl: "35px",
+                              lg: "25px",
+                              md: "25px",
+                              sm: "25px",
+                              xs: "25px",
+                            },
+                            fontWeight: 700,
+                            fontFamily: "Mulish",
+                            lineHeight: "125%",
+                            letterSpacing: "2%",
+                            padding: { lg: "", xl: "50px 50px 0px 0px" },
+                          }}
+                        >
+                          {/* {page * fixedRowsPerPage + index + 1}. */}
+                          {blogPage[0]?.data.testimonial_title}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#4D5053",
+                            fontSize: {
+                              xl: "30px",
+                              lg: "22px",
+                              md: "22px",
+                              sm: "22px",
+                              xs: "22px",
+                            },
+                            fontWeight: 400,
+                            fontFamily: "Mulish",
+                            lineHeight: "150%",
+                            letterSpacing: "1%",
+                            whiteSpace: "pre-line",
+                          }}
+                        >
+                          {blogPage[0]?.data.testimonial_description}
+                        </Typography>
+                        <Typography
+                          sx={{
+                            color: "#4D5053",
+                            fontSize: {
+                              xl: "25px",
+                              lg: "16px",
+                              md: "16px",
+                              sm: "16px",
+                              xs: "16px",
+                            },
+                            fontWeight: 400,
+                            fontFamily: "Mulish",
+                            lineHeight: "150%",
+                            letterSpacing: "1%",
+                            marginTop: { lg: "41px", xl: "41px" },
+                          }}
+                        >
+                          {blogPage[0]?.data.testimonial_date}
+                        </Typography>
+                      </div>
+                    </Grid>
+                  ))}
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "flex-end",
+                    gap: "20px",
+                    paddingRight: "50px",
+                    paddingBottom: "10px",
+                  }}
+                >
+                  <IconButton
+                    onClick={handleBackButtonClick}
+                    disabled={page === 0}
+                    aria-label="previous page"
+                    sx={{
+                      // ...buttonStyle,
+                      ...getHoverStyle({ ...buttonStyle }, 1),
+                      "&:hover": {
+                        background: "#BEDFDB",
+                      },
+                    }}
+                    onMouseEnter={() => handleMouseEnter(1)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <KeyboardArrowLeftIcon />
+                  </IconButton>
+                  <IconButton
+                    onClick={handleNextButtonClick}
+                    disabled={page >= totalPages - 1}
+                    aria-label="next page"
+                    sx={{
+                      // ...buttonStyle,
+                      ...getHoverStyle({ ...buttonStyle }, 2),
+                      "&:hover": {
+                        background: "#BEDFDB",
+                      },
+                    }}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <KeyboardArrowRightIcon />
+                  </IconButton>
+                </div>
+              </Grid>
+            </Grid>
+          </Grid>
 
-        {/* {articleItems
+          <Grid
+            container
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              background: "#e1f5f2",
+            }}
+          >
+            <Typography
+              sx={{
+                fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "50px" },
+                lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "125%" },
+                fontWeight: 700,
+                color: "#292F36",
+                textAlign: "center",
+                // margin: "50px 0px",
+                fontFamily: "Mulish",
+                letterSpacing: "2%",
+              }}
+            >
+              {blogPage[0]?.data.title2}
+            </Typography>
+
+            {/* {articleItems
           .slice(
             articlePage * fixedRowsPerArticlePage,
             articlePage * fixedRowsPerArticlePage + fixedRowsPerArticlePage
@@ -523,195 +577,211 @@ export default function Blogs() {
               </Grid>
             </Grid>
           ))} */}
-        <Grid
-          item
-          xl={12}
-          lg={12}
-          xs={12}
-          sm={12}
-          md={12}
-          sx={{
-            display: "grid",
-            // gridTemplateColumns: "repeat(3, 1fr)",
-            gridTemplateColumns: {
-              xs: "repeat(1, 1fr)",
-              sm: "repeat(2, 1fr)",
-              md: "repeat(3, 1fr)",
-              lg: "repeat(3, 1fr)",
-              xl: "repeat(3, 1fr)",
-            },
-            gap: { xs: "30px", sm: "30px", lg: "50px", xl: "70px" },
-            justifyContent: "center",
-            // padding: "3% 8%",
-            padding: {
-              xs: "3% 5%",
-              sm: "3% 5%",
-              lg: "78px 50px 200px 50px",
-              xl: "78px 100px 350px 100px",
-            },
-          }}
-        >
-          {repeatedArticleItems
-            .slice(
-              articlePage * fixedRowsPerArticlePage,
-              articlePage * fixedRowsPerArticlePage + fixedRowsPerArticlePage
-            )
-            .map((item, index) => (
-              <Grid
-                item
-                xl={12}
-                lg={12}
-                xs={12}
-                sm={12}
-                key={index}
+            <Grid
+              item
+              xl={12}
+              lg={12}
+              xs={12}
+              sm={12}
+              md={12}
+              sx={{
+                display: "grid",
+                // gridTemplateColumns: "repeat(3, 1fr)",
+                gridTemplateColumns: {
+                  xs: "repeat(1, 1fr)",
+                  sm: "repeat(2, 1fr)",
+                  md: "repeat(3, 1fr)",
+                  lg: "repeat(3, 1fr)",
+                  xl: "repeat(3, 1fr)",
+                },
+                gap: { xs: "30px", sm: "30px", lg: "50px", xl: "70px" },
+                justifyContent: "center",
+                // padding: "3% 8%",
+                padding: {
+                  xs: "3% 5%",
+                  sm: "3% 5%",
+                  lg: "78px 50px 200px 50px",
+                  xl: "78px 100px 350px 100px",
+                },
+              }}
+            >
+              {repeatedArticleItems
+                .slice(
+                  articlePage * fixedRowsPerArticlePage,
+                  articlePage * fixedRowsPerArticlePage +
+                    fixedRowsPerArticlePage
+                )
+                .map((item, index) => (
+                  <Grid
+                    item
+                    xl={12}
+                    lg={12}
+                    xs={12}
+                    sm={12}
+                    key={index}
+                    sx={{
+                      background: "#FFFFFF",
+                      display: "flex",
+                      flexDirection: "column",
+                      padding: "20px",
+                      borderRadius: "21.27px",
+                      boxShadow: "0 5px 10px rgba(0, 0, 0, 0.5)",
+                      gap: "10px",
+                      transition: "transform 0.3s ease",
+                      "&:hover": {
+                        transform: "scale(1.05)",
+                      },
+                    }}
+                  >
+                    {item.image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={item.image.url || undefined}
+                        alt={item.image.alt || "Image"}
+                        style={{
+                          height: "auto",
+                          width: "100%",
+                        }}
+                      />
+                    )}
+                    <Typography
+                      sx={{
+                        ...title,
+                        fontSize: {
+                          xs: "14px",
+                          sm: "18px",
+                          lg: "17px",
+                          xl: "21.27px",
+                        },
+                      }}
+                    >
+                      {item.subTitle}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        ...description,
+                        fontSize: {
+                          xs: "12px",
+                          sm: "14px",
+                          lg: "14px",
+                          xl: "18.61px",
+                        },
+                      }}
+                    >
+                      {item.description}
+                    </Typography>
+                  </Grid>
+                ))}
+            </Grid>
+            <Grid
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-end",
+                gap: "20px",
+                paddingRight: { lg: "50px", xl: "50px" },
+                paddingBottom: "10px",
+                marginTop: "50px",
+              }}
+            >
+              <IconButton
+                onClick={handleArticleBackButtonClick}
+                disabled={articlePage === 0}
+                aria-label="previous page"
                 sx={{
-                  background: "#FFFFFF",
-                  display: "flex",
-                  flexDirection: "column",
-                  padding: "20px",
-                  borderRadius: "21.27px",
-                  boxShadow: "0 5px 10px rgba(0, 0, 0, 0.5)",
-                  gap: "10px",
-                  transition: "transform 0.3s ease",
+                  ...buttonStyle,
                   "&:hover": {
-                    transform: "scale(1.05)",
+                    background: "#BEDFDB",
                   },
                 }}
               >
-                {item.image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={item.image.url || undefined}
-                    alt={item.image.alt || "Image"}
-                    style={{
-                      height: "auto",
-                      width: "100%",
-                    }}
-                  />
-                )}
-                <Typography sx={{
-                  ...title, fontSize: {
-                    xs: "14px",
-                    sm: "18px",
-                    lg: "17px",
-                    xl: "21.27px",
-                  },
-                }}>{item.subTitle}</Typography>
-                <Typography sx={{
-                  ...description, fontSize: {
-                    xs: "12px",
-                    sm: "14px",
-                    lg: "14px",
-                    xl: "18.61px",
-                  },
-                }}>{item.description}</Typography>
-              </Grid>
-            ))}
-        </Grid>
-        <Grid
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "flex-end",
-            gap: "20px",
-            paddingRight: { lg: "50px", xl: "50px" },
-            paddingBottom: "10px",
-            marginTop: "50px",
-          }}
-        >
-          <IconButton
-            onClick={handleArticleBackButtonClick}
-            disabled={articlePage === 0}
-            aria-label="previous page"
-            sx={{
-              ...buttonStyle,
-              "&:hover": {
-                background: "#BEDFDB",
-              },
-            }}
-          >
-            <KeyboardArrowLeftIcon />
-          </IconButton>
-          {[
-            ...Array(
-              Math.ceil(repeatedArticleItems.length / fixedRowsPerArticlePage)
-            ).keys(),
-          ].map((pageNumber) => {
-            const startPage = Math.max(0, articlePage - 1);
-            const endPage = Math.min(
-              Math.ceil(repeatedArticleItems.length / fixedRowsPerArticlePage) -
-              1,
-              startPage + 2
-            );
+                <KeyboardArrowLeftIcon />
+              </IconButton>
+              {[
+                ...Array(
+                  Math.ceil(
+                    repeatedArticleItems.length / fixedRowsPerArticlePage
+                  )
+                ).keys(),
+              ].map((pageNumber) => {
+                const startPage = Math.max(0, articlePage - 1);
+                const endPage = Math.min(
+                  Math.ceil(
+                    repeatedArticleItems.length / fixedRowsPerArticlePage
+                  ) - 1,
+                  startPage + 2
+                );
 
-            if (
-              pageNumber >= startPage &&
-              pageNumber <= endPage &&
-              pageNumber < 9
-            ) {
-              return (
-                <span
-                  key={pageNumber}
-                  style={{
-                    alignSelf: "center",
-                    margin: "0 8px",
-                    color: "#292F36",
-                    border:
-                      articlePage === pageNumber
-                        ? "0px solid #BBDDD9"
-                        : "1px solid #24535C",
-                    fontSize: "16px",
-                    padding: "5px",
-                    borderRadius: "20px",
-                    background:
-                      articlePage === pageNumber ? "#BBDDD9" : "inherit",
-                  }}
-                  onClick={() => setArticlePage(pageNumber)}
-                >
-                  0{pageNumber + 1}
-                </span>
-              );
-            } else if (pageNumber >= startPage && pageNumber <= endPage) {
-              return (
-                <span
-                  key={pageNumber}
-                  style={{
-                    alignSelf: "center",
-                    margin: "0 8px",
-                    color: "#292F36",
-                    border:
-                      articlePage === pageNumber
-                        ? "0px solid #BBDDD9"
-                        : "1px solid #24535C",
-                    fontSize: "16px",
-                    padding: "5px 7px",
-                    borderRadius: "20px",
-                    background:
-                      articlePage === pageNumber ? "#BBDDD9" : "inherit",
-                  }}
-                  onClick={() => setArticlePage(pageNumber)}
-                >
-                  {pageNumber + 1}
-                </span>
-              );
-            }
-            return null;
-          })}
-          <IconButton
-            onClick={handleArticleNextButtonClick}
-            disabled={articlePage >= totalArticlePages - 1}
-            aria-label="next page"
-            sx={{
-              ...buttonStyle,
-              "&:hover": {
-                background: "#BEDFDB",
-              },
-            }}
-          >
-            <KeyboardArrowRightIcon />
-          </IconButton>
-        </Grid>
-      </Grid>
+                if (
+                  pageNumber >= startPage &&
+                  pageNumber <= endPage &&
+                  pageNumber < 9
+                ) {
+                  return (
+                    <span
+                      key={pageNumber}
+                      style={{
+                        alignSelf: "center",
+                        margin: "0 8px",
+                        color: "#292F36",
+                        border:
+                          articlePage === pageNumber
+                            ? "0px solid #BBDDD9"
+                            : "1px solid #24535C",
+                        fontSize: "16px",
+                        padding: "5px",
+                        borderRadius: "20px",
+                        background:
+                          articlePage === pageNumber ? "#BBDDD9" : "inherit",
+                      }}
+                      onClick={() => setArticlePage(pageNumber)}
+                    >
+                      0{pageNumber + 1}
+                    </span>
+                  );
+                } else if (pageNumber >= startPage && pageNumber <= endPage) {
+                  return (
+                    <span
+                      key={pageNumber}
+                      style={{
+                        alignSelf: "center",
+                        margin: "0 8px",
+                        color: "#292F36",
+                        border:
+                          articlePage === pageNumber
+                            ? "0px solid #BBDDD9"
+                            : "1px solid #24535C",
+                        fontSize: "16px",
+                        padding: "5px 7px",
+                        borderRadius: "20px",
+                        background:
+                          articlePage === pageNumber ? "#BBDDD9" : "inherit",
+                      }}
+                      onClick={() => setArticlePage(pageNumber)}
+                    >
+                      {pageNumber + 1}
+                    </span>
+                  );
+                }
+                return null;
+              })}
+              <IconButton
+                onClick={handleArticleNextButtonClick}
+                disabled={articlePage >= totalArticlePages - 1}
+                aria-label="next page"
+                sx={{
+                  ...buttonStyle,
+                  "&:hover": {
+                    background: "#BEDFDB",
+                  },
+                }}
+              >
+                <KeyboardArrowRightIcon />
+              </IconButton>
+            </Grid>
+          </Grid>
+        </div>
+      </div>
       <Liberez />
       <Footer />
     </div>
