@@ -257,7 +257,7 @@ export default function Contact() {
       <Header />
       <div
         style={{
-          padding: isMax ? "0px 350px" : "0px 0px",
+          padding: isMax ? "0px 200px" : "0px 0px",
         }}
       >
         <Grid
@@ -646,6 +646,7 @@ export default function Contact() {
                   background: "#292F36",
                   boxShadow: "none",
                 },
+                margin: isMax ? "-50px 30px 0px 0px" : "0px",
               }}
               onClick={(e: any) => handleSubmit(e)}
             >

@@ -41,11 +41,7 @@ const Footer: React.FC = () => {
   const isMax = useMediaQuery("(min-width:1930px)");
 
   return (
-    <div
-      style={{
-        padding: isMax ? "0px 350px" : "0px 0px",
-      }}
-    >
+    <div>
       <Box
         sx={{
           backgroundColor: "#24535C",
@@ -58,133 +54,140 @@ const Footer: React.FC = () => {
           // mt: 4,
         }}
       >
-        <Grid
-          container
-          spacing={2}
-          justifyContent="space-between"
-          alignItems="flex-start"
-          sx={{ margin: "1 auto" }}
+        <div
+          style={{
+            padding: isMax ? "0px 350px" : "0px 0px",
+          }}
         >
           <Grid
-            item
-            xs={12}
-            sm={5}
-            lg={4}
-            xl={4.1}
-            textAlign={{ xs: "center", sm: "left" }}
+            container
+            spacing={2}
+            justifyContent="space-between"
+            alignItems="flex-start"
+            sx={{ margin: "1 auto" }}
           >
-            {footerPage.map((post, postIndex) => (
-              <div key={postIndex}>
-                {post?.data.marguerite_logo && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post.data.marguerite_logo.url || undefined}
-                    alt={post.data.marguerite_logo.alt || "Logo"}
-                    style={{
-                      height: "auto",
-                      width: "147px",
+            <Grid
+              item
+              xs={12}
+              sm={5}
+              lg={4}
+              xl={4.1}
+              textAlign={{ xs: "center", sm: "left" }}
+            >
+              {footerPage.map((post, postIndex) => (
+                <div key={postIndex}>
+                  {post?.data.marguerite_logo && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post.data.marguerite_logo.url || undefined}
+                      alt={post.data.marguerite_logo.alt || "Logo"}
+                      style={{
+                        height: "auto",
+                        width: "147px",
+                      }}
+                    />
+                  )}
+                  <Typography
+                    sx={{
+                      fontFamily: "Mulish",
+                      color: "#FFFFFF",
+                      fontWeight: 400,
+                      fontSize: {
+                        xs: "16px",
+                        sm: "14px",
+                        lg: "16px",
+                        xl: "19.84px",
+                      },
+                      lineHeight: "auto",
+                      paddingTop: "10px",
+                      textAlign: { xs: "center", sm: "left" },
                     }}
-                  />
-                )}
+                  >
+                    {post?.data.description}
+                  </Typography>
+                  <Box
+                    sx={{
+                      display: "flex",
+                      justifyContent: { xs: "center", sm: "flex-start" },
+                      marginTop: "10px",
+                      gap: "20px",
+                    }}
+                  >
+                    <PrismicNextLink
+                      field={socialLinkPage[0]?.data.linkedin_link}
+                    >
+                      {post?.data.linkedin_icon && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={post.data.linkedin_icon.url || undefined}
+                          alt={post.data.linkedin_icon.alt || "LinkedIn"}
+                          style={{ width: "24px", height: "24px" }}
+                        />
+                      )}
+                    </PrismicNextLink>
+                    <PrismicNextLink
+                      field={socialLinkPage[0]?.data.twitter_link}
+                    >
+                      {post?.data.twitter_icon && (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={post.data.twitter_icon.url || undefined}
+                          alt={post.data.twitter_icon.alt || "Twitter"}
+                          style={{ width: "24px", height: "24px" }}
+                        />
+                      )}
+                    </PrismicNextLink>
+                  </Box>
+                </div>
+              ))}
+            </Grid>
+            <Grid item xs={12} sm={3} lg={3} xl={3}>
+              {allLinkText.slice(0, 4).map((text: any, index: number) => (
                 <Typography
+                  key={index}
                   sx={{
                     fontFamily: "Mulish",
-                    color: "#FFFFFF",
+                    color: "#D3DDDE",
                     fontWeight: 400,
                     fontSize: {
-                      xs: "16px",
-                      sm: "14px",
-                      lg: "16px",
-                      xl: "19.84px",
+                      xs: "18px",
+                      sm: "18px",
+                      lg: "20px",
+                      xl: "24.8px",
                     },
                     lineHeight: "auto",
-                    paddingTop: "10px",
+                    paddingBottom: "19.84px",
                     textAlign: { xs: "center", sm: "left" },
                   }}
                 >
-                  {post?.data.description}
+                  {text}
                 </Typography>
-                <Box
+              ))}
+            </Grid>
+            <Grid item xs={12} sm={3} lg={3} xl={3}>
+              {allLinkText.slice(4).map((text: any, index: number) => (
+                <Typography
+                  key={index}
                   sx={{
-                    display: "flex",
-                    justifyContent: { xs: "center", sm: "flex-start" },
-                    marginTop: "10px",
-                    gap: "20px",
+                    fontFamily: "Mulish",
+                    color: "#D3DDDE",
+                    fontWeight: 400,
+                    fontSize: {
+                      xs: "18px",
+                      sm: "18px",
+                      lg: "20px",
+                      xl: "24.8px",
+                    },
+                    lineHeight: "auto",
+                    paddingBottom: "19.84px",
+                    textAlign: { xs: "center", sm: "left" },
                   }}
                 >
-                  <PrismicNextLink
-                    field={socialLinkPage[0]?.data.linkedin_link}
-                  >
-                    {post?.data.linkedin_icon && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={post.data.linkedin_icon.url || undefined}
-                        alt={post.data.linkedin_icon.alt || "LinkedIn"}
-                        style={{ width: "24px", height: "24px" }}
-                      />
-                    )}
-                  </PrismicNextLink>
-                  <PrismicNextLink field={socialLinkPage[0]?.data.twitter_link}>
-                    {post?.data.twitter_icon && (
-                      // eslint-disable-next-line @next/next/no-img-element
-                      <img
-                        src={post.data.twitter_icon.url || undefined}
-                        alt={post.data.twitter_icon.alt || "Twitter"}
-                        style={{ width: "24px", height: "24px" }}
-                      />
-                    )}
-                  </PrismicNextLink>
-                </Box>
-              </div>
-            ))}
-          </Grid>
-          <Grid item xs={12} sm={3} lg={3} xl={3}>
-            {allLinkText.slice(0, 4).map((text: any, index: number) => (
-              <Typography
-                key={index}
-                sx={{
-                  fontFamily: "Mulish",
-                  color: "#D3DDDE",
-                  fontWeight: 400,
-                  fontSize: {
-                    xs: "18px",
-                    sm: "18px",
-                    lg: "20px",
-                    xl: "24.8px",
-                  },
-                  lineHeight: "auto",
-                  paddingBottom: "19.84px",
-                  textAlign: { xs: "center", sm: "left" },
-                }}
-              >
-                {text}
-              </Typography>
-            ))}
-          </Grid>
-          <Grid item xs={12} sm={3} lg={3} xl={3}>
-            {allLinkText.slice(4).map((text: any, index: number) => (
-              <Typography
-                key={index}
-                sx={{
-                  fontFamily: "Mulish",
-                  color: "#D3DDDE",
-                  fontWeight: 400,
-                  fontSize: {
-                    xs: "18px",
-                    sm: "18px",
-                    lg: "20px",
-                    xl: "24.8px",
-                  },
-                  lineHeight: "auto",
-                  paddingBottom: "19.84px",
-                  textAlign: { xs: "center", sm: "left" },
-                }}
-              >
-                {text}
-              </Typography>
-            ))}
-          </Grid>
-          {/* <Grid item xs={12} sm={3} lg={3} xl={3}>
+                  {text}
+                </Typography>
+              ))}
+            </Grid>
+            {/* <Grid item xs={12} sm={3} lg={3} xl={3}>
           {allLinkText.slice(4).map((text: any, index: number) => (
             <React.Fragment key={index}>
               {index === 1 ? (
@@ -265,7 +268,8 @@ const Footer: React.FC = () => {
             </React.Fragment>
           ))}
         </Grid> */}
-        </Grid>
+          </Grid>
+        </div>
       </Box>
     </div>
   );
