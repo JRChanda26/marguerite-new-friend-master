@@ -214,7 +214,9 @@ const OurExperts: React.FC = () => {
   return (
     <Box sx={{}}>
       <Header />
-
+      <div style={{
+        padding: isMax ? "0px 350px" : "0px 0px",
+      }}>
       <div
         style={{
           backgroundImage: `url(${middleBackground})`,
@@ -223,7 +225,6 @@ const OurExperts: React.FC = () => {
           width: "100%",
           height: "auto",
           marginTop: "4%",
-          padding: isMax ? "0px 350px" : "0px 0px",
         }}
       >
         {leCarePage.map((post: any, postIndex: number) => (
@@ -467,6 +468,7 @@ const OurExperts: React.FC = () => {
             </Grid>
           </React.Fragment>
         ))}
+      </div>
       </div>
       <Liberez />
       <Footer />

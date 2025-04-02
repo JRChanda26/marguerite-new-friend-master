@@ -63,6 +63,9 @@ const Benifits: React.FC = () => {
   return (
     <Box sx={{}}>
       <Header />
+      <div style={{
+        padding: isMax ? "0px 350px" : "0px 0px",
+      }}>
       <div
         style={{
           backgroundImage: `url(${bottomBackground})`,
@@ -76,7 +79,6 @@ const Benifits: React.FC = () => {
           //     sm: "100px 150px 0px 150px",
           //     lg: "150px 150px 0px 150px",
           //     xl: "150px 441px 0px 441px",}
-          padding: isMax ? "0px 350px" : "0px 0px",
         }}
       >
         {leCarePage.map((post: any) => (
@@ -578,6 +580,7 @@ const Benifits: React.FC = () => {
             </div>
           </>
         ))}
+      </div>
       </div>
       <Liberez />
       <Footer />
