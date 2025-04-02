@@ -144,332 +144,337 @@ const NosSolutionsDe: React.FC = () => {
   const pointsFontSize = {
     fontSize: isSmallScreen ? "18px" : "22px",
   };
-  
+
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
     <Box>
       <Header />
-      <Grid
-        sx={{
-          backgroundImage: `url(${backgroundImage})`,
-          backgroundSize: {
-            xs: "cover",
-            sm: "cover",
-            lg: "cover",
-            xl: "cover", 
-          },
-          backgroundRepeat: "no-repeat",
+      <div
+        style={{
+          padding: isMax ? "0px 200px" : "0px 0px",
         }}
       >
-        {nosPage.map((post: any) => (
-          <>
-            <Grid
-              sx={{
-                display: "flex",
-                justifyContent: "center",
-                flexDirection: "column",
-                alignItems: "center",
-                padding: {
-                  xs: "70px 50px 0px 50px",
-                  sm: "100px 150px 0px 150px",
-                  lg: "250px 150px 0px 150px",
-                  md: "250px 100px 0px 100px",
-                  xl: "420px 300px 0px 300px",
-                },
-              }}
-            >
+        <Grid
+          sx={{
+            backgroundImage: `url(${backgroundImage})`,
+            backgroundSize: {
+              xs: "cover",
+              sm: "cover",
+              lg: "cover",
+              xl: "cover",
+            },
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {nosPage.map((post: any) => (
+            <>
               <Grid
                 sx={{
-                  background: "#fff",
                   display: "flex",
                   justifyContent: "center",
                   flexDirection: "column",
-                  textAlign: "center",
-                  borderRadius: {
-                    xs: "20px 20px 0px 0px",
-                    sm: "37px 37px 0px 0px",
-                    lg: "37px 37px 0px 0px",
-                    xl: "37px 37px 0px 0px",
-                  },
+                  alignItems: "center",
                   padding: {
-                    xs: "0% 5% 0% 5%",
-                    sm: "3% 8%",
-                    lg: "41px 82px 42px 82px",
-                    xl: "21px 82px 21px 82px",
+                    xs: "70px 50px 0px 50px",
+                    sm: "100px 150px 0px 150px",
+                    lg: "250px 150px 0px 150px",
+                    md: "250px 100px 0px 100px",
+                    xl: "420px 300px 0px 300px",
                   },
                 }}
               >
-                <Typography
+                <Grid
                   sx={{
-                    fontFamily: "DM Serif Display",
-                    color: "#292F36",
-                    fontWeight: 700,
-                    fontSize: {
-                      xs: "16px",
-                      sm: "40px",
-                      lg: "50px",
-                      xl: "50px",
+                    background: "#fff",
+                    display: "flex",
+                    justifyContent: "center",
+                    flexDirection: "column",
+                    textAlign: "center",
+                    borderRadius: {
+                      xs: "20px 20px 0px 0px",
+                      sm: "37px 37px 0px 0px",
+                      lg: "37px 37px 0px 0px",
+                      xl: "37px 37px 0px 0px",
                     },
-                    lineHeight: {
-                      xs: "40px",
-                      sm: "48px",
-                      lg: "125%",
-                      xl: "125%",
+                    padding: {
+                      xs: "0% 5% 0% 5%",
+                      sm: "3% 8%",
+                      lg: "41px 82px 42px 82px",
+                      xl: "21px 82px 21px 82px",
                     },
-                    letterSpacing: "0%",
                   }}
                 >
-                  {post.data.heading}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Jost",
-                    color: "#4D5053",
-                    fontWeight: 400,
-                    fontSize: {
-                      xs: "10px",
-                      sm: "18px",
-                      lg: "22px",
-                      xl: "22px",
-                    },
-                    lineHeight: {
-                      xs: "20px",
-                      sm: "28px",
-                      lg: "150%",
-                      xl: "150%",
-                    },
-                    letterSpacing: "1%",
+                  <Typography
+                    sx={{
+                      fontFamily: "DM Serif Display",
+                      color: "#292F36",
+                      fontWeight: 700,
+                      fontSize: {
+                        xs: "16px",
+                        sm: "40px",
+                        lg: "50px",
+                        xl: "50px",
+                      },
+                      lineHeight: {
+                        xs: "40px",
+                        sm: "48px",
+                        lg: "125%",
+                        xl: "125%",
+                      },
+                      letterSpacing: "0%",
+                    }}
+                  >
+                    {post.data.heading}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: "Jost",
+                      color: "#4D5053",
+                      fontWeight: 400,
+                      fontSize: {
+                        xs: "10px",
+                        sm: "18px",
+                        lg: "22px",
+                        xl: "22px",
+                      },
+                      lineHeight: {
+                        xs: "20px",
+                        sm: "28px",
+                        lg: "150%",
+                        xl: "150%",
+                      },
+                      letterSpacing: "1%",
+                    }}
+                  >
+                    {post.data.sub_heading}
+                  </Typography>
+                </Grid>
+              </Grid>
+            </>
+          ))}
+        </Grid>
+
+        <Grid
+          sx={{
+            padding: {
+              xs: "5%",
+              sm: "5%",
+              lg: "100px",
+              xl: isMax ? "100px 228px 100px 228px" : "200px 228px 229px 228px",
+            },
+          }}
+        >
+          {nosPage.map((post: any) => (
+            <Grid container spacing={0} key={post.id}>
+              <Grid
+                item
+                lg={12}
+                sx={{
+                  display: "flex",
+                  justifyContent: "center",
+                  flexDirection: {
+                    xs: "column",
+                    sm: "row",
+                    lg: "row",
+                    xl: "row",
+                  },
+                  gap: { xs: "50px", sm: "50px", lg: "191px", xl: "191px" },
+                  alignItems: "center",
+                }}
+              >
+                <Grid item xl={5} lg={5} xs={12} sm={7}>
+                  {nosPage.map((post: any) => (
+                    <Typography
+                      key={post}
+                      sx={{
+                        fontFamily: "Mulish",
+                        fontWeight: 700,
+                        fontSize: {
+                          xs: "30px",
+                          sm: "40px",
+                          lg: "50px",
+                          xl: "58px",
+                        },
+                        lineHeight: {
+                          xs: "35px",
+                          sm: "48px",
+                          lg: "125%",
+                          xl: "125%",
+                        },
+                        color: "#292F36",
+                        letterSpacing: "2%",
+                        // paddingRight:{xl:'150px'}
+                      }}
+                    >
+                      {post.data.top_left_title}
+                    </Typography>
+                  ))}
+                  <Typography
+                    sx={{
+                      fontSize: {
+                        xs: "12px",
+                        sm: "18px",
+                        lg: "22px",
+                        xl: "22px",
+                      },
+                      fontWeight: 400,
+                      lineHeight: {
+                        xs: "18px",
+                        sm: "25px",
+                        lg: "150%px",
+                        xl: "150%px",
+                      },
+                      paddingTop: "23px",
+                      fontFamily: "Jost",
+                      color: "#4D5053",
+                      textAlign: "justify",
+                    }}
+                  >
+                    {post.data.top_left_description}
+                  </Typography>
+                  <div style={{ paddingTop: "0px" }}>
+                    {nosPage.map((post: any) => (
+                      <Button
+                        key={post}
+                        sx={{
+                          display: "flex",
+                          flexDirection: "row",
+                          background: "#24535C",
+                          borderRadius: "82px",
+                          marginTop: {
+                            xs: "20px",
+                            sm: "20px",
+                            lg: "45px",
+                            xl: "45px",
+                          },
+                          justifyContent: "space-around",
+                          width: {
+                            xs: "50%",
+                            sm: "70%",
+                            lg: "220.47px",
+                            md: "220.47px",
+                            xl: "220.47px",
+                          },
+                          height: {
+                            xs: "auto",
+                            sm: "auto",
+                            lg: "62.47px",
+                            xl: "62.47px",
+                          },
+                          "&:focus": {
+                            background: "#24535C",
+                          },
+                          "&:hover": {
+                            background: "#24535C",
+                          },
+                        }}
+                        // onClick={handleNavigation}
+                      >
+                        <Typography
+                          sx={{
+                            fontWeight: 400,
+                            fontFamily: "Mulish",
+                            fontSize: {
+                              xs: "12px",
+                              sm: "18px",
+                              lg: "15.2px",
+                              xl: "15.2px",
+                            },
+                            lineHeight: {
+                              xs: "8px",
+                              sm: "12px",
+                              lg: "18.24px",
+                              xl: "18.24px",
+                            },
+                            color: "#FFFFFF",
+                          }}
+                        >
+                          {post.data.button_text}
+                        </Typography>
+                        {post?.data.button_icon && (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={post?.data.button_icon.url || undefined}
+                            alt={post?.data.button_icon.alt || "Image"}
+                            style={{
+                              width: "20%",
+                              height: "auto",
+                            }}
+                          />
+                        )}
+                      </Button>
+                    ))}
+                  </div>
+                </Grid>
+
+                <Grid
+                  xl={6}
+                  lg={6}
+                  xs={12}
+                  sm={5}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
                   }}
                 >
-                  {post.data.sub_heading}
-                </Typography>
+                  {post?.data.top_right_image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={post?.data.top_right_image.url || undefined}
+                      alt={post?.data.top_right_image.alt || "Image"}
+                      style={{
+                        width: "100%",
+                        height: "auto",
+                        borderRadius: "20px",
+                      }}
+                    />
+                  )}
+                </Grid>
               </Grid>
             </Grid>
-          </>
-        ))}
-      </Grid>
+          ))}
+        </Grid>
 
-      <Grid
-        sx={{
-          padding: {
-            xs: "5%",
-            sm: "5%",
-            lg: "100px",
-            xl: "200px 228px 229px 228px",
-          },
-        }}
-      >
-        {nosPage.map((post: any) => (
-          <Grid container spacing={0} key={post.id}>
+        <Grid
+          container
+          justifyContent="center"
+          alignItems="center"
+          sx={{
+            padding: { lg: "0px 100px 0px 100px", xl: "0px 200px 0px 200px" },
+          }}
+        >
+          <Grid item lg={12}>
+            <Typography
+              sx={{
+                textAlign: "center",
+                color: "#292F36",
+                fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
+                fontWeight: 400,
+                marginTop: "50px",
+              }}
+            >
+              {modulesPage[0]?.data.video_title}
+            </Typography>
             <Grid
               item
               lg={12}
               sx={{
                 display: "flex",
-                justifyContent: "center",
                 flexDirection: {
                   xs: "column",
                   sm: "row",
                   lg: "row",
                   xl: "row",
                 },
-                gap: { xs: "50px", sm: "50px", lg: "191px", xl: "191px" },
+                justifyContent: "space-evenly",
+                marginTop: "50px",
                 alignItems: "center",
+                gap: { lg: "60px", xl: "60px" },
               }}
             >
-              <Grid item xl={5} lg={5} xs={12} sm={7}>
-                {nosPage.map((post: any) => (
-                  <Typography
-                    key={post}
-                    sx={{
-                      fontFamily: "Mulish",
-                      fontWeight: 700,
-                      fontSize: {
-                        xs: "30px",
-                        sm: "40px",
-                        lg: "50px",
-                        xl: "58px",
-                      },
-                      lineHeight: {
-                        xs: "35px",
-                        sm: "48px",
-                        lg: "125%",
-                        xl: "125%",
-                      },
-                      color: "#292F36",
-                      letterSpacing: "2%",
-                      // paddingRight:{xl:'150px'}
-                    }}
-                  >
-                    {post.data.top_left_title}
-                  </Typography>
-                ))}
-                <Typography
-                  sx={{
-                    fontSize: {
-                      xs: "12px",
-                      sm: "18px",
-                      lg: "22px",
-                      xl: "22px",
-                    },
-                    fontWeight: 400,
-                    lineHeight: {
-                      xs: "18px",
-                      sm: "25px",
-                      lg: "150%px",
-                      xl: "150%px",
-                    },
-                    paddingTop: "23px",
-                    fontFamily: "Jost",
-                    color: "#4D5053",
-                    textAlign:'justify'
-                  }}
-                >
-                  {post.data.top_left_description}
-                </Typography>
-                <div style={{ paddingTop: "0px" }}>
-                  {nosPage.map((post: any) => (
-                    <Button
-                      key={post}
-                      sx={{
-                        display: "flex",
-                        flexDirection: "row",
-                        background: "#24535C",
-                        borderRadius: "82px",
-                        marginTop: {
-                          xs: "20px",
-                          sm: "20px",
-                          lg: "45px",
-                          xl: "45px",
-                        },
-                        justifyContent: "space-around",
-                        width: {
-                          xs: "50%",
-                          sm: "70%",
-                          lg: "220.47px",
-                          md: "220.47px",
-                          xl: "220.47px",
-                        },
-                        height: {
-                          xs: "auto",
-                          sm: "auto",
-                          lg: "62.47px",
-                          xl: "62.47px",
-                        },
-                        "&:focus": {
-                          background: "#24535C",
-                        },
-                        "&:hover": {
-                          background: "#24535C",
-                        },
-                      }}
-                      // onClick={handleNavigation}
-                    >
-                      <Typography
-                        sx={{
-                          fontWeight: 400,
-                          fontFamily: "Mulish",
-                          fontSize: {
-                            xs: "12px",
-                            sm: "18px",
-                            lg: "15.2px",
-                            xl: "15.2px",
-                          },
-                          lineHeight: {
-                            xs: "8px",
-                            sm: "12px",
-                            lg: "18.24px",
-                            xl: "18.24px",
-                          },
-                          color: "#FFFFFF",
-                        }}
-                      >
-                        {post.data.button_text}
-                      </Typography>
-                      {post?.data.button_icon && (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={post?.data.button_icon.url || undefined}
-                          alt={post?.data.button_icon.alt || "Image"}
-                          style={{
-                            width: "20%",
-                            height: "auto",
-                          }}
-                        />
-                      )}
-                    </Button>
-                  ))}
-                </div>
-              </Grid>
-
-              <Grid
-                xl={6}
-                lg={6}
-                xs={12}
-                sm={5}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                }}
-              >
-                {post?.data.top_right_image && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
-                    src={post?.data.top_right_image.url || undefined}
-                    alt={post?.data.top_right_image.alt || "Image"}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "20px",
-                    }}
-                  />
-                )}
-              </Grid>
-            </Grid>
-          </Grid>
-        ))}
-      </Grid>
-
-      <Grid
-        container
-        justifyContent="center"
-        alignItems="center"
-        sx={{
-          padding: { lg: "0px 100px 0px 100px", xl: "0px 200px 0px 200px" },
-        }}
-      >
-        <Grid item lg={12}>
-          <Typography
-            sx={{
-              textAlign: "center",
-              color: "#292F36",
-              fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-              fontWeight: 400,
-              marginTop: "50px",
-            }}
-          >
-            {modulesPage[0]?.data.video_title}
-          </Typography>
-          <Grid
-            item
-            lg={12}
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
-              justifyContent: "space-evenly",
-              marginTop: "50px",
-              alignItems: "center",
-              gap: { lg: "60px", xl: "60px" },
-            }}
-          >
-            <Grid
-              item
-              xs={12}
-              sm={5}
-              lg={6}
-              md={5}
-              xl={6}
-            >
-              {/* {videoUrl ? (
+              <Grid item xs={12} sm={5} lg={6} md={5} xl={6}>
+                {/* {videoUrl ? (
                 <video
                   width="100%"
                   height="auto"
@@ -484,163 +489,182 @@ const NosSolutionsDe: React.FC = () => {
               ) : (
                 <p>Video not available</p>
               )} */}
-              {modulesPage[0]?.data.video_image && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={modulesPage[0]?.data.video_image.url || undefined}
-                  alt={modulesPage[0]?.data.video_image.alt || "Image"}
-                  width="100%"
-                  height="auto"
-                />
-              )}
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              sm={5}
-              lg={6}
-              md={5}
-              xl={6}
-              sx={{
-                height: { xs: "0px", sm: "400px",md: "450px", lg: "450px", xl: "600px" },
-                overflowY: "auto",
-                scrollbarWidth: "thin",
-              }}
-            >
-              {faqs.slice(3, 6).map((faq, index) => (
-                <div key={index}>
-                  <Accordion
-                    expanded={clicked1 === index}
-                    style={{
-                      backgroundColor: "transparent",
-                      boxShadow: "none",
-                    }}
-                  >
-                    <AccordionSummary
-                      expandIcon={
-                        <KeyboardArrowUpIcon
+                {modulesPage[0]?.data.video_image && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={modulesPage[0]?.data.video_image.url || undefined}
+                    alt={modulesPage[0]?.data.video_image.alt || "Image"}
+                    width={isMax ? "95%" : "100%"}
+                    height="auto"
+                  />
+                )}
+              </Grid>
+              <Grid
+                item
+                xs={12}
+                sm={5}
+                lg={6}
+                md={5}
+                xl={6}
+                sx={{
+                  height: {
+                    xs: "0px",
+                    sm: "400px",
+                    md: "450px",
+                    lg: "450px",
+                    xl: "600px",
+                  },
+                  overflowY: "auto",
+                  scrollbarWidth: "thin",
+                }}
+              >
+                {faqs.slice(3, 6).map((faq, index) => (
+                  <div key={index}>
+                    <Accordion
+                      expanded={clicked1 === index}
+                      style={{
+                        backgroundColor: "transparent",
+                        boxShadow: "none",
+                      }}
+                    >
+                      <AccordionSummary
+                        expandIcon={
+                          <KeyboardArrowUpIcon
+                            onClick={() => handleColor1(index)}
+                            sx={{
+                              color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                            }}
+                          />
+                        }
+                      >
+                        <Typography
                           onClick={() => handleColor1(index)}
                           sx={{
                             color: clicked1 === index ? "#3D8C6E" : "#292F36",
+                            lineHeight: "150%",
+                            fontSize: {
+                              xs: "18px",
+                              sm: "22px",
+                              lg: "25px",
+                              md: "20px",
+                              xl: "35px",
+                            },
+                            fontWeight: 500,
+                            fontFamily: "Mulish",
+                            letterSpacing: "1%",
                           }}
-                        />
-                      }
-                    >
-                      <Typography
-                        onClick={() => handleColor1(index)}
-                        sx={{
-                          color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                          lineHeight: "150%",
-                          fontSize: {
-                            xs: "18px",
-                            sm: "22px",
-                            lg: "25px",
-                            md: "20px",
-                            xl: "35px",
-                          },
-                          fontWeight: 500,
-                          fontFamily: "Mulish",
-                          letterSpacing: "1%",
-                        }}
-                      >
-                        {faq.question}
-                      </Typography>
-                    </AccordionSummary>
-                    <AccordionDetails>
-                      <Typography
-                        sx={{
-                          color: "#4D5053",
-                          fontSize: {
-                            xs: "14px",
-                            sm: "18px",
-                            lg: "22px",
-                            md: "18px",
-                            xl: "28px",
-                          },
-                          fontWeight: 400,
-                          fontFamily: "Mulish",
-                          lineHeight: "150%",
-                          letterSpacing: "1%",
-                        }}
-                      >
-                        {faq.answer}
-                      </Typography>
-                    </AccordionDetails>
-                  </Accordion>
-                  <hr style={{ border: "1px solid #3D8C6E" }} />
-                </div>
-              ))}
+                        >
+                          {faq.question}
+                        </Typography>
+                      </AccordionSummary>
+                      <AccordionDetails>
+                        <Typography
+                          sx={{
+                            color: "#4D5053",
+                            fontSize: {
+                              xs: "14px",
+                              sm: "18px",
+                              lg: "22px",
+                              md: "18px",
+                              xl: "28px",
+                            },
+                            fontWeight: 400,
+                            fontFamily: "Mulish",
+                            lineHeight: "150%",
+                            letterSpacing: "1%",
+                          }}
+                        >
+                          {faq.answer}
+                        </Typography>
+                      </AccordionDetails>
+                    </Accordion>
+                    <hr style={{ border: "1px solid #3D8C6E" }} />
+                  </div>
+                ))}
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
-      </Grid>
 
-      <Grid
-        container
-        sx={{
-          padding: {
-            xs: "30px",
-            sm: "40px",
-            lg: "100px 50px",
-            xl: "228px 156px",
-          },
-        }}
-      >
-        {points.map((item, index) => (
-          <Grid
-            key={index}
-            item
-            xl={3}
-            lg={3}
-            md={3}
-            sm={6}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-            }}
-          >
-            <Typography
-              sx={{
-                background: item.background,
-                borderRadius: "42.9px",
-                padding: "20px",
-                width: "70%",
-                height:'7vh',
-                textAlign: "center",
-                fontFamily: "Mulish",
-                // fontSize: headingFontSize.fontSize,
-                fontSize:{xl:'18.98px',xs:'14px',lg:'14px',sm:'14px',md:'14px'},
-                lineHeight: "125%",
-                letterSpacing: "2%",
-                color: "#000000",
-                display: "flex", 
-                alignItems: "center",
-                justifyContent: "center",
+        <Grid
+          container
+          sx={{
+            padding: {
+              xs: "30px",
+              sm: "40px",
+              lg: "100px 50px",
+              xl: isMax ? "100px 156px 0px 156px" : "228px 156px",
+            },
+          }}
+        >
+          {points.map((item, index) => (
+            <Grid
+              key={index}
+              item
+              xl={3}
+              lg={3}
+              md={3}
+              sm={6}
+              style={{
+                display: "flex",
+                flexDirection: "column",
               }}
             >
-              {item.heading}
-            </Typography>
-            <ul>
-              {item.points.map((point, idx) => (
-                <li key={idx}>
-                  <Typography
-                    sx={{
-                      color: "#4D5053",
-                      fontFamily: "Mulish",
-                      // fontSize: pointsFontSize.fontSize,
-                      fontSize:{xl:'22px',xs:'18px',lg:'18px',sm:'18px',md:'18px'},
-                      lineHeight: "150%",
-                      letterSpacing: "1%",
-                    }}
-                  >
-                    {point}
-                  </Typography>
-                </li>
-              ))}
-            </ul>
-          </Grid>
-        ))}
-      </Grid>
+              <Typography
+                sx={{
+                  background: item.background,
+                  borderRadius: "42.9px",
+                  padding: "20px",
+                  width: "70%",
+                  height: "7vh",
+                  textAlign: "center",
+                  fontFamily: "Mulish",
+                  // fontSize: headingFontSize.fontSize,
+                  fontSize: {
+                    xl: "18.98px",
+                    xs: "14px",
+                    lg: "14px",
+                    sm: "14px",
+                    md: "14px",
+                  },
+                  lineHeight: "125%",
+                  letterSpacing: "2%",
+                  color: "#000000",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                }}
+              >
+                {item.heading}
+              </Typography>
+              <ul>
+                {item.points.map((point, idx) => (
+                  <li key={idx}>
+                    <Typography
+                      sx={{
+                        color: "#4D5053",
+                        fontFamily: "Mulish",
+                        // fontSize: pointsFontSize.fontSize,
+                        fontSize: {
+                          xl: "22px",
+                          xs: "18px",
+                          lg: "18px",
+                          sm: "18px",
+                          md: "18px",
+                        },
+                        lineHeight: "150%",
+                        letterSpacing: "1%",
+                      }}
+                    >
+                      {point}
+                    </Typography>
+                  </li>
+                ))}
+              </ul>
+            </Grid>
+          ))}
+        </Grid>
+      </div>
       <Liberez />
       <Footer />
     </Box>
