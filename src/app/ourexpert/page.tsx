@@ -309,7 +309,7 @@ const OurExperts: React.FC = () => {
                       xl: "repeat(4, 1fr)",
                     },
                     textAlign: "center",
-                    gap: "3%",
+                    gap: isMax ? "30px" : "3%",
                     margin: {
                       xs: "0% 0% 30% 0%",
                       sm: "0%",
