@@ -197,7 +197,7 @@ export default function BlogsNews() {
                     letterSpacing: "2%",
                     fontFamily: "Mulish",
                     color: "#292F36",
-                    paddingRight: { xl: "150px" },
+                    paddingRight: { xl: isMax ? "0px" : "150px" },
                   }}
                 >
                   {blogNewsPage[0]?.data.top_heading}
@@ -255,7 +255,7 @@ export default function BlogsNews() {
                     gap: "20px",
                     justifyContent: "space-between",
                     color: "#4D5053",
-                    padding: "2%",
+                    padding: "2% 0%",
                   }}
                 >
                   <Typography
@@ -437,7 +437,9 @@ export default function BlogsNews() {
                               xs: "0px 20px 67px 20px",
                               sm: "0px 150px 67px 150px",
                               lg: "2px 150px 67px 150px",
-                              xl: "2px 200px 67px 200px",
+                              xl: isMax
+                                ? "2px 300px 67px 300px"
+                                : "2px 200px 67px 200px",
                             },
                           }}
                         >
