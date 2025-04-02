@@ -343,7 +343,7 @@ const ManagePerLaCare: React.FC = () => {
       <Header />
       <div
         style={{
-          padding: isMax ? "0px 350px" : "0px 0px",
+          padding: isMax ? "0px 200px" : "0px 0px",
         }}
       >
         <Grid
@@ -627,486 +627,509 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
           ))}
         </Grid>
-
-        {managePage.map((post: any) => (
-          <Grid
-            key={post}
-            sx={{
-              margin: {
-                xs: "0px",
-                sm: "0px",
-                lg: "0px 200px 107px 200px",
-                xl: "0px 270px 107px 270px",
-              },
-            }}
-          >
-            <Typography
-              sx={{
-                color: "#24535C",
-                fontFamily: "Mulish",
-                fontWeight: 800,
-                fontSize: { xs: "30px", sm: "40px", lg: "64px", xl: "64px" },
-                lineHeight: {
-                  xs: "50px",
-                  sm: "50px",
-                  lg: "80.32px",
-                  xl: "80.32px",
-                },
-                textAlign: "center",
-                justifyContent: "center",
-                display: "flex",
-                whiteSpace: "pre-line",
-              }}
-            >
-              {post.data.middle_title}
-            </Typography>
-
+        <div
+          style={{
+            padding: isMax ? "0px 150px" : "0px 0px",
+          }}
+        >
+          {managePage.map((post: any) => (
             <Grid
+              key={post}
               sx={{
-                backgroundImage: `url(${cardsBackground})`,
-                height: "auto",
-                width: "100%",
-                backgroundPosition: "center",
-                backgroundSize: {
-                  xs: "contain",
-                  sm: "contain",
-                  lg: "contain",
-                  xl: "contain",
+                margin: {
+                  xs: "0px",
+                  sm: "0px",
+                  lg: "0px 200px 107px 200px",
+                  xl: "0px 270px 107px 270px",
                 },
-                backgroundRepeat: "no-repeat",
-                marginTop: { xs: "0px", sm: "0px", lg: "50px", xl: "107px" },
-              }}
-            >
-              <div style={styles.container}>
-                <Card
-                  style={getCardStyle({ ...styles.card, ...styles.topLeft }, 0)}
-                  onMouseEnter={() => handleMouseEnter(0)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "90%",
-                      color: "#1E1E1E",
-                      lineHeight: "auto",
-                      letterSpacing: "0%",
-                      fontSize: {
-                        xs: "16px",
-                        sm: "20px",
-                        lg: "32px",
-                        md: "20px",
-                        xl: "32px",
-                      },
-                    }}
-                    component="div"
-                  >
-                    {post.data.card_title1}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "80%",
-                      color: "#1E1E1E",
-                      lineHeight: "185%",
-                      letterSpacing: "-4%",
-                      fontStyle: "italic",
-                      marginTop: {
-                        xs: "0px",
-                        sm: "8px",
-                        lg: "24px",
-                        xl: "24px",
-                      },
-                      fontSize: {
-                        xs: "10px",
-                        sm: "14px",
-                        lg: "19.5px",
-                        md: "14px",
-                        xl: "19.5px",
-                      },
-                    }}
-                    color="textSecondary"
-                  >
-                    {post.data.card_description1}
-                  </Typography>
-                </Card>
-                <Card
-                  style={getCardStyle(
-                    { ...styles.card, ...styles.topRight },
-                    1
-                  )}
-                  onMouseEnter={() => handleMouseEnter(1)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "90%",
-                      color: "#1E1E1E",
-                      lineHeight: "auto",
-                      letterSpacing: "0%",
-                      fontSize: {
-                        xs: "16px",
-                        sm: "20px",
-                        lg: "32px",
-                        md: "20px",
-                        xl: "32px",
-                      },
-                    }}
-                    component="div"
-                  >
-                    {post.data.card_title2}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "80%",
-                      color: "#1E1E1E",
-                      lineHeight: "185%",
-                      letterSpacing: "-4%",
-                      fontStyle: "italic",
-                      marginTop: {
-                        xs: "0px",
-                        sm: "8px",
-                        lg: "24px",
-                        xl: "24px",
-                      },
-                      fontSize: {
-                        xs: "10px",
-                        sm: "14px",
-                        lg: "19.5px",
-                        md: "14px",
-                        xl: "19.5px",
-                      },
-                    }}
-                    color="textSecondary"
-                  >
-                    {post.data.card_description2}
-                  </Typography>
-                </Card>
-                <Card
-                  style={getCardStyle(
-                    { ...styles.card, ...styles.bottomLeft },
-                    2
-                  )}
-                  onMouseEnter={() => handleMouseEnter(2)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "90%",
-                      color: "#1E1E1E",
-                      lineHeight: "auto",
-                      letterSpacing: "0%",
-                      fontSize: {
-                        xs: "16px",
-                        sm: "20px",
-                        lg: "32px",
-                        md: "20px",
-                        xl: "32px",
-                      },
-                    }}
-                    component="div"
-                  >
-                    {post.data.card_title3}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "80%",
-                      color: "#1E1E1E",
-                      lineHeight: "185%",
-                      letterSpacing: "-4%",
-                      fontStyle: "italic",
-                      marginTop: {
-                        xs: "0px",
-                        sm: "8px",
-                        lg: "24px",
-                        xl: "24px",
-                      },
-                      fontSize: {
-                        xs: "10px",
-                        sm: "14px",
-                        lg: "19.5px",
-                        md: "14px",
-                        xl: "19.5px",
-                      },
-                    }}
-                    color="textSecondary"
-                  >
-                    {post.data.card_description3}
-                  </Typography>
-                </Card>
-                <Card
-                  style={getCardStyle(
-                    { ...styles.card, ...styles.bottomRight },
-                    3
-                  )}
-                  onMouseEnter={() => handleMouseEnter(3)}
-                  onMouseLeave={handleMouseLeave}
-                >
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "90%",
-                      color: "#1E1E1E",
-                      lineHeight: "auto",
-                      letterSpacing: "0%",
-                      fontSize: {
-                        xs: "16px",
-                        sm: "20px",
-                        lg: "32px",
-                        md: "20px",
-                        xl: "32px",
-                      },
-                    }}
-                    component="div"
-                  >
-                    {post.data.card_title4}
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: "Mulish",
-                      opacity: "80%",
-                      color: "#1E1E1E",
-                      lineHeight: "185%",
-                      letterSpacing: "-4%",
-                      fontStyle: "italic",
-                      marginTop: {
-                        xs: "0px",
-                        sm: "8px",
-                        lg: "24px",
-                        xl: "24px",
-                      },
-                      fontSize: {
-                        xs: "10px",
-                        sm: "14px",
-                        lg: "19.5px",
-                        md: "14px",
-                        xl: "19.5px",
-                      },
-                    }}
-                    color="textSecondary"
-                  >
-                    {post.data.card_description4}
-                  </Typography>
-                </Card>
-              </div>
-            </Grid>
-          </Grid>
-        ))}
-
-        <Grid container>
-          <Grid
-            sx={{
-              margin: {
-                xs: "100px 0px 0px 0px",
-                sm: "0px",
-                lg: "280px 100px 153px 100px",
-                md: "280px 50px 153px 50px",
-                xl: isMax
-                  ? "50px 200px 153px 200px"
-                  : "300px 200px 153px 200px",
-              },
-            }}
-          >
-            <Grid
-              item
-              lg={12}
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                textAlign: "center",
               }}
             >
               <Typography
                 sx={{
-                  color: "#0A1411",
+                  color: "#24535C",
                   fontFamily: "Mulish",
-                  fontSize: { xs: "45px", sm: "60px", lg: "64px", xl: "64px" },
-                  fontWeight: 700,
-                }}
-              >
-                {modulesPage[0]?.data.heading}
-              </Typography>
-            </Grid>
-            <Grid
-              item
-              lg={12}
-              sx={{
-                marginTop: {
-                  xs: "30px",
-                  sm: "30px",
-                  lg: "100px",
-                  xl: isMax ? "40px" : "162px",
-                },
-              }}
-            >
-              <Typography
-                sx={{
+                  fontWeight: 800,
+                  fontSize: { xs: "30px", sm: "40px", lg: "64px", xl: "64px" },
+                  lineHeight: {
+                    xs: "50px",
+                    sm: "50px",
+                    lg: "80.32px",
+                    xl: "80.32px",
+                  },
                   textAlign: "center",
-                  color: "#292F36",
-                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontWeight: 400,
-                  letterSpacing: "1%",
-                  fontFamily: "Mulish",
-                  lineHeight: "150%",
+                  justifyContent: "center",
+                  display: "flex",
+                  whiteSpace: "pre-line",
                 }}
               >
-                {modulesPage[0]?.data.image_title}
+                {post.data.middle_title}
               </Typography>
+
+              <Grid
+                sx={{
+                  backgroundImage: `url(${cardsBackground})`,
+                  height: "auto",
+                  width: "100%",
+                  backgroundPosition: "center",
+                  backgroundSize: {
+                    xs: "contain",
+                    sm: "contain",
+                    lg: "contain",
+                    xl: "contain",
+                  },
+                  backgroundRepeat: "no-repeat",
+                  marginTop: { xs: "0px", sm: "0px", lg: "50px", xl: "107px" },
+                }}
+              >
+                <div style={styles.container}>
+                  <Card
+                    style={getCardStyle(
+                      { ...styles.card, ...styles.topLeft },
+                      0
+                    )}
+                    onMouseEnter={() => handleMouseEnter(0)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "90%",
+                        color: "#1E1E1E",
+                        lineHeight: "auto",
+                        letterSpacing: "0%",
+                        fontSize: {
+                          xs: "16px",
+                          sm: "20px",
+                          lg: "32px",
+                          md: "20px",
+                          xl: "32px",
+                        },
+                      }}
+                      component="div"
+                    >
+                      {post.data.card_title1}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "80%",
+                        color: "#1E1E1E",
+                        lineHeight: "185%",
+                        letterSpacing: "-4%",
+                        fontStyle: "italic",
+                        marginTop: {
+                          xs: "0px",
+                          sm: "8px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
+                        fontSize: {
+                          xs: "10px",
+                          sm: "14px",
+                          lg: "19.5px",
+                          md: "14px",
+                          xl: "19.5px",
+                        },
+                      }}
+                      color="textSecondary"
+                    >
+                      {post.data.card_description1}
+                    </Typography>
+                  </Card>
+                  <Card
+                    style={getCardStyle(
+                      { ...styles.card, ...styles.topRight },
+                      1
+                    )}
+                    onMouseEnter={() => handleMouseEnter(1)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "90%",
+                        color: "#1E1E1E",
+                        lineHeight: "auto",
+                        letterSpacing: "0%",
+                        fontSize: {
+                          xs: "16px",
+                          sm: "20px",
+                          lg: "32px",
+                          md: "20px",
+                          xl: "32px",
+                        },
+                      }}
+                      component="div"
+                    >
+                      {post.data.card_title2}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "80%",
+                        color: "#1E1E1E",
+                        lineHeight: "185%",
+                        letterSpacing: "-4%",
+                        fontStyle: "italic",
+                        marginTop: {
+                          xs: "0px",
+                          sm: "8px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
+                        fontSize: {
+                          xs: "10px",
+                          sm: "14px",
+                          lg: "19.5px",
+                          md: "14px",
+                          xl: "19.5px",
+                        },
+                      }}
+                      color="textSecondary"
+                    >
+                      {post.data.card_description2}
+                    </Typography>
+                  </Card>
+                  <Card
+                    style={getCardStyle(
+                      { ...styles.card, ...styles.bottomLeft },
+                      2
+                    )}
+                    onMouseEnter={() => handleMouseEnter(2)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "90%",
+                        color: "#1E1E1E",
+                        lineHeight: "auto",
+                        letterSpacing: "0%",
+                        fontSize: {
+                          xs: "16px",
+                          sm: "20px",
+                          lg: "32px",
+                          md: "20px",
+                          xl: "32px",
+                        },
+                      }}
+                      component="div"
+                    >
+                      {post.data.card_title3}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "80%",
+                        color: "#1E1E1E",
+                        lineHeight: "185%",
+                        letterSpacing: "-4%",
+                        fontStyle: "italic",
+                        marginTop: {
+                          xs: "0px",
+                          sm: "8px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
+                        fontSize: {
+                          xs: "10px",
+                          sm: "14px",
+                          lg: "19.5px",
+                          md: "14px",
+                          xl: "19.5px",
+                        },
+                      }}
+                      color="textSecondary"
+                    >
+                      {post.data.card_description3}
+                    </Typography>
+                  </Card>
+                  <Card
+                    style={getCardStyle(
+                      { ...styles.card, ...styles.bottomRight },
+                      3
+                    )}
+                    onMouseEnter={() => handleMouseEnter(3)}
+                    onMouseLeave={handleMouseLeave}
+                  >
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "90%",
+                        color: "#1E1E1E",
+                        lineHeight: "auto",
+                        letterSpacing: "0%",
+                        fontSize: {
+                          xs: "16px",
+                          sm: "20px",
+                          lg: "32px",
+                          md: "20px",
+                          xl: "32px",
+                        },
+                      }}
+                      component="div"
+                    >
+                      {post.data.card_title4}
+                    </Typography>
+                    <Typography
+                      sx={{
+                        fontFamily: "Mulish",
+                        opacity: "80%",
+                        color: "#1E1E1E",
+                        lineHeight: "185%",
+                        letterSpacing: "-4%",
+                        fontStyle: "italic",
+                        marginTop: {
+                          xs: "0px",
+                          sm: "8px",
+                          lg: "24px",
+                          xl: "24px",
+                        },
+                        fontSize: {
+                          xs: "10px",
+                          sm: "14px",
+                          lg: "19.5px",
+                          md: "14px",
+                          xl: "19.5px",
+                        },
+                      }}
+                      color="textSecondary"
+                    >
+                      {post.data.card_description4}
+                    </Typography>
+                  </Card>
+                </div>
+              </Grid>
+            </Grid>
+          ))}
+
+          <Grid container>
+            <Grid
+              sx={{
+                margin: {
+                  xs: "100px 0px 0px 0px",
+                  sm: "0px",
+                  lg: "280px 100px 153px 100px",
+                  md: "280px 50px 153px 50px",
+                  xl: isMax
+                    ? "50px 200px 153px 200px"
+                    : "300px 200px 153px 200px",
+                },
+              }}
+            >
               <Grid
                 item
                 lg={12}
                 sx={{
                   display: "flex",
-                  flexDirection: {
-                    xs: "column",
-                    sm: "row",
-                    lg: "row",
-                    xl: "row",
-                  },
-                  justifyContent: "space-evenly",
-                  marginTop: "50px",
-                  alignItems: "center",
-                  gap: { lg: "60px", xl: "60px" },
+                  flexDirection: "column",
+                  textAlign: "center",
                 }}
               >
-                <Grid
-                  item
-                  xs={12}
-                  sm={5}
-                  lg={6}
-                  xl={6}
+                <Typography
                   sx={{
-                    height: {
-                      xs: "0px",
-                      sm: "390px",
-                      md: "400px",
-                      lg: "490px",
-                      xl: "600px",
+                    color: "#0A1411",
+                    fontFamily: "Mulish",
+                    fontSize: {
+                      xs: "45px",
+                      sm: "60px",
+                      lg: "64px",
+                      xl: "64px",
                     },
-                    overflowY: "auto",
-                    scrollbarWidth: "thin",
+                    fontWeight: 700,
                   }}
                 >
-                  {faqs.slice(0, 3).map((faq, index) => (
-                    <div key={index}>
-                      <Accordion
-                        expanded={clicked === index}
-                        style={{
-                          backgroundColor: "transparent",
-                          boxShadow: "none",
-                        }}
-                      >
-                        <AccordionSummary
-                          expandIcon={
-                            <KeyboardArrowUpIcon
+                  {modulesPage[0]?.data.heading}
+                </Typography>
+              </Grid>
+              <Grid
+                item
+                lg={12}
+                sx={{
+                  marginTop: {
+                    xs: "30px",
+                    sm: "30px",
+                    lg: "100px",
+                    xl: isMax ? "40px" : "162px",
+                  },
+                }}
+              >
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#292F36",
+                    fontSize: {
+                      xs: "30px",
+                      sm: "40px",
+                      lg: "50px",
+                      xl: "50px",
+                    },
+                    fontWeight: 400,
+                    letterSpacing: "1%",
+                    fontFamily: "Mulish",
+                    lineHeight: "150%",
+                  }}
+                >
+                  {modulesPage[0]?.data.image_title}
+                </Typography>
+                <Grid
+                  item
+                  lg={12}
+                  sx={{
+                    display: "flex",
+                    flexDirection: {
+                      xs: "column",
+                      sm: "row",
+                      lg: "row",
+                      xl: "row",
+                    },
+                    justifyContent: "space-evenly",
+                    marginTop: "50px",
+                    alignItems: "center",
+                    gap: { lg: "60px", xl: "60px" },
+                  }}
+                >
+                  <Grid
+                    item
+                    xs={12}
+                    sm={5}
+                    lg={6}
+                    xl={6}
+                    sx={{
+                      height: {
+                        xs: "0px",
+                        sm: "390px",
+                        md: "400px",
+                        lg: "490px",
+                        xl: "600px",
+                      },
+                      overflowY: "auto",
+                      scrollbarWidth: "thin",
+                    }}
+                  >
+                    {faqs.slice(0, 3).map((faq, index) => (
+                      <div key={index}>
+                        <Accordion
+                          expanded={clicked === index}
+                          style={{
+                            backgroundColor: "transparent",
+                            boxShadow: "none",
+                          }}
+                        >
+                          <AccordionSummary
+                            expandIcon={
+                              <KeyboardArrowUpIcon
+                                onClick={() => handleColor(index)}
+                                sx={{
+                                  color:
+                                    clicked === index ? "#3D8C6E" : "#292F36",
+                                }}
+                              />
+                            }
+                          >
+                            <Typography
                               onClick={() => handleColor(index)}
                               sx={{
                                 color:
                                   clicked === index ? "#3D8C6E" : "#292F36",
+                                lineHeight: "150%",
+                                fontSize: {
+                                  xs: "18px",
+                                  sm: "22px",
+                                  lg: "25px",
+                                  md: "18px",
+                                  xl: "35px",
+                                },
+                                fontWeight: 500,
+                                fontFamily: "Mulish",
+                                letterSpacing: "1%",
                               }}
-                            />
-                          }
-                        >
-                          <Typography
-                            onClick={() => handleColor(index)}
-                            sx={{
-                              color: clicked === index ? "#3D8C6E" : "#292F36",
-                              lineHeight: "150%",
-                              fontSize: {
-                                xs: "18px",
-                                sm: "22px",
-                                lg: "25px",
-                                md: "18px",
-                                xl: "35px",
-                              },
-                              fontWeight: 500,
-                              fontFamily: "Mulish",
-                              letterSpacing: "1%",
-                            }}
-                          >
-                            {faq.question}
-                          </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          <Typography
-                            sx={{
-                              color: "#4D5053",
-                              fontSize: {
-                                xs: "14px",
-                                sm: "18px",
-                                lg: "22px",
-                                md: "14px",
-                                xl: "28px",
-                              },
-                              fontWeight: 400,
-                              fontFamily: "Mulish",
-                              lineHeight: "150%",
-                              letterSpacing: "1%",
-                            }}
-                          >
-                            {faq.answer}
-                          </Typography>
-                        </AccordionDetails>
-                      </Accordion>
-                      <hr style={{ border: "1px solid #3D8C6E" }} />
-                    </div>
-                  ))}
-                </Grid>
-                <Grid item xs={12} sm={5} lg={6} xl={6}>
-                  {modulesPage[0]?.data.image && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={modulesPage[0]?.data.image.url || undefined}
-                      alt={modulesPage[0]?.data.image.alt || "Image"}
-                      width="100%"
-                      height="auto"
-                    />
-                  )}
+                            >
+                              {faq.question}
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            <Typography
+                              sx={{
+                                color: "#4D5053",
+                                fontSize: {
+                                  xs: "14px",
+                                  sm: "18px",
+                                  lg: "22px",
+                                  md: "14px",
+                                  xl: "28px",
+                                },
+                                fontWeight: 400,
+                                fontFamily: "Mulish",
+                                lineHeight: "150%",
+                                letterSpacing: "1%",
+                              }}
+                            >
+                              {faq.answer}
+                            </Typography>
+                          </AccordionDetails>
+                        </Accordion>
+                        <hr style={{ border: "1px solid #3D8C6E" }} />
+                      </div>
+                    ))}
+                  </Grid>
+                  <Grid item xs={12} sm={5} lg={6} xl={6}>
+                    {modulesPage[0]?.data.image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={modulesPage[0]?.data.image.url || undefined}
+                        alt={modulesPage[0]?.data.image.alt || "Image"}
+                        width={isMax ? "90%" : "100%"}
+                        height="auto"
+                      />
+                    )}
+                  </Grid>
                 </Grid>
               </Grid>
-            </Grid>
-            <Grid item lg={12}>
-              <Typography
-                sx={{
-                  textAlign: "center",
-                  color: "#292F36",
-                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontWeight: 400,
-                  marginTop: {
-                    xs: "50px",
-                    sm: "50px",
-                    lg: "150px",
-                    xl: isMax ? "80px" : "269px",
-                  },
-                  letterSpacing: "1%",
-                  fontFamily: "Mulish",
-                  lineHeight: "150%",
-                }}
-              >
-                {modulesPage[0]?.data.video_title}
-              </Typography>
-              <Grid
-                item
-                lg={12}
-                sx={{
-                  display: "flex",
-                  flexDirection: {
-                    xs: "column",
-                    sm: "row",
-                    lg: "row",
-                    xl: "row",
-                  },
-                  justifyContent: "space-evenly",
-                  marginTop: "50px",
-                  alignItems: "center",
-                  gap: { lg: "60px", xl: "60px" },
-                }}
-              >
-                <Grid item xs={12} sm={5} lg={6} xl={6}>
-                  {/* {videoUrl ? (
+              <Grid item lg={12}>
+                <Typography
+                  sx={{
+                    textAlign: "center",
+                    color: "#292F36",
+                    fontSize: {
+                      xs: "30px",
+                      sm: "40px",
+                      lg: "50px",
+                      xl: "50px",
+                    },
+                    fontWeight: 400,
+                    marginTop: {
+                      xs: "50px",
+                      sm: "50px",
+                      lg: "150px",
+                      xl: isMax ? "80px" : "269px",
+                    },
+                    letterSpacing: "1%",
+                    fontFamily: "Mulish",
+                    lineHeight: "150%",
+                  }}
+                >
+                  {modulesPage[0]?.data.video_title}
+                </Typography>
+                <Grid
+                  item
+                  lg={12}
+                  sx={{
+                    display: "flex",
+                    flexDirection: {
+                      xs: "column",
+                      sm: "row",
+                      lg: "row",
+                      xl: "row",
+                    },
+                    justifyContent: "space-evenly",
+                    marginTop: "50px",
+                    alignItems: "center",
+                    gap: { lg: "60px", xl: "60px" },
+                  }}
+                >
+                  <Grid item xs={12} sm={5} lg={6} xl={6}>
+                    {/* {videoUrl ? (
                   <video
                     width="100%"
                     height="auto"
@@ -1121,286 +1144,288 @@ const ManagePerLaCare: React.FC = () => {
                 ) : (
                   <p>Video not available</p>
                 )} */}
-                  {modulesPage[0]?.data.video_image && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={modulesPage[0]?.data.video_image.url || undefined}
-                      alt={modulesPage[0]?.data.video_image.alt || "Image"}
-                      width="100%"
-                      height="auto"
-                    />
-                  )}
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  sm={5}
-                  lg={6}
-                  xl={6}
-                  sx={{
-                    height: {
-                      xs: "0px",
-                      sm: "400px",
-                      md: "400px",
-                      lg: "450px",
-                      xl: "600px",
-                    },
-                    overflowY: "auto",
-                    scrollbarWidth: "thin",
-                  }}
-                >
-                  {faqs.slice(3, 6).map((faq, index) => (
-                    <div key={index}>
-                      <Accordion
-                        expanded={clicked1 === index}
-                        style={{
-                          backgroundColor: "transparent",
-                          boxShadow: "none",
-                        }}
-                      >
-                        <AccordionSummary
-                          expandIcon={
-                            <KeyboardArrowUpIcon
+                    {modulesPage[0]?.data.video_image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={modulesPage[0]?.data.video_image.url || undefined}
+                        alt={modulesPage[0]?.data.video_image.alt || "Image"}
+                        width="100%"
+                        height="auto"
+                      />
+                    )}
+                  </Grid>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={5}
+                    lg={6}
+                    xl={6}
+                    sx={{
+                      height: {
+                        xs: "0px",
+                        sm: "400px",
+                        md: "400px",
+                        lg: "450px",
+                        xl: "600px",
+                      },
+                      overflowY: "auto",
+                      scrollbarWidth: "thin",
+                    }}
+                  >
+                    {faqs.slice(3, 6).map((faq, index) => (
+                      <div key={index}>
+                        <Accordion
+                          expanded={clicked1 === index}
+                          style={{
+                            backgroundColor: "transparent",
+                            boxShadow: "none",
+                          }}
+                        >
+                          <AccordionSummary
+                            expandIcon={
+                              <KeyboardArrowUpIcon
+                                onClick={() => handleColor1(index)}
+                                sx={{
+                                  color:
+                                    clicked1 === index ? "#3D8C6E" : "#292F36",
+                                }}
+                              />
+                            }
+                          >
+                            <Typography
                               onClick={() => handleColor1(index)}
                               sx={{
                                 color:
                                   clicked1 === index ? "#3D8C6E" : "#292F36",
+                                lineHeight: "150%",
+                                fontSize: {
+                                  xs: "18px",
+                                  sm: "22px",
+                                  lg: "25px",
+                                  md: "18px",
+                                  xl: "35px",
+                                },
+                                fontWeight: 500,
+                                fontFamily: "Mulish",
+                                letterSpacing: "1%",
                               }}
-                            />
-                          }
-                        >
-                          <Typography
-                            onClick={() => handleColor1(index)}
-                            sx={{
-                              color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                              lineHeight: "150%",
-                              fontSize: {
-                                xs: "18px",
-                                sm: "22px",
-                                lg: "25px",
-                                md: "18px",
-                                xl: "35px",
-                              },
-                              fontWeight: 500,
-                              fontFamily: "Mulish",
-                              letterSpacing: "1%",
-                            }}
-                          >
-                            {faq.question}
-                          </Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                          <Typography
-                            sx={{
-                              color: "#4D5053",
-                              fontSize: {
-                                xs: "14px",
-                                sm: "18px",
-                                lg: "22px",
-                                md: "14px",
-                                xl: "28px",
-                              },
-                              fontWeight: 400,
-                              fontFamily: "Mulish",
-                              lineHeight: "150%",
-                              letterSpacing: "1%",
-                            }}
-                          >
-                            {faq.answer}
-                          </Typography>
-                        </AccordionDetails>
-                      </Accordion>
-                      <hr style={{ border: "1px solid #3D8C6E" }} />
-                    </div>
-                  ))}
+                            >
+                              {faq.question}
+                            </Typography>
+                          </AccordionSummary>
+                          <AccordionDetails>
+                            <Typography
+                              sx={{
+                                color: "#4D5053",
+                                fontSize: {
+                                  xs: "14px",
+                                  sm: "18px",
+                                  lg: "22px",
+                                  md: "14px",
+                                  xl: "28px",
+                                },
+                                fontWeight: 400,
+                                fontFamily: "Mulish",
+                                lineHeight: "150%",
+                                letterSpacing: "1%",
+                              }}
+                            >
+                              {faq.answer}
+                            </Typography>
+                          </AccordionDetails>
+                        </Accordion>
+                        <hr style={{ border: "1px solid #3D8C6E" }} />
+                      </div>
+                    ))}
+                  </Grid>
                 </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
 
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Grid
+          <Box
             sx={{
-              backgroundImage: `url(${contentbackground})`,
-              backgroundSize: {
-                xs: "contain",
-                sm: "contain",
-                lg: "contain",
-                md: "contain",
-                xl: "contain",
-              },
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center",
-              width: "100%",
-              height: "auto",
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              margin: {
-                xs: "5%",
-                sm: "10%",
-                lg: "107px 522px",
-                md: "107px 220px",
-                xl: isMax ? "50px 522px" : "107px 522px",
-              },
-              flexDirection: "column",
             }}
           >
-            {managePage.map((post: any) => (
-              <>
-                <Grid
-                  sx={{
-                    padding: {
-                      xs: "0px 0px 27px 0px",
-                      sm: "20px 0px 27px 0px",
-                      lg: "100px 0px 27px 0px",
-                      xl: "67px 0px 27px 0px",
-                    },
-                  }}
-                >
-                  {managePage[0]?.data.quote_image && (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={managePage[0]?.data.quote_image.url || undefined}
-                      alt={managePage[0]?.data.quote_image.alt || "Image"}
-                      width="50%"
-                      height="auto"
-                    />
-                  )}
-                </Grid>
-                <div>
-                  <Typography
+            <Grid
+              sx={{
+                backgroundImage: `url(${contentbackground})`,
+                backgroundSize: {
+                  xs: "contain",
+                  sm: "contain",
+                  lg: "contain",
+                  md: "contain",
+                  xl: "contain",
+                },
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+                width: "100%",
+                height: "auto",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                margin: {
+                  xs: "5%",
+                  sm: "10%",
+                  lg: "107px 522px",
+                  md: "107px 220px",
+                  xl: isMax ? "50px 522px" : "107px 522px",
+                },
+                flexDirection: "column",
+              }}
+            >
+              {managePage.map((post: any) => (
+                <>
+                  <Grid
                     sx={{
-                      fontFamily: "Jenna Sue",
-                      color: "#292F36",
-                      fontWeight: 400,
-                      fontSize: {
-                        xs: "28px",
-                        sm: "38px",
-                        lg: "48px",
-                        xl: "48px",
-                      },
-                      lineHeight: {
-                        xs: "30px",
-                        sm: "45px",
-                        lg: "125%",
-                        xl: "125%",
-                      },
-                      textAlign: "center",
                       padding: {
-                        xs: "0px 20px 0px 20px",
-                        sm: "0px 82px 34px 82px",
-                        lg: "0px 82px 34px 82px",
-                        xl: "0px 82px 34px 82px",
-                      },
-                      letterSpacing: "2%",
-                    }}
-                  >
-                    {post.data.quote_text}
-                  </Typography>
-                </div>
-                <div>
-                  <Typography
-                    sx={{
-                      fontFamily: "Jost",
-                      color: "#4D5053",
-                      fontWeight: 400,
-                      fontSize: {
-                        xs: "14px",
-                        sm: "18px",
-                        lg: "25px",
-                        xl: "25px",
-                      },
-                      lineHeight: {
-                        xs: "18px",
-                        sm: "25px",
-                        lg: "150%",
-                        xl: "150%",
-                      },
-                      textAlign: "center",
-                      letterSpacing: "1%",
-                      padding: {
-                        lg: "0px 303px 78px 303px",
-                        xl: isMax
-                          ? "0px 200px 78px 200px"
-                          : "0px 303px 78px 303px",
+                        xs: "0px 0px 27px 0px",
+                        sm: "20px 0px 27px 0px",
+                        lg: "100px 0px 27px 0px",
+                        xl: "67px 0px 27px 0px",
                       },
                     }}
                   >
-                    {post.data.writer_name}
-                  </Typography>
-                </div>
-              </>
-            ))}
-          </Grid>
-        </Box>
-        <Typography
-          sx={{
-            fontFamily: "Mulish",
-            fontSize: { xs: "38px", sm: "50px", lg: "64px", xl: "64px" },
-            fontWeight: 700,
-            lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "auto" },
-            textAlign: "center",
-            padding: {
-              xs: "10% 10% 0% 10%",
-              sm: "10% 10% 0% 10%",
-              lg: "100px 200px 0px 200px",
-              xl: "187px 414px 0px 414px",
-            },
-            color: "#0A1411",
-          }}
-        >
-          {managePage[0]?.data.bottom_title}
-        </Typography>
-
-        <Grid
-          container
-          sx={{
-            display: "flex",
-            justifyContent: "space-evenly",
-            flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
-            textAlign: "center",
-            margin: { lg: "114px 0px 200px 0px", xl: "114px 0px 346px 0px" },
-          }}
-        >
-          <Grid item xl={4} lg={4} xs={12} sm={6}>
-            {" "}
-            {managePage[0]?.data.bottom_left_image && (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={managePage[0]?.data.bottom_left_image.url || undefined}
-                alt={managePage[0]?.data.bottom_left_image.alt || "Image"}
-                width="100%"
-                height="auto"
-              />
-            )}
-          </Grid>
-          <Grid
-            item
-            xl={4}
-            lg={4}
-            xs={12}
-            sm={4}
+                    {managePage[0]?.data.quote_image && (
+                      // eslint-disable-next-line @next/next/no-img-element
+                      <img
+                        src={managePage[0]?.data.quote_image.url || undefined}
+                        alt={managePage[0]?.data.quote_image.alt || "Image"}
+                        width="50%"
+                        height="auto"
+                      />
+                    )}
+                  </Grid>
+                  <div>
+                    <Typography
+                      sx={{
+                        fontFamily: "Jenna Sue",
+                        color: "#292F36",
+                        fontWeight: 400,
+                        fontSize: {
+                          xs: "28px",
+                          sm: "38px",
+                          lg: "48px",
+                          xl: "48px",
+                        },
+                        lineHeight: {
+                          xs: "30px",
+                          sm: "45px",
+                          lg: "125%",
+                          xl: "125%",
+                        },
+                        textAlign: "center",
+                        padding: {
+                          xs: "0px 20px 0px 20px",
+                          sm: "0px 82px 34px 82px",
+                          lg: "0px 82px 34px 82px",
+                          xl: "0px 82px 34px 82px",
+                        },
+                        letterSpacing: "2%",
+                      }}
+                    >
+                      {post.data.quote_text}
+                    </Typography>
+                  </div>
+                  <div>
+                    <Typography
+                      sx={{
+                        fontFamily: "Jost",
+                        color: "#4D5053",
+                        fontWeight: 400,
+                        fontSize: {
+                          xs: "14px",
+                          sm: "18px",
+                          lg: "25px",
+                          xl: "25px",
+                        },
+                        lineHeight: {
+                          xs: "18px",
+                          sm: "25px",
+                          lg: "150%",
+                          xl: "150%",
+                        },
+                        textAlign: "center",
+                        letterSpacing: "1%",
+                        padding: {
+                          lg: "0px 303px 78px 303px",
+                          xl: isMax
+                            ? "0px 200px 78px 200px"
+                            : "0px 303px 78px 303px",
+                        },
+                      }}
+                    >
+                      {post.data.writer_name}
+                    </Typography>
+                  </div>
+                </>
+              ))}
+            </Grid>
+          </Box>
+          <Typography
             sx={{
-              alignContent: "center",
-              fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "35px" },
-              lineHeight: { xs: "20px", sm: "30px", lg: "40px", xl: "40px" },
-              fontWeight: 400,
-              textAlign: "justify",
-              color: "#24535C",
               fontFamily: "Mulish",
+              fontSize: { xs: "38px", sm: "50px", lg: "64px", xl: "64px" },
+              fontWeight: 700,
+              lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "auto" },
+              textAlign: "center",
+              padding: {
+                xs: "10% 10% 0% 10%",
+                sm: "10% 10% 0% 10%",
+                lg: "100px 200px 0px 200px",
+                xl: "187px 414px 0px 414px",
+              },
+              color: "#0A1411",
             }}
           >
-            {managePage[0]?.data.bottom_description}
+            {managePage[0]?.data.bottom_title}
+          </Typography>
+
+          <Grid
+            container
+            sx={{
+              display: "flex",
+              justifyContent: "space-evenly",
+              flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
+              textAlign: "center",
+              margin: { lg: "114px 0px 200px 0px", xl: "114px 0px 346px 0px" },
+            }}
+          >
+            <Grid item xl={4} lg={4} xs={12} sm={6}>
+              {" "}
+              {managePage[0]?.data.bottom_left_image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={managePage[0]?.data.bottom_left_image.url || undefined}
+                  alt={managePage[0]?.data.bottom_left_image.alt || "Image"}
+                  width="100%"
+                  height="auto"
+                />
+              )}
+            </Grid>
+            <Grid
+              item
+              xl={4}
+              lg={4}
+              xs={12}
+              sm={4}
+              sx={{
+                alignContent: "center",
+                fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "35px" },
+                lineHeight: { xs: "20px", sm: "30px", lg: "40px", xl: "40px" },
+                fontWeight: 400,
+                textAlign: "justify",
+                color: "#24535C",
+                fontFamily: "Mulish",
+              }}
+            >
+              {managePage[0]?.data.bottom_description}
+            </Grid>
           </Grid>
-        </Grid>
+        </div>
       </div>
       <Liberez />
       <Footer />

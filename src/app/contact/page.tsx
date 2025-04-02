@@ -365,7 +365,9 @@ export default function Contact() {
                 sm: "5% 10%",
                 lg: "50px 120px 287px 120px",
                 md: "50px 150px 287px 150px",
-                xl: "135px 200px 287px 200px",
+                xl: isMax
+                  ? "50px 200px 287px 200px"
+                  : "135px 200px 287px 200px",
               },
             }}
           >
@@ -380,7 +382,7 @@ export default function Contact() {
                     sm: "0px",
                     lg: "0px 196px 80px 196px",
                     md: "0px 50px 0px 50px",
-                    xl: "0px 350px 80px 350px",
+                    xl: isMax ? "0px 50px 80px 50px" : "0px 350px 80px 350px",
                   },
                   fontFamily: "Mulish",
                   lineHeight: "150%",
