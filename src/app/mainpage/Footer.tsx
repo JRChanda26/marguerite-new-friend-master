@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
               xs={12}
               sm={5}
               lg={4}
-              xl={4.1}
+              xl={isMax ? 3 : 4.1}
               textAlign={{ xs: "center", sm: "left" }}
             >
               {footerPage.map((post, postIndex) => (
