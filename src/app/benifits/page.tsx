@@ -41,14 +41,8 @@ const Benifits: React.FC = () => {
     fetchData();
   }, []);
 
-
-
- 
- 
-
   const bottomBackground = leCarePage[0]?.data?.bottom_background?.url || "";
 
-  
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
@@ -64,12 +58,12 @@ const Benifits: React.FC = () => {
     return { width: "283.55px", height: "433px" };
   };
 
-  
+  const isMax = useMediaQuery("(min-width:1930px)");
 
   return (
     <Box sx={{}}>
       <Header />
-<div
+      <div
         style={{
           backgroundImage: `url(${bottomBackground})`,
           backgroundSize: "cover",
@@ -77,12 +71,12 @@ const Benifits: React.FC = () => {
           backgroundRepeat: "no-repeat",
           height: "auto",
           width: "100%",
-        //   marginTop: "10%",
-        // padding:{ xs: "70px 50px 0px 50px",
-        //     sm: "100px 150px 0px 150px",
-        //     lg: "150px 150px 0px 150px",
-        //     xl: "150px 441px 0px 441px",} 
-            
+          //   marginTop: "10%",
+          // padding:{ xs: "70px 50px 0px 50px",
+          //     sm: "100px 150px 0px 150px",
+          //     lg: "150px 150px 0px 150px",
+          //     xl: "150px 441px 0px 441px",}
+          padding: isMax ? "0px 350px" : "0px 0px",
         }}
       >
         {leCarePage.map((post: any) => (

@@ -209,6 +209,8 @@ const OurExperts: React.FC = () => {
     fontSize: isXs ? "12px" : "18px",
   };
 
+  const isMax = useMediaQuery("(min-width:1930px)");
+
   return (
     <Box sx={{}}>
       <Header />
@@ -221,6 +223,7 @@ const OurExperts: React.FC = () => {
           width: "100%",
           height: "auto",
           marginTop: "4%",
+          padding: isMax ? "0px 350px" : "0px 0px",
         }}
       >
         {leCarePage.map((post: any, postIndex: number) => (
