@@ -1149,7 +1149,7 @@ const ManagePerLaCare: React.FC = () => {
                       <img
                         src={modulesPage[0]?.data.video_image.url || undefined}
                         alt={modulesPage[0]?.data.video_image.alt || "Image"}
-                        width="100%"
+                        width={isMax ? "95%" : "100%"}
                         height="auto"
                       />
                     )}
