@@ -150,9 +150,9 @@ export default function Blogs() {
     <div>
       <Header />
       <div
-      // style={{
-      //   padding: isMax ? "0px 200px" : "0px 0px",
-      // }}
+        style={{
+          padding: isMax ? "0px 200px" : "0px 0px",
+        }}
       >
         <Grid
           sx={{
@@ -247,7 +247,7 @@ export default function Blogs() {
         </Grid>
         <div
           style={{
-            padding: isMax ? "0px 350px" : "0px 0px",
+            padding: isMax ? "0px 150px" : "0px 0px",
             background: "#e1f5f2", //bg-color
           }}
         >
