@@ -266,7 +266,7 @@ export default function Contact() {
               : isMax3 ? "0px 400px" 
               : isMax2 ? "0px 300px" 
               : isMax1 ? "0px 200px" 
-              : isMax ? "0px 100px" 
+              : isMax ? "0px 120px" 
               : "0px 0px"
         }}
       >
@@ -368,7 +368,7 @@ export default function Contact() {
             : isMax3 ? "0px 250px" 
             : isMax2 ? "0px 200px" 
             : isMax1 ? "0px 150px" 
-            : isMax ? "0px 50px" 
+            : isMax ? "0px 0px" 
             : "0px 0px"
           }}
         >
