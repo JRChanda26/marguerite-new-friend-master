@@ -328,7 +328,7 @@ const OurExperts: React.FC = () => {
                       lg: isMaxLg ? "20px 50px" : "0px 100px",
                       md: "0px 80px 80px 80px",
                       xl: isMax
-                        ? "0px 340px 150px 340px"
+                        ? "0px 340px 20px 340px"
                         : "0px 10% 150px 10%", //250px - 10%
                     },
                   }}

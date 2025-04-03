@@ -1300,7 +1300,11 @@ const ManagePerLaCare: React.FC = () => {
                   sm: "10%",
                   lg: "107px 522px",
                   md: "107px 220px",
-                  xl: isMax ? "50px 522px" : "107px 522px",
+                  xl: isMax3
+                    ? "50px 622px"
+                    : isMax
+                      ? "50px 522px"
+                      : "107px 522px",
                 },
                 flexDirection: "column",
               }}
