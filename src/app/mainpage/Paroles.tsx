@@ -152,8 +152,8 @@ export default function Paroles() {
       style={{
         // padding: isMax ? "0px 350px" : "0px 0px",
         padding : isMax4 ? "0px 500px" 
-        : isMax3 ? "0px 350px" 
-        : isMax2 ? "0px 280px" 
+        : isMax3 ? "0px 300px" 
+        : isMax2 ? "0px 250px" 
         : isMax1 ? "0px 200px" 
         : isMax ? "0px 120px" 
         : "0px 0px",
