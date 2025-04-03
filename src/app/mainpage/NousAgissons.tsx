@@ -33,12 +33,22 @@ const NousAgissons: React.FC = () => {
     router.push("/contact");
   };
 
-  const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax1 = useMediaQuery("(min-width:2050px)");
+    const isMax2 = useMediaQuery("(min-width:2570px)");
+    const isMax3 = useMediaQuery("(min-width:2890px)");
+    const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div
       style={{
-        padding: isMax ? "0px 200px" : "0px 0px",
+        // padding: isMax ? "0px 200px" : "0px 0px",
+        padding : isMax4 ? "0px 450px" 
+        : isMax3 ? "0px 280px" 
+        : isMax2 ? "0px 250px" 
+        : isMax1 ? "0px 200px" 
+        : isMax ? "0px 120px" 
+        : "0px 0px",
         background: isMax ? "#F6C09E" : "#FFFFFF",
       }}
     >

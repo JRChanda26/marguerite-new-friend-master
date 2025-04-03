@@ -23,6 +23,10 @@ export default function Paroles() {
   }, []);
 
   const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax1 = useMediaQuery("(min-width:2050px)");
+    const isMax2 = useMediaQuery("(min-width:2570px)");
+    const isMax3 = useMediaQuery("(min-width:2890px)");
+    const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
@@ -146,7 +150,13 @@ export default function Paroles() {
   return (
     <div
       style={{
-        padding: isMax ? "0px 350px" : "0px 0px",
+        // padding: isMax ? "0px 350px" : "0px 0px",
+        padding : isMax4 ? "0px 650px" 
+        : isMax3 ? "0px 550px" 
+        : isMax2 ? "0px 450px" 
+        : isMax1 ? "0px 350px" 
+        : isMax ? "0px 120px" 
+        : "0px 0px",
       }}
     >
       <div
