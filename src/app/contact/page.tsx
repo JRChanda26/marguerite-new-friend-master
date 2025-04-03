@@ -262,9 +262,9 @@ export default function Contact() {
       <div
         style={{
           // padding: isMax ? "0px 200px" : "0px 0px",
-          padding : isMax4 ? "0px 500px" 
-              : isMax3 ? "0px 400px" 
-              : isMax2 ? "0px 300px" 
+          padding : isMax4 ? "0px 450px" 
+              : isMax3 ? "0px 350px" 
+              : isMax2 ? "0px 250px" 
               : isMax1 ? "0px 200px" 
               : isMax ? "0px 120px" 
               : "0px 0px"
@@ -364,7 +364,7 @@ export default function Contact() {
         <div
           style={{
             // padding: isMax ? "0px 150px" : "0px 0px",
-            padding : isMax4 ? "0px 500px" 
+            padding : isMax4 ? "0px 300px" 
             : isMax3 ? "0px 250px" 
             : isMax2 ? "0px 200px" 
             : isMax1 ? "0px 150px" 
