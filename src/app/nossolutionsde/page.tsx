@@ -158,7 +158,7 @@ const NosSolutionsDe: React.FC = () => {
         style={{
           // padding: isMax ? "0px 200px" : "0px 0px",
           padding : isMax4 ? "0px 450px" 
-          : isMax3 ? "0px 280px" 
+          : isMax3 ? "0px 320px" 
           : isMax2 ? "0px 250px" 
           : isMax1 ? "0px 200px" 
           : isMax ? "0px 120px" 
