@@ -265,7 +265,7 @@ export default function Contact() {
           padding: isMax4
             ? "0px 450px"
             : isMax3
-              ? "0px 280px"
+              ? "0px 320px"
               : isMax2
                 ? "0px 250px"
                 : isMax1
