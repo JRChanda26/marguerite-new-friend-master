@@ -251,13 +251,23 @@ export default function Contact() {
   ];
 
   const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div>
       <Header />
       <div
         style={{
-          padding: isMax ? "0px 200px" : "0px 0px",
+          // padding: isMax ? "0px 200px" : "0px 0px",
+          padding : isMax4 ? "0px 500px" 
+              : isMax3 ? "0px 400px" 
+              : isMax2 ? "0px 300px" 
+              : isMax1 ? "0px 200px" 
+              : isMax ? "0px 100px" 
+              : "0px 0px"
         }}
       >
         <Grid
