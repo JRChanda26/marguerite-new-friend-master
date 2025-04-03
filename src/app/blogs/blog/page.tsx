@@ -344,7 +344,7 @@ export default function Blogs() {
                           xs: "22px",
                           sm: "22px",
                           lg: "22px 50px",
-                          xl: "22px 130px",
+                          xl: isMax? "22px": "22px 130px",
                         },
                         gap: "50px",
                       }}
@@ -765,7 +765,7 @@ export default function Blogs() {
                 justifyContent: "flex-end",
                 gap: "20px",
                 paddingRight: { lg: "50px", xl: "50px" },
-                paddingBottom: "10px",
+                paddingBottom: "30px",
                 marginTop: "50px",
               }}
             >
