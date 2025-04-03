@@ -90,6 +90,7 @@ const ManagePerLaCare: React.FC = () => {
   ];
 
   const isMax = useMediaQuery("(min-width:1930px)");
+  const isMin = useMediaQuery("(max-width:800px)");
 
   const theme = useTheme();
 
@@ -119,7 +120,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     card: {
       position: "absolute",
-      padding: "25px",
+      padding: isMin? "8px":"25px",
       borderRadius: "8px",
       boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       backgroundColor: "#fff",
@@ -128,7 +129,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "5%"
         : isSmall
-          ? "10%"
+          ? "8%" //10
           : isMedium
             ? "2%"
             : isLarge
@@ -163,7 +164,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "32%"
         : isSmall
-          ? "33%"
+          ? "32%"//33
           : isMedium
             ? "40%"
             : isLarge
@@ -200,7 +201,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "53%"
         : isSmall
-          ? "50%"
+          ? "53%" //50
           : isMedium
             ? "75%"
             : isLarge
@@ -237,7 +238,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "78%"
         : isSmall
-          ? "70%"
+          ? "74%" //70
           : isMedium
             ? "116%"
             : isLarge
@@ -699,8 +700,8 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "16px",
-                          sm: "20px",
-                          lg: "32px",
+                          sm: "16px",
+                          lg: "20px",
                           md: "20px",
                           xl: "32px",
                         },
@@ -725,8 +726,8 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "10px",
-                          sm: "14px",
-                          lg: "19.5px",
+                          sm: "10px",
+                          lg: "14px",
                           md: "14px",
                           xl: "19.5px",
                         },
@@ -753,8 +754,8 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "16px",
-                          sm: "20px",
-                          lg: "32px",
+                          sm: "16px",
+                          lg: "20px",
                           md: "20px",
                           xl: "32px",
                         },
@@ -779,8 +780,8 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "10px",
-                          sm: "14px",
-                          lg: "19.5px",
+                          sm: "10px",
+                          lg: "14px",
                           md: "14px",
                           xl: "19.5px",
                         },
@@ -807,8 +808,8 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "16px",
-                          sm: "20px",
-                          lg: "32px",
+                          sm: "16px",
+                          lg: "20px",
                           md: "20px",
                           xl: "32px",
                         },
@@ -833,8 +834,8 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "10px",
-                          sm: "14px",
-                          lg: "19.5px",
+                          sm: "10px",
+                          lg: "14px",
                           md: "14px",
                           xl: "19.5px",
                         },
@@ -861,8 +862,8 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "16px",
-                          sm: "20px",
-                          lg: "32px",
+                          sm: "16px",
+                          lg: "20px",
                           md: "20px",
                           xl: "32px",
                         },
@@ -887,8 +888,8 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "10px",
-                          sm: "14px",
-                          lg: "19.5px",
+                          sm: "10px",
+                          lg: "14px",
                           md: "14px",
                           xl: "19.5px",
                         },
