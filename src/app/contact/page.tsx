@@ -363,7 +363,13 @@ export default function Contact() {
         </Grid>
         <div
           style={{
-            padding: isMax ? "0px 150px" : "0px 0px",
+            // padding: isMax ? "0px 150px" : "0px 0px",
+            padding : isMax4 ? "0px 500px" 
+            : isMax3 ? "0px 250px" 
+            : isMax2 ? "0px 200px" 
+            : isMax1 ? "0px 150px" 
+            : isMax ? "0px 50px" 
+            : "0px 0px"
           }}
         >
           <Grid
