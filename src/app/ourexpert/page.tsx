@@ -210,6 +210,7 @@ const OurExperts: React.FC = () => {
   };
 
   const isMax = useMediaQuery("(min-width:1930px)");
+  const isMaxLg = useMediaQuery("(min-width:1365px)");
 
   return (
     <Box sx={{}}>
@@ -303,7 +304,7 @@ const OurExperts: React.FC = () => {
                     display: "grid",
                     gridTemplateColumns: {
                       xs: "repeat(2, 1fr)",
-                      sm: "repeat(3, 1fr)",
+                      sm: "repeat(2, 1fr)",
                       md: "repeat(3, 1fr)",
                       lg: "repeat(4, 1fr)",
                       xl: "repeat(4, 1fr)",
@@ -312,12 +313,12 @@ const OurExperts: React.FC = () => {
                     gap: isMax ? "30px" : "3%",
                     margin: {
                       xs: "0% 0% 30% 0%",
-                      sm: "0%",
-                      lg: "0px 150px",
+                      sm: "0% 0% 15% 0%",
+                      lg: isMaxLg ? "20px 50px" : "0px 100px",
                       md: "0px 80px 80px 80px",
                       xl: isMax
                         ? "0px 340px 150px 340px"
-                        : "0px 250px 150px 250px",
+                        : "0px 10% 150px 10%", //250px - 10%
                     },
                   }}
                 >
