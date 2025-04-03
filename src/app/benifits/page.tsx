@@ -70,12 +70,12 @@ const Benifits: React.FC = () => {
       <div
         style={{
           // padding: isMax ? "0px 350px" : "0px 0px",
-          padding : isMax4 ? "0px 650px" 
-          : isMax3 ? "0px 550px" 
-          : isMax2 ? "0px 450px" 
-          : isMax1 ? "0px 350px" 
-          : isMax ? "0px 120px" 
-          : "0px 0px"
+          padding : isMax4 ? "0px 500px" 
+        : isMax3 ? "0px 320px" 
+        : isMax2 ? "0px 280px" 
+        : isMax1 ? "0px 220px" 
+        : isMax ? "0px 120px" 
+        : "0px 0px",
         }}
       >
         <div
