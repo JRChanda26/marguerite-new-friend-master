@@ -90,6 +90,11 @@ const ManagePerLaCare: React.FC = () => {
   ];
 
   const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
+  
   const isMin = useMediaQuery("(max-width:800px)");
 
   const theme = useTheme();
@@ -120,7 +125,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     card: {
       position: "absolute",
-      padding: isMin? "8px":"25px",
+      padding: isMin ? "8px" : "25px",
       borderRadius: "8px",
       boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       backgroundColor: "#fff",
@@ -164,7 +169,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "32%"
         : isSmall
-          ? "32%"//33
+          ? "32%" //33
           : isMedium
             ? "40%"
             : isLarge
@@ -344,7 +349,13 @@ const ManagePerLaCare: React.FC = () => {
       <Header />
       <div
         style={{
-          padding: isMax ? "0px 200px" : "0px 0px",
+          // padding: isMax ? "0px 200px" : "0px 0px",
+          padding : isMax4 ? "0px 450px" 
+          : isMax3 ? "0px 280px" 
+          : isMax2 ? "0px 250px" 
+          : isMax1 ? "0px 200px" 
+          : isMax ? "0px 120px" 
+          : "0px 0px"
         }}
       >
         <Grid
@@ -630,7 +641,13 @@ const ManagePerLaCare: React.FC = () => {
         </Grid>
         <div
           style={{
-            padding: isMax ? "0px 150px" : "0px 0px",
+            // padding: isMax ? "0px 150px" : "0px 0px",
+            padding : isMax4 ? "0px 300px" 
+            : isMax3 ? "0px 280px" 
+            : isMax2 ? "0px 200px" 
+            : isMax1 ? "0px 150px" 
+            : isMax ? "0px 0px" 
+            : "0px 0px"
           }}
         >
           {managePage.map((post: any) => (
