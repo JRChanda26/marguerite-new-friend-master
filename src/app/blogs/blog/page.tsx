@@ -156,12 +156,17 @@ export default function Blogs() {
       <div
         style={{
           // padding: isMax ? "0px 200px" : "0px 0px",
-          padding : isMax4 ? "0px 450px" 
-          : isMax3 ? "0px 280px" 
-          : isMax2 ? "0px 250px" 
-          : isMax1 ? "0px 200px" 
-          : isMax ? "0px 120px" 
-          : "0px 0px"
+          padding: isMax4
+            ? "0px 450px"
+            : isMax3
+              ? "0px 280px"
+              : isMax2
+                ? "0px 250px"
+                : isMax1
+                  ? "0px 200px"
+                  : isMax
+                    ? "0px 120px"
+                    : "0px 0px",
         }}
       >
         <Grid
@@ -258,12 +263,17 @@ export default function Blogs() {
         <div
           style={{
             // padding: isMax ? "0px 150px" : "0px 0px",
-            padding : isMax4 ? "0px 300px" 
-            : isMax3 ? "0px 280px" 
-            : isMax2 ? "0px 200px" 
-            : isMax1 ? "0px 150px" 
-            : isMax ? "0px 0px" 
-            : "0px 0px",
+            padding: isMax4
+              ? "0px 300px"
+              : isMax3
+                ? "0px 280px"
+                : isMax2
+                  ? "0px 200px"
+                  : isMax1
+                    ? "0px 150px"
+                    : isMax
+                      ? "0px 0px"
+                      : "0px 0px",
             background: "#e1f5f2", //bg-color
           }}
         >
@@ -308,7 +318,7 @@ export default function Blogs() {
                     sm: "27px 80px 100px 80px",
                     lg: "27px 152px 100px 152px",
                     xl: isMax
-                      ? "27px 152px 100px 152px"
+                      ? "27px 100px 100px 100px"
                       : "27px 152px 212px 152px",
                   },
                 }}
@@ -402,29 +412,83 @@ export default function Blogs() {
                         >
                           {blogPage[0]?.data.testimonial_description}
                         </Typography>
-                        <Typography
-                          sx={{
-                            color: "#4D5053",
-                            fontSize: {
-                              xl: "25px",
-                              lg: "16px",
-                              md: "16px",
-                              sm: "16px",
-                              xs: "16px",
-                            },
-                            fontWeight: 400,
-                            fontFamily: "Mulish",
-                            lineHeight: "150%",
-                            letterSpacing: "1%",
-                            marginTop: { lg: "41px", xl: "41px" },
+                        {/* start */}
+                        <div
+                          style={{
+                            display: "flex",
+                            justifyContent: "space-between",
+                            flexDirection: "row",
+                            marginTop:'40px'
                           }}
                         >
-                          {blogPage[0]?.data.testimonial_date}
-                        </Typography>
+                          <Typography
+                            sx={{
+                              color: "#4D5053",
+                              fontSize: {
+                                xl: "25px",
+                                lg: "16px",
+                                md: "16px",
+                                sm: "16px",
+                                xs: "16px",
+                              },
+                              fontWeight: 400,
+                              fontFamily: "Mulish",
+                              lineHeight: "150%",
+                              letterSpacing: "1%",
+                              // marginTop: { lg: "41px", xl: "41px" },
+                            }}
+                          >
+                            {blogPage[0]?.data.testimonial_date}
+                          </Typography>
+                          <div
+                            style={{
+                              display: "flex",
+                              flexDirection: "row",
+                              justifyContent: "flex-end",
+                              gap: "20px",
+                              // paddingRight: "50px",
+                              // paddingBottom: "10px",
+                            }}
+                          >
+                            <IconButton
+                              onClick={handleBackButtonClick}
+                              disabled={page === 0}
+                              aria-label="previous page"
+                              sx={{
+                                // ...buttonStyle,
+                                ...getHoverStyle({ ...buttonStyle }, 1),
+                                "&:hover": {
+                                  background: "#BEDFDB",
+                                },
+                              }}
+                              onMouseEnter={() => handleMouseEnter(1)}
+                              onMouseLeave={handleMouseLeave}
+                            >
+                              <KeyboardArrowLeftIcon />
+                            </IconButton>
+                            <IconButton
+                              onClick={handleNextButtonClick}
+                              disabled={page >= totalPages - 1}
+                              aria-label="next page"
+                              sx={{
+                                // ...buttonStyle,
+                                ...getHoverStyle({ ...buttonStyle }, 2),
+                                "&:hover": {
+                                  background: "#BEDFDB",
+                                },
+                              }}
+                              onMouseEnter={() => handleMouseEnter(2)}
+                              onMouseLeave={handleMouseLeave}
+                            >
+                              <KeyboardArrowRightIcon />
+                            </IconButton>
+                          </div>
+                        </div>
+                         {/* end */}
                       </div>
                     </Grid>
                   ))}
-                <div
+                {/* <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -466,7 +530,7 @@ export default function Blogs() {
                   >
                     <KeyboardArrowRightIcon />
                   </IconButton>
-                </div>
+                </div> */}
               </Grid>
             </Grid>
           </Grid>
@@ -621,7 +685,7 @@ export default function Blogs() {
                   sm: "3% 5%",
                   lg: "78px 50px 200px 50px",
                   xl: isMax
-                    ? "78px 100px 80px 100px"
+                    ? "78px 100px 20px 100px"
                     : "78px 100px 350px 100px",
                 },
               }}

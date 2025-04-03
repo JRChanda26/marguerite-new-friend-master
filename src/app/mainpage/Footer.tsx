@@ -38,11 +38,11 @@ const Footer: React.FC = () => {
     footerPage[0]?.data.link_text7,
   ];
 
-    const isMax = useMediaQuery("(min-width:1930px)");
-      const isMax1 = useMediaQuery("(min-width:2050px)");
-      const isMax2 = useMediaQuery("(min-width:2570px)");
-      const isMax3 = useMediaQuery("(min-width:2890px)");
-      const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
             xs: "5%",
             sm: "5%",
             lg: "120px 80px 100px 80px",
-            xl: "167px 152px 164px 121px",
+            xl: isMax ? "80px 152px 80px 181px" : "167px 152px 164px 121px",
           },
           // mt: 4,
         }}
@@ -61,12 +61,17 @@ const Footer: React.FC = () => {
         <div
           style={{
             // padding: isMax ? "0px 250px 0px 350px" : "0px 0px",
-            padding : isMax4 ? "0px 650px" 
-            : isMax3 ? "0px 450px 0px 550px" 
-            : isMax2 ? "0px 350px 0px 450px" 
-            : isMax1 ? "0px 250px 0px 350px" 
-            : isMax ? "0px 120px" 
-            : "0px 0px",
+            padding: isMax4
+              ? "0px 650px"
+              : isMax3
+                ? "0px 350px 0px 550px"
+                : isMax2
+                  ? "0px 250px 0px 450px"
+                  : isMax1
+                    ? "0px 250px 0px 350px"
+                    : isMax
+                      ? "0px 120px"
+                      : "0px 0px",
           }}
         >
           <Grid
@@ -81,7 +86,19 @@ const Footer: React.FC = () => {
               xs={12}
               sm={5}
               lg={4}
-              xl={isMax ? 3.5 : 4.1}
+              xl={
+                isMax4
+                  ? 3.5
+                  : isMax3
+                    ? 3.5
+                    : isMax2
+                      ? 3.5
+                      : isMax1
+                        ? 3.5
+                        : isMax
+                          ? 3.5
+                          : 4.1
+              }
               textAlign={{ xs: "center", sm: "left" }}
             >
               {footerPage.map((post, postIndex) => (

@@ -94,7 +94,7 @@ const ManagePerLaCare: React.FC = () => {
   const isMax2 = useMediaQuery("(min-width:2570px)");
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
-  
+
   const isMin = useMediaQuery("(max-width:800px)");
 
   const theme = useTheme();
@@ -350,12 +350,17 @@ const ManagePerLaCare: React.FC = () => {
       <div
         style={{
           // padding: isMax ? "0px 200px" : "0px 0px",
-          padding : isMax4 ? "0px 450px" 
-          : isMax3 ? "0px 280px" 
-          : isMax2 ? "0px 250px" 
-          : isMax1 ? "0px 200px" 
-          : isMax ? "0px 120px" 
-          : "0px 0px"
+          padding: isMax4
+            ? "0px 450px"
+            : isMax3
+              ? "0px 280px"
+              : isMax2
+                ? "0px 250px"
+                : isMax1
+                  ? "0px 200px"
+                  : isMax
+                    ? "0px 120px"
+                    : "0px 0px",
         }}
       >
         <Grid
@@ -642,12 +647,17 @@ const ManagePerLaCare: React.FC = () => {
         <div
           style={{
             // padding: isMax ? "0px 150px" : "0px 0px",
-            padding : isMax4 ? "0px 300px" 
-            : isMax3 ? "0px 280px" 
-            : isMax2 ? "0px 200px" 
-            : isMax1 ? "0px 150px" 
-            : isMax ? "0px 0px" 
-            : "0px 0px"
+            padding: isMax4
+              ? "0px 300px"
+              : isMax3
+                ? "0px 280px"
+                : isMax2
+                  ? "0px 200px"
+                  : isMax1
+                    ? "0px 150px"
+                    : isMax
+                      ? "0px 0px"
+                      : "0px 0px",
           }}
         >
           {managePage.map((post: any) => (
@@ -1409,7 +1419,10 @@ const ManagePerLaCare: React.FC = () => {
               justifyContent: "space-evenly",
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               textAlign: "center",
-              margin: { lg: "114px 0px 200px 0px", xl: "114px 0px 346px 0px" },
+              margin: {
+                lg: "114px 0px 200px 0px",
+                xl: isMax ? "114px 0px 100px 0px" : "114px 0px 346px 0px",
+              },
             }}
           >
             <Grid item xl={4} lg={4} xs={12} sm={6}>
