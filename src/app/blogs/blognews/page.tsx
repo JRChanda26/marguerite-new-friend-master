@@ -482,7 +482,7 @@ export default function BlogsNews() {
                 md={4}
                 xl={isMax2 ? 3 : 4}
                 style={{
-                  marginTop: isMax2 ? "50px" : "20px",
+                  marginTop: isMax2 ? "0px" : "20px",
                 }}
               >
                 <div>
