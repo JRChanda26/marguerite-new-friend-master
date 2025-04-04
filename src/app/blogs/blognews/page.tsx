@@ -478,8 +478,8 @@ export default function BlogsNews() {
               </Grid>
               <Grid
                 item
-                lg={4}
-                md={4}
+                lg={3}
+                md={2.5}
                 xl={isMax ? 3 : 4}
                 style={{
                   marginTop: isMax ? "0px" : "20px",
@@ -504,8 +504,8 @@ export default function BlogsNews() {
                           borderColor: "transparent",
                         },
                       },
-                      height: { lg: "80px", xl: "101px" },
-                      width: { lg: "385px", xl: isMax ? "100%" : "550px" },
+                      height: { lg: "70px", xl: "101px" },
+                      width: { lg: "100%", xl: "100%" },
                     }}
                     InputProps={{
                       endAdornment: (
