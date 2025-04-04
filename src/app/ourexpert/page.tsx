@@ -224,8 +224,8 @@ const OurExperts: React.FC = () => {
         style={{
           // padding: isMax ? "0px 350px" : "0px 0px",
           padding : isMax4 ? "0px 650px" 
-          : isMax3 ? "0px 400px" //550
-          : isMax2 ? "0px 280px" //450
+          : isMax3 ? "0px 450px" //550
+          : isMax2 ? "0px 300px" //450
           : isMax1 ? "0px 220px" 
           : isMax ? "0px 140px" 
           : "0px 0px"
