@@ -480,9 +480,9 @@ export default function BlogsNews() {
                 item
                 lg={4}
                 md={4}
-                xl={isMax2 ? 3 : 4}
+                xl={isMax ? 3 : 4}
                 style={{
-                  marginTop: isMax2 ? "0px" : "20px",
+                  marginTop: isMax ? "0px" : "20px",
                 }}
               >
                 <div>
@@ -505,7 +505,7 @@ export default function BlogsNews() {
                         },
                       },
                       height: { lg: "80px", xl: "101px" },
-                      width: { lg: "385px", xl: isMax2 ? "100%" : "550px" },
+                      width: { lg: "385px", xl: isMax ? "100%" : "550px" },
                     }}
                     InputProps={{
                       endAdornment: (
