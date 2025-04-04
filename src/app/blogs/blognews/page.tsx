@@ -120,10 +120,10 @@ export default function BlogsNews() {
   ];
 
   const isMax = useMediaQuery("(min-width:1930px)");
-      const isMax1 = useMediaQuery("(min-width:2050px)");
-      const isMax2 = useMediaQuery("(min-width:2570px)");
-      const isMax3 = useMediaQuery("(min-width:2890px)");
-      const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div>
@@ -131,12 +131,17 @@ export default function BlogsNews() {
       <div
         style={{
           // padding: isMax ? "0px 200px" : "0px 0px",
-          padding : isMax4 ? "0px 450px" 
-          : isMax3 ? "0px 320px" 
-          : isMax2 ? "0px 250px" 
-          : isMax1 ? "0px 200px" 
-          : isMax ? "0px 140px" 
-          : "0px 0px"
+          padding: isMax4
+            ? "0px 450px"
+            : isMax3
+              ? "0px 320px"
+              : isMax2
+                ? "0px 250px"
+                : isMax1
+                  ? "0px 200px"
+                  : isMax
+                    ? "0px 140px"
+                    : "0px 0px",
         }}
       >
         <Grid
@@ -165,12 +170,17 @@ export default function BlogsNews() {
         <div
           style={{
             // padding: isMax ? "0px 150px" : "0px 0px",
-            padding : isMax4 ? "0px 300px" 
-            : isMax3 ? "0px 280px" 
-            : isMax2 ? "0px 200px" 
-            : isMax1 ? "0px 150px" 
-            : isMax ? "0px 0px" 
-            : "0px 0px"
+            padding: isMax4
+              ? "0px 300px"
+              : isMax3
+                ? "0px 280px"
+                : isMax2
+                  ? "0px 200px"
+                  : isMax1
+                    ? "0px 150px"
+                    : isMax
+                      ? "0px 0px"
+                      : "0px 0px",
           }}
         >
           <Grid container>
@@ -470,9 +480,9 @@ export default function BlogsNews() {
                 item
                 lg={4}
                 md={4}
-                xl={4}
+                xl={isMax2 ? 3 : 4}
                 style={{
-                  marginTop: "20px",
+                  marginTop: isMax2 ? "50px" : "20px",
                 }}
               >
                 <div>
@@ -495,7 +505,7 @@ export default function BlogsNews() {
                         },
                       },
                       height: { lg: "80px", xl: "101px" },
-                      width: { lg: "385px", xl: "550px" },
+                      width: { lg: "385px", xl: isMax2 ? "100%" : "550px" },
                     }}
                     InputProps={{
                       endAdornment: (
