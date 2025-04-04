@@ -209,11 +209,11 @@ const OurExperts: React.FC = () => {
     fontSize: isXs ? "12px" : "18px",
   };
 
-  const isMax = useMediaQuery("(min-width:1930px)");
-  const isMax1 = useMediaQuery("(min-width:2050px)");
-  const isMax2 = useMediaQuery("(min-width:2570px)");
-  const isMax3 = useMediaQuery("(min-width:2890px)");
-  const isMax4 = useMediaQuery("(min-width:3210px)");
+    const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax1 = useMediaQuery("(min-width:2050px)");
+    const isMax2 = useMediaQuery("(min-width:2570px)");
+    const isMax3 = useMediaQuery("(min-width:2890px)");
+    const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isMaxLg = useMediaQuery("(min-width:1365px)");
 
@@ -223,22 +223,17 @@ const OurExperts: React.FC = () => {
       <div
         style={{
           // padding: isMax ? "0px 350px" : "0px 0px",
-          padding: isMax4
-            ? "0px 500px"
-            : isMax3
-              ? "0px 300px 0px 320px"
-              : isMax2
-                ? "0px 260px 0px 270px"
-                : isMax1
-                  ? "0px 220px"
-                  : isMax
-                    ? "0px 140px"
-                    : "0px 0px",
-          // padding : isMax4 ? "0px 500px"
-          // : isMax3 ? "0px 220px 0px 320px"
-          // : isMax2 ? "0px 180px 0px 280px"
-          // : isMax1 ? "0px 220px"
-          // : isMax ? "0px 140px"
+          padding : isMax4 ? "0px 650px" 
+          : isMax3 ? "0px 550px" 
+          : isMax2 ? "0px 450px" 
+          : isMax1 ? "0px 220px" 
+          : isMax ? "0px 140px" 
+          : "0px 0px"
+          // padding : isMax4 ? "0px 500px" 
+          // : isMax3 ? "0px 220px 0px 320px" 
+          // : isMax2 ? "0px 180px 0px 280px" 
+          // : isMax1 ? "0px 220px" 
+          // : isMax ? "0px 140px" 
           // : "0px 0px",
         }}
       >
@@ -338,11 +333,9 @@ const OurExperts: React.FC = () => {
                       sm: "0% 0% 15% 0%",
                       lg: isMaxLg ? "20px 50px" : "0px 100px",
                       md: "0px 80px 80px 80px",
-                      xl: isMax2
-                        ? "0px 200px"
-                        : isMax
-                          ? "0px 340px 20px 340px"
-                          : "0px 10% 150px 10%", //250px - 10%
+                      xl: isMax
+                        ? "0px 340px 20px 340px"
+                        : "0px 10% 150px 10%", //250px - 10%
                     },
                   }}
                 >
