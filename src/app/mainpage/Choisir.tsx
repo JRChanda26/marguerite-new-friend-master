@@ -37,7 +37,7 @@ const Choisir: React.FC = () => {
         : isMax3 ? "0px 550px" 
         : isMax2 ? "0px 450px" 
         : isMax1 ? "0px 350px" 
-        : isMax ? "0px 120px" 
+        : isMax ? "0px 140px"  
         : "0px 0px",
         background: isMax ? "#BBDDD9" : "#FFFFFF",
       }}

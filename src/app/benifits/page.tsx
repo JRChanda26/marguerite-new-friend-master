@@ -80,7 +80,7 @@ const Benifits: React.FC = () => {
         : isMax3 ? "0px 220px 0px 320px" 
         : isMax2 ? "0px 220px 0px 280px" 
         : isMax1 ? "0px 220px" 
-        : isMax ? "0px 120px" 
+        : isMax ? "0px 140px" 
         : "0px 0px",
         }}
       >

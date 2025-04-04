@@ -270,8 +270,7 @@ export default function Contact() {
                 ? "0px 250px"
                 : isMax1
                   ? "0px 200px"
-                  : isMax
-                    ? "0px 120px"
+                  : isMax ? "0px 140px" 
                     : "0px 0px",
         }}
       >
