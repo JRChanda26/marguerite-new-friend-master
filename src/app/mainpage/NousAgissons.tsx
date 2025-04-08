@@ -39,6 +39,8 @@ const NousAgissons: React.FC = () => {
     const isMax3 = useMediaQuery("(min-width:2890px)");
     const isMax4 = useMediaQuery("(min-width:3210px)");
 
+    const isMax5 = useMediaQuery("(min-width:1370px)");
+
   return (
     <div
       style={{
@@ -48,8 +50,9 @@ const NousAgissons: React.FC = () => {
         : isMax2 ? "0px 250px" 
         : isMax1 ? "0px 200px" 
         : isMax ? "0px 140px"  
+        : isMax5 ? "50px 120px 30px 80px"
         : "0px 0px",
-        background: isMax ? "#F6C09E" : "#FFFFFF",
+        background: isMax || isMax5 ? "#F6C09E" : "#FFFFFF",
       }}
     >
       {nousPage.map((post: any) => (
@@ -74,7 +77,7 @@ const NousAgissons: React.FC = () => {
             xs={4.5}
             sm={4.5}
             lg={4.5}
-            xl={5}
+            xl={6}
             sx={{
               marginTop: "0%",
               display: "flex",
@@ -83,7 +86,7 @@ const NousAgissons: React.FC = () => {
               backgroundColor: "#F6C09E",
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
-              paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: isMax?"0px":"30px" },
+              paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: isMax ?"0px":"30px" },
               paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
               // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
@@ -104,19 +107,22 @@ const NousAgissons: React.FC = () => {
               <Typography
                 sx={{
                   fontFamily: "Helvetica, sans-serif",
-                  fontWeight: 400,
+                  // fontWeight: 400,
+                  fontWeight: 500,
                   fontSize: {
                     xs: "20px",
                     sm: "30px",
                     lg: "45px",
-                    xl: "64px",
+                    // xl: "64px",
+                    xl:"55px"
                   },
 
                   lineHeight: {
                     xs: "18px",
                     sm: "30px",
                     lg: "40px",
-                    xl: "50px",
+                    // xl: "50px",
+                    xl: "1.1em",
                   },
                   color: "#24535C",
                   textAlign: "left",
@@ -128,20 +134,24 @@ const NousAgissons: React.FC = () => {
                 sx={{
                   fontFamily: "Sans Serif Collection",
                   color: "#24535C",
-                  fontWeight: 400,
+                  // fontWeight: 400,
+                  fontWeight: 300,
                   paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
+                  paddingRight:isMax5? "300px":"0px",
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
                     lg: "40px",
-                    xl: "58px",
+                    // xl: "58px",
+                    xl: "35px",
                   },
 
                   lineHeight: {
                     xs: "12px",
                     sm: "30px",
                     lg: "40px",
-                    xl: "69.6px",
+                    // xl: "69.6px",
+                    xl: "1.2em",
                   },
                   letterSpacing: "0%",
                 }}
@@ -175,18 +185,21 @@ const NousAgissons: React.FC = () => {
                 <Typography
                   sx={{
                     fontFamily: "Helvetica, sans-serif",
-                    fontWeight: 400,
+                    // fontWeight: 400,
+                    fontWeight: 500,
                     fontSize: {
                       xs: "7px",
                       sm: "12px",
                       lg: "15.2px",
-                      xl: "15.2px",
+                      // xl: "15.2px",
+                      xl: "20px",
                     },
                     lineHeight: {
                       xs: "0px",
                       sm: "12px",
                       lg: "50px",
-                      xl: "50px",
+                      // xl: "50px",
+                      xl: "1.7em",
                     },
                     letterSpacing: "0%",
                     color: "#FFFFFF",
@@ -216,7 +229,7 @@ const NousAgissons: React.FC = () => {
             xs={7.5}
             sm={7.5}
             lg={7.5}
-            xl={7}
+            xl={6}
             sx={{
               display: "flex",
               alignItems: "center",
