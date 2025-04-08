@@ -22,7 +22,8 @@ export default function Paroles() {
     fetchData();
   }, []);
 
-  const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax5 = useMediaQuery("(min-width:1370px)");
+    const isMax = useMediaQuery("(min-width:1930px)");
     const isMax1 = useMediaQuery("(min-width:2050px)");
     const isMax2 = useMediaQuery("(min-width:2570px)");
     const isMax3 = useMediaQuery("(min-width:2890px)");
@@ -39,7 +40,7 @@ export default function Paroles() {
     if (isSm) return { fontSize: "28px" };
     if (isMd) return { fontSize: "32px" };
     if (isLg) return { fontSize: "38px" };
-    if (isXl) return { fontSize: "44px" };
+    if (isXl) return { fontSize: "28px" }; //44px
     return { fontSize: "44px" };
   };
 
@@ -156,6 +157,7 @@ export default function Paroles() {
         : isMax2 ? "0px 280px" 
         : isMax1 ? "0px 220px" 
         : isMax ? "0px 140px" 
+        :isMax5?"0px 110px"
         : "0px 0px",
       }} 
     >
@@ -170,9 +172,10 @@ export default function Paroles() {
           <Typography
             sx={{
               color: "#0A1411",
-              fontWeight: 700,
-              fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "64px" },
-              lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "auto" },
+              // fontWeight: 700,
+              fontWeight: 600,
+              fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "32px" }, //xl: "64px"
+              lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "1.5em" }, //xl: "auto"
               padding: {
                 xs: "2% 0%",
                 sm: "5% 0%",
@@ -332,16 +335,18 @@ export default function Paroles() {
           <Typography
             sx={{
               color: "#000000",
-              fontWeight: 400,
+              // fontWeight: 400,
+              fontWeight: 500,
               // fontFamily: "Mulish",
               fontFamily: "Helvetica, sans-serif",
               letterSpacing: "0%",
-              fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "25px" },
+              fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "18px" }, //xl: "25px"
               lineHeight: {
                 xs: "25px",
                 sm: "30px",
                 lg: "38.4px",
-                xl: "38.4px",
+                // xl: "38.4px",
+                xl:"1.9em"
               },
               padding: {
                 xs: "5%",
@@ -389,7 +394,7 @@ export default function Paroles() {
                 xs: "20px",
                 sm: "40px 0",
                 lg: "117px 0px 128px 0px",
-                xl: "117px 0px 128px 0px",
+                xl: "117px 0px 50px 0px",
               },
             }}
           >
@@ -457,7 +462,8 @@ export default function Paroles() {
                   <Typography
                     sx={{
                       color: "#000000",
-                      fontWeight: 700,
+                      // fontWeight: 700,
+                      fontWeight: 500,
                       // fontFamily: "Mulish",
                       fontFamily: "Helvetica, sans-serif",
                       textAlign: "center",
@@ -471,13 +477,15 @@ export default function Paroles() {
                         xs: "12px",
                         sm: "16px",
                         lg: "28px",
-                        xl: "30.2px",
+                        // xl: "30.2px",
+                        xl: "28px",
                       },
                       lineHeight: {
                         xs: "20px",
                         sm: "20px",
                         lg: "25px",
-                        xl: "25px",
+                        // xl: "25px",
+                        xl: "1.3em",
                       },
                     }}
                   >

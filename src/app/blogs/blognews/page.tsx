@@ -70,18 +70,22 @@ export default function BlogsNews() {
   const heading: React.CSSProperties = {
     color: "#292F36",
     // fontSize: "25px",
-    fontWeight: 400,
+    // fontWeight: 400,
+    fontWeight: 300,
     fontFamily: "Mulish",
-    lineHeight: "125%",
+    // lineHeight: "125%",
+    lineHeight: "1.1em",
     letterSpacing: "2%",
   };
 
   const list: React.CSSProperties = {
     color: "#292F36",
     // fontSize: "20px",
-    fontWeight: 400,
+    // fontWeight: 400,
+    fontWeight: 500,
     fontFamily: "Mulish",
-    lineHeight: "125%",
+    // lineHeight: "125%",
+    lineHeight: "1.1em",
     letterSpacing: "2%",
   };
 
@@ -119,6 +123,7 @@ export default function BlogsNews() {
     },
   ];
 
+  const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
   const isMax2 = useMediaQuery("(min-width:2570px)");
@@ -140,7 +145,7 @@ export default function BlogsNews() {
                 : isMax1
                   ? "0px 200px"
                   : isMax
-                    ? "0px 140px"
+                    ? "0px 140px":isMax5?"0px 110px"
                     : "0px 0px",
         }}
       >
@@ -201,7 +206,7 @@ export default function BlogsNews() {
                   xs: "5%",
                   sm: "5%",
                   lg: "150px 100px 0px 100px",
-                  xl: "153px 100px 0px 100px",
+                  xl: "100px 100px 0px 100px",
                 },
               }}
             >
@@ -212,18 +217,21 @@ export default function BlogsNews() {
                       xs: "25px",
                       sm: "40px",
                       lg: "40px",
-                      xl: "50px",
+                      // xl: "50px",
+                      xl: "34px",
                     },
                     lineHeight: {
                       xs: "30px",
                       sm: "40px",
                       lg: "125%",
-                      xl: "125%",
+                      // xl: "125%",
+                      xl:"1.5em"
                     },
+                    fontWeight:600,
                     letterSpacing: "2%",
                     fontFamily: "Mulish",
                     color: "#292F36",
-                    paddingRight: { xl: isMax ? "0px" : "150px" },
+                    paddingRight: { xl: isMax ? "0px" : "0px" },
                   }}
                 >
                   {blogNewsPage[0]?.data.top_heading}
@@ -333,13 +341,16 @@ export default function BlogsNews() {
                       xs: "12px",
                       sm: "16px",
                       lg: "22px",
-                      xl: "22px",
+                      // xl: "22px",
+                      xl: "18px",
                     },
+                    fontWeight:500,
                     lineHeight: {
                       xs: "16px",
                       sm: "20px",
                       lg: "150%",
-                      xl: "150%",
+                      // xl: "150%",
+                      xl: "1.9em",
                     },
                     color: "#4D5053",
                     letterSpacing: "1%",
@@ -480,7 +491,7 @@ export default function BlogsNews() {
                 item
                 lg={3}
                 md={2.5}
-                xl={isMax ? 3 : 4}
+                xl={isMax ? 3 : 3}
                 style={{
                   marginTop: isMax ? "0px" : "20px",
                 }}
@@ -504,7 +515,7 @@ export default function BlogsNews() {
                           borderColor: "transparent",
                         },
                       },
-                      height: { lg: "70px", xl: "101px" },
+                      height: { lg: "70px", xl: "70px" },
                       width: { lg: "100%", xl: "100%" },
                     }}
                     InputProps={{
@@ -543,7 +554,8 @@ export default function BlogsNews() {
                         sm: "25px",
                         md: "20px",
                         lg: "22px",
-                        xl: "35px",
+                        // xl: "35px",
+                        xl: "28px",
                       },
                       ...heading,
                       marginBottom: "0px",
@@ -573,7 +585,8 @@ export default function BlogsNews() {
                                 sm: "20px",
                                 md: "14px",
                                 lg: "18px",
-                                xl: "30px",
+                                // xl: "30px",
+                                xl: "18px",
                               },
                               ...list,
                             }}
@@ -588,11 +601,14 @@ export default function BlogsNews() {
                                 sm: "16px",
                                 md: "12px",
                                 lg: "14px",
-                                xl: "20px",
+                                // xl: "20px",
+                                xl: "18px",
                               },
-                              fontWeight: 400,
+                              // fontWeight: 400,
+                              fontWeight: 500,
                               fontFamily: "Mulish",
-                              lineHeight: "150%",
+                              // lineHeight: "150%",
+                              lineHeight: "1.1em",
                               letterSpacing: "1%",
                               color: "#4D5053",
                             }}
@@ -669,18 +685,19 @@ export default function BlogsNews() {
                   sm: "5%",
                   lg: "100px 0px 108px 140px",
                   md: "50px 0px 50px 80px",
-                  xl: "100px 0px 108px 140px",
+                  xl: "100px 0px 108px 180px",
                 },
               }}
             >
               <Typography
                 sx={{
-                  fontSize: { xs: "28px", sm: "40px", lg: "50px", xl: "50px" },
+                  fontSize: { xs: "28px", sm: "40px", lg: "50px", xl: "34px" }, //xl: "50px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
                     lg: "125%",
-                    xl: "125%",
+                    // xl: "125%",
+                    xl: "1.5em",
                   },
                   fontFamily: "Mulish",
                   letterSpacing: "2%",
@@ -692,18 +709,20 @@ export default function BlogsNews() {
               </Typography>
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "20px", lg: "22px", xl: "22px" },
+                  fontSize: { xs: "16px", sm: "20px", lg: "22px", xl: "18px" }, //xl: "22px"
                   lineHeight: {
                     xs: "25px",
                     sm: "30px",
                     lg: "150%",
-                    xl: "150%",
+                    // xl: "150%",
+                    xl: "1.9em",
                   },
                   padding: "20px 0px 100px 0px",
                   color: "#4D5053",
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
                   textAlign: "justify",
+                  fontWeight:500
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_description1}
@@ -719,13 +738,15 @@ export default function BlogsNews() {
                             xs: "16px",
                             sm: "20px",
                             lg: "22px",
-                            xl: "22px",
+                            // xl: "22px",
+                            xl: "18px",
                           },
                           lineHeight: {
                             xs: "25px",
                             sm: "30px",
                             lg: "150%",
-                            xl: "150%",
+                            // xl: "150%",
+                            xl: "1.9em",
                           },
                           padding: "10px 0px 32px 0px",
                           color: "#4D5053",
@@ -733,6 +754,7 @@ export default function BlogsNews() {
                           letterSpacing: "1%",
                           paddingRight: { lg: "0px", xl: "0px" },
                           textAlign: "justify",
+                          fontWeight:500
                         }}
                       >
                         {index + 1}.{blogNewsPage[0]?.data.bottom_points}
@@ -755,17 +777,19 @@ export default function BlogsNews() {
               </div>
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "20px", lg: "22px", xl: "22px" },
+                  fontSize: { xs: "16px", sm: "20px", lg: "22px", xl: "18px" }, //xl: "22px"
                   lineHeight: {
                     xs: "25px",
                     sm: "30px",
                     lg: "150%",
-                    xl: "150%",
+                    // xl: "150%",
+                    xl: "1.9em",
                   },
                   color: "#4D5053",
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
                   textAlign: "justify",
+                  fontWeight:500
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_description2}
@@ -846,17 +870,19 @@ export default function BlogsNews() {
               </div>
               <Typography
                 sx={{
-                  fontSize: { xs: "24px", sm: "30px", lg: "25px", xl: "30px" },
+                  fontSize: { xs: "24px", sm: "30px", lg: "25px", xl: "28px" }, //xl: "30px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
                     lg: "150%",
-                    xl: "150%",
+                    // xl: "150%",
+                    xl:"1.1em"
                   },
                   marginBottom: "62px",
                   color: "#4D5053",
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
+                  fontWeight:300
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_title}
