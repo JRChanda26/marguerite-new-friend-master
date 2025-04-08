@@ -31,7 +31,8 @@ const NosExperiences: React.FC = () => {
   const handleMouseEnter = () => setAnimationSpeed(100);
   const handleMouseLeave = () => setAnimationSpeed(40);
 
-  const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax5 = useMediaQuery("(min-width:1370px)");
+    const isMax = useMediaQuery("(min-width:1930px)");
     const isMax1 = useMediaQuery("(min-width:2050px)");
     const isMax2 = useMediaQuery("(min-width:2570px)");
     const isMax3 = useMediaQuery("(min-width:2890px)");
@@ -64,6 +65,7 @@ const NosExperiences: React.FC = () => {
             : isMax2 ? "0px 280px" 
             : isMax1 ? "0px 220px" 
             : isMax ? "0px 140px" 
+            :isMax5?"0px 110px"
             : "0px 0px",
           }}
         >
@@ -84,18 +86,21 @@ const NosExperiences: React.FC = () => {
                   // fontFamily: "Mulish",
                   fontFamily: "Helvetica, sans-serif",
                   color: "#FFFFFF",
-                  fontWeight: 700,
+                  // fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: {
                     xs: "20px",
                     sm: "48px",
                     lg: "66.25px",
-                    xl: "66.25px",
+                    // xl: "66.25px",
+                     xl: "32px"
                   },
                   lineHeight: {
                     xs: "30px",
                     sm: "55px",
                     lg: "120%",
-                    xl: "120%",
+                    // xl: "120%",
+                    xl: "1.5em" 
                   },
                   padding: {
                     xs: "12% 0% 2% 0%",
@@ -112,13 +117,15 @@ const NosExperiences: React.FC = () => {
                   // fontFamily: "Mulish",
                   fontFamily: "Helvetica, sans-serif",
                   color: "#FFFFFF",
-                  fontWeight: 400,
-                  fontSize: { xs: "8px", sm: "18px", lg: "24px", xl: "24px" },
+                  // fontWeight: 400,
+                  fontWeight: 500,
+                  fontSize: { xs: "8px", sm: "18px", lg: "24px",  xl: "18px" },// xl: "24px"
                   lineHeight: {
                     xs: "10px",
                     sm: "25px",
                     lg: "120%",
-                    xl: "120%",
+                    // xl: "120%",
+                    xl: "1.9em",
                   },
                   padding: {
                     xs: "0% 2%",
@@ -190,6 +197,7 @@ const NosExperiences: React.FC = () => {
                           lg: "394px",
                           xl: "394px",
                         },
+                        minHeight:{xl:'250px'}
                       }}
                     >
                       <Typography
@@ -197,18 +205,21 @@ const NosExperiences: React.FC = () => {
                           // fontFamily: "Mulish",
                           fontFamily: "Helvetica, sans-serif",
                           color: "#161C2D",
-                          fontWeight: 400,
+                          // fontWeight: 400,
+                          fontWeight: 500,
                           fontSize: {
                             xs: "12px",
                             sm: "16px",
                             lg: "18px",
-                            xl: "19.32px",
+                            // xl: "19.32px",
+                            xl: "20px",
                           },
                           lineHeight: {
                             xs: "16px",
                             sm: "22px",
                             lg: "160%",
-                            xl: "160%",
+                            // xl: "160%",
+                            xl: "1.5em",
                           },
                           textAlign: "justify",
                         }}

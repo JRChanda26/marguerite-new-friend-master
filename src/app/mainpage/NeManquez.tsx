@@ -95,7 +95,7 @@ export default function NeManquez() {
     fontSize: isSmallScreen ? "8px" : "19.25px",
   };
 
-  const isMax = useMediaQuery("(min-width:1930px)");
+        const isMax = useMediaQuery("(min-width:1930px)");
         const isMax1 = useMediaQuery("(min-width:2050px)");
         const isMax2 = useMediaQuery("(min-width:2570px)");
         const isMax3 = useMediaQuery("(min-width:2890px)");
@@ -121,7 +121,7 @@ export default function NeManquez() {
             sm: "80px 30px 80px 50px",
             // md: "70px 100px",
             lg: "50px 100px",
-            xl: isMax ? "80px 120px" : "145px 178px",
+            xl: isMax ? "80px 120px" : "70px 220px 50px 220px",
           },
         }}
       >
@@ -168,7 +168,7 @@ export default function NeManquez() {
                   sm: "30px 0px 0px 20px",
                   lg: "50px 0px 0px 50px",
                   md: "20px 0px 0px 50px",
-                  xl: "50px 0px 0px 50px",
+                  xl: "50px 0px 0px 0px",
                 },
               }}
             >
@@ -181,16 +181,19 @@ export default function NeManquez() {
                     sm: "22px",
                     md: "30px",
                     lg: "38px",
-                    xl: "41.81px",
+                    // xl: "41.81px",
+                    xl: "32px" 
                   },
                   lineHeight: {
                     xs: "15px",
                     sm: "28px",
                     md: "42.47px",
                     lg: "52.47px",
-                    xl: "52.47px",
+                    // xl: "52.47px",
+                    xl: "1.5em",
                   },
-                  fontWeight: 700,
+                  // fontWeight: 700,
+                  fontWeight: 600,
                 }}
               >
                 {neManquezPage[0]?.data.title}
@@ -204,16 +207,19 @@ export default function NeManquez() {
                     sm: "14px",
                     md: "18px",
                     lg: "18px",
-                    xl: "23.52px",
+                    // xl: "23.52px",
+                    xl: "18px",
                   },
                   lineHeight: {
                     xs: "8px",
                     sm: "28px",
                     md: "160%",
                     lg: "160%",
-                    xl: "160%",
+                    // xl: "160%",
+                    xl: "1.5em",
                   },
-                  fontWeight: 400,
+                  // fontWeight: 400,
+                  fontWeight: 500,
                   padding: {
                     xs: "5px 0px 15px 0px",
                     sm: "0px 0px 40px 0px",
@@ -257,6 +263,7 @@ export default function NeManquez() {
                   lg: "5px 10px",
                   xl: "5px 10px",
                 },
+                marginTop: {xl:'30px'},
                 alignItems: "center",
                 boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
                 height: {
@@ -264,14 +271,14 @@ export default function NeManquez() {
                   sm: "50px",
                   md: "50px",
                   lg: "80px",
-                  xl: "86.58px",
+                  xl: "80px",
                 },
                 width: {
                   xs: "100%",
                   sm: "100%",
                   md: "0px",
                   lg: "0px",
-                  xl: "786px",
+                  xl: "100%",
                 },
               }}
             >
@@ -325,7 +332,8 @@ export default function NeManquez() {
                     sm: "8px",
                     lg: "19.25px",
                     // md: "19.25px",
-                    xl: "19.25px",
+                    // xl: "19.25px",
+                    xl: "20px",
                   },
                   fontWeight: 400,
                   padding: {

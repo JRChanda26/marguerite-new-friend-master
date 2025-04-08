@@ -86,7 +86,7 @@ const NousAgissons: React.FC = () => {
               backgroundColor: "#F6C09E",
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
-              paddingLeft: { xs: "20px", sm: "20px", lg: "30px", xl: isMax ?"0px":"30px" },
+              paddingLeft: { xs: "20px", sm: "20px", lg: "60px", xl: isMax ?"0px":"30px" },
               paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
               // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
@@ -112,7 +112,7 @@ const NousAgissons: React.FC = () => {
                   fontSize: {
                     xs: "20px",
                     sm: "30px",
-                    lg: "45px",
+                    lg: "40px",
                     // xl: "64px",
                     xl:"55px"
                   },
@@ -141,7 +141,7 @@ const NousAgissons: React.FC = () => {
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
-                    lg: "40px",
+                    lg: "30px",
                     // xl: "58px",
                     xl: "35px",
                   },
@@ -165,11 +165,11 @@ const NousAgissons: React.FC = () => {
                   background: "#24535C",
                   borderRadius: "82px",
                   top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
-                  height: { xs: "22px", sm: "40px", lg: "66px", xl: "66px" },
+                  height: { xs: "22px", sm: "40px", lg: "46px", xl: "66px" },
                   width: {
                     xs: "80px",
                     sm: "150px",
-                    lg: "203.85px",
+                    lg: "150px",
                     xl: "203.85px",
                   },
                   justifyContent: "space-around",

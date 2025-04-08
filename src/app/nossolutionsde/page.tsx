@@ -145,6 +145,7 @@ const NosSolutionsDe: React.FC = () => {
     fontSize: isSmallScreen ? "18px" : "22px",
   };
 
+  const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
   const isMax2 = useMediaQuery("(min-width:2570px)");
@@ -157,12 +158,19 @@ const NosSolutionsDe: React.FC = () => {
       <div
         style={{
           // padding: isMax ? "0px 200px" : "0px 0px",
-          padding : isMax4 ? "0px 450px" 
-          : isMax3 ? "0px 320px" 
-          : isMax2 ? "0px 250px" 
-          : isMax1 ? "0px 200px" 
-          : isMax ? "0px 140px" 
-          : "0px 0px"
+          padding: isMax4
+            ? "0px 450px"
+            : isMax3
+              ? "0px 320px"
+              : isMax2
+                ? "0px 250px"
+                : isMax1
+                  ? "0px 200px"
+                  : isMax5
+                    ? "0px 110px"
+                    : isMax
+                      ? "0px 140px"
+                      : "0px 0px",
         }}
       >
         <Grid
@@ -219,18 +227,21 @@ const NosSolutionsDe: React.FC = () => {
                     sx={{
                       fontFamily: "DM Serif Display",
                       color: "#292F36",
-                      fontWeight: 700,
+                      // fontWeight: 700,
+                      fontWeight: 500,
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
                         lg: "50px",
-                        xl: "50px",
+                        // xl: "50px",
+                        xl: "59px"
                       },
                       lineHeight: {
                         xs: "40px",
                         sm: "48px",
                         lg: "125%",
-                        xl: "125%",
+                        // xl: "125%",
+                        xl: "1.5em",
                       },
                       letterSpacing: "0%",
                     }}
@@ -267,12 +278,17 @@ const NosSolutionsDe: React.FC = () => {
         <div
           style={{
             // padding: isMax ? "0px 150px" : "0px 0px",
-            padding : isMax4 ? "0px 300px" 
-            : isMax3 ? "0px 280px" 
-            : isMax2 ? "0px 200px" 
-            : isMax1 ? "0px 150px" 
-            : isMax ? "0px 0px" 
-            : "0px 0px"
+            padding: isMax4
+              ? "0px 300px"
+              : isMax3
+                ? "0px 280px"
+                : isMax2
+                  ? "0px 200px"
+                  : isMax1
+                    ? "0px 150px"
+                    : isMax
+                      ? "0px 0px"
+                      : "0px 0px",
           }}
         >
           <Grid
@@ -283,7 +299,7 @@ const NosSolutionsDe: React.FC = () => {
                 lg: "100px",
                 xl: isMax
                   ? "100px 228px 100px 228px"
-                  : "200px 228px 229px 228px",
+                  : "200px 228px 100px 228px",
               },
             }}
           >
@@ -311,18 +327,21 @@ const NosSolutionsDe: React.FC = () => {
                         key={post}
                         sx={{
                           fontFamily: "Mulish",
-                          fontWeight: 700,
+                          // fontWeight: 700,
+                          fontWeight: 600,
                           fontSize: {
                             xs: "30px",
                             sm: "40px",
                             lg: "50px",
-                            xl: "58px",
+                            // xl: "58px",
+                            xl: "52px",
                           },
                           lineHeight: {
                             xs: "35px",
                             sm: "48px",
                             lg: "125%",
-                            xl: "125%",
+                            // xl: "125%",
+                            xl: "1.5em",
                           },
                           color: "#292F36",
                           letterSpacing: "2%",
@@ -338,14 +357,17 @@ const NosSolutionsDe: React.FC = () => {
                           xs: "12px",
                           sm: "18px",
                           lg: "22px",
-                          xl: "22px",
+                          // xl: "22px",
+                          xl: "15px",
                         },
-                        fontWeight: 400,
+                        // fontWeight: 400,
+                        fontWeight: 500,
                         lineHeight: {
                           xs: "18px",
                           sm: "25px",
-                          lg: "150%px",
-                          xl: "150%px",
+                          lg: "150%",
+                          // xl: "150%",
+                          xl: "1.5em",
                         },
                         paddingTop: "23px",
                         fontFamily: "Jost",
@@ -471,8 +493,10 @@ const NosSolutionsDe: React.FC = () => {
                 sx={{
                   textAlign: "center",
                   color: "#292F36",
-                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontWeight: 400,
+                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "34px" },//xl: "50px"
+                  // fontWeight: 400,
+                  fontWeight: 600,
+                  lineHeight:"1.5em",
                   marginTop: "50px",
                 }}
               >
@@ -492,7 +516,7 @@ const NosSolutionsDe: React.FC = () => {
                   justifyContent: "space-evenly",
                   marginTop: "50px",
                   alignItems: "center",
-                  gap: { lg: "60px", xl: "60px" },
+                  gap: { lg: "60px", xl: "0px" },
                 }}
               >
                 <Grid item xs={12} sm={5} lg={6} md={5} xl={6}>
@@ -516,7 +540,7 @@ const NosSolutionsDe: React.FC = () => {
                     <img
                       src={modulesPage[0]?.data.video_image.url || undefined}
                       alt={modulesPage[0]?.data.video_image.alt || "Image"}
-                      width={isMax ? "95%" : "100%"}
+                      width={isMax ? "95%" : "80%"}
                       height="auto"
                     />
                   )}
@@ -527,14 +551,14 @@ const NosSolutionsDe: React.FC = () => {
                   sm={5}
                   lg={6}
                   md={5}
-                  xl={6}
+                  xl={5}
                   sx={{
                     height: {
                       xs: "0px",
                       sm: "400px",
                       md: "450px",
                       lg: "450px",
-                      xl: "600px",
+                      // xl: "600px",
                     },
                     overflowY: "auto",
                     scrollbarWidth: "thin",
@@ -564,13 +588,14 @@ const NosSolutionsDe: React.FC = () => {
                             onClick={() => handleColor1(index)}
                             sx={{
                               color: clicked1 === index ? "#3D8C6E" : "#292F36",
-                              lineHeight: "150%",
+                              lineHeight: "1.5em",
                               fontSize: {
                                 xs: "18px",
                                 sm: "22px",
                                 lg: "25px",
                                 md: "20px",
-                                xl: "35px",
+                                // xl: "35px",
+                                xl: "21px",
                               },
                               fontWeight: 500,
                               fontFamily: "Mulish",
@@ -589,11 +614,13 @@ const NosSolutionsDe: React.FC = () => {
                                 sm: "18px",
                                 lg: "22px",
                                 md: "18px",
-                                xl: "28px",
+                                // xl: "28px",
+                                xl: "17px",
                               },
-                              fontWeight: 400,
+                              // fontWeight: 400,
+                              fontWeight: 500,
                               fontFamily: "Mulish",
-                              lineHeight: "150%",
+                              lineHeight: "1.9em",
                               letterSpacing: "1%",
                             }}
                           >
@@ -616,7 +643,7 @@ const NosSolutionsDe: React.FC = () => {
                 xs: "30px",
                 sm: "40px",
                 lg: "100px 50px",
-                xl: isMax ? "100px 156px 0px 156px" : "228px 156px",
+                xl: isMax ? "100px 156px 0px 156px" : "100px 50px",
               },
             }}
           >
@@ -644,18 +671,20 @@ const NosSolutionsDe: React.FC = () => {
                     fontFamily: "Mulish",
                     // fontSize: headingFontSize.fontSize,
                     fontSize: {
-                      xl: "18.98px",
+                      // xl: "18.98px",
+                      xl: "18px",
                       xs: "14px",
                       lg: "14px",
                       sm: "14px",
                       md: "14px",
                     },
-                    lineHeight: "125%",
+                    lineHeight: "1.5em",
                     letterSpacing: "2%",
                     color: "#000000",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    fontWeight:500
                   }}
                 >
                   {item.heading}
@@ -669,14 +698,16 @@ const NosSolutionsDe: React.FC = () => {
                           fontFamily: "Mulish",
                           // fontSize: pointsFontSize.fontSize,
                           fontSize: {
-                            xl: "22px",
+                            // xl: "22px",
+                            xl: "15px",
                             xs: "18px",
                             lg: "18px",
                             sm: "18px",
                             md: "18px",
                           },
-                          lineHeight: "150%",
+                          lineHeight: "1.9em",
                           letterSpacing: "1%",
+                          fontWeight:500
                         }}
                       >
                         {point}

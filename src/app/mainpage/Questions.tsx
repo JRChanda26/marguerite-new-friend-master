@@ -67,7 +67,8 @@ export default function Questions() {
     router.push("/contact");
   };
 
-  const isMax = useMediaQuery("(min-width:1930px)");
+    const isMax5 = useMediaQuery("(min-width:1370px)");
+    const isMax = useMediaQuery("(min-width:1930px)");
     const isMax1 = useMediaQuery("(min-width:2050px)");
     const isMax2 = useMediaQuery("(min-width:2570px)");
     const isMax3 = useMediaQuery("(min-width:2890px)");
@@ -118,7 +119,8 @@ export default function Questions() {
               sx={{
                 color: "#14292D",
                 // fontSize: "64px",
-                fontWeight: 700,
+                // fontWeight: 700,
+                fontWeight: 600,
                 // fontFamily: "Mulish",
                 fontFamily: "Helvetica, sans-serif",
                 // lineHeight: "76.8px",
@@ -127,21 +129,23 @@ export default function Questions() {
                   sm: "45px",
                   md: "45px",
                   lg: "55px",
-                  xl: "64px",
+                  // xl: "64px",
+                  xl: "32px",
                 },
                 lineHeight: {
                   xs: "30px",
                   sm: "50px",
                   md: "120%",
                   lg: "120%",
-                  xl: "120%",
+                  // xl: "120%",
+                  xl: "1.5em"
                 },
                 margin: {
                   xs: "0% 0% 0% 10%",
                   sm: "0% 0% 0% 5%",
                   lg: "0px 30px 0px 100px",
                   md: "0px 30px 0px 80px",
-                  xl: isMax ? "0px 130px 0px 0px" : "0px 130px 0px 136px",
+                  xl: isMax ? "0px 130px 0px 0px" : "0px 130px 0px 110px",
                 },
               }}
             >
@@ -151,7 +155,8 @@ export default function Questions() {
               sx={{
                 color: "#565656",
                 // fontSize: "34px",
-                fontWeight: 400,
+                // fontWeight: 400,
+                fontWeight: 500,
                 // fontFamily: "Mulish",
                 fontFamily: "Helvetica, sans-serif",
                 // lineHeight: "36.8px",
@@ -160,21 +165,23 @@ export default function Questions() {
                   sm: "20px",
                   md: "20px",
                   lg: "24px",
-                  xl: "24px",
+                  // xl: "24px",
+                  xl: "18px" 
                 },
                 lineHeight: {
                   xs: "20px",
                   sm: "20px",
                   md: "160%",
                   lg: "160%",
-                  xl: "160%",
+                  // xl: "160%",
+                  xl: "1.9em",
                 },
                 margin: {
                   xs: "1% 0% 0% 10%",
                   sm: "3% 0% 0% 5%",
                   lg: "40px 0px 0px 100px",
                   md: "40px 30px 0px 80px",
-                  xl: isMax ? "20px 0px 0px 0px" : "63px 0px 0px 136px",
+                  xl: isMax ? "20px 0px 0px 0px" : "20px 0px 0px 110px",
                 },
               }}
             >
@@ -185,6 +192,7 @@ export default function Questions() {
                 textDecoration: "none",
                 border: "1px solid #24535C",
                 color: "#24535C",
+                fontWeight:500,
                 // padding: "15px 25px",
                 padding: {
                   xs: "1% 3%",
@@ -201,7 +209,7 @@ export default function Questions() {
                   sm: "5% 0% 0% 5%",
                   lg: "40px 0px 0px 100px",
                   md: "40px 30px 0px 80px",
-                  xl: isMax ? "20px 0px 0px 0px" : "63px 0px 0px 136px",
+                  xl: isMax ? "20px 0px 0px 0px" : "20px 0px 0px 110px",
                 },
                 // fontFamily: "Mulish, sans-serif",
                 // lineHeight: "26px",
@@ -211,14 +219,16 @@ export default function Questions() {
                   sm: "20px",
                   md: "20px",
                   lg: "25px",
-                  xl: "25px",
+                  // xl: "25px",
+                  xl: "20px",
                 },
                 lineHeight: {
                   xs: "20px",
                   sm: "20px",
                   lg: "38.4px",
                   md: "28.4px",
-                  xl: "38.4px",
+                  // xl: "38.4px",
+                  xl: "1.7em",
                 },
                 textTransform: "none",
               }}
@@ -232,9 +242,9 @@ export default function Questions() {
                 src={questionPage[0]?.data.image.url || undefined}
                 alt={questionPage[0]?.data.image.alt || "Image"}
                 style={{
-                  width: "100%",
+                  width: "90%",
                   height: "auto",
-                  marginTop: "100px",
+                  margin: "100px 0px 0px 110px",
                 }}
               />
             )}
@@ -252,7 +262,7 @@ export default function Questions() {
                 sm: "0%",
                 md: "30px",
                 lg: "30px",
-                xl: "50px",
+                xl: "30px",
               },
               paddingLeft: {
                 xs: "0%",
@@ -281,7 +291,8 @@ export default function Questions() {
                   <Typography
                     sx={{
                       color: "#161C2D",
-                      fontWeight: 700,
+                      // fontWeight: 700,
+                      fontWeight: 500,
                       // fontFamily: "Mulish",
                       fontFamily: "Helvetica, sans-serif",
                       fontSize: {
@@ -289,13 +300,15 @@ export default function Questions() {
                         sm: "18px",
                         lg: "18px",
                         md: "14px",
-                        xl: "18px",
+                        // xl: "18px",
+                        xl: "21px",
                       },
                       lineHeight: {
                         xs: "20px",
                         md: "20px",
                         lg: "120%",
-                        xl: "120%",
+                        // xl: "120%",
+                        xl: "1.5em",
                       },
                     }}
                   >
@@ -307,7 +320,8 @@ export default function Questions() {
                     sx={{
                       color: "#161C2D",
                       opacity: "72%",
-                      fontWeight: 400,
+                      // fontWeight: 400,
+                      fontWeight: 500,
                       // fontFamily: "Mulish",
                       fontFamily: "Helvetica, sans-serif",
                       fontSize: {
@@ -315,13 +329,15 @@ export default function Questions() {
                         sm: "16px",
                         lg: "16px",
                         md: "12px",
-                        xl: "16px",
+                        // xl: "16px",
+                        xl: "17px",
                       },
                       lineHeight: {
                         xs: "20px",
                         md: "20px",
                         lg: "180%",
-                        xl: "180%",
+                        // xl: "180%",
+                        xl: "1.9em",
                       },
                     }}
                   >
