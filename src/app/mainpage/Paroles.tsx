@@ -66,9 +66,10 @@ export default function Paroles() {
   //   "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Arial" },
   // };
   const fontMap: Record<HighlightWord, { fontFamily: string }> = {
-    "Marguerite Services,": { fontFamily: "Helvetica" },
+    "Marguerite Services,": {fontFamily: "Jenna Sue" }, //fontFamily: "Helvetica"
     "Responsabilité Sociétale des Entreprises (RSE)": {
-      fontFamily: "Helvetica",
+      fontFamily: "Mulish"
+      // fontFamily: "Helvetica",
     },
   };
 
@@ -182,8 +183,8 @@ export default function Paroles() {
                 lg: "100px",
                 xl: isMax ? "0px 194px 50px 194px" : "0px 194px 100px 194px",
               },
-              // fontFamily: "Mulish",
-              fontFamily: "Helvetica, sans-serif",
+              fontFamily: "Mulish",
+              // fontFamily: "Helvetica, sans-serif",
               letterSpacing: "0%",
               display: "flex",
               flexDirection: {
@@ -337,8 +338,8 @@ export default function Paroles() {
               color: "#000000",
               // fontWeight: 400,
               fontWeight: 500,
-              // fontFamily: "Mulish",
-              fontFamily: "Helvetica, sans-serif",
+              fontFamily: "Mulish",
+              // fontFamily: "Helvetica, sans-serif",
               letterSpacing: "0%",
               fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "18px" }, //xl: "25px"
               lineHeight: {
@@ -464,8 +465,8 @@ export default function Paroles() {
                       color: "#000000",
                       // fontWeight: 700,
                       fontWeight: 500,
-                      // fontFamily: "Mulish",
-                      fontFamily: "Helvetica, sans-serif",
+                      fontFamily: "Mulish",
+                      // fontFamily: "Helvetica, sans-serif",
                       textAlign: "center",
                       padding: {
                         xs: "0px",

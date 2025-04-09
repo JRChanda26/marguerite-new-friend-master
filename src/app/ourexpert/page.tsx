@@ -153,7 +153,8 @@ const OurExperts: React.FC = () => {
   const middleBackground = leCarePage[0]?.data?.middle_background?.url || "";
 
   const designerNameStyle: React.CSSProperties = {
-    fontFamily: "DM Serif Display",
+    // fontFamily: "DM Serif Display",
+    fontFamily: "Mulish",
     fontWeight: 400,
     lineHeight: "37.5px",
     letterSpacing: "1%",
@@ -162,7 +163,8 @@ const OurExperts: React.FC = () => {
   };
 
   const designerDetailsStyle: React.CSSProperties = {
-    fontFamily: "Jost",
+    // fontFamily: "Jost",
+    fontFamily: "Mulish",
     fontWeight: 400,
     lineHeight: "150%",
     letterSpacing: "1%",
@@ -209,13 +211,14 @@ const OurExperts: React.FC = () => {
     fontSize: isXs ? "12px" : "18px",
   };
 
+    const isMax5 = useMediaQuery("(min-width:1370px)");
     const isMax = useMediaQuery("(min-width:1930px)");
     const isMax1 = useMediaQuery("(min-width:2050px)");
     const isMax2 = useMediaQuery("(min-width:2570px)");
     const isMax3 = useMediaQuery("(min-width:2890px)");
     const isMax4 = useMediaQuery("(min-width:3210px)");
 
-  const isMaxLg = useMediaQuery("(min-width:1365px)");
+    const isMaxLg = useMediaQuery("(min-width:1365px)");
 
   return (
     <Box sx={{}}>
@@ -227,7 +230,7 @@ const OurExperts: React.FC = () => {
           : isMax3 ? "0px 450px" //550
           : isMax2 ? "0px 300px" //450
           : isMax1 ? "0px 220px" 
-          : isMax ? "0px 140px" 
+          : isMax ? "0px 140px" :isMax5?" 0px 100px"
           : "0px 0px"
           // padding : isMax4 ? "0px 500px" 
           // : isMax3 ? "0px 220px 0px 320px" 
@@ -258,14 +261,17 @@ const OurExperts: React.FC = () => {
                       sm: "42px",
                       md: "42px",
                       lg: "58px",
-                      xl: "84px",
+                      // xl: "84px",
+                      xl: "32px",
                     },
-                    fontWeight: 700,
+                    // fontWeight: 700,
+                    fontWeight: 600,
                     lineHeight: {
                       xs: "30px",
                       sm: "65px",
                       lg: "auto",
-                      xl: "auto",
+                      // xl: "auto",
+                      xl: "1.5em"
                     },
                     textAlign: "center",
                     color: "#0A1411",
@@ -274,7 +280,7 @@ const OurExperts: React.FC = () => {
                       sm: "8% 10% 0% 10%",
                       lg: "100px 100px 40px 100px",
                       md: "50px 20px 0px 20px",
-                      xl: "157px 100px 40px 100px",
+                      xl: "100px 100px 40px 100px",
                     },
                   }}
                 >
@@ -288,14 +294,17 @@ const OurExperts: React.FC = () => {
                       sm: "18px",
                       md: "18px",
                       lg: "22px",
-                      xl: "28px",
+                      // xl: "28px",
+                      xl: "18px"
                     },
-                    fontWeight: 400,
+                    // fontWeight: 400,
+                    fontWeight: 500,
                     lineHeight: {
                       xs: "16px",
                       sm: "25px",
                       lg: "33px",
-                      xl: "33px",
+                      // xl: "33px",
+                      xl: "1.9em", 
                     },
                     textAlign: "center",
                     color: "#4D5053",
@@ -303,7 +312,7 @@ const OurExperts: React.FC = () => {
                       xs: "2% 5%",
                       sm: "2% 10%",
                       lg: "0px 100px 30px 100px",
-                      xl: "0px 180px 50px 180px",
+                      xl: "0px 350px 50px 350px",
                     },
                   }}
                 >

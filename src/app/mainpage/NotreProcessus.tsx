@@ -22,8 +22,8 @@ export default function NotreProcessus() {
     // fontWeight: 400,
     fontWeight: 300,
     color: "#1E1E1E",
-    // fontFamily: "Mulish",
-    fontFamily: "Helvetica, sans-serif",
+    fontFamily: "Mulish",
+    // fontFamily: "Helvetica, sans-serif",
     letterSpacing: "0%",
   };
 
@@ -32,16 +32,16 @@ export default function NotreProcessus() {
     textTransform: "uppercase",
     fontWeight: 600,
     letterSpacing: "17.5%",
-    // fontFamily: "Mulish",
-    fontFamily: "Helvetica, sans-serif",
+    fontFamily: "Mulish",
+    // fontFamily: "Helvetica, sans-serif",
   };
 
   const description: React.CSSProperties = {
     color: "#1E1E1E",
     // fontWeight: 400,
     fontWeight: 500,
-    // fontFamily: "Mulish",
-    fontFamily: "Helvetica, sans-serif",
+    fontFamily: "Mulish",
+    // fontFamily: "Helvetica, sans-serif",
     fontStyle: "italic",
     letterSpacing: "0%",
   };
@@ -53,8 +53,8 @@ export default function NotreProcessus() {
     textDecoration: "none",
     display: "flex",
     flexDirection: "row",
-    fontFamily: "Helvetica, sans-serif",
-    // fontFamily: "Mulish",
+    // fontFamily: "Helvetica, sans-serif",
+    fontFamily: "Mulish",
     fontStyle: "italic",
     letterSpacing: "0%",
   };
@@ -98,8 +98,8 @@ export default function NotreProcessus() {
               fontSize: { xs: "28px", sm: "40px", lg: "64px", xl: "32px" }, //xl: "64px"
               lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "1.5em" }, //xl: "auto"
               color: "#0A1411",
-              // fontFamily: "Mulish",
-              fontFamily: "Helvetica, sans-serif",
+              fontFamily: "Mulish",
+              // fontFamily: "Helvetica, sans-serif",
               margin: {
                 xs: "5% 10% 2% 10%",
                 sm: "5% 10% 2% 10%",
@@ -131,8 +131,8 @@ export default function NotreProcessus() {
                 lg: "0px 155px 196px 155px",
                 xl: isMax ? "30px 425px 50px 425px" : "0px 550px 100px 550px",
               },
-              // fontFamily: "Mulish",
-              fontFamily: "Helvetica, sans-serif",
+              fontFamily: "Mulish",
+              // fontFamily: "Helvetica, sans-serif",
             }}
           >
             {notrePage[0]?.data.description}

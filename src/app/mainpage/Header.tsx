@@ -716,7 +716,8 @@ const Header: React.FC = () => {
   ];
 
   const menustyle = {
-    fontFamily: "Sans Serif Collection",
+    // fontFamily: "Sans Serif Collection",
+    fontFamily: "Mulish",
     fontSize: "18px",
     fontWeight: 400,
     lineHeight: "44.26px",
@@ -798,7 +799,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary={post.data.page1}
                             sx={{
-                              fontFamily: "Helvetica, sans-serif",
+                              // fontFamily: "Helvetica, sans-serif",
+                              fontFamily: "Mulish",
                               color: "#24535C",
                               // fontSize: "18px",
                               fontSize: "14px",
@@ -811,7 +813,8 @@ const Header: React.FC = () => {
                         <ListItemText
                           primary={post.data.page2}
                           sx={{
-                            fontFamily: "Helvetica, sans-serif",
+                            // fontFamily: "Helvetica, sans-serif",
+                            fontFamily: "Mulish",
                             color: "#24535C",
                             // fontSize: "18px",
                             fontSize: "14px",
@@ -824,7 +827,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             // primary={post.data.page3}
                             sx={{
-                              fontFamily: "Helvetica, sans-serif",
+                              // fontFamily: "Helvetica, sans-serif",
+                              fontFamily: "Mulish",
                               color: "#24535C",
                               // fontSize: "18px",
                               fontSize: "14px",
@@ -881,7 +885,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             // primary={post.data.page4}
                             sx={{
-                              fontFamily: "Helvetica, sans-serif",
+                              // fontFamily: "Helvetica, sans-serif",
+                              fontFamily: "Mulish",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -940,7 +945,8 @@ const Header: React.FC = () => {
                           <ListItemText
                             primary={post.data.page5}
                             sx={{
-                              fontFamily: "Helvetica, sans-serif",
+                              // fontFamily: "Helvetica, sans-serif",
+                              fontFamily: "Mulish",
                               color: "#24535C",
                               fontSize: "18px",
                               fontWeight: 400,
@@ -1007,7 +1013,8 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Helvetica, sans-serif",
+                        // fontFamily: "Helvetica, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -1033,7 +1040,8 @@ const Header: React.FC = () => {
                   </Link>
                   <Typography
                     sx={{
-                      fontFamily: "Helvetica, sans-serif",
+                      // fontFamily: "Helvetica, sans-serif",
+                      fontFamily: "Mulish",
                       color: "#24535C",
                       fontSize: {
                         xs: "12px",
@@ -1059,7 +1067,8 @@ const Header: React.FC = () => {
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
                     <Typography
                       sx={{
-                        fontFamily: "Helvetica, sans-serif",
+                        // fontFamily: "Helvetica, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -1128,7 +1137,8 @@ const Header: React.FC = () => {
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
                     <Typography
                       sx={{
-                        fontFamily: "Helvetica, sans-serif",
+                        // fontFamily: "Helvetica, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -1201,7 +1211,8 @@ const Header: React.FC = () => {
                   >
                     <Typography
                       sx={{
-                        fontFamily: "Helvetica, sans-serif",
+                        // fontFamily: "Helvetica, sans-serif",
+                        fontFamily: "Mulish",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
