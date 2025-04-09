@@ -715,6 +715,8 @@ const Header: React.FC = () => {
     { href: "", text: headerPage[0]?.data.advantages4 },
   ];
 
+  const isMin = useMediaQuery("(max-width:750px)");
+  
   const menustyle = {
     // fontFamily: "Sans Serif Collection",
     fontFamily: "Mulish",
@@ -1018,7 +1020,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "18px",
+                          sm: "12px",
                           lg: "18px",
                           // xl: "26.49px",
                           xl: "18px",
@@ -1045,7 +1047,7 @@ const Header: React.FC = () => {
                       color: "#24535C",
                       fontSize: {
                         xs: "12px",
-                        sm: "18px",
+                        sm: "12px",
                         lg: "18px",
                         // xl: "26.49px",
                         xl: "18px",
@@ -1072,7 +1074,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "18px",
+                          sm: "12px",
                           lg: "18px",
                           // xl: "26.49px",
                           xl: "18px",
@@ -1142,7 +1144,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "18px",
+                          sm: "12px",
                           // lg: "26.49px",
                           // xl: "26.49px",
                           lg: "18px",
@@ -1216,7 +1218,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "18px",
+                          sm: "12px",
                           lg: "18px",
                           // xl: "26.49px",
                           xl: "18px",

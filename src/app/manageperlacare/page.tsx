@@ -89,6 +89,8 @@ const ManagePerLaCare: React.FC = () => {
     },
   ];
 
+  const isMax7 = useMediaQuery("(min-width:750px)");
+  const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
@@ -363,7 +365,11 @@ const ManagePerLaCare: React.FC = () => {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 70px",
+                      : isMax6
+                        ? "0px 65px"
+                        : isMax7
+                          ? "0px 20px"
+                          : "0px 0px",
         }}
       >
         <Grid
@@ -698,7 +704,7 @@ const ManagePerLaCare: React.FC = () => {
                     sm: "50px",
                     lg: "1.5em",
                     // xl: "80.32px",
-                    xl: "1.5em"
+                    xl: "1.5em",
                   },
                   textAlign: "center",
                   justifyContent: "center",
@@ -1003,11 +1009,11 @@ const ManagePerLaCare: React.FC = () => {
                       sm: "32px",
                       lg: "32px",
                       // xl: "64px",
-                      xl: "32px"
+                      xl: "32px",
                     },
                     // fontWeight: 700,
                     fontWeight: 600,
-                    lineHeight:"1.5em"
+                    lineHeight: "1.5em",
                   }}
                 >
                   {modulesPage[0]?.data.heading}
@@ -1034,7 +1040,7 @@ const ManagePerLaCare: React.FC = () => {
                       sm: "34px",
                       lg: "34px",
                       // xl: "50px",
-                      xl: "34px"
+                      xl: "34px",
                     },
                     // fontWeight: 400,
                     fontWeight: 600,
@@ -1175,7 +1181,7 @@ const ManagePerLaCare: React.FC = () => {
                       sm: "34px",
                       lg: "34px",
                       // xl: "50px",
-                      xl: "34px" 
+                      xl: "34px",
                     },
                     // fontWeight: 400,
                     fontWeight: 600,
@@ -1407,7 +1413,7 @@ const ManagePerLaCare: React.FC = () => {
                           sm: "45px",
                           lg: "125%",
                           // xl: "125%",
-                          xl:"1.5em"
+                          xl: "1.5em",
                         },
                         textAlign: "center",
                         padding: {
@@ -1429,20 +1435,20 @@ const ManagePerLaCare: React.FC = () => {
                         fontFamily: "Mulish",
                         color: "#4D5053",
                         // fontWeight: 400,
-                        fontWeight:700,
+                        fontWeight: 700,
                         fontSize: {
                           xs: "14px",
                           sm: "17px",
                           lg: "17px",
                           // xl: "25px",
-                          xl:"17px"
+                          xl: "17px",
                         },
                         lineHeight: {
                           xs: "18px",
                           sm: "25px",
                           lg: "150%",
                           // xl: "150%",
-                          xl:"1.9em"
+                          xl: "1.9em",
                         },
                         textAlign: "center",
                         letterSpacing: "1%",
@@ -1515,7 +1521,12 @@ const ManagePerLaCare: React.FC = () => {
               sx={{
                 alignContent: "center",
                 fontSize: { xs: "18px", sm: "22px", lg: "22px", xl: "32px" }, //xl: "35px"
-                lineHeight: { xs: "20px", sm: "30px", lg: "1.5em", xl: "1.5em" }, //xl: "40px"
+                lineHeight: {
+                  xs: "20px",
+                  sm: "30px",
+                  lg: "1.5em",
+                  xl: "1.5em",
+                }, //xl: "40px"
                 // fontWeight: 400,
                 fontWeight: 500,
                 textAlign: "justify",

@@ -22,6 +22,7 @@ export default function Paroles() {
     fetchData();
   }, []);
 
+  const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1030px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
@@ -168,7 +169,9 @@ export default function Paroles() {
                     ? "0px 110px"
                     : isMax6
                       ? "0px 70px"
-                      : "0px 0px",
+                      : isMax7
+                        ? "0px 20px"
+                        : "0px 0px",
       }}
     >
       <div

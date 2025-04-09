@@ -31,6 +31,7 @@ const NosExperiences: React.FC = () => {
   const handleMouseEnter = () => setAnimationSpeed(100);
   const handleMouseLeave = () => setAnimationSpeed(40);
 
+  const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1030px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
@@ -74,7 +75,8 @@ const NosExperiences: React.FC = () => {
                       : isMax5
                         ? "0px 110px"
                         : isMax6
-                          ? "0px 70px"
+                          ? "0px 70px" : isMax7
+                        ? "0px 20px"
                           : "0px",
           }}
         >

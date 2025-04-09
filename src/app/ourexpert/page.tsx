@@ -211,6 +211,8 @@ const OurExperts: React.FC = () => {
     fontSize: isXs ? "12px" : "18px",
   };
 
+  const isMax7 = useMediaQuery("(min-width:750px)");
+  const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
@@ -238,7 +240,11 @@ const OurExperts: React.FC = () => {
                     ? "0px 140px"
                     : isMax5
                       ? " 0px 110px"
-                      : "0px 70px",
+                      : isMax6
+                        ? "0px 65px"
+                        : isMax7
+                          ? "0px 20px"
+                          : "0px 0px",
           // padding : isMax4 ? "0px 500px"
           // : isMax3 ? "0px 220px 0px 320px"
           // : isMax2 ? "0px 180px 0px 280px"
