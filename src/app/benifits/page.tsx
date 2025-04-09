@@ -58,7 +58,8 @@ const Benifits: React.FC = () => {
     return { width: "283.55px", height: "433px" };
   };
 
- const isMax = useMediaQuery("(min-width:1930px)");
+     const isMax5 = useMediaQuery("(min-width:1370px)");
+     const isMax = useMediaQuery("(min-width:1930px)");
      const isMax1 = useMediaQuery("(min-width:2050px)");
      const isMax2 = useMediaQuery("(min-width:2570px)");
      const isMax3 = useMediaQuery("(min-width:2890px)");
@@ -80,7 +81,7 @@ const Benifits: React.FC = () => {
         : isMax3 ? "0px 300px 0px 320px" 
         : isMax2 ? "0px 260px 0px 270px" 
         : isMax1 ? "0px 220px" 
-        : isMax ? "0px 140px" 
+        : isMax ? "0px 140px" :isMax5?"0px 110px"
         : "0px 0px",
         }}
       >
@@ -109,14 +110,17 @@ const Benifits: React.FC = () => {
                       xs: "35px",
                       sm: "48px",
                       lg: "58px",
-                      xl: "64px",
+                      // xl: "64px",
+                      xl: "32px",
                     },
-                    fontWeight: 700,
+                    // fontWeight: 700,
+                    fontWeight: 600,
                     lineHeight: {
                       xs: "40px",
                       sm: "64px",
                       lg: "auto",
-                      xl: "auto",
+                      // xl: "auto",
+                      xl: "1.5em"
                     },
                     textAlign: "center",
                     color: "#0A1411",
@@ -124,7 +128,7 @@ const Benifits: React.FC = () => {
                       xs: "100px 0px 0px 0px",
                       sm: "100px 0px 0px 0px",
                       lg: "150px 80px 8px 80px",
-                      xl: "200px 150px 8px 150px",
+                      xl: "150px 150px 8px 150px",
                     },
                   }}
                 >
@@ -137,14 +141,17 @@ const Benifits: React.FC = () => {
                       xs: "16px",
                       sm: "18px",
                       lg: "22px",
-                      xl: "25px",
+                      // xl: "25px",
+                       xl: "18px"
                     },
-                    fontWeight: 400,
+                    // fontWeight: 400,
+                    fontWeight: 500,
                     lineHeight: {
                       xs: "20px",
                       sm: "25px",
                       lg: "33px",
-                      xl: "33px",
+                      // xl: "33px",
+                      xl: "1.9em", 
                     },
                     textAlign: "center",
                     color: "#4D5053",
@@ -154,7 +161,7 @@ const Benifits: React.FC = () => {
                       lg: "20px 150px 157px 150px",
                       xl: isMax
                         ? "0px 380px 50px 380px"
-                        : "0px 380px 157px 380px",
+                        : "0px 350px 50px 350px",
                     },
                   }}
                 >
@@ -238,15 +245,18 @@ const Benifits: React.FC = () => {
                               fontSize: {
                                 xs: "15px",
                                 sm: "35px",
-                                lg: "25px",
-                                xl: "36px",
                                 md: "20px",
+                                lg: "25px",
+                                // xl: "36px",
+                                xl: "21px",
                               },
                               fontFamily: "Mulish",
-                              fontWeight: 400,
+                              // fontWeight: 400,
+                              fontWeight: 500,
                               color: "#1E1E1E",
                               paddingLeft: "8px",
-                              lineHeight: "auto",
+                              // lineHeight: "auto",
+                              lineHeight: "1.5em",
                               letterSpacing: "-5%",
                               opacity: "90%",
                             }}
@@ -259,9 +269,10 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "12px",
                               sm: "25px",
-                              lg: "18px",
                               md: "16px",
-                              xl: "24px",
+                              lg: "18px",
+                              // xl: "24px",
+                              xl: "17px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -269,7 +280,9 @@ const Benifits: React.FC = () => {
                             paddingTop: { lg: "", xl: "" },
                             opacity: "80%",
                             letterSpacing: "0%",
-                            lineHeight: "185%",
+                            // lineHeight: "185%",
+                            lineHeight: "1.9em",
+                            fontWeight:500
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description1}
@@ -337,15 +350,18 @@ const Benifits: React.FC = () => {
                               fontSize: {
                                 xs: "15px",
                                 sm: "35px",
-                                lg: "25px",
-                                xl: "36px",
                                 md: "20px",
+                                lg: "25px",
+                                // xl: "36px",
+                                xl: "21px",
                               },
                               fontFamily: "Mulish",
-                              fontWeight: 400,
+                              // fontWeight: 400,
+                              fontWeight: 500,
                               color: "#1E1E1E",
                               paddingLeft: "8px",
-                              lineHeight: "auto",
+                              // lineHeight: "auto",
+                              lineHeight: "1.5em",
                               letterSpacing: "-5%",
                               opacity: "90%",
                             }}
@@ -358,9 +374,10 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "12px",
                               sm: "25px",
-                              lg: "18px",
                               md: "16px",
-                              xl: "24px",
+                              lg: "18px",
+                              // xl: "24px",
+                              xl: "17px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -368,7 +385,9 @@ const Benifits: React.FC = () => {
                             paddingTop: { lg: "", xl: "" },
                             opacity: "80%",
                             letterSpacing: "0%",
-                            lineHeight: "185%",
+                            // lineHeight: "185%",
+                            lineHeight: "1.9em",
+                            fontWeight:500
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description2}
@@ -454,15 +473,18 @@ const Benifits: React.FC = () => {
                               fontSize: {
                                 xs: "15px",
                                 sm: "35px",
-                                lg: "25px",
-                                xl: "36px",
                                 md: "20px",
+                                lg: "25px",
+                                // xl: "36px",
+                                xl: "21px",
                               },
                               fontFamily: "Mulish",
-                              fontWeight: 400,
+                              // fontWeight: 400,
+                              fontWeight: 500,
                               color: "#1E1E1E",
                               paddingLeft: "8px",
-                              lineHeight: "auto",
+                              // lineHeight: "auto",
+                              lineHeight: "1.5em",
                               letterSpacing: "-5%",
                               opacity: "90%",
                             }}
@@ -477,7 +499,8 @@ const Benifits: React.FC = () => {
                               sm: "25px",
                               lg: "18px",
                               md: "16px",
-                              xl: "24px",
+                              // xl: "24px",
+                              xl: "17px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -485,7 +508,9 @@ const Benifits: React.FC = () => {
                             paddingTop: { lg: "", xl: "" },
                             opacity: "80%",
                             letterSpacing: "0%",
-                            lineHeight: "185%",
+                            // lineHeight: "185%",
+                            lineHeight: "1.9em",
+                            fontWeight:500
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description3}
@@ -553,15 +578,18 @@ const Benifits: React.FC = () => {
                               fontSize: {
                                 xs: "15px",
                                 sm: "35px",
-                                lg: "25px",
-                                xl: "36px",
                                 md: "20px",
+                                lg: "25px",
+                                // xl: "36px",
+                                xl: "21px",
                               },
                               fontFamily: "Mulish",
-                              fontWeight: 400,
+                              // fontWeight: 400,
+                              fontWeight: 500,
                               color: "#1E1E1E",
                               paddingLeft: "8px",
-                              lineHeight: "auto",
+                              // lineHeight: "auto",
+                              lineHeight: "1.5em",
                               letterSpacing: "-5%",
                               opacity: "90%",
                             }}
@@ -574,9 +602,10 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "12px",
                               sm: "25px",
-                              lg: "18px",
                               md: "16px",
-                              xl: "24px",
+                              lg: "18px",
+                              // xl: "24px",
+                              xl: "17px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -584,7 +613,9 @@ const Benifits: React.FC = () => {
                             paddingTop: { lg: "", xl: "" },
                             opacity: "80%",
                             letterSpacing: "0%",
-                            lineHeight: "185%",
+                            // lineHeight: "185%",
+                            lineHeight: "1.9em",
+                            fontWeight:500
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description4}

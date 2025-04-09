@@ -106,7 +106,8 @@ const NousAgissons: React.FC = () => {
             >
               <Typography
                 sx={{
-                  fontFamily: "Helvetica, sans-serif",
+                  // fontFamily: "Helvetica, sans-serif",
+                  fontFamily: "Mulish",
                   // fontWeight: 400,
                   fontWeight: 500,
                   fontSize: {
@@ -132,7 +133,8 @@ const NousAgissons: React.FC = () => {
               </Typography>
               <Typography
                 sx={{
-                  fontFamily: "Sans Serif Collection",
+                  // fontFamily: "Sans Serif Collection",
+                  fontFamily: "Mulish",
                   color: "#24535C",
                   // fontWeight: 400,
                   fontWeight: 300,
@@ -184,7 +186,8 @@ const NousAgissons: React.FC = () => {
               >
                 <Typography
                   sx={{
-                    fontFamily: "Helvetica, sans-serif",
+                    // fontFamily: "Helvetica, sans-serif",
+                    fontFamily: "Mulish",
                     // fontWeight: 400,
                     fontWeight: 500,
                     fontSize: {

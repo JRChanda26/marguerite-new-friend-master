@@ -21,8 +21,8 @@ export default function BlogEt() {
     fontWeight: 700,
     textAlign: "left",
     paddingTop: "31.9px",
-    // fontFamily: "Mulish",
-    fontFamily: "Helvetica, sans-serif",
+    fontFamily: "Mulish",
+    // fontFamily: "Helvetica, sans-serif",
   };
 
   const description: React.CSSProperties = {
@@ -31,8 +31,8 @@ export default function BlogEt() {
     fontWeight: 500,
     textAlign: "left",
     paddingTop: "21.27px",
-    // fontFamily: "Mulish",
-    fontFamily: "Helvetica, sans-serif",
+    fontFamily: "Mulish",
+    // fontFamily: "Helvetica, sans-serif",
   };
 
   const items = [
@@ -93,8 +93,8 @@ export default function BlogEt() {
               },
               lineHeight: { xs: "30px", sm: "50px", lg: "120%",  xl: "1.5em" }, //xl: "120%"
               color: "#161C2D",
-              // fontFamily: "Mulish",
-              fontFamily: "Helvetica, sans-serif",
+              fontFamily: "Mulish",
+              // fontFamily: "Helvetica, sans-serif",
               padding: {
                 xs: "20px 0px",
                 sm: "50px 0px",
@@ -258,8 +258,8 @@ export default function BlogEt() {
         </Grid>
         <Button
           sx={{
-            // fontFamily: "Mulish",
-            fontFamily: "Helvetica, sans-serif",
+            fontFamily: "Mulish",
+            // fontFamily: "Helvetica, sans-serif",
             color: "#FFFFFF",
             fontSize: { xs: "14px", sm: "25px", lg: "30px", xl: "20px" }, //xl: "30px"
             textAlign: "center",

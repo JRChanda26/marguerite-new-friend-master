@@ -121,8 +121,8 @@ export default function Questions() {
                 // fontSize: "64px",
                 // fontWeight: 700,
                 fontWeight: 600,
-                // fontFamily: "Mulish",
-                fontFamily: "Helvetica, sans-serif",
+                fontFamily: "Mulish",
+                // fontFamily: "Helvetica, sans-serif",
                 // lineHeight: "76.8px",
                 fontSize: {
                   xs: "28px",
@@ -157,8 +157,8 @@ export default function Questions() {
                 // fontSize: "34px",
                 // fontWeight: 400,
                 fontWeight: 500,
-                // fontFamily: "Mulish",
-                fontFamily: "Helvetica, sans-serif",
+                fontFamily: "Mulish",
+                // fontFamily: "Helvetica, sans-serif",
                 // lineHeight: "36.8px",
                 fontSize: {
                   xs: "12px",
@@ -212,6 +212,7 @@ export default function Questions() {
                   xl: isMax ? "20px 0px 0px 0px" : "20px 0px 0px 110px",
                 },
                 // fontFamily: "Mulish, sans-serif",
+                fontFamily: "Mulish",
                 // lineHeight: "26px",
                 // fontSize: "21.67px",
                 fontSize: {
@@ -293,8 +294,8 @@ export default function Questions() {
                       color: "#161C2D",
                       // fontWeight: 700,
                       fontWeight: 500,
-                      // fontFamily: "Mulish",
-                      fontFamily: "Helvetica, sans-serif",
+                      fontFamily: "Mulish",
+                      // fontFamily: "Helvetica, sans-serif",
                       fontSize: {
                         xs: "14px",
                         sm: "18px",
@@ -322,8 +323,8 @@ export default function Questions() {
                       opacity: "72%",
                       // fontWeight: 400,
                       fontWeight: 500,
-                      // fontFamily: "Mulish",
-                      fontFamily: "Helvetica, sans-serif",
+                      fontFamily: "Mulish",
+                      // fontFamily: "Helvetica, sans-serif",
                       fontSize: {
                         xs: "14px",
                         sm: "16px",

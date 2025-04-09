@@ -1050,7 +1050,8 @@ export default function Contact() {
             >
               <Typography
                 sx={{
-                  fontFamily: "DM Serif Display",
+                  // fontFamily: "DM Serif Display",
+                  fontFamily: "Mulish",
                   color: "#292F36",
                   // fontWeight: 600,
                   fontWeight: 500,
@@ -1073,7 +1074,8 @@ export default function Contact() {
               </Typography>
               <Typography
                 sx={{
-                  fontFamily: "Jost",
+                  // fontFamily: "Jost",
+                  fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
@@ -1215,7 +1217,8 @@ export default function Contact() {
                         },
                         display: "flex",
                         alignItems: "center",
-                        fontFamily: "Jost",
+                        // fontFamily: "Jost",
+                        fontFamily: "Mulish",
                         lineHeight: "150%",
                         letterSpacing: "1%",
                         color: "#4D5053",

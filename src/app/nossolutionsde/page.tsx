@@ -166,10 +166,10 @@ const NosSolutionsDe: React.FC = () => {
                 ? "0px 250px"
                 : isMax1
                   ? "0px 200px"
-                  : isMax5
-                    ? "0px 110px"
-                    : isMax
-                      ? "0px 140px"
+                  : isMax
+                    ? "0px 140px"
+                    : isMax5
+                      ? "0px 110px"
                       : "0px 0px",
         }}
       >
@@ -225,7 +225,8 @@ const NosSolutionsDe: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "DM Serif Display",
+                      // fontFamily: "DM Serif Display",
+                      fontFamily: "Mulish",
                       color: "#292F36",
                       // fontWeight: 700,
                       fontWeight: 500,
@@ -234,7 +235,7 @@ const NosSolutionsDe: React.FC = () => {
                         sm: "40px",
                         lg: "50px",
                         // xl: "50px",
-                        xl: "59px"
+                        xl: "59px",
                       },
                       lineHeight: {
                         xs: "40px",
@@ -250,7 +251,8 @@ const NosSolutionsDe: React.FC = () => {
                   </Typography>
                   <Typography
                     sx={{
-                      fontFamily: "Jost",
+                      // fontFamily: "Jost",
+                      fontFamily: "Mulish",
                       color: "#4D5053",
                       fontWeight: 400,
                       fontSize: {
@@ -370,7 +372,8 @@ const NosSolutionsDe: React.FC = () => {
                           xl: "1.5em",
                         },
                         paddingTop: "23px",
-                        fontFamily: "Jost",
+                        // fontFamily: "Jost",
+                        fontFamily: "Mulish",
                         color: "#4D5053",
                         textAlign: "justify",
                       }}
@@ -493,11 +496,12 @@ const NosSolutionsDe: React.FC = () => {
                 sx={{
                   textAlign: "center",
                   color: "#292F36",
-                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "34px" },//xl: "50px"
+                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "34px" }, //xl: "50px"
                   // fontWeight: 400,
                   fontWeight: 600,
-                  lineHeight:"1.5em",
+                  lineHeight: "1.5em",
                   marginTop: "50px",
+                  fontFamily: "Mulish",
                 }}
               >
                 {modulesPage[0]?.data.video_title}
@@ -684,7 +688,7 @@ const NosSolutionsDe: React.FC = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    fontWeight:500
+                    fontWeight: 500,
                   }}
                 >
                   {item.heading}
@@ -707,7 +711,7 @@ const NosSolutionsDe: React.FC = () => {
                           },
                           lineHeight: "1.9em",
                           letterSpacing: "1%",
-                          fontWeight:500
+                          fontWeight: 500,
                         }}
                       >
                         {point}

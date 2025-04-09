@@ -218,7 +218,7 @@ export default function BlogsNews() {
                       sm: "40px",
                       lg: "40px",
                       // xl: "50px",
-                      xl: "34px",
+                      xl: "32px",
                     },
                     lineHeight: {
                       xs: "30px",
@@ -455,18 +455,21 @@ export default function BlogsNews() {
                           sx={{
                             fontFamily: "Jenna Sue",
                             color: "#24535C",
-                            fontWeight: 400,
+                            // fontWeight: 400,
+                            fontWeight: 300,
                             fontSize: {
                               xs: "28px",
                               sm: "38px",
                               lg: "48px",
-                              xl: "48px",
+                              // xl: "48px",
+                              xl:"35px"
                             },
                             lineHeight: {
                               xs: "30px",
                               sm: "45px",
                               lg: "60px",
-                              xl: "60px",
+                              // xl: "60px",
+                              xl:"1.5em"
                             },
                             textAlign: "center",
                             letterSpacing: "2%",
@@ -476,7 +479,7 @@ export default function BlogsNews() {
                               lg: "2px 150px 67px 150px",
                               xl: isMax
                                 ? "2px 300px 67px 300px"
-                                : "2px 200px 67px 200px",
+                                : "2px 280px 67px 280px",
                             },
                           }}
                         >
@@ -491,7 +494,7 @@ export default function BlogsNews() {
                 item
                 lg={3}
                 md={2.5}
-                xl={isMax ? 3 : 3}
+                xl={isMax ? 2.5 : 3}
                 style={{
                   marginTop: isMax ? "0px" : "20px",
                 }}
@@ -691,7 +694,7 @@ export default function BlogsNews() {
             >
               <Typography
                 sx={{
-                  fontSize: { xs: "28px", sm: "40px", lg: "50px", xl: "34px" }, //xl: "50px"
+                  fontSize: { xs: "28px", sm: "40px", lg: "50px", xl: "32px" }, //xl: "50px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
@@ -700,6 +703,7 @@ export default function BlogsNews() {
                     xl: "1.5em",
                   },
                   fontFamily: "Mulish",
+                  fontWeight:600,
                   letterSpacing: "2%",
                   color: "#292F36",
                   paddingRight: { md: "200px", lg: "300px", xl: "300px" },

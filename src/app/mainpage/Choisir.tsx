@@ -107,8 +107,8 @@ const Choisir: React.FC = () => {
               <div style={{}}>
                 <Typography
                   sx={{
-                    // fontFamily: "Mulish",
-                    fontFamily: "Helvetica, sans-serif",
+                    fontFamily: "Mulish",
+                    // fontFamily: "Helvetica, sans-serif",
                     color: "#565656",
                     // fontWeight: 400,
                     fontWeight: 500,
@@ -130,7 +130,7 @@ const Choisir: React.FC = () => {
                       xs: "0% 3%",
                       sm: "0% 8%",
                       lg: "21px 148px 69px 148px",
-                      xl: "41px 500px 69px 500px",
+                      xl: "41px 550px 69px 550px",
                     },
                     textAlign: "center",
                     maxWidth: "75%",
