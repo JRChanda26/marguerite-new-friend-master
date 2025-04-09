@@ -971,6 +971,8 @@ export default function Contact() {
   ];
 
   const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax6 = useMediaQuery("(min-width:1200px)");
+  const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
   const isMax2 = useMediaQuery("(min-width:2570px)");
@@ -995,7 +997,11 @@ export default function Contact() {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 70px",
+                      : isMax6
+                        ? "0px 65px"
+                      : isMax7
+                        ? "0px 20px"
+                        : "0px 0px",
         }}
       >
         <Grid
@@ -1376,7 +1382,7 @@ export default function Contact() {
               sx={{
                 textAlign: {
                   xs: "center",
-                  md: "right",
+                  md: "center",
                   lg: "right",
                   xl: "right",
                 },

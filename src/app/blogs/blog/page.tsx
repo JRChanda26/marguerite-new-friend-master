@@ -145,6 +145,8 @@ export default function Blogs() {
 
   const dimensions = getDimensions();
 
+  const isMax7 = useMediaQuery("(min-width:750px)");
+  const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
@@ -170,7 +172,11 @@ export default function Blogs() {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 0px",
+                      : isMax6
+                        ? "0px 65px"
+                        : isMax7
+                          ? "0px 20px"
+                          : "0px 0px",
         }}
       >
         <Grid

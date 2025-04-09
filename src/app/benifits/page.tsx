@@ -58,6 +58,8 @@ const Benifits: React.FC = () => {
     return { width: "283.55px", height: "433px" };
   };
 
+  const isMax7 = useMediaQuery("(min-width:750px)");
+  const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
@@ -89,7 +91,11 @@ const Benifits: React.FC = () => {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 70px",
+                      : isMax6
+                        ? "0px 65px"
+                        : isMax7
+                          ? "0px 20px"
+                          : "0px 0px",
         }}
       >
         <div
