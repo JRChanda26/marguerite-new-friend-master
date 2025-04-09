@@ -22,12 +22,13 @@ export default function Paroles() {
     fetchData();
   }, []);
 
-    const isMax5 = useMediaQuery("(min-width:1370px)");
-    const isMax = useMediaQuery("(min-width:1930px)");
-    const isMax1 = useMediaQuery("(min-width:2050px)");
-    const isMax2 = useMediaQuery("(min-width:2570px)");
-    const isMax3 = useMediaQuery("(min-width:2890px)");
-    const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax6 = useMediaQuery("(min-width:1030px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
@@ -66,9 +67,9 @@ export default function Paroles() {
   //   "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Arial" },
   // };
   const fontMap: Record<HighlightWord, { fontFamily: string }> = {
-    "Marguerite Services,": {fontFamily: "Jenna Sue" }, //fontFamily: "Helvetica"
+    "Marguerite Services,": { fontFamily: "Jenna Sue" }, //fontFamily: "Helvetica"
     "Responsabilité Sociétale des Entreprises (RSE)": {
-      fontFamily: "Mulish"
+      fontFamily: "Mulish",
       // fontFamily: "Helvetica",
     },
   };
@@ -153,14 +154,22 @@ export default function Paroles() {
     <div
       style={{
         // padding: isMax ? "0px 350px" : "0px 0px",
-        padding : isMax4 ? "0px 500px" 
-        : isMax3 ? "0px 320px" 
-        : isMax2 ? "0px 280px" 
-        : isMax1 ? "0px 220px" 
-        : isMax ? "0px 140px" 
-        :isMax5?"0px 110px"
-        : "0px 0px",
-      }} 
+        padding: isMax4
+          ? "0px 500px"
+          : isMax3
+            ? "0px 320px"
+            : isMax2
+              ? "0px 280px"
+              : isMax1
+                ? "0px 220px"
+                : isMax
+                  ? "0px 140px"
+                  : isMax5
+                    ? "0px 110px"
+                    : isMax6
+                      ? "0px 70px"
+                      : "0px 0px",
+      }}
     >
       <div
         style={{
@@ -175,12 +184,12 @@ export default function Paroles() {
               color: "#0A1411",
               // fontWeight: 700,
               fontWeight: 600,
-              fontSize: { xs: "28px", sm: "45px", lg: "64px", xl: "32px" }, //xl: "64px"
+              fontSize: { xs: "28px", sm: "45px", lg: "32px", xl: "32px" }, //xl: "64px"
               lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "1.5em" }, //xl: "auto"
               padding: {
                 xs: "2% 0%",
                 sm: "5% 0%",
-                lg: "100px",
+                lg: "50px 0px",
                 xl: isMax ? "0px 194px 50px 194px" : "0px 194px 100px 194px",
               },
               fontFamily: "Mulish",
@@ -341,18 +350,18 @@ export default function Paroles() {
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
               letterSpacing: "0%",
-              fontSize: { xs: "14px", sm: "16px", lg: "25px", xl: "18px" }, //xl: "25px"
+              fontSize: { xs: "14px", sm: "16px", lg: "18px", xl: "18px" }, //xl: "25px"
               lineHeight: {
                 xs: "25px",
                 sm: "30px",
                 lg: "38.4px",
                 // xl: "38.4px",
-                xl:"1.9em"
+                xl: "1.9em",
               },
               padding: {
                 xs: "5%",
                 sm: "2%",
-                lg: "0px 70px 0px 70px",
+                lg: "0px 100px 0px 100px",
                 xl: "0px 300px 0px 300px",
               },
             }}

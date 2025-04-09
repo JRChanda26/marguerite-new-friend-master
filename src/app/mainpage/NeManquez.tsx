@@ -95,22 +95,28 @@ export default function NeManquez() {
     fontSize: isSmallScreen ? "8px" : "19.25px",
   };
 
-        const isMax = useMediaQuery("(min-width:1930px)");
-        const isMax1 = useMediaQuery("(min-width:2050px)");
-        const isMax2 = useMediaQuery("(min-width:2570px)");
-        const isMax3 = useMediaQuery("(min-width:2890px)");
-        const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
 
   return (
     <div
       style={{
         // padding: isMax ? "0px 350px" : "0px 0px",
-        padding : isMax4 ? "0px 650px" 
-        : isMax3 ? "0px 550px" 
-        : isMax2 ? "0px 450px" 
-        : isMax1 ? "0px 350px" 
-        : isMax ? "0px 140px" 
-        : "0px 0px",
+        padding: isMax4
+          ? "0px 650px"
+          : isMax3
+            ? "0px 550px"
+            : isMax2
+              ? "0px 450px"
+              : isMax1
+                ? "0px 350px"
+                : isMax
+                  ? "0px 140px"
+                  : "0px 0px",
       }}
     >
       <Grid
@@ -179,16 +185,16 @@ export default function NeManquez() {
                   fontSize: {
                     xs: "14px",
                     sm: "22px",
-                    md: "30px",
-                    lg: "38px",
+                    md: "32px",
+                    lg: "32px",
                     // xl: "41.81px",
-                    xl: "32px" 
+                    xl: "32px",
                   },
                   lineHeight: {
                     xs: "15px",
                     sm: "28px",
                     md: "42.47px",
-                    lg: "52.47px",
+                    lg: "1.1em",
                     // xl: "52.47px",
                     xl: "1.5em",
                   },
@@ -263,7 +269,7 @@ export default function NeManquez() {
                   lg: "5px 10px",
                   xl: "5px 10px",
                 },
-                marginTop: {xl:'30px'},
+                marginTop: { xl: "30px" },
                 alignItems: "center",
                 boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
                 height: {
@@ -333,7 +339,7 @@ export default function NeManquez() {
                     lg: "19.25px",
                     // md: "19.25px",
                     // xl: "19.25px",
-                    xl: "20px",
+                    xl: isMax5 ? "17px" : "20px",
                   },
                   fontWeight: 400,
                   padding: {

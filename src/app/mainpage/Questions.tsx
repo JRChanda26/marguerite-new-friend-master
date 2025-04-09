@@ -67,23 +67,29 @@ export default function Questions() {
     router.push("/contact");
   };
 
-    const isMax5 = useMediaQuery("(min-width:1370px)");
-    const isMax = useMediaQuery("(min-width:1930px)");
-    const isMax1 = useMediaQuery("(min-width:2050px)");
-    const isMax2 = useMediaQuery("(min-width:2570px)");
-    const isMax3 = useMediaQuery("(min-width:2890px)");
-    const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax6 = useMediaQuery("(min-width:1030px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div
       style={{
         // padding: isMax ? "0px 350px" : "0px 0px",
-        padding : isMax4 ? "0px 650px" 
-        : isMax3 ? "0px 550px" 
-        : isMax2 ? "0px 450px" 
-        : isMax1 ? "0px 350px" 
-        : isMax ? "0px 140px"  
-        : "0px 0px",
+        padding: isMax4
+          ? "0px 650px"
+          : isMax3
+            ? "0px 550px"
+            : isMax2
+              ? "0px 450px"
+              : isMax1
+                ? "0px 350px"
+                : isMax
+                  ? "0px 140px"
+                  : "0px 0px",
       }}
     >
       <Grid container spacing={2}>
@@ -108,7 +114,7 @@ export default function Questions() {
             margin: {
               xs: "30px 0px 30px 0px",
               sm: "50px 0px 50px 0px",
-              lg: "100px 50px 51px 0px",
+              lg: "50px 50px 51px 0px",
               md: "100px 50px 51px 0px",
               xl: "164px 80px 51px 0px",
             },
@@ -128,7 +134,7 @@ export default function Questions() {
                   xs: "28px",
                   sm: "45px",
                   md: "45px",
-                  lg: "55px",
+                  lg: "32px",
                   // xl: "64px",
                   xl: "32px",
                 },
@@ -138,12 +144,12 @@ export default function Questions() {
                   md: "120%",
                   lg: "120%",
                   // xl: "120%",
-                  xl: "1.5em"
+                  xl: "1.5em",
                 },
                 margin: {
                   xs: "0% 0% 0% 10%",
                   sm: "0% 0% 0% 5%",
-                  lg: "0px 30px 0px 100px",
+                  lg: "0px 30px 0px 70px",
                   md: "0px 30px 0px 80px",
                   xl: isMax ? "0px 130px 0px 0px" : "0px 130px 0px 110px",
                 },
@@ -164,9 +170,9 @@ export default function Questions() {
                   xs: "12px",
                   sm: "20px",
                   md: "20px",
-                  lg: "24px",
+                  lg: "18px",
                   // xl: "24px",
-                  xl: "18px" 
+                  xl: "18px",
                 },
                 lineHeight: {
                   xs: "20px",
@@ -179,7 +185,7 @@ export default function Questions() {
                 margin: {
                   xs: "1% 0% 0% 10%",
                   sm: "3% 0% 0% 5%",
-                  lg: "40px 0px 0px 100px",
+                  lg: "20px 0px 0px 70px",
                   md: "40px 30px 0px 80px",
                   xl: isMax ? "20px 0px 0px 0px" : "20px 0px 0px 110px",
                 },
@@ -192,7 +198,7 @@ export default function Questions() {
                 textDecoration: "none",
                 border: "1px solid #24535C",
                 color: "#24535C",
-                fontWeight:500,
+                fontWeight: 500,
                 // padding: "15px 25px",
                 padding: {
                   xs: "1% 3%",
@@ -207,7 +213,7 @@ export default function Questions() {
                 margin: {
                   xs: "5% 0% 0% 10%",
                   sm: "5% 0% 0% 5%",
-                  lg: "40px 0px 0px 100px",
+                  lg: "40px 0px 0px 70px",
                   md: "40px 30px 0px 80px",
                   xl: isMax ? "20px 0px 0px 0px" : "20px 0px 0px 110px",
                 },
@@ -219,7 +225,7 @@ export default function Questions() {
                   xs: "12px",
                   sm: "20px",
                   md: "20px",
-                  lg: "25px",
+                  lg: "20px",
                   // xl: "25px",
                   xl: "20px",
                 },
@@ -245,7 +251,11 @@ export default function Questions() {
                 style={{
                   width: "90%",
                   height: "auto",
-                  margin: "100px 0px 0px 110px",
+                  margin: isMax
+                    ? "100px 0px 0px 110px"
+                    : isMax6
+                      ? "50px 0px 0px 70px"
+                      : "0px",
                 }}
               />
             )}

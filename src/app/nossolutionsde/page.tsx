@@ -170,7 +170,7 @@ const NosSolutionsDe: React.FC = () => {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 0px",
+                      : "0px 70px",
         }}
       >
         <Grid
@@ -233,7 +233,7 @@ const NosSolutionsDe: React.FC = () => {
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
-                        lg: "50px",
+                        lg: "40px",
                         // xl: "50px",
                         xl: "59px",
                       },
@@ -258,7 +258,7 @@ const NosSolutionsDe: React.FC = () => {
                       fontSize: {
                         xs: "10px",
                         sm: "18px",
-                        lg: "22px",
+                        lg: "18px",
                         xl: "22px",
                       },
                       lineHeight: {
@@ -334,7 +334,7 @@ const NosSolutionsDe: React.FC = () => {
                           fontSize: {
                             xs: "30px",
                             sm: "40px",
-                            lg: "50px",
+                            lg: "40px",
                             // xl: "58px",
                             xl: "52px",
                           },
@@ -357,8 +357,8 @@ const NosSolutionsDe: React.FC = () => {
                       sx={{
                         fontSize: {
                           xs: "12px",
-                          sm: "18px",
-                          lg: "22px",
+                          sm: "15px",
+                          lg: "15px",
                           // xl: "22px",
                           xl: "15px",
                         },
@@ -424,9 +424,9 @@ const NosSolutionsDe: React.FC = () => {
                               fontFamily: "Mulish",
                               fontSize: {
                                 xs: "12px",
-                                sm: "18px",
-                                lg: "15.2px",
-                                xl: "15.2px",
+                                sm: "15px",
+                                lg: "15px",
+                                xl: "15px",
                               },
                               lineHeight: {
                                 xs: "8px",
@@ -496,7 +496,7 @@ const NosSolutionsDe: React.FC = () => {
                 sx={{
                   textAlign: "center",
                   color: "#292F36",
-                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "34px" }, //xl: "50px"
+                  fontSize: { xs: "30px", sm: "34px", lg: "34px", xl: "34px" }, //xl: "50px"
                   // fontWeight: 400,
                   fontWeight: 600,
                   lineHeight: "1.5em",
@@ -523,7 +523,7 @@ const NosSolutionsDe: React.FC = () => {
                   gap: { lg: "60px", xl: "0px" },
                 }}
               >
-                <Grid item xs={12} sm={5} lg={6} md={5} xl={6}>
+                <Grid item xs={12} sm={5} lg={6} md={5} xl={5}>
                   {/* {videoUrl ? (
                 <video
                   width="100%"
@@ -544,7 +544,7 @@ const NosSolutionsDe: React.FC = () => {
                     <img
                       src={modulesPage[0]?.data.video_image.url || undefined}
                       alt={modulesPage[0]?.data.video_image.alt || "Image"}
-                      width={isMax ? "95%" : "80%"}
+                      width={isMax ? "95%" : "90%"}
                       height="auto"
                     />
                   )}
@@ -595,9 +595,9 @@ const NosSolutionsDe: React.FC = () => {
                               lineHeight: "1.5em",
                               fontSize: {
                                 xs: "18px",
-                                sm: "22px",
-                                lg: "25px",
-                                md: "20px",
+                                sm: "21px",
+                                lg: "21px",
+                                md: "21px",
                                 // xl: "35px",
                                 xl: "21px",
                               },
@@ -615,9 +615,9 @@ const NosSolutionsDe: React.FC = () => {
                               color: "#4D5053",
                               fontSize: {
                                 xs: "14px",
-                                sm: "18px",
-                                lg: "22px",
-                                md: "18px",
+                                sm: "17px",
+                                lg: "17px",
+                                md: "17px",
                                 // xl: "28px",
                                 xl: "17px",
                               },

@@ -33,26 +33,34 @@ const NousAgissons: React.FC = () => {
     router.push("/contact");
   };
 
-    const isMax = useMediaQuery("(min-width:1930px)");
-    const isMax1 = useMediaQuery("(min-width:2050px)");
-    const isMax2 = useMediaQuery("(min-width:2570px)");
-    const isMax3 = useMediaQuery("(min-width:2890px)");
-    const isMax4 = useMediaQuery("(min-width:3210px)");
-
-    const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax6 = useMediaQuery("(min-width:1030px)");
 
   return (
     <div
       style={{
         // padding: isMax ? "0px 200px" : "0px 0px",
-        padding : isMax4 ? "0px 450px" 
-        : isMax3 ? "0px 320px" 
-        : isMax2 ? "0px 250px" 
-        : isMax1 ? "0px 200px" 
-        : isMax ? "0px 140px"  
-        : isMax5 ? "50px 120px 30px 80px"
-        : "0px 0px",
-        background: isMax || isMax5 ? "#F6C09E" : "#FFFFFF",
+        padding: isMax4
+          ? "0px 450px"
+          : isMax3
+            ? "0px 320px"
+            : isMax2
+              ? "0px 250px"
+              : isMax1
+                ? "0px 200px"
+                : isMax
+                  ? "0px 140px"
+                  : isMax5
+                    ? "50px 120px 30px 80px"
+                    : isMax6
+                      ? "20px 80px 20px 10px"
+                      : "0px",
+        background: isMax || isMax5 ? "#F6C09E" : "#F6C09E",
       }}
     >
       {nousPage.map((post: any) => (
@@ -86,7 +94,12 @@ const NousAgissons: React.FC = () => {
               backgroundColor: "#F6C09E",
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
-              paddingLeft: { xs: "20px", sm: "20px", lg: "60px", xl: isMax ?"0px":"30px" },
+              paddingLeft: {
+                xs: "20px",
+                sm: "20px",
+                lg: "60px",
+                xl: isMax ? "0px" : "30px",
+              },
               paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
               // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
@@ -115,7 +128,7 @@ const NousAgissons: React.FC = () => {
                     sm: "30px",
                     lg: "40px",
                     // xl: "64px",
-                    xl:"55px"
+                    xl: "55px",
                   },
 
                   lineHeight: {
@@ -139,11 +152,11 @@ const NousAgissons: React.FC = () => {
                   // fontWeight: 400,
                   fontWeight: 300,
                   paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
-                  paddingRight:isMax5? "300px":"0px",
+                  paddingRight: isMax5 ? "300px" : "0px",
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
-                    lg: "30px",
+                    lg: "25px",
                     // xl: "58px",
                     xl: "35px",
                   },
@@ -237,7 +250,7 @@ const NousAgissons: React.FC = () => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding:isMax?"90px 0px 40px 0px":"0px 0px"
+              padding: isMax ? "90px 0px 40px 0px" : "0px 0px",
             }}
           >
             {post?.data.background_image && (

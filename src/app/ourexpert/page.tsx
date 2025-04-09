@@ -173,7 +173,7 @@ const OurExperts: React.FC = () => {
   };
 
   const isXl = useMediaQuery("(max-width:1920px)");
-  const isLg = useMediaQuery("(max-width:1360px)");
+  const isLg = useMediaQuery("(max-width:1450px)");
   const isMd = useMediaQuery("(max-width:992px)");
   const isSm = useMediaQuery("(max-width:768px)");
   const isXs = useMediaQuery("(max-width:576px)");
@@ -211,14 +211,14 @@ const OurExperts: React.FC = () => {
     fontSize: isXs ? "12px" : "18px",
   };
 
-    const isMax5 = useMediaQuery("(min-width:1370px)");
-    const isMax = useMediaQuery("(min-width:1930px)");
-    const isMax1 = useMediaQuery("(min-width:2050px)");
-    const isMax2 = useMediaQuery("(min-width:2570px)");
-    const isMax3 = useMediaQuery("(min-width:2890px)");
-    const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
-    const isMaxLg = useMediaQuery("(min-width:1365px)");
+  const isMaxLg = useMediaQuery("(min-width:1365px)");
 
   return (
     <Box sx={{}}>
@@ -226,17 +226,24 @@ const OurExperts: React.FC = () => {
       <div
         style={{
           // padding: isMax ? "0px 350px" : "0px 0px",
-          padding : isMax4 ? "0px 650px" 
-          : isMax3 ? "0px 450px" //550
-          : isMax2 ? "0px 300px" //450
-          : isMax1 ? "0px 220px" 
-          : isMax ? "0px 140px" :isMax5?" 0px 100px"
-          : "0px 0px"
-          // padding : isMax4 ? "0px 500px" 
-          // : isMax3 ? "0px 220px 0px 320px" 
-          // : isMax2 ? "0px 180px 0px 280px" 
-          // : isMax1 ? "0px 220px" 
-          // : isMax ? "0px 140px" 
+          padding: isMax4
+            ? "0px 650px"
+            : isMax3
+              ? "0px 450px" //550
+              : isMax2
+                ? "0px 300px" //450
+                : isMax1
+                  ? "0px 220px"
+                  : isMax
+                    ? "0px 140px"
+                    : isMax5
+                      ? " 0px 110px"
+                      : "0px 70px",
+          // padding : isMax4 ? "0px 500px"
+          // : isMax3 ? "0px 220px 0px 320px"
+          // : isMax2 ? "0px 180px 0px 280px"
+          // : isMax1 ? "0px 220px"
+          // : isMax ? "0px 140px"
           // : "0px 0px",
         }}
       >
@@ -258,9 +265,9 @@ const OurExperts: React.FC = () => {
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "28px",
-                      sm: "42px",
-                      md: "42px",
-                      lg: "58px",
+                      sm: "32px",
+                      md: "32px",
+                      lg: "32px",
                       // xl: "84px",
                       xl: "32px",
                     },
@@ -268,10 +275,10 @@ const OurExperts: React.FC = () => {
                     fontWeight: 600,
                     lineHeight: {
                       xs: "30px",
-                      sm: "65px",
-                      lg: "auto",
+                      sm: "1.5em",
+                      lg: "1.5em",
                       // xl: "auto",
-                      xl: "1.5em"
+                      xl: "1.5em",
                     },
                     textAlign: "center",
                     color: "#0A1411",
@@ -293,18 +300,18 @@ const OurExperts: React.FC = () => {
                       xs: "14px",
                       sm: "18px",
                       md: "18px",
-                      lg: "22px",
+                      lg: "18px",
                       // xl: "28px",
-                      xl: "18px"
+                      xl: "18px",
                     },
                     // fontWeight: 400,
                     fontWeight: 500,
                     lineHeight: {
                       xs: "16px",
                       sm: "25px",
-                      lg: "33px",
+                      lg: "1.9em",
                       // xl: "33px",
-                      xl: "1.9em", 
+                      xl: "1.9em",
                     },
                     textAlign: "center",
                     color: "#4D5053",
@@ -340,11 +347,9 @@ const OurExperts: React.FC = () => {
                     margin: {
                       xs: "0% 0% 30% 0%",
                       sm: "0% 0% 15% 0%",
-                      lg: isMaxLg ? "20px 50px" : "0px 100px",
+                      lg: isMaxLg ? "20px 50px" : "0px 50px",
                       md: "0px 80px 80px 80px",
-                      xl: isMax
-                        ? "0px 340px 20px 340px"
-                        : "0px 10% 150px 10%", //250px - 10%
+                      xl: isMax ? "0px 340px 20px 340px" : "0px 5% 150px 5%", //250px - 10%
                     },
                   }}
                 >

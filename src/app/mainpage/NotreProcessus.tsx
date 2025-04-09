@@ -62,21 +62,26 @@ export default function NotreProcessus() {
   const [isHovered, setIsHovered] = useState<number | null>(null);
 
   const isMax = useMediaQuery("(min-width:1930px)");
-    const isMax1 = useMediaQuery("(min-width:2050px)");
-    const isMax2 = useMediaQuery("(min-width:2570px)");
-    const isMax3 = useMediaQuery("(min-width:2890px)");
-    const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div
       style={{
         // padding: isMax ? "0px 350px" : "0px 0px",
-        padding : isMax4 ? "0px 650px" 
-        : isMax3 ? "0px 550px" 
-        : isMax2 ? "0px 450px" 
-        : isMax1 ? "0px 350px" 
-        : isMax ? "0px 140px" 
-        : "0px 0px",
+        padding: isMax4
+          ? "0px 650px"
+          : isMax3
+            ? "0px 550px"
+            : isMax2
+              ? "0px 450px"
+              : isMax1
+                ? "0px 350px"
+                : isMax
+                  ? "0px 140px"
+                  : "0px 0px",
       }}
     >
       <Grid container spacing={2}>
@@ -95,7 +100,7 @@ export default function NotreProcessus() {
               // fontWeight: 700,
               fontWeight: 600,
               // lineHeight: "80.32px",
-              fontSize: { xs: "28px", sm: "40px", lg: "64px", xl: "32px" }, //xl: "64px"
+              fontSize: { xs: "28px", sm: "40px", lg: "32px", xl: "32px" }, //xl: "64px"
               lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "1.5em" }, //xl: "auto"
               color: "#0A1411",
               fontFamily: "Mulish",
@@ -116,7 +121,7 @@ export default function NotreProcessus() {
               // fontWeight: 400,
               fontWeight: 500,
               // lineHeight: "38.04px",
-              fontSize: { xs: "12px", sm: "16px", lg: "24px", xl: "18px" }, // xl: "24px",
+              fontSize: { xs: "12px", sm: "16px", lg: "18px", xl: "18px" }, // xl: "24px",
               lineHeight: {
                 xs: "15px",
                 sm: "20px",
@@ -128,7 +133,7 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0% 10%",
                 sm: "0% 15%",
-                lg: "0px 155px 196px 155px",
+                lg: "0px 330px 196px 330px",
                 xl: isMax ? "30px 425px 50px 425px" : "0px 550px 100px 550px",
               },
               fontFamily: "Mulish",
@@ -192,7 +197,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "16px", xl: "32px" }, //xl: "18px"
+                  fontSize: { xs: "12px", sm: "14px", lg: "22px", xl: "32px" }, //xl: "18px"
                   lineHeight: {
                     xs: "28px",
                     sm: "25px",
@@ -207,13 +212,13 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "35px", xl: "28px" },//xl: "42px"
+                  fontSize: { xs: "25px", sm: "32px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
                     lg: "auto",
                     // xl: "auto",
-                    xl:"1.1em"
+                    xl: "1.1em",
                   },
                   paddingRight: { xl: "0px" },
                 }}
@@ -223,7 +228,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "17px" },//xl: "18px" 
+                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "17px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -291,7 +296,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "16px", xl: "32px" },// xl: "18px"
+                  fontSize: { xs: "12px", sm: "14px", lg: "22px", xl: "32px" }, // xl: "18px"
                   lineHeight: {
                     xs: "28px",
                     sm: "25px",
@@ -306,7 +311,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "35px", xl: "28px" },//xl: "42px"
+                  fontSize: { xs: "25px", sm: "32px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",
@@ -322,7 +327,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "17px" },//xl: "18px"
+                  fontSize: { xs: "12px", sm: "14px", lg: "14px", xl: "17px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -415,7 +420,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "16px", xl: "32px" }, //xl: "18px" 
+                  fontSize: { xs: "12px", sm: "14px", lg: "22px", xl: "32px" }, //xl: "18px"
                   lineHeight: {
                     xs: "28px",
                     sm: "25px",
@@ -430,7 +435,7 @@ export default function NotreProcessus() {
               <Typography
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "35px", xl: "28px" },//xl: "42px"
+                  fontSize: { xs: "25px", sm: "32px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
                     xs: "30px",
                     sm: "38px",

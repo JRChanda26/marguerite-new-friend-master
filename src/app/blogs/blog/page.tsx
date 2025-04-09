@@ -48,7 +48,7 @@ export default function Blogs() {
     // fontSize: "21.27px",
     fontWeight: 700,
     fontFamily: "Mulish",
-    lineHeight: "1.5em",//120%
+    lineHeight: "1.5em", //120%
     letterSpacing: "0%",
   };
 
@@ -145,6 +145,7 @@ export default function Blogs() {
 
   const dimensions = getDimensions();
 
+  const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
   const isMax2 = useMediaQuery("(min-width:2570px)");
@@ -165,8 +166,11 @@ export default function Blogs() {
                 ? "0px 250px"
                 : isMax1
                   ? "0px 200px"
-                  : isMax ? "0px 140px" 
-                    : "0px 0px",
+                  : isMax
+                    ? "0px 140px"
+                    : isMax5
+                      ? "0px 110px"
+                      : "0px 0px",
         }}
       >
         <Grid
@@ -227,7 +231,7 @@ export default function Blogs() {
                   // fontWeight: 700,
                   fontWeight: 500,
                   // fontSize: "50px",
-                  fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "59px" }, //xl: "50px"
+                  fontSize: { xs: "16px", sm: "40px", lg: "40px", xl: "59px" }, //xl: "50px"
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -248,7 +252,7 @@ export default function Blogs() {
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "18px", lg: "22px", xl: "22px" },
+                  fontSize: { xs: "10px", sm: "18px", lg: "18px", xl: "22px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -292,7 +296,7 @@ export default function Blogs() {
                 sx={{
                   color: "#292F36",
                   // fontSize: "50px",
-                  fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "32px" }, //xl: "50px"
+                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "50px"
                   lineHeight: {
                     xs: "40px",
                     sm: "48px",
@@ -339,7 +343,7 @@ export default function Blogs() {
                       sx={{
                         display: "flex",
                         // flexDirection: "row",
-                        alignItems:'center',
+                        alignItems: "center",
                         flexDirection: {
                           xs: "column",
                           sm: "column",
@@ -351,7 +355,7 @@ export default function Blogs() {
                           xs: "22px",
                           sm: "22px",
                           lg: "22px 50px",
-                          xl: isMax? "22px": "22px",
+                          xl: isMax ? "22px" : "22px",
                         },
                         gap: "50px",
                       }}
@@ -386,10 +390,10 @@ export default function Blogs() {
                             fontSize: {
                               // xl: "35px",
                               xl: "20px",
-                              lg: "25px",
-                              md: "25px",
-                              sm: "25px",
-                              xs: "25px",
+                              lg: "20px",
+                              md: "20px",
+                              sm: "20px",
+                              xs: "20px",
                             },
                             fontWeight: 700,
                             fontFamily: "Mulish",
@@ -407,10 +411,10 @@ export default function Blogs() {
                             fontSize: {
                               // xl: "30px",
                               xl: "17px",
-                              lg: "22px",
-                              md: "22px",
-                              sm: "22px",
-                              xs: "22px",
+                              lg: "17px",
+                              md: "17px",
+                              sm: "17px",
+                              xs: "17px",
                             },
                             fontWeight: 400,
                             fontFamily: "Mulish",
@@ -427,7 +431,7 @@ export default function Blogs() {
                             display: "flex",
                             justifyContent: "space-between",
                             flexDirection: "row",
-                            marginTop:'40px'
+                            marginTop: "40px",
                           }}
                         >
                           <Typography
@@ -493,7 +497,7 @@ export default function Blogs() {
                             </IconButton>
                           </div>
                         </div>
-                         {/* end */}
+                        {/* end */}
                       </div>
                     </Grid>
                   ))}
@@ -554,8 +558,8 @@ export default function Blogs() {
           >
             <Typography
               sx={{
-                fontSize: { xs: "25px", sm: "40px", lg: "50px", xl: "32px" },//xl: "50px"
-                lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "1.5em" },//xl: "125%"
+                fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "50px"
+                lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "1.5em" }, //xl: "125%"
                 // fontWeight: 700,
                 fontWeight: 600,
                 color: "#292F36",
@@ -693,10 +697,8 @@ export default function Blogs() {
                 padding: {
                   xs: "3% 5%",
                   sm: "3% 5%",
-                  lg: "78px 50px 200px 50px",
-                  xl: isMax
-                    ? "78px 150px 20px 150px"
-                    : "78px 150px 20px 150px",
+                  lg: "78px 50px 0px 50px",
+                  xl: isMax ? "78px 150px 20px 150px" : "78px 150px 20px 150px",
                 },
               }}
             >
@@ -744,10 +746,10 @@ export default function Blogs() {
                         ...title,
                         fontSize: {
                           xs: "14px",
-                          sm: "18px",
+                          sm: "17px",
                           lg: "17px",
                           // xl: "21.27px",
-                           xl:"20px"
+                          xl: "20px",
                         },
                       }}
                     >
@@ -761,7 +763,7 @@ export default function Blogs() {
                           sm: "14px",
                           lg: "14px",
                           // xl: "18.61px",
-                          xl:"17px"
+                          xl: "17px",
                         },
                       }}
                     >

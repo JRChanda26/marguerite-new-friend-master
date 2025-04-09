@@ -995,7 +995,7 @@ export default function Contact() {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 0px",
+                      : "0px 70px",
         }}
       >
         <Grid
@@ -1058,7 +1058,7 @@ export default function Contact() {
                   // fontSize: "50px",
                   // fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                   // added by pragatika
-                  fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "59px" },
+                  fontSize: { xs: "16px", sm: "40px", lg: "40px", xl: "59px" },
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -1079,7 +1079,7 @@ export default function Contact() {
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "18px", lg: "22px", xl: "22px" },
+                  fontSize: { xs: "10px", sm: "18px", lg: "18px", xl: "22px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -1129,7 +1129,7 @@ export default function Contact() {
                 sx={{
                   color: "#292F36",
                   // fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "31px" },
+                  fontSize: { xs: "30px", sm: "32px", lg: "32px", xl: "32px" },
                   fontWeight: 700,
                   textAlign: "center",
                   padding: {

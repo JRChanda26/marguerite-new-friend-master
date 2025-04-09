@@ -58,12 +58,12 @@ const Benifits: React.FC = () => {
     return { width: "283.55px", height: "433px" };
   };
 
-     const isMax5 = useMediaQuery("(min-width:1370px)");
-     const isMax = useMediaQuery("(min-width:1930px)");
-     const isMax1 = useMediaQuery("(min-width:2050px)");
-     const isMax2 = useMediaQuery("(min-width:2570px)");
-     const isMax3 = useMediaQuery("(min-width:2890px)");
-     const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <Box sx={{}}>
@@ -71,18 +71,25 @@ const Benifits: React.FC = () => {
       <div
         style={{
           // padding: isMax ? "0px 350px" : "0px 0px",
-          // padding : isMax4 ? "0px 650px" 
-          // : isMax3 ? "0px 550px" 
-          // : isMax2 ? "0px 450px" 
-          // : isMax1 ? "0px 350px" 
-          // : isMax ? "0px 120px" 
+          // padding : isMax4 ? "0px 650px"
+          // : isMax3 ? "0px 550px"
+          // : isMax2 ? "0px 450px"
+          // : isMax1 ? "0px 350px"
+          // : isMax ? "0px 120px"
           // : "0px 0px"
-          padding : isMax4 ? "0px 500px" 
-        : isMax3 ? "0px 300px 0px 320px" 
-        : isMax2 ? "0px 260px 0px 270px" 
-        : isMax1 ? "0px 220px" 
-        : isMax ? "0px 140px" :isMax5?"0px 110px"
-        : "0px 0px",
+          padding: isMax4
+            ? "0px 500px"
+            : isMax3
+              ? "0px 300px 0px 320px"
+              : isMax2
+                ? "0px 260px 0px 270px"
+                : isMax1
+                  ? "0px 220px"
+                  : isMax
+                    ? "0px 140px"
+                    : isMax5
+                      ? "0px 110px"
+                      : "0px 70px",
         }}
       >
         <div
@@ -107,9 +114,9 @@ const Benifits: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "35px",
-                      sm: "48px",
-                      lg: "58px",
+                      xs: "32px",
+                      sm: "32px",
+                      lg: "32px",
                       // xl: "64px",
                       xl: "32px",
                     },
@@ -117,10 +124,10 @@ const Benifits: React.FC = () => {
                     fontWeight: 600,
                     lineHeight: {
                       xs: "40px",
-                      sm: "64px",
-                      lg: "auto",
+                      sm: "1.5em",
+                      lg: "1.5em",
                       // xl: "auto",
-                      xl: "1.5em"
+                      xl: "1.5em",
                     },
                     textAlign: "center",
                     color: "#0A1411",
@@ -140,18 +147,18 @@ const Benifits: React.FC = () => {
                     fontSize: {
                       xs: "16px",
                       sm: "18px",
-                      lg: "22px",
+                      lg: "18px",
                       // xl: "25px",
-                       xl: "18px"
+                      xl: "18px",
                     },
                     // fontWeight: 400,
                     fontWeight: 500,
                     lineHeight: {
                       xs: "20px",
-                      sm: "25px",
-                      lg: "33px",
+                      sm: "1.9em",
+                      lg: "1.9em",
                       // xl: "33px",
-                      xl: "1.9em", 
+                      xl: "1.9em",
                     },
                     textAlign: "center",
                     color: "#4D5053",
@@ -244,9 +251,9 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "35px",
-                                md: "20px",
-                                lg: "25px",
+                                sm: "21px",
+                                md: "21px",
+                                lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
                               },
@@ -268,9 +275,9 @@ const Benifits: React.FC = () => {
                           sx={{
                             fontSize: {
                               xs: "12px",
-                              sm: "25px",
-                              md: "16px",
-                              lg: "18px",
+                              sm: "17px",
+                              md: "17px",
+                              lg: "17px",
                               // xl: "24px",
                               xl: "17px",
                             },
@@ -282,7 +289,7 @@ const Benifits: React.FC = () => {
                             letterSpacing: "0%",
                             // lineHeight: "185%",
                             lineHeight: "1.9em",
-                            fontWeight:500
+                            fontWeight: 500,
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description1}
@@ -349,9 +356,9 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "35px",
-                                md: "20px",
-                                lg: "25px",
+                                sm: "21px",
+                                md: "22px",
+                                lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
                               },
@@ -373,9 +380,9 @@ const Benifits: React.FC = () => {
                           sx={{
                             fontSize: {
                               xs: "12px",
-                              sm: "25px",
-                              md: "16px",
-                              lg: "18px",
+                              sm: "17px",
+                              md: "17px",
+                              lg: "17px",
                               // xl: "24px",
                               xl: "17px",
                             },
@@ -387,7 +394,7 @@ const Benifits: React.FC = () => {
                             letterSpacing: "0%",
                             // lineHeight: "185%",
                             lineHeight: "1.9em",
-                            fontWeight:500
+                            fontWeight: 500,
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description2}
@@ -472,9 +479,9 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "35px",
-                                md: "20px",
-                                lg: "25px",
+                                sm: "21px",
+                                md: "21px",
+                                lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
                               },
@@ -496,9 +503,9 @@ const Benifits: React.FC = () => {
                           sx={{
                             fontSize: {
                               xs: "12px",
-                              sm: "25px",
-                              lg: "18px",
-                              md: "16px",
+                              sm: "17px",
+                              lg: "17px",
+                              md: "17px",
                               // xl: "24px",
                               xl: "17px",
                             },
@@ -510,7 +517,7 @@ const Benifits: React.FC = () => {
                             letterSpacing: "0%",
                             // lineHeight: "185%",
                             lineHeight: "1.9em",
-                            fontWeight:500
+                            fontWeight: 500,
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description3}
@@ -577,9 +584,9 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "35px",
-                                md: "20px",
-                                lg: "25px",
+                                sm: "21px",
+                                md: "21px",
+                                lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
                               },
@@ -601,9 +608,9 @@ const Benifits: React.FC = () => {
                           sx={{
                             fontSize: {
                               xs: "12px",
-                              sm: "25px",
-                              md: "16px",
-                              lg: "18px",
+                              sm: "17px",
+                              md: "17px",
+                              lg: "17px",
                               // xl: "24px",
                               xl: "17px",
                             },
@@ -615,7 +622,7 @@ const Benifits: React.FC = () => {
                             letterSpacing: "0%",
                             // lineHeight: "185%",
                             lineHeight: "1.9em",
-                            fontWeight:500
+                            fontWeight: 500,
                           }}
                         >
                           {leCarePage[0]?.data.bottom_card_description4}

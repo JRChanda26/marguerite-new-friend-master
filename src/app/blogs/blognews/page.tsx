@@ -145,8 +145,10 @@ export default function BlogsNews() {
                 : isMax1
                   ? "0px 200px"
                   : isMax
-                    ? "0px 140px":isMax5?"0px 110px"
-                    : "0px 0px",
+                    ? "0px 140px"
+                    : isMax5
+                      ? "0px 110px"
+                      : "0px 70px",
         }}
       >
         <Grid
@@ -215,8 +217,8 @@ export default function BlogsNews() {
                   sx={{
                     fontSize: {
                       xs: "25px",
-                      sm: "40px",
-                      lg: "40px",
+                      sm: "32px",
+                      lg: "32px",
                       // xl: "50px",
                       xl: "32px",
                     },
@@ -225,9 +227,9 @@ export default function BlogsNews() {
                       sm: "40px",
                       lg: "125%",
                       // xl: "125%",
-                      xl:"1.5em"
+                      xl: "1.5em",
                     },
-                    fontWeight:600,
+                    fontWeight: 600,
                     letterSpacing: "2%",
                     fontFamily: "Mulish",
                     color: "#292F36",
@@ -339,12 +341,12 @@ export default function BlogsNews() {
                   sx={{
                     fontSize: {
                       xs: "12px",
-                      sm: "16px",
-                      lg: "22px",
+                      sm: "18px",
+                      lg: "18px",
                       // xl: "22px",
                       xl: "18px",
                     },
-                    fontWeight:500,
+                    fontWeight: 500,
                     lineHeight: {
                       xs: "16px",
                       sm: "20px",
@@ -459,17 +461,17 @@ export default function BlogsNews() {
                             fontWeight: 300,
                             fontSize: {
                               xs: "28px",
-                              sm: "38px",
-                              lg: "48px",
+                              sm: "35px",
+                              lg: "35px",
                               // xl: "48px",
-                              xl:"35px"
+                              xl: "35px",
                             },
                             lineHeight: {
                               xs: "30px",
                               sm: "45px",
                               lg: "60px",
                               // xl: "60px",
-                              xl:"1.5em"
+                              xl: "1.5em",
                             },
                             textAlign: "center",
                             letterSpacing: "2%",
@@ -492,7 +494,7 @@ export default function BlogsNews() {
               </Grid>
               <Grid
                 item
-                lg={3}
+                lg={4}
                 md={2.5}
                 xl={isMax ? 2.5 : 3}
                 style={{
@@ -587,7 +589,7 @@ export default function BlogsNews() {
                                 xs: "20px",
                                 sm: "20px",
                                 md: "14px",
-                                lg: "18px",
+                                lg: "16px",
                                 // xl: "30px",
                                 xl: "18px",
                               },
@@ -694,7 +696,7 @@ export default function BlogsNews() {
             >
               <Typography
                 sx={{
-                  fontSize: { xs: "28px", sm: "40px", lg: "50px", xl: "32px" }, //xl: "50px"
+                  fontSize: { xs: "28px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "50px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
@@ -703,17 +705,17 @@ export default function BlogsNews() {
                     xl: "1.5em",
                   },
                   fontFamily: "Mulish",
-                  fontWeight:600,
+                  fontWeight: 600,
                   letterSpacing: "2%",
                   color: "#292F36",
-                  paddingRight: { md: "200px", lg: "300px", xl: "300px" },
+                  paddingRight: { md: "200px", lg: "100px", xl: "300px" },
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_heading}
               </Typography>
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "20px", lg: "22px", xl: "18px" }, //xl: "22px"
+                  fontSize: { xs: "16px", sm: "18px", lg: "18px", xl: "18px" }, //xl: "22px"
                   lineHeight: {
                     xs: "25px",
                     sm: "30px",
@@ -726,7 +728,7 @@ export default function BlogsNews() {
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
                   textAlign: "justify",
-                  fontWeight:500
+                  fontWeight: 500,
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_description1}
@@ -740,8 +742,8 @@ export default function BlogsNews() {
                         sx={{
                           fontSize: {
                             xs: "16px",
-                            sm: "20px",
-                            lg: "22px",
+                            sm: "18px",
+                            lg: "18px",
                             // xl: "22px",
                             xl: "18px",
                           },
@@ -758,7 +760,7 @@ export default function BlogsNews() {
                           letterSpacing: "1%",
                           paddingRight: { lg: "0px", xl: "0px" },
                           textAlign: "justify",
-                          fontWeight:500
+                          fontWeight: 500,
                         }}
                       >
                         {index + 1}.{blogNewsPage[0]?.data.bottom_points}
@@ -781,7 +783,7 @@ export default function BlogsNews() {
               </div>
               <Typography
                 sx={{
-                  fontSize: { xs: "16px", sm: "20px", lg: "22px", xl: "18px" }, //xl: "22px"
+                  fontSize: { xs: "16px", sm: "18px", lg: "18px", xl: "18px" }, //xl: "22px"
                   lineHeight: {
                     xs: "25px",
                     sm: "30px",
@@ -793,7 +795,7 @@ export default function BlogsNews() {
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
                   textAlign: "justify",
-                  fontWeight:500
+                  fontWeight: 500,
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_description2}
@@ -874,19 +876,19 @@ export default function BlogsNews() {
               </div>
               <Typography
                 sx={{
-                  fontSize: { xs: "24px", sm: "30px", lg: "25px", xl: "28px" }, //xl: "30px"
+                  fontSize: { xs: "24px", sm: "25px", lg: "25px", xl: "28px" }, //xl: "30px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
                     lg: "150%",
                     // xl: "150%",
-                    xl:"1.1em"
+                    xl: "1.1em",
                   },
                   marginBottom: "62px",
                   color: "#4D5053",
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
-                  fontWeight:300
+                  fontWeight: 300,
                 }}
               >
                 {blogNewsPage[0]?.data.bottom_title}
