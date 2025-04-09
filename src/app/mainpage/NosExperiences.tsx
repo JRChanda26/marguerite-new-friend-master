@@ -31,12 +31,13 @@ const NosExperiences: React.FC = () => {
   const handleMouseEnter = () => setAnimationSpeed(100);
   const handleMouseLeave = () => setAnimationSpeed(40);
 
-    const isMax5 = useMediaQuery("(min-width:1370px)");
-    const isMax = useMediaQuery("(min-width:1930px)");
-    const isMax1 = useMediaQuery("(min-width:2050px)");
-    const isMax2 = useMediaQuery("(min-width:2570px)");
-    const isMax3 = useMediaQuery("(min-width:2890px)");
-    const isMax4 = useMediaQuery("(min-width:3210px)");
+  const isMax6 = useMediaQuery("(min-width:1030px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax1 = useMediaQuery("(min-width:2050px)");
+  const isMax2 = useMediaQuery("(min-width:2570px)");
+  const isMax3 = useMediaQuery("(min-width:2890px)");
+  const isMax4 = useMediaQuery("(min-width:3210px)");
 
   return (
     <div>
@@ -60,13 +61,21 @@ const NosExperiences: React.FC = () => {
           spacing={3}
           style={{
             // padding: isMax ? "0px 350px" : "0px 0px",
-            padding : isMax4 ? "0px 500px" 
-            : isMax3 ? "0px 320px" 
-            : isMax2 ? "0px 280px" 
-            : isMax1 ? "0px 220px" 
-            : isMax ? "0px 140px" 
-            :isMax5?"0px 110px"
-            : "0px 0px",
+            padding: isMax4
+              ? "0px 500px"
+              : isMax3
+                ? "0px 320px"
+                : isMax2
+                  ? "0px 280px"
+                  : isMax1
+                    ? "0px 220px"
+                    : isMax
+                      ? "0px 140px"
+                      : isMax5
+                        ? "0px 110px"
+                        : isMax6
+                          ? "0px 70px"
+                          : "0px",
           }}
         >
           {nosPage.map((post: any, postIndex: number) => (
@@ -91,16 +100,16 @@ const NosExperiences: React.FC = () => {
                   fontSize: {
                     xs: "20px",
                     sm: "48px",
-                    lg: "66.25px",
+                    lg: "32px",
                     // xl: "66.25px",
-                     xl: "32px"
+                    xl: "32px",
                   },
                   lineHeight: {
                     xs: "30px",
                     sm: "55px",
                     lg: "120%",
                     // xl: "120%",
-                    xl: "1.5em" 
+                    xl: "1.5em",
                   },
                   padding: {
                     xs: "12% 0% 2% 0%",
@@ -119,7 +128,7 @@ const NosExperiences: React.FC = () => {
                   color: "#FFFFFF",
                   // fontWeight: 400,
                   fontWeight: 500,
-                  fontSize: { xs: "8px", sm: "18px", lg: "24px",  xl: "18px" },// xl: "24px"
+                  fontSize: { xs: "8px", sm: "18px", lg: "18px", xl: "18px" }, // xl: "24px"
                   lineHeight: {
                     xs: "10px",
                     sm: "25px",
@@ -197,7 +206,7 @@ const NosExperiences: React.FC = () => {
                           lg: "394px",
                           xl: "394px",
                         },
-                        minHeight:{xl:'250px'}
+                        minHeight: { xl: "250px" },
                       }}
                     >
                       <Typography
@@ -210,7 +219,7 @@ const NosExperiences: React.FC = () => {
                           fontSize: {
                             xs: "12px",
                             sm: "16px",
-                            lg: "18px",
+                            lg: "20px",
                             // xl: "19.32px",
                             xl: "20px",
                           },

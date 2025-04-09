@@ -81,7 +81,7 @@ const Choisir: React.FC = () => {
                     fontSize: {
                       xs: "28px",
                       sm: "40px",
-                      lg: "64px",
+                      lg: "32px",
                       // xl: "64px",
                       xl: "32px",
                     },
@@ -115,7 +115,7 @@ const Choisir: React.FC = () => {
                     fontSize: {
                       xs: "12px",
                       sm: "18px",
-                      lg: "24px",
+                      lg: "18px",
                       // xl: "24px",
                       xl: "18px",
                     },
@@ -129,7 +129,7 @@ const Choisir: React.FC = () => {
                     padding: {
                       xs: "0% 3%",
                       sm: "0% 8%",
-                      lg: "21px 148px 69px 148px",
+                      lg: "21px 300px 69px 300px",
                       xl: "41px 550px 69px 550px",
                     },
                     textAlign: "center",
@@ -165,13 +165,13 @@ const Choisir: React.FC = () => {
               height: {
                 xs: isCardHovered === 1 ? "340px" : "300px",
                 sm: isCardHovered === 1 ? "400px" : "380px",
-                lg: isCardHovered === 1 ? "600px" : "480px",
+                lg: isCardHovered === 1 ? "500px" : "450px",
                 xl: isCardHovered === 1 ? "629.52px" : "476px",
               },
               width: {
                 xs: isCardHovered === 1 ? "300px" : "280px",
                 sm: isCardHovered === 1 ? "320px" : "300px",
-                lg: isCardHovered === 1 ? "420px" : "380px",
+                lg: isCardHovered === 1 ? "380px" : "320px",
                 xl: isCardHovered === 1 ? "486px" : "402px",
               },
               borderRadius: "16px",
@@ -214,7 +214,7 @@ const Choisir: React.FC = () => {
                     fontSize: {
                       xs: isCardHovered === 1 ? "18px" : "16px",
                       sm: isCardHovered === 1 ? "24px" : "22px",
-                      lg: isCardHovered === 1 ? "29.3px" : "24px",
+                      lg: isCardHovered === 1 ? "24px" : "20px",
                       // xl: isCardHovered === 1 ? "29.3px" : "24px",
                       xl: isCardHovered === 1 ? "24px" : "20px",
                     },
@@ -246,7 +246,7 @@ const Choisir: React.FC = () => {
                     fontSize: {
                       xs: isCardHovered === 1 ? "12px" : "10px",
                       sm: isCardHovered === 1 ? "16px" : "14px",
-                      lg: isCardHovered === 1 ? "19.36px" : "16px",
+                      lg: isCardHovered === 1 ? "17px" : "14px",
                       // xl: isCardHovered === 1 ? "19.36px" : "16px",
                       xl: isCardHovered === 1 ? "20px" : "17px",
                     },
@@ -263,7 +263,7 @@ const Choisir: React.FC = () => {
                     paddingTop: {
                       xs: isCardHovered === 1 ? "12px" : "10px",
                       sm: isCardHovered === 1 ? "14px" : "12px",
-                      lg: isCardHovered === 1 ? "44.76px" : "21px",
+                      lg: isCardHovered === 1 ? "20px" : "21px",
                       xl: isCardHovered === 1 ? "44.76px" : "21px",
                     },
                   }}
@@ -279,7 +279,7 @@ const Choisir: React.FC = () => {
                     paddingTop: {
                       xs: isCardHovered === 1 ? "8px" : "10px",
                       sm: isCardHovered === 1 ? "5px" : "14px",
-                      lg: isCardHovered === 1 ? "44.76px" : "21px",
+                      lg: isCardHovered === 1 ? "20px" : "21px",
                       xl: isCardHovered === 1 ? "44.76px" : "21px",
                     },
                     transition: "transform 0.3s ease",
@@ -336,8 +336,8 @@ const Choisir: React.FC = () => {
                     : "400px",
                 lg:
                   isCardHovered === 1 || isCardHovered === 2
-                    ? "480px"
-                    : "600px",
+                    ? "450px"
+                    : "500px",
                 xl:
                   isCardHovered === 1 || isCardHovered === 2
                     ? "476px"
@@ -354,8 +354,8 @@ const Choisir: React.FC = () => {
                     : "320px",
                 lg:
                   isCardHovered === 1 || isCardHovered === 2
-                    ? "380px"
-                    : "420px",
+                    ? "320px"
+                    : "380px",
                 xl:
                   isCardHovered === 1 || isCardHovered === 2
                     ? "402px"
@@ -410,13 +410,16 @@ const Choisir: React.FC = () => {
                           : "24px",
                       lg:
                         isCardHovered === 1 || isCardHovered === 2
-                          ? "24px"
-                          : "29.3px",
+                          ? "20px"
+                          : "24px",
                       // xl:
                       //   isCardHovered === 1 || isCardHovered === 2
                       //     ? "24px"
                       //     : "29.3px",
-                      xl: isCardHovered === 1 || isCardHovered === 2 ? "20px" : "24px",
+                      xl:
+                        isCardHovered === 1 || isCardHovered === 2
+                          ? "20px"
+                          : "24px",
                     },
                     lineHeight: {
                       xs: "20px",
@@ -466,13 +469,16 @@ const Choisir: React.FC = () => {
                           : "16px",
                       lg:
                         isCardHovered === 1 || isCardHovered === 2
-                          ? "16px"
-                          : "19.3px",
+                          ? "14px"
+                          : "17px",
                       // xl:
                       //   isCardHovered === 1 || isCardHovered === 2
                       //     ? "16px"
                       //     : "19.3px",
-                      xl: isCardHovered === 1 || isCardHovered === 2 ? "17px" : "20px",
+                      xl:
+                        isCardHovered === 1 || isCardHovered === 2
+                          ? "17px"
+                          : "20px",
                     },
                     lineHeight: {
                       xs:
@@ -501,7 +507,7 @@ const Choisir: React.FC = () => {
                       lg:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "21px"
-                          : "44.76px",
+                          : "20px",
                       xl:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "21px"
@@ -529,7 +535,7 @@ const Choisir: React.FC = () => {
                       lg:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "21px"
-                          : "44.76px",
+                          : "20px",
                       xl:
                         isCardHovered === 1 || isCardHovered === 2
                           ? "21px"
@@ -593,13 +599,13 @@ const Choisir: React.FC = () => {
               height: {
                 xs: isCardHovered === 2 ? "340px" : "300px",
                 sm: isCardHovered === 2 ? "400px" : "380px",
-                lg: isCardHovered === 2 ? "600px" : "480px",
+                lg: isCardHovered === 2 ? "500px" : "450px",
                 xl: isCardHovered === 2 ? "629.52px" : "476px",
               },
               width: {
                 xs: isCardHovered === 2 ? "300px" : "280px",
                 sm: isCardHovered === 2 ? "320px" : "300px",
-                lg: isCardHovered === 2 ? "420px" : "380px",
+                lg: isCardHovered === 2 ? "380px" : "320px",
                 xl: isCardHovered === 2 ? "486px" : "402px",
               },
               borderRadius: "16px",
@@ -642,7 +648,7 @@ const Choisir: React.FC = () => {
                     fontSize: {
                       xs: isCardHovered === 2 ? "18px" : "16px",
                       sm: isCardHovered === 2 ? "24px" : "22px",
-                      lg: isCardHovered === 2 ? "29.3px" : "24px",
+                      lg: isCardHovered === 2 ? "24px" : "20px",
                       // xl: isCardHovered === 2 ? "29.3px" : "24px",
                       xl: isCardHovered === 2 ? "24px" : "20px",
                     },
@@ -674,7 +680,7 @@ const Choisir: React.FC = () => {
                     fontSize: {
                       xs: isCardHovered === 2 ? "12px" : "10px",
                       sm: isCardHovered === 2 ? "16px" : "14px",
-                      lg: isCardHovered === 2 ? "19.36px" : "16px",
+                      lg: isCardHovered === 2 ? "17px" : "14px",
                       // xl: isCardHovered === 2 ? "19.36px" : "16px",
                       xl: isCardHovered === 2 ? "20px" : "17px",
                     },
@@ -691,7 +697,7 @@ const Choisir: React.FC = () => {
                     paddingTop: {
                       xs: isCardHovered === 2 ? "12px" : "10px",
                       sm: isCardHovered === 2 ? "14px" : "12px",
-                      lg: isCardHovered === 2 ? "44.76px" : "21px",
+                      lg: isCardHovered === 2 ? "20px" : "21px",
                       xl: isCardHovered === 2 ? "44.76px" : "21px",
                     },
                   }}
@@ -707,7 +713,7 @@ const Choisir: React.FC = () => {
                     paddingTop: {
                       xs: isCardHovered === 2 ? "18px" : "10px",
                       sm: isCardHovered === 2 ? "5px" : "14px",
-                      lg: isCardHovered === 2 ? "44.76px" : "21px",
+                      lg: isCardHovered === 2 ? "20px" : "21px",
                       xl: isCardHovered === 2 ? "44.76px" : "21px",
                     },
                     transition: "transform 0.3s ease",

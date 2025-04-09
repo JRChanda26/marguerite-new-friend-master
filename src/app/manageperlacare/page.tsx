@@ -363,7 +363,7 @@ const ManagePerLaCare: React.FC = () => {
                     ? "0px 140px"
                     : isMax5
                       ? "0px 110px"
-                      : "0px 0px",
+                      : "0px 70px",
         }}
       >
         <Grid
@@ -426,7 +426,7 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
-                        lg: "50px",
+                        lg: "40px",
                         // xl: "50px",
                         xl: "59px",
                       },
@@ -451,7 +451,7 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "10px",
                         sm: "18px",
-                        lg: "22px",
+                        lg: "18px",
                         xl: "22px",
                       },
                       lineHeight: {
@@ -537,7 +537,7 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "12px",
                         sm: "18px",
-                        lg: "24px",
+                        lg: "21px",
                         // xl: "24px",
                         xl: "21px",
                       },
@@ -692,11 +692,11 @@ const ManagePerLaCare: React.FC = () => {
                   fontFamily: "Mulish",
                   // fontWeight: 800,
                   fontWeight: 600,
-                  fontSize: { xs: "30px", sm: "40px", lg: "64px", xl: "32px" }, //xl: "64px"
+                  fontSize: { xs: "30px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "64px"
                   lineHeight: {
                     xs: "50px",
                     sm: "50px",
-                    lg: "80.32px",
+                    lg: "1.5em",
                     // xl: "80.32px",
                     xl: "1.5em"
                   },
@@ -999,9 +999,9 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#0A1411",
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "45px",
-                      sm: "60px",
-                      lg: "64px",
+                      xs: "32px",
+                      sm: "32px",
+                      lg: "32px",
                       // xl: "64px",
                       xl: "32px"
                     },
@@ -1031,8 +1031,8 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#292F36",
                     fontSize: {
                       xs: "30px",
-                      sm: "40px",
-                      lg: "50px",
+                      sm: "34px",
+                      lg: "34px",
                       // xl: "50px",
                       xl: "34px"
                     },
@@ -1110,9 +1110,9 @@ const ManagePerLaCare: React.FC = () => {
                                 lineHeight: "1.5em",
                                 fontSize: {
                                   xs: "18px",
-                                  sm: "22px",
-                                  lg: "25px",
-                                  md: "18px",
+                                  sm: "21px",
+                                  lg: "21px",
+                                  md: "21px",
                                   // xl: "35px",
                                   xl: "21px",
                                 },
@@ -1130,9 +1130,9 @@ const ManagePerLaCare: React.FC = () => {
                                 color: "#4D5053",
                                 fontSize: {
                                   xs: "14px",
-                                  sm: "18px",
-                                  lg: "22px",
-                                  md: "14px",
+                                  sm: "17px",
+                                  lg: "17px",
+                                  md: "17px",
                                   // xl: "28px",
                                   xl: "17px",
                                 },
@@ -1171,9 +1171,9 @@ const ManagePerLaCare: React.FC = () => {
                     textAlign: "center",
                     color: "#292F36",
                     fontSize: {
-                      xs: "30px",
-                      sm: "40px",
-                      lg: "50px",
+                      xs: "34px",
+                      sm: "34px",
+                      lg: "34px",
                       // xl: "50px",
                       xl: "34px" 
                     },
@@ -1282,9 +1282,9 @@ const ManagePerLaCare: React.FC = () => {
                                 lineHeight: "150%",
                                 fontSize: {
                                   xs: "18px",
-                                  sm: "22px",
-                                  lg: "25px",
-                                  md: "18px",
+                                  sm: "21px",
+                                  lg: "21px",
+                                  md: "21px",
                                   // xl: "35px",
                                   xl: "21px",
                                 },
@@ -1302,9 +1302,9 @@ const ManagePerLaCare: React.FC = () => {
                                 color: "#4D5053",
                                 fontSize: {
                                   xs: "14px",
-                                  sm: "18px",
-                                  lg: "22px",
-                                  md: "14px",
+                                  sm: "17px",
+                                  lg: "17px",
+                                  md: "17px",
                                   // xl: "28px",
                                   xl: "17px",
                                 },
@@ -1397,8 +1397,8 @@ const ManagePerLaCare: React.FC = () => {
                         fontWeight: 300,
                         fontSize: {
                           xs: "28px",
-                          sm: "38px",
-                          lg: "48px",
+                          sm: "35px",
+                          lg: "35px",
                           // xl: "48px",
                           xl: "35px",
                         },
@@ -1432,8 +1432,8 @@ const ManagePerLaCare: React.FC = () => {
                         fontWeight:700,
                         fontSize: {
                           xs: "14px",
-                          sm: "18px",
-                          lg: "25px",
+                          sm: "17px",
+                          lg: "17px",
                           // xl: "25px",
                           xl:"17px"
                         },
@@ -1464,7 +1464,7 @@ const ManagePerLaCare: React.FC = () => {
           <Typography
             sx={{
               fontFamily: "Mulish",
-              fontSize: { xs: "38px", sm: "50px", lg: "64px", xl: "32px" }, //xl: "64px"
+              fontSize: { xs: "32px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "64px"
               // fontWeight: 700,
               fontWeight: 600,
               lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "1.5em" }, //xl: "auto"
@@ -1472,7 +1472,7 @@ const ManagePerLaCare: React.FC = () => {
               padding: {
                 xs: "10% 10% 0% 10%",
                 sm: "10% 10% 0% 10%",
-                lg: "100px 200px 0px 200px",
+                lg: "0px 100px 0px 100px",
                 xl: "100px 350px 0px 350px",
               },
               color: "#0A1411",
@@ -1514,8 +1514,8 @@ const ManagePerLaCare: React.FC = () => {
               sm={4}
               sx={{
                 alignContent: "center",
-                fontSize: { xs: "18px", sm: "22px", lg: "25px", xl: "32px" }, //xl: "35px"
-                lineHeight: { xs: "20px", sm: "30px", lg: "40px", xl: "1.5em" }, //xl: "40px"
+                fontSize: { xs: "18px", sm: "22px", lg: "22px", xl: "32px" }, //xl: "35px"
+                lineHeight: { xs: "20px", sm: "30px", lg: "1.5em", xl: "1.5em" }, //xl: "40px"
                 // fontWeight: 400,
                 fontWeight: 500,
                 textAlign: "justify",
