@@ -123,6 +123,7 @@ export default function BlogsNews() {
     },
   ];
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -154,7 +155,9 @@ export default function BlogsNews() {
                         ? "0px 65px"
                         : isMax7
                           ? "0px 20px"
-                          : "0px 0px",
+                          : isMax8
+                            ? "0px 20px"
+                            : "0px 0px",
         }}
       >
         <Grid
@@ -850,7 +853,7 @@ export default function BlogsNews() {
                       fontWeight: 400,
                       fontFamily: "Mulish",
                       fontSize: {
-                        xs: "12px",
+                        xs: "10px",
                         sm: "18px",
                         lg: "15.2px",
                         md: "12px",

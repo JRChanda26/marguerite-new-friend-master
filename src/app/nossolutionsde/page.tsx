@@ -145,6 +145,7 @@ const NosSolutionsDe: React.FC = () => {
     fontSize: isSmallScreen ? "18px" : "22px",
   };
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -176,7 +177,9 @@ const NosSolutionsDe: React.FC = () => {
                         ? "0px 65px"
                         : isMax7
                           ? "0px 20px"
-                          : "0px 0px",
+                          : isMax8
+                            ? "0px 20px"
+                            : "0px 0px",
         }}
       >
         <Grid
@@ -550,7 +553,7 @@ const NosSolutionsDe: React.FC = () => {
                     <img
                       src={modulesPage[0]?.data.video_image.url || undefined}
                       alt={modulesPage[0]?.data.video_image.alt || "Image"}
-                      width={isMax ? "95%" : "90%"}
+                      width={isMax ? "95%" : isMax8 ? "100%" : "90%"}
                       height="auto"
                     />
                   )}

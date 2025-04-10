@@ -22,6 +22,7 @@ export default function Paroles() {
     fetchData();
   }, []);
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1030px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -171,7 +172,9 @@ export default function Paroles() {
                       ? "0px 70px"
                       : isMax7
                         ? "0px 20px"
-                        : "0px 0px",
+                        : isMax8
+                          ? "0px 20px"
+                          : "0px 0px",
       }}
     >
       <div
@@ -200,7 +203,7 @@ export default function Paroles() {
               letterSpacing: "0%",
               display: "flex",
               flexDirection: {
-                xs: "colum",
+                xs: "column",
                 sm: "row",
                 md: "row",
                 lg: "row",

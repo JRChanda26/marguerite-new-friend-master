@@ -58,6 +58,7 @@ const Benifits: React.FC = () => {
     return { width: "283.55px", height: "433px" };
   };
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -95,7 +96,9 @@ const Benifits: React.FC = () => {
                         ? "0px 65px"
                         : isMax7
                           ? "0px 20px"
-                          : "0px 0px",
+                          : isMax8
+                            ? "0px 20px"
+                            : "0px 0px",
         }}
       >
         <div
@@ -138,7 +141,7 @@ const Benifits: React.FC = () => {
                     textAlign: "center",
                     color: "#0A1411",
                     margin: {
-                      xs: "100px 0px 0px 0px",
+                      xs: "80px 0px 0px 0px",
                       sm: "100px 0px 0px 0px",
                       lg: "150px 80px 8px 80px",
                       xl: "150px 150px 8px 150px",

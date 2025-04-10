@@ -67,6 +67,7 @@ export default function Questions() {
     router.push("/contact");
   };
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax6 = useMediaQuery("(min-width:1030px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax = useMediaQuery("(min-width:1930px)");
@@ -88,7 +89,7 @@ export default function Questions() {
               : isMax1
                 ? "0px 350px"
                 : isMax
-                  ? "0px 140px"
+                  ? "0px 140px":isMax8?"0px 20px"
                   : "0px 0px",
       }}
     >
@@ -147,7 +148,7 @@ export default function Questions() {
                   xl: "1.5em",
                 },
                 margin: {
-                  xs: "0% 0% 0% 10%",
+                  xs: "5px 0px",
                   sm: "0% 0% 0% 5%",
                   lg: "0px 30px 0px 70px",
                   md: "0px 30px 0px 80px",
@@ -183,7 +184,7 @@ export default function Questions() {
                   xl: "1.9em",
                 },
                 margin: {
-                  xs: "1% 0% 0% 10%",
+                  xs: "5px 0px",
                   sm: "3% 0% 0% 5%",
                   lg: "20px 0px 0px 70px",
                   md: "40px 30px 0px 80px",
@@ -211,7 +212,7 @@ export default function Questions() {
                 // marginLeft: "20%",
                 // marginTop: "10%",
                 margin: {
-                  xs: "5% 0% 0% 10%",
+                  xs: "5px 0px",
                   sm: "5% 0% 0% 5%",
                   lg: "40px 0px 0px 70px",
                   md: "40px 30px 0px 80px",

@@ -179,7 +179,7 @@ const OurExperts: React.FC = () => {
   const isXs = useMediaQuery("(max-width:576px)");
 
   const getDimensions = () => {
-    if (isXs) return { width: "150px", height: "250px" };
+    if (isXs) return { width: "120px", height: "220px" };
     if (isSm) return { width: "200px", height: "320px" };
     if (isMd) return { width: "250px", height: "400px" };
     if (isLg) return { width: "220px", height: "333px" };
@@ -211,6 +211,7 @@ const OurExperts: React.FC = () => {
     fontSize: isXs ? "12px" : "18px",
   };
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -244,7 +245,9 @@ const OurExperts: React.FC = () => {
                         ? "0px 65px"
                         : isMax7
                           ? "0px 20px"
-                          : "0px 0px",
+                          : isMax8
+                            ? "0px 20px"
+                            : "0px 0px",
           // padding : isMax4 ? "0px 500px"
           // : isMax3 ? "0px 220px 0px 320px"
           // : isMax2 ? "0px 180px 0px 280px"
@@ -257,7 +260,7 @@ const OurExperts: React.FC = () => {
           style={{
             backgroundImage: `url(${middleBackground})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "contain",
+            backgroundSize: isMax8 ? "cover" : "contain",
             width: "100%",
             height: "auto",
             marginTop: "4%",
@@ -289,7 +292,7 @@ const OurExperts: React.FC = () => {
                     textAlign: "center",
                     color: "#0A1411",
                     padding: {
-                      xs: "5% 0% 0% 0%",
+                      xs: "50px 0px 20px 0px",
                       sm: "8% 10% 0% 10%",
                       lg: "100px 100px 40px 100px",
                       md: "50px 20px 0px 20px",
@@ -322,7 +325,7 @@ const OurExperts: React.FC = () => {
                     textAlign: "center",
                     color: "#4D5053",
                     padding: {
-                      xs: "2% 5%",
+                      xs: "0px 20px 10px 20px",
                       sm: "2% 10%",
                       lg: "0px 100px 30px 100px",
                       xl: "0px 350px 50px 350px",
