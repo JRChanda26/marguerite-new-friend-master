@@ -431,11 +431,11 @@ const ManagePerLaCare: React.FC = () => {
                       fontFamily: "Mulish",
                       color: "#292F36",
                       // fontWeight: 700,
-                      fontWeight: 500,
+                      fontWeight: 700,
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
-                        lg: "40px",
+                        lg: "34px",
                         // xl: "50px",
                         xl: "59px",
                       },
@@ -485,7 +485,7 @@ const ManagePerLaCare: React.FC = () => {
             padding: {
               xs: "5%",
               sm: "5%",
-              lg: "80px",
+              lg: "50px",
               xl: isMax ? "123px 0px" : "123px 80px",
             },
           }}
@@ -520,12 +520,12 @@ const ManagePerLaCare: React.FC = () => {
                           sm: "40px",
                           lg: "40px",
                           // xl: "50px",
-                          xl: "52px",
+                          xl: "55px",
                         },
                         lineHeight: {
                           xs: "35px",
                           sm: "48px",
-                          lg: "125%",
+                          lg: "1.5em",
                           // xl: "125%",
                           xl: "1.5em",
                         },
@@ -546,18 +546,18 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "12px",
                         sm: "18px",
-                        lg: "21px",
+                        lg: "18px",
                         // xl: "24px",
                         xl: "21px",
                       },
                       lineHeight: {
                         xs: "18px",
                         sm: "25px",
-                        lg: "1.5",
+                        lg: "1.5em",
                         // xl: "1.5",
                         xl: "1.5em",
                       },
-                      paddingTop: "33px",
+                      paddingTop: "30px",
                       whiteSpace: "pre-line",
                     }}
                   >
@@ -986,7 +986,7 @@ const ManagePerLaCare: React.FC = () => {
                 margin: {
                   xs: "100px 0px 0px 0px",
                   sm: "0px",
-                  lg: "280px 100px 153px 100px",
+                  lg: "250px 100px 50px 100px",
                   md: "280px 50px 153px 50px",
                   xl: isMax
                     ? "50px 200px 153px 200px"
@@ -1029,7 +1029,7 @@ const ManagePerLaCare: React.FC = () => {
                   marginTop: {
                     xs: "30px",
                     sm: "30px",
-                    lg: "100px",
+                    lg: "50px",
                     xl: isMax ? "40px" : "80px",
                   },
                 }}
@@ -1191,7 +1191,7 @@ const ManagePerLaCare: React.FC = () => {
                     marginTop: {
                       xs: "50px",
                       sm: "50px",
-                      lg: "150px",
+                      lg: "50px",
                       xl: isMax ? "80px" : "80px",
                     },
                     letterSpacing: "1%",
@@ -1364,7 +1364,7 @@ const ManagePerLaCare: React.FC = () => {
                 margin: {
                   xs: "5%",
                   sm: "10%",
-                  lg: "107px 522px",
+                  lg: "50px 522px",
                   md: "107px 220px",
                   xl: isMax3
                     ? "50px 622px"
@@ -1498,7 +1498,7 @@ const ManagePerLaCare: React.FC = () => {
               flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
               textAlign: "center",
               margin: {
-                lg: "114px 0px 200px 0px",
+                lg: "50px 0px",
                 xl: isMax ? "114px 0px 100px 0px" : "114px 0px 100px 0px",
               },
             }}
@@ -1523,7 +1523,7 @@ const ManagePerLaCare: React.FC = () => {
               sm={4}
               sx={{
                 alignContent: "center",
-                fontSize: { xs: "18px", sm: "22px", lg: "22px", xl: "32px" }, //xl: "35px"
+                fontSize: { xs: "18px", sm: "18px", lg: "18px", xl: "32px" }, //xl: "35px"
                 lineHeight: {
                   xs: "20px",
                   sm: "30px",
