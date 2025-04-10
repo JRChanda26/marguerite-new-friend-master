@@ -164,7 +164,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "55%"
             : isLarge
-              ? "70%"
+              ? "50%"
               : isExtraLarge
                 ? "65%"
                 : "50%",
@@ -177,7 +177,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "40%"
             : isLarge
-              ? "40%"
+              ? "32%"
               : isExtraLarge
                 ? isMax
                   ? "25%"
@@ -201,7 +201,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "55%"
             : isLarge
-              ? "70%"
+              ? "50%"
               : isExtraLarge
                 ? "65%"
                 : "65%",
@@ -214,7 +214,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "75%"
             : isLarge
-              ? "75%"
+              ? "60%"
               : isExtraLarge
                 ? isMax
                   ? "50%"
@@ -238,7 +238,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "55%"
             : isLarge
-              ? "70%"
+              ? "50%"
               : isExtraLarge
                 ? "65%"
                 : "65%",
@@ -251,7 +251,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "116%"
             : isLarge
-              ? "116%"
+              ? "90%"
               : isExtraLarge
                 ? isMax
                   ? "75%"
@@ -275,7 +275,7 @@ const ManagePerLaCare: React.FC = () => {
           : isMedium
             ? "55%"
             : isLarge
-              ? "70%"
+              ? "50%"
               : isExtraLarge
                 ? "65%"
                 : "65%",
@@ -755,7 +755,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "16px",
                           sm: "16px",
-                          lg: "20px",
+                          lg: "16px",
                           md: "20px",
                           // xl: "32px",
                           xl: "21px",
@@ -784,7 +784,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "10px",
                           sm: "10px",
-                          lg: "14px",
+                          lg: "10px",
                           md: "14px",
                           // xl: "19.5px",
                           xl: "17px",
@@ -815,7 +815,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "16px",
                           sm: "16px",
-                          lg: "20px",
+                          lg: "16px",
                           md: "20px",
                           // xl: "32px",
                           xl: "21px",
@@ -844,7 +844,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "10px",
                           sm: "10px",
-                          lg: "14px",
+                          lg: "10px",
                           md: "14px",
                           // xl: "19.5px",
                           xl: "17px",
@@ -875,7 +875,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "16px",
                           sm: "16px",
-                          lg: "20px",
+                          lg: "16px",
                           md: "20px",
                           // xl: "32px",
                           xl: "21px",
@@ -904,7 +904,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "10px",
                           sm: "10px",
-                          lg: "14px",
+                          lg: "10px",
                           md: "14px",
                           // xl: "19.5px",
                           xl: "17px",
@@ -935,7 +935,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "16px",
                           sm: "16px",
-                          lg: "20px",
+                          lg: "16px",
                           md: "20px",
                           // xl: "32px",
                           xl: "21px",
@@ -964,7 +964,7 @@ const ManagePerLaCare: React.FC = () => {
                         fontSize: {
                           xs: "10px",
                           sm: "10px",
-                          lg: "14px",
+                          lg: "10px",
                           md: "14px",
                           // xl: "19.5px",
                           xl: "17px",
@@ -1503,7 +1503,7 @@ const ManagePerLaCare: React.FC = () => {
               },
             }}
           >
-            <Grid item xl={4} lg={4} xs={12} sm={6}>
+            <Grid item xl={5} lg={5} xs={12} sm={6}>
               {" "}
               {managePage[0]?.data.bottom_left_image && (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -1517,8 +1517,8 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
             <Grid
               item
-              xl={4}
-              lg={4}
+              xl={5}
+              lg={5}
               xs={12}
               sm={4}
               sx={{
