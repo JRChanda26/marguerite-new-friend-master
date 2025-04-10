@@ -143,7 +143,7 @@ const Benifits: React.FC = () => {
                     margin: {
                       xs: "80px 0px 0px 0px",
                       sm: "100px 0px 0px 0px",
-                      lg: "150px 80px 8px 80px",
+                      lg: "130px 80px 30px 80px",
                       xl: "150px 150px 8px 150px",
                     },
                   }}
@@ -174,7 +174,7 @@ const Benifits: React.FC = () => {
                     margin: {
                       xs: "5%",
                       sm: "5% 10%",
-                      lg: "20px 150px 157px 150px",
+                      lg: "0px 150px 50px 150px",
                       xl: isMax
                         ? "0px 380px 50px 380px"
                         : "0px 350px 50px 350px",

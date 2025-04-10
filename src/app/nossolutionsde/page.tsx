@@ -238,11 +238,11 @@ const NosSolutionsDe: React.FC = () => {
                       fontFamily: "Mulish",
                       color: "#292F36",
                       // fontWeight: 700,
-                      fontWeight: 500,
+                      fontWeight: 700,
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
-                        lg: "40px",
+                        lg: "34px",
                         // xl: "50px",
                         xl: "59px",
                       },
@@ -307,7 +307,7 @@ const NosSolutionsDe: React.FC = () => {
               padding: {
                 xs: "5%",
                 sm: "5%",
-                lg: "100px",
+                lg: "50px 50px 0px 50px",
                 xl: isMax
                   ? "100px 228px 100px 228px"
                   : "200px 228px 100px 228px",
@@ -367,9 +367,9 @@ const NosSolutionsDe: React.FC = () => {
                         fontSize: {
                           xs: "12px",
                           sm: "15px",
-                          lg: "15px",
+                          lg: "18px",
                           // xl: "22px",
-                          xl: "15px",
+                          xl: "18px",
                         },
                         // fontWeight: 400,
                         fontWeight: 500,
@@ -655,7 +655,7 @@ const NosSolutionsDe: React.FC = () => {
               padding: {
                 xs: "30px",
                 sm: "40px",
-                lg: "100px 50px",
+                lg: "50px 50px 0px 50px",
                 xl: isMax ? "100px 156px 0px 156px" : "100px 50px",
               },
             }}

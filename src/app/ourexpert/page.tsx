@@ -294,7 +294,7 @@ const OurExperts: React.FC = () => {
                     padding: {
                       xs: "50px 0px 20px 0px",
                       sm: "8% 10% 0% 10%",
-                      lg: "100px 100px 40px 100px",
+                      lg: "80px 100px 30px 100px",
                       md: "50px 20px 0px 20px",
                       xl: "100px 100px 40px 100px",
                     },
@@ -327,7 +327,7 @@ const OurExperts: React.FC = () => {
                     padding: {
                       xs: "0px 20px 10px 20px",
                       sm: "2% 10%",
-                      lg: "0px 100px 30px 100px",
+                      lg: "0px 100px 50px 100px",
                       xl: "0px 350px 50px 350px",
                     },
                   }}

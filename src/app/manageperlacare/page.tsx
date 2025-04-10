@@ -435,7 +435,7 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
-                        lg: "34px",
+                        lg: "34px", 
                         // xl: "50px",
                         xl: "59px",
                       },
@@ -1167,7 +1167,7 @@ const ManagePerLaCare: React.FC = () => {
                       <img
                         src={modulesPage[0]?.data.image.url || undefined}
                         alt={modulesPage[0]?.data.image.alt || "Image"}
-                        width={isMax ? "90%" : "90%"}
+                        width={isMax ? "90%" : isMax8 ? "100%" : "90%"}
                         height="auto"
                       />
                     )}
