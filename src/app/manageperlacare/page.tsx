@@ -162,7 +162,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "50%"
           : isMedium
-            ? "55%"
+            ? "45%"
             : isLarge
               ? "50%"
               : isExtraLarge
@@ -175,7 +175,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "32%" //33
           : isMedium
-            ? "40%"
+            ? "30%"
             : isLarge
               ? "32%"
               : isExtraLarge
@@ -199,7 +199,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "50%"
           : isMedium
-            ? "55%"
+            ? "45%"
             : isLarge
               ? "50%"
               : isExtraLarge
@@ -212,7 +212,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "53%" //50
           : isMedium
-            ? "75%"
+            ? "55%"
             : isLarge
               ? "60%"
               : isExtraLarge
@@ -236,7 +236,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "50%"
           : isMedium
-            ? "55%"
+            ? "45%"
             : isLarge
               ? "50%"
               : isExtraLarge
@@ -249,7 +249,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "74%" //70
           : isMedium
-            ? "116%"
+            ? "80%"
             : isLarge
               ? "90%"
               : isExtraLarge
@@ -273,7 +273,7 @@ const ManagePerLaCare: React.FC = () => {
         : isSmall
           ? "50%"
           : isMedium
-            ? "55%"
+            ? "45%"
             : isLarge
               ? "50%"
               : isExtraLarge
@@ -756,7 +756,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "16px",
                           sm: "16px",
                           lg: "16px",
-                          md: "20px",
+                          md: "16px",
                           // xl: "32px",
                           xl: "21px",
                         },
@@ -785,7 +785,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "10px",
                           sm: "10px",
                           lg: "10px",
-                          md: "14px",
+                          md: "10px",
                           // xl: "19.5px",
                           xl: "17px",
                         },
@@ -816,7 +816,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "16px",
                           sm: "16px",
                           lg: "16px",
-                          md: "20px",
+                          md: "16px",
                           // xl: "32px",
                           xl: "21px",
                         },
@@ -845,7 +845,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "10px",
                           sm: "10px",
                           lg: "10px",
-                          md: "14px",
+                          md: "10px",
                           // xl: "19.5px",
                           xl: "17px",
                         },
@@ -876,7 +876,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "16px",
                           sm: "16px",
                           lg: "16px",
-                          md: "20px",
+                          md: "16px",
                           // xl: "32px",
                           xl: "21px",
                         },
@@ -905,7 +905,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "10px",
                           sm: "10px",
                           lg: "10px",
-                          md: "14px",
+                          md: "10px",
                           // xl: "19.5px",
                           xl: "17px",
                         },
@@ -936,7 +936,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "16px",
                           sm: "16px",
                           lg: "16px",
-                          md: "20px",
+                          md: "16px",
                           // xl: "32px",
                           xl: "21px",
                         },
@@ -965,7 +965,7 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "10px",
                           sm: "10px",
                           lg: "10px",
-                          md: "14px",
+                          md: "10px",
                           // xl: "19.5px",
                           xl: "17px",
                         },
