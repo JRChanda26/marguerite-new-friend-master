@@ -238,9 +238,9 @@ export default function Blogs() {
                   fontFamily: "Mulish",
                   color: "#292F36",
                   // fontWeight: 700,
-                  fontWeight: 500,
+                  fontWeight: 700,
                   // fontSize: "50px",
-                  fontSize: { xs: "16px", sm: "40px", lg: "40px", xl: "59px" }, //xl: "50px"
+                  fontSize: { xs: "16px", sm: "40px", lg: "34px", xl: "59px" }, //xl: "50px"
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -319,7 +319,7 @@ export default function Blogs() {
                   marginTop: {
                     xs: "50px",
                     sm: "50px",
-                    lg: "100px",
+                    lg: "50px",
                     xl: isMax ? "100px" : "100px",
                   },
                   fontFamily: "Mulish",
@@ -335,7 +335,7 @@ export default function Blogs() {
                   margin: {
                     xs: "27px 30px 50px 30px",
                     sm: "27px 80px 100px 80px",
-                    lg: "27px 152px 100px 152px",
+                    lg: "50px",
                     xl: isMax
                       ? "27px 100px 100px 100px"
                       : "27px 152px 100px 152px",
@@ -363,7 +363,7 @@ export default function Blogs() {
                         padding: {
                           xs: "22px",
                           sm: "22px",
-                          lg: "22px 50px",
+                          lg: "22px",
                           xl: isMax ? "22px" : "22px",
                         },
                         gap: "50px",
@@ -706,7 +706,7 @@ export default function Blogs() {
                 padding: {
                   xs: "3% 5%",
                   sm: "3% 5%",
-                  lg: "78px 50px 0px 50px",
+                  lg: "50px 50px 0px 50px",
                   xl: isMax ? "78px 150px 20px 150px" : "78px 150px 20px 150px",
                 },
               }}
