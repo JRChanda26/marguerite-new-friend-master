@@ -115,7 +115,7 @@ export default function Questions() {
             margin: {
               xs: "30px 0px 30px 0px",
               sm: "50px 0px 50px 0px",
-              lg: "50px 50px 51px 0px",
+              lg: "0px 50px 51px 0px",
               md: "100px 50px 51px 0px",
               xl: "164px 80px 51px 0px",
             },

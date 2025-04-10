@@ -88,15 +88,15 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "30px",
                       sm: "40px",
-                      lg: "80px",
+                      lg: "1.5em",
                       // xl: "80px",
                       xl: "1.5em",
                     },
                     padding: {
                       xs: "8% 5% 2% 5%",
                       sm: "5% 5% 2% 5%",
-                      lg: "70px 77px 0px 77px",
-                      xl: isMax ? "100px 0px 0px 0px" : "99px 100px 0px 100px",
+                      lg: "50px 77px 0px 77px",
+                      xl: isMax ? "100px 0px 0px 0px" : "100px 100px 0px 100px",
                     },
                     textAlign: "center",
                   }}
@@ -122,7 +122,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "20px",
                       sm: "20px",
-                      lg: "38.4px",
+                      lg: "1.9em",
                       // xl: "38.4px",
                       xl: "1.9em",
                     },

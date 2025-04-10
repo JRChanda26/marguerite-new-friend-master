@@ -101,14 +101,14 @@ export default function NotreProcessus() {
               fontWeight: 600,
               // lineHeight: "80.32px",
               fontSize: { xs: "28px", sm: "40px", lg: "32px", xl: "32px" }, //xl: "64px"
-              lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "1.5em" }, //xl: "auto"
+              lineHeight: { xs: "30px", sm: "50px", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
               color: "#0A1411",
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
               margin: {
                 xs: "5% 10% 2% 10%",
                 sm: "5% 10% 2% 10%",
-                lg: "5% 10%",
+                lg: "50px 100px",
                 xl: isMax ? "100px 0px 31px 0px" : "100px 100px 31px 100px",
               },
             }}
@@ -125,7 +125,7 @@ export default function NotreProcessus() {
               lineHeight: {
                 xs: "15px",
                 sm: "20px",
-                lg: "38.4px",
+                lg: "1.9em",
                 // xl: "38.4px",
                 xl: "1.9em",
               },
@@ -133,7 +133,7 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0% 10%",
                 sm: "0% 15%",
-                lg: "0px 330px 196px 330px",
+                lg: "0px 330px 50px 330px",
                 xl: isMax ? "30px 425px 50px 425px" : "0px 550px 100px 550px",
               },
               fontFamily: "Mulish",
@@ -148,7 +148,7 @@ export default function NotreProcessus() {
             margin: {
               xs: "0% 0% 0% 5%",
               sm: "5%",
-              lg: "0px 100px 200px 100px",
+              lg: "0px 100px 0px 100px",
               xl: isMax ? "0px 100px 100px 250px" : "0px 50px 100px 350px",
             },
           }}
@@ -169,7 +169,7 @@ export default function NotreProcessus() {
                 lg: "",
                 xl: "0px 52px 0px 0px",
               },
-              gap: { xs: "0px", sm: "0px", lg: "124px", xl: "50px" },
+              gap: { xs: "0px", sm: "0px", lg: "50px", xl: "50px" },
             }}
           >
             <div>
@@ -278,7 +278,7 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0px 0px 0px 0px",
                 sm: "0px",
-                lg: "100px 0px 100px 60px",
+                lg: "0px 0px 0px 60px",
                 xl: isMax ? "20px 112px 20px 20px" : "50px 112px 50px 20px",
               },
               gap: { lg: "50px", xl: "0px" },
@@ -392,7 +392,7 @@ export default function NotreProcessus() {
                 lg: "",
                 xl: "0px 42px 0px 0px",
               },
-              gap: { lg: "111px", xl: "50px" },
+              gap: { lg: "50px", xl: "50px" },
             }}
           >
             <div>
