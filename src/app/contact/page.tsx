@@ -1063,11 +1063,11 @@ export default function Contact() {
                   fontFamily: "Mulish",
                   color: "#292F36",
                   // fontWeight: 600,
-                  fontWeight: 500,
+                  fontWeight: 700,
                   // fontSize: "50px",
                   // fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                   // added by pragatika
-                  fontSize: { xs: "16px", sm: "40px", lg: "40px", xl: "59px" },
+                  fontSize: { xs: "16px", sm: "40px", lg: "34px", xl: "59px" },
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -1143,7 +1143,7 @@ export default function Contact() {
                   textAlign: "center",
                   padding: {
                     sm: "0px",
-                    lg: "0px 196px 80px 196px",
+                    lg: "0px 196px 50px 196px",
                     md: "0px 50px 0px 50px",
                     xl: isMax ? "0px 50px 80px 50px" : "0px 350px 80px 350px",
                   },

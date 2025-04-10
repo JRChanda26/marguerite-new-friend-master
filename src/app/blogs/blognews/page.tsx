@@ -216,7 +216,7 @@ export default function BlogsNews() {
                 margin: {
                   xs: "5%",
                   sm: "5%",
-                  lg: "150px 100px 0px 100px",
+                  lg: "50px 100px 0px 100px",
                   xl: "100px 100px 0px 100px",
                 },
               }}
@@ -300,7 +300,7 @@ export default function BlogsNews() {
                     gap: "20px",
                     justifyContent: "space-between",
                     color: "#4D5053",
-                    padding: "2% 0%",
+                    padding: "0px 0px",
                   }}
                 >
                   <Typography
@@ -370,7 +370,7 @@ export default function BlogsNews() {
                     padding: {
                       xs: "2%",
                       sm: "2%",
-                      lg: "48px 0px 70px 0px",
+                      lg: "48px 0px 50px 0px",
                       xl: "48px 0px 70px 0px",
                     },
                     textAlign: "justify",
@@ -507,7 +507,7 @@ export default function BlogsNews() {
                 md={2.5}
                 xl={isMax ? 2.5 : 3}
                 style={{
-                  marginTop: isMax ? "0px" : "20px",
+                  marginTop: isMax ? "0px" : "0px",
                 }}
               >
                 <div>
@@ -556,7 +556,7 @@ export default function BlogsNews() {
                       xs: "20px",
                       sm: "20px",
                       md: "25px",
-                      lg: "20px",
+                      lg: "25px",
                       xl: "30px",
                     },
                   }}
@@ -697,7 +697,7 @@ export default function BlogsNews() {
                 margin: {
                   xs: "2% 7%",
                   sm: "5%",
-                  lg: "100px 0px 108px 140px",
+                  lg: "50px 0px 50px 140px",
                   md: "50px 0px 50px 80px",
                   xl: "100px 0px 108px 180px",
                 },
@@ -732,7 +732,7 @@ export default function BlogsNews() {
                     // xl: "150%",
                     xl: "1.9em",
                   },
-                  padding: "20px 0px 100px 0px",
+                  padding: "20px 0px 50px 0px",
                   color: "#4D5053",
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
