@@ -78,8 +78,10 @@ const NosExperiences: React.FC = () => {
                         : isMax6
                           ? "0px 70px"
                           : isMax7
-                            ? "0px 20px":isMax8?"0px 20px"
-                            : "0px",
+                            ? "0px 50px"
+                            : isMax8
+                              ? "0px 20px"
+                              : "0px",
           }}
         >
           {nosPage.map((post: any, postIndex: number) => (
@@ -210,7 +212,7 @@ const NosExperiences: React.FC = () => {
                           lg: "394px",
                           xl: "394px",
                         },
-                        minHeight: {xl: "250px" },
+                        minHeight: { xl: "250px" },
                       }}
                     >
                       <Typography

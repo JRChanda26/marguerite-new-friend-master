@@ -369,7 +369,7 @@ const ManagePerLaCare: React.FC = () => {
                       : isMax6
                         ? "0px 65px"
                         : isMax7
-                          ? "0px 20px"
+                          ? "0px 50px"
                           : isMax8
                             ? "0px 20px"
                             : "0px 0px",
@@ -1119,9 +1119,9 @@ const ManagePerLaCare: React.FC = () => {
                                 lineHeight: "1.5em",
                                 fontSize: {
                                   xs: "18px",
-                                  sm: "21px",
+                                  sm: "14px",
                                   lg: "21px",
-                                  md: "21px",
+                                  md: "14px",
                                   // xl: "35px",
                                   xl: "21px",
                                 },
@@ -1139,9 +1139,9 @@ const ManagePerLaCare: React.FC = () => {
                                 color: "#4D5053",
                                 fontSize: {
                                   xs: "14px",
-                                  sm: "17px",
+                                  sm: "12px",
                                   lg: "17px",
-                                  md: "17px",
+                                  md: "12px",
                                   // xl: "28px",
                                   xl: "17px",
                                 },
@@ -1291,9 +1291,9 @@ const ManagePerLaCare: React.FC = () => {
                                 lineHeight: "150%",
                                 fontSize: {
                                   xs: "18px",
-                                  sm: "21px",
+                                  sm: "14px",
                                   lg: "21px",
-                                  md: "21px",
+                                  md: "14px",
                                   // xl: "35px",
                                   xl: "21px",
                                 },
@@ -1311,9 +1311,9 @@ const ManagePerLaCare: React.FC = () => {
                                 color: "#4D5053",
                                 fontSize: {
                                   xs: "14px",
-                                  sm: "17px",
+                                  sm: "12px",
                                   lg: "17px",
-                                  md: "17px",
+                                  md: "12px",
                                   // xl: "28px",
                                   xl: "17px",
                                 },

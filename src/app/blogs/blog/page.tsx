@@ -176,7 +176,7 @@ export default function Blogs() {
                       : isMax6
                         ? "0px 65px"
                         : isMax7
-                          ? "0px 20px"
+                          ? "0px 50px"
                           : isMax8
                             ? "0px 20px"
                             : "0px 0px",
