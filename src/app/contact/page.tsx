@@ -1001,7 +1001,7 @@ export default function Contact() {
                       : isMax6
                         ? "0px 65px"
                         : isMax7
-                          ? "0px 20px"
+                          ? "0px 50px"
                           : isMax8
                             ? "0px 20px"
                             : "0px 0px",
@@ -1128,7 +1128,7 @@ export default function Contact() {
                 xs: "6%",
                 sm: "5% 10%",
                 lg: "50px 120px 287px 120px",
-                md: "50px 150px 287px 150px",
+                md: "50px 100px 287px 100px",
                 xl: isMax ? "50px 200px 287px 200px" : "100px 50px 287px 50px",
               },
             }}
