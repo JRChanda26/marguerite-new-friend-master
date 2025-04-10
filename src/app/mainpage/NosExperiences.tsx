@@ -120,7 +120,7 @@ const NosExperiences: React.FC = () => {
                   padding: {
                     xs: "12% 0% 2% 0%",
                     sm: "8% 0% 2% 0%",
-                    lg: "150px 0px 36px 0px",
+                    lg: "200px 0px 36px 0px",
                     xl: "250px 0px 36px 0px",
                   },
                 }}
@@ -176,7 +176,7 @@ const NosExperiences: React.FC = () => {
                   padding: {
                     xs: "5px 0px 50px 0px",
                     sm: "50px 0px 80px 0px",
-                    lg: "100px 0px 231px 0px",
+                    lg: "50px 0px 250px 0px",
                     xl: isMax ? "80px 0px 120px 0px" : "179px 0px 231px 0px",
                   },
                 }}

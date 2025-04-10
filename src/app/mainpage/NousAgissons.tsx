@@ -132,7 +132,7 @@ const NousAgissons: React.FC = () => {
                   fontSize: {
                     xs: "20px",
                     sm: "30px",
-                    lg: "40px",
+                    lg: "55px",
                     // xl: "64px",
                     xl: "55px",
                   },
@@ -140,7 +140,7 @@ const NousAgissons: React.FC = () => {
                   lineHeight: {
                     xs: "18px",
                     sm: "30px",
-                    lg: "40px",
+                    lg: "1.1em",
                     // xl: "50px",
                     xl: "1.1em",
                   },
@@ -162,7 +162,7 @@ const NousAgissons: React.FC = () => {
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
-                    lg: "25px",
+                    lg: "35px",
                     // xl: "58px",
                     xl: "35px",
                   },
@@ -170,7 +170,7 @@ const NousAgissons: React.FC = () => {
                   lineHeight: {
                     xs: "12px",
                     sm: "30px",
-                    lg: "40px",
+                    lg: "1.2em",
                     // xl: "69.6px",
                     xl: "1.2em",
                   },
@@ -186,11 +186,11 @@ const NousAgissons: React.FC = () => {
                   background: "#24535C",
                   borderRadius: "82px",
                   top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
-                  height: { xs: "22px", sm: "40px", lg: "46px", xl: "66px" },
+                  height: { xs: "22px", sm: "40px", lg: "66px", xl: "66px" },
                   width: {
                     xs: "80px",
                     sm: "150px",
-                    lg: "150px",
+                    lg: "203px",
                     xl: "203.85px",
                   },
                   justifyContent: "space-around",
@@ -212,7 +212,7 @@ const NousAgissons: React.FC = () => {
                     fontSize: {
                       xs: "7px",
                       sm: "12px",
-                      lg: "15.2px",
+                      lg: "20px",
                       // xl: "15.2px",
                       xl: "20px",
                     },

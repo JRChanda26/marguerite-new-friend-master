@@ -195,7 +195,7 @@ export default function Paroles() {
               padding: {
                 xs: "2% 0%",
                 sm: "5% 0%",
-                lg: "50px 0px",
+                lg: "0px 0px 50px 0px",
                 xl: isMax ? "0px 194px 50px 194px" : "0px 194px 100px 194px",
               },
               fontFamily: "Mulish",
@@ -409,7 +409,7 @@ export default function Paroles() {
               padding: {
                 xs: "20px",
                 sm: "40px 0",
-                lg: "117px 0px 128px 0px",
+                lg: "50px 0px 128px 0px",
                 xl: "117px 0px 50px 0px",
               },
             }}
@@ -492,9 +492,9 @@ export default function Paroles() {
                       fontSize: {
                         xs: "12px",
                         sm: "16px",
-                        lg: "28px",
+                        lg: "18px",
                         // xl: "30.2px",
-                        xl: "28px",
+                        xl: "18px",
                       },
                       lineHeight: {
                         xs: "20px",
