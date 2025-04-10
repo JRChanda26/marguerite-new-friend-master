@@ -41,6 +41,7 @@ const NousAgissons: React.FC = () => {
   const isMax5 = useMediaQuery("(min-width:1370px)");
   const isMax6 = useMediaQuery("(min-width:1200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
+  const isMax8 = useMediaQuery("(min-width:200px)");
 
   return (
     <div
@@ -62,7 +63,9 @@ const NousAgissons: React.FC = () => {
                       ? "20px 70px 20px 10px"
                       : isMax7
                         ? "20px 20px 20px 10px"
-                        : "0px",
+                        : isMax8
+                          ? "20px 20px 20px 0px"
+                          : "0px",
         background: isMax || isMax5 ? "#F6C09E" : "#F6C09E",
       }}
     >

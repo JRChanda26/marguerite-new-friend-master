@@ -31,6 +31,7 @@ const NosExperiences: React.FC = () => {
   const handleMouseEnter = () => setAnimationSpeed(100);
   const handleMouseLeave = () => setAnimationSpeed(40);
 
+  const isMax8 = useMediaQuery("(min-width:200px)");
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax6 = useMediaQuery("(min-width:1030px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -75,9 +76,10 @@ const NosExperiences: React.FC = () => {
                       : isMax5
                         ? "0px 110px"
                         : isMax6
-                          ? "0px 70px" : isMax7
-                        ? "0px 20px"
-                          : "0px",
+                          ? "0px 70px"
+                          : isMax7
+                            ? "0px 20px":isMax8?"0px 20px"
+                            : "0px",
           }}
         >
           {nosPage.map((post: any, postIndex: number) => (
@@ -202,13 +204,13 @@ const NosExperiences: React.FC = () => {
                           xl: "20px",
                         },
                         minWidth: {
-                          xs: "250px",
+                          xs: "200px",
                           sm: "300px",
                           md: "350px",
                           lg: "394px",
                           xl: "394px",
                         },
-                        minHeight: { xl: "250px" },
+                        minHeight: {xl: "250px" },
                       }}
                     >
                       <Typography
@@ -219,14 +221,14 @@ const NosExperiences: React.FC = () => {
                           // fontWeight: 400,
                           fontWeight: 500,
                           fontSize: {
-                            xs: "12px",
+                            xs: "10px",
                             sm: "16px",
                             lg: "20px",
                             // xl: "19.32px",
                             xl: "20px",
                           },
                           lineHeight: {
-                            xs: "16px",
+                            xs: "10px",
                             sm: "22px",
                             lg: "160%",
                             // xl: "160%",
