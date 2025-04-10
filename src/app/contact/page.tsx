@@ -1425,7 +1425,7 @@ export default function Contact() {
                     background: "#292F36",
                     boxShadow: "none",
                   },
-                  margin: isMax || isMax5 ? "-200px 60px 0px 0px" : "0px",
+                  margin: isMax || isMax5 ? "-150px 60px 0px 0px" : "0px",
                 }}
                 onClick={(e: any) => handleSubmit(e)}
               >
