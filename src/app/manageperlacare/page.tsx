@@ -166,7 +166,7 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "50%"
               : isExtraLarge
-                ? "65%"
+                ? "50%"
                 : "50%",
     },
     topRight: {
@@ -181,7 +181,7 @@ const ManagePerLaCare: React.FC = () => {
               : isExtraLarge
                 ? isMax
                   ? "25%"
-                  : "35%"
+                  : "28%"
                 : "35%",
       right: isExtraSmall
         ? "3%"
@@ -203,7 +203,7 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "50%"
               : isExtraLarge
-                ? "65%"
+                ? "50%"
                 : "65%",
     },
     bottomLeft: {
@@ -218,7 +218,7 @@ const ManagePerLaCare: React.FC = () => {
               : isExtraLarge
                 ? isMax
                   ? "50%"
-                  : "65%"
+                  : "52%"
                 : "65%",
       left: isExtraSmall
         ? "3%"
@@ -240,7 +240,7 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "50%"
               : isExtraLarge
-                ? "65%"
+                ? "50%"
                 : "65%",
     },
     bottomRight: {
@@ -255,7 +255,7 @@ const ManagePerLaCare: React.FC = () => {
               : isExtraLarge
                 ? isMax
                   ? "75%"
-                  : "100%"
+                  : "80%"
                 : "100%",
       right: isExtraSmall
         ? "3%"
@@ -277,7 +277,7 @@ const ManagePerLaCare: React.FC = () => {
             : isLarge
               ? "50%"
               : isExtraLarge
-                ? "65%"
+                ? "50%"
                 : "65%",
     },
   };
@@ -990,7 +990,7 @@ const ManagePerLaCare: React.FC = () => {
                   md: "280px 50px 153px 50px",
                   xl: isMax
                     ? "50px 200px 153px 200px"
-                    : "200px 200px 153px 200px",
+                    : "50px 200px 153px 200px",
                 },
               }}
             >
