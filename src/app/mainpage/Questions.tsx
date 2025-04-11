@@ -117,7 +117,7 @@ export default function Questions() {
               sm: "50px 0px 50px 0px",
               lg: "0px 50px 51px 0px",
               md: "100px 50px 51px 0px",
-              xl: "164px 80px 51px 0px",
+              xl: "50px 80px 50px 0px",
             },
           }}
         >
@@ -216,7 +216,7 @@ export default function Questions() {
                   sm: "5% 0% 0% 5%",
                   lg: "40px 0px 0px 70px",
                   md: "40px 30px 0px 80px",
-                  xl: isMax ? "20px 0px 0px 0px" : "20px 0px 0px 110px",
+                  xl: isMax ? "30px 0px 0px 0px" : "30px 0px 0px 110px",
                 },
                 // fontFamily: "Mulish, sans-serif",
                 fontFamily: "Mulish",

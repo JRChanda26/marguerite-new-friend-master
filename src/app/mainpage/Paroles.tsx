@@ -196,7 +196,7 @@ export default function Paroles() {
                 xs: "2% 0%",
                 sm: "5% 0%",
                 lg: "0px 0px 50px 0px",
-                xl: isMax ? "0px 194px 50px 194px" : "0px 194px 100px 194px",
+                xl: isMax ? "0px 194px 50px 194px" : "0px 194px 50px 194px",
               },
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
@@ -410,7 +410,7 @@ export default function Paroles() {
                 xs: "20px",
                 sm: "40px 0",
                 lg: "50px 0px 128px 0px",
-                xl: "117px 0px 50px 0px",
+                xl: "50px 0px 50px 0px",
               },
             }}
           >

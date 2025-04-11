@@ -309,8 +309,8 @@ const NosSolutionsDe: React.FC = () => {
                 sm: "5%",
                 lg: "50px 50px 0px 50px",
                 xl: isMax
-                  ? "100px 228px 100px 228px"
-                  : "200px 228px 100px 228px",
+                  ? "50px 228px 50px 228px"
+                  : "50px 228px 50px 228px",
               },
             }}
           >
@@ -509,7 +509,7 @@ const NosSolutionsDe: React.FC = () => {
                   // fontWeight: 400,
                   fontWeight: 600,
                   lineHeight: "1.5em",
-                  marginTop: "50px",
+                  marginTop: "0px",
                   fontFamily: "Mulish",
                 }}
               >
@@ -656,7 +656,7 @@ const NosSolutionsDe: React.FC = () => {
                 xs: "30px",
                 sm: "40px",
                 lg: "50px 50px 0px 50px",
-                xl: isMax ? "100px 156px 0px 156px" : "100px 50px",
+                xl: isMax ? "50px 156px 0px 156px" : "70px 50px 0px 50px",
               },
             }}
           >

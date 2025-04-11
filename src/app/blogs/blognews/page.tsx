@@ -217,7 +217,7 @@ export default function BlogsNews() {
                   xs: "5%",
                   sm: "5%",
                   lg: "50px 100px 0px 100px",
-                  xl: "100px 100px 0px 100px",
+                  xl: "50px 100px 0px 100px",
                 },
               }}
             >
@@ -247,7 +247,7 @@ export default function BlogsNews() {
                 >
                   {blogNewsPage[0]?.data.top_heading}
                 </Typography>
-                <div style={{ paddingTop: "21px" }}>
+                <div style={{ paddingTop: "20px" }}>
                   {blogNewsPage[0]?.data.top_image && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
@@ -370,8 +370,8 @@ export default function BlogsNews() {
                     padding: {
                       xs: "2%",
                       sm: "2%",
-                      lg: "48px 0px 50px 0px",
-                      xl: "48px 0px 70px 0px",
+                      lg: "50px 0px 50px 0px",
+                      xl: "50px 0px 50px 0px",
                     },
                     textAlign: "justify",
                   }}
@@ -699,7 +699,7 @@ export default function BlogsNews() {
                   sm: "5%",
                   lg: "50px 0px 50px 140px",
                   md: "50px 0px 50px 80px",
-                  xl: "100px 0px 108px 180px",
+                  xl: "50px 0px 0px 180px",
                 },
               }}
             >
@@ -732,7 +732,7 @@ export default function BlogsNews() {
                     // xl: "150%",
                     xl: "1.9em",
                   },
-                  padding: "20px 0px 50px 0px",
+                  padding: "50px 0px 50px 0px",
                   color: "#4D5053",
                   fontFamily: "Mulish",
                   letterSpacing: "1%",
@@ -763,7 +763,7 @@ export default function BlogsNews() {
                             // xl: "150%",
                             xl: "1.9em",
                           },
-                          padding: "10px 0px 32px 0px",
+                          padding: "10px 0px 0px 0px",
                           color: "#4D5053",
                           fontFamily: "Mulish",
                           letterSpacing: "1%",
@@ -777,7 +777,7 @@ export default function BlogsNews() {
                     </div>
                   ))}
               </div>
-              <div style={{ margin: "40px 0px 40px 0px" }}>
+              <div style={{ margin: "50px 0px 40px 0px" }}>
                 {blogNewsPage[0]?.data.bottom_image && (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img
@@ -811,7 +811,7 @@ export default function BlogsNews() {
               </Typography>
               <div
                 style={{
-                  margin: "62px 0px 62px 0px",
+                  margin: "50px 0px 50px 0px",
                 }}
               >
                 <Button
@@ -824,7 +824,7 @@ export default function BlogsNews() {
                       xs: "20px",
                       sm: "20px",
                       lg: "45px",
-                      xl: "45px",
+                      xl: "0px",
                     },
                     justifyContent: "space-around",
                     width: {
