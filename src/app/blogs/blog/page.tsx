@@ -320,7 +320,7 @@ export default function Blogs() {
                     xs: "50px",
                     sm: "50px",
                     lg: "50px",
-                    xl: isMax ? "100px" : "100px",
+                    xl: isMax ? "50px" : "50px",
                   },
                   fontFamily: "Mulish",
                 }}
@@ -337,8 +337,8 @@ export default function Blogs() {
                     sm: "27px 80px 100px 80px",
                     lg: "50px",
                     xl: isMax
-                      ? "27px 100px 100px 100px"
-                      : "27px 152px 100px 152px",
+                      ? "50px 100px 50px 100px"
+                      : "50px 152px 50px 152px",
                   },
                 }}
               >
@@ -707,7 +707,7 @@ export default function Blogs() {
                   xs: "3% 5%",
                   sm: "3% 5%",
                   lg: "50px 50px 0px 50px",
-                  xl: isMax ? "78px 150px 20px 150px" : "78px 150px 20px 150px",
+                  xl: isMax ? "78px 150px 20px 150px" : "50px 150px 0px 150px",
                 },
               }}
             >

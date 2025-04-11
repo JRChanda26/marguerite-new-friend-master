@@ -109,7 +109,7 @@ export default function NotreProcessus() {
                 xs: "5% 10% 2% 10%",
                 sm: "5% 10% 2% 10%",
                 lg: "50px 100px",
-                xl: isMax ? "100px 0px 31px 0px" : "100px 100px 31px 100px",
+                xl: isMax ? "50px 0px 0px 0px" : "50px 100px 0px 100px",
               },
             }}
           >
@@ -134,7 +134,7 @@ export default function NotreProcessus() {
                 xs: "0% 10%",
                 sm: "0% 15%",
                 lg: "0px 330px 50px 330px",
-                xl: isMax ? "30px 425px 50px 425px" : "0px 550px 100px 550px",
+                xl: isMax ? "50px 425px 50px 425px" : "50px 550px 50px 550px",
               },
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
@@ -149,7 +149,7 @@ export default function NotreProcessus() {
               xs: "0% 0% 0% 5%",
               sm: "5%",
               lg: "0px 100px 0px 100px",
-              xl: isMax ? "0px 100px 100px 250px" : "0px 50px 100px 350px",
+              xl: isMax ? "0px 100px 50px 250px" : "0px 50px 50px 350px",
             },
           }}
         >
@@ -279,7 +279,7 @@ export default function NotreProcessus() {
                 xs: "0px 0px 0px 0px",
                 sm: "0px",
                 lg: "0px 0px 0px 60px",
-                xl: isMax ? "20px 112px 20px 20px" : "50px 112px 50px 20px",
+                xl: isMax ? "0px 112px 0px 20px" : "0px 112px 0px 20px",
               },
               gap: { lg: "50px", xl: "0px" },
             }}

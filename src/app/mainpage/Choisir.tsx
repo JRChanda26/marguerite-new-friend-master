@@ -96,7 +96,7 @@ const Choisir: React.FC = () => {
                       xs: "8% 5% 2% 5%",
                       sm: "5% 5% 2% 5%",
                       lg: "50px 77px 0px 77px",
-                      xl: isMax ? "100px 0px 0px 0px" : "100px 100px 0px 100px",
+                      xl: isMax ? "50px 0px 0px 0px" : "50px 100px 0px 100px",
                     },
                     textAlign: "center",
                   }}
@@ -130,7 +130,7 @@ const Choisir: React.FC = () => {
                       xs: "0% 3%",
                       sm: "0% 8%",
                       lg: "21px 300px 69px 300px",
-                      xl: "41px 550px 69px 550px",
+                      xl: "41px 550px 50px 550px",
                     },
                     textAlign: "center",
                     maxWidth: "75%",
@@ -155,7 +155,7 @@ const Choisir: React.FC = () => {
               xs: "30px 0px 30px 0px",
               sm: "30px 0px 50px 0px",
               lg: "20px 0px 80px 0px",
-              xl: "69px 0px",
+              xl: "30px 0px",
             },
             alignItems: "center",
           }}

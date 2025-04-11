@@ -486,7 +486,7 @@ const ManagePerLaCare: React.FC = () => {
               xs: "5%",
               sm: "5%",
               lg: "50px",
-              xl: isMax ? "123px 0px" : "123px 80px",
+              xl: isMax ? "50px 0px" : "50px 80px",
             },
           }}
         >
@@ -691,7 +691,7 @@ const ManagePerLaCare: React.FC = () => {
                   xs: "0px",
                   sm: "0px",
                   lg: "0px 200px 107px 200px",
-                  xl: "0px 270px 107px 270px",
+                  xl: "0px 270px 80px 270px",
                 },
               }}
             >
@@ -731,7 +731,7 @@ const ManagePerLaCare: React.FC = () => {
                     xl: "contain",
                   },
                   backgroundRepeat: "no-repeat",
-                  marginTop: { xs: "0px", sm: "0px", lg: "50px", xl: "107px" },
+                  marginTop: { xs: "0px", sm: "0px", lg: "50px", xl: "80px" },
                 }}
               >
                 <div style={styles.container}>
@@ -989,8 +989,8 @@ const ManagePerLaCare: React.FC = () => {
                   lg: "50px 100px 50px 100px",
                   md: "280px 50px 153px 50px",
                   xl: isMax
-                    ? "50px 200px 153px 200px"
-                    : "50px 200px 153px 200px",
+                    ? "0px 200px 50px 200px"
+                    : "0px 200px 50px 200px",
                 },
               }}
             >
@@ -1030,7 +1030,7 @@ const ManagePerLaCare: React.FC = () => {
                     xs: "30px",
                     sm: "30px",
                     lg: "50px",
-                    xl: isMax ? "40px" : "80px",
+                    xl: isMax ? "50px" : "50px",
                   },
                 }}
               >
@@ -1192,7 +1192,7 @@ const ManagePerLaCare: React.FC = () => {
                       xs: "50px",
                       sm: "50px",
                       lg: "50px",
-                      xl: isMax ? "80px" : "80px",
+                      xl: isMax ? "50px" : "50px",
                     },
                     letterSpacing: "1%",
                     fontFamily: "Mulish",
@@ -1482,7 +1482,7 @@ const ManagePerLaCare: React.FC = () => {
                 xs: "10% 10% 0% 10%",
                 sm: "10% 10% 0% 10%",
                 lg: "0px 100px 0px 100px",
-                xl: "100px 350px 0px 350px",
+                xl: "50px 350px 0px 350px",
               },
               color: "#0A1411",
             }}
@@ -1499,7 +1499,7 @@ const ManagePerLaCare: React.FC = () => {
               textAlign: "center",
               margin: {
                 lg: "50px 0px",
-                xl: isMax ? "114px 0px 100px 0px" : "114px 0px 100px 0px",
+                xl: isMax ? "50px 0px 50px 0px" : "50px 0px 50px 0px",
               },
             }}
           >

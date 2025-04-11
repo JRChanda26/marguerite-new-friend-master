@@ -106,7 +106,7 @@ export default function BlogEt() {
                 sm: "50px 0px",
                 lg: "50px 200px 50px 200px",
                 md: "70px 100px 50px 100px",
-                xl: "79px 448px 79px 448px",
+                xl: "50px 448px 50px 448px",
               },
             }}
           >
