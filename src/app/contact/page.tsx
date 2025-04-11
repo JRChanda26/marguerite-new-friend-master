@@ -1127,9 +1127,9 @@ export default function Contact() {
               padding: {
                 xs: "6%",
                 sm: "5% 10%",
-                lg: "50px 120px 287px 120px",
-                md: "50px 100px 287px 100px",
-                xl: isMax ? "50px 200px 287px 200px" : "100px 50px 287px 50px",
+                lg: "50px 120px 100px 120px",
+                md: "50px 100px 100px 100px",
+                xl: isMax ? "50px 200px 287px 200px" : "100px 50px 100px 50px",
               },
             }}
           >
