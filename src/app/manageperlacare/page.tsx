@@ -986,7 +986,7 @@ const ManagePerLaCare: React.FC = () => {
                 margin: {
                   xs: "100px 0px 0px 0px",
                   sm: "0px",
-                  lg: "250px 100px 50px 100px",
+                  lg: "50px 100px 50px 100px",
                   md: "280px 50px 153px 50px",
                   xl: isMax
                     ? "50px 200px 153px 200px"
