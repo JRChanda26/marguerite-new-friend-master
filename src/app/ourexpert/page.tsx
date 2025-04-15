@@ -377,6 +377,9 @@ const OurExperts: React.FC = () => {
                             width: dimensions.width,
                             height: dimensions.height,
                             borderRadius: "25px",
+                            display:'flex',
+                            justifyContent:'center',
+                            alignItems:'center'
                           }}
                           onClick={() => handleFlipCard(index)}
                         >
@@ -385,12 +388,12 @@ const OurExperts: React.FC = () => {
                               sx={{
                                 ...designerNameStyle,
                                 fontSize: profileNameFontSize.fontSize,
-                                paddingTop: {
-                                  xs: "50px",
-                                  sm: "70px",
-                                  lg: "70px",
-                                  xl: "70px",
-                                },
+                                // paddingTop: {
+                                //   xs: "50px",
+                                //   sm: "70px",
+                                //   lg: "70px",
+                                //   xl: "70px",
+                                // },
                               }}
                             >
                               {person.name}
