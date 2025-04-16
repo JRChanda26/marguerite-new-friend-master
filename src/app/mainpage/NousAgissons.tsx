@@ -56,7 +56,7 @@ const NousAgissons: React.FC = () => {
               : isMax1
                 ? "0px 200px"
                 : isMax
-                  ? "0px 160px" //140px
+                  ? "0px 140px"
                   : isMax5
                     ? "50px 120px 30px 80px"
                     : isMax6
