@@ -251,7 +251,7 @@ const NousAgissons: React.FC = () => {
             xs={7.5}
             sm={7.5}
             lg={7.5}
-            xl={5.5} //6
+            xl={6} //6
             sx={{
               display: "flex",
               alignItems: "center",
