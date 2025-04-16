@@ -185,10 +185,10 @@ export default function NeManquez() {
                   fontSize: {
                     xs: "14px",
                     sm: "22px",
-                    md: "32px",
-                    lg: "32px",
+                    md: "28px", //32px
+                    lg: "28px", //32px
                     // xl: "41.81px",
-                    xl: "28px", //32
+                    xl: "28px", //32px
                   },
                   lineHeight: {
                     xs: "15px",
