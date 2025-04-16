@@ -188,7 +188,7 @@ export default function NeManquez() {
                     md: "32px",
                     lg: "32px",
                     // xl: "41.81px",
-                    xl: "32px",
+                    xl: "28px", //32
                   },
                   lineHeight: {
                     xs: "15px",
