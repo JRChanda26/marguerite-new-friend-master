@@ -983,7 +983,7 @@ const Header: React.FC = () => {
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
-                  gap: { sm: "80px", xl: "550px" },
+                  gap: { sm: "80px", xl: isMax?"650px": "550px" },
                   // padding: isMax ? "0px 100px" : "0px 0px",
                 }}
               >
