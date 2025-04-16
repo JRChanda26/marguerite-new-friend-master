@@ -353,7 +353,7 @@ export default function NeManquez() {
                     boxShadow: "none",
                   },
                 }}
-                onClick={handleSubmit}
+                // onClick={handleSubmit}
               >
                 {neManquezPage[0]?.data.button_text}
               </Button>

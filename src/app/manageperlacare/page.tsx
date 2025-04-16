@@ -486,7 +486,7 @@ const ManagePerLaCare: React.FC = () => {
               xs: "5%",
               sm: "5%",
               lg: "50px",
-              xl: isMax ? "50px 0px" : "50px 80px",
+              xl: "50px 100px", //80px
             },
           }}
         >
