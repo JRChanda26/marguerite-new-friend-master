@@ -56,7 +56,7 @@ const NousAgissons: React.FC = () => {
               : isMax1
                 ? "0px 200px"
                 : isMax
-                  ? "0px 140px"
+                  ? "0px 160px" //140px
                   : isMax5
                     ? "50px 120px 30px 80px"
                     : isMax6
@@ -251,7 +251,7 @@ const NousAgissons: React.FC = () => {
             xs={7.5}
             sm={7.5}
             lg={7.5}
-            xl={6} //6
+            xl={5.5} //6
             sx={{
               display: "flex",
               alignItems: "center",
