@@ -224,7 +224,7 @@ export default function Paroles() {
                 display: "flex",
                 flexDirection: "row",
                 gap: "30px",
-                paddingLeft: "30px",
+                paddingLeft: isMax ? "300px" : "30px",
               }}
             >
               {" "}
@@ -368,7 +368,8 @@ export default function Paroles() {
                 xs: "5%",
                 sm: "2%",
                 lg: "0px 100px 0px 100px",
-                xl: "0px 300px 0px 300px",
+                // xl: "0px 300px 0px 300px",
+                xl: "0px 450px 0px 450px",
               },
             }}
           >

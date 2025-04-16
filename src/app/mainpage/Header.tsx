@@ -983,8 +983,8 @@ const Header: React.FC = () => {
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
-                  gap: { sm: "80px", xl: "200px" },
-                  padding: isMax ? "0px 100px" : "0px 0px",
+                  gap: { sm: "80px", xl: "550px" },
+                  // padding: isMax ? "0px 100px" : "0px 0px",
                 }}
               >
                 {post?.data.marguerite_logo && (
@@ -1006,7 +1006,7 @@ const Header: React.FC = () => {
                     flexDirection: "row",
                     gap: "35px",
                     flexWrap: "nowrap",
-                    marginLeft: isMax ? "400px": "0px",
+                    // marginLeft: isMax ? "400px": "0px",
                   }}
                 >
                   <Link
@@ -1239,8 +1239,7 @@ const Header: React.FC = () => {
                       {post.data.page5}
                     </Typography>
                   </Link>
-                </Grid>
-                <MailOutlineIcon
+                  <MailOutlineIcon
                   sx={{
                     background: "#236B79",
                     color: "#FFFFFF",
@@ -1250,6 +1249,17 @@ const Header: React.FC = () => {
                   }}
                   onClick={handleContactNavigation}
                 />
+                </Grid>
+                {/* <MailOutlineIcon
+                  sx={{
+                    background: "#236B79",
+                    color: "#FFFFFF",
+                    padding: "10px",
+                    borderRadius: "30px",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleContactNavigation}
+                /> */}
               </Grid>
             )}
           </Grid>
