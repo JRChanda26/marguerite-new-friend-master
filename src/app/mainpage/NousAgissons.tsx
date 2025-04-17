@@ -117,7 +117,7 @@ const NousAgissons: React.FC = () => {
               sx={{
                 gap: "0px",
                 opacity: "0px",
-                backgroundColor: "#F6C09E",
+                // backgroundColor: "#F6C09E",
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "center",
@@ -131,7 +131,7 @@ const NousAgissons: React.FC = () => {
                   fontWeight: 500,
                   fontSize: {
                     xs: "20px",
-                    sm: "30px",
+                    sm: "55px",
                     lg: "55px",
                     // xl: "64px",
                     xl: "55px",
@@ -139,7 +139,7 @@ const NousAgissons: React.FC = () => {
 
                   lineHeight: {
                     xs: "18px",
-                    sm: "30px",
+                    sm: "1.1em",
                     lg: "1.1em",
                     // xl: "50px",
                     xl: "1.1em",
