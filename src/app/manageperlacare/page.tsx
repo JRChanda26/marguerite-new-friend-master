@@ -486,7 +486,7 @@ const ManagePerLaCare: React.FC = () => {
               xs: "5%",
               sm: "5%",
               lg: "50px",
-              xl: "50px 100px", //80px
+              xl: "100px 100px 50px 100px", //80px
             },
           }}
         >
@@ -504,7 +504,7 @@ const ManagePerLaCare: React.FC = () => {
                     lg: "row",
                     xl: "row",
                   },
-                  gap: { xs: "20px", sm: "20px", lg: "50px", xl: "80px" },
+                  gap: { xs: "20px", sm: "20px", lg: "50px", xl: "50px" },
                 }}
               >
                 <Grid item xl={7} lg={7} xs={12} sm={7}>

@@ -307,10 +307,8 @@ const NosSolutionsDe: React.FC = () => {
               padding: {
                 xs: "5%",
                 sm: "5%",
-                lg: "50px 50px 0px 50px",
-                xl: isMax
-                  ? "50px 228px 50px 228px"
-                  : "50px 228px 50px 228px",
+                lg: "50px",
+                xl: "100px 100px 50px 100px" //"50px 228px 50px 228px"
               },
             }}
           >
@@ -328,7 +326,7 @@ const NosSolutionsDe: React.FC = () => {
                       lg: "row",
                       xl: "row",
                     },
-                    gap: { xs: "50px", sm: "50px", lg: "191px", xl: "191px" },
+                    gap: { xs: "50px", sm: "50px", lg: "200px", xl: "300px" },
                     alignItems: "center",
                   }}
                 >
