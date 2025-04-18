@@ -222,6 +222,7 @@ export default function BlogsNews() {
             >
               <Grid item lg={7} md={7}>
                 <Typography
+                variant="h2"
                   sx={{
                     fontSize: {
                       xs: "25px",

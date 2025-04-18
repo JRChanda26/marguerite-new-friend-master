@@ -73,6 +73,7 @@ const Choisir: React.FC = () => {
             <div key={post}>
               <div>
                 <Typography
+                variant="h2"
                   sx={{
                     fontFamily: "Mulish",
                     color: "#0A1411",
