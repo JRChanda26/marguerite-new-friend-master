@@ -733,6 +733,8 @@ const Header: React.FC = () => {
   const isMax = useMediaQuery("(min-width:1930px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
 
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+
   return (
     <Box>
       <div>
@@ -986,7 +988,7 @@ const Header: React.FC = () => {
                   gap: {
                     sm: "170px",
                     lg: "230px",
-                    xl: isMax ? "850px" : "600px",
+                    xl: isMax ? "850px" : isSmallDesktop ? "300px" : "600px",
                   },
                   // padding: isMax ? "0px 100px" : "0px 0px",
                 }}
@@ -1230,7 +1232,7 @@ const Header: React.FC = () => {
                     href={"/blogs/blognews"}
                   >
                     <Typography
-                    // variant="" 
+                      // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
                         fontFamily: "Mulish",
