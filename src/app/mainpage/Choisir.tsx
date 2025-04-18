@@ -610,7 +610,6 @@ const Choisir: React.FC = () => {
                         lg: isCardHovered === 3 ? "21px" : "18px",
                         xl: isCardHovered === 3 ? "21px" : "18px",
                       },
-                      // lineHeight: "185%",
                       lineHeight: "31.3px",
                       paddingRight: "14.3px",
                     }}

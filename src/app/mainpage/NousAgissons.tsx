@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { client } from "../../../lib/prismic-configuration";
 import { Box, Button, Grid, Typography, useMediaQuery } from "@mui/material";
-import EastIcon from "@mui/icons-material/East";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const NousAgissons: React.FC = () => {

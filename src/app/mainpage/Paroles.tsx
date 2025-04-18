@@ -64,10 +64,6 @@ export default function Paroles() {
 
   type HighlightWord = (typeof highlightWords)[number];
 
-  // const fontMap: Record<HighlightWord, { fontFamily: string }> = {
-  //   "Marguerite Services,": { fontFamily: "Jenna Sue" },
-  //   "Responsabilité Sociétale des Entreprises (RSE)": { fontFamily: "Arial" },
-  // };
   const fontMap: Record<HighlightWord, { fontFamily: string }> = {
     "Marguerite Services,": { fontFamily: "Jenna Sue" }, //fontFamily: "Helvetica"
     "Responsabilité Sociétale des Entreprises (RSE)": {

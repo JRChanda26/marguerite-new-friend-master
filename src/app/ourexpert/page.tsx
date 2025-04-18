@@ -391,12 +391,6 @@ const OurExperts: React.FC = () => {
                               sx={{
                                 ...designerNameStyle,
                                 fontSize: profileNameFontSize.fontSize,
-                                // paddingTop: {
-                                //   xs: "50px",
-                                //   sm: "70px",
-                                //   lg: "70px",
-                                //   xl: "70px",
-                                // },
                               }}
                             >
                               {person.name}

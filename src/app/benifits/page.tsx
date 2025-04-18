@@ -11,7 +11,6 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-
 import { useRouter } from "next/navigation";
 import { PrismicNextLink } from "@prismicio/next";
 import Header from "../mainpage/Header";

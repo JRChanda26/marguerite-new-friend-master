@@ -141,7 +141,6 @@ const NosExperiences: React.FC = () => {
                     xs: "10px",
                     sm: "25px",
                     lg: "120%",
-                    // xl: "120%",
                     xl: "1.9em",
                   },
                   padding: {

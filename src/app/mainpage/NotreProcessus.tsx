@@ -97,8 +97,6 @@ export default function NotreProcessus() {
           <Typography
           variant="h2"
             sx={{
-              // fontSize: "64px",
-              // fontWeight: 700,
               fontWeight: 600,
               // lineHeight: "80.32px",
               fontSize: { xs: "28px", sm: "40px", lg: "34px", xl: "34px" }, //xl: "64px"

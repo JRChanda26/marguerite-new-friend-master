@@ -716,7 +716,7 @@ const Header: React.FC = () => {
   ];
 
   const isMin = useMediaQuery("(max-width:750px)");
-  
+
   const menustyle = {
     // fontFamily: "Sans Serif Collection",
     fontFamily: "Mulish",
@@ -983,7 +983,11 @@ const Header: React.FC = () => {
                   flexDirection: "row",
                   justifyContent: "space-around",
                   alignItems: "center",
-                  gap: { sm: "170px",lg:"230px", xl: isMax?"850px": "600px" },
+                  gap: {
+                    sm: "170px",
+                    lg: "230px",
+                    xl: isMax ? "850px" : "600px",
+                  },
                   // padding: isMax ? "0px 100px" : "0px 0px",
                 }}
               >
@@ -1014,6 +1018,7 @@ const Header: React.FC = () => {
                     style={{ textDecoration: "none" }}
                   >
                     <Typography
+                      // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
                         fontFamily: "Mulish",
@@ -1041,6 +1046,7 @@ const Header: React.FC = () => {
                     </Typography>
                   </Link>
                   <Typography
+                    // variant=""
                     sx={{
                       // fontFamily: "Helvetica, sans-serif",
                       fontFamily: "Mulish",
@@ -1068,6 +1074,7 @@ const Header: React.FC = () => {
                   </Typography>
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
                     <Typography
+                      // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
                         fontFamily: "Mulish",
@@ -1130,7 +1137,12 @@ const Header: React.FC = () => {
                             href={link.href}
                             style={{ textDecoration: "none" }}
                           >
-                            <Typography sx={menustyle}>{link.text}</Typography>
+                            <Typography
+                              // variant=""
+                              sx={menustyle}
+                            >
+                              {link.text}
+                            </Typography>
                           </Link>
                         ))}
                       </Box>
@@ -1138,6 +1150,7 @@ const Header: React.FC = () => {
                   </Box>{" "}
                   <Box sx={{ position: "relative", cursor: "pointer" }}>
                     <Typography
+                      // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
                         fontFamily: "Mulish",
@@ -1201,7 +1214,12 @@ const Header: React.FC = () => {
                             href={link.href}
                             style={{ textDecoration: "none" }}
                           >
-                            <Typography sx={menustyle}>{link.text}</Typography>
+                            <Typography
+                              // variant=""
+                              sx={menustyle}
+                            >
+                              {link.text}
+                            </Typography>
                           </Link>
                         ))}
                       </Box>
@@ -1212,6 +1230,7 @@ const Header: React.FC = () => {
                     href={"/blogs/blognews"}
                   >
                     <Typography
+                    // variant="" 
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
                         fontFamily: "Mulish",
@@ -1240,15 +1259,15 @@ const Header: React.FC = () => {
                     </Typography>
                   </Link>
                   <MailOutlineIcon
-                  sx={{
-                    background: "#236B79",
-                    color: "#FFFFFF",
-                    padding: "10px",
-                    borderRadius: "30px",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleContactNavigation}
-                />
+                    sx={{
+                      background: "#236B79",
+                      color: "#FFFFFF",
+                      padding: "10px",
+                      borderRadius: "30px",
+                      cursor: "pointer",
+                    }}
+                    onClick={handleContactNavigation}
+                  />
                 </Grid>
                 {/* <MailOutlineIcon
                   sx={{

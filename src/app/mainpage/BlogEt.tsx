@@ -189,7 +189,6 @@ export default function BlogEt() {
                     xs: "20px",
                     sm: "22px",
                     lg: "120%",
-                    // xl: "120%",
                     xl: "1.5em",
                   },
                 }}

@@ -9,8 +9,6 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { PrismicNextLink } from "@prismicio/next";
-import { PrismicRichText } from "@prismicio/react";
 import React, { useEffect, useState } from "react";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";

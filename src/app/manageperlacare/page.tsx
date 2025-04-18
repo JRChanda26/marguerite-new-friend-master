@@ -353,7 +353,6 @@ const ManagePerLaCare: React.FC = () => {
       <Header />
       <div
         style={{
-          // padding: isMax ? "0px 200px" : "0px 0px",
           padding: isMax4
             ? "0px 450px"
             : isMax3

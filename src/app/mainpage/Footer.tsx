@@ -518,10 +518,6 @@ const Footer: React.FC = () => {
                     color: "#D3DDDE",
                     fontWeight: 400,
                     fontSize: {
-                      // xs: "18px",
-                      // sm: "18px",
-                      // lg: "20px",
-                      // xl: "24.8px",
                       xs: "18px",
                       sm: "18px",
                       lg: "18px",

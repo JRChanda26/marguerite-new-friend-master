@@ -718,7 +718,6 @@ const NosSolutionsDe: React.FC = () => {
                           fontFamily: "Mulish",
                           // fontSize: pointsFontSize.fontSize,
                           fontSize: {
-                            // xl: "22px",
                             xl: "18px",
                             xs: "18px",
                             lg: "18px",

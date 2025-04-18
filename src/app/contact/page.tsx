@@ -1438,13 +1438,6 @@ export default function Contact() {
                     xl: "10px 24px",
                   },
                   borderRadius: "10px",
-                  // fontSize: {
-                  //   xs: "14px",
-                  //   sm: "14px",
-                  //   md: "10px",
-                  //   lg: "14px",
-                  //   xl: "14px",
-                  // },
                   fontSize: {
                     xs: "14px",
                     sm: "14px",

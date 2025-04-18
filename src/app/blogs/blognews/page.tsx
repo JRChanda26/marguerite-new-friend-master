@@ -73,7 +73,6 @@ export default function BlogsNews() {
     // fontWeight: 400,
     fontWeight: 300,
     fontFamily: "Mulish",
-    // lineHeight: "125%",
     lineHeight: "1.1em",
     letterSpacing: "2%",
   };

@@ -262,7 +262,6 @@ export default function Blogs() {
                   fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
-                  // fontSize: "22px",
                   fontSize: { xs: "10px", sm: "18px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
