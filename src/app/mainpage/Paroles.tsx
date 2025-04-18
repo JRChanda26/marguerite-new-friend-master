@@ -39,11 +39,11 @@ export default function Paroles() {
   const isXs = useMediaQuery("(max-width:576px)");
 
   const getFontSize = () => {
-    if (isXs) return { fontSize: "20px" };
-    if (isSm) return { fontSize: "28px" };
-    if (isMd) return { fontSize: "32px" };
-    if (isLg) return { fontSize: "38px" };
-    if (isXl) return { fontSize: "28px" }; //44px
+    if (isXs) return { fontSize: "18px" };
+    if (isSm) return { fontSize: "18px" };
+    if (isMd) return { fontSize: "18px" };
+    if (isLg) return { fontSize: "18px" };
+    if (isXl) return { fontSize: "18px" }; //44px
     return { fontSize: "44px" };
   };
 
@@ -195,8 +195,8 @@ export default function Paroles() {
               padding: {
                 xs: "2% 0%",
                 sm: "5% 0%",
-                lg: "0px 0px 50px 300px",
-                xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 300px",
+                lg: "0px 0px 50px 400px",
+                xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 500px",
               },
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
@@ -213,8 +213,8 @@ export default function Paroles() {
                 xs: "30px",
                 sm: "80px",
                 md: "80px",
-                lg: "200px",
-                xl: "300px",
+                lg: "300px",
+                xl: "400px",
               },
             }}
           >
@@ -360,9 +360,9 @@ export default function Paroles() {
               lineHeight: {
                 xs: "25px",
                 sm: "30px",
-                lg: "38.4px",
+                lg: "1.3em",
                 // xl: "38.4px",
-                xl: "1.9em",
+                xl: "1.3em",
               },
               padding: {
                 xs: "5%",

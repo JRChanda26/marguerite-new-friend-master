@@ -174,7 +174,7 @@ export default function NeManquez() {
                   sm: "30px 0px 0px 20px",
                   lg: "50px 0px 0px 50px",
                   md: "20px 0px 0px 50px",
-                  xl: "50px 0px 0px 0px",
+                  xl: "50px 0px 0px 50px",
                 },
               }}
             >
@@ -254,7 +254,7 @@ export default function NeManquez() {
               xs={7}
               sm={6}
               md={7}
-              lg={8}
+              lg={7}
               xl={6}
               sx={{
                 background: "#FFFFFF",
@@ -270,6 +270,7 @@ export default function NeManquez() {
                   xl: "5px 10px",
                 },
                 marginTop: { xl: "30px" },
+                marginRight:{lg:"30px"},
                 alignItems: "center",
                 boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
                 height: {
@@ -288,7 +289,7 @@ export default function NeManquez() {
                 },
               }}
             >
-              <TextField
+              {/* <TextField
                 name="email_text_field"
                 value={emailValue}
                 onChange={(e) => setEmailValue(e.target.value)}
@@ -325,7 +326,49 @@ export default function NeManquez() {
                     }),
                   },
                 }}
-              />
+              /> */}
+              <TextField
+  name="email_text_field"
+  value={emailValue}
+  onChange={(e) => setEmailValue(e.target.value)}
+  onKeyDown={(e) => {
+    if (e.key === "Enter") {
+      handleSubmit(e);
+    }
+  }}
+  InputProps={{
+    style: placeholderFontSize, // You can remove this if you're using sx
+  }}
+  placeholder="Entrez votre adresse email"
+  variant="outlined"
+  type="text"
+  error={!!errors.email}
+  autoComplete="off"
+  sx={{
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "transparent",
+      },
+      "&:hover fieldset": {
+        borderColor: "transparent",
+      },
+      "&.Mui-focused fieldset": {
+        borderColor: "transparent",
+      },
+      ...(errors.email && {
+        "& fieldset": {
+          border: "none",
+        },
+      }),
+    },
+    // Set placeholder font size here
+    "& input::placeholder": {
+      fontSize: "18px", // Customize as needed
+      color: "#aaa",     // Optional: change placeholder color too
+    },
+  }}
+/>
+
               <Button
                 sx={{
                   background: "#24535C",

@@ -129,7 +129,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     card: {
       position: "absolute",
-      padding: isMin ? "8px" : "25px",
+      padding: isMin ? "8px" : "20px",
       borderRadius: "8px",
       boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
       backgroundColor: "#fff",
@@ -434,10 +434,10 @@ const ManagePerLaCare: React.FC = () => {
                       fontWeight: 700,
                       fontSize: {
                         xs: "16px",
-                        sm: "40px",
-                        lg: "34px", 
+                        sm: "55px",
+                        lg: "55px", 
                         // xl: "50px",
-                        xl: "59px",
+                        xl: "55px",
                       },
                       lineHeight: {
                         xs: "40px",
@@ -459,15 +459,15 @@ const ManagePerLaCare: React.FC = () => {
                       fontWeight: 400,
                       fontSize: {
                         xs: "10px",
-                        sm: "18px",
-                        lg: "18px",
-                        xl: "22px",
+                        sm: "21px",
+                        lg: "21px",
+                        xl: "21px",
                       },
                       lineHeight: {
                         xs: "20px",
                         sm: "28px",
-                        lg: "150%",
-                        xl: "150%",
+                        lg: "50%",
+                        xl: "50%",
                       },
                       letterSpacing: "1%",
                     }}
@@ -517,17 +517,17 @@ const ManagePerLaCare: React.FC = () => {
                         fontWeight: 600,
                         fontSize: {
                           xs: "30px",
-                          sm: "40px",
-                          lg: "40px",
+                          sm: "34px",
+                          lg: "34px",
                           // xl: "50px",
-                          xl: "55px",
+                          xl: "34px",
                         },
                         lineHeight: {
                           xs: "35px",
-                          sm: "48px",
-                          lg: "1.5em",
+                          sm: "1.3em",
+                          lg: "1.3em",
                           // xl: "125%",
-                          xl: "1.5em",
+                          xl: "1.3em",
                         },
                         color: "#292F36",
                         letterSpacing: "2%",
@@ -778,7 +778,7 @@ const ManagePerLaCare: React.FC = () => {
                         marginTop: {
                           xs: "0px",
                           sm: "8px",
-                          lg: "24px",
+                          lg: "15px",
                           xl: "24px",
                         },
                         fontSize: {
@@ -787,7 +787,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "17px",
+                          xl: "18px",
                         },
                       }}
                       color="textSecondary"
@@ -838,7 +838,7 @@ const ManagePerLaCare: React.FC = () => {
                         marginTop: {
                           xs: "0px",
                           sm: "8px",
-                          lg: "24px",
+                          lg: "15px",
                           xl: "24px",
                         },
                         fontSize: {
@@ -847,7 +847,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "17px",
+                          xl: "18px",
                         },
                       }}
                       color="textSecondary"
@@ -898,7 +898,7 @@ const ManagePerLaCare: React.FC = () => {
                         marginTop: {
                           xs: "0px",
                           sm: "8px",
-                          lg: "24px",
+                          lg: "15px",
                           xl: "24px",
                         },
                         fontSize: {
@@ -907,7 +907,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "17px",
+                          xl: "18px",
                         },
                       }}
                       color="textSecondary"
@@ -958,7 +958,7 @@ const ManagePerLaCare: React.FC = () => {
                         marginTop: {
                           xs: "0px",
                           sm: "8px",
-                          lg: "24px",
+                          lg: "15px",
                           xl: "24px",
                         },
                         fontSize: {
@@ -967,7 +967,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "17px",
+                          xl: "18px",
                         },
                       }}
                       color="textSecondary"
@@ -1523,7 +1523,7 @@ const ManagePerLaCare: React.FC = () => {
               sm={4}
               sx={{
                 alignContent: "center",
-                fontSize: { xs: "18px", sm: "18px", lg: "18px", xl: "32px" }, //xl: "35px"
+                fontSize: { xs: "18px", sm: "18px", lg: "18px", xl: "21px" }, //xl: "35px"
                 lineHeight: {
                   xs: "20px",
                   sm: "30px",
