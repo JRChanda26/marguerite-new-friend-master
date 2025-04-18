@@ -160,7 +160,7 @@ const Choisir: React.FC = () => {
               height: {
                 xs: isCardHovered === 1 ? "340px" : "300px",
                 sm: isCardHovered === 1 ? "400px" : "380px",
-                lg: isCardHovered === 1 ? "500px" : "450px",
+                lg: isCardHovered === 1 ? "550px" : "500px",
                 xl: isCardHovered === 1 ? "629.52px" : "476px",
               },
               width: {
@@ -320,7 +320,7 @@ const Choisir: React.FC = () => {
               height: {
                 xs: isCardHovered === 2 ? "340px" : "300px",
                 sm: isCardHovered === 2 ? "400px" : "380px",
-                lg: isCardHovered === 2 ? "500px" : "450px",
+                lg: isCardHovered === 2 ? "550px" : "500px",
                 xl: isCardHovered === 2 ? "629.52px" : "476px",
               },
               width: {
@@ -479,7 +479,7 @@ const Choisir: React.FC = () => {
               height: {
                 xs: isCardHovered === 3 ? "340px" : "300px",
                 sm: isCardHovered === 3 ? "400px" : "380px",
-                lg: isCardHovered === 3 ? "500px" : "450px",
+                lg: isCardHovered === 3 ? "550px" : "500px",
                 xl: isCardHovered === 3 ? "629.52px" : "476px",
               },
               width: {
