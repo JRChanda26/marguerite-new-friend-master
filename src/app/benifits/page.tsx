@@ -120,14 +120,15 @@ const Benifits: React.FC = () => {
             <>
               <div>
                 <Typography
+                variant="h2"
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "32px",
-                      sm: "32px",
-                      lg: "32px",
+                      sm: "34px",
+                      lg: "34px",
                       // xl: "64px",
-                      xl: "32px",
+                      xl: "34px",
                     },
                     // fontWeight: 700,
                     fontWeight: 600,
@@ -151,6 +152,7 @@ const Benifits: React.FC = () => {
                   {post.data.bottom_title}
                 </Typography>
                 <Typography
+                // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
@@ -257,6 +259,7 @@ const Benifits: React.FC = () => {
                             />
                           )}
                           <Typography
+                          variant="h4"
                             sx={{
                               fontSize: {
                                 xs: "15px",
@@ -281,14 +284,15 @@ const Benifits: React.FC = () => {
                           </Typography>
                         </div>
                         <Typography
+                        // variant=""
                           sx={{
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              md: "17px",
-                              lg: "17px",
+                              md: "18px",
+                              lg: "18px",
                               // xl: "24px",
-                              xl: "17px",
+                              xl: "18px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -362,6 +366,7 @@ const Benifits: React.FC = () => {
                             />
                           )}
                           <Typography
+                          variant="h4"
                             sx={{
                               fontSize: {
                                 xs: "15px",
@@ -386,14 +391,15 @@ const Benifits: React.FC = () => {
                           </Typography>
                         </div>
                         <Typography
+                        // variant=""
                           sx={{
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              md: "17px",
-                              lg: "17px",
+                              md: "18px",
+                              lg: "18px",
                               // xl: "24px",
-                              xl: "17px",
+                              xl: "18px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -485,6 +491,7 @@ const Benifits: React.FC = () => {
                             />
                           )}
                           <Typography
+                          variant="h4"
                             sx={{
                               fontSize: {
                                 xs: "15px",
@@ -509,14 +516,15 @@ const Benifits: React.FC = () => {
                           </Typography>
                         </div>
                         <Typography
+                        // variant=""
                           sx={{
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              lg: "17px",
-                              md: "17px",
+                              lg: "18px",
+                              md: "18px",
                               // xl: "24px",
-                              xl: "17px",
+                              xl: "18px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",
@@ -590,6 +598,7 @@ const Benifits: React.FC = () => {
                             />
                           )}
                           <Typography
+                          variant="h4"
                             sx={{
                               fontSize: {
                                 xs: "15px",
@@ -614,14 +623,15 @@ const Benifits: React.FC = () => {
                           </Typography>
                         </div>
                         <Typography
+                        // variant=""
                           sx={{
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              md: "17px",
-                              lg: "17px",
+                              md: "18px",
+                              lg: "18px",
                               // xl: "24px",
-                              xl: "17px",
+                              xl: "18px",
                             },
                             fontFamily: "Mulish",
                             fontStyle: "italic",

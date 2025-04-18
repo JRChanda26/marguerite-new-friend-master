@@ -233,6 +233,7 @@ export default function Blogs() {
               }}
             >
               <Typography
+                variant="h1"
                 sx={{
                   // fontFamily: "DM Serif Display",
                   fontFamily: "Mulish",
@@ -240,7 +241,7 @@ export default function Blogs() {
                   // fontWeight: 700,
                   fontWeight: 700,
                   // fontSize: "50px",
-                  fontSize: { xs: "16px", sm: "40px", lg: "34px", xl: "55px" }, //xl: "50px"
+                  fontSize: { xs: "16px", sm: "40px", lg: "55px", xl: "55px" }, //xl: "50px"
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -255,13 +256,14 @@ export default function Blogs() {
                 {blogPage[0]?.data.heading}
               </Typography>
               <Typography
+                variant="h4"
                 sx={{
                   // fontFamily: "Jost",
                   fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "18px", lg: "18px", xl: "21px" },
+                  fontSize: { xs: "10px", sm: "18px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -302,10 +304,11 @@ export default function Blogs() {
           >
             <Grid item xs={12} sm={12} lg={12} md={12} xl={12}>
               <Typography
+                variant="h2"
                 sx={{
                   color: "#292F36",
                   // fontSize: "50px",
-                  fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "50px"
+                  fontSize: { xs: "25px", sm: "32px", lg: "34px", xl: "34px" }, //xl: "50px"
                   lineHeight: {
                     xs: "40px",
                     sm: "48px",
@@ -394,14 +397,15 @@ export default function Blogs() {
                         }}
                       >
                         <Typography
+                        variant="h4"
                           sx={{
                             color: "#292F36",
                             fontSize: {
                               // xl: "35px",
-                              xl: "20px",
-                              lg: "20px",
-                              md: "20px",
-                              sm: "20px",
+                              xl: "21px",
+                              lg: "21px",
+                              md: "21px",
+                              sm: "21px",
                               xs: "20px",
                             },
                             fontWeight: 700,
@@ -415,14 +419,15 @@ export default function Blogs() {
                           {blogPage[0]?.data.testimonial_title}
                         </Typography>
                         <Typography
+                        // variant=""
                           sx={{
                             color: "#4D5053",
                             fontSize: {
                               // xl: "30px",
-                              xl: "17px",
-                              lg: "17px",
-                              md: "17px",
-                              sm: "17px",
+                              xl: "18px",
+                              lg: "18px",
+                              md: "18px",
+                              sm: "18px",
                               xs: "17px",
                             },
                             fontWeight: 400,
@@ -444,13 +449,14 @@ export default function Blogs() {
                           }}
                         >
                           <Typography
+                          // variant=""
                             sx={{
                               color: "#4D5053",
                               fontSize: {
-                                xl: "16px",
-                                lg: "16px",
-                                md: "16px",
-                                sm: "16px",
+                                xl: "18px",
+                                lg: "18px",
+                                md: "18px",
+                                sm: "18px",
                                 xs: "16px",
                               },
                               fontWeight: 400,
@@ -566,8 +572,9 @@ export default function Blogs() {
             }}
           >
             <Typography
+            variant="h2"
               sx={{
-                fontSize: { xs: "25px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "50px"
+                fontSize: { xs: "25px", sm: "32px", lg: "34px", xl: "34px" }, //xl: "50px"
                 lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "1.5em" }, //xl: "125%"
                 // fontWeight: 700,
                 fontWeight: 600,
@@ -751,28 +758,30 @@ export default function Blogs() {
                       />
                     )}
                     <Typography
+                    variant="h4"
                       sx={{
                         ...title,
                         fontSize: {
                           xs: "14px",
-                          sm: "17px",
-                          lg: "17px",
+                          sm: "21px",
+                          lg: "21px",
                           // xl: "21.27px",
-                          xl: "20px",
+                          xl: "21px",
                         },
                       }}
                     >
                       {item.subTitle}
                     </Typography>
                     <Typography
+                    // variant=""
                       sx={{
                         ...description,
                         fontSize: {
                           xs: "12px",
-                          sm: "14px",
-                          lg: "14px",
+                          sm: "18px",
+                          lg: "18px",
                           // xl: "18.61px",
-                          xl: "17px",
+                          xl: "18px",
                         },
                       }}
                     >
@@ -836,7 +845,7 @@ export default function Blogs() {
                           articlePage === pageNumber
                             ? "0px solid #BBDDD9"
                             : "1px solid #24535C",
-                        fontSize: "16px",
+                        fontSize: "18px",
                         padding: "5px",
                         borderRadius: "20px",
                         background:
@@ -859,7 +868,7 @@ export default function Blogs() {
                           articlePage === pageNumber
                             ? "0px solid #BBDDD9"
                             : "1px solid #24535C",
-                        fontSize: "16px",
+                        fontSize: "18px",
                         padding: "5px 7px",
                         borderRadius: "20px",
                         background:

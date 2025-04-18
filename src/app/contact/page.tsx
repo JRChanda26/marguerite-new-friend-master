@@ -1058,6 +1058,7 @@ export default function Contact() {
               }}
             >
               <Typography
+              variant="h1"
                 sx={{
                   // fontFamily: "DM Serif Display",
                   fontFamily: "Mulish",
@@ -1067,7 +1068,7 @@ export default function Contact() {
                   // fontSize: "50px",
                   // fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                   // added by pragatika
-                  fontSize: { xs: "16px", sm: "40px", lg: "34px", xl: "55px" },
+                  fontSize: { xs: "16px", sm: "40px", lg: "55px", xl: "55px" },
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -1082,13 +1083,14 @@ export default function Contact() {
                 {contactPage[0]?.data.heading}
               </Typography>
               <Typography
+              variant="h4"
                 sx={{
                   // fontFamily: "Jost",
                   fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "18px", lg: "18px", xl: "21px" },
+                  fontSize: { xs: "10px", sm: "18px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -1135,10 +1137,11 @@ export default function Contact() {
           >
             <Grid item xs={12}>
               <Typography
+              variant="h2"
                 sx={{
                   color: "#292F36",
                   // fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontSize: { xs: "30px", sm: "32px", lg: "32px", xl: "32px" },
+                  fontSize: { xs: "30px", sm: "32px", lg: "34px", xl: "34px" },
                   fontWeight: 700,
                   textAlign: "center",
                   padding: {
@@ -1216,12 +1219,13 @@ export default function Contact() {
                       />
                     )}
                     <Typography
+                    variant="h4" 
                       sx={{
                         fontSize: {
                           xs: "16px",
                           sm: "20px",
-                          lg: "20px",
-                          md: "18px",
+                          lg: "21px",
+                          md: "21px",
                           xl: "21px",
                         },
                         display: "flex",
@@ -1291,6 +1295,12 @@ export default function Contact() {
                       autoComplete="off"
                       error={!!errors.nom}
                       helperText={errors.nom}
+                      sx={{
+                        "& .MuiInputBase-input::placeholder": {
+                          fontSize: "18px",
+                          fontFamily: "Mulish",
+                        },
+                      }}
                     />
                   </Grid>
                   <Grid item xs={12} sm={6}>
@@ -1305,6 +1315,12 @@ export default function Contact() {
                       autoComplete="off"
                       error={!!errors.email}
                       helperText={errors.email}
+                      sx={{
+                        "& .MuiInputBase-input::placeholder": {
+                          fontSize: "18px",
+                          fontFamily: "Mulish",
+                        },
+                      }}
                     />
                   </Grid>
                 </Grid>
@@ -1321,6 +1337,12 @@ export default function Contact() {
                       autoComplete="off"
                       error={!!errors.sujet}
                       helperText={errors.sujet}
+                      sx={{
+                        "& .MuiInputBase-input::placeholder": {
+                          fontSize: "18px",
+                          fontFamily: "Mulish",
+                        },
+                      }}
                     />
                   </Grid>
                   <Grid item xs={12} sm={6}>
@@ -1339,6 +1361,12 @@ export default function Contact() {
                       autoComplete="off"
                       error={!!errors.telephone}
                       helperText={errors.telephone}
+                      sx={{
+                        "& .MuiInputBase-input::placeholder": {
+                          fontSize: "18px",
+                          fontFamily: "Mulish",
+                        },
+                      }}
                     />
                   </Grid>
                 </Grid>
@@ -1355,6 +1383,12 @@ export default function Contact() {
                   rows={5}
                   error={!!errors.bonjour}
                   helperText={errors.bonjour}
+                  sx={{
+                    "& .MuiInputBase-input::placeholder": {
+                      fontSize: "18px",
+                      fontFamily: "Mulish",
+                    },
+                  }}
                 />
               </Grid>
             </Grid>
@@ -1414,9 +1448,9 @@ export default function Contact() {
                   fontSize: {
                     xs: "14px",
                     sm: "14px",
-                    md: "14px",
-                    lg: "14px",
-                    xl: "14px",
+                    md: "21px",
+                    lg: "21px",
+                    xl: "21px",
                   },
                   fontWeight: 600,
                   background: "#292F36",

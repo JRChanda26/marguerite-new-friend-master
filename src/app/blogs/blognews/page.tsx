@@ -226,10 +226,10 @@ export default function BlogsNews() {
                   sx={{
                     fontSize: {
                       xs: "25px",
-                      sm: "32px",
-                      lg: "32px",
+                      sm: "34px",
+                      lg: "34px",
                       // xl: "50px",
-                      xl: "32px",
+                      xl: "34px",
                     },
                     lineHeight: {
                       xs: "30px",
@@ -304,12 +304,13 @@ export default function BlogsNews() {
                   }}
                 >
                   <Typography
+                    // variant=""
                     sx={{
                       fontSize: {
                         xs: "12px",
-                        sm: "16px",
-                        lg: "16px",
-                        xl: "16px",
+                        sm: "18px",
+                        lg: "18px",
+                        xl: "18px",
                       },
                       lineHeight: {
                         xs: "16px",
@@ -325,12 +326,13 @@ export default function BlogsNews() {
                     {blogNewsPage[0]?.data.date_text}
                   </Typography>
                   <Typography
+                    // variant=""
                     sx={{
                       fontSize: {
                         xs: "12px",
-                        sm: "16px",
-                        lg: "16px",
-                        xl: "16px",
+                        sm: "18px",
+                        lg: "18px",
+                        xl: "18px",
                       },
                       lineHeight: {
                         xs: "16px",
@@ -347,6 +349,7 @@ export default function BlogsNews() {
                   </Typography>
                 </Grid>
                 <Typography
+                  // variant=""
                   sx={{
                     fontSize: {
                       xs: "12px",
@@ -463,6 +466,7 @@ export default function BlogsNews() {
                       </Grid>
                       <div>
                         <Typography
+                          variant="h2"
                           sx={{
                             fontFamily: "Jenna Sue",
                             color: "#24535C",
@@ -470,10 +474,10 @@ export default function BlogsNews() {
                             fontWeight: 300,
                             fontSize: {
                               xs: "28px",
-                              sm: "35px",
-                              lg: "35px",
+                              sm: "34px",
+                              lg: "34px",
                               // xl: "48px",
-                              xl: "35px",
+                              xl: "34px",
                             },
                             lineHeight: {
                               xs: "30px",
@@ -528,6 +532,10 @@ export default function BlogsNews() {
                         "&.Mui-focused fieldset": {
                           borderColor: "transparent",
                         },
+                        "& .MuiInputBase-input::placeholder": {
+                          fontSize: "18px",
+                          fontFamily: "Mulish",
+                        },
                       },
                       height: { lg: "70px", xl: "70px" },
                       width: { lg: "100%", xl: "100%" },
@@ -562,12 +570,13 @@ export default function BlogsNews() {
                   }}
                 >
                   <Typography
+                  variant="h3"
                     sx={{
                       fontSize: {
                         xs: "25px",
                         sm: "25px",
-                        md: "20px",
-                        lg: "22px",
+                        md: "28px",
+                        lg: "28px",
                         // xl: "35px",
                         xl: "28px",
                       },
@@ -593,14 +602,15 @@ export default function BlogsNews() {
                           }}
                         >
                           <Typography
+                          variant="h4"
                             sx={{
                               fontSize: {
                                 xs: "20px",
                                 sm: "20px",
-                                md: "14px",
-                                lg: "16px",
+                                md: "21px",
+                                lg: "21px",
                                 // xl: "30px",
-                                xl: "18px",
+                                xl: "21px",
                               },
                               ...list,
                             }}
@@ -608,13 +618,14 @@ export default function BlogsNews() {
                             {blogNewsPage[0]?.data.card_title_lists}
                           </Typography>
                           <Typography
+                          // variant=""
                             sx={{
                               float: "right",
                               fontSize: {
                                 xs: "16px",
-                                sm: "16px",
-                                md: "12px",
-                                lg: "14px",
+                                sm: "18px",
+                                md: "18px",
+                                lg: "18px",
                                 // xl: "20px",
                                 xl: "18px",
                               },
@@ -704,8 +715,9 @@ export default function BlogsNews() {
               }}
             >
               <Typography
+              variant="h2"
                 sx={{
-                  fontSize: { xs: "28px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "50px"
+                  fontSize: { xs: "28px", sm: "32px", lg: "34px", xl: "34px" }, //xl: "50px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
@@ -723,6 +735,7 @@ export default function BlogsNews() {
                 {blogNewsPage[0]?.data.bottom_heading}
               </Typography>
               <Typography
+              // variant=""
                 sx={{
                   fontSize: { xs: "16px", sm: "18px", lg: "18px", xl: "18px" }, //xl: "22px"
                   lineHeight: {
@@ -748,6 +761,7 @@ export default function BlogsNews() {
                   .map((_, index) => (
                     <div key={index}>
                       <Typography
+                      // variant=""
                         sx={{
                           fontSize: {
                             xs: "16px",
@@ -791,6 +805,7 @@ export default function BlogsNews() {
                 )}
               </div>
               <Typography
+              // variant=""
                 sx={{
                   fontSize: { xs: "16px", sm: "18px", lg: "18px", xl: "18px" }, //xl: "22px"
                   lineHeight: {
@@ -830,14 +845,14 @@ export default function BlogsNews() {
                     width: {
                       xs: "50%",
                       sm: "30%",
-                      lg: "220.47px",
-                      xl: "220.47px",
+                      lg: "250px",
+                      xl: "250px",
                     },
                     height: {
                       xs: "auto",
                       sm: "auto",
-                      lg: "62.47px",
-                      xl: "62.47px",
+                      lg: "70px",
+                      xl: "70px",
                     },
                     "&:focus": {
                       background: "#24535C",
@@ -849,15 +864,16 @@ export default function BlogsNews() {
                   // onClick={handleNavigation}
                 >
                   <Typography
+                  variant="h4"
                     sx={{
                       fontWeight: 400,
                       fontFamily: "Mulish",
                       fontSize: {
                         xs: "10px",
                         sm: "18px",
-                        lg: "15.2px",
-                        md: "12px",
-                        xl: "15.2px",
+                        lg: "21px",
+                        md: "21px",
+                        xl: "21px",
                       },
                       lineHeight: {
                         xs: "8px",
@@ -884,8 +900,9 @@ export default function BlogsNews() {
                 </Button>
               </div>
               <Typography
+              variant="h3"
                 sx={{
-                  fontSize: { xs: "24px", sm: "25px", lg: "25px", xl: "28px" }, //xl: "30px"
+                  fontSize: { xs: "24px", sm: "28px", lg: "28px", xl: "28px" }, //xl: "30px"
                   lineHeight: {
                     xs: "30px",
                     sm: "40px",
@@ -921,10 +938,11 @@ export default function BlogsNews() {
                   textAlign: "center",
                 }}
               >
-                <div
-                  style={{
+                <Typography
+                // variant=""
+                  sx={{
                     padding: "2% 3%",
-                    fontSize: "20px",
+                    fontSize: "18px",
                     fontWeight: 400,
                     color: "#000000",
                     fontFamily: "Mulish",
@@ -933,7 +951,7 @@ export default function BlogsNews() {
                   }}
                 >
                   {blogNewsPage[0]?.data.tags}
-                </div>
+                </Typography>
                 {tabs.slice(0, 5).map((label: string, index: number) => (
                   <Button
                     key={index}

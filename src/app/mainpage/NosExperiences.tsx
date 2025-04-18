@@ -97,6 +97,7 @@ const NosExperiences: React.FC = () => {
               }}
             >
               <Typography
+              variant="h2"
                 sx={{
                   fontFamily: "Mulish",
                   // fontFamily: "Helvetica, sans-serif",
@@ -106,9 +107,9 @@ const NosExperiences: React.FC = () => {
                   fontSize: {
                     xs: "20px",
                     sm: "48px",
-                    lg: "32px",
+                    lg: "34px",
                     // xl: "66.25px",
-                    xl: "32px",
+                    xl: "34px",
                   },
                   lineHeight: {
                     xs: "30px",
@@ -128,6 +129,7 @@ const NosExperiences: React.FC = () => {
                 {post.data.heading}
               </Typography>
               <Typography
+              // variant=""
                 sx={{
                   fontFamily: "Mulish",
                   // fontFamily: "Helvetica, sans-serif",
@@ -208,14 +210,15 @@ const NosExperiences: React.FC = () => {
                         minWidth: {
                           xs: "200px",
                           sm: "300px",
-                          md: "350px",
-                          lg: "394px",
-                          xl: "394px",
+                          md: "300px",
+                          lg: "300px",
+                          xl: "300px",
                         },
-                        minHeight: { xl: "250px" },
+                        minHeight: { xl: "200px" },
                       }}
                     >
                       <Typography
+                      // variant=""
                         sx={{
                           fontFamily: "Mulish",
                           // fontFamily: "Helvetica, sans-serif",
@@ -225,9 +228,9 @@ const NosExperiences: React.FC = () => {
                           fontSize: {
                             xs: "10px",
                             sm: "16px",
-                            lg: "20px",
+                            lg: "18px",
                             // xl: "19.32px",
-                            xl: "20px",
+                            xl: "18px",
                           },
                           lineHeight: {
                             xs: "10px",

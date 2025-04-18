@@ -123,6 +123,7 @@ export default function Questions() {
         >
           <Grid item lg={6} md={6}>
             <Typography
+            variant="h2"
               sx={{
                 color: "#14292D",
                 // fontSize: "64px",
@@ -133,11 +134,11 @@ export default function Questions() {
                 // lineHeight: "76.8px",
                 fontSize: {
                   xs: "28px",
-                  sm: "45px",
-                  md: "45px",
-                  lg: "32px",
+                  sm: "34px",
+                  md: "34px",
+                  lg: "34px",
                   // xl: "64px",
-                  xl: "32px",
+                  xl: "34px",
                 },
                 lineHeight: {
                   xs: "30px",
@@ -159,6 +160,7 @@ export default function Questions() {
               {questionPage[0]?.data.heading}
             </Typography>
             <Typography
+            // variant=""
               sx={{
                 color: "#565656",
                 // fontSize: "34px",
@@ -170,7 +172,7 @@ export default function Questions() {
                 fontSize: {
                   xs: "12px",
                   sm: "20px",
-                  md: "20px",
+                  md: "18px",
                   lg: "18px",
                   // xl: "24px",
                   xl: "18px",
@@ -200,7 +202,6 @@ export default function Questions() {
                 border: "1px solid #24535C",
                 color: "#24535C",
                 fontWeight: 500,
-                // padding: "15px 25px",
                 padding: {
                   xs: "1% 3%",
                   sm: "2% 5%",
@@ -209,8 +210,6 @@ export default function Questions() {
                   xl: "2% 5%",
                 },
                 borderRadius: "10px",
-                // marginLeft: "20%",
-                // marginTop: "10%",
                 margin: {
                   xs: "5px 0px",
                   sm: "5% 0% 0% 5%",
@@ -218,24 +217,19 @@ export default function Questions() {
                   md: "40px 30px 0px 80px",
                   xl: isMax ? "30px 0px 0px 0px" : "30px 0px 0px 110px",
                 },
-                // fontFamily: "Mulish, sans-serif",
                 fontFamily: "Mulish",
-                // lineHeight: "26px",
-                // fontSize: "21.67px",
                 fontSize: {
                   xs: "12px",
                   sm: "20px",
-                  md: "20px",
-                  lg: "20px",
-                  // xl: "25px",
-                  xl: "20px",
+                  md: "21px",
+                  lg: "21px",
+                  xl: "21px",
                 },
                 lineHeight: {
                   xs: "20px",
                   sm: "20px",
                   lg: "38.4px",
                   md: "28.4px",
-                  // xl: "38.4px",
                   xl: "1.7em",
                 },
                 textTransform: "none",
@@ -301,6 +295,7 @@ export default function Questions() {
                   expandIcon={clicked[index] ? <RemoveIcon /> : <AddIcon />}
                 >
                   <Typography
+                  variant="h4"
                     sx={{
                       color: "#161C2D",
                       // fontWeight: 700,
@@ -310,8 +305,8 @@ export default function Questions() {
                       fontSize: {
                         xs: "14px",
                         sm: "18px",
-                        lg: "18px",
-                        md: "14px",
+                        lg: "21px",
+                        md: "21px",
                         // xl: "18px",
                         xl: "21px",
                       },
@@ -329,6 +324,7 @@ export default function Questions() {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography
+                  // variant=""
                     sx={{
                       color: "#161C2D",
                       opacity: "72%",
@@ -339,10 +335,10 @@ export default function Questions() {
                       fontSize: {
                         xs: "14px",
                         sm: "16px",
-                        lg: "16px",
-                        md: "12px",
+                        lg: "18px",
+                        md: "18px",
                         // xl: "16px",
-                        xl: "17px",
+                        xl: "18px",
                       },
                       lineHeight: {
                         xs: "20px",

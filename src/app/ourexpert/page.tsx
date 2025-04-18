@@ -204,7 +204,7 @@ const OurExperts: React.FC = () => {
   };
 
   const profileNameFontSize = {
-    fontSize: isXs ? "20px" : "25px",
+    fontSize: isXs ? "20px" : "28px",
   };
 
   const profileDetailsFontSize = {
@@ -270,15 +270,16 @@ const OurExperts: React.FC = () => {
             <React.Fragment key={postIndex}>
               <div>
                 <Typography
+                variant="h2"
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "28px",
                       sm: "32px",
-                      md: "32px",
-                      lg: "32px",
+                      md: "34px",
+                      lg: "34px",
                       // xl: "84px",
-                      xl: "32px",
+                      xl: "34px",
                     },
                     // fontWeight: 700,
                     fontWeight: 600,
@@ -303,6 +304,7 @@ const OurExperts: React.FC = () => {
                   {post.data.profile_title}
                 </Typography>
                 <Typography
+                // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
@@ -385,6 +387,7 @@ const OurExperts: React.FC = () => {
                         >
                           <div>
                             <Typography
+                            variant="h3"
                               sx={{
                                 ...designerNameStyle,
                                 fontSize: profileNameFontSize.fontSize,
@@ -399,6 +402,7 @@ const OurExperts: React.FC = () => {
                               {person.name}
                             </Typography>
                             <Typography
+                            // variant=""
                               sx={{
                                 ...designerDetailsStyle,
                                 fontSize: profileDetailsFontSize.fontSize,

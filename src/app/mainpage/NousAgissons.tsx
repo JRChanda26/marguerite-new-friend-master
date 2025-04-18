@@ -107,7 +107,6 @@ const NousAgissons: React.FC = () => {
                 xl: isMax ? "0px" : "30px",
               },
               paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
-              // padding: { xs: "20px", sm: "25px", lg: "30px", xl: "30px" },
               opacity: isVisible ? 1 : 0, // Control visibility with state
               transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
               transition: "opacity 2s ease-in-out, transform 2s ease-in-out",
@@ -124,16 +123,14 @@ const NousAgissons: React.FC = () => {
               }}
             >
               <Typography
+              variant="h1"
                 sx={{
-                  // fontFamily: "Helvetica, sans-serif",
                   fontFamily: "Mulish",
-                  // fontWeight: 400,
                   fontWeight: 500,
                   fontSize: {
                     xs: "20px",
                     sm: "55px",
                     lg: "55px",
-                    // xl: "64px",
                     xl: "55px",
                   },
 
@@ -141,7 +138,6 @@ const NousAgissons: React.FC = () => {
                     xs: "18px",
                     sm: "1.1em",
                     lg: "1.1em",
-                    // xl: "50px",
                     xl: "1.1em",
                   },
                   color: "#24535C",
@@ -151,27 +147,24 @@ const NousAgissons: React.FC = () => {
                 {post.data.heading}
               </Typography>
               <Typography
+              variant="h2"
                 sx={{
-                  // fontFamily: "Sans Serif Collection",
                   fontFamily: "Mulish",
                   color: "#24535C",
-                  // fontWeight: 400,
                   fontWeight: 300,
                   paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
                   paddingRight: isMax5 ? "300px" : "0px",
                   fontSize: {
                     xs: "12px",
                     sm: "25px",
-                    lg: "35px",
-                    // xl: "58px",
-                    xl: "35px",
+                    lg: "34px",
+                    xl: "34px",
                   },
 
                   lineHeight: {
                     xs: "12px",
                     sm: "30px",
                     lg: "1.2em",
-                    // xl: "69.6px",
                     xl: "1.2em",
                   },
                   letterSpacing: "0%",
@@ -204,23 +197,20 @@ const NousAgissons: React.FC = () => {
                 onClick={handleNavigation}
               >
                 <Typography
+                variant="h4"
                   sx={{
-                    // fontFamily: "Helvetica, sans-serif",
                     fontFamily: "Mulish",
-                    // fontWeight: 400,
                     fontWeight: 500,
                     fontSize: {
                       xs: "7px",
                       sm: "12px",
-                      lg: "20px",
-                      // xl: "15.2px",
-                      xl: "20px",
+                      lg: "21px",
+                      xl: "21px",
                     },
                     lineHeight: {
                       xs: "0px",
                       sm: "12px",
-                      lg: "50px",
-                      // xl: "50px",
+                      lg: "1.7em",
                       xl: "1.7em",
                     },
                     letterSpacing: "0%",

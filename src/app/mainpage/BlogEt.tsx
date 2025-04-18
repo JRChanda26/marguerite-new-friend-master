@@ -87,15 +87,16 @@ export default function BlogEt() {
       >
         <Grid item xs={12} style={{ textAlign: "center" }}>
           <Typography
+          variant="h2"
             sx={{
               // fontWeight: 700,
               fontWeight: 600,
               fontSize: {
                 xs: "28px",
-                sm: "45px",
-                lg: "32px",
+                sm: "34px",
+                lg: "34px",
                 // xl: "47.85px",
-                xl: "32px",
+                xl: "34px",
               },
               lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "1.5em" }, //xl: "120%"
               color: "#161C2D",
@@ -174,14 +175,15 @@ export default function BlogEt() {
                 />
               )}
               <Typography
+              variant="h4"
                 sx={{
                   ...title,
                   fontSize: {
                     xs: "14px",
-                    sm: "18px",
-                    lg: "17px",
+                    sm: "21px",
+                    lg: "21px",
                     // xl: "21.27px",
-                    xl: "20px",
+                    xl: "21px",
                   },
                   lineHeight: {
                     xs: "20px",
@@ -195,14 +197,15 @@ export default function BlogEt() {
                 {item.title}
               </Typography>
               <Typography
+              // variant=""
                 sx={{
                   ...description,
                   fontSize: {
                     xs: "12px",
-                    sm: "14px",
-                    lg: "14px",
+                    sm: "18px",
+                    lg: "18px",
                     // xl: "18.61px",
-                    xl: "17px",
+                    xl: "18px",
                   },
                   lineHeight: {
                     xs: "15px",
@@ -240,7 +243,7 @@ export default function BlogEt() {
                       textDecoration: "none",
                       color: "#24535C",
                       fontWeight: 400,
-                      fontSize: "14px",
+                      fontSize: "18px",
                       lineHeight: "25.9px",
                     }}
                   >
@@ -267,7 +270,7 @@ export default function BlogEt() {
             fontFamily: "Mulish",
             // fontFamily: "Helvetica, sans-serif",
             color: "#FFFFFF",
-            fontSize: { xs: "14px", sm: "25px", lg: "20px", xl: "20px" }, //xl: "30px"
+            fontSize: { xs: "14px", sm: "21px", lg: "21px", xl: "21px" }, //xl: "30px"
             textAlign: "center",
             borderRadius: "12px",
             padding: "8px 15px",

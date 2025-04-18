@@ -90,7 +90,7 @@ export default function Paroles() {
             style={{
               fontFamily: fontMap[part as HighlightWord].fontFamily,
               fontWeight: 400,
-              fontSize: fontSize.fontSize,
+              fontSize: "18px",
               lineHeight: "auto",
               letterSpacing: "0%",
               color: "#24535C",
@@ -186,12 +186,13 @@ export default function Paroles() {
       >
         <Grid container alignItems="center" justifyContent="center" gap="20px">
           <Typography
+          variant="h2"
             sx={{
               color: "#0A1411",
               // fontWeight: 700,
               fontWeight: 600,
-              fontSize: { xs: "28px", sm: "45px", lg: "32px", xl: "32px" }, //xl: "64px"
-              lineHeight: { xs: "30px", sm: "50px", lg: "auto", xl: "1.5em" }, //xl: "auto"
+              fontSize: { xs: "28px", sm: "45px", lg: "34px", xl: "34px" }, //xl: "64px"
+              lineHeight: { xs: "30px", sm: "50px", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
               padding: {
                 xs: "2% 0%",
                 sm: "5% 0%",
@@ -349,26 +350,23 @@ export default function Paroles() {
 
         <Grid item lg={12}>
           <Typography
+          // variant=""
             sx={{
               color: "#000000",
-              // fontWeight: 400,
               fontWeight: 500,
               fontFamily: "Mulish",
-              // fontFamily: "Helvetica, sans-serif",
               letterSpacing: "0%",
-              fontSize: { xs: "14px", sm: "16px", lg: "18px", xl: "18px" }, //xl: "25px"
+              fontSize: { xs: "14px", sm: "16px", lg: "18px", xl: "18px" },
               lineHeight: {
                 xs: "25px",
                 sm: "30px",
                 lg: "1.3em",
-                // xl: "38.4px",
                 xl: "1.3em",
               },
               padding: {
                 xs: "5%",
                 sm: "2%",
                 lg: "0px 180px 0px 180px",
-                // xl: "0px 300px 0px 300px",
                 xl: "0px 450px 0px 450px",
               },
             }}
