@@ -471,6 +471,7 @@ export default function Paroles() {
                     <p>Video not available</p>
                   )}
                   <Typography
+                  // variant=""
                     sx={{
                       color: "#000000",
                       // fontWeight: 700,
