@@ -195,8 +195,8 @@ export default function Paroles() {
               padding: {
                 xs: "2% 0%",
                 sm: "5% 0%",
-                lg: "0px 0px 50px 0px",
-                xl: isMax ? "0px 194px 50px 194px" : "0px 194px 50px 194px",
+                lg: "0px 0px 50px 300px",
+                xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 300px",
               },
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
@@ -213,8 +213,8 @@ export default function Paroles() {
                 xs: "30px",
                 sm: "80px",
                 md: "80px",
-                lg: "80px",
-                xl: "80px",
+                lg: "200px",
+                xl: "300px",
               },
             }}
           >
@@ -224,7 +224,7 @@ export default function Paroles() {
                 display: "flex",
                 flexDirection: "row",
                 gap: "30px",
-                paddingLeft: isMax ? "300px" : "30px",
+                // paddingLeft: isMax ? "300px" : "30px",
               }}
             >
               {" "}
@@ -367,7 +367,7 @@ export default function Paroles() {
               padding: {
                 xs: "5%",
                 sm: "2%",
-                lg: "0px 100px 0px 100px",
+                lg: "0px 180px 0px 180px",
                 // xl: "0px 300px 0px 300px",
                 xl: "0px 450px 0px 450px",
               },
