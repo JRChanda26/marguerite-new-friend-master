@@ -179,6 +179,7 @@ export default function NeManquez() {
               }}
             >
               <Typography
+                variant="h3"
                 sx={{
                   color: "#24535C",
                   fontFamily: "Mulish",
@@ -205,6 +206,7 @@ export default function NeManquez() {
                 {neManquezPage[0]?.data.title}
               </Typography>
               <Typography
+                // variant=""
                 sx={{
                   color: "#24535C",
                   fontFamily: "Mulish",
@@ -213,7 +215,6 @@ export default function NeManquez() {
                     sm: "14px",
                     md: "18px",
                     lg: "18px",
-                    // xl: "23.52px",
                     xl: "18px",
                   },
                   lineHeight: {
@@ -270,7 +271,7 @@ export default function NeManquez() {
                   xl: "5px 10px",
                 },
                 marginTop: { xl: "30px" },
-                marginRight:{lg:"30px"},
+                marginRight: { lg: "30px" },
                 alignItems: "center",
                 boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
                 height: {
@@ -289,7 +290,7 @@ export default function NeManquez() {
                 },
               }}
             >
-              {/* <TextField
+              <TextField
                 name="email_text_field"
                 value={emailValue}
                 onChange={(e) => setEmailValue(e.target.value)}
@@ -319,6 +320,10 @@ export default function NeManquez() {
                     "&.Mui-focused fieldset": {
                       borderColor: "transparent", // Focused border color
                     },
+                    "& .MuiInputBase-input::placeholder": {
+                      fontSize: "18px",
+                      fontFamily: "Mulish",
+                    },
                     ...(errors.email && {
                       "& fieldset": {
                         border: "none",
@@ -326,48 +331,7 @@ export default function NeManquez() {
                     }),
                   },
                 }}
-              /> */}
-              <TextField
-  name="email_text_field"
-  value={emailValue}
-  onChange={(e) => setEmailValue(e.target.value)}
-  onKeyDown={(e) => {
-    if (e.key === "Enter") {
-      handleSubmit(e);
-    }
-  }}
-  InputProps={{
-    style: placeholderFontSize, // You can remove this if you're using sx
-  }}
-  placeholder="Entrez votre adresse email"
-  variant="outlined"
-  type="text"
-  error={!!errors.email}
-  autoComplete="off"
-  sx={{
-    "& .MuiOutlinedInput-root": {
-      "& fieldset": {
-        borderColor: "transparent",
-      },
-      "&:hover fieldset": {
-        borderColor: "transparent",
-      },
-      "&.Mui-focused fieldset": {
-        borderColor: "transparent",
-      },
-      ...(errors.email && {
-        "& fieldset": {
-          border: "none",
-        },
-      }),
-    },
-    // Set placeholder font size here
-    "& input::placeholder": {
-      fontSize: "18px", // Customize as needed
-      color: "#aaa",     // Optional: change placeholder color too
-    },
-  }}
-/>
+              />
 
               <Button
                 sx={{
@@ -379,10 +343,10 @@ export default function NeManquez() {
                   fontSize: {
                     xs: "4px",
                     sm: "8px",
-                    lg: "19.25px",
+                    lg: "21px",
                     // md: "19.25px",
                     // xl: "19.25px",
-                    xl: isMax5 ? "17px" : "20px",
+                    xl: isMax5 ? "18px" : "21px",
                   },
                   fontWeight: 400,
                   padding: {

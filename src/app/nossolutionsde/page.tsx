@@ -233,6 +233,7 @@ const NosSolutionsDe: React.FC = () => {
                   }}
                 >
                   <Typography
+                  variant="h1"
                     sx={{
                       // fontFamily: "DM Serif Display",
                       fontFamily: "Mulish",
@@ -242,7 +243,7 @@ const NosSolutionsDe: React.FC = () => {
                       fontSize: {
                         xs: "16px",
                         sm: "40px",
-                        lg: "34px",
+                        lg: "55px",
                         // xl: "50px",
                         xl: "55px",
                       },
@@ -259,6 +260,7 @@ const NosSolutionsDe: React.FC = () => {
                     {post.data.heading}
                   </Typography>
                   <Typography
+                  variant="h4"
                     sx={{
                       // fontFamily: "Jost",
                       fontFamily: "Mulish",
@@ -266,8 +268,8 @@ const NosSolutionsDe: React.FC = () => {
                       fontWeight: 400,
                       fontSize: {
                         xs: "10px",
-                        sm: "18px",
-                        lg: "18px",
+                        sm: "21px",
+                        lg: "21px",
                         xl: "21px",
                       },
                       lineHeight: {
@@ -333,6 +335,7 @@ const NosSolutionsDe: React.FC = () => {
                   <Grid item xl={5} lg={5} xs={12} sm={7}>
                     {nosPage.map((post: any) => (
                       <Typography
+                      variant="h2"
                         key={post}
                         sx={{
                           fontFamily: "Mulish",
@@ -340,8 +343,8 @@ const NosSolutionsDe: React.FC = () => {
                           fontWeight: 600,
                           fontSize: {
                             xs: "30px",
-                            sm: "40px",
-                            lg: "40px",
+                            sm: "34px",
+                            lg: "34px",
                             // xl: "58px",
                             xl: "34px",
                           },
@@ -361,11 +364,12 @@ const NosSolutionsDe: React.FC = () => {
                       </Typography>
                     ))}
                     <Typography
+                    variant="h4"
                       sx={{
                         fontSize: {
                           xs: "12px",
-                          sm: "15px",
-                          lg: "18px",
+                          sm: "21px",
+                          lg: "21px",
                           // xl: "22px",
                           xl: "21px",
                         },
@@ -407,14 +411,14 @@ const NosSolutionsDe: React.FC = () => {
                               xs: "50%",
                               sm: "70%",
                               lg: "220.47px",
-                              md: "220.47px",
-                              xl: "220.47px",
+                              md: "250px",
+                              xl: "250px",
                             },
                             height: {
                               xs: "auto",
                               sm: "auto",
-                              lg: "62.47px",
-                              xl: "62.47px",
+                              lg: "70px",
+                              xl: "70px",
                             },
                             "&:focus": {
                               background: "#24535C",
@@ -426,14 +430,15 @@ const NosSolutionsDe: React.FC = () => {
                           // onClick={handleNavigation}
                         >
                           <Typography
+                          variant="h4"
                             sx={{
                               fontWeight: 400,
                               fontFamily: "Mulish",
                               fontSize: {
                                 xs: "12px",
-                                sm: "15px",
-                                lg: "15px",
-                                xl: "15px",
+                                sm: "21px",
+                                lg: "21px",
+                                xl: "21px",
                               },
                               lineHeight: {
                                 xs: "8px",
@@ -500,6 +505,7 @@ const NosSolutionsDe: React.FC = () => {
           >
             <Grid item lg={12}>
               <Typography
+              variant="h2"
                 sx={{
                   textAlign: "center",
                   color: "#292F36",
@@ -597,6 +603,7 @@ const NosSolutionsDe: React.FC = () => {
                         >
                           <Typography
                             onClick={() => handleColor1(index)}
+                            variant="h4"
                             sx={{
                               color: clicked1 === index ? "#3D8C6E" : "#292F36",
                               lineHeight: "1.5em",
@@ -604,7 +611,7 @@ const NosSolutionsDe: React.FC = () => {
                                 xs: "18px",
                                 sm: "14px",
                                 lg: "21px",
-                                md: "14px",
+                                md: "21px",
                                 // xl: "35px",
                                 xl: "21px",
                               },
@@ -618,15 +625,16 @@ const NosSolutionsDe: React.FC = () => {
                         </AccordionSummary>
                         <AccordionDetails>
                           <Typography
+                          // variant=""
                             sx={{
                               color: "#4D5053",
                               fontSize: {
                                 xs: "14px",
                                 sm: "12px",
-                                lg: "17px",
-                                md: "12px",
+                                lg: "18px",
+                                md: "18px",
                                 // xl: "28px",
-                                xl: "17px",
+                                xl: "18px",
                               },
                               // fontWeight: 400,
                               fontWeight: 500,
@@ -672,6 +680,7 @@ const NosSolutionsDe: React.FC = () => {
                 }}
               >
                 <Typography
+                // variant=""
                   sx={{
                     background: item.background,
                     borderRadius: "42.9px",
@@ -685,9 +694,9 @@ const NosSolutionsDe: React.FC = () => {
                       // xl: "18.98px",
                       xl: "18px",
                       xs: "14px",
-                      lg: "14px",
+                      lg: "18px",
                       sm: "14px",
-                      md: "14px",
+                      md: "18px",
                     },
                     lineHeight: "1.5em",
                     letterSpacing: "2%",
@@ -709,7 +718,6 @@ const NosSolutionsDe: React.FC = () => {
                           fontFamily: "Mulish",
                           // fontSize: pointsFontSize.fontSize,
                           fontSize: {
-                            // xl: "22px",
                             xl: "18px",
                             xs: "18px",
                             lg: "18px",

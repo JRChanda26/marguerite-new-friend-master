@@ -353,7 +353,6 @@ const ManagePerLaCare: React.FC = () => {
       <Header />
       <div
         style={{
-          // padding: isMax ? "0px 200px" : "0px 0px",
           padding: isMax4
             ? "0px 450px"
             : isMax3
@@ -426,6 +425,7 @@ const ManagePerLaCare: React.FC = () => {
                   }}
                 >
                   <Typography
+                  variant="h1"
                     sx={{
                       // fontFamily: "DM Serif Display",
                       fontFamily: "Mulish",
@@ -452,6 +452,7 @@ const ManagePerLaCare: React.FC = () => {
                     {post.data.heading}
                   </Typography>
                   <Typography
+                  variant="h4"
                     sx={{
                       // fontFamily: "Jost",
                       fontFamily: "Mulish",
@@ -510,6 +511,7 @@ const ManagePerLaCare: React.FC = () => {
                 <Grid item xl={7} lg={7} xs={12} sm={7}>
                   {managePage.map((post: any, index: any) => (
                     <Typography
+                    variant="h2"
                       key={index}
                       sx={{
                         fontFamily: "Mulish",
@@ -538,6 +540,7 @@ const ManagePerLaCare: React.FC = () => {
                     </Typography>
                   ))}
                   <Typography
+                  variant="h4"
                     sx={{
                       fontFamily: "Mulish",
                       color: "#237D6C",
@@ -545,8 +548,8 @@ const ManagePerLaCare: React.FC = () => {
                       fontWeight: 500,
                       fontSize: {
                         xs: "12px",
-                        sm: "18px",
-                        lg: "18px",
+                        sm: "21px",
+                        lg: "21px",
                         // xl: "24px",
                         xl: "21px",
                       },
@@ -584,14 +587,14 @@ const ManagePerLaCare: React.FC = () => {
                             xs: "50%",
                             sm: "70%",
                             lg: "220.47px",
-                            md: "220.47px",
-                            xl: "220.47px",
+                            md: "250px",
+                            xl: "250px",
                           },
                           height: {
                             xs: "auto",
                             sm: "auto",
-                            lg: "62.47px",
-                            xl: "62.47px",
+                            lg: "70px",
+                            xl: "70px",
                           },
                           "&:focus": {
                             background: "#24535C",
@@ -603,14 +606,15 @@ const ManagePerLaCare: React.FC = () => {
                         // onClick={handleNavigation}
                       >
                         <Typography
+                        variant="h4"
                           sx={{
                             fontWeight: 400,
                             fontFamily: "Mulish",
                             fontSize: {
                               xs: "12px",
-                              sm: "18px",
-                              lg: "15.2px",
-                              xl: "15.2px",
+                              sm: "21px",
+                              lg: "21px",
+                              xl: "21px",
                             },
                             lineHeight: {
                               xs: "8px",
@@ -696,12 +700,13 @@ const ManagePerLaCare: React.FC = () => {
               }}
             >
               <Typography
+              variant="h2"
                 sx={{
                   color: "#24535C",
                   fontFamily: "Mulish",
                   // fontWeight: 800,
                   fontWeight: 600,
-                  fontSize: { xs: "30px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "64px"
+                  fontSize: { xs: "30px", sm: "32px", lg: "34px", xl: "34px" }, //xl: "64px"
                   lineHeight: {
                     xs: "50px",
                     sm: "50px",
@@ -744,6 +749,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
+                    variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -766,6 +772,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title1}
                     </Typography>
                     <Typography
+                    // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -804,6 +811,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
+                    variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -826,6 +834,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title2}
                     </Typography>
                     <Typography
+                    // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -864,6 +873,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
+                    variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -886,6 +896,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title3}
                     </Typography>
                     <Typography
+                    // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -924,6 +935,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
+                    variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -946,6 +958,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title4}
                     </Typography>
                     <Typography
+                    // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -1004,15 +1017,16 @@ const ManagePerLaCare: React.FC = () => {
                 }}
               >
                 <Typography
+                variant="h2"
                   sx={{
                     color: "#0A1411",
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "32px",
-                      sm: "32px",
-                      lg: "32px",
+                      sm: "34px",
+                      lg: "34px",
                       // xl: "64px",
-                      xl: "32px",
+                      xl: "34px",
                     },
                     // fontWeight: 700,
                     fontWeight: 600,
@@ -1035,6 +1049,7 @@ const ManagePerLaCare: React.FC = () => {
                 }}
               >
                 <Typography
+                variant="h2"
                   sx={{
                     textAlign: "center",
                     color: "#292F36",
@@ -1112,6 +1127,7 @@ const ManagePerLaCare: React.FC = () => {
                           >
                             <Typography
                               onClick={() => handleColor(index)}
+                              variant="h4"
                               sx={{
                                 color:
                                   clicked === index ? "#3D8C6E" : "#292F36",
@@ -1121,7 +1137,7 @@ const ManagePerLaCare: React.FC = () => {
                                   xs: "18px",
                                   sm: "14px",
                                   lg: "21px",
-                                  md: "14px",
+                                  md: "21px",
                                   // xl: "35px",
                                   xl: "21px",
                                 },
@@ -1135,15 +1151,16 @@ const ManagePerLaCare: React.FC = () => {
                           </AccordionSummary>
                           <AccordionDetails>
                             <Typography
+                            // variant=""
                               sx={{
                                 color: "#4D5053",
                                 fontSize: {
                                   xs: "14px",
                                   sm: "12px",
-                                  lg: "17px",
-                                  md: "12px",
+                                  lg: "18px",
+                                  md: "18px",
                                   // xl: "28px",
-                                  xl: "17px",
+                                  xl: "18px",
                                 },
                                 // fontWeight: 400,
                                 fontWeight: 500,
@@ -1176,6 +1193,7 @@ const ManagePerLaCare: React.FC = () => {
               </Grid>
               <Grid item lg={12}>
                 <Typography
+                variant="h2"
                   sx={{
                     textAlign: "center",
                     color: "#292F36",
@@ -1285,6 +1303,7 @@ const ManagePerLaCare: React.FC = () => {
                           >
                             <Typography
                               onClick={() => handleColor1(index)}
+                              variant="h4"
                               sx={{
                                 color:
                                   clicked1 === index ? "#3D8C6E" : "#292F36",
@@ -1293,7 +1312,7 @@ const ManagePerLaCare: React.FC = () => {
                                   xs: "18px",
                                   sm: "14px",
                                   lg: "21px",
-                                  md: "14px",
+                                  md: "21px",
                                   // xl: "35px",
                                   xl: "21px",
                                 },
@@ -1307,15 +1326,16 @@ const ManagePerLaCare: React.FC = () => {
                           </AccordionSummary>
                           <AccordionDetails>
                             <Typography
+                            // variant=""
                               sx={{
                                 color: "#4D5053",
                                 fontSize: {
                                   xs: "14px",
                                   sm: "12px",
-                                  lg: "17px",
-                                  md: "12px",
+                                  lg: "18px",
+                                  md: "18px",
                                   // xl: "28px",
-                                  xl: "17px",
+                                  xl: "18px",
                                 },
                                 // fontWeight: 400,
                                 fontWeight: 500,
@@ -1399,6 +1419,7 @@ const ManagePerLaCare: React.FC = () => {
                   </Grid>
                   <div>
                     <Typography
+                    variant="h2"
                       sx={{
                         fontFamily: "Jenna Sue",
                         color: "#292F36",
@@ -1406,10 +1427,10 @@ const ManagePerLaCare: React.FC = () => {
                         fontWeight: 300,
                         fontSize: {
                           xs: "28px",
-                          sm: "35px",
-                          lg: "35px",
+                          sm: "34px",
+                          lg: "34px",
                           // xl: "48px",
-                          xl: "35px",
+                          xl: "34px",
                         },
                         lineHeight: {
                           xs: "30px",
@@ -1433,6 +1454,7 @@ const ManagePerLaCare: React.FC = () => {
                   </div>
                   <div>
                     <Typography
+                    // variant=""
                       sx={{
                         // fontFamily: "Jost",
                         fontFamily: "Mulish",
@@ -1441,10 +1463,10 @@ const ManagePerLaCare: React.FC = () => {
                         fontWeight: 700,
                         fontSize: {
                           xs: "14px",
-                          sm: "17px",
-                          lg: "17px",
+                          sm: "18px",
+                          lg: "18px",
                           // xl: "25px",
-                          xl: "17px",
+                          xl: "18px",
                         },
                         lineHeight: {
                           xs: "18px",
@@ -1471,9 +1493,10 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
           </Box>
           <Typography
+          variant="h2"
             sx={{
               fontFamily: "Mulish",
-              fontSize: { xs: "32px", sm: "32px", lg: "32px", xl: "32px" }, //xl: "64px"
+              fontSize: { xs: "32px", sm: "34px", lg: "34px", xl: "34px" }, //xl: "64px"
               // fontWeight: 700,
               fontWeight: 600,
               lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "1.5em" }, //xl: "auto"
@@ -1523,7 +1546,7 @@ const ManagePerLaCare: React.FC = () => {
               sm={4}
               sx={{
                 alignContent: "center",
-                fontSize: { xs: "18px", sm: "18px", lg: "18px", xl: "21px" }, //xl: "35px"
+                fontSize: { xs: "18px", sm: "21px", lg: "21px", xl: "21px" }, //xl: "35px"
                 lineHeight: {
                   xs: "20px",
                   sm: "30px",

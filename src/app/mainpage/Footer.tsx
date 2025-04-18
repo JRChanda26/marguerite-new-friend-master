@@ -421,6 +421,7 @@ const Footer: React.FC = () => {
                     />
                   )}
                   <Typography
+                  // variant="" 
                     sx={{
                       fontFamily: "Mulish",
                       color: "#FFFFFF",
@@ -430,10 +431,10 @@ const Footer: React.FC = () => {
                         // sm: "14px",
                         // lg: "16px",
                         // xl: "19.84px",
-                        xs: "13px",
-                        sm: "13px",
-                        lg: "13px",
-                        xl: "13px",
+                        xs: "18px",
+                        sm: "18px",
+                        lg: "18px",
+                        xl: "18px",
                       },
                       lineHeight: "auto",
                       paddingTop: "10px",
@@ -481,6 +482,7 @@ const Footer: React.FC = () => {
             <Grid item xs={12} sm={3} lg={3} xl={3}>
               {allLinkText.slice(0, 4).map((text: any, index: number) => (
                 <Typography
+                // variant="" 
                   key={index}
                   sx={{
                     fontFamily: "Mulish",
@@ -491,10 +493,10 @@ const Footer: React.FC = () => {
                       // sm: "18px",
                       // lg: "20px",
                       // xl: "24.8px",
-                       xs: "16px",
-                      sm: "16px",
-                      lg: "16px",
-                      xl: "16px",
+                      xs: "18px",
+                      sm: "18px",
+                      lg: "18px",
+                      xl: "18px",
                     },
                     lineHeight: "auto",
                     paddingBottom: "19.84px",
@@ -509,20 +511,17 @@ const Footer: React.FC = () => {
             <Grid item xs={12} sm={3} lg={3} xl={3}>
               {allLinkText.slice(4).map((text: any, index: number) => (
                 <Typography
+                // variant="" 
                   key={index}
                   sx={{
                     fontFamily: "Mulish",
                     color: "#D3DDDE",
                     fontWeight: 400,
                     fontSize: {
-                      // xs: "18px",
-                      // sm: "18px",
-                      // lg: "20px",
-                      // xl: "24.8px",
-                      xs: "16px",
-                      sm: "16px",
-                      lg: "16px",
-                      xl: "16px",
+                      xs: "18px",
+                      sm: "18px",
+                      lg: "18px",
+                      xl: "18px",
                     },
                     lineHeight: "auto",
                     paddingBottom: "19.84px",
