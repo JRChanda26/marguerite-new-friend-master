@@ -586,7 +586,7 @@ const ManagePerLaCare: React.FC = () => {
                           width: {
                             xs: "50%",
                             sm: "70%",
-                            lg: "220.47px",
+                            lg: "250px",
                             md: "250px",
                             xl: "250px",
                           },
