@@ -240,7 +240,7 @@ export default function Blogs() {
                   // fontWeight: 700,
                   fontWeight: 700,
                   // fontSize: "50px",
-                  fontSize: { xs: "16px", sm: "40px", lg: "34px", xl: "59px" }, //xl: "50px"
+                  fontSize: { xs: "16px", sm: "40px", lg: "34px", xl: "55px" }, //xl: "50px"
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -261,13 +261,13 @@ export default function Blogs() {
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "18px", lg: "18px", xl: "22px" },
+                  fontSize: { xs: "10px", sm: "18px", lg: "18px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
                     sm: "28px",
-                    lg: "150%",
-                    xl: "150%",
+                    lg: "50%",
+                    xl: "50%",
                   },
                   letterSpacing: "1%",
                 }}
