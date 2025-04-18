@@ -266,7 +266,7 @@ export default function Questions() {
                 sm: "0%",
                 md: "30px",
                 lg: "30px",
-                xl: "30px",
+                xl: "20px",
               },
               paddingLeft: {
                 xs: "0%",
