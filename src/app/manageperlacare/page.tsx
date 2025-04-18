@@ -110,6 +110,8 @@ const ManagePerLaCare: React.FC = () => {
   const isLarge = useMediaQuery(theme.breakpoints.only("lg")); // 'lg' (1280px - 1920px)
   const isExtraLarge = useMediaQuery(theme.breakpoints.up("xl")); // 'xl' (1920px and above)
 
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+
   // Define responsive styles
   const styles: {
     container: React.CSSProperties;
@@ -425,7 +427,7 @@ const ManagePerLaCare: React.FC = () => {
                   }}
                 >
                   <Typography
-                  variant="h1"
+                    variant="h1"
                     sx={{
                       // fontFamily: "DM Serif Display",
                       fontFamily: "Mulish",
@@ -435,7 +437,7 @@ const ManagePerLaCare: React.FC = () => {
                       fontSize: {
                         xs: "16px",
                         sm: "55px",
-                        lg: "55px", 
+                        lg: "55px",
                         // xl: "50px",
                         xl: "55px",
                       },
@@ -452,7 +454,7 @@ const ManagePerLaCare: React.FC = () => {
                     {post.data.heading}
                   </Typography>
                   <Typography
-                  variant="h4"
+                    variant="h4"
                     sx={{
                       // fontFamily: "Jost",
                       fontFamily: "Mulish",
@@ -511,7 +513,7 @@ const ManagePerLaCare: React.FC = () => {
                 <Grid item xl={7} lg={7} xs={12} sm={7}>
                   {managePage.map((post: any, index: any) => (
                     <Typography
-                    variant="h2"
+                      variant="h2"
                       key={index}
                       sx={{
                         fontFamily: "Mulish",
@@ -540,7 +542,7 @@ const ManagePerLaCare: React.FC = () => {
                     </Typography>
                   ))}
                   <Typography
-                  variant="h4"
+                    variant="h4"
                     sx={{
                       fontFamily: "Mulish",
                       color: "#237D6C",
@@ -606,7 +608,7 @@ const ManagePerLaCare: React.FC = () => {
                         // onClick={handleNavigation}
                       >
                         <Typography
-                        variant="h4"
+                          variant="h4"
                           sx={{
                             fontWeight: 400,
                             fontFamily: "Mulish",
@@ -700,7 +702,7 @@ const ManagePerLaCare: React.FC = () => {
               }}
             >
               <Typography
-              variant="h2"
+                variant="h2"
                 sx={{
                   color: "#24535C",
                   fontFamily: "Mulish",
@@ -749,7 +751,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
-                    variant="h4"
+                      variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -772,7 +774,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title1}
                     </Typography>
                     <Typography
-                    // variant=""
+                      // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -794,7 +796,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "18px",
+                          xl: isSmallDesktop ? "14px" : "18px",
                         },
                       }}
                       color="textSecondary"
@@ -811,7 +813,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
-                    variant="h4"
+                      variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -834,7 +836,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title2}
                     </Typography>
                     <Typography
-                    // variant=""
+                      // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -856,7 +858,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "18px",
+                          xl: isSmallDesktop ? "14px" : "18px",
                         },
                       }}
                       color="textSecondary"
@@ -873,7 +875,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
-                    variant="h4"
+                      variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -896,7 +898,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title3}
                     </Typography>
                     <Typography
-                    // variant=""
+                      // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -918,7 +920,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "18px",
+                          xl: isSmallDesktop ? "14px" : "18px",
                         },
                       }}
                       color="textSecondary"
@@ -935,7 +937,7 @@ const ManagePerLaCare: React.FC = () => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <Typography
-                    variant="h4"
+                      variant="h4"
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "90%",
@@ -958,7 +960,7 @@ const ManagePerLaCare: React.FC = () => {
                       {post.data.card_title4}
                     </Typography>
                     <Typography
-                    // variant=""
+                      // variant=""
                       sx={{
                         fontFamily: "Mulish",
                         opacity: "80%",
@@ -980,7 +982,7 @@ const ManagePerLaCare: React.FC = () => {
                           lg: "10px",
                           md: "10px",
                           // xl: "19.5px",
-                          xl: "18px",
+                          xl: isSmallDesktop ? "14px" : "18px",
                         },
                       }}
                       color="textSecondary"
@@ -1001,9 +1003,7 @@ const ManagePerLaCare: React.FC = () => {
                   sm: "0px",
                   lg: "50px 100px 50px 100px",
                   md: "280px 50px 153px 50px",
-                  xl: isMax
-                    ? "0px 200px 50px 200px"
-                    : "0px 200px 50px 200px",
+                  xl: isMax ? "0px 200px 50px 200px" : "0px 200px 50px 200px",
                 },
               }}
             >
@@ -1017,7 +1017,7 @@ const ManagePerLaCare: React.FC = () => {
                 }}
               >
                 <Typography
-                variant="h2"
+                  variant="h2"
                   sx={{
                     color: "#0A1411",
                     fontFamily: "Mulish",
@@ -1049,7 +1049,7 @@ const ManagePerLaCare: React.FC = () => {
                 }}
               >
                 <Typography
-                variant="h2"
+                  variant="h2"
                   sx={{
                     textAlign: "center",
                     color: "#292F36",
@@ -1151,7 +1151,7 @@ const ManagePerLaCare: React.FC = () => {
                           </AccordionSummary>
                           <AccordionDetails>
                             <Typography
-                            // variant=""
+                              // variant=""
                               sx={{
                                 color: "#4D5053",
                                 fontSize: {
@@ -1193,7 +1193,7 @@ const ManagePerLaCare: React.FC = () => {
               </Grid>
               <Grid item lg={12}>
                 <Typography
-                variant="h2"
+                  variant="h2"
                   sx={{
                     textAlign: "center",
                     color: "#292F36",
@@ -1326,7 +1326,7 @@ const ManagePerLaCare: React.FC = () => {
                           </AccordionSummary>
                           <AccordionDetails>
                             <Typography
-                            // variant=""
+                              // variant=""
                               sx={{
                                 color: "#4D5053",
                                 fontSize: {
@@ -1390,7 +1390,9 @@ const ManagePerLaCare: React.FC = () => {
                     ? "50px 622px"
                     : isMax
                       ? "50px 522px"
-                      : "0px 522px",
+                      : isSmallDesktop
+                        ? "0px 300px"
+                        : "0px 522px",
                 },
                 flexDirection: "column",
               }}
@@ -1419,7 +1421,7 @@ const ManagePerLaCare: React.FC = () => {
                   </Grid>
                   <div>
                     <Typography
-                    variant="h2"
+                      variant="h2"
                       sx={{
                         fontFamily: "Jenna Sue",
                         color: "#292F36",
@@ -1454,7 +1456,7 @@ const ManagePerLaCare: React.FC = () => {
                   </div>
                   <div>
                     <Typography
-                    // variant=""
+                      // variant=""
                       sx={{
                         // fontFamily: "Jost",
                         fontFamily: "Mulish",
@@ -1493,7 +1495,7 @@ const ManagePerLaCare: React.FC = () => {
             </Grid>
           </Box>
           <Typography
-          variant="h2"
+            variant="h2"
             sx={{
               fontFamily: "Mulish",
               fontSize: { xs: "32px", sm: "34px", lg: "34px", xl: "34px" }, //xl: "64px"
