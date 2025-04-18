@@ -510,7 +510,7 @@ const ManagePerLaCare: React.FC = () => {
                   gap: { xs: "20px", sm: "20px", lg: "50px", xl: "50px" },
                 }}
               >
-                <Grid item xl={7} lg={7} xs={12} sm={7}>
+                <Grid item xl={7} lg={6} xs={12} sm={7}>
                   {managePage.map((post: any, index: any) => (
                     <Typography
                       variant="h2"
@@ -648,7 +648,7 @@ const ManagePerLaCare: React.FC = () => {
                 <Grid
                   item
                   xl={5}
-                  lg={5}
+                  lg={6}
                   xs={12}
                   sm={5}
                   style={{
