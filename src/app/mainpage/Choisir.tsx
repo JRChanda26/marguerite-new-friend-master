@@ -29,6 +29,8 @@ const Choisir: React.FC = () => {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+  
   return (
     <div
       style={{
@@ -125,7 +127,7 @@ const Choisir: React.FC = () => {
                       xs: "0% 3%",
                       sm: "0% 8%",
                       lg: "21px 300px 69px 300px",
-                      xl: "41px 550px 50px 550px",
+                      xl: isSmallDesktop? "41px 400px 50px 400px":"41px 550px 50px 550px",
                     },
                     textAlign: "center",
                     maxWidth: "75%",

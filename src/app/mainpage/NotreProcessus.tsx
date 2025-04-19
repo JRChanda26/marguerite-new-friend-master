@@ -67,6 +67,8 @@ export default function NotreProcessus() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+  
   return (
     <div
       style={{
@@ -134,7 +136,7 @@ export default function NotreProcessus() {
                 xs: "0% 10%",
                 sm: "0% 15%",
                 lg: "0px 330px 50px 330px",
-                xl: isMax ? "50px 425px 50px 425px" : "50px 550px 50px 550px",
+                xl: isSmallDesktop?"50px 400px 50px 400px": "50px 550px 50px 550px",
               },
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",

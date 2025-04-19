@@ -32,6 +32,8 @@ export default function Paroles() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
   const isMd = useMediaQuery("(max-width:992px)");
@@ -363,7 +365,7 @@ export default function Paroles() {
                 xs: "5%",
                 sm: "2%",
                 lg: "0px 180px 0px 180px",
-                xl: "0px 450px 0px 450px",
+                xl: isSmallDesktop?"0px 200px 0px 200px": "0px 450px 0px 450px",
               },
             }}
           >
