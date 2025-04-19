@@ -1429,6 +1429,7 @@ export default function Contact() {
                 variant="contained"
                 color="primary"
                 sx={{
+                  fontFamily:"Mulish",
                   textDecoration: "none",
                   padding: {
                     xs: "10px 24px",
