@@ -122,7 +122,7 @@ const NosExperiences: React.FC = () => {
                     xs: "12% 0% 2% 0%",
                     sm: "8% 0% 2% 0%",
                     lg: "200px 0px 50px 0px",
-                    xl: "220px 0px 50px 0px",
+                    xl:isMax?"270px 0px 50px 0px": "220px 0px 50px 0px",
                   },
                 }}
               >
