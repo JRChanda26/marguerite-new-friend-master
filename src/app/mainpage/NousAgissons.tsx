@@ -79,7 +79,7 @@ const NousAgissons: React.FC = () => {
               lg: "70px",
               xl: "80px",
             },
-            backgroundColor: "#F6C09E",
+            // backgroundColor: "#F6C09E",
             alignItems: "stretch",
           }}
         >
@@ -95,7 +95,7 @@ const NousAgissons: React.FC = () => {
               display: "flex",
               justifyContent: "center", // Centers horizontally
               alignItems: "center",
-              backgroundColor: "#F6C09E",
+              // backgroundColor: "#F6C09E",
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
               paddingLeft: {
@@ -237,8 +237,8 @@ const NousAgissons: React.FC = () => {
           <Grid
             item
             xs={7.5}
-            sm={7.5}
-            lg={7.5}
+            sm={7}
+            lg={7}
             xl={5.5} //6
             sx={{
               display: "flex",

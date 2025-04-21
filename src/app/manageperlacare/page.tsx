@@ -100,6 +100,7 @@ const ManagePerLaCare: React.FC = () => {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isMin = useMediaQuery("(max-width:800px)");
+  const isMatch = useMediaQuery("(width:2880px)");
 
   const theme = useTheme();
 
@@ -111,6 +112,8 @@ const ManagePerLaCare: React.FC = () => {
   const isExtraLarge = useMediaQuery(theme.breakpoints.up("xl")); // 'xl' (1920px and above)
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
+  const isExtraLargeDesktop = useMediaQuery("(width:2880px)");
+  const is4K = useMediaQuery("(width:3840px)");
 
   // Define responsive styles
   const styles: {
@@ -489,7 +492,7 @@ const ManagePerLaCare: React.FC = () => {
               xs: "5%",
               sm: "30px 50px",
               lg: "50px",
-              xl: "100px 160px 50px 160px", //"100px 100px 50px 100px"
+              xl:isMatch?"100px 350px 50px 350px": isMax1?"100px 300px 50px 300px": "100px 160px 50px 160px", //"100px 100px 50px 100px"
             },
           }}
         >
@@ -1446,7 +1449,11 @@ const ManagePerLaCare: React.FC = () => {
                           xs: "0px 20px 0px 20px",
                           sm: "0px 70px 34px 70px",
                           lg: "0px 82px 34px 82px",
-                          xl: "0px 82px 34px 82px",
+                          xl: is4K
+                            ? "0px 280px 34px 280px"
+                            : isExtraLargeDesktop
+                              ? "0px 180px 34px 180px"
+                              : "0px 82px 34px 82px",
                         },
                         letterSpacing: "2%",
                       }}
