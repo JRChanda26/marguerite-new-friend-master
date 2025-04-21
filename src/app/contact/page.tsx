@@ -1028,9 +1028,9 @@ export default function Contact() {
               alignItems: "center",
               padding: {
                 xs: "70px 50px 0px 50px",
-                sm: "150.67px 150px 0px 150px",
+                sm: "250px 100px 0px 100px",
                 lg: "250px 150px 0px 150px",
-                md: "250px 100px 0px 100px",
+                // md: "250px 100px 0px 100px",
                 xl: "420px 300px 0px 300px",
               },
             }}
@@ -1068,7 +1068,7 @@ export default function Contact() {
                   // fontSize: "50px",
                   // fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                   // added by pragatika
-                  fontSize: { xs: "16px", sm: "40px", lg: "55px", xl: "55px" },
+                  fontSize: { xs: "16px", sm: "45px", lg: "55px", xl: "55px" },
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -1090,7 +1090,7 @@ export default function Contact() {
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "18px", lg: "21px", xl: "21px" },
+                  fontSize: { xs: "10px", sm: "17px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -1128,9 +1128,9 @@ export default function Contact() {
             sx={{
               padding: {
                 xs: "6%",
-                sm: "5% 10%",
+                sm: "30px 70px 100px 70px",
                 lg: "50px 120px 100px 120px",
-                md: "50px 100px 100px 100px",
+                // md: "50px 100px 100px 100px",
                 xl: isMax ? "50px 200px 50px 200px" : "50px 50px 50px 50px",
               },
             }}
@@ -1141,13 +1141,13 @@ export default function Contact() {
                 sx={{
                   color: "#292F36",
                   // fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontSize: { xs: "30px", sm: "32px", lg: "34px", xl: "34px" },
+                  fontSize: { xs: "30px", sm: "30px", lg: "34px", xl: "34px" },
                   fontWeight: 700,
                   textAlign: "center",
                   padding: {
                     sm: "0px",
                     lg: "0px 196px 50px 196px",
-                    md: "0px 50px 0px 50px",
+                    // md: "0px 50px 0px 50px",
                     xl: isMax ? "0px 50px 50px 50px" : "0px 350px 30px 350px",
                   },
                   fontFamily: "Mulish",
@@ -1164,7 +1164,7 @@ export default function Contact() {
               container
               xs={12}
               sm={12}
-              md={12}
+              // md={12}
               lg={12}
               xl={12}
               // spacing={2}
@@ -1178,18 +1178,18 @@ export default function Contact() {
               <Grid
                 item
                 xs={12}
-                sm={7}
+                sm={5}
                 lg={4}
-                md={5}
+                // md={5}
                 xl={3.5}
                 sx={{
                   background: "#BBDDD9",
                   borderRadius: "50px",
                   padding: {
                     xs: "50px 32px",
-                    sm: "50px 32px",
+                    sm: "36px 32px",
                     lg: "76px 32px",
-                    md: "36px 32px",
+                    // md: "36px 32px",
                     xl: "100px 52px",
                   },
                   display: "flex",
@@ -1225,7 +1225,7 @@ export default function Contact() {
                           xs: "16px",
                           sm: "20px",
                           lg: "21px",
-                          md: "21px",
+                          // md: "21px",
                           xl: "21px",
                         },
                         display: "flex",
@@ -1267,9 +1267,9 @@ export default function Contact() {
               <Grid
                 item
                 xs={12}
-                sm={8}
+                sm={6}
                 lg={7}
-                md={6}
+                // md={6}
                 xl={7}
                 sx={{
                   display: "flex",
@@ -1297,7 +1297,7 @@ export default function Contact() {
                       helperText={errors.nom}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: "18px",
+                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1317,7 +1317,7 @@ export default function Contact() {
                       helperText={errors.email}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: "18px",
+                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1339,7 +1339,7 @@ export default function Contact() {
                       helperText={errors.sujet}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: "18px",
+                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1363,7 +1363,7 @@ export default function Contact() {
                       helperText={errors.telephone}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: "18px",
+                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1385,7 +1385,7 @@ export default function Contact() {
                   helperText={errors.bonjour}
                   sx={{
                     "& .MuiInputBase-input::placeholder": {
-                      fontSize: "18px",
+                      fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
                       fontFamily: "Mulish",
                     },
                   }}
@@ -1419,7 +1419,7 @@ export default function Contact() {
               sx={{
                 textAlign: {
                   xs: "center",
-                  md: "center",
+                  sm: "center",
                   lg: "right",
                   xl: "right",
                 },
@@ -1434,15 +1434,15 @@ export default function Contact() {
                   padding: {
                     xs: "10px 24px",
                     sm: "10px 24px",
-                    md: "3px 12px",
+                    // md: "3px 12px",
                     lg: "10px 24px",
                     xl: "10px 24px",
                   },
                   borderRadius: "10px",
                   fontSize: {
                     xs: "14px",
-                    sm: "14px",
-                    md: "21px",
+                    sm: "20px",
+                    // md: "21px",
                     lg: "21px",
                     xl: "21px",
                   },

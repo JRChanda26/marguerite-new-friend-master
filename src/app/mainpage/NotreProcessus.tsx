@@ -48,7 +48,7 @@ export default function NotreProcessus() {
 
   const textLink: React.CSSProperties = {
     color: "#24535C",
-    fontSize: "18px",
+    // fontSize: "18px",
     fontWeight: 400,
     textDecoration: "none",
     display: "flex",
@@ -101,14 +101,14 @@ export default function NotreProcessus() {
             sx={{
               fontWeight: 600,
               // lineHeight: "80.32px",
-              fontSize: { xs: "28px", sm: "40px", lg: "34px", xl: "34px" }, //xl: "64px"
-              lineHeight: { xs: "30px", sm: "50px", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
+              fontSize: { xs: "28px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
+              lineHeight: { xs: "30px", sm: "1.5em", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
               color: "#0A1411",
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
               margin: {
                 xs: "5% 10% 2% 10%",
-                sm: "5% 10% 2% 10%",
+                sm: "30px 0px",
                 lg: "50px 100px",
                 xl: isMax ? "50px 0px 0px 0px" : "50px 100px 0px 100px",
               },
@@ -119,22 +119,18 @@ export default function NotreProcessus() {
           <Typography
           // variant=""
             sx={{
-              // fontSize: "24px",
-              // fontWeight: 400,
               fontWeight: 500,
-              // lineHeight: "38.04px",
-              fontSize: { xs: "12px", sm: "16px", lg: "18px", xl: "18px" }, // xl: "24px",
+              fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px",
               lineHeight: {
                 xs: "15px",
-                sm: "20px",
+                sm: "1.5em",
                 lg: "1.9em",
-                // xl: "38.4px",
                 xl: "1.9em",
               },
               color: "#565656",
               margin: {
                 xs: "0% 10%",
-                sm: "0% 15%",
+                sm: "0px 170px",
                 lg: "0px 330px 50px 330px",
                 xl: isSmallDesktop?"50px 400px 50px 400px": "50px 550px 50px 550px",
               },
@@ -149,7 +145,7 @@ export default function NotreProcessus() {
           sx={{
             margin: {
               xs: "0% 0% 0% 5%",
-              sm: "5%",
+              sm: "30px 80px 30px 140px",
               lg: "0px 100px 0px 100px",
               xl: isMax ? "0px 100px 50px 250px" : "0px 50px 50px 350px",
             },
@@ -194,16 +190,17 @@ export default function NotreProcessus() {
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "0%", lg: "18px", xl: "28px" },
                 paddingLeft: { xs: "20px" },
+                paddingRight:{sm:"30px"}
               }}
             >
               <Typography
               // variant=""
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "28px",
-                    sm: "25px",
+                    sm: "auto",
                     lg: "auto",
                     xl: "1.5em",
                   },
@@ -215,10 +212,10 @@ export default function NotreProcessus() {
               variant="h3"
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "28px", xl: "28px" }, //xl: "42px"
+                  fontSize: { xs: "25px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
                     xs: "30px",
-                    sm: "38px",
+                    sm: "auto",
                     lg: "auto",
                     xl: "1.1em",
                   },
@@ -231,7 +228,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -246,8 +243,9 @@ export default function NotreProcessus() {
               </Typography>
               <Typography
               // variant=""
-                style={{
+                sx={{
                   ...textLink,
+                  fontSize:{xs:"17px",sm:"17px",lg:"18px",xl:"18px"},
                   transition: "transform 0.3s ease",
                   transform: isHovered === 1 ? "scale(1.02)" : "scale(1)",
                 }}
@@ -285,7 +283,7 @@ export default function NotreProcessus() {
                 lg: "0px 0px 0px 60px",
                 xl: isMax ? "0px 112px 0px 20px" : "0px 112px 0px 20px",
               },
-              gap: { lg: "50px", xl: "0px" },
+              gap: {lg: "50px", xl: "0px" },
             }}
           >
             <Grid
@@ -294,17 +292,17 @@ export default function NotreProcessus() {
                 flexDirection: "column",
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
-                paddingLeft: { xs: "20px" },
+                paddingLeft: { xs: "20px"},
               }}
             >
               <Typography
               // variant=""
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" }, // xl: "18px"
+                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "18px"
                   lineHeight: {
                     xs: "28px",
-                    sm: "25px",
+                    sm: "auto",
                     lg: "auto",
                     // xl: "auto",
                     xl: "1.5em",
@@ -317,10 +315,10 @@ export default function NotreProcessus() {
               variant="h3"
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "28px", xl: "28px" }, //xl: "42px"
+                  fontSize: { xs: "25px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
                     xs: "30px",
-                    sm: "38px",
+                    sm: "auto",
                     lg: "auto",
                     // xl: "auto",
                     xl: "1.1em",
@@ -334,7 +332,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -349,8 +347,9 @@ export default function NotreProcessus() {
               </Typography>
               <Typography
               // variant=""
-                style={{
-                  ...textLink,
+              sx={{
+                ...textLink,
+                fontSize:{xs:"17px",sm:"17px",lg:"18px",xl:"18px"},
                   transition: "transform 0.3s ease",
                   transform: isHovered === 2 ? "scale(1.02)" : "scale(1)",
                 }}
@@ -423,16 +422,17 @@ export default function NotreProcessus() {
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
                 paddingLeft: { xs: "20px" },
+                paddingRight:{sm:"30px"}
               }}
             >
               <Typography
               // variant=""
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "28px",
-                    sm: "25px",
+                    sm: "auto",
                     lg: "auto",
                     // xl: "auto",
                     xl: "1.5em",
@@ -445,10 +445,10 @@ export default function NotreProcessus() {
               variant="h3"
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "32px", lg: "28px", xl: "28px" }, //xl: "42px"
+                  fontSize: { xs: "25px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
                     xs: "30px",
-                    sm: "38px",
+                    sm: "auto",
                     lg: "auto",
                     // xl: "auto",
                     xl: "1.1em",
@@ -462,7 +462,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "14px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -477,8 +477,9 @@ export default function NotreProcessus() {
               </Typography>
               <Typography
               // variant=""
-                style={{
-                  ...textLink,
+              sx={{
+                ...textLink,
+                fontSize:{xs:"17px",sm:"17px",lg:"18px",xl:"18px"},
                   transition: "transform 0.3s ease",
                   transform: isHovered === 3 ? "scale(1.02)" : "scale(1)",
                 }}

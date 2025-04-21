@@ -142,7 +142,7 @@ export default function NeManquez() {
                 xs: "contain",
                 sm: "contain",
                 lg: "contain",
-                md: "contain",
+                // md: "contain",
                 xl: "contain",
               },
               backgroundRepeat: "no-repeat",
@@ -154,8 +154,8 @@ export default function NeManquez() {
               padding: { xs: "3%" },
               borderRadius: {
                 xs: "25px",
-                sm: "50px",
-                md: "60px",
+                sm: "60px",
+                // md: "60px",
                 lg: "90px",
                 xl: "110px",
               },
@@ -164,8 +164,8 @@ export default function NeManquez() {
             <Grid
               item
               xs={5}
-              sm={5}
-              md={4}
+              sm={4}
+              // md={4}
               lg={4}
               xl={4}
               sx={{
@@ -173,7 +173,7 @@ export default function NeManquez() {
                   xs: "0px 0px 0px 0px",
                   sm: "30px 0px 0px 20px",
                   lg: "50px 0px 0px 50px",
-                  md: "20px 0px 0px 50px",
+                  // md: "20px 0px 0px 50px",
                   xl: "50px 0px 0px 50px",
                 },
               }}
@@ -185,8 +185,8 @@ export default function NeManquez() {
                   fontFamily: "Mulish",
                   fontSize: {
                     xs: "14px",
-                    sm: "22px",
-                    md: "28px", //32px
+                    sm: "24px",
+                    // md: "28px", //32px
                     lg: "28px", //32px
                     // xl: "41.81px",
                     xl: "28px", //32px
@@ -194,7 +194,7 @@ export default function NeManquez() {
                   lineHeight: {
                     xs: "15px",
                     sm: "28px",
-                    md: "42.47px",
+                    // md: "42.47px",
                     lg: "1.1em",
                     // xl: "52.47px",
                     xl: "1.5em",
@@ -212,15 +212,15 @@ export default function NeManquez() {
                   fontFamily: "Mulish",
                   fontSize: {
                     xs: "8px",
-                    sm: "14px",
-                    md: "18px",
+                    sm: "17px",
+                    // md: "18px",
                     lg: "18px",
                     xl: "18px",
                   },
                   lineHeight: {
                     xs: "8px",
                     sm: "28px",
-                    md: "160%",
+                    // md: "160%",
                     lg: "160%",
                     // xl: "160%",
                     xl: "1.5em",
@@ -229,9 +229,9 @@ export default function NeManquez() {
                   fontWeight: 500,
                   padding: {
                     xs: "5px 0px 15px 0px",
-                    sm: "0px 0px 40px 0px",
+                    sm: "15px 0px 20px 0px",
                     lg: "15px 0px 50px 0px",
-                    md: "15px 0px 20px 0px",
+                    // md: "15px 0px 20px 0px",
                     xl: "15px 0px 50px 0px",
                   },
                 }}
@@ -253,8 +253,8 @@ export default function NeManquez() {
             <Grid
               item
               xs={7}
-              sm={6}
-              md={7}
+              sm={6.5}
+              // md={7}
               lg={7}
               xl={6}
               sx={{
@@ -276,15 +276,15 @@ export default function NeManquez() {
                 boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
                 height: {
                   xs: "20px",
-                  sm: "50px",
-                  md: "50px",
+                  sm: "80px",
+                  // md: "50px",
                   lg: "80px",
                   xl: "80px",
                 },
                 width: {
                   xs: "100%",
                   sm: "100%",
-                  md: "0px",
+                  // md: "0px",
                   lg: "0px",
                   xl: "100%",
                 },
@@ -342,7 +342,7 @@ export default function NeManquez() {
                   fontFamily: "Mulish",
                   fontSize: {
                     xs: "4px",
-                    sm: "8px",
+                    sm: "20px",
                     lg: "21px",
                     // md: "19.25px",
                     // xl: "19.25px",
@@ -351,7 +351,7 @@ export default function NeManquez() {
                   fontWeight: 400,
                   padding: {
                     xs: "2.5% 1% 2.5% 1%",
-                    sm: "2% 2.5%",
+                    sm: "0px",
                     lg: "2.5%",
                     xl: "2.5%",
                   },

@@ -203,9 +203,9 @@ export default function Blogs() {
               alignItems: "center",
               padding: {
                 xs: "70px 50px 0px 50px",
-                sm: "150.67px 150px 0px 150px",
+                sm: "250px 100px 0px 100px",
                 lg: "250px 150px 0px 150px",
-                md: "250px 100px 0px 100px",
+                // md: "250px 100px 0px 100px",
                 xl: "420px 300px 0px 300px",
               },
             }}
@@ -241,7 +241,7 @@ export default function Blogs() {
                   // fontWeight: 700,
                   fontWeight: 700,
                   // fontSize: "50px",
-                  fontSize: { xs: "16px", sm: "40px", lg: "55px", xl: "55px" }, //xl: "50px"
+                  fontSize: { xs: "16px", sm: "45px", lg: "55px", xl: "55px" }, //xl: "50px"
                   // lineHeight: "62.5px",
                   lineHeight: {
                     xs: "40px",
@@ -262,7 +262,7 @@ export default function Blogs() {
                   fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
-                  fontSize: { xs: "10px", sm: "18px", lg: "21px", xl: "21px" },
+                  fontSize: { xs: "10px", sm: "20px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -307,7 +307,7 @@ export default function Blogs() {
                 sx={{
                   color: "#292F36",
                   // fontSize: "50px",
-                  fontSize: { xs: "25px", sm: "32px", lg: "34px", xl: "34px" }, //xl: "50px"
+                  fontSize: { xs: "25px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
                   lineHeight: {
                     xs: "40px",
                     sm: "48px",
@@ -320,7 +320,7 @@ export default function Blogs() {
                   textAlign: "center",
                   marginTop: {
                     xs: "50px",
-                    sm: "50px",
+                    sm: "30px",
                     lg: "50px",
                     xl: isMax ? "50px" : "50px",
                   },
@@ -336,7 +336,7 @@ export default function Blogs() {
                   // margin: "5% 10%",
                   margin: {
                     xs: "27px 30px 50px 30px",
-                    sm: "27px 80px 100px 80px",
+                    sm: "30px 80px",
                     lg: "50px",
                     xl: isMax
                       ? "50px 100px 50px 100px"
@@ -357,9 +357,9 @@ export default function Blogs() {
                         alignItems: "center",
                         flexDirection: {
                           xs: "column",
-                          sm: "column",
+                          sm: "row",
                           lg: "row",
-                          md: "row",
+                          // md: "row",
                           xl: "row",
                         },
                         padding: {
@@ -403,8 +403,8 @@ export default function Blogs() {
                               // xl: "35px",
                               xl: "21px",
                               lg: "21px",
-                              md: "21px",
-                              sm: "21px",
+                              // md: "21px",
+                              sm: "20px",
                               xs: "20px",
                             },
                             fontWeight: 700,
@@ -425,8 +425,8 @@ export default function Blogs() {
                               // xl: "30px",
                               xl: "18px",
                               lg: "18px",
-                              md: "18px",
-                              sm: "18px",
+                              // md: "18px",
+                              sm: "17px",
                               xs: "17px",
                             },
                             fontWeight: 400,
@@ -454,8 +454,8 @@ export default function Blogs() {
                               fontSize: {
                                 xl: "18px",
                                 lg: "18px",
-                                md: "18px",
-                                sm: "18px",
+                                // md: "18px",
+                                sm: "17px",
                                 xs: "16px",
                               },
                               fontWeight: 400,
@@ -573,7 +573,7 @@ export default function Blogs() {
             <Typography
             variant="h2"
               sx={{
-                fontSize: { xs: "25px", sm: "32px", lg: "34px", xl: "34px" }, //xl: "50px"
+                fontSize: { xs: "25px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
                 lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "1.5em" }, //xl: "125%"
                 // fontWeight: 700,
                 fontWeight: 600,
@@ -701,8 +701,8 @@ export default function Blogs() {
                 // gridTemplateColumns: "repeat(3, 1fr)",
                 gridTemplateColumns: {
                   xs: "repeat(1, 1fr)",
-                  sm: "repeat(2, 1fr)",
-                  md: "repeat(3, 1fr)",
+                  sm: "repeat(3, 1fr)",
+                  // md: "repeat(3, 1fr)",
                   lg: "repeat(3, 1fr)",
                   xl: "repeat(3, 1fr)",
                 },
@@ -711,7 +711,7 @@ export default function Blogs() {
                 // padding: "3% 8%",
                 padding: {
                   xs: "3% 5%",
-                  sm: "3% 5%",
+                  sm: "30px 80px",
                   lg: "50px 50px 0px 50px",
                   xl: isMax ? "78px 150px 20px 150px" : "50px 150px 0px 150px",
                 },
@@ -762,7 +762,7 @@ export default function Blogs() {
                         ...title,
                         fontSize: {
                           xs: "14px",
-                          sm: "21px",
+                          sm: "20px",
                           lg: "21px",
                           // xl: "21.27px",
                           xl: "21px",
@@ -777,7 +777,7 @@ export default function Blogs() {
                         ...description,
                         fontSize: {
                           xs: "12px",
-                          sm: "18px",
+                          sm: "17px",
                           lg: "18px",
                           // xl: "18.61px",
                           xl: "18px",
@@ -797,7 +797,7 @@ export default function Blogs() {
                 gap: "20px",
                 paddingRight: { lg: "50px", xl: "50px" },
                 paddingBottom: "30px",
-                marginTop: "50px",
+                marginTop: {xs:"50px",sm:"0px",lg:"50px",xl:"50px"},
               }}
             >
               <IconButton

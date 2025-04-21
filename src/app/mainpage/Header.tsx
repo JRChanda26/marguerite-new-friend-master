@@ -986,7 +986,7 @@ const Header: React.FC = () => {
                   justifyContent: "space-around",
                   alignItems: "center",
                   gap: {
-                    sm: "170px",
+                    sm: "30px",
                     lg: "230px",
                     xl: isMax ? "850px" : isSmallDesktop ? "300px" : "600px",
                   },
@@ -1013,6 +1013,7 @@ const Header: React.FC = () => {
                     gap: "35px",
                     flexWrap: "nowrap",
                     // marginLeft: isMax ? "400px": "0px",
+                    alignItems:'center' //added for tab screen
                   }}
                 >
                   <Link
@@ -1027,7 +1028,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "12px",
+                          sm: "17px",
                           lg: "18px",
                           // xl: "26.49px",
                           xl: "18px",
@@ -1055,7 +1056,7 @@ const Header: React.FC = () => {
                       color: "#24535C",
                       fontSize: {
                         xs: "12px",
-                        sm: "12px",
+                        sm: "17px",
                         lg: "18px",
                         // xl: "26.49px",
                         xl: "18px",
@@ -1083,7 +1084,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "12px",
+                          sm: "17px",
                           lg: "18px",
                           // xl: "26.49px",
                           xl: "18px",
@@ -1159,7 +1160,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "12px",
+                          sm: "17px",
                           // lg: "26.49px",
                           // xl: "26.49px",
                           lg: "18px",
@@ -1239,7 +1240,7 @@ const Header: React.FC = () => {
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
-                          sm: "12px",
+                          sm: "17px",
                           lg: "18px",
                           // xl: "26.49px",
                           xl: "18px",

@@ -124,7 +124,7 @@ const Benifits: React.FC = () => {
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "32px",
-                      sm: "34px",
+                      sm: "30px",
                       lg: "34px",
                       // xl: "64px",
                       xl: "34px",
@@ -156,7 +156,7 @@ const Benifits: React.FC = () => {
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "16px",
-                      sm: "18px",
+                      sm: "17px",
                       lg: "18px",
                       // xl: "25px",
                       xl: "18px",
@@ -165,7 +165,7 @@ const Benifits: React.FC = () => {
                     fontWeight: 500,
                     lineHeight: {
                       xs: "20px",
-                      sm: "1.9em",
+                      sm: "1.5em",
                       lg: "1.9em",
                       // xl: "33px",
                       xl: "1.9em",
@@ -174,7 +174,7 @@ const Benifits: React.FC = () => {
                     color: "#4D5053",
                     margin: {
                       xs: "5%",
-                      sm: "5% 10%",
+                      sm: "30px 100px",
                       lg: "0px 150px 50px 150px",
                       xl: isMax
                         ? "0px 380px 50px 380px"
@@ -195,7 +195,7 @@ const Benifits: React.FC = () => {
                     gap: "30px",
                     padding: {
                       lg: "0px 50px 177px 50px",
-                      md: "0px 50px 177px 50px",
+                      sm: "0px 50px 100px 50px",
                       xl: "0px 80px 177px 80px",
                     },
                   }}
@@ -209,8 +209,8 @@ const Benifits: React.FC = () => {
                       gap: "30px",
                       flexDirection: {
                         xs: "column",
-                        sm: "column",
-                        md: "row",
+                        sm: "row",
+                        // md: "row",
                         lg: "row",
                         xl: "row",
                       },
@@ -219,16 +219,18 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
+                      sm={6}
                       sx={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
                         display: "flex",
                         justifyContent: "space-between",
                         flexDirection: "row",
-                        padding: {
-                          xs: "20px 0px 0px 20px",
-                          sm: "20px 0px 0px 20px",
-                        },
+                        // padding: {
+                        //   xs: "20px 0px 0px 20px",
+                        //   sm: "20px 0px 0px 20px",
+                        // },
+                        padding : "20px 0px 0px 20px",
                         boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.2)",
                       }}
                     >
@@ -262,8 +264,8 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "21px",
-                                md: "21px",
+                                sm: "20px",
+                                // md: "21px",
                                 lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
@@ -288,7 +290,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              md: "18px",
+                              // md: "18px",
                               lg: "18px",
                               // xl: "24px",
                               xl: "18px",
@@ -329,6 +331,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
+                      sm={6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -369,8 +372,8 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "21px",
-                                md: "22px",
+                                sm: "20px",
+                                // md: "22px",
                                 lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
@@ -395,7 +398,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              md: "18px",
+                              // md: "18px",
                               lg: "18px",
                               // xl: "24px",
                               xl: "18px",
@@ -444,8 +447,8 @@ const Benifits: React.FC = () => {
                       gap: "30px",
                       flexDirection: {
                         xs: "column",
-                        sm: "column",
-                        md: "row",
+                        sm: "row",
+                        // md: "row",
                         lg: "row",
                         xl: "row",
                       },
@@ -454,6 +457,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
+                      sm={6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -494,8 +498,8 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "21px",
-                                md: "21px",
+                                sm: "20px",
+                                // md: "21px",
                                 lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
@@ -521,7 +525,7 @@ const Benifits: React.FC = () => {
                               xs: "12px",
                               sm: "17px",
                               lg: "18px",
-                              md: "18px",
+                              // md: "18px",
                               // xl: "24px",
                               xl: "18px",
                             },
@@ -561,6 +565,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
+                      sm={6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -601,8 +606,8 @@ const Benifits: React.FC = () => {
                             sx={{
                               fontSize: {
                                 xs: "15px",
-                                sm: "21px",
-                                md: "21px",
+                                sm: "20px",
+                                // md: "21px",
                                 lg: "21px",
                                 // xl: "36px",
                                 xl: "21px",
@@ -627,7 +632,7 @@ const Benifits: React.FC = () => {
                             fontSize: {
                               xs: "12px",
                               sm: "17px",
-                              md: "18px",
+                              // md: "18px",
                               lg: "18px",
                               // xl: "24px",
                               xl: "18px",
