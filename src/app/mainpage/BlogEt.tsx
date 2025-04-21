@@ -93,20 +93,20 @@ export default function BlogEt() {
               fontWeight: 600,
               fontSize: {
                 xs: "28px",
-                sm: "34px",
+                sm: "30px",
                 lg: "34px",
                 // xl: "47.85px",
                 xl: "34px",
               },
-              lineHeight: { xs: "30px", sm: "50px", lg: "120%", xl: "1.5em" }, //xl: "120%"
+              lineHeight: { xs: "30px", sm: "120%", lg: "120%", xl: "1.5em" }, //xl: "120%"
               color: "#161C2D",
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
               padding: {
                 xs: "20px 0px",
-                sm: "50px 0px",
+                sm: "30px 0px",
                 lg: "50px 200px 50px 200px",
-                md: "70px 100px 50px 100px",
+                // md: "70px 100px 50px 100px",
                 xl: "50px 448px 50px 448px",
               },
             }}
@@ -139,9 +139,9 @@ export default function BlogEt() {
               item
               key={index}
               xs={12}
-              sm={5.5}
+              sm={3.5}
               lg={3.5}
-              md={3.5}
+              // md={3.5}
               xl={3.5}
               onMouseEnter={() => setIsHovered(index)}
               onMouseLeave={() => setIsHovered(null)}
@@ -180,14 +180,14 @@ export default function BlogEt() {
                   ...title,
                   fontSize: {
                     xs: "14px",
-                    sm: "21px",
+                    sm: "20px",
                     lg: "21px",
                     // xl: "21.27px",
                     xl: "21px",
                   },
                   lineHeight: {
                     xs: "20px",
-                    sm: "22px",
+                    sm: "120%",
                     lg: "120%",
                     xl: "1.5em",
                   },
@@ -201,14 +201,14 @@ export default function BlogEt() {
                   ...description,
                   fontSize: {
                     xs: "12px",
-                    sm: "18px",
+                    sm: "17px",
                     lg: "18px",
                     // xl: "18.61px",
                     xl: "18px",
                   },
                   lineHeight: {
                     xs: "15px",
-                    sm: "20px",
+                    sm: "160%",
                     lg: "160%",
                     // xl: "160%",
                     xl: "26px",
@@ -238,11 +238,11 @@ export default function BlogEt() {
                   }}
                 >
                   <Typography
-                    style={{
+                    sx={{
                       textDecoration: "none",
                       color: "#24535C",
                       fontWeight: 400,
-                      fontSize: "18px",
+                      fontSize: {xl:"18px",lg:"18px",sm:"17px",xs:"17px"},
                       lineHeight: "25.9px",
                     }}
                   >
@@ -269,14 +269,14 @@ export default function BlogEt() {
             fontFamily: "Mulish",
             // fontFamily: "Helvetica, sans-serif",
             color: "#FFFFFF",
-            fontSize: { xs: "14px", sm: "21px", lg: "21px", xl: "21px" }, //xl: "30px"
+            fontSize: { xs: "14px", sm: "20px", lg: "21px", xl: "21px" }, //xl: "30px"
             textAlign: "center",
             borderRadius: "12px",
             padding: "8px 15px",
             background: "#24535C",
             margin: {
               xs: "0px 0px  50px 0px",
-              sm: "20px 0px  50px 0px",
+              sm: "0px 0px  50px 0px",
               lg: "0px 0px  50px 0px",
               xl: isMax ? "0px 0px  80px 0px" : "0px 0px  79px 0px",
             },

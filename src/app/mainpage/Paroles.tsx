@@ -189,11 +189,11 @@ export default function Paroles() {
               color: "#0A1411",
               // fontWeight: 700,
               fontWeight: 600,
-              fontSize: { xs: "28px", sm: "45px", lg: "34px", xl: "34px" }, //xl: "64px"
-              lineHeight: { xs: "30px", sm: "50px", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
+              fontSize: { xs: "28px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
+              lineHeight: { xs: "30px", sm: "1.5em", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
               padding: {
                 xs: "2% 0%",
-                sm: "5% 0%",
+                sm: "0px 0px 30px 300px",
                 lg: "0px 0px 50px 400px",
                 xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 500px",
               },
@@ -204,15 +204,13 @@ export default function Paroles() {
               flexDirection: {
                 xs: "column",
                 sm: "row",
-                md: "row",
                 lg: "row",
                 xl: "row",
               },
               gap: {
                 xs: "30px",
-                sm: "80px",
-                md: "80px",
-                lg: "300px",
+                sm: "150px",
+                lg: "250px", //300px
                 xl: "400px",
               },
             }}
@@ -354,16 +352,16 @@ export default function Paroles() {
               fontWeight: 500,
               fontFamily: "Mulish",
               letterSpacing: "0%",
-              fontSize: { xs: "14px", sm: "16px", lg: "18px", xl: "18px" },
+              fontSize: { xs: "14px", sm: "17px", lg: "18px", xl: "18px" },
               lineHeight: {
                 xs: "25px",
-                sm: "30px",
+                sm: "1.3em",
                 lg: "1.3em",
                 xl: "1.3em",
               },
               padding: {
                 xs: "5%",
-                sm: "2%",
+                sm: "0px 50px",
                 lg: "0px 180px 0px 180px",
                 xl: isSmallDesktop?"0px 200px 0px 200px": "0px 450px 0px 450px",
               },
@@ -489,7 +487,7 @@ export default function Paroles() {
                       },
                       fontSize: {
                         xs: "12px",
-                        sm: "16px",
+                        sm: "17px",
                         lg: "18px",
                         // xl: "30.2px",
                         xl: "18px",

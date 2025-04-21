@@ -127,7 +127,7 @@ const NousAgissons: React.FC = () => {
                   fontWeight: 500,
                   fontSize: {
                     xs: "20px",
-                    sm: "55px",
+                    sm: "45px",
                     lg: "55px",
                     xl: "55px",
                   },
@@ -154,14 +154,14 @@ const NousAgissons: React.FC = () => {
                   paddingRight: isMax5 ? "300px" : "0px",
                   fontSize: {
                     xs: "12px",
-                    sm: "25px",
+                    sm: "30px",
                     lg: "34px",
                     xl: "34px",
                   },
 
                   lineHeight: {
                     xs: "12px",
-                    sm: "30px",
+                    sm: "1.2em",
                     lg: "1.2em",
                     xl: "1.2em",
                   },
@@ -177,10 +177,10 @@ const NousAgissons: React.FC = () => {
                   background: "#24535C",
                   borderRadius: "82px",
                   top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
-                  height: { xs: "22px", sm: "40px", lg: "66px", xl: "66px" },
+                  height: { xs: "22px", sm: "50px", lg: "66px", xl: "66px" },
                   width: {
                     xs: "80px",
-                    sm: "150px",
+                    sm: "180px",
                     lg: "203px",
                     xl: "203.85px",
                   },
@@ -201,13 +201,13 @@ const NousAgissons: React.FC = () => {
                     fontWeight: 500,
                     fontSize: {
                       xs: "7px",
-                      sm: "12px",
+                      sm: "20px",
                       lg: "21px",
                       xl: "21px",
                     },
                     lineHeight: {
                       xs: "0px",
-                      sm: "12px",
+                      sm: "1.7em",
                       lg: "1.7em",
                       xl: "1.7em",
                     },

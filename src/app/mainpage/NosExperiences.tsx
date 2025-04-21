@@ -106,21 +106,20 @@ const NosExperiences: React.FC = () => {
                   fontWeight: 600,
                   fontSize: {
                     xs: "20px",
-                    sm: "48px",
+                    sm: "30px",
                     lg: "34px",
                     // xl: "66.25px",
                     xl: "34px",
                   },
                   lineHeight: {
                     xs: "30px",
-                    sm: "55px",
+                    sm: "120%",
                     lg: "120%",
-                    // xl: "120%",
                     xl: "1.5em",
                   },
                   padding: {
                     xs: "12% 0% 2% 0%",
-                    sm: "8% 0% 2% 0%",
+                    sm: "100px 0px 0px 0px",
                     lg: "200px 0px 50px 0px",
                     xl:isMax?"270px 0px 50px 0px": "220px 0px 50px 0px",
                   },
@@ -136,16 +135,16 @@ const NosExperiences: React.FC = () => {
                   color: "#FFFFFF",
                   // fontWeight: 400,
                   fontWeight: 500,
-                  fontSize: { xs: "8px", sm: "18px", lg: "18px", xl: "18px" }, // xl: "24px"
+                  fontSize: { xs: "8px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px"
                   lineHeight: {
                     xs: "10px",
-                    sm: "25px",
+                    sm: "120%",
                     lg: "120%",
                     xl: "1.9em",
                   },
                   padding: {
                     xs: "0% 2%",
-                    sm: "2%",
+                    sm: "30px 50px",
                     lg: "0px 0px 0px 0px",
                     xl: "0px 0px 0px 0px",
                   },
@@ -176,7 +175,7 @@ const NosExperiences: React.FC = () => {
                   justifyContent: "center",
                   padding: {
                     xs: "5px 0px 50px 0px",
-                    sm: "50px 0px 80px 0px",
+                    sm: "10px 0px 50px 0px",
                     lg: "50px 0px 250px 0px",
                     xl: isMax ? "50px 0px 120px 0px" : "50px 0px 70px 0px",
                   },
@@ -202,14 +201,12 @@ const NosExperiences: React.FC = () => {
                         padding: {
                           xs: "10px",
                           sm: "20px",
-                          md: "20px",
                           lg: "20px",
                           xl: "20px",
                         },
                         minWidth: {
                           xs: "200px",
                           sm: "300px",
-                          md: "300px",
                           lg: "300px",
                           xl: "300px",
                         },
@@ -226,7 +223,7 @@ const NosExperiences: React.FC = () => {
                           fontWeight: 500,
                           fontSize: {
                             xs: "10px",
-                            sm: "16px",
+                            sm: "17px",
                             lg: "18px",
                             // xl: "19.32px",
                             xl: "18px",

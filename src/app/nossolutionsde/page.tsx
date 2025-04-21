@@ -204,9 +204,9 @@ const NosSolutionsDe: React.FC = () => {
                   alignItems: "center",
                   padding: {
                     xs: "70px 50px 0px 50px",
-                    sm: "100px 150px 0px 150px",
-                    lg: "250px 150px 0px 150px",
-                    md: "250px 100px 0px 100px",
+                    sm: "250px 50px 0px 50px",
+                    lg: "250px 100px 0px 100px",
+                    // md: "250px 100px 0px 100px",
                     xl: "420px 300px 0px 300px",
                   },
                 }}
@@ -242,7 +242,7 @@ const NosSolutionsDe: React.FC = () => {
                       fontWeight: 700,
                       fontSize: {
                         xs: "16px",
-                        sm: "40px",
+                        sm: "45px",
                         lg: "55px",
                         // xl: "50px",
                         xl: "55px",
@@ -268,7 +268,7 @@ const NosSolutionsDe: React.FC = () => {
                       fontWeight: 400,
                       fontSize: {
                         xs: "10px",
-                        sm: "21px",
+                        sm: "20px",
                         lg: "21px",
                         xl: "21px",
                       },
@@ -308,7 +308,7 @@ const NosSolutionsDe: React.FC = () => {
             sx={{
               padding: {
                 xs: "5%",
-                sm: "5%",
+                sm: "30px 50px",
                 lg: "50px",
                 xl: "100px 160px 50px 160px" //"100px 100px 50px 100px"
               },
@@ -328,7 +328,7 @@ const NosSolutionsDe: React.FC = () => {
                       lg: "row",
                       xl: "row",
                     },
-                    gap: { xs: "50px", sm: "50px", lg: "200px", xl: "300px" },
+                    gap: { xs: "50px", sm: "100px", lg: "200px", xl: "300px" },
                     alignItems: "center",
                   }}
                 >
@@ -343,14 +343,14 @@ const NosSolutionsDe: React.FC = () => {
                           fontWeight: 600,
                           fontSize: {
                             xs: "30px",
-                            sm: "34px",
+                            sm: "30px",
                             lg: "34px",
                             // xl: "58px",
                             xl: "34px",
                           },
                           lineHeight: {
                             xs: "35px",
-                            sm: "48px",
+                            sm: "125%",
                             lg: "125%",
                             // xl: "125%",
                             xl: "1.5em",
@@ -368,7 +368,7 @@ const NosSolutionsDe: React.FC = () => {
                       sx={{
                         fontSize: {
                           xs: "12px",
-                          sm: "21px",
+                          sm: "20px",
                           lg: "21px",
                           // xl: "22px",
                           xl: "21px",
@@ -377,7 +377,7 @@ const NosSolutionsDe: React.FC = () => {
                         fontWeight: 500,
                         lineHeight: {
                           xs: "18px",
-                          sm: "25px",
+                          sm: "150%",
                           lg: "150%",
                           // xl: "150%",
                           xl: "1.3em",
@@ -409,9 +409,9 @@ const NosSolutionsDe: React.FC = () => {
                             justifyContent: "space-around",
                             width: {
                               xs: "50%",
-                              sm: "70%",
+                              sm: "250px",
                               lg: "250px",
-                              md: "250px",
+                              // md: "250px",
                               xl: "250px",
                             },
                             height: {
@@ -436,7 +436,7 @@ const NosSolutionsDe: React.FC = () => {
                               fontFamily: "Mulish",
                               fontSize: {
                                 xs: "12px",
-                                sm: "21px",
+                                sm: "20px",
                                 lg: "21px",
                                 xl: "21px",
                               },
@@ -509,7 +509,7 @@ const NosSolutionsDe: React.FC = () => {
                 sx={{
                   textAlign: "center",
                   color: "#292F36",
-                  fontSize: { xs: "30px", sm: "34px", lg: "34px", xl: "34px" }, //xl: "50px"
+                  fontSize: { xs: "30px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
                   // fontWeight: 400,
                   fontWeight: 600,
                   lineHeight: "1.5em",
@@ -573,7 +573,7 @@ const NosSolutionsDe: React.FC = () => {
                     height: {
                       xs: "0px",
                       sm: "400px",
-                      md: "450px",
+                      // md: "450px",
                       lg: "450px",
                       // xl: "600px",
                     },
@@ -609,9 +609,9 @@ const NosSolutionsDe: React.FC = () => {
                               lineHeight: "1.5em",
                               fontSize: {
                                 xs: "18px",
-                                sm: "14px",
+                                sm: "20px",
                                 lg: "21px",
-                                md: "21px",
+                                // md: "21px",
                                 // xl: "35px",
                                 xl: "21px",
                               },
@@ -630,9 +630,9 @@ const NosSolutionsDe: React.FC = () => {
                               color: "#4D5053",
                               fontSize: {
                                 xs: "14px",
-                                sm: "12px",
+                                sm: "17px",
                                 lg: "18px",
-                                md: "18px",
+                                // md: "18px",
                                 // xl: "28px",
                                 xl: "18px",
                               },
@@ -695,8 +695,8 @@ const NosSolutionsDe: React.FC = () => {
                       xl: "18px",
                       xs: "14px",
                       lg: "18px",
-                      sm: "14px",
-                      md: "18px",
+                      sm: "17px",
+                      // md: "18px",
                     },
                     lineHeight: "1.5em",
                     letterSpacing: "2%",
@@ -721,8 +721,8 @@ const NosSolutionsDe: React.FC = () => {
                             xl: "18px",
                             xs: "18px",
                             lg: "18px",
-                            sm: "18px",
-                            md: "18px",
+                            sm: "17px",
+                            // md: "18px",
                           },
                           lineHeight: "150%",
                           letterSpacing: "1%",

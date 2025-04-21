@@ -174,14 +174,14 @@ const OurExperts: React.FC = () => {
 
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1450px)");
-  const isMd = useMediaQuery("(max-width:992px)");
-  const isSm = useMediaQuery("(max-width:768px)");
+  const isSm = useMediaQuery("(max-width:1025px)");
+  // const isSm = useMediaQuery("(max-width:768px)");
   const isXs = useMediaQuery("(max-width:576px)");
 
   const getDimensions = () => {
     if (isXs) return { width: "120px", height: "220px" };
-    if (isSm) return { width: "200px", height: "320px" };
-    if (isMd) return { width: "250px", height: "400px" };
+    if (isSm) return { width: "200px", height: "300px" };
+    // if (isMd) return { width: "250px", height: "400px" };
     if (isLg) return { width: "220px", height: "333px" };
     if (isXl) return { width: "283.55px", height: "433px" };
     return { width: "283.55px", height: "433px" };
@@ -204,11 +204,11 @@ const OurExperts: React.FC = () => {
   };
 
   const profileNameFontSize = {
-    fontSize: isXs ? "20px" : "28px",
+    fontSize: isXs ? "20px" : isSm?"24px":"28px",
   };
 
   const profileDetailsFontSize = {
-    fontSize: isXs ? "12px" : "18px",
+    fontSize: isXs ? "12px" : isSm?"17px": "18px",
   };
 
   const isMax8 = useMediaQuery("(min-width:200px)");
@@ -275,8 +275,8 @@ const OurExperts: React.FC = () => {
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "28px",
-                      sm: "32px",
-                      md: "34px",
+                      sm: "30px",
+                      // md: "34px",
                       lg: "34px",
                       // xl: "84px",
                       xl: "34px",
@@ -294,9 +294,9 @@ const OurExperts: React.FC = () => {
                     color: "#0A1411",
                     padding: {
                       xs: "50px 0px 20px 0px",
-                      sm: "8% 10% 0% 10%",
+                      sm: "50px 20px 0px 20px",
                       lg: "80px 100px 30px 100px",
-                      md: "50px 20px 0px 20px",
+                      // md: "50px 20px 0px 20px",
                       xl: "100px 100px 40px 100px",
                     },
                   }}
@@ -309,8 +309,8 @@ const OurExperts: React.FC = () => {
                     fontFamily: "Mulish",
                     fontSize: {
                       xs: "14px",
-                      sm: "18px",
-                      md: "18px",
+                      sm: "17px",
+                      // md: "18px",
                       lg: "18px",
                       // xl: "28px",
                       xl: "18px",
@@ -319,7 +319,7 @@ const OurExperts: React.FC = () => {
                     fontWeight: 500,
                     lineHeight: {
                       xs: "16px",
-                      sm: "25px",
+                      sm: "1.5em",
                       lg: "1.9em",
                       // xl: "33px",
                       xl: "1.9em",
@@ -348,8 +348,8 @@ const OurExperts: React.FC = () => {
                     display: "grid",
                     gridTemplateColumns: {
                       xs: "repeat(2, 1fr)",
-                      sm: "repeat(2, 1fr)",
-                      md: "repeat(3, 1fr)",
+                      sm: "repeat(3, 1fr)",
+                      // md: "repeat(3, 1fr)",
                       lg: "repeat(4, 1fr)",
                       xl: "repeat(4, 1fr)",
                     },
@@ -357,9 +357,9 @@ const OurExperts: React.FC = () => {
                     gap: isMax ? "30px" : "3%",
                     margin: {
                       xs: "0% 0% 30% 0%",
-                      sm: "0% 0% 15% 0%",
+                      sm: "20px 80px 80px 80px",
                       lg: isMaxLg ? "0px 50px 50px 50px" : "0px 50px 50px 50px",
-                      md: "0px 80px 80px 80px",
+                      // md: "0px 80px 80px 80px",
                       xl: isMax ? "0px 340px 20px 340px" : "0px 70px 50px 70px", //250px - 10%
                     },
                   }}
