@@ -222,7 +222,7 @@ const OurExperts: React.FC = () => {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isMaxLg = useMediaQuery("(min-width:1365px)");
-
+const is2K = useMediaQuery("(width:2048px)");
   return (
     <Box sx={{}}>
       <Header />
@@ -360,7 +360,7 @@ const OurExperts: React.FC = () => {
                       sm: "20px 80px 80px 80px",
                       lg: isMaxLg ? "0px 50px 50px 50px" : "0px 50px 50px 50px",
                       // md: "0px 80px 80px 80px",
-                      xl: isMax ? "0px 340px 20px 340px" : "0px 70px 50px 70px", //250px - 10%
+                      xl:is2K?"0px 100px": isMax ? "0px 340px 20px 340px" : "0px 70px 50px 70px", //250px - 10%
                     },
                   }}
                 >

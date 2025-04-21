@@ -734,6 +734,7 @@ const Header: React.FC = () => {
   const isMax5 = useMediaQuery("(min-width:1370px)");
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
+  const is2K = useMediaQuery("(width:2048px)");
 
   return (
     <Box>
@@ -988,7 +989,13 @@ const Header: React.FC = () => {
                   gap: {
                     sm: "30px",
                     lg: "230px",
-                    xl: isMax ? "850px" : isSmallDesktop ? "300px" : "600px",
+                    xl: is2K
+                      ? "600px"
+                      : isMax
+                        ? "850px"
+                        : isSmallDesktop
+                          ? "300px"
+                          : "600px",
                   },
                   // padding: isMax ? "0px 100px" : "0px 0px",
                 }}
@@ -1013,7 +1020,7 @@ const Header: React.FC = () => {
                     gap: "35px",
                     flexWrap: "nowrap",
                     // marginLeft: isMax ? "400px": "0px",
-                    alignItems:'center' //added for tab screen
+                    alignItems: "center", //added for tab screen
                   }}
                 >
                   <Link

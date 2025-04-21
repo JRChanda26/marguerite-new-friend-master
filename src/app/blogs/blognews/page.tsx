@@ -216,7 +216,7 @@ export default function BlogsNews() {
                   xs: "5%",
                   sm: "30px 0px 0px 0px",
                   lg: "50px 0px 0px 0px", //"50px 80px 0px 80px",
-                  xl: "100px 100px 50px 100px",
+                  xl:isMax?"100px 100px 50px 60px": "100px 100px 50px 100px",
                 },
               }}
             >
