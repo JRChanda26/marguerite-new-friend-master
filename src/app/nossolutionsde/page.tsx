@@ -310,7 +310,7 @@ const NosSolutionsDe: React.FC = () => {
                 xs: "5%",
                 sm: "5%",
                 lg: "50px",
-                xl: "100px 100px 50px 100px" //"50px 228px 50px 228px"
+                xl: "100px 160px 50px 160px" //"100px 100px 50px 100px"
               },
             }}
           >

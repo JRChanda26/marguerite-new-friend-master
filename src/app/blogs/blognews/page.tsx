@@ -215,7 +215,7 @@ export default function BlogsNews() {
                 margin: {
                   xs: "5%",
                   sm: "5%",
-                  lg: "50px 80px 0px 80px",
+                  lg: "50px 0px 0px 0px", //"50px 80px 0px 80px",
                   xl: "100px 100px 50px 100px",
                 },
               }}
@@ -708,8 +708,8 @@ export default function BlogsNews() {
                 margin: {
                   xs: "2% 7%",
                   sm: "5%",
-                  lg: "50px 0px 50px 120px",
-                  md: "50px 0px 50px 120px",
+                  lg: "50px 0px 50px 50px", //"50px 0px 50px 120px"
+                  md: "50px 0px 50px 50px",
                   xl: "50px 0px 0px 180px",
                 },
               }}
