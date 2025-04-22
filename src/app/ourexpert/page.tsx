@@ -204,11 +204,11 @@ const OurExperts: React.FC = () => {
   };
 
   const profileNameFontSize = {
-    fontSize: isXs ? "20px" : isSm?"24px":"28px",
+    fontSize: isXs ? "20px" : isSm ? "24px" : "28px",
   };
 
   const profileDetailsFontSize = {
-    fontSize: isXs ? "12px" : isSm?"17px": "18px",
+    fontSize: isXs ? "12px" : isSm ? "17px" : "18px",
   };
 
   const isMax8 = useMediaQuery("(min-width:200px)");
@@ -222,7 +222,10 @@ const OurExperts: React.FC = () => {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isMaxLg = useMediaQuery("(min-width:1365px)");
-const is2K = useMediaQuery("(width:2048px)");
+  const is2K = useMediaQuery("(width:2048px)");
+
+  const isTabScreen = useMediaQuery("(width:768px)");
+
   return (
     <Box sx={{}}>
       <Header />
@@ -270,7 +273,7 @@ const is2K = useMediaQuery("(width:2048px)");
             <React.Fragment key={postIndex}>
               <div>
                 <Typography
-                variant="h2"
+                  variant="h2"
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
@@ -294,7 +297,9 @@ const is2K = useMediaQuery("(width:2048px)");
                     color: "#0A1411",
                     padding: {
                       xs: "50px 0px 20px 0px",
-                      sm: "50px 20px 0px 20px",
+                      sm: isTabScreen
+                        ? "80px 20px 0px 20px"
+                        : "50px 20px 0px 20px",
                       lg: "80px 100px 30px 100px",
                       // md: "50px 20px 0px 20px",
                       xl: "100px 100px 40px 100px",
@@ -304,7 +309,7 @@ const is2K = useMediaQuery("(width:2048px)");
                   {post.data.profile_title}
                 </Typography>
                 <Typography
-                // variant=""
+                  // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
@@ -357,10 +362,16 @@ const is2K = useMediaQuery("(width:2048px)");
                     gap: isMax ? "30px" : "3%",
                     margin: {
                       xs: "0% 0% 30% 0%",
-                      sm: "20px 80px 80px 80px",
+                      sm: isTabScreen
+                        ? "20px 0px 80px 0px"
+                        : "20px 80px 80px 80px",
                       lg: isMaxLg ? "0px 50px 50px 50px" : "0px 50px 50px 50px",
                       // md: "0px 80px 80px 80px",
-                      xl:is2K?"0px 100px": isMax ? "0px 340px 20px 340px" : "0px 70px 50px 70px", //250px - 10%
+                      xl: is2K
+                        ? "0px 100px"
+                        : isMax
+                          ? "0px 340px 20px 340px"
+                          : "0px 70px 50px 70px", //250px - 10%
                     },
                   }}
                 >
@@ -379,15 +390,15 @@ const is2K = useMediaQuery("(width:2048px)");
                             width: dimensions.width,
                             height: dimensions.height,
                             borderRadius: "25px",
-                            display:'flex',
-                            justifyContent:'center',
-                            alignItems:'center'
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
                           }}
                           onClick={() => handleFlipCard(index)}
                         >
                           <div>
                             <Typography
-                            variant="h3"
+                              variant="h3"
                               sx={{
                                 ...designerNameStyle,
                                 fontSize: profileNameFontSize.fontSize,
@@ -396,7 +407,7 @@ const is2K = useMediaQuery("(width:2048px)");
                               {person.name}
                             </Typography>
                             <Typography
-                            // variant=""
+                              // variant=""
                               sx={{
                                 ...designerDetailsStyle,
                                 fontSize: profileDetailsFontSize.fontSize,

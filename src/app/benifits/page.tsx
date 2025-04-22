@@ -67,6 +67,8 @@ const Benifits: React.FC = () => {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isTabScreen = useMediaQuery("(width:768px)");
+
   return (
     <Box sx={{}}>
       <Header />
@@ -209,7 +211,7 @@ const Benifits: React.FC = () => {
                       gap: "30px",
                       flexDirection: {
                         xs: "column",
-                        sm: "row",
+                        sm: isTabScreen? "column":"row",
                         // md: "row",
                         lg: "row",
                         xl: "row",
@@ -219,7 +221,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={6}
+                      sm={isTabScreen?12:6}
                       sx={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -331,7 +333,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={6}
+                      sm={isTabScreen?12:6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -447,7 +449,7 @@ const Benifits: React.FC = () => {
                       gap: "30px",
                       flexDirection: {
                         xs: "column",
-                        sm: "row",
+                        sm:isTabScreen?"column": "row",
                         // md: "row",
                         lg: "row",
                         xl: "row",
@@ -457,7 +459,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={6}
+                      sm={isTabScreen?12:6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -565,7 +567,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={6}
+                      sm={isTabScreen?12:6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",

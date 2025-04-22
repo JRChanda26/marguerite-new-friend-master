@@ -132,6 +132,8 @@ export default function BlogsNews() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isTabScreen = useMediaQuery("(width:768px)");
+  
   return (
     <div>
       <Header />
@@ -206,7 +208,7 @@ export default function BlogsNews() {
                 display: "flex",
                 flexDirection: {
                   xs: "column",
-                  sm: "row",
+                  sm: isTabScreen? "column":"row",
                   // md: "row",
                   lg: "row",
                   xl: "row",
@@ -508,7 +510,7 @@ export default function BlogsNews() {
               <Grid
                 item
                 lg={3.5}
-                sm={3}
+                sm={isTabScreen?12:3}
                 xl={isMax ? 2.5 : 3}
                 style={{
                   marginTop: isMax ? "0px" : "0px",
@@ -703,11 +705,11 @@ export default function BlogsNews() {
               lg={7}
               // md={6}
               xs={12}
-              sm={7}
+              sm={isTabScreen?12:7}
               sx={{
                 margin: {
                   xs: "2% 7%",
-                  sm: "20px 0px 0px 50px",
+                  sm:isTabScreen?"20px 0px 0px 0px":"20px 0px 0px 50px",
                   lg: "50px 0px 50px 50px", //"50px 0px 50px 120px"
                   // md: "50px 0px 50px 50px",
                   xl: "50px 0px 0px 180px",

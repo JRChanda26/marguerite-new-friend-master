@@ -980,6 +980,7 @@ export default function Contact() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isTabScreen = useMediaQuery("(width:768px)");
   return (
     <div>
       <Header />
@@ -1178,7 +1179,7 @@ export default function Contact() {
               <Grid
                 item
                 xs={12}
-                sm={5}
+                sm={isTabScreen?7:5}
                 lg={4}
                 // md={5}
                 xl={3.5}

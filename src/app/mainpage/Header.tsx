@@ -644,7 +644,15 @@ import KeyboardArrowUpSharpIcon from "@mui/icons-material/KeyboardArrowUpSharp";
 const Header: React.FC = () => {
   const [headerPage, setHeaderPage] = useState<any[]>([]);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isTabScreen = useMediaQuery("(width:768px)");
+
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+  const isMax5 = useMediaQuery("(min-width:1370px)");
+  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMin = useMediaQuery("(max-width:750px)");
+  const is2K = useMediaQuery("(width:2048px)");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -715,26 +723,23 @@ const Header: React.FC = () => {
     { href: "", text: headerPage[0]?.data.advantages4 },
   ];
 
-  const isMin = useMediaQuery("(max-width:750px)");
-
   const menustyle = {
-    // fontFamily: "Sans Serif Collection",
     fontFamily: "Mulish",
     fontSize: "18px",
     fontWeight: 400,
     lineHeight: "44.26px",
     color: "#111111",
-    "@media (max-width:600px)": {
-      fontSize: "14px",
+    "@media (max-width:800px)": {
+      fontSize: "17px",
       lineHeight: "30px",
+      fontFamily: "Mulish",
+    },
+    "@media (max-width:600px)": {
+      fontSize: "16px",
+      lineHeight: "30px",
+      fontFamily: "Mulish",
     },
   };
-
-  const isMax = useMediaQuery("(min-width:1930px)");
-  const isMax5 = useMediaQuery("(min-width:1370px)");
-
-  const isSmallDesktop = useMediaQuery("(width:1600px)");
-  const is2K = useMediaQuery("(width:2048px)");
 
   return (
     <Box>
@@ -758,11 +763,15 @@ const Header: React.FC = () => {
               borderBottomRightRadius: "30px",
               boxSizing: "border-box",
               justifyContent: "space-between",
-              padding: "10px 20px",
+              padding: isSmallScreen
+                ? "10px 20px"
+                : isTabScreen
+                  ? "10px 60px"
+                  : "10px 20px",
               backdropFilter: "blur(58.1px)",
             }}
           >
-            {isSmallScreen ? (
+            {isSmallScreen || isTabScreen ? (
               <>
                 {post?.data.marguerite_logo && (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -801,42 +810,40 @@ const Header: React.FC = () => {
                           href={"/manageperlacare"}
                           style={{ textDecoration: "none", width: "100%" }}
                         >
-                          <ListItemText
-                            primary={post.data.page1}
+                          <Typography
+                            // variant=""
                             sx={{
-                              // fontFamily: "Helvetica, sans-serif",
                               fontFamily: "Mulish",
                               color: "#24535C",
-                              // fontSize: "18px",
-                              fontSize: "14px",
+                              fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
                             }}
-                          />
+                          >
+                            {post.data.page1}
+                          </Typography>
                         </Link>
                       </ListItem>
                       <ListItem>
-                        <ListItemText
-                          primary={post.data.page2}
+                        <Typography
+                          // variant=""
                           sx={{
-                            // fontFamily: "Helvetica, sans-serif",
                             fontFamily: "Mulish",
                             color: "#24535C",
-                            // fontSize: "18px",
-                            fontSize: "14px",
+                            fontSize: { xs: "16px", sm: "17px" },
                             fontWeight: 400,
                           }}
-                        />
+                        >
+                          {post.data.page2}
+                        </Typography>
                       </ListItem>
                       <ListItem>
                         <Box>
-                          <ListItemText
-                            // primary={post.data.page3}
+                          <Typography
+                            // variant=""
                             sx={{
-                              // fontFamily: "Helvetica, sans-serif",
                               fontFamily: "Mulish",
                               color: "#24535C",
-                              // fontSize: "18px",
-                              fontSize: "14px",
+                              fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
                             }}
                             onClick={toggleDropdown1}
@@ -851,14 +858,13 @@ const Header: React.FC = () => {
                                 sx={{ fontSize: "inherit" }}
                               />
                             )}
-                          </ListItemText>
+                          </Typography>
                           {dropdownVisible1 && (
                             <Box
                               ref={dropdownRef1}
                               sx={{
                                 marginTop: "5px",
                                 background: "#fff",
-                                // border: "1px solid #ddd",
                                 borderRadius: "8px",
                                 width: "218px",
                                 height: "auto",
@@ -887,13 +893,12 @@ const Header: React.FC = () => {
                       </ListItem>
                       <ListItem>
                         <Box>
-                          <ListItemText
-                            // primary={post.data.page4}
+                          <Typography
+                            // variant=""
                             sx={{
-                              // fontFamily: "Helvetica, sans-serif",
                               fontFamily: "Mulish",
                               color: "#24535C",
-                              fontSize: "18px",
+                              fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
                             }}
                             onClick={toggleDropdown2}
@@ -908,14 +913,13 @@ const Header: React.FC = () => {
                                 sx={{ fontSize: "inherit" }}
                               />
                             )}
-                          </ListItemText>
+                          </Typography>
                           {dropdownVisible2 && (
                             <Box
                               ref={dropdownRef2}
                               sx={{
                                 marginTop: "5px",
                                 background: "#fff",
-                                // border: "1px solid #ddd",
                                 borderRadius: "8px",
                                 width: "218px",
                                 height: "auto",
@@ -947,16 +951,17 @@ const Header: React.FC = () => {
                           href={"/blogs/blognews"}
                           style={{ textDecoration: "none", width: "100%" }}
                         >
-                          <ListItemText
-                            primary={post.data.page5}
+                          <Typography
+                            // variant=""
                             sx={{
-                              // fontFamily: "Helvetica, sans-serif",
                               fontFamily: "Mulish",
                               color: "#24535C",
-                              fontSize: "18px",
+                              fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
                             }}
-                          />
+                          >
+                            {post.data.page5}
+                          </Typography>
                         </Link>
                       </ListItem>
                       <ListItem onClick={handleContactNavigation}>

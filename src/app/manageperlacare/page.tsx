@@ -115,6 +115,8 @@ const ManagePerLaCare: React.FC = () => {
   const isExtraLargeDesktop = useMediaQuery("(width:2880px)");
   const is4K = useMediaQuery("(width:3840px)");
 
+  const isTabScreen = useMediaQuery("(width:768px)");
+
   // Define responsive styles
   const styles: {
     container: React.CSSProperties;
@@ -492,7 +494,11 @@ const ManagePerLaCare: React.FC = () => {
               xs: "5%",
               sm: "30px 50px",
               lg: "50px",
-              xl:isMatch?"100px 350px 50px 350px": isMax1?"100px 300px 50px 300px": "100px 160px 50px 160px", //"100px 100px 50px 100px"
+              xl: isMatch
+                ? "100px 350px 50px 350px"
+                : isMax1
+                  ? "100px 300px 50px 300px"
+                  : "100px 160px 50px 160px", //"100px 100px 50px 100px"
             },
           }}
         >
@@ -1386,7 +1392,7 @@ const ManagePerLaCare: React.FC = () => {
                 alignItems: "center",
                 margin: {
                   xs: "5%",
-                  sm: "50px 200px 30px 200px",
+                  sm: isTabScreen ? "50px 80px" : "50px 200px 30px 200px",
                   lg: "50px 522px",
                   // md: "107px 220px",
                   xl: isMax3

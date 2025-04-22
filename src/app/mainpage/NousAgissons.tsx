@@ -41,6 +41,8 @@ const NousAgissons: React.FC = () => {
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax8 = useMediaQuery("(min-width:200px)");
 
+ const isTabScreen = useMediaQuery("(width:768px)");
+ 
   return (
     <div
       style={{
@@ -75,7 +77,7 @@ const NousAgissons: React.FC = () => {
           sx={{
             marginTop: {
               xs: "50px",
-              sm: "50px",
+              sm: isTabScreen ? "80px" : "50px",
               lg: "70px",
               xl: "80px",
             },
@@ -121,7 +123,7 @@ const NousAgissons: React.FC = () => {
               }}
             >
               <Typography
-              variant="h1"
+                variant="h1"
                 sx={{
                   fontFamily: "Mulish",
                   fontWeight: 500,
@@ -145,7 +147,7 @@ const NousAgissons: React.FC = () => {
                 {post.data.heading}
               </Typography>
               <Typography
-              variant="h2"
+                variant="h2"
                 sx={{
                   fontFamily: "Mulish",
                   color: "#24535C",
@@ -195,7 +197,7 @@ const NousAgissons: React.FC = () => {
                 onClick={handleNavigation}
               >
                 <Typography
-                variant="h4"
+                  variant="h4"
                   sx={{
                     fontFamily: "Mulish",
                     fontWeight: 500,
