@@ -241,7 +241,7 @@ export default function Paroles() {
                   color: "#000000",
                   background: "#FFFFFF",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  padding: "20px",
+                  padding: isMobileScreen? "10px":"20px",
                   "&:hover": {
                     background: "inherit",
                   },
@@ -253,7 +253,7 @@ export default function Paroles() {
                     src={parolesPage.data.left_arrow_icon.url || ""}
                     alt={parolesPage.data.left_arrow_icon}
                     style={{
-                      width: "30px",
+                      width: isMobileScreen? "20px":"30px",
                       height: "auto",
                     }}
                   />
@@ -267,7 +267,7 @@ export default function Paroles() {
                   color: "#000000",
                   background: "#FFFFFF",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  padding: "20px",
+                  padding: isMobileScreen? "10px":"20px",
                   "&:hover": {
                     background: "inherit",
                   },
@@ -279,7 +279,7 @@ export default function Paroles() {
                     src={parolesPage.data.right_arrow_icon.url || ""}
                     alt={parolesPage.data.right_arrow_icon}
                     style={{
-                      width: "30px",
+                      width: isMobileScreen? "20px":"30px",
                       height: "auto",
                     }}
                   />
