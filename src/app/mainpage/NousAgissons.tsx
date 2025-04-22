@@ -42,6 +42,7 @@ const NousAgissons: React.FC = () => {
   const isMax8 = useMediaQuery("(min-width:200px)");
 
  const isTabScreen = useMediaQuery("(width:768px)");
+ const isBigTabScreen = useMediaQuery("(width:800px)");
  
   return (
     <div
@@ -77,7 +78,7 @@ const NousAgissons: React.FC = () => {
           sx={{
             marginTop: {
               xs: "50px",
-              sm: isTabScreen ? "80px" : "50px",
+              sm: isTabScreen||isBigTabScreen ? "80px" : "50px",
               lg: "70px",
               xl: "80px",
             },
@@ -202,7 +203,7 @@ const NousAgissons: React.FC = () => {
                     fontFamily: "Mulish",
                     fontWeight: 500,
                     fontSize: {
-                      xs: "13px",
+                      xs: "10px",
                       sm: "20px",
                       lg: "21px",
                       xl: "21px",

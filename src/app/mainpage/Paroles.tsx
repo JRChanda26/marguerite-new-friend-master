@@ -34,6 +34,8 @@ export default function Paroles() {
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
   const isMobileScreen = useMediaQuery("(max-width:600px)");
+  const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
@@ -199,7 +201,7 @@ export default function Paroles() {
               }, //xl: "auto"
               padding: {
                 xs: "20px 0px",
-                sm: "0px 0px 30px 300px",
+                sm: isTabScreen||isBigTabScreen?"0px 0px 30px 150px":"0px 0px 30px 300px",
                 lg: "0px 0px 50px 400px",
                 xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 500px",
               },
@@ -215,7 +217,7 @@ export default function Paroles() {
               },
               gap: {
                 xs: "30px",
-                sm: "150px",
+                sm: isTabScreen||isBigTabScreen? "100px":"150px",
                 lg: "250px", //300px
                 xl: "400px",
               },

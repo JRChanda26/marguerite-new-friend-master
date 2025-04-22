@@ -32,6 +32,7 @@ const Choisir: React.FC = () => {
   const isSmallDesktop = useMediaQuery("(width:1600px)");
   
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
   
   return (
     <div
@@ -153,11 +154,11 @@ const Choisir: React.FC = () => {
             gap: { xs: "51px", sm: "20px", md: "20px", lg: "51px", xl: "51px" },
             padding: {
               xs: "30px 0px 30px 0px",
-              sm: isTabScreen?"30px 0px": "0px",
+              sm: isTabScreen||isBigTabScreen?"30px 0px": "0px",
               lg: "20px 0px 80px 0px",
               xl: "30px 0px",
             },
-            height: { sm:isTabScreen?"850px": "500px", lg: "600px", xl: "700px" },
+            height: { sm:isTabScreen||isBigTabScreen?"850px": "500px", lg: "600px", xl: "700px" },
             alignItems: "center",
           }}
         >

@@ -647,6 +647,7 @@ const Header: React.FC = () => {
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
   const isMax5 = useMediaQuery("(min-width:1370px)");
@@ -765,13 +766,13 @@ const Header: React.FC = () => {
               justifyContent: "space-between",
               padding: isSmallScreen
                 ? "10px 20px"
-                : isTabScreen
+                : isTabScreen || isBigTabScreen
                   ? "10px 60px"
                   : "10px 20px",
               backdropFilter: "blur(58.1px)",
             }}
           >
-            {isSmallScreen || isTabScreen ? (
+            {isSmallScreen || isTabScreen || isBigTabScreen ? (
               <>
                 {post?.data.marguerite_logo && (
                   // eslint-disable-next-line @next/next/no-img-element

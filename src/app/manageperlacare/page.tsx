@@ -116,6 +116,7 @@ const ManagePerLaCare: React.FC = () => {
   const is4K = useMediaQuery("(width:3840px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   // Define responsive styles
@@ -513,14 +514,14 @@ const ManagePerLaCare: React.FC = () => {
                   justifyContent: "center",
                   flexDirection: {
                     xs: "column",
-                    sm: "row",
+                    sm: isTabScreen||isBigTabScreen ? "column" : "row",
                     lg: "row",
                     xl: "row",
                   },
                   gap: { xs: "20px", sm: "20px", lg: "50px", xl: "50px" },
                 }}
               >
-                <Grid item xl={7} lg={6} xs={12} sm={7}>
+                <Grid item xl={7} lg={6} xs={12} sm={isTabScreen||isBigTabScreen ? 12 : 7}>
                   {managePage.map((post: any, index: any) => (
                     <Typography
                       variant="h2"
@@ -660,7 +661,7 @@ const ManagePerLaCare: React.FC = () => {
                   xl={5}
                   lg={6}
                   xs={12}
-                  sm={5}
+                  sm={isTabScreen||isBigTabScreen ? 12 : 5}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -1094,7 +1095,7 @@ const ManagePerLaCare: React.FC = () => {
                     justifyContent: "space-evenly",
                     marginTop: isSmallScreen ? "20px" : "50px",
                     alignItems: "center",
-                    gap: {xs:"40px", lg: "60px", xl: "70px" },
+                    gap: { xs: "40px", lg: "60px", xl: "70px" },
                   }}
                 >
                   <Grid
@@ -1242,9 +1243,9 @@ const ManagePerLaCare: React.FC = () => {
                       xl: "row",
                     },
                     justifyContent: "space-evenly",
-                    marginTop:isSmallScreen?"30px": "50px",
+                    marginTop: isSmallScreen ? "30px" : "50px",
                     alignItems: "center",
-                    gap: {xs:"30px", lg: "60px", xl: "0px" },
+                    gap: { xs: "30px", lg: "60px", xl: "0px" },
                   }}
                 >
                   <Grid item xs={12} sm={5} lg={6} xl={5}>
@@ -1393,7 +1394,7 @@ const ManagePerLaCare: React.FC = () => {
                 alignItems: "center",
                 margin: {
                   xs: "10% 7%",
-                  sm: isTabScreen ? "50px 80px" : "50px 200px 30px 200px",
+                  sm: isTabScreen||isBigTabScreen ? "50px 80px" : "50px 200px 30px 200px",
                   lg: "50px 522px",
                   // md: "107px 220px",
                   xl: isMax3

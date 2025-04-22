@@ -60,6 +60,9 @@ export default function BlogEt() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+   const isTabScreen = useMediaQuery("(width:768px)");
+   const isBigTabScreen = useMediaQuery("(width:800px)");
+
   return (
     <div
       style={{
@@ -139,7 +142,7 @@ export default function BlogEt() {
               item
               key={index}
               xs={12}
-              sm={3.5}
+              sm={isTabScreen||isBigTabScreen?5:3.5}
               lg={3.5}
               // md={3.5}
               xl={3.5}

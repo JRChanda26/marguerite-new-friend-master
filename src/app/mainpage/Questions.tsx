@@ -74,6 +74,10 @@ export default function Questions() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
+  
+
   return (
     <div
       style={{
@@ -104,7 +108,7 @@ export default function Questions() {
             // flexDirection: "row",
             flexDirection: {
               xs: "column",
-              sm: "row",
+              sm: isTabScreen||isBigTabScreen?"column":"row",
               // md: "row",
               lg: "row",
               xl: "row",
@@ -119,7 +123,7 @@ export default function Questions() {
             },
           }}
         >
-          <Grid item lg={6} md={6}>
+          <Grid item lg={6} sm={isTabScreen||isBigTabScreen?12:6}>
             <Typography
             variant="h2"
               sx={{
@@ -206,7 +210,7 @@ export default function Questions() {
                 borderRadius: "10px",
                 margin: {
                   xs: "5px 0px",
-                  sm: "30px 0px 250px 30px",
+                  sm: isTabScreen||isBigTabScreen?"30px 0px 50px 30px":"30px 0px 250px 30px",
                   lg: "40px 0px 0px 70px",
                   // md: "40px 30px 0px 80px",
                   xl: isMax ? "30px 0px 0px 0px" : "30px 0px 0px 110px",
@@ -255,7 +259,7 @@ export default function Questions() {
             lg={6}
             // md={6}
             xs={12}
-            sm={6}
+            sm={isTabScreen||isBigTabScreen?12:6}
             sx={{
               paddingRight: {
                 xs: "0%",

@@ -225,6 +225,7 @@ const OurExperts: React.FC = () => {
   const is2K = useMediaQuery("(width:2048px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   return (
@@ -298,7 +299,7 @@ const OurExperts: React.FC = () => {
                     color: "#0A1411",
                     padding: {
                       xs: "70px 10px 20px 10px",
-                      sm: isTabScreen
+                      sm: isTabScreen ||isBigTabScreen
                         ? "80px 20px 0px 20px"
                         : "50px 20px 0px 20px",
                       lg: "80px 100px 30px 100px",
@@ -363,7 +364,7 @@ const OurExperts: React.FC = () => {
                     gap: isMax ? "30px" : "3%",
                     margin: {
                       xs: "0% 0% 30% 0%",
-                      sm: isTabScreen
+                      sm: isTabScreen ||isBigTabScreen
                         ? "20px 0px 80px 0px"
                         : "20px 80px 80px 80px",
                       lg: isMaxLg ? "0px 50px 50px 50px" : "0px 50px 50px 50px",
