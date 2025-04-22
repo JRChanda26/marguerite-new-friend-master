@@ -1090,7 +1090,7 @@ export default function Contact() {
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "17px", lg: "21px", xl: "21px" },
+                  fontSize: { xs: "10px", sm: "20px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
