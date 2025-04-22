@@ -1028,7 +1028,7 @@ export default function Contact() {
               flexDirection: "column",
               alignItems: "center",
               padding: {
-                xs: "70px 50px 0px 50px",
+                xs: "100px 50px 0px 50px",
                 sm: "250px 100px 0px 100px",
                 lg: "250px 150px 0px 150px",
                 // md: "250px 100px 0px 100px",
@@ -1051,7 +1051,7 @@ export default function Contact() {
                 },
                 // padding: "41px 152px 42px 152px",
                 padding: {
-                  xs: "0% 5% 0% 5%",
+                  xs: "5%",
                   sm: "3% 8%",
                   lg: "41px 152px 41px 152px",
                   xl: "21px 82px 21px 82px",
@@ -1059,7 +1059,7 @@ export default function Contact() {
               }}
             >
               <Typography
-              variant="h1"
+                variant="h1"
                 sx={{
                   // fontFamily: "DM Serif Display",
                   fontFamily: "Mulish",
@@ -1069,10 +1069,10 @@ export default function Contact() {
                   // fontSize: "50px",
                   // fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                   // added by pragatika
-                  fontSize: { xs: "16px", sm: "45px", lg: "55px", xl: "55px" },
+                  fontSize: { xs: "24px", sm: "45px", lg: "55px", xl: "55px" },
                   // lineHeight: "62.5px",
                   lineHeight: {
-                    xs: "40px",
+                    xs: "125%",
                     sm: "48px",
                     lg: "125%",
                     // xl: "125%",
@@ -1084,14 +1084,14 @@ export default function Contact() {
                 {contactPage[0]?.data.heading}
               </Typography>
               <Typography
-              variant="h4"
+                variant="h4"
                 sx={{
                   // fontFamily: "Jost",
                   fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
-                  fontSize: { xs: "10px", sm: "20px", lg: "21px", xl: "21px" },
+                  fontSize: { xs: "13px", sm: "20px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -1138,11 +1138,11 @@ export default function Contact() {
           >
             <Grid item xs={12}>
               <Typography
-              variant="h2"
+                variant="h2"
                 sx={{
                   color: "#292F36",
                   // fontSize: { xs: "30px", sm: "40px", lg: "50px", xl: "50px" },
-                  fontSize: { xs: "30px", sm: "30px", lg: "34px", xl: "34px" },
+                  fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" },
                   fontWeight: 700,
                   textAlign: "center",
                   padding: {
@@ -1179,7 +1179,7 @@ export default function Contact() {
               <Grid
                 item
                 xs={12}
-                sm={isTabScreen?7:5}
+                sm={isTabScreen ? 7 : 5}
                 lg={4}
                 // md={5}
                 xl={3.5}
@@ -1220,10 +1220,10 @@ export default function Contact() {
                       />
                     )}
                     <Typography
-                    variant="h4" 
+                      variant="h4"
                       sx={{
                         fontSize: {
-                          xs: "16px",
+                          xs: "15px",
                           sm: "20px",
                           lg: "21px",
                           // md: "21px",
@@ -1298,7 +1298,12 @@ export default function Contact() {
                       helperText={errors.nom}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
+                          fontSize: {
+                            xs: "13px",
+                            sm: "17px",
+                            lg: "18px",
+                            xl: "18px",
+                          },
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1318,7 +1323,12 @@ export default function Contact() {
                       helperText={errors.email}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
+                          fontSize: {
+                            xs: "13px",
+                            sm: "17px",
+                            lg: "18px",
+                            xl: "18px",
+                          },
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1340,7 +1350,12 @@ export default function Contact() {
                       helperText={errors.sujet}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
+                          fontSize: {
+                            xs: "13px",
+                            sm: "17px",
+                            lg: "18px",
+                            xl: "18px",
+                          },
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1364,7 +1379,12 @@ export default function Contact() {
                       helperText={errors.telephone}
                       sx={{
                         "& .MuiInputBase-input::placeholder": {
-                          fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
+                          fontSize: {
+                            xs: "13px",
+                            sm: "17px",
+                            lg: "18px",
+                            xl: "18px",
+                          },
                           fontFamily: "Mulish",
                         },
                       }}
@@ -1386,7 +1406,12 @@ export default function Contact() {
                   helperText={errors.bonjour}
                   sx={{
                     "& .MuiInputBase-input::placeholder": {
-                      fontSize: {xs:"18px",sm:"17px",lg:"18px",xl:"18px"},
+                      fontSize: {
+                        xs: "13px",
+                        sm: "17px",
+                        lg: "18px",
+                        xl: "18px",
+                      },
                       fontFamily: "Mulish",
                     },
                   }}
@@ -1430,7 +1455,7 @@ export default function Contact() {
                 variant="contained"
                 color="primary"
                 sx={{
-                  fontFamily:"Mulish",
+                  fontFamily: "Mulish",
                   textDecoration: "none",
                   padding: {
                     xs: "10px 24px",
@@ -1441,7 +1466,7 @@ export default function Contact() {
                   },
                   borderRadius: "10px",
                   fontSize: {
-                    xs: "14px",
+                    xs: "13px",
                     sm: "20px",
                     // md: "21px",
                     lg: "21px",

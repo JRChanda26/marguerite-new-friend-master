@@ -33,6 +33,7 @@ export default function Paroles() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
+  const isMobileScreen = useMediaQuery("(max-width:600px)");
 
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");
@@ -88,7 +89,7 @@ export default function Paroles() {
             style={{
               fontFamily: fontMap[part as HighlightWord].fontFamily,
               fontWeight: 400,
-              fontSize: "18px",
+              fontSize: isMobileScreen ? "13px" : "18px",
               lineHeight: "auto",
               letterSpacing: "0%",
               color: "#24535C",
@@ -184,15 +185,20 @@ export default function Paroles() {
       >
         <Grid container alignItems="center" justifyContent="center" gap="20px">
           <Typography
-          variant="h2"
+            variant="h2"
             sx={{
               color: "#0A1411",
               // fontWeight: 700,
               fontWeight: 600,
-              fontSize: { xs: "28px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
-              lineHeight: { xs: "30px", sm: "1.5em", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
+              fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
+              lineHeight: {
+                xs: "1.5em",
+                sm: "1.5em",
+                lg: "1.5em",
+                xl: "1.5em",
+              }, //xl: "auto"
               padding: {
-                xs: "2% 0%",
+                xs: "20px 0px",
                 sm: "0px 0px 30px 300px",
                 lg: "0px 0px 50px 400px",
                 xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 500px",
@@ -346,24 +352,26 @@ export default function Paroles() {
 
         <Grid item lg={12}>
           <Typography
-          // variant=""
+            // variant=""
             sx={{
               color: "#000000",
               fontWeight: 500,
               fontFamily: "Mulish",
               letterSpacing: "0%",
-              fontSize: { xs: "14px", sm: "17px", lg: "18px", xl: "18px" },
+              fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" },
               lineHeight: {
-                xs: "25px",
+                xs: "1.3em",
                 sm: "1.3em",
                 lg: "1.3em",
                 xl: "1.3em",
               },
               padding: {
-                xs: "5%",
+                xs: "0px",
                 sm: "0px 50px",
                 lg: "0px 180px 0px 180px",
-                xl: isSmallDesktop?"0px 200px 0px 200px": "0px 450px 0px 450px",
+                xl: isSmallDesktop
+                  ? "0px 200px 0px 200px"
+                  : "0px 450px 0px 450px",
               },
             }}
           >
@@ -471,7 +479,7 @@ export default function Paroles() {
                     <p>Video not available</p>
                   )}
                   <Typography
-                  // variant=""
+                    // variant=""
                     sx={{
                       color: "#000000",
                       // fontWeight: 700,
@@ -486,7 +494,7 @@ export default function Paroles() {
                         xl: "10px 20px",
                       },
                       fontSize: {
-                        xs: "12px",
+                        xs: "13px",
                         sm: "17px",
                         lg: "18px",
                         // xl: "30.2px",

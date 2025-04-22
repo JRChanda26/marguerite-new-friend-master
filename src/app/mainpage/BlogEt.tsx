@@ -92,7 +92,7 @@ export default function BlogEt() {
               // fontWeight: 700,
               fontWeight: 600,
               fontSize: {
-                xs: "28px",
+                xs: "20px",
                 sm: "30px",
                 lg: "34px",
                 // xl: "47.85px",
@@ -179,7 +179,7 @@ export default function BlogEt() {
                 sx={{
                   ...title,
                   fontSize: {
-                    xs: "14px",
+                    xs: "15px",
                     sm: "20px",
                     lg: "21px",
                     // xl: "21.27px",
@@ -200,7 +200,7 @@ export default function BlogEt() {
                 sx={{
                   ...description,
                   fontSize: {
-                    xs: "12px",
+                    xs: "13px",
                     sm: "17px",
                     lg: "18px",
                     // xl: "18.61px",
@@ -242,7 +242,7 @@ export default function BlogEt() {
                       textDecoration: "none",
                       color: "#24535C",
                       fontWeight: 400,
-                      fontSize: {xl:"18px",lg:"18px",sm:"17px",xs:"17px"},
+                      fontSize: {xl:"18px",lg:"18px",sm:"17px",xs:"13px"},
                       lineHeight: "25.9px",
                     }}
                   >
@@ -269,7 +269,7 @@ export default function BlogEt() {
             fontFamily: "Mulish",
             // fontFamily: "Helvetica, sans-serif",
             color: "#FFFFFF",
-            fontSize: { xs: "14px", sm: "20px", lg: "21px", xl: "21px" }, //xl: "30px"
+            fontSize: { xs: "13px", sm: "20px", lg: "21px", xl: "21px" }, //xl: "30px"
             textAlign: "center",
             borderRadius: "12px",
             padding: "8px 15px",

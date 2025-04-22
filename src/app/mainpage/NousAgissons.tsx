@@ -88,7 +88,7 @@ const NousAgissons: React.FC = () => {
           {/* Two Grid Items in a Single Row */}
           <Grid
             item
-            xs={4.5}
+            xs={5}
             sm={4.5}
             lg={4.5}
             xl={6}
@@ -128,14 +128,14 @@ const NousAgissons: React.FC = () => {
                   fontFamily: "Mulish",
                   fontWeight: 500,
                   fontSize: {
-                    xs: "20px",
+                    xs: "24px",
                     sm: "45px",
                     lg: "55px",
                     xl: "55px",
                   },
 
                   lineHeight: {
-                    xs: "18px",
+                    xs: "1.1em",
                     sm: "1.1em",
                     lg: "1.1em",
                     xl: "1.1em",
@@ -155,14 +155,14 @@ const NousAgissons: React.FC = () => {
                   paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
                   paddingRight: isMax5 ? "300px" : "0px",
                   fontSize: {
-                    xs: "12px",
+                    xs: "20px",
                     sm: "30px",
                     lg: "34px",
                     xl: "34px",
                   },
 
                   lineHeight: {
-                    xs: "12px",
+                    xs: "1.2em",
                     sm: "1.2em",
                     lg: "1.2em",
                     xl: "1.2em",
@@ -179,9 +179,9 @@ const NousAgissons: React.FC = () => {
                   background: "#24535C",
                   borderRadius: "82px",
                   top: { xs: "5px", sm: "10px", lg: "30px", xl: "30px" },
-                  height: { xs: "22px", sm: "50px", lg: "66px", xl: "66px" },
+                  height: { xs: "30px", sm: "50px", lg: "66px", xl: "66px" },
                   width: {
-                    xs: "80px",
+                    xs: "110px",
                     sm: "180px",
                     lg: "203px",
                     xl: "203.85px",
@@ -202,13 +202,13 @@ const NousAgissons: React.FC = () => {
                     fontFamily: "Mulish",
                     fontWeight: 500,
                     fontSize: {
-                      xs: "7px",
+                      xs: "13px",
                       sm: "20px",
                       lg: "21px",
                       xl: "21px",
                     },
                     lineHeight: {
-                      xs: "0px",
+                      xs: "1.7em",
                       sm: "1.7em",
                       lg: "1.7em",
                       xl: "1.7em",
@@ -238,7 +238,7 @@ const NousAgissons: React.FC = () => {
           {/* Second Grid Item (Image) */}
           <Grid
             item
-            xs={7.5}
+            xs={7}
             sm={7}
             lg={7}
             xl={5.5} //6
