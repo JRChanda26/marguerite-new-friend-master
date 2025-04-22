@@ -155,6 +155,8 @@ export default function Blogs() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
+  const isTabScreen = useMediaQuery("(width:768px)");
+
   return (
     <div>
       <Header />
@@ -357,7 +359,7 @@ export default function Blogs() {
                         alignItems: "center",
                         flexDirection: {
                           xs: "column",
-                          sm: "row",
+                          sm: isTabScreen? "colum":"row",
                           lg: "row",
                           // md: "row",
                           xl: "row",
