@@ -116,6 +116,7 @@ const ManagePerLaCare: React.FC = () => {
   const is4K = useMediaQuery("(width:3840px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   // Define responsive styles
   const styles: {
@@ -129,7 +130,7 @@ const ManagePerLaCare: React.FC = () => {
     container: {
       position: "relative",
       width: "100%",
-      height: "100vh",
+      height: isSmallScreen ? "50vh" : "100vh",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -154,7 +155,7 @@ const ManagePerLaCare: React.FC = () => {
                 ? "0%"
                 : "0%",
       left: isExtraSmall
-        ? "3%"
+        ? "0%"
         : isSmall
           ? "10%"
           : isMedium
@@ -165,7 +166,7 @@ const ManagePerLaCare: React.FC = () => {
                 ? "0%"
                 : "0%",
       width: isExtraSmall
-        ? "80%"
+        ? "95%"
         : isSmall
           ? "50%"
           : isMedium
@@ -178,7 +179,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     topRight: {
       top: isExtraSmall
-        ? "32%"
+        ? "35%"
         : isSmall
           ? "32%" //33
           : isMedium
@@ -191,7 +192,7 @@ const ManagePerLaCare: React.FC = () => {
                   : "28%"
                 : "35%",
       right: isExtraSmall
-        ? "3%"
+        ? "0%"
         : isSmall
           ? "10%"
           : isMedium
@@ -202,7 +203,7 @@ const ManagePerLaCare: React.FC = () => {
                 ? "5%"
                 : "5%",
       width: isExtraSmall
-        ? "80%"
+        ? "95%"
         : isSmall
           ? "50%"
           : isMedium
@@ -215,7 +216,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     bottomLeft: {
       top: isExtraSmall
-        ? "53%"
+        ? "60%"
         : isSmall
           ? "53%" //50
           : isMedium
@@ -228,7 +229,7 @@ const ManagePerLaCare: React.FC = () => {
                   : "52%"
                 : "65%",
       left: isExtraSmall
-        ? "3%"
+        ? "0%"
         : isSmall
           ? "10%"
           : isMedium
@@ -239,7 +240,7 @@ const ManagePerLaCare: React.FC = () => {
                 ? "0%"
                 : "0%",
       width: isExtraSmall
-        ? "80%"
+        ? "95%"
         : isSmall
           ? "50%"
           : isMedium
@@ -252,7 +253,7 @@ const ManagePerLaCare: React.FC = () => {
     },
     bottomRight: {
       top: isExtraSmall
-        ? "78%"
+        ? "85%"
         : isSmall
           ? "74%" //70
           : isMedium
@@ -265,7 +266,7 @@ const ManagePerLaCare: React.FC = () => {
                   : "80%"
                 : "100%",
       right: isExtraSmall
-        ? "3%"
+        ? "0%"
         : isSmall
           ? "10%"
           : isMedium
@@ -276,7 +277,7 @@ const ManagePerLaCare: React.FC = () => {
                 ? "5%"
                 : "5%",
       width: isExtraSmall
-        ? "80%"
+        ? "95%"
         : isSmall
           ? "50%"
           : isMedium
@@ -402,7 +403,7 @@ const ManagePerLaCare: React.FC = () => {
                   flexDirection: "column",
                   alignItems: "center",
                   padding: {
-                    xs: "70px 50px 0px 50px",
+                    xs: "100px 50px 0px 50px",
                     sm: "250px 100px 0px 100px",
                     lg: "250px 150px 0px 150px",
                     // md: "250px 100px 0px 100px",
@@ -424,7 +425,7 @@ const ManagePerLaCare: React.FC = () => {
                       xl: "37px 37px 0px 0px",
                     },
                     padding: {
-                      xs: "0% 5% 0% 5%",
+                      xs: "5%",
                       sm: "3% 8%",
                       lg: "41px 152px 74px 152px",
                       xl: "21px 82px 21px 82px",
@@ -440,14 +441,14 @@ const ManagePerLaCare: React.FC = () => {
                       // fontWeight: 700,
                       fontWeight: 700,
                       fontSize: {
-                        xs: "16px",
+                        xs: "24px",
                         sm: "45px",
                         lg: "55px",
                         // xl: "50px",
                         xl: "55px",
                       },
                       lineHeight: {
-                        xs: "40px",
+                        xs: "125%",
                         sm: "125%",
                         lg: "125%",
                         // xl: "125%",
@@ -466,7 +467,7 @@ const ManagePerLaCare: React.FC = () => {
                       color: "#4D5053",
                       fontWeight: 400,
                       fontSize: {
-                        xs: "10px",
+                        xs: "13px",
                         sm: "20px",
                         lg: "21px",
                         xl: "21px",
@@ -529,14 +530,14 @@ const ManagePerLaCare: React.FC = () => {
                         // fontWeight: 700,
                         fontWeight: 600,
                         fontSize: {
-                          xs: "30px",
+                          xs: "20px",
                           sm: "30px",
                           lg: "34px",
                           // xl: "50px",
                           xl: "34px",
                         },
                         lineHeight: {
-                          xs: "35px",
+                          xs: "1.3em",
                           sm: "1.3em",
                           lg: "1.3em",
                           // xl: "125%",
@@ -558,14 +559,14 @@ const ManagePerLaCare: React.FC = () => {
                       // fontWeight: 700,
                       fontWeight: 500,
                       fontSize: {
-                        xs: "12px",
+                        xs: "13px",
                         sm: "20px",
                         lg: "21px",
                         // xl: "24px",
                         xl: "21px",
                       },
                       lineHeight: {
-                        xs: "18px",
+                        xs: "1.1em",
                         sm: "1.1em",
                         lg: "1.5em",
                         // xl: "1.5",
@@ -588,14 +589,14 @@ const ManagePerLaCare: React.FC = () => {
                           background: "#24535C",
                           borderRadius: "82px",
                           marginTop: {
-                            xs: "20px",
+                            xs: "30px",
                             sm: "20px",
                             lg: "45px",
                             xl: "45px",
                           },
                           justifyContent: "space-around",
                           width: {
-                            xs: "50%",
+                            xs: "160px",
                             sm: "250px",
                             lg: "250px",
                             // md: "250px",
@@ -622,7 +623,7 @@ const ManagePerLaCare: React.FC = () => {
                             fontWeight: 400,
                             fontFamily: "Mulish",
                             fontSize: {
-                              xs: "12px",
+                              xs: "13px",
                               sm: "20px",
                               lg: "21px",
                               xl: "21px",
@@ -717,9 +718,9 @@ const ManagePerLaCare: React.FC = () => {
                   fontFamily: "Mulish",
                   // fontWeight: 800,
                   fontWeight: 600,
-                  fontSize: { xs: "30px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
+                  fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
                   lineHeight: {
-                    xs: "50px",
+                    xs: "1.5em",
                     sm: "1.5em",
                     lg: "1.5em",
                     // xl: "80.32px",
@@ -770,7 +771,7 @@ const ManagePerLaCare: React.FC = () => {
                         lineHeight: "1.5em",
                         letterSpacing: "0%",
                         fontSize: {
-                          xs: "16px",
+                          xs: "13px",
                           sm: "16px",
                           lg: "16px",
                           // md: "16px",
@@ -800,7 +801,7 @@ const ManagePerLaCare: React.FC = () => {
                           xl: "24px",
                         },
                         fontSize: {
-                          xs: "10px",
+                          xs: "8px",
                           sm: "10px",
                           lg: "10px",
                           // md: "10px",
@@ -832,7 +833,7 @@ const ManagePerLaCare: React.FC = () => {
                         lineHeight: "1.5em",
                         letterSpacing: "0%",
                         fontSize: {
-                          xs: "16px",
+                          xs: "13px",
                           sm: "16px",
                           lg: "16px",
                           // md: "16px",
@@ -862,7 +863,7 @@ const ManagePerLaCare: React.FC = () => {
                           xl: "24px",
                         },
                         fontSize: {
-                          xs: "10px",
+                          xs: "8px",
                           sm: "10px",
                           lg: "10px",
                           // md: "10px",
@@ -894,7 +895,7 @@ const ManagePerLaCare: React.FC = () => {
                         lineHeight: "1.5em",
                         letterSpacing: "0%",
                         fontSize: {
-                          xs: "16px",
+                          xs: "13px",
                           sm: "16px",
                           lg: "16px",
                           // md: "16px",
@@ -924,7 +925,7 @@ const ManagePerLaCare: React.FC = () => {
                           xl: "24px",
                         },
                         fontSize: {
-                          xs: "10px",
+                          xs: "8px",
                           sm: "10px",
                           lg: "10px",
                           // md: "10px",
@@ -956,7 +957,7 @@ const ManagePerLaCare: React.FC = () => {
                         lineHeight: "1.5em",
                         letterSpacing: "0%",
                         fontSize: {
-                          xs: "16px",
+                          xs: "13px",
                           sm: "16px",
                           lg: "16px",
                           // md: "16px",
@@ -986,7 +987,7 @@ const ManagePerLaCare: React.FC = () => {
                           xl: "24px",
                         },
                         fontSize: {
-                          xs: "10px",
+                          xs: "8px",
                           sm: "10px",
                           lg: "10px",
                           // md: "10px",
@@ -1008,7 +1009,7 @@ const ManagePerLaCare: React.FC = () => {
             <Grid
               sx={{
                 margin: {
-                  xs: "100px 0px 0px 0px",
+                  xs: "50px 0px 0px 0px",
                   sm: "70px 50px 0px 50px",
                   lg: "50px 100px 50px 100px",
                   // md: "280px 50px 153px 50px",
@@ -1031,7 +1032,7 @@ const ManagePerLaCare: React.FC = () => {
                     color: "#0A1411",
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "32px",
+                      xs: "20px",
                       sm: "30px",
                       lg: "34px",
                       // xl: "64px",
@@ -1050,7 +1051,7 @@ const ManagePerLaCare: React.FC = () => {
                 lg={12}
                 sx={{
                   marginTop: {
-                    xs: "30px",
+                    xs: "10px",
                     sm: "30px",
                     lg: "50px",
                     xl: isMax ? "50px" : "50px",
@@ -1063,7 +1064,7 @@ const ManagePerLaCare: React.FC = () => {
                     textAlign: "center",
                     color: "#292F36",
                     fontSize: {
-                      xs: "30px",
+                      xs: "20px",
                       sm: "30px",
                       lg: "34px",
                       // xl: "50px",
@@ -1091,9 +1092,9 @@ const ManagePerLaCare: React.FC = () => {
                       xl: "row",
                     },
                     justifyContent: "space-evenly",
-                    marginTop: "50px",
+                    marginTop: isSmallScreen ? "20px" : "50px",
                     alignItems: "center",
-                    gap: { lg: "60px", xl: "70px" },
+                    gap: {xs:"40px", lg: "60px", xl: "70px" },
                   }}
                 >
                   <Grid
@@ -1143,7 +1144,7 @@ const ManagePerLaCare: React.FC = () => {
                                 // lineHeight: "150%",
                                 lineHeight: "1.5em",
                                 fontSize: {
-                                  xs: "18px",
+                                  xs: "15px",
                                   sm: "20px",
                                   lg: "21px",
                                   // md: "21px",
@@ -1164,7 +1165,7 @@ const ManagePerLaCare: React.FC = () => {
                               sx={{
                                 color: "#4D5053",
                                 fontSize: {
-                                  xs: "14px",
+                                  xs: "13px",
                                   sm: "17px",
                                   lg: "18px",
                                   // md: "18px",
@@ -1207,7 +1208,7 @@ const ManagePerLaCare: React.FC = () => {
                     textAlign: "center",
                     color: "#292F36",
                     fontSize: {
-                      xs: "34px",
+                      xs: "20px",
                       sm: "30px",
                       lg: "34px",
                       // xl: "50px",
@@ -1216,7 +1217,7 @@ const ManagePerLaCare: React.FC = () => {
                     // fontWeight: 400,
                     fontWeight: 600,
                     marginTop: {
-                      xs: "50px",
+                      xs: "20px",
                       sm: "30px",
                       lg: "50px",
                       xl: isMax ? "50px" : "50px",
@@ -1241,9 +1242,9 @@ const ManagePerLaCare: React.FC = () => {
                       xl: "row",
                     },
                     justifyContent: "space-evenly",
-                    marginTop: "50px",
+                    marginTop:isSmallScreen?"30px": "50px",
                     alignItems: "center",
-                    gap: { lg: "60px", xl: "0px" },
+                    gap: {xs:"30px", lg: "60px", xl: "0px" },
                   }}
                 >
                   <Grid item xs={12} sm={5} lg={6} xl={5}>
@@ -1318,7 +1319,7 @@ const ManagePerLaCare: React.FC = () => {
                                   clicked1 === index ? "#3D8C6E" : "#292F36",
                                 lineHeight: "150%",
                                 fontSize: {
-                                  xs: "18px",
+                                  xs: "15px",
                                   sm: "20px",
                                   lg: "21px",
                                   // md: "21px",
@@ -1339,7 +1340,7 @@ const ManagePerLaCare: React.FC = () => {
                               sx={{
                                 color: "#4D5053",
                                 fontSize: {
-                                  xs: "14px",
+                                  xs: "13px",
                                   sm: "17px",
                                   lg: "18px",
                                   // md: "18px",
@@ -1391,7 +1392,7 @@ const ManagePerLaCare: React.FC = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 margin: {
-                  xs: "5%",
+                  xs: "10% 7%",
                   sm: isTabScreen ? "50px 80px" : "50px 200px 30px 200px",
                   lg: "50px 522px",
                   // md: "107px 220px",
@@ -1411,7 +1412,7 @@ const ManagePerLaCare: React.FC = () => {
                   <Grid
                     sx={{
                       padding: {
-                        xs: "0px 0px 27px 0px",
+                        xs: "0px 0px 10px 20px",
                         sm: "20px 0px 27px 0px",
                         lg: "100px 0px 27px 0px",
                         xl: "67px 0px 27px 0px",
@@ -1437,14 +1438,14 @@ const ManagePerLaCare: React.FC = () => {
                         // fontWeight: 400,
                         fontWeight: 300,
                         fontSize: {
-                          xs: "28px",
+                          xs: "20px",
                           sm: "30px",
                           lg: "34px",
                           // xl: "48px",
                           xl: "34px",
                         },
                         lineHeight: {
-                          xs: "30px",
+                          xs: "20px",
                           sm: "45px",
                           lg: "125%",
                           // xl: "125%",
@@ -1452,7 +1453,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         textAlign: "center",
                         padding: {
-                          xs: "0px 20px 0px 20px",
+                          xs: "0px 50px 10px 50px",
                           sm: "0px 70px 34px 70px",
                           lg: "0px 82px 34px 82px",
                           xl: is4K
@@ -1477,7 +1478,7 @@ const ManagePerLaCare: React.FC = () => {
                         // fontWeight: 400,
                         fontWeight: 700,
                         fontSize: {
-                          xs: "14px",
+                          xs: "13px",
                           sm: "17px",
                           lg: "18px",
                           // xl: "25px",
@@ -1511,13 +1512,13 @@ const ManagePerLaCare: React.FC = () => {
             variant="h2"
             sx={{
               fontFamily: "Mulish",
-              fontSize: { xs: "32px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
+              fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
               // fontWeight: 700,
               fontWeight: 600,
-              lineHeight: { xs: "45px", sm: "60px", lg: "auto", xl: "1.5em" }, //xl: "auto"
+              lineHeight: { xs: "auto", sm: "60px", lg: "auto", xl: "1.5em" }, //xl: "auto"
               textAlign: "center",
               padding: {
-                xs: "10% 10% 0% 10%",
+                xs: "0px 0px 20px 0px",
                 sm: "0px",
                 lg: "0px 100px 0px 100px",
                 xl: "50px 350px 0px 350px",
@@ -1561,9 +1562,9 @@ const ManagePerLaCare: React.FC = () => {
               sm={4}
               sx={{
                 alignContent: "center",
-                fontSize: { xs: "18px", sm: "20px", lg: "21px", xl: "21px" }, //xl: "35px"
+                fontSize: { xs: "15px", sm: "20px", lg: "21px", xl: "21px" }, //xl: "35px"
                 lineHeight: {
-                  xs: "20px",
+                  xs: "1.5em",
                   sm: "1.5em",
                   lg: "1.5em",
                   xl: "1.5em",

@@ -179,7 +179,7 @@ const OurExperts: React.FC = () => {
   const isXs = useMediaQuery("(max-width:576px)");
 
   const getDimensions = () => {
-    if (isXs) return { width: "120px", height: "220px" };
+    if (isXs) return { width: "130px", height: "210px" };
     if (isSm) return { width: "200px", height: "300px" };
     // if (isMd) return { width: "250px", height: "400px" };
     if (isLg) return { width: "220px", height: "333px" };
@@ -204,11 +204,11 @@ const OurExperts: React.FC = () => {
   };
 
   const profileNameFontSize = {
-    fontSize: isXs ? "20px" : isSm ? "24px" : "28px",
+    fontSize: isXs ? "18px" : isSm ? "24px" : "28px",
   };
 
   const profileDetailsFontSize = {
-    fontSize: isXs ? "12px" : isSm ? "17px" : "18px",
+    fontSize: isXs ? "13px" : isSm ? "17px" : "18px",
   };
 
   const isMax8 = useMediaQuery("(min-width:200px)");
@@ -225,6 +225,7 @@ const OurExperts: React.FC = () => {
   const is2K = useMediaQuery("(width:2048px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   return (
     <Box sx={{}}>
@@ -277,7 +278,7 @@ const OurExperts: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "28px",
+                      xs: "20px",
                       sm: "30px",
                       // md: "34px",
                       lg: "34px",
@@ -287,7 +288,7 @@ const OurExperts: React.FC = () => {
                     // fontWeight: 700,
                     fontWeight: 600,
                     lineHeight: {
-                      xs: "30px",
+                      xs: "1.5em",
                       sm: "1.5em",
                       lg: "1.5em",
                       // xl: "auto",
@@ -296,7 +297,7 @@ const OurExperts: React.FC = () => {
                     textAlign: "center",
                     color: "#0A1411",
                     padding: {
-                      xs: "50px 0px 20px 0px",
+                      xs: "70px 10px 20px 10px",
                       sm: isTabScreen
                         ? "80px 20px 0px 20px"
                         : "50px 20px 0px 20px",
@@ -313,7 +314,7 @@ const OurExperts: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "14px",
+                      xs: "13px",
                       sm: "17px",
                       // md: "18px",
                       lg: "18px",
@@ -323,7 +324,7 @@ const OurExperts: React.FC = () => {
                     // fontWeight: 400,
                     fontWeight: 500,
                     lineHeight: {
-                      xs: "16px",
+                      xs: "1.5em",
                       sm: "1.5em",
                       lg: "1.9em",
                       // xl: "33px",
@@ -332,7 +333,7 @@ const OurExperts: React.FC = () => {
                     textAlign: "center",
                     color: "#4D5053",
                     padding: {
-                      xs: "0px 20px 10px 20px",
+                      xs: "0px 10px 20px 10px",
                       sm: "2% 10%",
                       lg: "0px 100px 50px 100px",
                       xl: "0px 350px 50px 350px",
@@ -389,7 +390,7 @@ const OurExperts: React.FC = () => {
                             background: "#FFFFFF",
                             width: dimensions.width,
                             height: dimensions.height,
-                            borderRadius: "25px",
+                            borderRadius:  isSmallScreen?"18px":"25px",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",

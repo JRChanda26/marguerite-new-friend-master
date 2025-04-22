@@ -125,7 +125,7 @@ const Benifits: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "32px",
+                      xs: "20px",
                       sm: "30px",
                       lg: "34px",
                       // xl: "64px",
@@ -134,7 +134,7 @@ const Benifits: React.FC = () => {
                     // fontWeight: 700,
                     fontWeight: 600,
                     lineHeight: {
-                      xs: "40px",
+                      xs: "1.5em",
                       sm: "1.5em",
                       lg: "1.5em",
                       // xl: "auto",
@@ -143,7 +143,7 @@ const Benifits: React.FC = () => {
                     textAlign: "center",
                     color: "#0A1411",
                     margin: {
-                      xs: "80px 0px 0px 0px",
+                      xs: "100px 0px 0px 0px",
                       sm: "100px 0px 0px 0px",
                       lg: "130px 80px 30px 80px",
                       xl: "150px 150px 8px 150px",
@@ -157,7 +157,7 @@ const Benifits: React.FC = () => {
                   sx={{
                     fontFamily: "Mulish",
                     fontSize: {
-                      xs: "16px",
+                      xs: "13px",
                       sm: "17px",
                       lg: "18px",
                       // xl: "25px",
@@ -166,7 +166,7 @@ const Benifits: React.FC = () => {
                     // fontWeight: 400,
                     fontWeight: 500,
                     lineHeight: {
-                      xs: "20px",
+                      xs: "1.5em",
                       sm: "1.5em",
                       lg: "1.9em",
                       // xl: "33px",
@@ -175,7 +175,7 @@ const Benifits: React.FC = () => {
                     textAlign: "center",
                     color: "#4D5053",
                     margin: {
-                      xs: "5%",
+                      xs: "5% 2% 8% 2%",
                       sm: "30px 100px",
                       lg: "0px 150px 50px 150px",
                       xl: isMax
@@ -265,7 +265,7 @@ const Benifits: React.FC = () => {
                           variant="h4"
                             sx={{
                               fontSize: {
-                                xs: "15px",
+                                xs: "18px",
                                 sm: "20px",
                                 // md: "21px",
                                 lg: "21px",
@@ -290,7 +290,7 @@ const Benifits: React.FC = () => {
                         // variant=""
                           sx={{
                             fontSize: {
-                              xs: "12px",
+                              xs: "13px",
                               sm: "17px",
                               // md: "18px",
                               lg: "18px",
@@ -373,7 +373,7 @@ const Benifits: React.FC = () => {
                           variant="h4"
                             sx={{
                               fontSize: {
-                                xs: "15px",
+                                xs: "18px",
                                 sm: "20px",
                                 // md: "22px",
                                 lg: "21px",
@@ -398,7 +398,7 @@ const Benifits: React.FC = () => {
                         // variant=""
                           sx={{
                             fontSize: {
-                              xs: "12px",
+                              xs: "13px",
                               sm: "17px",
                               // md: "18px",
                               lg: "18px",
@@ -499,7 +499,7 @@ const Benifits: React.FC = () => {
                           variant="h4"
                             sx={{
                               fontSize: {
-                                xs: "15px",
+                                xs: "18px",
                                 sm: "20px",
                                 // md: "21px",
                                 lg: "21px",
@@ -524,7 +524,7 @@ const Benifits: React.FC = () => {
                         // variant=""
                           sx={{
                             fontSize: {
-                              xs: "12px",
+                              xs: "13px",
                               sm: "17px",
                               lg: "18px",
                               // md: "18px",
@@ -607,7 +607,7 @@ const Benifits: React.FC = () => {
                           variant="h4"
                             sx={{
                               fontSize: {
-                                xs: "15px",
+                                xs: "18px",
                                 sm: "20px",
                                 // md: "21px",
                                 lg: "21px",
@@ -632,7 +632,7 @@ const Benifits: React.FC = () => {
                         // variant=""
                           sx={{
                             fontSize: {
-                              xs: "12px",
+                              xs: "13px",
                               sm: "17px",
                               // md: "18px",
                               lg: "18px",

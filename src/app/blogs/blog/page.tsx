@@ -35,6 +35,9 @@ export default function Blogs() {
     setPage((prevPage) => Math.min(prevPage + 1, totalPages - 1));
   };
 
+  
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+
   const buttonStyle: React.CSSProperties = {
     background: "#BEDFDB",
     color: "#FFFFFF",
@@ -59,7 +62,7 @@ export default function Blogs() {
     fontWeight: 500,
     opacity: "72%",
     fontFamily: "Mulish",
-    lineHeight: "26px", //16%
+    lineHeight:isSmallScreen?"15px": "26px", //16%
     letterSpacing: "0%",
   };
 
@@ -227,7 +230,7 @@ export default function Blogs() {
                 },
                 // padding: "41px 152px 41px 152px",
                 padding: {
-                  xs: "0% 5% 0% 5%",
+                  xs: "5%",
                   sm: "3% 8%",
                   lg: "41px 152px 74px 152px",
                   xl: "21px 82px 21px 82px",
@@ -243,10 +246,10 @@ export default function Blogs() {
                   // fontWeight: 700,
                   fontWeight: 700,
                   // fontSize: "50px",
-                  fontSize: { xs: "16px", sm: "45px", lg: "55px", xl: "55px" }, //xl: "50px"
+                  fontSize: { xs: "24px", sm: "45px", lg: "55px", xl: "55px" }, //xl: "50px"
                   // lineHeight: "62.5px",
                   lineHeight: {
-                    xs: "40px",
+                    xs: "125%",
                     sm: "48px",
                     lg: "125%",
                     // xl: "125%",
@@ -264,7 +267,7 @@ export default function Blogs() {
                   fontFamily: "Mulish",
                   color: "#4D5053",
                   fontWeight: 400,
-                  fontSize: { xs: "10px", sm: "20px", lg: "21px", xl: "21px" },
+                  fontSize: { xs: "13px", sm: "20px", lg: "21px", xl: "21px" },
                   // lineHeight: "33px",
                   lineHeight: {
                     xs: "20px",
@@ -309,7 +312,7 @@ export default function Blogs() {
                 sx={{
                   color: "#292F36",
                   // fontSize: "50px",
-                  fontSize: { xs: "25px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
+                  fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
                   lineHeight: {
                     xs: "40px",
                     sm: "48px",
@@ -321,7 +324,7 @@ export default function Blogs() {
                   fontWeight: 600,
                   textAlign: "center",
                   marginTop: {
-                    xs: "50px",
+                    xs: "30px",
                     sm: "30px",
                     lg: "50px",
                     xl: isMax ? "50px" : "50px",
@@ -337,7 +340,7 @@ export default function Blogs() {
                   border: "1px solid #E7E7E7",
                   // margin: "5% 10%",
                   margin: {
-                    xs: "27px 30px 50px 30px",
+                    xs: "27px 30px 30px 30px",
                     sm: "30px 80px",
                     lg: "50px",
                     xl: isMax
@@ -407,7 +410,7 @@ export default function Blogs() {
                               lg: "21px",
                               // md: "21px",
                               sm: "20px",
-                              xs: "20px",
+                              xs: "15px",
                             },
                             fontWeight: 700,
                             fontFamily: "Mulish",
@@ -429,7 +432,7 @@ export default function Blogs() {
                               lg: "18px",
                               // md: "18px",
                               sm: "17px",
-                              xs: "17px",
+                              xs: "13px",
                             },
                             fontWeight: 400,
                             fontFamily: "Mulish",
@@ -458,7 +461,7 @@ export default function Blogs() {
                                 lg: "18px",
                                 // md: "18px",
                                 sm: "17px",
-                                xs: "16px",
+                                xs: "13px",
                               },
                               fontWeight: 400,
                               fontFamily: "Mulish",
@@ -575,7 +578,7 @@ export default function Blogs() {
             <Typography
             variant="h2"
               sx={{
-                fontSize: { xs: "25px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
+                fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "50px"
                 lineHeight: { xs: "40px", sm: "48px", lg: "125%", xl: "1.5em" }, //xl: "125%"
                 // fontWeight: 700,
                 fontWeight: 600,
@@ -712,7 +715,7 @@ export default function Blogs() {
                 justifyContent: "center",
                 // padding: "3% 8%",
                 padding: {
-                  xs: "3% 5%",
+                  xs: "5%",
                   sm: "30px 80px",
                   lg: "50px 50px 0px 50px",
                   xl: isMax ? "78px 150px 20px 150px" : "50px 150px 0px 150px",
@@ -763,7 +766,7 @@ export default function Blogs() {
                       sx={{
                         ...title,
                         fontSize: {
-                          xs: "14px",
+                          xs: "15px",
                           sm: "20px",
                           lg: "21px",
                           // xl: "21.27px",
@@ -778,7 +781,7 @@ export default function Blogs() {
                       sx={{
                         ...description,
                         fontSize: {
-                          xs: "12px",
+                          xs: "13px",
                           sm: "17px",
                           lg: "18px",
                           // xl: "18.61px",
@@ -799,7 +802,7 @@ export default function Blogs() {
                 gap: "20px",
                 paddingRight: { lg: "50px", xl: "50px" },
                 paddingBottom: "30px",
-                marginTop: {xs:"50px",sm:"0px",lg:"50px",xl:"50px"},
+                marginTop: {xs:"10px",sm:"0px",lg:"50px",xl:"50px"},
               }}
             >
               <IconButton

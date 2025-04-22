@@ -123,7 +123,7 @@ export default function NeManquez() {
         sx={{
           background: "#FFFFFF",
           margin: {
-            xs: "50px 30px 50px 50px",
+            xs: "30px 20px 15px 35px",
             sm: "80px 30px 80px 50px",
             // md: "70px 100px",
             lg: "50px 100px",
@@ -153,7 +153,7 @@ export default function NeManquez() {
               alignItems: "center",
               padding: { xs: "3%" },
               borderRadius: {
-                xs: "25px",
+                xs: "30px",
                 sm: "60px",
                 // md: "60px",
                 lg: "90px",
@@ -163,7 +163,7 @@ export default function NeManquez() {
           >
             <Grid
               item
-              xs={5}
+              xs={4.5}
               sm={4}
               // md={4}
               lg={4}
@@ -184,7 +184,7 @@ export default function NeManquez() {
                   color: "#24535C",
                   fontFamily: "Mulish",
                   fontSize: {
-                    xs: "14px",
+                    xs: "15px",
                     sm: "24px",
                     // md: "28px", //32px
                     lg: "28px", //32px
@@ -211,14 +211,14 @@ export default function NeManquez() {
                   color: "#24535C",
                   fontFamily: "Mulish",
                   fontSize: {
-                    xs: "8px",
+                    xs: "13px",
                     sm: "17px",
                     // md: "18px",
                     lg: "18px",
                     xl: "18px",
                   },
                   lineHeight: {
-                    xs: "8px",
+                    xs: "15px",
                     sm: "28px",
                     // md: "160%",
                     lg: "160%",
@@ -252,7 +252,7 @@ export default function NeManquez() {
             </Grid>
             <Grid
               item
-              xs={7}
+              xs={7.5}
               sm={6.5}
               // md={7}
               lg={7}
@@ -275,7 +275,7 @@ export default function NeManquez() {
                 alignItems: "center",
                 boxShadow: "0px 4px 12px rgba(35, 107, 121, 0.5)",
                 height: {
-                  xs: "20px",
+                  xs: "30px",
                   sm: "80px",
                   // md: "50px",
                   lg: "80px",
@@ -321,7 +321,12 @@ export default function NeManquez() {
                       borderColor: "transparent", // Focused border color
                     },
                     "& .MuiInputBase-input::placeholder": {
-                      fontSize: "18px",
+                      fontSize: {
+                        xl: "18px",
+                        lg: "18px",
+                        sm: "17px",
+                        xs: "13px",
+                      },
                       fontFamily: "Mulish",
                     },
                     ...(errors.email && {
@@ -350,7 +355,7 @@ export default function NeManquez() {
                   },
                   fontWeight: 400,
                   padding: {
-                    xs: "2.5% 1% 2.5% 1%",
+                    xs: "8px 5px",
                     sm: "0px",
                     lg: "2.5%",
                     xl: "2.5%",

@@ -47,7 +47,7 @@ const NosExperiences: React.FC = () => {
         sx={{
           backgroundImage: `url(${backgroundImage})`,
           backgroundSize: {
-            xs: "contain",
+            xs: "cover",
             sm: "cover",
             lg: "contain",
             xl: "cover",
@@ -118,7 +118,7 @@ const NosExperiences: React.FC = () => {
                     xl: "1.5em",
                   },
                   padding: {
-                    xs: "12% 0% 2% 0%",
+                    xs: "40px 0px 0px 0px",
                     sm: "100px 0px 0px 0px",
                     lg: "200px 0px 50px 0px",
                     xl:isMax?"270px 0px 50px 0px": "220px 0px 50px 0px",
@@ -135,15 +135,15 @@ const NosExperiences: React.FC = () => {
                   color: "#FFFFFF",
                   // fontWeight: 400,
                   fontWeight: 500,
-                  fontSize: { xs: "8px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px"
                   lineHeight: {
-                    xs: "10px",
+                    xs: "120%",
                     sm: "120%",
                     lg: "120%",
                     xl: "1.9em",
                   },
                   padding: {
-                    xs: "0% 2%",
+                    xs: "5px 0px",
                     sm: "30px 50px",
                     lg: "0px 0px 0px 0px",
                     xl: "0px 0px 0px 0px",
@@ -199,18 +199,18 @@ const NosExperiences: React.FC = () => {
                         background: "#FFFFFF",
                         borderRadius: "22.08px",
                         padding: {
-                          xs: "10px",
+                          xs: "7px",
                           sm: "20px",
                           lg: "20px",
                           xl: "20px",
                         },
                         minWidth: {
-                          xs: "200px",
+                          xs: "250px",
                           sm: "300px",
                           lg: "300px",
                           xl: "300px",
                         },
-                        minHeight: { xl: "200px" },
+                        minHeight: {xl: "200px" },
                       }}
                     >
                       <Typography
@@ -222,14 +222,14 @@ const NosExperiences: React.FC = () => {
                           // fontWeight: 400,
                           fontWeight: 500,
                           fontSize: {
-                            xs: "10px",
+                            xs: "13px",
                             sm: "17px",
                             lg: "18px",
                             // xl: "19.32px",
                             xl: "18px",
                           },
                           lineHeight: {
-                            xs: "10px",
+                            xs: "15px",
                             sm: "22px",
                             lg: "160%",
                             // xl: "160%",

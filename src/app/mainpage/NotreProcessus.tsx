@@ -101,13 +101,13 @@ export default function NotreProcessus() {
             sx={{
               fontWeight: 600,
               // lineHeight: "80.32px",
-              fontSize: { xs: "28px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
-              lineHeight: { xs: "30px", sm: "1.5em", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
+              fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
+              lineHeight: { xs: "1.5em", sm: "1.5em", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
               color: "#0A1411",
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
               margin: {
-                xs: "5% 10% 2% 10%",
+                xs: "20px 0px",
                 sm: "30px 0px",
                 lg: "50px 100px",
                 xl: isMax ? "50px 0px 0px 0px" : "50px 100px 0px 100px",
@@ -120,16 +120,16 @@ export default function NotreProcessus() {
           // variant=""
             sx={{
               fontWeight: 500,
-              fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px",
+              fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px",
               lineHeight: {
-                xs: "15px",
+                xs: "1.5em",
                 sm: "1.5em",
                 lg: "1.9em",
                 xl: "1.9em",
               },
               color: "#565656",
               margin: {
-                xs: "0% 10%",
+                xs: "0px 10px",
                 sm: "0px 170px",
                 lg: "0px 330px 50px 330px",
                 xl: isSmallDesktop?"50px 400px 50px 400px": "50px 550px 50px 550px",
@@ -197,9 +197,9 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
-                    xs: "28px",
+                    xs: "auto",
                     sm: "auto",
                     lg: "auto",
                     xl: "1.5em",
@@ -212,9 +212,9 @@ export default function NotreProcessus() {
               variant="h3"
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
+                  fontSize: { xs: "18px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
-                    xs: "30px",
+                    xs: "auto",
                     sm: "auto",
                     lg: "auto",
                     xl: "1.1em",
@@ -228,7 +228,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -245,7 +245,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...textLink,
-                  fontSize:{xs:"17px",sm:"17px",lg:"18px",xl:"18px"},
+                  fontSize:{xs:"13px",sm:"17px",lg:"18px",xl:"18px"},
                   transition: "transform 0.3s ease",
                   transform: isHovered === 1 ? "scale(1.02)" : "scale(1)",
                 }}
@@ -299,9 +299,9 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "18px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "18px"
                   lineHeight: {
-                    xs: "28px",
+                    xs: "auto",
                     sm: "auto",
                     lg: "auto",
                     // xl: "auto",
@@ -315,9 +315,9 @@ export default function NotreProcessus() {
               variant="h3"
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
+                  fontSize: { xs: "18px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
-                    xs: "30px",
+                    xs: "auto",
                     sm: "auto",
                     lg: "auto",
                     // xl: "auto",
@@ -332,7 +332,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -349,7 +349,7 @@ export default function NotreProcessus() {
               // variant=""
               sx={{
                 ...textLink,
-                fontSize:{xs:"17px",sm:"17px",lg:"18px",xl:"18px"},
+                fontSize:{xs:"13px",sm:"17px",lg:"18px",xl:"18px"},
                   transition: "transform 0.3s ease",
                   transform: isHovered === 2 ? "scale(1.02)" : "scale(1)",
                 }}
@@ -429,9 +429,9 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...heading,
-                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
-                    xs: "28px",
+                    xs: "auto",
                     sm: "auto",
                     lg: "auto",
                     // xl: "auto",
@@ -445,9 +445,9 @@ export default function NotreProcessus() {
               variant="h3"
                 sx={{
                   ...title,
-                  fontSize: { xs: "25px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
+                  fontSize: { xs: "18px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
                   lineHeight: {
-                    xs: "30px",
+                    xs: "auto",
                     sm: "auto",
                     lg: "auto",
                     // xl: "auto",
@@ -462,7 +462,7 @@ export default function NotreProcessus() {
               // variant=""
                 sx={{
                   ...description,
-                  fontSize: { xs: "12px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
                   lineHeight: {
                     xs: "20px",
                     sm: "25px",
@@ -479,7 +479,7 @@ export default function NotreProcessus() {
               // variant=""
               sx={{
                 ...textLink,
-                fontSize:{xs:"17px",sm:"17px",lg:"18px",xl:"18px"},
+                fontSize:{xs:"13px",sm:"17px",lg:"18px",xl:"18px"},
                   transition: "transform 0.3s ease",
                   transform: isHovered === 3 ? "scale(1.02)" : "scale(1)",
                 }}
