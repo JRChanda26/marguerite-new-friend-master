@@ -136,6 +136,8 @@ const NosSolutionsDe: React.FC = () => {
   };
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   const headingFontSize = {
     fontSize: isSmallScreen ? "14px" : "18.98px",
@@ -324,15 +326,15 @@ const NosSolutionsDe: React.FC = () => {
                     justifyContent: "center",
                     flexDirection: {
                       xs: "column",
-                      sm: "row",
+                      sm: isTabScreen||isBigTabScreen ? "column" : "row",
                       lg: "row",
                       xl: "row",
                     },
-                    gap: { xs: "50px", sm: "100px", lg: "200px", xl: "300px" },
+                    gap: { xs: "50px", sm:isTabScreen||isBigTabScreen?"30px": "100px", lg: "200px", xl: "300px" },
                     alignItems: "center",
                   }}
                 >
-                  <Grid item xl={5} lg={5} xs={12} sm={7}>
+                  <Grid item xl={5} lg={5} xs={12} sm={isTabScreen||isBigTabScreen ? 12 : 7}>
                     {nosPage.map((post: any) => (
                       <Typography
                         variant="h2"
@@ -471,7 +473,7 @@ const NosSolutionsDe: React.FC = () => {
                     xl={6}
                     lg={6}
                     xs={12}
-                    sm={5}
+                    sm={isTabScreen ||isBigTabScreen? 12 : 5}
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -533,7 +535,7 @@ const NosSolutionsDe: React.FC = () => {
                   justifyContent: "space-evenly",
                   marginTop: isSmallScreen ? "30px" : "50px",
                   alignItems: "center",
-                  gap: {xs:"40px", lg: "60px", xl: "0px" },
+                  gap: { xs: "40px", lg: "60px", xl: "0px" },
                 }}
               >
                 <Grid item xs={12} sm={5} lg={6} md={5} xl={5}>
@@ -686,7 +688,7 @@ const NosSolutionsDe: React.FC = () => {
                     background: item.background,
                     borderRadius: "42.9px",
                     padding: "20px",
-                    width: isSmallScreen?"90%": "70%",
+                    width: isSmallScreen ? "90%" : "70%",
                     height: "7vh",
                     textAlign: "center",
                     fontFamily: "Mulish",

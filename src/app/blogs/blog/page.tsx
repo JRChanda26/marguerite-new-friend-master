@@ -159,6 +159,7 @@ export default function Blogs() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   return (
     <div>
@@ -362,7 +363,7 @@ export default function Blogs() {
                         alignItems: "center",
                         flexDirection: {
                           xs: "column",
-                          sm: isTabScreen? "colum":"row",
+                          sm: isTabScreen||isBigTabScreen? "colum":"row",
                           lg: "row",
                           // md: "row",
                           xl: "row",
@@ -706,7 +707,7 @@ export default function Blogs() {
                 // gridTemplateColumns: "repeat(3, 1fr)",
                 gridTemplateColumns: {
                   xs: "repeat(1, 1fr)",
-                  sm: "repeat(3, 1fr)",
+                  sm: "repeat(2, 1fr)",
                   // md: "repeat(3, 1fr)",
                   lg: "repeat(3, 1fr)",
                   xl: "repeat(3, 1fr)",
@@ -716,7 +717,7 @@ export default function Blogs() {
                 // padding: "3% 8%",
                 padding: {
                   xs: "5%",
-                  sm: "30px 80px",
+                  sm:isTabScreen||isBigTabScreen?"30px": "30px 80px",
                   lg: "50px 50px 0px 50px",
                   xl: isMax ? "78px 150px 20px 150px" : "50px 150px 0px 150px",
                 },

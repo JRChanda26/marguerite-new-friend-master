@@ -68,6 +68,7 @@ const Benifits: React.FC = () => {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   return (
     <Box sx={{}}>
@@ -197,7 +198,7 @@ const Benifits: React.FC = () => {
                     gap: "30px",
                     padding: {
                       lg: "0px 50px 177px 50px",
-                      sm: "0px 50px 100px 50px",
+                      sm: isTabScreen||isBigTabScreen?"50px 50px 100px 50px":"0px 50px 100px 50px",
                       xl: "0px 80px 177px 80px",
                     },
                   }}
@@ -211,7 +212,7 @@ const Benifits: React.FC = () => {
                       gap: "30px",
                       flexDirection: {
                         xs: "column",
-                        sm: isTabScreen? "column":"row",
+                        sm: isTabScreen||isBigTabScreen? "column":"row",
                         // md: "row",
                         lg: "row",
                         xl: "row",
@@ -221,7 +222,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={isTabScreen?12:6}
+                      sm={isTabScreen||isBigTabScreen?12:6}
                       sx={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -333,7 +334,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={isTabScreen?12:6}
+                      sm={isTabScreen||isBigTabScreen?12:6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -449,7 +450,7 @@ const Benifits: React.FC = () => {
                       gap: "30px",
                       flexDirection: {
                         xs: "column",
-                        sm:isTabScreen?"column": "row",
+                        sm:isTabScreen||isBigTabScreen?"column": "row",
                         // md: "row",
                         lg: "row",
                         xl: "row",
@@ -459,7 +460,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={isTabScreen?12:6}
+                      sm={isTabScreen||isBigTabScreen?12:6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",
@@ -567,7 +568,7 @@ const Benifits: React.FC = () => {
                     <Grid
                       item
                       lg={6}
-                      sm={isTabScreen?12:6}
+                      sm={isTabScreen||isBigTabScreen?12:6}
                       style={{
                         background: "#FFFFFF",
                         borderRadius: "20px",

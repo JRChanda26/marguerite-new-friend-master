@@ -981,6 +981,7 @@ export default function Contact() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
   return (
     <div>
       <Header />
@@ -1179,7 +1180,7 @@ export default function Contact() {
               <Grid
                 item
                 xs={12}
-                sm={isTabScreen ? 7 : 5}
+                sm={isTabScreen||isBigTabScreen ? 7 : 5}
                 lg={4}
                 // md={5}
                 xl={3.5}
@@ -1214,8 +1215,10 @@ export default function Contact() {
                         alt={detail.icon.alt || "Image"}
                         style={{
                           background: "#FFFFFF",
-                          padding: "4%",
-                          borderRadius: "40%",
+                          padding: "10px",
+                          borderRadius: "20px",
+                          height:"30px",
+                          width:"30px"
                         }}
                       />
                     )}

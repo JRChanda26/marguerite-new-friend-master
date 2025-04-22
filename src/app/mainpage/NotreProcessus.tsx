@@ -68,7 +68,9 @@ export default function NotreProcessus() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
-  
+  const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
+
   return (
     <div
       style={{
@@ -279,7 +281,7 @@ export default function NotreProcessus() {
               justifyContent: "space-evenly",
               margin: {
                 xs: "0px 0px 0px 0px",
-                sm: "0px",
+                sm: isTabScreen||isBigTabScreen? "50px 0px":"0px",
                 lg: "0px 0px 0px 60px",
                 xl: isMax ? "0px 112px 0px 20px" : "0px 112px 0px 20px",
               },

@@ -133,6 +133,7 @@ export default function BlogsNews() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
@@ -210,7 +211,7 @@ export default function BlogsNews() {
                 display: "flex",
                 flexDirection: {
                   xs: "column",
-                  sm: isTabScreen ? "column" : "row",
+                  sm: isTabScreen||isBigTabScreen ? "column" : "row",
                   // md: "row",
                   lg: "row",
                   xl: "row",
@@ -441,7 +442,7 @@ export default function BlogsNews() {
                       display: "flex",
                       justifyContent: "center",
                       alignItems: "center",
-                      margin: { xs: "0%" },
+                      // margin: { sm: "0%" },
                       flexDirection: "column",
                     }}
                   >
@@ -449,7 +450,7 @@ export default function BlogsNews() {
                       <Grid
                         sx={{
                           padding: {
-                            xs: "50px 0px 27px 0px",
+                            xs: "20px 0px 30px 0px",
                             sm: "50px 153px 27px 153px",
                             lg: "70px 153px 27px 153px",
                             xl: "70px 153px 27px 153px",
@@ -495,7 +496,7 @@ export default function BlogsNews() {
                             textAlign: "center",
                             letterSpacing: "2%",
                             padding: {
-                              xs: "0px 20px 67px 20px",
+                              xs: "0px 20px 50px 20px",
                               sm: "0px 150px 67px 150px",
                               lg: "2px 150px 67px 150px",
                               xl: isMax
@@ -514,10 +515,10 @@ export default function BlogsNews() {
               <Grid
                 item
                 lg={3.5}
-                sm={isTabScreen ? 12 : 3}
+                sm={isTabScreen||isBigTabScreen ? 12 : 3}
                 xl={isMax ? 2.5 : 3}
                 style={{
-                  margin: isSmallScreen ? "30px 0px" : "0px",
+                  margin: isSmallScreen || isTabScreen||isBigTabScreen ? "30px 0px" : "0px",
                 }}
               >
                 <div>
@@ -715,11 +716,11 @@ export default function BlogsNews() {
               lg={7}
               // md={6}
               xs={12}
-              sm={isTabScreen ? 12 : 7}
+              sm={isTabScreen||isBigTabScreen ? 12 : 7}
               sx={{
                 margin: {
                   xs: "0% 7% 3% 7%",
-                  sm: isTabScreen ? "20px 0px 0px 0px" : "20px 0px 0px 50px",
+                  sm: isTabScreen||isBigTabScreen ? "20px 0px 0px 0px" : "20px 0px 0px 50px",
                   lg: "50px 0px 50px 50px", //"50px 0px 50px 120px"
                   // md: "50px 0px 50px 50px",
                   xl: "50px 0px 0px 180px",
@@ -1021,7 +1022,7 @@ export default function BlogsNews() {
                     onClick={() => handleButtonClick(index)}
                   >
                     <Typography
-                    // variant=""
+                      // variant=""
                       sx={{
                         fontWeight: 400,
                         fontFamily: "Mulish",
