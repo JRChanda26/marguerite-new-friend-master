@@ -145,7 +145,6 @@ export default function NotreProcessus() {
                   : "50px 550px 50px 550px",
               },
               fontFamily: "Mulish",
-              // fontFamily: "Helvetica, sans-serif",
             }}
           >
             {notrePage[0]?.data.description}
