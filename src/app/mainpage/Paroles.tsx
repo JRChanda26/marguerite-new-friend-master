@@ -91,7 +91,11 @@ export default function Paroles() {
             style={{
               fontFamily: fontMap[part as HighlightWord].fontFamily,
               fontWeight: 400,
-              fontSize: isMobileScreen ? "13px" : "18px",
+              fontSize: isMobileScreen
+                ? "13px"
+                : isTabScreen || isBigTabScreen
+                  ? "17px"
+                  : "18px",
               lineHeight: "auto",
               letterSpacing: "0%",
               color: "#24535C",
@@ -201,7 +205,10 @@ export default function Paroles() {
               }, //xl: "auto"
               padding: {
                 xs: "20px 0px",
-                sm: isTabScreen||isBigTabScreen?"0px 0px 30px 150px":"0px 0px 30px 300px",
+                sm:
+                  isTabScreen || isBigTabScreen
+                    ? "0px 0px 30px 150px"
+                    : "0px 0px 30px 300px",
                 lg: "0px 0px 50px 400px",
                 xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 500px",
               },
@@ -217,7 +224,7 @@ export default function Paroles() {
               },
               gap: {
                 xs: "30px",
-                sm: isTabScreen||isBigTabScreen? "100px":"150px",
+                sm: isTabScreen || isBigTabScreen ? "100px" : "150px",
                 lg: "250px", //300px
                 xl: "400px",
               },
@@ -241,7 +248,7 @@ export default function Paroles() {
                   color: "#000000",
                   background: "#FFFFFF",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  padding: isMobileScreen? "10px":"20px",
+                  padding: isMobileScreen ? "10px" : "20px",
                   "&:hover": {
                     background: "inherit",
                   },
@@ -253,7 +260,7 @@ export default function Paroles() {
                     src={parolesPage.data.left_arrow_icon.url || ""}
                     alt={parolesPage.data.left_arrow_icon}
                     style={{
-                      width: isMobileScreen? "20px":"30px",
+                      width: isMobileScreen ? "20px" : "30px",
                       height: "auto",
                     }}
                   />
@@ -267,7 +274,7 @@ export default function Paroles() {
                   color: "#000000",
                   background: "#FFFFFF",
                   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)",
-                  padding: isMobileScreen? "10px":"20px",
+                  padding: isMobileScreen ? "10px" : "20px",
                   "&:hover": {
                     background: "inherit",
                   },
@@ -279,7 +286,7 @@ export default function Paroles() {
                     src={parolesPage.data.right_arrow_icon.url || ""}
                     alt={parolesPage.data.right_arrow_icon}
                     style={{
-                      width: isMobileScreen? "20px":"30px",
+                      width: isMobileScreen ? "20px" : "30px",
                       height: "auto",
                     }}
                   />
