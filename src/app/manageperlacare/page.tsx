@@ -773,7 +773,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: "16px",
+                          sm: isBigTabScreen? "12px":"16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -803,7 +803,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: "10px",
+                          sm: isBigTabScreen? "8px": "10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -835,7 +835,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: "16px",
+                          sm: isBigTabScreen? "12px":"16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -865,7 +865,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: "10px",
+                          sm: isBigTabScreen? "8px":"10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -897,7 +897,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: "16px",
+                          sm: isBigTabScreen? "12px":"16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -927,7 +927,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: "10px",
+                          sm: isBigTabScreen? "8px":"10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -959,7 +959,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: "16px",
+                          sm: isBigTabScreen? "12px":"16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -989,7 +989,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: "10px",
+                          sm: isBigTabScreen? "8px":"10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",

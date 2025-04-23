@@ -32,7 +32,7 @@ const Choisir: React.FC = () => {
   const isSmallDesktop = useMediaQuery("(width:1600px)");
   
   const isTabScreen = useMediaQuery("(width:768px)");
-  const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)"); // or (width:853px)
   
   return (
     <div
