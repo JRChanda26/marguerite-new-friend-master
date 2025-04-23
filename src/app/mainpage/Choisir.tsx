@@ -30,10 +30,10 @@ const Choisir: React.FC = () => {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isSmallDesktop = useMediaQuery("(width:1600px)");
-  
+
   const isTabScreen = useMediaQuery("(width:768px)");
   const isBigTabScreen = useMediaQuery("(width:800px)"); // or (width:853px)
-  
+
   return (
     <div
       style={{
@@ -78,7 +78,7 @@ const Choisir: React.FC = () => {
             <div key={post}>
               <div>
                 <Typography
-                variant="h2"
+                  variant="h2"
                   sx={{
                     fontFamily: "Mulish",
                     color: "#0A1411",
@@ -110,7 +110,7 @@ const Choisir: React.FC = () => {
               </div>
               <div style={{}}>
                 <Typography
-                // variant=""
+                  // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     color: "#565656",
@@ -131,7 +131,9 @@ const Choisir: React.FC = () => {
                       xs: "0px",
                       sm: "0px 120px",
                       lg: "21px 300px 69px 300px",
-                      xl: isSmallDesktop? "41px 400px 50px 400px":"41px 550px 50px 550px",
+                      xl: isSmallDesktop
+                        ? "41px 400px 50px 400px"
+                        : "41px 550px 50px 550px",
                     },
                     textAlign: "center",
                     maxWidth: "75%",
@@ -149,16 +151,21 @@ const Choisir: React.FC = () => {
           container
           sx={{
             display: "flex",
-            justifyContent: "center",
+            justifyContent:
+              isTabScreen || isBigTabScreen ? "flex-start" : "center",
             flexDirection: { xs: "column", sm: "row", lg: "row", xl: "row" },
             gap: { xs: "51px", sm: "20px", md: "20px", lg: "51px", xl: "51px" },
             padding: {
               xs: "30px 0px 30px 0px",
-              sm: isTabScreen||isBigTabScreen?"30px 0px": "0px",
+              sm: isTabScreen || isBigTabScreen ? "30px 0px 50px 70px" : "0px",
               lg: "20px 0px 80px 0px",
               xl: "30px 0px",
             },
-            height: { sm:isTabScreen||isBigTabScreen?"850px": "500px", lg: "600px", xl: "700px" },
+            height: {
+              sm: isTabScreen || isBigTabScreen ? "850px" : "500px",
+              lg: "600px",
+              xl: "700px",
+            },
             alignItems: "center",
           }}
         >
@@ -207,7 +214,7 @@ const Choisir: React.FC = () => {
                   />
                 )}
                 <Typography
-                variant="h4"
+                  variant="h4"
                   sx={{
                     fontFamily: "Mulish",
                     color: "#1E1E1E",
@@ -236,7 +243,7 @@ const Choisir: React.FC = () => {
                   {post.data.card_title1}
                 </Typography>
                 <Typography
-                // variant=""
+                  // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     color: "#1E1E1E",
@@ -287,7 +294,7 @@ const Choisir: React.FC = () => {
                   onMouseLeave={() => setIsHovered(null)}
                 >
                   <Typography
-                  // variant=""
+                    // variant=""
                     sx={{
                       fontFamily: "Mulish",
                       color: "#24535C",
@@ -367,7 +374,7 @@ const Choisir: React.FC = () => {
                   />
                 )}
                 <Typography
-                variant="h4"
+                  variant="h4"
                   sx={{
                     fontFamily: "Mulish",
                     color: "#1E1E1E",
@@ -396,7 +403,7 @@ const Choisir: React.FC = () => {
                   {post.data.card_title2}
                 </Typography>
                 <Typography
-                // variant=""
+                  // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     color: "#1E1E1E",
@@ -410,7 +417,7 @@ const Choisir: React.FC = () => {
                       xl: isCardHovered === 2 ? "21px" : "18px",
                     },
                     lineHeight: {
-                      xs:  "15px",
+                      xs: "15px",
                       sm: "20px",
                       lg: "185%",
                       xl: "26px",
@@ -446,7 +453,7 @@ const Choisir: React.FC = () => {
                   onMouseLeave={() => setIsHovered(null)}
                 >
                   <Typography
-                  // variant=""
+                    // variant=""
                     sx={{
                       fontFamily: "Mulish",
                       color: "#24535C",
@@ -526,7 +533,7 @@ const Choisir: React.FC = () => {
                   />
                 )}
                 <Typography
-                variant="h4"
+                  variant="h4"
                   sx={{
                     fontFamily: "Mulish",
                     color: "#1E1E1E",
@@ -555,7 +562,7 @@ const Choisir: React.FC = () => {
                   {post.data.card_title3}
                 </Typography>
                 <Typography
-                // variant=""
+                  // variant=""
                   sx={{
                     fontFamily: "Mulish",
                     color: "#1E1E1E",
@@ -605,7 +612,7 @@ const Choisir: React.FC = () => {
                   onMouseLeave={() => setIsHovered(null)}
                 >
                   <Typography
-                  // variant=""
+                    // variant=""
                     sx={{
                       fontFamily: "Mulish",
                       color: "#24535C",

@@ -131,7 +131,7 @@ const ManagePerLaCare: React.FC = () => {
     container: {
       position: "relative",
       width: "100%",
-      height: isSmallScreen ? "50vh" : "100vh",
+      height: isSmallScreen ? "50vh" :isTabScreen?"70vh": "100vh",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",

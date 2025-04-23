@@ -351,6 +351,8 @@ const Footer: React.FC = () => {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
 
   return (
     <div>
@@ -481,7 +483,14 @@ const Footer: React.FC = () => {
                 </div>
               ))}
             </Grid>
-            <Grid item xs={12} sm={3} lg={3} xl={3}>
+            <Grid
+              item
+              xs={12}
+              sm={3}
+              lg={3}
+              xl={3}
+              mt={isTabScreen || isBigTabScreen ? 3 : 0}
+            >
               {allLinkText.slice(0, 4).map((text: any, index: number) => (
                 <Typography
                   // variant=""
@@ -510,7 +519,14 @@ const Footer: React.FC = () => {
                 </Typography>
               ))}
             </Grid>
-            <Grid item xs={12} sm={3} lg={3} xl={3} mt={-2}>
+            <Grid
+              item
+              xs={12}
+              sm={3}
+              lg={3}
+              xl={3}
+              mt={isTabScreen || isBigTabScreen ? 3 : isSmallScreen ? -2 : 0}
+            >
               {allLinkText.slice(4).map((text: any, index: number) => (
                 <Typography
                   // variant=""

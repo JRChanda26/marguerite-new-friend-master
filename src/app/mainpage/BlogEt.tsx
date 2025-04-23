@@ -125,12 +125,12 @@ export default function BlogEt() {
           lg={12}
           sx={{
             display: "flex",
-            justifyContent: "space-evenly",
+            justifyContent:  isTabScreen|| isBigTabScreen?"flex-start":"space-evenly",
             flexWrap: "wrap",
             gap: { xs: "30px", sm: "30px", lg: "20px", xl: "50px" },
             margin: {
               xs: "0px 30px 50px 30px",
-              sm: "",
+              sm: isTabScreen|| isBigTabScreen?"0px 0px 50px 80px":"",
               lg: "",
               // xl: "0px 161px 79px 161px",
               xl: "0px 100px 79px 100px",

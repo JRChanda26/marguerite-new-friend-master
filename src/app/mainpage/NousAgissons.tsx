@@ -41,9 +41,10 @@ const NousAgissons: React.FC = () => {
   const isMax7 = useMediaQuery("(min-width:750px)");
   const isMax8 = useMediaQuery("(min-width:200px)");
 
- const isTabScreen = useMediaQuery("(width:768px)");
- const isBigTabScreen = useMediaQuery("(width:800px)");
- 
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isTabScreen = useMediaQuery("(width:768px)");
+  const isBigTabScreen = useMediaQuery("(width:800px)");
+
   return (
     <div
       style={{
@@ -78,7 +79,7 @@ const NousAgissons: React.FC = () => {
           sx={{
             marginTop: {
               xs: "50px",
-              sm: isTabScreen||isBigTabScreen ? "80px" : "50px",
+              sm: isTabScreen || isBigTabScreen ? "80px" : "50px",
               lg: "70px",
               xl: "80px",
             },
@@ -89,8 +90,8 @@ const NousAgissons: React.FC = () => {
           {/* Two Grid Items in a Single Row */}
           <Grid
             item
-            xs={5}
-            sm={4.5}
+            xs={isSmallScreen ? 12 : 5}
+            sm={isTabScreen || isBigTabScreen ? 12 : 4.5}
             lg={4.5}
             xl={6}
             sx={{
@@ -102,12 +103,17 @@ const NousAgissons: React.FC = () => {
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
               paddingLeft: {
-                xs: "30px",
+                xs:isSmallScreen?"20px": "30px",
                 sm: "20px",
                 lg: "60px",
                 xl: isMax ? "0px" : "30px",
               },
-              paddingRight: { xs: "20px", sm: "20px", lg: "30px", xl: "30px" },
+              paddingRight: {
+                xs:isSmallScreen?"0px": "20px",
+                sm: isTabScreen || isBigTabScreen ? "0px" : "20px",
+                lg: "30px",
+                xl: "30px",
+              },
               opacity: isVisible ? 1 : 0, // Control visibility with state
               transform: isVisible ? "translateY(0)" : "translateY(50px)", // Initial animation effect
               transition: "opacity 2s ease-in-out, transform 2s ease-in-out",
@@ -239,15 +245,21 @@ const NousAgissons: React.FC = () => {
           {/* Second Grid Item (Image) */}
           <Grid
             item
-            xs={7}
-            sm={7}
+            xs={isSmallScreen ? 12 : 7}
+            sm={isTabScreen || isBigTabScreen ? 12 : 7}
             lg={7}
             xl={5.5} //6
             sx={{
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              padding: isMax ? "90px 0px 40px 0px" : "0px 0px",
+              padding: isMax
+                ? "90px 0px 40px 0px"
+                : isTabScreen || isBigTabScreen
+                  ? "0px 0px 0px 20px"
+                  : isSmallScreen
+                    ? "0px 0px 0px 20px"
+                    : "0px 0px",
             }}
           >
             {post?.data.background_image && (

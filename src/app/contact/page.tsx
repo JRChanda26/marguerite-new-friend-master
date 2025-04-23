@@ -982,6 +982,8 @@ export default function Contact() {
 
   const isTabScreen = useMediaQuery("(width:768px)");
   const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isSmallLaptopScreen = useMediaQuery("(width:1280px)");
+  
   return (
     <div>
       <Header />
@@ -1181,7 +1183,7 @@ export default function Contact() {
                 item
                 xs={12}
                 sm={isTabScreen||isBigTabScreen ? 7 : 5}
-                lg={4}
+                lg={isSmallLaptopScreen?4.5:4}
                 // md={5}
                 xl={3.5}
                 sx={{
@@ -1272,7 +1274,7 @@ export default function Contact() {
                 item
                 xs={12}
                 sm={6}
-                lg={7}
+                lg={isSmallLaptopScreen?6.5:7}
                 // md={6}
                 xl={7}
                 sx={{
