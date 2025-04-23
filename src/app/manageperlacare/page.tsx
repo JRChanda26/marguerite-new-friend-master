@@ -131,7 +131,7 @@ const ManagePerLaCare: React.FC = () => {
     container: {
       position: "relative",
       width: "100%",
-      height: isSmallScreen ? "50vh" :isTabScreen?"70vh": "100vh",
+      height: isSmallScreen ? "50vh" :isTabScreen?"60vh": "100vh",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -147,7 +147,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "5%"
         : isSmall
-          ? "8%" //10
+          ? isTabScreen?"13%":"8%" //10
           : isMedium
             ? "2%"
             : isLarge
@@ -158,7 +158,7 @@ const ManagePerLaCare: React.FC = () => {
       left: isExtraSmall
         ? "0%"
         : isSmall
-          ? "10%"
+          ?isTabScreen?"0%": "10%"
           : isMedium
             ? "5%"
             : isLarge
@@ -169,7 +169,7 @@ const ManagePerLaCare: React.FC = () => {
       width: isExtraSmall
         ? "95%"
         : isSmall
-          ? "50%"
+          ? isTabScreen?"70%":"50%"
           : isMedium
             ? "45%"
             : isLarge
@@ -182,7 +182,7 @@ const ManagePerLaCare: React.FC = () => {
       top: isExtraSmall
         ? "35%"
         : isSmall
-          ? "32%" //33
+          ? isTabScreen?"35%":"32%" //33
           : isMedium
             ? "30%"
             : isLarge
@@ -195,7 +195,7 @@ const ManagePerLaCare: React.FC = () => {
       right: isExtraSmall
         ? "0%"
         : isSmall
-          ? "10%"
+          ? isTabScreen?"0%":"10%"
           : isMedium
             ? "5%"
             : isLarge
@@ -206,7 +206,7 @@ const ManagePerLaCare: React.FC = () => {
       width: isExtraSmall
         ? "95%"
         : isSmall
-          ? "50%"
+          ? isTabScreen?"70%":"50%"
           : isMedium
             ? "45%"
             : isLarge
@@ -232,7 +232,7 @@ const ManagePerLaCare: React.FC = () => {
       left: isExtraSmall
         ? "0%"
         : isSmall
-          ? "10%"
+          ? isTabScreen?"0%":"10%"
           : isMedium
             ? "5%"
             : isLarge
@@ -243,7 +243,7 @@ const ManagePerLaCare: React.FC = () => {
       width: isExtraSmall
         ? "95%"
         : isSmall
-          ? "50%"
+          ? isTabScreen?"70%":"50%"
           : isMedium
             ? "45%"
             : isLarge
@@ -269,7 +269,7 @@ const ManagePerLaCare: React.FC = () => {
       right: isExtraSmall
         ? "0%"
         : isSmall
-          ? "10%"
+          ? isTabScreen?"0%":"10%"
           : isMedium
             ? "5%"
             : isLarge
@@ -280,7 +280,7 @@ const ManagePerLaCare: React.FC = () => {
       width: isExtraSmall
         ? "95%"
         : isSmall
-          ? "50%"
+          ? isTabScreen?"70%":"50%"
           : isMedium
             ? "45%"
             : isLarge
