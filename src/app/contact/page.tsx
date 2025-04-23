@@ -1287,7 +1287,7 @@ export default function Contact() {
                 }}
               >
                 <Grid container spacing={2} sx={{ mb: 4 }}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={isTabScreen?12:6}>
                     <TextField
                       name="nom_text_field"
                       value={nomInputValue}
@@ -1312,7 +1312,7 @@ export default function Contact() {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={isTabScreen?12:6}>
                     <TextField
                       name="email_text_field"
                       value={emailInputValue}
@@ -1339,7 +1339,7 @@ export default function Contact() {
                   </Grid>
                 </Grid>
                 <Grid container spacing={2} sx={{ mb: 4 }}>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={isTabScreen?12:6}>
                     <TextField
                       name="sujet_text_field"
                       value={sujetInputValue}
@@ -1364,7 +1364,7 @@ export default function Contact() {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={6}>
+                  <Grid item xs={12} sm={isTabScreen?12:6}>
                     <TextField
                       name="telephone_text_field"
                       value={telephoneInputValue}
