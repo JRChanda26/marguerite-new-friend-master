@@ -102,7 +102,7 @@ const NousAgissons: React.FC = () => {
               paddingTop: { xs: "20px", sm: "25px", lg: "30px", xl: "70px" },
               paddingBottom: { xs: "20px", sm: "25px", lg: "30px", xl: "60px" },
               paddingLeft: {
-                xs: "20px",
+                xs: "30px",
                 sm: "20px",
                 lg: "60px",
                 xl: isMax ? "0px" : "30px",

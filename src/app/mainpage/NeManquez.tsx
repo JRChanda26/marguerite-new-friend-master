@@ -184,7 +184,7 @@ export default function NeManquez() {
                   color: "#24535C",
                   fontFamily: "Mulish",
                   fontSize: {
-                    xs: "15px",
+                    xs: "12px",
                     sm: "24px",
                     // md: "28px", //32px
                     lg: "28px", //32px
@@ -192,7 +192,7 @@ export default function NeManquez() {
                     xl: "28px", //32px
                   },
                   lineHeight: {
-                    xs: "15px",
+                    xs: "14px",
                     sm: "28px",
                     // md: "42.47px",
                     lg: "1.1em",
@@ -211,7 +211,7 @@ export default function NeManquez() {
                   color: "#24535C",
                   fontFamily: "Mulish",
                   fontSize: {
-                    xs: "13px",
+                    xs: "10px",
                     sm: "17px",
                     // md: "18px",
                     lg: "18px",
@@ -325,7 +325,7 @@ export default function NeManquez() {
                         xl: "18px",
                         lg: "18px",
                         sm: "17px",
-                        xs: "13px",
+                        xs: "8px",
                       },
                       fontFamily: "Mulish",
                     },
