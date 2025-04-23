@@ -70,6 +70,7 @@ export default function NotreProcessus() {
   const isSmallDesktop = useMediaQuery("(width:1600px)");
   const isTabScreen = useMediaQuery("(width:768px)");
   const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   return (
     <div
@@ -99,12 +100,17 @@ export default function NotreProcessus() {
           }}
         >
           <Typography
-          variant="h2"
+            variant="h2"
             sx={{
               fontWeight: 600,
               // lineHeight: "80.32px",
               fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
-              lineHeight: { xs: "1.5em", sm: "1.5em", lg: "1.5em", xl: "1.5em" }, //xl: "auto"
+              lineHeight: {
+                xs: "1.5em",
+                sm: "1.5em",
+                lg: "1.5em",
+                xl: "1.5em",
+              }, //xl: "auto"
               color: "#0A1411",
               fontFamily: "Mulish",
               // fontFamily: "Helvetica, sans-serif",
@@ -119,7 +125,7 @@ export default function NotreProcessus() {
             {notrePage[0]?.data.heading}
           </Typography>
           <Typography
-          // variant=""
+            // variant=""
             sx={{
               fontWeight: 500,
               fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "24px",
@@ -134,10 +140,11 @@ export default function NotreProcessus() {
                 xs: "0px 10px",
                 sm: "0px 170px",
                 lg: "0px 330px 50px 330px",
-                xl: isSmallDesktop?"50px 400px 50px 400px": "50px 550px 50px 550px",
+                xl: isSmallDesktop
+                  ? "50px 400px 50px 400px"
+                  : "50px 550px 50px 550px",
               },
               fontFamily: "Mulish",
-              // fontFamily: "Helvetica, sans-serif",
             }}
           >
             {notrePage[0]?.data.description}
@@ -149,7 +156,7 @@ export default function NotreProcessus() {
               xs: "0% 0% 0% 5%",
               sm: "30px 80px 30px 140px",
               lg: "0px 100px 0px 100px",
-              xl: isMax ? "0px 100px 50px 250px" : "0px 50px 50px 350px",
+              xl: isMax ? "0px 0px 50px 350px" : "0px 50px 50px 350px",
             },
           }}
         >
@@ -192,11 +199,11 @@ export default function NotreProcessus() {
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "0%", lg: "18px", xl: "28px" },
                 paddingLeft: { xs: "20px" },
-                paddingRight:{sm:"30px"}
+                paddingRight: { sm: "30px" },
               }}
             >
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...heading,
                   fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
@@ -211,7 +218,7 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_heading1}
               </Typography>
               <Typography
-              variant="h3"
+                variant="h3"
                 sx={{
                   ...title,
                   fontSize: { xs: "18px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
@@ -227,7 +234,7 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_title1}
               </Typography>
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...description,
                   fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
@@ -244,10 +251,10 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_description1}
               </Typography>
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...textLink,
-                  fontSize:{xs:"13px",sm:"17px",lg:"18px",xl:"18px"},
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" },
                   transition: "transform 0.3s ease",
                   transform: isHovered === 1 ? "scale(1.02)" : "scale(1)",
                 }}
@@ -281,11 +288,11 @@ export default function NotreProcessus() {
               justifyContent: "space-evenly",
               margin: {
                 xs: "0px 0px 0px 0px",
-                sm: isTabScreen||isBigTabScreen? "50px 0px":"0px",
+                sm: isTabScreen || isBigTabScreen ? "50px 0px" : "0px",
                 lg: "0px 0px 0px 60px",
                 xl: isMax ? "0px 112px 0px 20px" : "0px 112px 0px 20px",
               },
-              gap: {lg: "50px", xl: "0px" },
+              gap: { lg: "50px", xl: "0px" },
             }}
           >
             <Grid
@@ -294,11 +301,11 @@ export default function NotreProcessus() {
                 flexDirection: "column",
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
-                paddingLeft: { xs: "20px"},
+                paddingLeft: { xs: "20px" },
               }}
             >
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...heading,
                   fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, // xl: "18px"
@@ -314,7 +321,7 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_heading2}
               </Typography>
               <Typography
-              variant="h3"
+                variant="h3"
                 sx={{
                   ...title,
                   fontSize: { xs: "18px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
@@ -331,7 +338,7 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_title2}
               </Typography>
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...description,
                   fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
@@ -348,10 +355,10 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_description2}
               </Typography>
               <Typography
-              // variant=""
-              sx={{
-                ...textLink,
-                fontSize:{xs:"13px",sm:"17px",lg:"18px",xl:"18px"},
+                // variant=""
+                sx={{
+                  ...textLink,
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" },
                   transition: "transform 0.3s ease",
                   transform: isHovered === 2 ? "scale(1.02)" : "scale(1)",
                 }}
@@ -379,7 +386,7 @@ export default function NotreProcessus() {
                   src={notrePage[0]?.data.card_image2.url || undefined}
                   alt={notrePage[0]?.data.card_image2.alt || "Image"}
                   style={{
-                    width: "95%",
+                    width: isSmallScreen ? "100%" : "90%", //95%
                     height: "auto",
                   }}
                 />
@@ -424,11 +431,11 @@ export default function NotreProcessus() {
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
                 paddingLeft: { xs: "20px" },
-                paddingRight:{sm:"30px"}
+                paddingRight: { sm: "30px" },
               }}
             >
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...heading,
                   fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
@@ -444,7 +451,7 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_heading3}
               </Typography>
               <Typography
-              variant="h3"
+                variant="h3"
                 sx={{
                   ...title,
                   fontSize: { xs: "18px", sm: "24px", lg: "28px", xl: "28px" }, //xl: "42px"
@@ -461,7 +468,7 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_title3}
               </Typography>
               <Typography
-              // variant=""
+                // variant=""
                 sx={{
                   ...description,
                   fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" }, //xl: "18px"
@@ -478,10 +485,10 @@ export default function NotreProcessus() {
                 {notrePage[0]?.data.card_description3}
               </Typography>
               <Typography
-              // variant=""
-              sx={{
-                ...textLink,
-                fontSize:{xs:"13px",sm:"17px",lg:"18px",xl:"18px"},
+                // variant=""
+                sx={{
+                  ...textLink,
+                  fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" },
                   transition: "transform 0.3s ease",
                   transform: isHovered === 3 ? "scale(1.02)" : "scale(1)",
                 }}
