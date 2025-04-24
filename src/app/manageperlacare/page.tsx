@@ -116,8 +116,13 @@ const ManagePerLaCare: React.FC = () => {
   const is4K = useMediaQuery("(width:3840px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
-  const isBigTabScreen = useMediaQuery("(width:800px)");
+  // const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width: 820px), (width: 853px),(width: 912px)");
+  const isMediumTabScreen = useMediaQuery("(width: 800px)");
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isBigMobileScreen = useMediaQuery("(width:540px)");
+  
+  const isTabScreenHeight = useMediaQuery("(height:1366px)");
 
   // Define responsive styles
   const styles: {
@@ -131,7 +136,7 @@ const ManagePerLaCare: React.FC = () => {
     container: {
       position: "relative",
       width: "100%",
-      height: isSmallScreen ? "50vh" :isTabScreen?"60vh": "100vh",
+      height: isSmallScreen ? "50vh" :isTabScreen||isBigTabScreen||isTabScreenHeight?"70vh":isMediumTabScreen?"150vh": "100vh",
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
@@ -514,14 +519,14 @@ const ManagePerLaCare: React.FC = () => {
                   justifyContent: "center",
                   flexDirection: {
                     xs: "column",
-                    sm: isTabScreen||isBigTabScreen ? "column" : "row",
+                    sm: isTabScreen||isBigTabScreen||isMediumTabScreen ? "column" : "row",
                     lg: "row",
                     xl: "row",
                   },
                   gap: { xs: "20px", sm: "20px", lg: "50px", xl: "50px" },
                 }}
               >
-                <Grid item xl={7} lg={6} xs={12} sm={isTabScreen||isBigTabScreen ? 12 : 7}>
+                <Grid item xl={7} lg={6} xs={12} sm={isTabScreen||isBigTabScreen||isMediumTabScreen ? 12 : 7}>
                   {managePage.map((post: any, index: any) => (
                     <Typography
                       variant="h2"
@@ -661,7 +666,7 @@ const ManagePerLaCare: React.FC = () => {
                   xl={5}
                   lg={6}
                   xs={12}
-                  sm={isTabScreen||isBigTabScreen ? 12 : 5}
+                  sm={isTabScreen||isBigTabScreen||isMediumTabScreen ? 12 : 5}
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -773,7 +778,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: isBigTabScreen? "12px":"16px",
+                          sm: "16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -803,7 +808,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: isBigTabScreen? "8px": "10px",
+                          sm: "10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -835,7 +840,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: isBigTabScreen? "12px":"16px",
+                          sm: "16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -865,7 +870,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: isBigTabScreen? "8px":"10px",
+                          sm: "10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -897,7 +902,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: isBigTabScreen? "12px":"16px",
+                          sm: "16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -927,7 +932,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: isBigTabScreen? "8px":"10px",
+                          sm: "10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -959,7 +964,7 @@ const ManagePerLaCare: React.FC = () => {
                         letterSpacing: "0%",
                         fontSize: {
                           xs: "13px",
-                          sm: isBigTabScreen? "12px":"16px",
+                          sm: "16px",
                           lg: "16px",
                           // md: "16px",
                           // xl: "32px",
@@ -989,7 +994,7 @@ const ManagePerLaCare: React.FC = () => {
                         },
                         fontSize: {
                           xs: "8px",
-                          sm: isBigTabScreen? "8px":"10px",
+                          sm: "10px",
                           lg: "10px",
                           // md: "10px",
                           // xl: "19.5px",
@@ -1393,8 +1398,8 @@ const ManagePerLaCare: React.FC = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 margin: {
-                  xs: "10% 7%",
-                  sm: isTabScreen||isBigTabScreen ? "50px 80px" : "50px 200px 30px 200px",
+                  xs: isBigMobileScreen?"10% 17%":"10% 7%",
+                  sm: isTabScreen||isBigTabScreen||isMediumTabScreen ? "50px 100px" : "50px 200px 30px 200px",
                   lg: "50px 522px",
                   // md: "107px 220px",
                   xl: isMax3

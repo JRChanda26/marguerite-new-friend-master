@@ -61,7 +61,8 @@ export default function BlogEt() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
    const isTabScreen = useMediaQuery("(width:768px)");
-   const isBigTabScreen = useMediaQuery("(width:800px)");
+  //  const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
 
   return (
     <div
