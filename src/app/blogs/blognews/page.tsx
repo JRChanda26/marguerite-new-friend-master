@@ -133,7 +133,8 @@ export default function BlogsNews() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
-  const isBigTabScreen = useMediaQuery("(width:800px)");
+  // const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px)");
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 

@@ -90,6 +90,7 @@ export default function NeManquez() {
   const backgroundImage = neManquezPage[0]?.data?.background_image?.url || "";
 
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isBigMobileScreen = useMediaQuery("(width:540px)");
 
   const placeholderFontSize = {
     fontSize: isSmallScreen ? "8px" : "19.25px",
@@ -123,7 +124,7 @@ export default function NeManquez() {
         sx={{
           background: "#FFFFFF",
           margin: {
-            xs: "30px 20px 15px 35px",
+            xs: isBigMobileScreen? "30px 0px 15px 80px":"30px 20px 15px 35px",
             sm: "80px 30px 80px 50px",
             // md: "70px 100px",
             lg: "50px 100px",

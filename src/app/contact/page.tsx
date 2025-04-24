@@ -981,8 +981,11 @@ export default function Contact() {
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
-  const isBigTabScreen = useMediaQuery("(width:800px)");
+  // const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
   const isSmallLaptopScreen = useMediaQuery("(width:1280px)");
+  const isBigMobileScreen = useMediaQuery("(width:540px)");
+  
   
   return (
     <div>
@@ -1181,7 +1184,7 @@ export default function Contact() {
             >
               <Grid
                 item
-                xs={12}
+                xs={isBigMobileScreen?8:12}
                 sm={isTabScreen||isBigTabScreen ? 7 : 5}
                 lg={isSmallLaptopScreen?4.5:4}
                 // md={5}

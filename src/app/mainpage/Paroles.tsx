@@ -35,7 +35,8 @@ export default function Paroles() {
   const isSmallDesktop = useMediaQuery("(width:1600px)");
   const isMobileScreen = useMediaQuery("(max-width:600px)");
   const isTabScreen = useMediaQuery("(width:768px)");
-  const isBigTabScreen = useMediaQuery("(width:800px)");
+  // const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
 
   const isXl = useMediaQuery("(max-width:1920px)");
   const isLg = useMediaQuery("(max-width:1360px)");

@@ -225,7 +225,8 @@ const OurExperts: React.FC = () => {
   const is2K = useMediaQuery("(width:2048px)");
 
   const isTabScreen = useMediaQuery("(width:768px)");
-  const isBigTabScreen = useMediaQuery("(width:800px)");
+  // const isBigTabScreen = useMediaQuery("(width:800px)");
+  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
   const isSmallScreen = useMediaQuery("(max-width:600px)");
 
   return (
