@@ -580,8 +580,13 @@ const NosSolutionsDe: React.FC = () => {
                       lg: "450px",
                       // xl: "600px",
                     },
-                    overflowY: "auto",
-                    scrollbarWidth: "thin",
+                    // overflowY: "auto",
+                    // scrollbarWidth: "thin",
+                    overflowY: "scroll",
+                    scrollbarWidth: "none", 
+                    "&::-webkit-scrollbar": {
+                      display: "none", 
+                    },
                   }}
                 >
                   {faqs.slice(3, 6).map((faq, index) => (
