@@ -67,7 +67,7 @@ export default function NotreProcessus() {
   const isMax3 = useMediaQuery("(min-width:2890px)");
   const isMax4 = useMediaQuery("(min-width:3210px)");
 
-  const isSmallDesktop = useMediaQuery("(width:1600px)");
+  const isSmallDesktop = useMediaQuery("(width:1600px),(width:1680px)");
   const isTabScreen = useMediaQuery("(width:768px)");
   // const isBigTabScreen = useMediaQuery("(width:800px)");
   const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
@@ -156,8 +156,12 @@ export default function NotreProcessus() {
             margin: {
               xs: "0% 0% 0% 5%",
               sm: "30px 80px 30px 140px",
-              lg: "0px 100px 0px 100px",
-              xl: isMax ? "0px 0px 50px 350px" : "0px 50px 50px 350px",
+              lg: "0px 100px 0px 200px",
+              xl: isMax
+                ? "0px 0px 50px 350px"
+                : isSmallDesktop
+                  ? "0px 50px 50px 320px"
+                  : "0px 50px 50px 380px",
             },
           }}
         >
@@ -174,7 +178,7 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0px 0px 30px 0px",
                 sm: "0px",
-                lg: "",
+                lg: "0px 52px 0px 0px",
                 xl: "0px 52px 0px 0px",
               },
               gap: { xs: "0px", sm: "0px", lg: "50px", xl: "50px" },
@@ -290,10 +294,10 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0px 0px 0px 0px",
                 sm: isTabScreen || isBigTabScreen ? "50px 0px" : "0px",
-                lg: "0px 0px 0px 60px",
+                lg: "0px 0px 0px 0px",
                 xl: isMax ? "0px 112px 0px 20px" : "0px 112px 0px 20px",
               },
-              gap: { lg: "50px", xl: "0px" },
+              gap: { lg: "100px", xl: "50px" },
             }}
           >
             <Grid
@@ -333,7 +337,7 @@ export default function NotreProcessus() {
                     // xl: "auto",
                     xl: "1.1em",
                   },
-                  paddingRight: { xl: "100px" },
+                  paddingRight: { xl: "0px" },
                 }}
               >
                 {notrePage[0]?.data.card_title2}
@@ -350,7 +354,7 @@ export default function NotreProcessus() {
                     // xl: "185%",
                     xl: "1.9em",
                   },
-                  paddingRight: { xl: "150px" },
+                  paddingRight: { xl: "0px" },
                 }}
               >
                 {notrePage[0]?.data.card_description2}
@@ -406,8 +410,8 @@ export default function NotreProcessus() {
               justifyContent: "space-evenly",
               margin: {
                 xs: "0px 0px 30px 0px",
-                lg: "",
-                xl: "0px 42px 0px 0px",
+                lg: "0px 52px 0px 0px",
+                xl: "0px 52px 0px 0px",
               },
               gap: { lg: "50px", xl: "50px" },
             }}
@@ -431,7 +435,7 @@ export default function NotreProcessus() {
                 flexDirection: "column",
                 justifyContent: "center",
                 gap: { xs: "5px", sm: "2%", lg: "18px", xl: "28px" },
-                paddingLeft: { xs: "20px" },
+                paddingLeft: { xs: "20px", xl: "35px" },
                 paddingRight: { sm: "30px" },
               }}
             >
