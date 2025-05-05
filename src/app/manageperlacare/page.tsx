@@ -111,7 +111,7 @@ const ManagePerLaCare: React.FC = () => {
   const isLarge = useMediaQuery(theme.breakpoints.only("lg")); // 'lg' (1280px - 1920px)
   const isExtraLarge = useMediaQuery(theme.breakpoints.up("xl")); // 'xl' (1920px and above)
 
-  const isSmallDesktop = useMediaQuery("(width:1600px)");
+  const isSmallDesktop = useMediaQuery("(width:1600px),(width:1680px)");
   const isExtraLargeDesktop = useMediaQuery("(width:2880px)");
   const is4K = useMediaQuery("(width:3840px)");
 

@@ -982,11 +982,13 @@ export default function Contact() {
 
   const isTabScreen = useMediaQuery("(width:768px)");
   // const isBigTabScreen = useMediaQuery("(width:800px)");
-  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
-  const isSmallLaptopScreen = useMediaQuery("(width:1280px)");
+  const isBigTabScreen = useMediaQuery(
+    "(width: 800px), (width: 820px), (width: 853px),(width: 912px)"
+  );
+  const isSmallLaptopScreen = useMediaQuery("(width:1280px),(width:1400px)");
   const isBigMobileScreen = useMediaQuery("(width:540px)");
-  
-  
+  const isSmallDesktop = useMediaQuery("(width:1600px),(width:1680px),(width:1920px)");
+
   return (
     <div>
       <Header />
@@ -1184,9 +1186,9 @@ export default function Contact() {
             >
               <Grid
                 item
-                xs={isBigMobileScreen?8:12}
-                sm={isTabScreen||isBigTabScreen ? 7 : 5}
-                lg={isSmallLaptopScreen?4.5:4}
+                xs={isBigMobileScreen ? 8 : 12}
+                sm={isTabScreen || isBigTabScreen ? 7 : 5}
+                lg={isSmallLaptopScreen ? 4.5 : 4}
                 // md={5}
                 xl={3.5}
                 sx={{
@@ -1222,8 +1224,8 @@ export default function Contact() {
                           background: "#FFFFFF",
                           padding: "10px",
                           borderRadius: "20px",
-                          height:"30px",
-                          width:"30px"
+                          height: "30px",
+                          width: "30px",
                         }}
                       />
                     )}
@@ -1277,7 +1279,7 @@ export default function Contact() {
                 item
                 xs={12}
                 sm={6}
-                lg={isSmallLaptopScreen?6.5:7}
+                lg={isSmallLaptopScreen ? 6.5 : 7}
                 // md={6}
                 xl={7}
                 sx={{
@@ -1292,7 +1294,11 @@ export default function Contact() {
                 }}
               >
                 <Grid container spacing={2} sx={{ mb: 4 }}>
-                  <Grid item xs={12} sm={isTabScreen||isBigTabScreen?12:6}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={isTabScreen || isBigTabScreen ? 12 : 6}
+                  >
                     <TextField
                       name="nom_text_field"
                       value={nomInputValue}
@@ -1317,7 +1323,11 @@ export default function Contact() {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={isTabScreen||isBigTabScreen?12:6}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={isTabScreen || isBigTabScreen ? 12 : 6}
+                  >
                     <TextField
                       name="email_text_field"
                       value={emailInputValue}
@@ -1344,7 +1354,11 @@ export default function Contact() {
                   </Grid>
                 </Grid>
                 <Grid container spacing={2} sx={{ mb: 4 }}>
-                  <Grid item xs={12} sm={isTabScreen||isBigTabScreen?12:6}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={isTabScreen || isBigTabScreen ? 12 : 6}
+                  >
                     <TextField
                       name="sujet_text_field"
                       value={sujetInputValue}
@@ -1369,7 +1383,11 @@ export default function Contact() {
                       }}
                     />
                   </Grid>
-                  <Grid item xs={12} sm={isTabScreen||isBigTabScreen?12:6}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={isTabScreen || isBigTabScreen ? 12 : 6}
+                  >
                     <TextField
                       name="telephone_text_field"
                       value={telephoneInputValue}
@@ -1487,7 +1505,11 @@ export default function Contact() {
                     background: "#292F36",
                     boxShadow: "none",
                   },
-                  margin: isMax || isMax5 ? "-150px 60px 0px 0px" : "0px",
+                  margin: isMax || isSmallDesktop
+                    ? "-150px 60px 0px 0px"
+                    : isMax6
+                      ? "-150px 10px 0px 0px"
+                      : "0px",
                 }}
                 onClick={(e: any) => handleSubmit(e)}
               >

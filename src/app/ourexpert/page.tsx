@@ -226,8 +226,11 @@ const OurExperts: React.FC = () => {
 
   const isTabScreen = useMediaQuery("(width:768px)");
   // const isBigTabScreen = useMediaQuery("(width:800px)");
-  const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
+  const isBigTabScreen = useMediaQuery(
+    "(width: 800px), (width: 820px), (width: 853px),(width: 912px)"
+  );
   const isSmallScreen = useMediaQuery("(max-width:600px)");
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
 
   return (
     <Box sx={{}}>
@@ -300,9 +303,10 @@ const OurExperts: React.FC = () => {
                     color: "#0A1411",
                     padding: {
                       xs: "70px 10px 20px 10px",
-                      sm: isTabScreen ||isBigTabScreen
-                        ? "80px 20px 0px 20px"
-                        : "50px 20px 0px 20px",
+                      sm:
+                        isTabScreen || isBigTabScreen
+                          ? "80px 20px 0px 20px"
+                          : "50px 20px 0px 20px",
                       lg: "80px 100px 30px 100px",
                       // md: "50px 20px 0px 20px",
                       xl: "100px 100px 40px 100px",
@@ -365,16 +369,19 @@ const OurExperts: React.FC = () => {
                     gap: isMax ? "30px" : "3%",
                     margin: {
                       xs: "0% 0% 30% 0%",
-                      sm: isTabScreen ||isBigTabScreen
-                        ? "20px 0px 80px 0px"
-                        : "20px 80px 80px 80px",
+                      sm:
+                        isTabScreen || isBigTabScreen
+                          ? "20px 0px 80px 0px"
+                          : "20px 80px 80px 80px",
                       lg: isMaxLg ? "0px 50px 50px 50px" : "0px 50px 50px 50px",
                       // md: "0px 80px 80px 80px",
                       xl: is2K
                         ? "0px 100px"
                         : isMax
                           ? "0px 340px 20px 340px"
-                          : "0px 70px 50px 70px", //250px - 10%
+                          : isSmallDesktop
+                            ? ""
+                            : "0px 70px 50px 70px", //250px - 10%
                     },
                   }}
                 >
@@ -392,7 +399,7 @@ const OurExperts: React.FC = () => {
                             background: "#FFFFFF",
                             width: dimensions.width,
                             height: dimensions.height,
-                            borderRadius:  isSmallScreen?"18px":"25px",
+                            borderRadius: isSmallScreen ? "18px" : "25px",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
