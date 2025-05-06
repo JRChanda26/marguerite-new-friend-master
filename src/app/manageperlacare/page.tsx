@@ -562,7 +562,6 @@ const ManagePerLaCare: React.FC = () => {
                     sx={{
                       fontFamily: "Mulish",
                       color: "#24535C",
-                      // fontWeight: 700,
                       fontWeight: 500,
                       fontSize: {
                         xs: "13px",
