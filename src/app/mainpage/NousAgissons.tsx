@@ -31,7 +31,7 @@ const NousAgissons: React.FC = () => {
     router.push("/contact");
   };
 
-  const isMax = useMediaQuery("(min-width:1930px)");
+  const isMax = useMediaQuery("(min-width:1910px)");
   const isMax1 = useMediaQuery("(min-width:2050px)");
   const isMax2 = useMediaQuery("(min-width:2570px)");
   const isMax3 = useMediaQuery("(min-width:2890px)");
@@ -46,6 +46,8 @@ const NousAgissons: React.FC = () => {
   // const isBigTabScreen = useMediaQuery("(width:800px)");
   const isBigTabScreen = useMediaQuery("(width: 800px), (width: 820px), (width: 853px),(width: 912px)");
 
+  const isSmallDesktop = useMediaQuery("(width:1600px)");
+
   return (
     <div
       style={{
@@ -59,9 +61,9 @@ const NousAgissons: React.FC = () => {
               : isMax1
                 ? "0px 200px"
                 : isMax
-                  ? "0px 140px"
+                  ? "0px 110px" //"0px 140px"
                   : isMax5
-                    ? "50px 120px 30px 80px"
+                    ? isSmallDesktop?"30px 80px":"30px"
                     : isMax6
                       ? "20px 70px 20px 5px"
                       : isMax7
@@ -161,7 +163,7 @@ const NousAgissons: React.FC = () => {
                   color: "#24535C",
                   fontWeight: 300,
                   paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
-                  paddingRight: isMax5 ? "300px" : "0px",
+                  paddingRight: isMax ? "200px" : "0px",
                   fontSize: {
                     xs: "20px",
                     sm: "30px",
