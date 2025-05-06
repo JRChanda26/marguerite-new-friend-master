@@ -1141,7 +1141,7 @@ const ManagePerLaCare: React.FC = () => {
                                 onClick={() => handleColor(index)}
                                 sx={{
                                   color:
-                                    clicked === index ? "#3D8C6E" : "#292F36",
+                                    clicked === index ? "#24535C" : "#292F36",
                                 }}
                               />
                             }
@@ -1151,7 +1151,7 @@ const ManagePerLaCare: React.FC = () => {
                               variant="h4"
                               sx={{
                                 color:
-                                  clicked === index ? "#3D8C6E" : "#292F36",
+                                  clicked === index ? "#24535C" : "#292F36",
                                 // lineHeight: "150%",
                                 lineHeight: "1.5em",
                                 fontSize: {
@@ -1195,7 +1195,7 @@ const ManagePerLaCare: React.FC = () => {
                             </Typography>
                           </AccordionDetails>
                         </Accordion>
-                        <hr style={{ border: "1px solid #3D8C6E" }} />
+                        <hr style={{ border: "1px solid #BBDDD9" }} />
                       </div>
                     ))}
                   </Grid>
@@ -1322,7 +1322,7 @@ const ManagePerLaCare: React.FC = () => {
                                 onClick={() => handleColor1(index)}
                                 sx={{
                                   color:
-                                    clicked1 === index ? "#3D8C6E" : "#292F36",
+                                    clicked1 === index ? "#24535C" : "#292F36",
                                 }}
                               />
                             }
@@ -1332,7 +1332,7 @@ const ManagePerLaCare: React.FC = () => {
                               variant="h4"
                               sx={{
                                 color:
-                                  clicked1 === index ? "#3D8C6E" : "#292F36",
+                                  clicked1 === index ? "#24535C" : "#292F36",
                                 lineHeight: "150%",
                                 fontSize: {
                                   xs: "15px",
@@ -1374,7 +1374,7 @@ const ManagePerLaCare: React.FC = () => {
                             </Typography>
                           </AccordionDetails>
                         </Accordion>
-                        <hr style={{ border: "1px solid #3D8C6E" }} />
+                        <hr style={{ border: "1px solid #BBDDD9" }} />
                       </div>
                     ))}
                   </Grid>
