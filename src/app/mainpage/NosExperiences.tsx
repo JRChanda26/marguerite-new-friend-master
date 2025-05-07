@@ -99,7 +99,7 @@ const NosExperiences: React.FC = () => {
               <Typography
               variant="h2"
                 sx={{
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   // fontFamily: "Helvetica, sans-serif",
                   color: "#FFFFFF",
                   // fontWeight: 700,
@@ -130,7 +130,7 @@ const NosExperiences: React.FC = () => {
               <Typography
               // variant=""
                 sx={{
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   // fontFamily: "Helvetica, sans-serif",
                   color: "#FFFFFF",
                   // fontWeight: 400,
@@ -216,7 +216,7 @@ const NosExperiences: React.FC = () => {
                       <Typography
                       // variant=""
                         sx={{
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                           // fontFamily: "Helvetica, sans-serif",
                           color: "#161C2D",
                           // fontWeight: 400,

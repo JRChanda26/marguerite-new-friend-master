@@ -81,7 +81,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#0A1411",
                     // fontWeight: 700,
                     fontWeight: 600,
@@ -113,7 +113,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   // variant=""
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#565656",
                     fontWeight: 500,
                     fontSize: {
@@ -131,10 +131,10 @@ const Choisir: React.FC = () => {
                     padding: {
                       xs: "0px",
                       sm: "0px 120px",
-                      lg: "21px 300px 69px 300px",
+                      lg: "21px 200px 69px 200px",
                       xl: isSmallDesktop
                         ? "41px 400px 50px 400px"
-                        : "41px 550px 50px 550px",
+                        : "41px 450px 50px 450px",
                     },
                     textAlign: "center",
                     maxWidth: "75%",
@@ -163,7 +163,7 @@ const Choisir: React.FC = () => {
               xl: "30px 0px",
             },
             height: {
-              sm: isTabScreen || isBigTabScreen ? "850px" : "500px",
+              sm: isTabScreen || isBigTabScreen ? "1000px" : "500px",
               lg: "600px",
               xl: "700px",
             },
@@ -174,9 +174,9 @@ const Choisir: React.FC = () => {
             sx={{
               height: {
                 xs: isCardHovered === 1 ? "340px" : "320px",
-                sm: isCardHovered === 1 ? "400px" : "380px",
+                sm: isCardHovered === 1 ? "450px" : "400px",
                 lg: isCardHovered === 1 ? "550px" : "500px",
-                xl: isCardHovered === 1 ? "629.52px" : "476px",
+                xl: isCardHovered === 1 ? "629.52px" : "500px",
               },
               width: {
                 xs: isCardHovered === 1 ? "300px" : "280px",
@@ -217,7 +217,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   variant="h4"
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#1E1E1E",
                     fontWeight: 700,
                     opacity: "90%",
@@ -230,7 +230,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "20px",
                       sm: "auto",
-                      lg: "auto",
+                      lg: "1.2em",
                       xl: "1.5em",
                     },
                     paddingTop: {
@@ -246,7 +246,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   // variant=""
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#1E1E1E",
                     fontWeight: 500,
                     opacity: "80%",
@@ -260,7 +260,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "15px",
                       sm: "20px",
-                      lg: "185%",
+                      lg: "25px",
                       xl: "26px",
                     },
                     letterSpacing: "0%",
@@ -297,7 +297,7 @@ const Choisir: React.FC = () => {
                   <Typography
                     // variant=""
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#24535C",
                       fontWeight: 400,
                       fontStyle: "italic",
@@ -334,9 +334,9 @@ const Choisir: React.FC = () => {
             sx={{
               height: {
                 xs: isCardHovered === 2 ? "340px" : "320px",
-                sm: isCardHovered === 2 ? "400px" : "380px",
+                sm: isCardHovered === 2 ? "450px" : "400px",
                 lg: isCardHovered === 2 ? "550px" : "500px",
-                xl: isCardHovered === 2 ? "629.52px" : "476px",
+                xl: isCardHovered === 2 ? "629.52px" : "500px",
               },
               width: {
                 xs: isCardHovered === 2 ? "300px" : "280px",
@@ -377,7 +377,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   variant="h4"
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#1E1E1E",
                     fontWeight: 700,
                     opacity: "90%",
@@ -390,7 +390,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "20px",
                       sm: "auto",
-                      lg: "auto",
+                      lg: "1.2em",
                       xl: "1.5em",
                     },
                     paddingTop: {
@@ -406,7 +406,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   // variant=""
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#1E1E1E",
                     fontWeight: 500,
                     opacity: "80%",
@@ -420,7 +420,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "15px",
                       sm: "20px",
-                      lg: "185%",
+                      lg: "25px",
                       xl: "26px",
                     },
                     letterSpacing: "0%",
@@ -456,7 +456,7 @@ const Choisir: React.FC = () => {
                   <Typography
                     // variant=""
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#24535C",
                       fontWeight: 400,
                       fontStyle: "italic",
@@ -493,9 +493,9 @@ const Choisir: React.FC = () => {
             sx={{
               height: {
                 xs: isCardHovered === 3 ? "340px" : "320px",
-                sm: isCardHovered === 3 ? "400px" : "380px",
+                sm: isCardHovered === 3 ? "450px" : "400px",
                 lg: isCardHovered === 3 ? "550px" : "500px",
-                xl: isCardHovered === 3 ? "629.52px" : "476px",
+                xl: isCardHovered === 3 ? "629.52px" : "500px",
               },
               width: {
                 xs: isCardHovered === 3 ? "300px" : "280px",
@@ -536,7 +536,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   variant="h4"
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#1E1E1E",
                     fontWeight: 700,
                     opacity: "90%",
@@ -549,7 +549,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "20px",
                       sm: "auto",
-                      lg: "auto",
+                      lg: "1.2em",
                       xl: "1.5em",
                     },
                     paddingTop: {
@@ -565,7 +565,7 @@ const Choisir: React.FC = () => {
                 <Typography
                   // variant=""
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#1E1E1E",
                     fontWeight: 500,
                     opacity: "80%",
@@ -579,7 +579,7 @@ const Choisir: React.FC = () => {
                     lineHeight: {
                       xs: "15px",
                       sm: "20px",
-                      lg: "185%",
+                      lg: "25px",
                       xl: "26px",
                     },
                     letterSpacing: "0%",
@@ -615,7 +615,7 @@ const Choisir: React.FC = () => {
                   <Typography
                     // variant=""
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#24535C",
                       fontWeight: 400,
                       fontStyle: "italic",

@@ -154,7 +154,7 @@ const OurExperts: React.FC = () => {
 
   const designerNameStyle: React.CSSProperties = {
     // fontFamily: "DM Serif Display",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     fontWeight: 400,
     lineHeight: "37.5px",
     letterSpacing: "1%",
@@ -164,7 +164,7 @@ const OurExperts: React.FC = () => {
 
   const designerDetailsStyle: React.CSSProperties = {
     // fontFamily: "Jost",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     fontWeight: 400,
     lineHeight: "150%",
     letterSpacing: "1%",
@@ -281,7 +281,7 @@ const OurExperts: React.FC = () => {
                 <Typography
                   variant="h2"
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     fontSize: {
                       xs: "20px",
                       sm: "30px",
@@ -318,7 +318,7 @@ const OurExperts: React.FC = () => {
                 <Typography
                   // variant=""
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     fontSize: {
                       xs: "13px",
                       sm: "17px",

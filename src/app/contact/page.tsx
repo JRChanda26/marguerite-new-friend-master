@@ -409,7 +409,7 @@
 //                     md: "0px 50px 0px 50px",
 //                     xl: isMax ? "0px 50px 80px 50px" : "0px 350px 80px 350px",
 //                   },
-//                   fontFamily: "Mulish",
+//                   fontFamily: "var(--font-mulish)",
 //                   lineHeight: "150%",
 //                   letterSpacing: "1%",
 //                 }}
@@ -1070,7 +1070,7 @@ export default function Contact() {
                 variant="h1"
                 sx={{
                   // fontFamily: "DM Serif Display",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   color: "#292F36",
                   // fontWeight: 600,
                   fontWeight: 700,
@@ -1095,7 +1095,7 @@ export default function Contact() {
                 variant="h4"
                 sx={{
                   // fontFamily: "Jost",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   color: "#4D5053",
                   fontWeight: 400,
                   // fontSize: "22px",
@@ -1155,11 +1155,11 @@ export default function Contact() {
                   textAlign: "center",
                   padding: {
                     sm: "0px",
-                    lg: "0px 196px 50px 196px",
+                    lg: "0px 170px 50px 170px",
                     // md: "0px 50px 0px 50px",
-                    xl: isMax ? "0px 50px 50px 50px" : "0px 350px 30px 350px",
+                    xl: isMax ? "0px 50px 50px 50px" : "0px 300px 30px 300px",
                   },
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   lineHeight: "150%",
                   letterSpacing: "1%",
                 }}
@@ -1187,7 +1187,7 @@ export default function Contact() {
               <Grid
                 item
                 xs={isBigMobileScreen ? 8 : 12}
-                sm={isTabScreen || isBigTabScreen ? 7 : 5}
+                sm={isTabScreen || isBigTabScreen ? 7.5 : 5}
                 lg={isSmallLaptopScreen ? 4.5 : 4}
                 // md={5}
                 xl={3.5}
@@ -1195,9 +1195,9 @@ export default function Contact() {
                   background: "#BBDDD9",
                   borderRadius: "50px",
                   padding: {
-                    xs: "50px 32px",
+                    xs: "50px 20px",
                     sm: "36px 32px",
-                    lg: "76px 32px",
+                    lg: "76px 25px",
                     // md: "36px 32px",
                     xl: "100px 52px",
                   },
@@ -1242,7 +1242,7 @@ export default function Contact() {
                         display: "flex",
                         alignItems: "center",
                         // fontFamily: "Jost",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         lineHeight: "150%",
                         letterSpacing: "1%",
                         color: "#4D5053",
@@ -1318,7 +1318,7 @@ export default function Contact() {
                             lg: "18px",
                             xl: "18px",
                           },
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                         },
                       }}
                     />
@@ -1347,7 +1347,7 @@ export default function Contact() {
                             lg: "18px",
                             xl: "18px",
                           },
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                         },
                       }}
                     />
@@ -1378,7 +1378,7 @@ export default function Contact() {
                             lg: "18px",
                             xl: "18px",
                           },
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                         },
                       }}
                     />
@@ -1411,7 +1411,7 @@ export default function Contact() {
                             lg: "18px",
                             xl: "18px",
                           },
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                         },
                       }}
                     />
@@ -1438,7 +1438,7 @@ export default function Contact() {
                         lg: "18px",
                         xl: "18px",
                       },
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                     },
                   }}
                 />
@@ -1481,7 +1481,7 @@ export default function Contact() {
                 variant="contained"
                 color="primary"
                 sx={{
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   textDecoration: "none",
                   padding: {
                     xs: "10px 24px",

@@ -73,7 +73,7 @@ export default function Paroles() {
   const fontMap: Record<HighlightWord, { fontFamily: string }> = {
     "Marguerite Services,": { fontFamily: "Jenna Sue" }, //fontFamily: "Helvetica"
     "Responsabilité Sociétale des Entreprises (RSE)": {
-      fontFamily: "Mulish",
+      fontFamily: "var(--font-mulish)",
       // fontFamily: "Helvetica",
     },
   };
@@ -208,12 +208,12 @@ export default function Paroles() {
                 xs: "20px 0px",
                 sm:
                   isTabScreen || isBigTabScreen
-                    ? "0px 0px 30px 150px"
+                    ? "0px 0px 30px 100px"
                     : "0px 0px 30px 300px",
                 lg: "0px 0px 50px 400px",
                 xl: isMax ? "0px 0px 50px 500px" : "0px 0px 50px 500px",
               },
-              fontFamily: "Mulish",
+              fontFamily: "var(--font-mulish)",
               // fontFamily: "Helvetica, sans-serif",
               letterSpacing: "0%",
               display: "flex",
@@ -366,7 +366,7 @@ export default function Paroles() {
             sx={{
               color: "#000000",
               fontWeight: 500,
-              fontFamily: "Mulish",
+              fontFamily: "var(--font-mulish)",
               letterSpacing: "0%",
               fontSize: { xs: "13px", sm: "17px", lg: "18px", xl: "18px" },
               lineHeight: {
@@ -378,10 +378,10 @@ export default function Paroles() {
               padding: {
                 xs: "0px",
                 sm: "0px 50px",
-                lg: "0px 180px 0px 180px",
+                lg: "0px 150px 0px 150px",
                 xl: isSmallDesktop
                   ? "0px 200px 0px 200px"
-                  : "0px 450px 0px 450px",
+                  : "0px 400px 0px 400px",
               },
             }}
           >
@@ -494,7 +494,7 @@ export default function Paroles() {
                       color: "#000000",
                       // fontWeight: 700,
                       fontWeight: 500,
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       // fontFamily: "Helvetica, sans-serif",
                       textAlign: "center",
                       padding: {

@@ -125,7 +125,7 @@ const Benifits: React.FC = () => {
                 <Typography
                 variant="h2"
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     fontSize: {
                       xs: "20px",
                       sm: "30px",
@@ -157,7 +157,7 @@ const Benifits: React.FC = () => {
                 <Typography
                 // variant=""
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     fontSize: {
                       xs: "13px",
                       sm: "17px",
@@ -274,7 +274,7 @@ const Benifits: React.FC = () => {
                                 // xl: "36px",
                                 xl: "21px",
                               },
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               // fontWeight: 400,
                               fontWeight: 500,
                               color: "#1E1E1E",
@@ -299,7 +299,7 @@ const Benifits: React.FC = () => {
                               // xl: "24px",
                               xl: "18px",
                             },
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             fontStyle: "italic",
                             color: "#1E1E1E",
                             paddingTop: { lg: "", xl: "" },
@@ -382,7 +382,7 @@ const Benifits: React.FC = () => {
                                 // xl: "36px",
                                 xl: "21px",
                               },
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               // fontWeight: 400,
                               fontWeight: 500,
                               color: "#1E1E1E",
@@ -407,7 +407,7 @@ const Benifits: React.FC = () => {
                               // xl: "24px",
                               xl: "18px",
                             },
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             fontStyle: "italic",
                             color: "#1E1E1E",
                             paddingTop: { lg: "", xl: "" },
@@ -508,7 +508,7 @@ const Benifits: React.FC = () => {
                                 // xl: "36px",
                                 xl: "21px",
                               },
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               // fontWeight: 400,
                               fontWeight: 500,
                               color: "#1E1E1E",
@@ -533,7 +533,7 @@ const Benifits: React.FC = () => {
                               // xl: "24px",
                               xl: "18px",
                             },
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             fontStyle: "italic",
                             color: "#1E1E1E",
                             paddingTop: { lg: "", xl: "" },
@@ -616,7 +616,7 @@ const Benifits: React.FC = () => {
                                 // xl: "36px",
                                 xl: "21px",
                               },
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               // fontWeight: 400,
                               fontWeight: 500,
                               color: "#1E1E1E",
@@ -641,7 +641,7 @@ const Benifits: React.FC = () => {
                               // xl: "24px",
                               xl: "18px",
                             },
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             fontStyle: "italic",
                             color: "#1E1E1E",
                             paddingTop: { lg: "", xl: "" },

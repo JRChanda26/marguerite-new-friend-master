@@ -72,7 +72,7 @@ export default function BlogsNews() {
     // fontSize: "25px",
     // fontWeight: 400,
     fontWeight: 300,
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     lineHeight: "1.1em",
     letterSpacing: "2%",
   };
@@ -82,7 +82,7 @@ export default function BlogsNews() {
     // fontSize: "20px",
     // fontWeight: 400,
     fontWeight: 500,
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     // lineHeight: "125%",
     lineHeight: "1.1em",
     letterSpacing: "2%",
@@ -248,7 +248,7 @@ export default function BlogsNews() {
                     },
                     fontWeight: 600,
                     letterSpacing: "2%",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#292F36",
                     paddingRight: { xl: isMax ? "0px" : "0px" },
                   }}
@@ -328,7 +328,7 @@ export default function BlogsNews() {
                       },
                       color: "#4D5053",
                       letterSpacing: "1%",
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                     }}
                   >
                     {blogNewsPage[0]?.data.date_text}
@@ -350,7 +350,7 @@ export default function BlogsNews() {
                       },
                       color: "#4D5053",
                       letterSpacing: "1%",
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                     }}
                   >
                     {blogNewsPage[0]?.data.about}
@@ -376,7 +376,7 @@ export default function BlogsNews() {
                     },
                     color: "#4D5053",
                     letterSpacing: "1%",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     whiteSpace: "pre-line",
                     padding: {
                       xs: "20px 0px",
@@ -547,7 +547,7 @@ export default function BlogsNews() {
                             lg: "18px",
                             xl: "18px",
                           },
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                         },
                       },
                       height: { lg: "70px", xl: "70px" },
@@ -644,7 +644,7 @@ export default function BlogsNews() {
                               },
                               // fontWeight: 400,
                               fontWeight: 500,
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               // lineHeight: "150%",
                               lineHeight: "1.1em",
                               letterSpacing: "1%",
@@ -739,7 +739,7 @@ export default function BlogsNews() {
                     // xl: "125%",
                     xl: "1.5em",
                   },
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   fontWeight: 600,
                   letterSpacing: "2%",
                   color: "#292F36",
@@ -766,7 +766,7 @@ export default function BlogsNews() {
                     xl: "50px 0px",
                   },
                   color: "#4D5053",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   letterSpacing: "1%",
                   textAlign: "justify",
                   fontWeight: 500,
@@ -798,7 +798,7 @@ export default function BlogsNews() {
                           },
                           padding: "10px 0px 0px 0px",
                           color: "#4D5053",
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                           letterSpacing: "1%",
                           paddingRight: { lg: "0px", xl: "0px" },
                           textAlign: "justify",
@@ -835,7 +835,7 @@ export default function BlogsNews() {
                     xl: "1.9em",
                   },
                   color: "#4D5053",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   letterSpacing: "1%",
                   textAlign: "justify",
                   fontWeight: 500,
@@ -886,7 +886,7 @@ export default function BlogsNews() {
                     variant="h4"
                     sx={{
                       fontWeight: 400,
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       fontSize: {
                         xs: "13px",
                         sm: "20px",
@@ -931,7 +931,7 @@ export default function BlogsNews() {
                   },
                   marginBottom: "62px",
                   color: "#4D5053",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   letterSpacing: "1%",
                   fontWeight: 300,
                 }}
@@ -969,7 +969,7 @@ export default function BlogsNews() {
                     },
                     fontWeight: 400,
                     color: "#000000",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     lineHeight: "125%",
                     letterSpacing: "0%",
                   }}
@@ -981,7 +981,7 @@ export default function BlogsNews() {
                   //   key={index}
                   //   sx={{
                   //     fontWeight: 400,
-                  //     fontFamily: "Mulish",
+                  //     fontFamily: "var(--font-mulish)",
                   //     fontSize: {
                   //       xs: "13px",
                   //       sm: "17px",
@@ -1026,7 +1026,7 @@ export default function BlogsNews() {
                       // variant=""
                       sx={{
                         fontWeight: 400,
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         fontSize: {
                           xs: "13px",
                           sm: "17px",

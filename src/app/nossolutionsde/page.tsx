@@ -239,10 +239,12 @@ const NosSolutionsDe: React.FC = () => {
                     variant="h1"
                     sx={{
                       // fontFamily: "DM Serif Display",
-                      fontFamily: "Mulish",
+                      // fontFamily: "var(--font-mulish)",
                       color: "#292F36",
+                      fontFamily: "var(--font-viga)",
+                      fontWeight: 400,
                       // fontWeight: 700,
-                      fontWeight: 700,
+                      // fontWeight: 700,
                       fontSize: {
                         xs: "24px",
                         sm: "45px",
@@ -266,7 +268,7 @@ const NosSolutionsDe: React.FC = () => {
                     variant="h4"
                     sx={{
                       // fontFamily: "Jost",
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#4D5053",
                       fontWeight: 400,
                       fontSize: {
@@ -341,7 +343,7 @@ const NosSolutionsDe: React.FC = () => {
                         variant="h2"
                         key={post}
                         sx={{
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                           // fontWeight: 700,
                           fontWeight: 600,
                           fontSize: {
@@ -387,7 +389,7 @@ const NosSolutionsDe: React.FC = () => {
                         },
                         paddingTop: "23px",
                         // fontFamily: "Jost",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         color: "#4D5053",
                         textAlign: "justify",
                       }}
@@ -436,7 +438,7 @@ const NosSolutionsDe: React.FC = () => {
                             variant="h4"
                             sx={{
                               fontWeight: 400,
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               fontSize: {
                                 xs: "13px",
                                 sm: "20px",
@@ -517,7 +519,7 @@ const NosSolutionsDe: React.FC = () => {
                   fontWeight: 600,
                   lineHeight: "1.5em",
                   marginTop: { xs: "10px" },
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                 }}
               >
                 {modulesPage[0]?.data.video_title}
@@ -624,7 +626,7 @@ const NosSolutionsDe: React.FC = () => {
                                 xl: "21px",
                               },
                               fontWeight: 500,
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               letterSpacing: "1%",
                             }}
                           >
@@ -646,7 +648,7 @@ const NosSolutionsDe: React.FC = () => {
                               },
                               // fontWeight: 400,
                               fontWeight: 500,
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               lineHeight: "1.9em",
                               letterSpacing: "1%",
                             }}
@@ -697,7 +699,7 @@ const NosSolutionsDe: React.FC = () => {
                     width: isSmallScreen ? "90%" : "70%",
                     height: "7vh",
                     textAlign: "center",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     // fontSize: headingFontSize.fontSize,
                     fontSize: {
                       // xl: "18.98px",
@@ -724,7 +726,7 @@ const NosSolutionsDe: React.FC = () => {
                       <Typography
                         sx={{
                           color: "#4D5053",
-                          fontFamily: "Mulish",
+                          fontFamily: "var(--font-mulish)",
                           // fontSize: pointsFontSize.fontSize,
                           fontSize: {
                             xl: "18px",
