@@ -442,10 +442,12 @@ const ManagePerLaCare: React.FC = () => {
                     variant="h1"
                     sx={{
                       // fontFamily: "DM Serif Display",
-                      fontFamily: "Mulish",
+                      // fontFamily: "var(--font-mulish)",
                       color: "#292F36",
+                      fontFamily: "var(--font-viga)",
+                      fontWeight: 400,
                       // fontWeight: 700,
-                      fontWeight: 700,
+                      // fontWeight: 700,
                       fontSize: {
                         xs: "24px",
                         sm: "45px",
@@ -469,7 +471,7 @@ const ManagePerLaCare: React.FC = () => {
                     variant="h4"
                     sx={{
                       // fontFamily: "Jost",
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#4D5053",
                       fontWeight: 400,
                       fontSize: {
@@ -532,7 +534,7 @@ const ManagePerLaCare: React.FC = () => {
                       variant="h2"
                       key={index}
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         // fontWeight: 700,
                         fontWeight: 600,
                         fontSize: {
@@ -560,7 +562,7 @@ const ManagePerLaCare: React.FC = () => {
                   <Typography
                     variant="h4"
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#24535C",
                       fontWeight: 500,
                       fontSize: {
@@ -626,7 +628,7 @@ const ManagePerLaCare: React.FC = () => {
                           variant="h4"
                           sx={{
                             fontWeight: 400,
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             fontSize: {
                               xs: "13px",
                               sm: "20px",
@@ -720,7 +722,7 @@ const ManagePerLaCare: React.FC = () => {
                 variant="h2"
                 sx={{
                   color: "#24535C",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   // fontWeight: 800,
                   fontWeight: 600,
                   fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
@@ -768,7 +770,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       variant="h4"
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "90%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -791,7 +793,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       // variant=""
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "80%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -830,7 +832,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       variant="h4"
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "90%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -853,7 +855,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       // variant=""
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "80%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -892,7 +894,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       variant="h4"
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "90%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -915,7 +917,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       // variant=""
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "80%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -954,7 +956,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       variant="h4"
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "90%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -977,7 +979,7 @@ const ManagePerLaCare: React.FC = () => {
                     <Typography
                       // variant=""
                       sx={{
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         opacity: "80%",
                         color: "#1E1E1E",
                         fontWeight: 500,
@@ -1035,7 +1037,7 @@ const ManagePerLaCare: React.FC = () => {
                   variant="h2"
                   sx={{
                     color: "#0A1411",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     fontSize: {
                       xs: "20px",
                       sm: "30px",
@@ -1078,7 +1080,7 @@ const ManagePerLaCare: React.FC = () => {
                     // fontWeight: 400,
                     fontWeight: 600,
                     letterSpacing: "1%",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     // lineHeight: "150%",
                     lineHeight: "1.5em",
                   }}
@@ -1162,7 +1164,7 @@ const ManagePerLaCare: React.FC = () => {
                                   xl: "21px",
                                 },
                                 fontWeight: 500,
-                                fontFamily: "Mulish",
+                                fontFamily: "var(--font-mulish)",
                                 letterSpacing: "1%",
                               }}
                             >
@@ -1184,7 +1186,7 @@ const ManagePerLaCare: React.FC = () => {
                                 },
                                 // fontWeight: 400,
                                 fontWeight: 500,
-                                fontFamily: "Mulish",
+                                fontFamily: "var(--font-mulish)",
                                 // lineHeight: "150%",
                                 lineHeight: "1.9em",
                                 letterSpacing: "1%",
@@ -1233,7 +1235,7 @@ const ManagePerLaCare: React.FC = () => {
                       xl: isMax ? "50px" : "50px",
                     },
                     letterSpacing: "1%",
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     // lineHeight: "150%",
                     lineHeight: "1.5em",
                   }}
@@ -1342,7 +1344,7 @@ const ManagePerLaCare: React.FC = () => {
                                   xl: "21px",
                                 },
                                 fontWeight: 500,
-                                fontFamily: "Mulish",
+                                fontFamily: "var(--font-mulish)",
                                 letterSpacing: "1%",
                               }}
                             >
@@ -1364,7 +1366,7 @@ const ManagePerLaCare: React.FC = () => {
                                 },
                                 // fontWeight: 400,
                                 fontWeight: 500,
-                                fontFamily: "Mulish",
+                                fontFamily: "var(--font-mulish)",
                                 lineHeight: "150%",
                                 letterSpacing: "1%",
                               }}
@@ -1488,7 +1490,7 @@ const ManagePerLaCare: React.FC = () => {
                       // variant=""
                       sx={{
                         // fontFamily: "Jost",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         color: "#4D5053",
                         // fontWeight: 400,
                         fontWeight: 700,
@@ -1526,7 +1528,7 @@ const ManagePerLaCare: React.FC = () => {
           <Typography
             variant="h2"
             sx={{
-              fontFamily: "Mulish",
+              fontFamily: "var(--font-mulish)",
               fontSize: { xs: "20px", sm: "30px", lg: "34px", xl: "34px" }, //xl: "64px"
               // fontWeight: 700,
               fontWeight: 600,
@@ -1588,7 +1590,7 @@ const ManagePerLaCare: React.FC = () => {
                 fontWeight: 500,
                 textAlign: "justify",
                 color: "#24535C",
-                fontFamily: "Mulish",
+                fontFamily: "var(--font-mulish)",
               }}
             >
               {managePage[0]?.data.bottom_description}

@@ -135,8 +135,9 @@ const NousAgissons: React.FC = () => {
               <Typography
                 variant="h1"
                 sx={{
-                  fontFamily: "Mulish",
-                  fontWeight: 500,
+                  // fontFamily: "Mulish",
+                  fontFamily: "var(--font-viga)",
+                  fontWeight: 400,
                   fontSize: {
                     xs: "24px",
                     sm: "45px",
@@ -159,7 +160,8 @@ const NousAgissons: React.FC = () => {
               <Typography
                 variant="h2"
                 sx={{
-                  fontFamily: "Mulish",
+                  // fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   color: "#24535C",
                   fontWeight: 300,
                   paddingTop: { xs: "8px", sm: "25px", lg: "33px", xl: "33px" },
@@ -209,7 +211,8 @@ const NousAgissons: React.FC = () => {
                 <Typography
                   variant="h4"
                   sx={{
-                    fontFamily: "Mulish",
+                    // fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     fontWeight: 500,
                     fontSize: {
                       xs: "10px",

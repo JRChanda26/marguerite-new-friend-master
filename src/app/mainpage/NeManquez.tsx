@@ -183,7 +183,7 @@ export default function NeManquez() {
                 variant="h3"
                 sx={{
                   color: "#24535C",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   fontSize: {
                     xs: "12px",
                     sm: "24px",
@@ -210,7 +210,7 @@ export default function NeManquez() {
                 // variant=""
                 sx={{
                   color: "#24535C",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   fontSize: {
                     xs: "10px",
                     sm: "17px",
@@ -328,7 +328,7 @@ export default function NeManquez() {
                         sm: "17px",
                         xs: "8px",
                       },
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                     },
                     ...(errors.email && {
                       "& fieldset": {
@@ -345,7 +345,7 @@ export default function NeManquez() {
                   borderRadius: "88px",
                   textTransform: "none",
                   color: "#FFFFFF",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   fontSize: {
                     xs: "4px",
                     sm: "20px",
@@ -359,7 +359,7 @@ export default function NeManquez() {
                     xs: "8px 5px",
                     sm: "0px",
                     lg: "2.5%",
-                    xl: "2.5%",
+                    xl: "2%",
                   },
                   "&:hover": {
                     background: "#24535C",

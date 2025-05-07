@@ -22,7 +22,7 @@ export default function NotreProcessus() {
     // fontWeight: 400,
     fontWeight: 300,
     color: "#1E1E1E",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     // fontFamily: "Helvetica, sans-serif",
     letterSpacing: "0%",
   };
@@ -32,7 +32,7 @@ export default function NotreProcessus() {
     textTransform: "uppercase",
     fontWeight: 600,
     letterSpacing: "17.5%",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     // fontFamily: "Helvetica, sans-serif",
   };
 
@@ -40,7 +40,7 @@ export default function NotreProcessus() {
     color: "#1E1E1E",
     // fontWeight: 400,
     fontWeight: 500,
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     // fontFamily: "Helvetica, sans-serif",
     fontStyle: "italic",
     letterSpacing: "0%",
@@ -54,7 +54,7 @@ export default function NotreProcessus() {
     display: "flex",
     flexDirection: "row",
     // fontFamily: "Helvetica, sans-serif",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     fontStyle: "italic",
     letterSpacing: "0%",
   };
@@ -113,7 +113,7 @@ export default function NotreProcessus() {
                 xl: "1.5em",
               }, //xl: "auto"
               color: "#0A1411",
-              fontFamily: "Mulish",
+              fontFamily: "var(--font-mulish)",
               // fontFamily: "Helvetica, sans-serif",
               margin: {
                 xs: "20px 0px",
@@ -140,12 +140,12 @@ export default function NotreProcessus() {
               margin: {
                 xs: "0px 10px",
                 sm: "0px 170px",
-                lg: "0px 330px 50px 330px",
+                lg: "0px 280px 50px 280px",
                 xl: isSmallDesktop
                   ? "50px 400px 50px 400px"
-                  : "50px 550px 50px 550px",
+                  : "50px 500px 50px 500px",
               },
-              fontFamily: "Mulish",
+              fontFamily: "var(--font-mulish)",
             }}
           >
             {notrePage[0]?.data.description}

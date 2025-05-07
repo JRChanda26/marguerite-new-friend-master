@@ -50,7 +50,7 @@ export default function Blogs() {
     color: "#161C2D",
     // fontSize: "21.27px",
     fontWeight: 700,
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     lineHeight: "1.5em", //120%
     letterSpacing: "0%",
   };
@@ -61,7 +61,7 @@ export default function Blogs() {
     // fontWeight: 400,
     fontWeight: 500,
     opacity: "72%",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     lineHeight:isSmallScreen?"15px": "26px", //16%
     letterSpacing: "0%",
   };
@@ -243,10 +243,12 @@ export default function Blogs() {
                 variant="h1"
                 sx={{
                   // fontFamily: "DM Serif Display",
-                  fontFamily: "Mulish",
+                  // fontFamily: "var(--font-mulish)",
+                  fontFamily: "var(--font-viga)",
+                  fontWeight: 400,
                   color: "#292F36",
                   // fontWeight: 700,
-                  fontWeight: 700,
+                  // fontWeight: 700,
                   // fontSize: "50px",
                   fontSize: { xs: "24px", sm: "45px", lg: "55px", xl: "55px" }, //xl: "50px"
                   // lineHeight: "62.5px",
@@ -266,7 +268,7 @@ export default function Blogs() {
                 variant="h4"
                 sx={{
                   // fontFamily: "Jost",
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                   color: "#4D5053",
                   fontWeight: 400,
                   fontSize: { xs: "13px", sm: "20px", lg: "21px", xl: "21px" },
@@ -331,7 +333,7 @@ export default function Blogs() {
                     lg: "50px",
                     xl: isMax ? "50px" : "50px",
                   },
-                  fontFamily: "Mulish",
+                  fontFamily: "var(--font-mulish)",
                 }}
               >
                 {blogPage[0]?.data.title1}
@@ -415,7 +417,7 @@ export default function Blogs() {
                               xs: "15px",
                             },
                             fontWeight: 700,
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             lineHeight: "125%",
                             letterSpacing: "2%",
                             padding: { lg: "", xl: "50px 50px 0px 0px" },
@@ -437,7 +439,7 @@ export default function Blogs() {
                               xs: "13px",
                             },
                             fontWeight: 400,
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             lineHeight: "150%",
                             letterSpacing: "1%",
                             whiteSpace: "pre-line",
@@ -466,7 +468,7 @@ export default function Blogs() {
                                 xs: "13px",
                               },
                               fontWeight: 400,
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               lineHeight: "150%",
                               letterSpacing: "1%",
                               // marginTop: { lg: "41px", xl: "41px" },
@@ -587,7 +589,7 @@ export default function Blogs() {
                 color: "#292F36",
                 textAlign: "center",
                 // margin: "50px 0px",
-                fontFamily: "Mulish",
+                fontFamily: "var(--font-mulish)",
                 letterSpacing: "2%",
               }}
             >

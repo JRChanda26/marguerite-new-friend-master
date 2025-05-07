@@ -726,7 +726,7 @@ const Header: React.FC = () => {
   ];
 
   const menustyle = {
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     fontSize: "18px",
     fontWeight: 400,
     lineHeight: "44.26px",
@@ -734,12 +734,12 @@ const Header: React.FC = () => {
     "@media (max-width:800px)": {
       fontSize: "17px",
       lineHeight: "30px",
-      fontFamily: "Mulish",
+      fontFamily: "var(--font-mulish)",
     },
     "@media (max-width:600px)": {
       fontSize: "16px",
       lineHeight: "30px",
-      fontFamily: "Mulish",
+      fontFamily: "var(--font-mulish)",
     },
   };
 
@@ -815,7 +815,7 @@ const Header: React.FC = () => {
                           <Typography
                             // variant=""
                             sx={{
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               color: "#24535C",
                               fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
@@ -829,7 +829,7 @@ const Header: React.FC = () => {
                         <Typography
                           // variant=""
                           sx={{
-                            fontFamily: "Mulish",
+                            fontFamily: "var(--font-mulish)",
                             color: "#24535C",
                             fontSize: { xs: "16px", sm: "17px" },
                             fontWeight: 400,
@@ -843,7 +843,7 @@ const Header: React.FC = () => {
                           <Typography
                             // variant=""
                             sx={{
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               color: "#24535C",
                               fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
@@ -898,7 +898,7 @@ const Header: React.FC = () => {
                           <Typography
                             // variant=""
                             sx={{
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               color: "#24535C",
                               fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
@@ -956,7 +956,7 @@ const Header: React.FC = () => {
                           <Typography
                             // variant=""
                             sx={{
-                              fontFamily: "Mulish",
+                              fontFamily: "var(--font-mulish)",
                               color: "#24535C",
                               fontSize: { xs: "16px", sm: "17px" },
                               fontWeight: 400,
@@ -1038,7 +1038,7 @@ const Header: React.FC = () => {
                       // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -1066,7 +1066,7 @@ const Header: React.FC = () => {
                     // variant=""
                     sx={{
                       // fontFamily: "Helvetica, sans-serif",
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#24535C",
                       fontSize: {
                         xs: "12px",
@@ -1094,7 +1094,7 @@ const Header: React.FC = () => {
                       // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -1170,7 +1170,7 @@ const Header: React.FC = () => {
                       // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",
@@ -1250,7 +1250,7 @@ const Header: React.FC = () => {
                       // variant=""
                       sx={{
                         // fontFamily: "Helvetica, sans-serif",
-                        fontFamily: "Mulish",
+                        fontFamily: "var(--font-mulish)",
                         color: "#24535C",
                         fontSize: {
                           xs: "12px",

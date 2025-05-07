@@ -21,7 +21,7 @@ export default function BlogEt() {
     fontWeight: 700,
     textAlign: "left",
     paddingTop: "31.9px",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     // fontFamily: "Helvetica, sans-serif",
   };
 
@@ -31,7 +31,7 @@ export default function BlogEt() {
     fontWeight: 500,
     textAlign: "left",
     paddingTop: "21.27px",
-    fontFamily: "Mulish",
+    fontFamily: "var(--font-mulish)",
     // fontFamily: "Helvetica, sans-serif",
   };
 
@@ -104,7 +104,7 @@ export default function BlogEt() {
               },
               lineHeight: { xs: "30px", sm: "120%", lg: "120%", xl: "1.5em" }, //xl: "120%"
               color: "#161C2D",
-              fontFamily: "Mulish",
+              fontFamily: "var(--font-mulish)",
               // fontFamily: "Helvetica, sans-serif",
               padding: {
                 xs: "20px 0px",
@@ -270,7 +270,7 @@ export default function BlogEt() {
         </Grid>
         <Button
           sx={{
-            fontFamily: "Mulish",
+            fontFamily: "var(--font-mulish)",
             // fontFamily: "Helvetica, sans-serif",
             color: "#FFFFFF",
             fontSize: { xs: "13px", sm: "20px", lg: "21px", xl: "21px" }, //xl: "30px"

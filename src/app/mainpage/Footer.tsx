@@ -116,7 +116,7 @@
 //                   )}
 //                   <Typography
 //                     sx={{
-//                       fontFamily: "Mulish",
+//                       fontFamily: "var(--font-mulish)",
 //                       color: "#FFFFFF",
 //                       fontWeight: 400,
 //                       fontSize: {
@@ -173,7 +173,7 @@
 //                 <Typography
 //                   key={index}
 //                   sx={{
-//                     fontFamily: "Mulish",
+//                     fontFamily: "var(--font-mulish)",
 //                     color: "#D3DDDE",
 //                     fontWeight: 400,
 //                     fontSize: {
@@ -196,7 +196,7 @@
 //                 <Typography
 //                   key={index}
 //                   sx={{
-//                     fontFamily: "Mulish",
+//                     fontFamily: "var(--font-mulish)",
 //                     color: "#D3DDDE",
 //                     fontWeight: 400,
 //                     fontSize: {
@@ -228,7 +228,7 @@
 //                 >
 //                   <Typography
 //                     sx={{
-//                       fontFamily: "Mulish",
+//                       fontFamily: "var(--font-mulish)",
 //                       color: "#D3DDDE",
 //                       fontWeight: 400,
 //                       fontSize: {
@@ -255,7 +255,7 @@
 //                 >
 //                   <Typography
 //                     sx={{
-//                       fontFamily: "Mulish",
+//                       fontFamily: "var(--font-mulish)",
 //                       color: "#D3DDDE",
 //                       fontWeight: 400,
 //                       fontSize: {
@@ -275,7 +275,7 @@
 //               ) : (
 //                 <Typography
 //                   sx={{
-//                     fontFamily: "Mulish",
+//                     fontFamily: "var(--font-mulish)",
 //                     color: "#D3DDDE",
 //                     fontWeight: 400,
 //                     fontSize: {
@@ -428,7 +428,7 @@ const Footer: React.FC = () => {
                   <Typography
                     // variant=""
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#FFFFFF",
                       fontWeight: 400,
                       fontSize: {
@@ -497,7 +497,7 @@ const Footer: React.FC = () => {
                   // variant=""
                   key={index}
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#D3DDDE",
                     fontWeight: 400,
                     fontSize: {
@@ -533,7 +533,7 @@ const Footer: React.FC = () => {
                   // variant=""
                   key={index}
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#D3DDDE",
                     fontWeight: 400,
                     fontSize: {
@@ -565,7 +565,7 @@ const Footer: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#D3DDDE",
                       fontWeight: 400,
                       fontSize: {
@@ -592,7 +592,7 @@ const Footer: React.FC = () => {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "Mulish",
+                      fontFamily: "var(--font-mulish)",
                       color: "#D3DDDE",
                       fontWeight: 400,
                       fontSize: {
@@ -612,7 +612,7 @@ const Footer: React.FC = () => {
               ) : (
                 <Typography
                   sx={{
-                    fontFamily: "Mulish",
+                    fontFamily: "var(--font-mulish)",
                     color: "#D3DDDE",
                     fontWeight: 400,
                     fontSize: {
