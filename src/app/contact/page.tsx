@@ -1070,10 +1070,11 @@ export default function Contact() {
                 variant="h1"
                 sx={{
                   // fontFamily: "DM Serif Display",
-                  fontFamily: "var(--font-mulish)",
+                  fontFamily: "var(--font-viga)",
+                  fontWeight: 400,
                   color: "#292F36",
                   // fontWeight: 600,
-                  fontWeight: 700,
+                  // fontWeight: 700,
                   // fontSize: "50px",
                   // fontSize: { xs: "16px", sm: "40px", lg: "50px", xl: "50px" },
                   // added by pragatika
